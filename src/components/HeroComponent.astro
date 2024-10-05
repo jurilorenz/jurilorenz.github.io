@@ -13,26 +13,29 @@
   </div>
   
       <!-- Right-side content -->
-      <div class="relative w-full md:w-1/2 flex flex-col items-start p-8 md:p-16 z-10 text-left mt-[22vh] md:mt-0" style="min-height: 70vh;">      
-        <div class="md:absolute md:top-[20%] w-full">
+      <div class="relative w-full md:w-1/2 flex flex-col items-start p-8  md:p-16 md:pt-12 z-10 text-left mt-[22vh] md:mt-0" style="min-height: 70vh;">      
+        <div class="md:absolute w-full">
+  
+          <!-- Subtitle with Typing Animation -->
+          <div class="text-2xl md:text-2xl mb-6 md:mb-12 text-gray-300">
+            <p>Hier gibt's</p>
+            <div id="typed-strings">
+              <p>maximale Konversion.</p>
+              <p>schnelle Websites.</p>
+              <p>Next-Level Design.</p>
+              <p>SEO-Optimierung.</p>
+              <p>WordPress CMS.</p>
+            </div>
+            <span id="typed"></span>
+          </div>
+
         <!-- Title -->
         <h1 class="text-5xl md:text-6xl max-w-2xl font-bold drop-shadow-lg">
           Turbo-Websites für Ihren digitalen Erfolg
         </h1>
   
-        <!-- Subtitle with Typing Animation -->
-        <div class="text-lg md:text-2xl mt-6 md:mt-12 text-gray-300">
-          <div id="typed-strings">
-            <p>Websites, die begeistern und konvertieren</p>
-            <p>Perfekte Symbiose aus KI und Kreativität</p>
-            <p>Entwickelt für maximalen Erfolg und Wachstum</p>
-            <p>Über 15 Jahre Insider-Wissen in der Branche</p>
-          </div>
-          <span id="typed"></span>
-        </div>
-        
         <!-- List of advantages -->
-        <ul class="text-lg md:text-xl mt-6 md:mt-12 text-gray-100 space-y-2">
+        <ul class="text-lg md:text-2xl mt-6 md:mt-12 text-gray-100 space-y-2">
           <li><i class="fas fa-check text-white mr-4"></i> Rasante Websites mit Wow-Faktor</li>
           <li><i class="fas fa-check text-white mr-4"></i> Fokus auf maximale Konversion</li>
           <li><i class="fas fa-check text-white mr-4"></i> Blade-Edge-Technologien & KI-Power</li>
@@ -62,7 +65,7 @@
       import Typed from "typed.js";
       var typed = new Typed('#typed', {
         stringsElement: '#typed-strings',
-        typeSpeed: 50,
+        typeSpeed: 120,
         backSpeed: 30,
         loop: true,
       });
