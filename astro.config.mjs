@@ -6,9 +6,9 @@ import icon from 'astro-icon';
 const isGitHubPages = process.env.NODE_ENV === 'production';
 
 export default defineConfig({
-  site: isGitHubPages ? 'https://jurilorenz.github.io' : 'http://localhost:3000',
+  site: 'https://maxwapp.de',
   base: '/',
-    build: {
+  build: {
     outDir: 'dist',
   },
   integrations: [
