@@ -134,3 +134,6 @@ dist
 public/.DS_Store
 .DS_Store
 public/.DS_Store
+.DS_Store
+public/.DS_Store
+src/pages/test2.astro
