@@ -9,14 +9,14 @@ const { title, seoTitle, seoDesc } = Astro.props;
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{title}</title>
 
-  <!-- Favicon (PNG) -->
-  <link rel="icon" href="/favicon.png" type="image/png">
+  <!-- Favicon (webp) -->
+  <link rel="icon" href="/favicon.webp" type="image/webp">
 
     <!-- Open Graph Meta Tags for social sharing -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content={seoTitle} />
     <meta property="og:description" content={seoDesc} />
-    <meta property="og:image" content="https://maxwapp.de/images/badge.png" />
+    <meta property="og:image" content="https://maxwapp.de/images/badge.webp" />
     <meta property="og:image:width" content="1050" />
     <meta property="og:image:height" content="600" />
     <meta property="og:url" content="https://maxwapp.de" />
@@ -25,7 +25,7 @@ const { title, seoTitle, seoDesc } = Astro.props;
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={seoTitle} />
     <meta name="twitter:description" content={seoDesc} />
-    <meta name="twitter:image" content="https://maxwapp.de/images/badge.png" />
+    <meta name="twitter:image" content="https://maxwapp.de/images/badge.webp" />
 
   <!-- Preconnect to improve font loading -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
