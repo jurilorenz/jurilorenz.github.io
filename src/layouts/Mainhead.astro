@@ -10,7 +10,11 @@ const { title, seoTitle, seoDesc } = Astro.props;
   <title>{title}</title>
 
   <!-- Favicon (webp) -->
-  <link rel="icon" href="/favicon.webp" type="image/webp">
+    <!-- Favicon for all browsers (ICO) -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <!-- Favicon for modern browsers (PNG) -->
+    <link rel="icon" href="/favicon.png" type="image/png">
 
     <!-- Open Graph Meta Tags for social sharing -->
     <meta property="og:type" content="website" />
