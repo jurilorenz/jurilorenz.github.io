@@ -1,12 +1,19 @@
 ---
 import { SEO } from "astro-seo";
+import GoogleAnalytics from "../components/GoogleAnalytics.astro";
 const { title, seoTitle, seoDesc } = Astro.props;
 ---
 
 <head>
   <SEO title={seoTitle} description={seoDesc} />
+
+  <!-- GoogleAnalytics -->
+
+  <GoogleAnalytics />
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <title>{title}</title>
 
   <!-- Favicon (webp) -->

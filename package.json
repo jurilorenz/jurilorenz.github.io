@@ -12,7 +12,7 @@
   "dependencies": {
     "@astrojs/tailwind": "^5.1.0",
     "@iconify-json/fa": "^1.2.0",
-    "astro": "^4.16.5",
+    "astro": "^4.16.7",
     "astro-icon": "^1.1.1",
     "astro-navbar": "^2.3.3",
     "astro-seo": "^0.8.4",
@@ -20,6 +20,7 @@
     "typed.js": "^2.1.0"
   },
   "devDependencies": {
+    "@astrojs/partytown": "^2.1.2",
     "gh-pages": "^6.1.1"
   }
 }
