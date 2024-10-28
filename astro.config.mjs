@@ -22,7 +22,7 @@ export default defineConfig({
     tailwind(),
     icon({
       include: {
-        fa: ["github", "linkedin"], 
+        fa: ["github","instagram", "linkedin"], 
       },
     }),
   ],
