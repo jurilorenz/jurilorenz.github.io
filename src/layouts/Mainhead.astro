@@ -1,15 +1,106 @@
 ---
 import { SEO } from "astro-seo";
-import GoogleAnalytics from "../components/GoogleAnalytics.astro";
 const { title, seoTitle, seoDesc } = Astro.props;
 ---
 
 <head>
   <SEO title={seoTitle} description={seoDesc} />
 
-  <!-- GoogleAnalytics -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.0/cookieconsent.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.0/cookieconsent.min.css" />
 
-  <GoogleAnalytics />
+<style>
+  .cc-revoke {
+    display: none !important;
+  }
+</style>
+
+<script>
+  window.addEventListener("load", function () {
+    window.cookieconsent.initialise({
+      palette: {
+        popup: {
+          background: "#1b1b33",  // Dark background for the banner (same as card)
+          text: "#ffffff"          // White text for contrast
+        },
+        button: {
+          background: "#ffffff",   // White background for buttons
+          text: "#090a1a"          // Dark text for buttons
+        }
+      },
+      theme: "classic",
+      type: "opt-in", // Make sure consent is opt-in
+      revokable: false,
+      content: {
+        header: "Cookie-Hinweis",
+        message: "Um Ihnen bei jedem Besuch unserer Website das beste Erlebnis ermöglichen zu können, bitten wir um Ihre Zustimmung Cookies verwenden zu dürfen.",
+        allow: "Alle Cookies zulassen",    // Accept button
+        deny: "Nur notwendige Cookies",    // Deny button for non-essential cookies
+        link: "Datenschutz",
+        href: "/privacy",           // Privacy policy URL
+        disclaimer: "Impressum",
+        disclaimerUrl: "/imprint"   // Imprint URL
+      },
+      elements: {
+        messagelink: `
+          <div class="relative w-full bg-[#1b1b33] p-8 mb-4 rounded-xl border border-gray-700">
+            <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
+            <span id="cookieconsent:desc" class="cc-message text-sm md:text-lg font-medium block text-center">
+              <strong class="block text-2xl mb-2">Cookie-Hinweis</strong>
+              {{message}} 
+              <div class="mt-4">
+                <a aria-label="learn more about cookies" tabindex="0" class="text-white underline hover:no-underline transition" href="{{href}}">{{link}}</a>
+                <a aria-label="learn more about impressum" tabindex="0" class="ml-4 text-white underline hover:no-underline transition" href="{{disclaimerUrl}}">{{disclaimer}}</a>
+              </div>
+            </span>
+          </div>`
+      },
+      onStatusChange: function (status) {
+        if (this.hasConsented()) { 
+          document.cookie = "cookieconsent_status=allow"; 
+          location.reload(); // Reload the page after consent is given
+        }
+      }
+    });
+  });
+
+  function enableAnalytics() {
+    if (document.cookie.includes("cookieconsent_status=allow")) {
+      const script = document.createElement("script");
+      script.type = "text/partytown";
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtag/js?id=G-KBB0D00K79";
+      document.head.appendChild(script);
+
+      const inlineScript = document.createElement("script");
+      inlineScript.type = "text/partytown";
+      inlineScript.innerHTML = `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){window.dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-KBB0D00K79', { 'anonymize_ip': true });
+      `;
+      document.head.appendChild(inlineScript);
+    }
+  }
+
+  window.addEventListener("load", function () {
+    enableAnalytics();
+  });
+
+    // Hide the revoke button
+    window.addEventListener("load", function () {
+    const revokeBtn = document.querySelector(".cc-revoke.cc-bottom.cc-color-override-670204628");
+    if (revokeBtn) {
+        (revokeBtn as HTMLElement).style.display = "none";
+    }
+});
+
+
+</script>
+
+
+
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">

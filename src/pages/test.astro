@@ -8,6 +8,98 @@ import MainLayout from "../layouts/MainLayout.astro";
   seoDesc="Drive growth with cutting-edge web and app solutions from Juri Lorenz."
 >
 
+<script>
+  declare function gtag(command: string, eventName: string, params?: any): void;
+
+  window.addEventListener('load', function () {
+    window.cookieconsent.initialise({
+      palette: {
+        popup: {
+          background: "#1b1b33",  // Dark background for the banner (same as card)
+          text: "#ffffff"          // White text for contrast
+        },
+        button: {
+          background: "#ffffff",   // White background for buttons
+          text: "#090a1a"          // Dark text for buttons
+        }
+      },
+      theme: "classic",
+      type: "opt-in", // Make sure consent is opt-in
+      content: {
+        header: "Cookie-Hinweis",
+        message: "Um Ihnen bei jedem Besuch unserer Website das beste Erlebnis ermöglichen zu können, bitten wir um Ihre Zustimmung Cookies verwenden zu dürfen.",
+        dismiss: "Alle Cookies zulassen",  // Accept all cookies button
+        allow: "Alle Cookies zulassen",    // Accept button
+        deny: "Nur notwendige Cookies",    // Deny button for non-essential cookies
+        link: "Datenschutz",
+        href: "/privacy",           // Privacy policy URL
+        disclaimer: "Impressum",
+        disclaimerUrl: "/imprint"   // Imprint URL
+      },
+      elements: {
+        messagelink: `
+          <div class="relative w-full bg-[#1b1b33] p-8 rounded-xl border border-gray-700">
+            <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
+            <span id="cookieconsent:desc" class="cc-message text-sm md:text-lg font-medium block text-center">
+              <strong class="block text-2xl mb-2">Cookie-Hinweis</strong>
+              {{message}} 
+              <div class="mt-4">
+                <a aria-label="learn more about cookies" tabindex="0" class="text-white underline hover:no-underline transition" href="{{href}}">{{link}}</a>
+                <a aria-label="learn more about impressum" tabindex="0" class="ml-4 text-white underline hover:no-underline transition" href="{{disclaimerUrl}}">{{disclaimer}}</a>
+              </div>
+            </span>
+          </div>`,
+        allow: `<button aria-label="allow cookies" tabindex="0" class="cc-btn bg-white text-[#090a1a] font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_rgba(147,112,219,0.8)]">{{allow}}</button>`,
+        deny: `<button aria-label="deny cookies" tabindex="0" class="cc-btn bg-[#1b1b33] text-white font-bold py-3 px-8 rounded-full hover:underline transition-all duration-300 ease-in-out">{{deny}}</button>`
+      },
+      onInitialise: function (status) {
+        var didConsent = this.hasConsented();
+        if (didConsent) {
+          // Проверяем, определена ли функция gtag
+          if (typeof gtag === 'function') {
+            gtag('consent', 'update', {
+              'ad_storage': 'granted',
+              'analytics_storage': 'granted'
+            });
+          }
+          console.log("Cookies allowed");
+        } else {
+          if (typeof gtag === 'function') {
+            gtag('consent', 'update', {
+              'ad_storage': 'denied',
+              'analytics_storage': 'denied'
+            });
+          }
+          console.log("Cookies denied");
+        }
+      },
+      onStatusChange: function (status) {
+        var didConsent = this.hasConsented();
+        if (didConsent) {
+          if (typeof gtag === 'function') {
+            gtag('consent', 'update', {
+              'ad_storage': 'granted',
+              'analytics_storage': 'granted'
+            });
+          }
+          console.log("User accepted cookies");
+        } else {
+          if (typeof gtag === 'function') {
+            gtag('consent', 'update', {
+              'ad_storage': 'denied',
+              'analytics_storage': 'denied'
+            });
+          }
+          console.log("User denied cookies");
+        }
+
+        // Убираем баннер после выбора
+        this.dismiss();  // Закрыть баннер
+      }
+    });
+  });
+</script>
+
   <!-- Gradient Background -->
   <div class="min-h-screen bg-gradient-to-b from-[#090a1a] to-[#290065] text-white flex flex-col items-center justify-center">
     

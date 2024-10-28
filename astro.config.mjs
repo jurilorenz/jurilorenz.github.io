@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import icon from 'astro-icon';
+import partytown from '@astrojs/partytown'; 
 
 
 const isGitHubPages = process.env.NODE_ENV === 'production';
@@ -12,6 +13,12 @@ export default defineConfig({
     outDir: 'dist',
   },
   integrations: [
+    partytown({
+      config: {
+        forward: ["dataLayer.push"],
+      },
+    }),
+
     tailwind(),
     icon({
       include: {
