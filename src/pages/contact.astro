@@ -21,30 +21,27 @@ seoDesc={"Kontaktieren Sie Juri Lorenz, den erfahrenen Web- und App-Entwickler h
       <div>Starten wir Ihr nächstes Erfolgsprojekt!</div>
     </h2>
 
-        <!-- Kontakt form
+        <!-- Kontakt form -->
 
         <section class="w-10/12 md:w-8/12 lg:w-6/12 mt-8 mb-12">
           <div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]">
             <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
-            <form class="space-y-6">
-             
-
-                <div class="grid md:grid-cols-2 gap-4">
-                  <input type="text" placeholder="Name" class="bg-transparent border border-gray-300 text-gray-300 py-3 px-4 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-[#6d87d1]" />
-                  <input type="email" placeholder="E-Mail" class="bg-transparent border border-gray-300 text-gray-300 py-3 px-4 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-[#6d87d1]" />
-                </div>
-
-      
-           
-
-                <textarea placeholder="Nachricht" class="bg-transparent border border-gray-300 text-gray-300 py-3 px-4 rounded-md w-full h-32 focus:outline-none focus:ring-2 focus:ring-[#6d87d1]"></textarea>
-
+            <form id="contact-form" action="https://formspree.io/f/mldegkwj" method="POST" class="space-y-6">
+              <div class="grid md:grid-cols-2 gap-4">
+                <input type="text" name="name" placeholder="Name" required class="bg-transparent border border-gray-300 text-gray-300 py-3 px-4 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-[#6d87d1]" />
+                <input type="email" name="email" placeholder="E-Mail" required class="bg-transparent border border-gray-300 text-gray-300 py-3 px-4 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-[#6d87d1]" />
+              </div>
+              <textarea name="message" placeholder="Nachricht" required class="bg-transparent border border-gray-300 text-gray-300 py-3 px-4 rounded-md w-full h-32 focus:outline-none focus:ring-2 focus:ring-[#6d87d1]"></textarea>
+        
               <div class="mt-4 flex md:items-start gap-2">
-                <input type="checkbox" id="privacy-policy" class="custom-checkbox mt-1 w-5 h-5 appearance-none bg-transparent border-2 border-gray-300 rounded focus:ring-0 checked:bg-[#6d87d1] checked:border-[#6d87d1]">
+                <input type="checkbox" id="privacy-policy" required class="custom-checkbox mt-1 w-5 h-5 appearance-none bg-transparent border-2 border-gray-300 rounded focus:ring-0 checked:bg-blue-500 checked:border-[#6d87d1]">
                 <label for="privacy-policy" class="text-gray-300 text-left">Ich akzeptiere die <a href="/privacy" class="underline hover:text-[#6d87d1]">Datenschutzerklärung</a></label>
               </div>
-      
-           
+        
+ <!-- Hidden field for redirect -->
+ <input type="hidden" name="_next" value="https://maxwapp.de/thank-you" />
+ 
+
               <div class="text-center mt-6">
                 <button type="submit" class="bg-[#1f1235] text-white font-bold py-3 px-8 rounded-full border-2 border-[#6d87d1] shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-500 hover:text-white hover:shadow-[0_0_10px_rgba(147,112,219,0.5),_0_0_25px_rgba(3,169,244,0.4)]">
                   Absenden
@@ -54,7 +51,7 @@ seoDesc={"Kontaktieren Sie Juri Lorenz, den erfahrenen Web- und App-Entwickler h
           </div>
         </section>
 
-      -->
+      
 
     <!-- Kontaktinformationen im Kartenstil -->
     <section class="w-10/12 md:w-8/12 lg:w-6/12 mt-4 mb-12">
@@ -74,7 +71,42 @@ seoDesc={"Kontaktieren Sie Juri Lorenz, den erfahrenen Web- und App-Entwickler h
   </div>
 </MainLayout>
 
+<script>
+document.getElementById('contact-form')?.addEventListener('submit', async function (e) {
+  e.preventDefault();
+  
+  const form = e.target as HTMLFormElement; // Explicitly cast e.target to HTMLFormElement
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      window.location.href = '/thank-you'; // Redirect to your thank-you page
+    } else {
+      alert('There was an issue submitting the form.');
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    alert('There was an error submitting the form.');
+  }
+});
+</script>
+
 <style>
+
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #1b1b33 inset; /* Match the background color */
+  -webkit-text-fill-color: #ffffff; /* Match text color */
+  transition: background-color 5000s ease-in-out 0s;
+}
 
 /* Custom checkbox styling */
 .custom-checkbox {
