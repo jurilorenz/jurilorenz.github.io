@@ -5,6 +5,7 @@ import BattleContent from "../../components/projects/BattleContent.astro";
 import ProfruketContent from "../../components/projects/ProfruketContent.astro";
 import MaaArt from "../../components/projects/MaaArtContent.astro";
 import Brunner from "../../components/projects/Brunner.astro";
+import AkimovaArt from "../../components/projects/AkimovaArt.astro";
 
 export async function getStaticPaths() {
   return [
@@ -43,6 +44,13 @@ export async function getStaticPaths() {
         desc: "",
       },
     },
+    { 
+      params: { projects: "6" }, 
+      props: {
+        name: "Akimova-Art",
+        desc: "",
+      },
+    },
   ];
 }
 
@@ -56,7 +64,7 @@ const { name, desc } = Astro.props;
 
     <!-- Title -->
     <h1 class="text-center text-4xl md:text-6xl font-bold drop-shadow-lg mt-24 mb-8 mx-2">
-      Projekt {name}
+       {name}
     </h1>
 
     <!-- Description -->
@@ -80,7 +88,7 @@ const { name, desc } = Astro.props;
       {projects === '3' && <BattleContent />}
       {projects === '4' && <ProfruketContent />}
       {projects === '5' && <Brunner />}
-
+      {projects === '6' && <AkimovaArt />}
     </section>
 
 
