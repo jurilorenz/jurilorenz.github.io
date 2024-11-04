@@ -9,6 +9,13 @@ const { title, seoTitle, seoDesc } = Astro.props;
   <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.0/cookieconsent.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.0/cookieconsent.min.css" />
 
+  <!-- Favicon links -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
 <style>
   .cc-revoke {
     display: none !important;
@@ -100,19 +107,12 @@ const { title, seoTitle, seoDesc } = Astro.props;
 </script>
 
 
-
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>{title}</title>
 
-  <!-- Favicon (webp) -->
-    <!-- Favicon for all browsers (ICO) -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-
-    <!-- Favicon for modern browsers (PNG) -->
-    <link rel="icon" href="/favicon.png" type="image/png">
+  
 
     <!-- Open Graph Meta Tags for social sharing -->
     <meta property="og:type" content="website" />
