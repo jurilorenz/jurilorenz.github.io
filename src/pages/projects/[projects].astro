@@ -6,6 +6,8 @@ import ProfruketContent from "../../components/projects/ProfruketContent.astro";
 import MaaArt from "../../components/projects/MaaArtContent.astro";
 import Brunner from "../../components/projects/Brunner.astro";
 import AkimovaArt from "../../components/projects/AkimovaArt.astro";
+import Efimow from "../../components/projects/Efimow.astro";
+
 
 export async function getStaticPaths() {
   return [
@@ -51,6 +53,13 @@ export async function getStaticPaths() {
         desc: "",
       },
     },
+    { 
+      params: { projects: "7" }, 
+      props: {
+        name: "EFIMOW Automobile",
+        desc: "",
+      },
+    },
   ];
 }
 
@@ -89,6 +98,7 @@ const { name, desc } = Astro.props;
       {projects === '4' && <ProfruketContent />}
       {projects === '5' && <Brunner />}
       {projects === '6' && <AkimovaArt />}
+      {projects === '7' && <Efimow />}
     </section>
 
 

@@ -1,0 +1,96 @@
+---
+// MAAArtProject.astro
+
+import CircleImage from '../CircleImage.astro';
+import ContentSection from '../ContentSection.astro';
+import FeatureCard from '../FeatureCard.astro';
+import ContentWithCTA from '../ContentWithCTA.astro';
+import SectionTitle from '../SectionTitle.astro';
+import GradientDivider from '../GradientDivider.astro';
+import TextSection from '../TextSection.astro';
+import IpadComponent from '../IpadComponent.astro';
+---
+
+<div class="project-component">
+<TextSection 
+    title="Effizientes Webdesign für maximale Conversion"
+    introText="Die Website von Efimow Automobile wurde gezielt darauf ausgelegt, Besucher in zahlende Kunden zu verwandeln. Mit einem durchdachten Design und strategischen Call-to-Actions wird jeder Schritt auf der Seite klar und intuitiv geleitet."
+    secondText="Durch eine klare Struktur und smarte Navigation wird der Weg zur Anfrage so kurz wie möglich gehalten. Dieses Projekt zeigt, wie man durch optimiertes Webdesign nicht nur Aufmerksamkeit gewinnt, sondern auch konkrete Ergebnisse erzielt."
+/>
+
+<ContentSection 
+    imgSrc="/images/projects/7-1.webp" 
+    imgAlt="Ansicht der mobilen Fahrzeug-Website" 
+    title="Minimalismus und Mobile-First"
+    introText="Die Website von Efimow Automobile setzt auf minimalistische Ästhetik und höchste Benutzerfreundlichkeit. Der Fokus liegt auf einem reduzierten Design, das den Nutzer nicht ablenkt, sondern effizient zum Ziel führt."
+    secondText="Dank des Mobile-First-Ansatzes und einem responsiven Design passt sich die Seite perfekt an jedes Gerät an. Blitzschnelle Ladezeiten und intuitive Bedienelemente sorgen dafür, dass die Nutzung angenehm bleibt und die Kundenzufriedenheit gesteigert wird."
+/>
+
+  <SectionTitle title="Corporate Design" />
+
+  <IpadComponent 
+    imgSrc="/images/projects/7-ipad.webp" 
+    imgAlt="Digitale Galerie auf dem Tablet" 
+  />
+
+  <TextSection 
+  introText="Neben der Website wurde auch ein vollständiges Corporate Design für Efimow Automobile entwickelt, das die Dynamik und Professionalität der Marke perfekt widerspiegelt. Vom prägnanten Logo bis hin zur stimmigen Farbpalette – jedes Detail unterstreicht die Werte und das Engagement des Unternehmens."
+  secondText="Ein durchdachter und konsistenter Look sorgt für einen hohen Wiedererkennungswert und verleiht der Marke eine moderne, unverwechselbare visuelle Identität, die Vertrauen schafft und Kunden anspricht."
+/>
+
+  <SectionTitle title="Logo Erstellung" />
+
+  <CircleImage 
+    imgSrc="/images/projects/7-logo.webp" 
+    altText="Logo-Design für Efimow Automobile" 
+    title1="Logo" 
+    title2="Design" 
+    motto1="Max" 
+    motto2="Wapp" 
+  />
+
+  <TextSection 
+  introText="Das Logo von Efimow Automobile kombiniert zwei markante Buchstaben – E und A – zu einer harmonischen Einheit, die gleichzeitig den dynamischen Charakter eines Fahrzeug-Silhouetts darstellt. Diese clevere Gestaltung verbindet Markenidentität mit der Welt der Automobile und schafft so einen Wiedererkennungswert, der im Gedächtnis bleibt."
+  secondText="Der rote Farbverlauf, der vom Buchstaben A aus zurückführt, symbolisiert Geschwindigkeit, Bewegung und Fortschritt. Dieses Detail verleiht dem Logo eine moderne und energiegeladene Dynamik, die perfekt zur Vision von Efimow Automobile passt."
+/>
+
+  <SectionTitle title="Features" />
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-24 mb-32">
+    <FeatureCard 
+      title="High Performance" 
+      description="Mit einem Google PageSpeed-Score von 95 ist die Website ein Musterbeispiel für Geschwindigkeit und Effizienz – unverzichtbar für moderne Online-Auftritte." 
+    />
+
+    <FeatureCard 
+      title="Benutzerzentriertes Design" 
+      description="Das minimalistische und intuitive Layout macht die Website nicht nur schön, sondern auch einfach zu bedienen. Besucher finden mühelos, was sie suchen." 
+    />
+
+    <FeatureCard 
+      title="SEO-Optimierung" 
+      description="Die Website wurde so konzipiert, dass sie in Suchmaschinen wie Google Top-Platzierungen erreicht und neue Kunden anzieht." 
+    />
+
+    <FeatureCard 
+      title="Responsives Design" 
+      description="Perfekt für alle Geräte: Ob Smartphone, Tablet oder Desktop – die Website sieht überall fantastisch aus." 
+    />
+  </div>
+
+  <GradientDivider />
+
+  <SectionTitle title="Bereit für Ihr nächstes Projekt?" />
+
+  <ContentWithCTA
+    imgSrc="/images/projects/7-2.webp" 
+    imgAlt="Webdesign für den Fahrzeughandel"
+    introText="Dieses Projekt zeigt, wie wichtig modernes Webdesign und technisches Know-how sind, um digitale Erlebnisse zu schaffen, die Eindruck machen. Ich bin Ihr Partner für innovative Weblösungen."
+    secondText="Ob für den Fahrzeughandel oder ein anderes Business – ich helfe Ihnen dabei, Ihre Vision in die digitale Welt zu bringen. Lassen Sie uns gemeinsam Ihre Website gestalten, die nicht nur funktioniert, sondern begeistert."
+    ctaText="Machen Sie den ersten Schritt!"
+    primaryButtonLabel="Zurück zu den Projekten"
+    primaryButtonLink="/projects" 
+    secondaryButtonLabel="Let's Talk"
+    secondaryButtonLink="/contact"
+  />
+</div>
