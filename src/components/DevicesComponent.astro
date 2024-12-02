@@ -2,50 +2,23 @@
 // DevicesComponent.astro
 ---
 
-<div class="relative w-full flex items-center shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] justify-center py-48 md:py-96 overflow-hidden">
+<div class="relative w-full h-full flex items-center shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] justify-center py-48 md:py-96 overflow-hidden">
   
   <!-- iPad Image -->
-  <img src="/images/hero-ipad.webp" 
-       class="ipad-image absolute bottom-0 object-contain max-h-full"
-       alt="iPad Image" />
-
-  <!-- iPhone Image 1 -->
-  <img src="/images/hero-iphone.webp" 
-       class="iphone-image-right absolute bottom-0 transform translate-x-full opacity-0 right-[35%] md:right-[18%] w-[35%] md:w-[15%] z-10"
+  <img src="/images/projects/6.webp" 
+       class="iphone-image absolute bottom-0 object-contain max-h-full"
        alt="iPhone Image" />
-</div>
 
 <style>
-/* iPad Animation and Proportions */
-.ipad-image {
-  animation: openLikeLaptop 1.8s ease-out forwards;
+/* iPhone Animation and Proportions */
+.iphone-image {
+  animation: flyInFromRight 1.8s ease-out forwards;
   position: absolute;
   bottom: 0;
   max-height: 100%; /* Ensures the iPad height stays within the parent container */
   width: auto;
   object-fit: contain; /* Ensures the aspect ratio is maintained */
   transform: rotateX(0deg);
-}
-
-/* iPhone Right Animation */
-.iphone-image-right {
-  animation: flyInFromRight 2.5s ease-out forwards;
-  animation-delay: 1.2s;
-  position: absolute;
-  bottom: 0;
-  z-index: 10;
-}
-
-/* Keyframes for animations */
-@keyframes openLikeLaptop {
-  0% {
-    transform: rotateX(90deg);
-    opacity: 0;
-  }
-  100% {
-    transform: rotateX(0);
-    opacity: 1;
-  }
 }
 
 @keyframes flyInFromRight {
@@ -60,52 +33,17 @@
 }
 
 /* Limit the height for the component itself */
-@media (min-width: 769px) {
+@media (min-width: 7px) {
   .relative {
     max-height: 80vh; /* Limit the overall height of the component */
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 7px) {
   .ipad-image {
     width: 90%;
     bottom: 10%;
   }
-
-  .iphone-image-right {
-    width: 30%;
-    right: 10px;
-  }
 }
 </style>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const ipad = document.querySelector('.ipad-image') as HTMLImageElement;
-  const iphoneRight = document.querySelector('.iphone-image-right') as HTMLImageElement;
-  
-  function isInViewport(el: HTMLElement): boolean {
-    const rect = el.getBoundingClientRect();
-    return (
-      rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.bottom >= 0
-    );
-  }
-
-  function checkScroll() {
-    if (ipad && iphoneRight && isInViewport(ipad)) {
-      ipad.style.animationPlayState = 'running';
-      iphoneRight.style.animationPlayState = 'running';
-    }
-  }
-
-  // Initially pause the animations
-  if (ipad && iphoneRight) {
-    ipad.style.animationPlayState = 'paused';
-    iphoneRight.style.animationPlayState = 'paused';
-  }
-
-  window.addEventListener('scroll', checkScroll);
-  checkScroll(); // Check if the element is in view on page load
-});
-</script>
