@@ -3,46 +3,75 @@
 ---
 
 <div class="relative w-full h-full flex items-center shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] justify-center py-48 md:py-96 overflow-hidden">
-  
-  <!-- iPad Image -->
-  <img src="/images/projects/6.webp" 
-       class="iphone-image absolute bottom-0 object-contain max-h-full"
-       alt="iPhone Image" />
+  <!-- Animated Phones -->
+  <img src="/images/projects/5.webp" alt="Image 1" class="phone phone-1" />
+  <img src="/images/projects/8.webp" alt="Image 2" class="phone phone-2" />
+  <img src="/images/projects/7.webp" alt="Image 3" class="phone phone-3" />
+  <img src="/images/projects/9.webp" alt="Image 4" class="phone phone-4" />
+  <img src="/images/projects/1.webp" alt="Image 5" class="phone phone-5" />
+  <img src="/images/projects/6.webp" alt="Image 6" class="phone phone-6" />
+</div>
 
 <style>
-/* iPhone Animation and Proportions */
-.iphone-image {
-  animation: flyInFromRight 1.8s ease-out forwards;
-  position: absolute;
-  bottom: 0;
-  max-height: 100%; /* Ensures the iPad height stays within the parent container */
-  width: auto;
-  object-fit: contain; /* Ensures the aspect ratio is maintained */
-  transform: rotateX(0deg);
+/* Parent Container */
+.relative {
+  position: relative;
+  max-height: 80vh; /* Keeps phones within the container */
+  overflow: hidden;
 }
 
-@keyframes flyInFromRight {
+/* Phone Images */
+.phone {
+  position: absolute;
+  max-height: 80%;
+  width: auto;
+  object-fit: contain;
+  animation: flyInOut 8s ease-in-out infinite;
+  opacity: 0; /* Start invisible */
+}
+
+/* Custom Animations for Each Phone */
+.phone-1 {
+  animation-delay: 0s;
+}
+.phone-2 {
+  animation-delay: 1.6s; /* Staggered start */
+}
+.phone-3 {
+  animation-delay: 3.2s;
+}
+.phone-4 {
+  animation-delay: 4.8s;
+}
+.phone-5 {
+  animation-delay: 6.4s;
+}
+.phone-6 {
+  animation-delay: 8.0s;
+}
+
+
+/* Keyframes for Animation */
+@keyframes flyInOut {
   0% {
-    transform: translateX(100%);
+    transform: translateX(100%) scale(0.8); /* Start off-screen */
     opacity: 0;
   }
-  100% {
-    transform: translateX(0);
+ 10% {
+    transform: translateX(50%) scale(1); /* Slight zoom for focus */
     opacity: 1;
   }
-}
-
-/* Limit the height for the component itself */
-@media (min-width: 7px) {
-  .relative {
-    max-height: 80vh; /* Limit the overall height of the component */
+  50% {
+    transform: translateX(0) scale(1); /* Full view */
+    opacity: 1;
   }
-}
-
-@media (max-width: 7px) {
-  .ipad-image {
-    width: 90%;
-    bottom: 10%;
+  90% {
+    transform: translateX(-50%) scale(0.9); /* Start moving out */
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(-100%) scale(0.8); /* Fully off-screen */
+    opacity: 0;
   }
 }
 </style>
