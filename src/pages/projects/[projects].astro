@@ -7,6 +7,7 @@ import MaaArt from "../../components/projects/MaaArtContent.astro";
 import Brunner from "../../components/projects/Brunner.astro";
 import AkimovaArt from "../../components/projects/AkimovaArt.astro";
 import Efimow from "../../components/projects/Efimow.astro";
+import BavarianIceRoll from "../../components/projects/BavarianIceRoll.astro";
 
 
 export async function getStaticPaths() {
@@ -60,6 +61,13 @@ export async function getStaticPaths() {
         desc: "",
       },
     },
+    { 
+      params: { projects: "8" }, 
+      props: {
+        name: "Bavarian Ice Roll",
+        desc: "",
+      },
+    },
   ];
 }
 
@@ -99,6 +107,7 @@ const { name, desc } = Astro.props;
       {projects === '5' && <Brunner />}
       {projects === '6' && <AkimovaArt />}
       {projects === '7' && <Efimow />}
+      {projects === '8' && <BavarianIceRoll />}
     </section>
 
 

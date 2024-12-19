@@ -1,0 +1,104 @@
+---
+// BavarianIceRoll.astro
+
+import CircleImage from '../CircleImage.astro';
+import ContentSection from '../ContentSection.astro';
+import FeatureCard from '../FeatureCard.astro';
+import ContentWithCTA from '../ContentWithCTA.astro';
+import SectionTitle from '../SectionTitle.astro';
+import GradientDivider from '../GradientDivider.astro';
+import TextSection from '../TextSection.astro';
+import IpadComponent from '../IpadComponent.astro';
+---
+
+
+<div class="project-component">
+  <TextSection 
+    title="Ein erfrischendes digitales Erlebnis"
+    introText="Die Website für Bavarian Ice Roll präsentiert sich als farbenfrohes und modernes digitales Erlebnis, das Besucher sofort in seinen Bann zieht. Mit auffälligen Farben, einem durchdachten Design und einer klaren Struktur wird die Marke perfekt in Szene gesetzt."
+    secondText="Das Highlight liegt auf der Desktop-Version, die mit lebendigen Animationen und einer interaktiven Nutzererfahrung beeindruckt. Ein detailliertes Anfrageformular hilft dabei, alle wichtigen Event-Informationen direkt zu sammeln und die Kundenkommunikation zu optimieren."
+  />
+
+  <ContentSection 
+    imgSrc="/images/projects/8-1.webp" 
+    imgAlt="Mobile Ansicht der Ice Roll Website" 
+    title="Visuell beeindruckend und effizient"
+    introText="Die Website wurde speziell für Veranstaltungen und Caterings entwickelt, um die Marke als visuelles Highlight darzustellen. Klare Call-to-Actions und schnelle Ladezeiten sorgen dafür, dass potenzielle Kunden schnell zum Ziel kommen."
+    secondText="Mit einem responsiven Design, das sich an jede Bildschirmgröße anpasst, und einem durchdachten Layout ist die Nutzung auf Desktop und mobilen Geräten gleichermaßen angenehm und intuitiv."
+  />
+
+  <SectionTitle title="Farbenfrohes Design" />
+
+  <IpadComponent 
+    imgSrc="/images/projects/8-ipad.webp" 
+    imgAlt="Ice Roll Galerie auf dem Tablet" 
+  />
+
+  <TextSection 
+    introText="Die visuellen Elemente der Website spiegeln die Kreativität und Individualität von Bavarian Ice Roll wider. Eine stimmige Farbpalette und hochwertige Bilder sorgen für eine positive Markenwahrnehmung."
+    secondText="Von der Gestaltung der mobilen Eistheken bis hin zur Präsentation der einzigartigen Toppings – jedes Detail wurde sorgfältig abgestimmt, um die Zielgruppe anzusprechen und zu begeistern."
+  />
+
+  <SectionTitle title="Detailliertes Anfrageformular" />
+
+  <CircleImage 
+    imgSrc="/images/projects/8.webp" 
+    altText="Detailansicht des Anfrageformulars" 
+    title1="Detailliert" 
+    title2="und Einfach" 
+    motto1="Modernes" 
+    motto2="Webdesign" 
+  />
+
+
+
+  <TextSection 
+    introText="Das Anfrageformular ist ein zentrales Element der Website. Es wurde entwickelt, um möglichst viele Details über geplante Events zu erfassen. Mit Dropdown-Menüs, Pflichtfeldern und klaren Hinweisen ist es sowohl benutzerfreundlich als auch effektiv."
+    secondText="Die einfache Bedienbarkeit sorgt dafür, dass Kunden alle notwendigen Informationen bereitstellen können, während Bavarian Ice Roll eine strukturierte Anfrage erhält, um das Event optimal vorzubereiten."
+  />
+
+  <SectionTitle title="Features" />
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-24 mb-32">
+    <FeatureCard 
+      title="Auffälliges Design" 
+      description="Die farbenfrohe und moderne Gestaltung der Website zieht Besucher an und bleibt im Gedächtnis." 
+    />
+
+    <FeatureCard 
+      title="Effizientes Anfrageformular" 
+      description="Schnelle und präzise Kundenanfragen dank eines benutzerfreundlichen Formulars mit klaren Strukturen." 
+    />
+
+    <FeatureCard 
+      title="SEO-Optimierung" 
+      description="Optimiert für Suchmaschinen, um neue Kunden über Google und Co. zu gewinnen." 
+    />
+
+    <FeatureCard 
+      title="Perfekte Performance" 
+      description="Blitzschnelle Ladezeiten sorgen für eine optimale Nutzererfahrung." 
+    />
+  </div>
+
+  <IpadComponent 
+  imgSrc="/images/projects/8-ipad-2.webp" 
+  imgAlt="Ice Roll Galerie auf dem Tablet" 
+/>
+
+  <GradientDivider />
+
+  <SectionTitle title="Bereit für Ihr nächstes Projekt?" />
+
+  <ContentWithCTA
+    imgSrc="/images/projects/8-2.webp" 
+    imgAlt="Webdesign für Events und Caterings"
+    introText="Dieses Projekt zeigt, wie modernes Webdesign Kunden begeistern und die Markenwahrnehmung stärken kann. Mit Bavarian Ice Roll als Beispiel ist deutlich, wie kreative Konzepte digital umgesetzt werden können."
+    secondText="Ob für die Eventbranche oder ein anderes Business – ich unterstütze Sie dabei, Ihre Vision in die digitale Welt zu bringen. Lassen Sie uns gemeinsam etwas Beeindruckendes schaffen!"
+    ctaText="Jetzt Kontakt aufnehmen!"
+    primaryButtonLabel="Zurück"
+    primaryButtonLink="/projects" 
+    secondaryButtonLabel="Los geht's!"
+    secondaryButtonLink="/contact"
+  />
+</div>
