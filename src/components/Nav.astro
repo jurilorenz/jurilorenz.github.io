@@ -120,11 +120,10 @@ import { Icon } from 'astro-icon/components';
       <!-- Mobile Menu Items -->
       <nav>
         <ul class="text-lg font-light w-full">
-          <li class="w-full border-t border-b border-gray-600"><a href="/" class="block py-6 px-6 hover:text-gray-400 transition">Home</a></li>
-          <li class="w-full border-b border-gray-600"><a href="/projects" class="block py-6 px-6 hover:text-gray-400 transition">Projekte</a></li>
+          <li class="w-full border-t border-b border-gray-600"><a href="/projects" class="block py-6 px-6 hover:text-gray-400 transition">Projekte</a></li>
           <li class="w-full border-b border-gray-600"><a href="/about" class="block py-6 px-6 hover:text-gray-400 transition">Über mich</a></li>
           <li class="w-full border-b border-gray-600"><a href="/price" class="block py-6 px-6 hover:text-gray-400 transition">Preise</a></li>
-
+          <li class="w-full border-b border-gray-600"><a href="/contact" class="block py-6 px-6 hover:text-gray-400 transition">Kontakt</a></li>
 
 
           
@@ -183,10 +182,27 @@ import { Icon } from 'astro-icon/components';
           </a>
         </div>
 
-        <div class="flex justify-center mt-8">
-          <a href="/contact" class="bg-[#1f1235] text-white font-bold py-3 px-8 rounded-full border-2 border-[#6d87d1] shadow-lg transition-all text-center w-full max-w-xs">
-            Kontakt
-          </a>
+        <div class="flex justify-center">
+    <!-- Kontaktinformationen im Kartenstil -->
+    <section class="w-10/12 md:w-8/12 lg:w-6/12 ">
+
+
+            <!-- Buttons for Contact -->
+            <div class="flex flex-col md:flex-row gap-6 mt-8 justify-center md:justify-center items-center md:items-start w-full">
+              <!-- Secondary Button - Telephone -->
+              <a href="tel:+491777594839" class="bg-[#1f1235] text-white font-bold py-3 px-8 rounded-full border-2 border-[#6d87d1] shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-500 hover:shadow-[0_0_10px_rgba(147,112,219,0.5),_0_0_25px_rgba(3,169,244,0.4)] text-center w-full max-w-xs md:max-w-none md:w-auto">
+                Sofort anrufen
+              </a>
+            
+              <!-- Primary Button - WhatsApp -->
+              <a href="https://wa.me/491777594839" target="_blank" class="relative inline-block py-3 px-8 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-white text-[#090a1a] shadow-lg transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_rgba(147,112,219,0.8),_0_0_35px_rgba(3,169,244,0.6)] hover:border-[#6d87d1]">
+                Nachricht per WhatsApp
+              </a>
+            </div>
+
+
+
+    </section>
         </div>
       </div>
     </div>
