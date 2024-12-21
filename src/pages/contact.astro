@@ -52,35 +52,56 @@ seoDesc={"Kontaktieren Sie Juri Lorenz, den erfahrenen Web- und App-Entwickler h
         </section>
 
 
-    <!-- Kontaktinformationen im Kartenstil -->
-    <section class="w-10/12 md:w-8/12 lg:w-6/12 mt-4 mb-12">
-      <div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]">
-        <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
+<!-- Kontaktinformationen im Kartenstil -->
+<section class="w-10/12 md:w-8/12 lg:w-6/12 mt-4 mb-12">
+  <div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]">
+    <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
 
-            <!-- Buttons for Contact -->
-            <div class="flex flex-col md:flex-row gap-6 mt-8 justify-center md:justify-center items-center md:items-start w-full">
-              <!-- Secondary Button - Telephone -->
-              <a href="tel:+491777594839" class="bg-[#1f1235] text-white font-bold py-3 px-8 rounded-full border-2 border-[#6d87d1] shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-500 hover:shadow-[0_0_10px_rgba(147,112,219,0.5),_0_0_25px_rgba(3,169,244,0.4)] text-center w-full max-w-xs md:max-w-none md:w-auto">
-                Telefon
-              </a>
-            
-              <!-- Primary Button - WhatsApp -->
-              <a href="https://wa.me/491777594839" target="_blank" class="relative inline-block py-3 px-8 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-white text-[#090a1a] shadow-lg transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_rgba(147,112,219,0.8),_0_0_35px_rgba(3,169,244,0.6)] hover:border-[#6d87d1]">
-                WhatsApp 
-              </a>
-            </div>
+    <!-- Контейнер для QR-кода и кнопок -->
+    <div class="flex flex-col md:flex-row gap-8 items-center">
 
-        <p class="mt-4 text-xl text-gray-300"><a href="tel:+491777594839" class="hover:text-blue-400">+49 1 777 59 48 39</a> <br/></p>
-        <p class="mt-4 text-xl text-gray-300"> (Mo – Fr von 8:00 bis 18:00 Uhr)</p>
+      <!-- Левая колонка: Кнопки и текст -->
+      <div class="w-full md:w-6/12">
+        <!-- Buttons for Contact -->
+        <div class="flex flex-col md:flex-row gap-6 mt-8 justify-center items-center w-full">
+          <!-- Secondary Button - Telephone -->
+          <a href="tel:+491777594839" class="bg-[#1f1235] text-white font-bold py-3 px-8 rounded-full border-2 border-[#6d87d1] shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-500 hover:shadow-[0_0_10px_rgba(147,112,219,0.5),_0_0_25px_rgba(3,169,244,0.4)] text-center w-full max-w-xs md:max-w-none md:w-auto">
+            Telefon
+          </a>
+          <!-- Primary Button - WhatsApp -->
+          <a href="https://wa.me/491777594839" target="_blank" class="relative inline-block py-3 px-8 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-white text-[#090a1a] shadow-lg transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_rgba(147,112,219,0.8),_0_0_35px_rgba(3,169,244,0.6)] hover:border-[#6d87d1]">
+            WhatsApp
+          </a>
+        </div>
+
+        <!-- Contact Information -->
+        <p class="mt-4 text-xl text-gray-300"><a href="tel:+491777594839" class="hover:text-[#6d87d1]">+49 1 777 59 48 39</a></p>
+        <p class="mt-4 text-xl text-gray-300">(Mo – Fr von 8:00 bis 18:00 Uhr)</p>
         <p class="mt-4 text-xl text-gray-300"><strong>E-Mail:</strong> <a href="mailto:info@maxwapp.de" class="underline hover:text-[#6d87d1]">info@maxwapp.de</a></p>
       
-        
+        <!-- Footer Links -->
         <div class="mt-4 flex justify-between">
           <a href="/imprint" class="underline text-gray-400 hover:text-[#6d87d1]">Impressum</a>
           <a href="/privacy" class="underline text-gray-400 hover:text-[#6d87d1]">Datenschutz</a>
         </div>
       </div>
-    </section>
+
+      
+
+      <!-- Правая колонка: QR-код -->
+      <div class="w-full md:w-6/12 flex flex-col items-center drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)]">
+        <img src="/images/QR-code.webp" alt="QR-code" class="w-80 md:w-auto md:max-h-[60vh] object-contain rounded-lg shadow-md">
+        <p class="mt-4 text-xl text-gray-300">
+          <a href="https://maxwapp.de" target="_blank" class="hover:text-[#6d87d1]">maxWapp.de</a>
+        </p>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+    
     
   </div>
 </MainLayout>
