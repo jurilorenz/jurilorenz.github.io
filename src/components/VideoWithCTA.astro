@@ -1,0 +1,82 @@
+---
+// ContentWithCTA.astro
+
+export interface VideoWithCTAProps {
+  videoSrc: string; // URL for the YouTube Shorts video
+  title: string;
+  introText: string;
+  secondText: string;
+  ctaText: string;
+  primaryButtonLabel: string;
+  primaryButtonLink: string;
+  secondaryButtonLabel: string;
+  secondaryButtonLink: string;
+}
+
+const {
+  videoSrc,
+  title,
+  introText,
+  secondText,
+  ctaText,
+  primaryButtonLabel,
+  primaryButtonLink,
+  secondaryButtonLabel,
+  secondaryButtonLink
+} = Astro.props;
+---
+
+<div class="w-full md:w-10/12 lg:w-full mx-auto text-lg md:text-xl text-gray-300 leading-relaxed mt-20 mb-32 flex flex-col md:flex-row items-center gap-16 md:gap-32">
+  
+  <!-- Video section with responsive sizing and styled frame -->
+  <div class="relative w-full md:w-6/12 lg:w-5/12 bg-[#1b1b33] rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] transition-transform duration-500">
+    <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
+    <div class="relative w-full" style="padding-top: 125%;"> <!-- 5:4 Aspect Ratio -->
+      <iframe
+      class="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
+      src={videoSrc}
+        title="YouTube Shorts Video"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+  
+  <!-- Text section on the right with gradient title and CTA -->
+  <div class="w-full md:w-6/12 lg:w-7/12 text-center md:text-left">
+    <!-- Title with gradient -->
+    <p class="mb-8 text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">
+      {title}
+    </p>
+
+    <!-- Intro Text -->
+    <p class="text-xl md:text-2xl mt-8">
+      {introText}
+    </p>
+    
+    <!-- Second Text -->
+    <p class="text-xl md:text-2xl mt-8">
+      {secondText}
+    </p>
+
+    <!-- Call to Action Text -->
+    <p class="text-xl md:text-2xl mt-8 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500 font-bold">
+      {ctaText}
+    </p>
+
+    <!-- Buttons with hover effects -->
+    <div class="flex flex-col md:flex-row gap-6 mt-8 md:mt-16 justify-center md:justify-start items-center md:items-start w-full md:w-auto">
+      <!-- Primary Button with hover effect -->
+      <a href={primaryButtonLink} class="py-3 px-8 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-[#1f1235] text-white border-2 border-[#6d87d1] shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-500 hover:shadow-[0_0_10px_rgba(147,112,219,0.5),_0_0_25px_rgba(3,169,244,0.4)]">
+        {primaryButtonLabel}
+      </a>
+      
+      <!-- Secondary Button with hover effect -->
+      <a href={secondaryButtonLink} class="py-3 px-8 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-white text-[#090a1a] shadow-lg transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_rgba(147,112,219,0.8),_0_0_35px_rgba(3,169,244,0.6)]">
+        {secondaryButtonLabel}
+      </a>
+    </div>
+  </div>
+</div>
+
