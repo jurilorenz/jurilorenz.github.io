@@ -1,0 +1,26 @@
+---
+// HorizontalVideo.astro
+
+export interface HorizontalVideoProps {
+  videoSrc: string; // URL for the YouTube video
+}
+
+const { videoSrc } = Astro.props;
+---
+
+<div class="w-full mt-24 -mb-12 relative bg-[#1b1b33] rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] overflow-hidden">
+  <!-- Gradient shadow -->
+  <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2"></div>
+  
+  <!-- Full-width video -->
+  <div class="relative w-full" style="padding-top: 56.25%;"> <!-- 16:9 Aspect Ratio -->
+    <iframe
+      class="absolute top-0 left-0 w-full h-full"
+      src={videoSrc}
+      title="YouTube Video"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+</div>

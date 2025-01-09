@@ -2,12 +2,12 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 import RoomContent from "../../components/projects/RoomContent.astro";
 import BattleContent from "../../components/projects/BattleContent.astro";
-import ProfruketContent from "../../components/projects/ProfruketContent.astro";
 import MaaArt from "../../components/projects/MaaArtContent.astro";
 import Brunner from "../../components/projects/Brunner.astro";
 import AkimovaArt from "../../components/projects/AkimovaArt.astro";
 import Efimow from "../../components/projects/Efimow.astro";
 import BavarianIceRoll from "../../components/projects/BavarianIceRoll.astro";
+import Felix from "../../components/projects/Felix.astro";
 
 
 export async function getStaticPaths() {
@@ -30,13 +30,6 @@ export async function getStaticPaths() {
       params: { projects: "3" }, 
       props: {
         name: "Battle Calculator",
-        desc: "",
-      },
-    },
-    { 
-      params: { projects: "4" }, 
-      props: {
-        name: "ProFruket",
         desc: "",
       },
     },
@@ -65,6 +58,13 @@ export async function getStaticPaths() {
       params: { projects: "8" }, 
       props: {
         name: "Bavarian Ice Roll",
+        desc: "",
+      },
+    },
+    { 
+      params: { projects: "10" }, 
+      props: {
+        name: "Felix Rheindorf",
         desc: "",
       },
     },
@@ -103,11 +103,11 @@ const { name, desc } = Astro.props;
       {projects === '1' && <MaaArt />}
       {projects === '2' && <RoomContent />}
       {projects === '3' && <BattleContent />}
-      {projects === '4' && <ProfruketContent />}
       {projects === '5' && <Brunner />}
       {projects === '6' && <AkimovaArt />}
       {projects === '7' && <Efimow />}
       {projects === '8' && <BavarianIceRoll />}
+      {projects === '10' && <Felix />}
     </section>
 
 

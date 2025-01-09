@@ -4,7 +4,7 @@
 import CircleImage from '../CircleImage.astro';
 import ContentSection from '../ContentSection.astro';
 import FeatureCard from '../FeatureCard.astro';
-import ContentWithCTA from '../ContentWithCTA.astro';
+import VideoWithCTA from '../VideoWithCTA.astro';
 import SectionTitle from '../SectionTitle.astro';
 import GradientDivider from '../GradientDivider.astro';
 import TextSection from '../TextSection.astro';
@@ -88,17 +88,16 @@ import IpadComponent from '../IpadComponent.astro';
 
   <GradientDivider />
 
-  <SectionTitle title="Bereit für Ihr nächstes Projekt?" />
+  <SectionTitle title="Video-Einblick in die Website" />
 
-  <ContentWithCTA
-    imgSrc="/images/projects/8-2.webp" 
-    imgAlt="Webdesign für Events und Caterings"
-    introText="Dieses Projekt zeigt, wie modernes Webdesign Kunden begeistern und die Markenwahrnehmung stärken kann. Mit Bavarian Ice Roll als Beispiel ist deutlich, wie kreative Konzepte digital umgesetzt werden können."
-    secondText="Ob für die Eventbranche oder ein anderes Business – ich unterstütze Sie dabei, Ihre Vision in die digitale Welt zu bringen. Lassen Sie uns gemeinsam etwas Beeindruckendes schaffen!"
-    ctaText="Jetzt Kontakt aufnehmen!"
-    primaryButtonLabel="Zurück"
-    primaryButtonLink="/projects" 
-    secondaryButtonLabel="Los geht's!"
-    secondaryButtonLink="/contact"
-  />
+  <VideoWithCTA
+  videoSrc="https://www.youtube.com/embed/H3JsHkshR5g?autoplay=0&modestbranding=1&showinfo=0&controls=0&rel=0"
+  introText="Dieses Projekt zeigt, wie modernes Webdesign Kunden begeistern und die Markenwahrnehmung stärken kann. Mit Bavarian Ice Roll als Beispiel ist deutlich, wie kreative Konzepte digital umgesetzt werden können."
+  secondText="Ob für die Eventbranche oder ein anderes Business – ich unterstütze Sie dabei, Ihre Vision in die digitale Welt zu bringen. Lassen Sie uns gemeinsam etwas Beeindruckendes schaffen!"
+  ctaText="Schau dir die Website an!"
+  primaryButtonLabel="Zurück"
+  primaryButtonLink="/projects" 
+  secondaryButtonLabel="Let's Talk"
+  secondaryButtonLink="/contact"
+/>
 </div>
