@@ -1,27 +1,26 @@
 ---
 // Felix.astro
 
-
-import CircleImage from '../CircleImage.astro';
-import ContentSection from '../ContentSection.astro';
-import FeatureCard from '../FeatureCard.astro'; 
-import HorizontalVideo from '../HorizontalVideo.astro';
-import VideoWithCTA from '../VideoWithCTA.astro';
-import SectionTitle from '../SectionTitle.astro';
-import GradientDivider from '../GradientDivider.astro';
-import TextSection from '../TextSection.astro';
+import CircleImage from "../CircleImage.astro"
+import ContentSection from "../ContentSection.astro"
+import FeatureCard from "../FeatureCard.astro"
+import HorizontalVideo from "../HorizontalVideo.astro"
+import VideoWithCTA from "../VideoWithCTA.astro"
+import SectionTitle from "../SectionTitle.astro"
+import GradientDivider from "../GradientDivider.astro"
+import TextSection from "../TextSection.astro"
 ---
 
 <div class="project-component">
-  <TextSection 
+  <TextSection
     title="Web & Content Suite"
     introText="Ein moderner Webauftritt für Felix Rheindorf, einen Metzgermeister, der Präzision und Leidenschaft in seinem Handwerk verkörpert. Die Website kombiniert hochwertige visuelle Inhalte mit modernem Design, um seine Expertise ins Rampenlicht zu rücken."
     secondText="Von der Entwicklung über die Contentproduktion bis zum Corporate Design: Farben, Schriften und sogar die Visitenkarten wurden perfekt aufeinander abgestimmt, um eine einheitliche und starke Markenpräsenz zu schaffen."
-    />
+  />
 
-  <ContentSection 
-    imgSrc="/images/projects/10-2.webp" 
-    imgAlt="Mobile Ansicht der Felix-Website" 
+  <ContentSection
+    imgSrc="/images/projects/10-2.webp"
+    imgAlt="Mobile Ansicht der Felix-Website"
     title="Mobile-First und High Performance"
     introText="Die Website wurde speziell für eine blitzschnelle Ladezeit und beste Benutzerfreundlichkeit entwickelt. Egal ob am Smartphone, Tablet oder Desktop – das responsive Design sorgt für ein erstklassiges Erlebnis auf allen Geräten."
     secondText="Besucher können die Qualität und Leidenschaft sofort erleben, unterstützt durch modernste Technologien und optimierte Performance."
@@ -29,64 +28,59 @@ import TextSection from '../TextSection.astro';
 
   <SectionTitle title="Visuelle Inhalte" />
 
-  <CircleImage 
-    imgSrc="/images/projects/10-camera.webp" 
-    altText="Foto Felix Rheindorf" 
-    title1="Foto" 
-    title2="& Video" 
-    motto1="Max" 
-    motto2="Wapp" 
+  <CircleImage
+    imgSrc="/images/projects/10-camera.webp"
+    altText="Foto Felix Rheindorf"
+    title1="Foto"
+    title2="& Video"
+    motto1="Max"
+    motto2="Wapp"
   />
 
+  <HorizontalVideo
+    videoSrc="https://www.youtube-nocookie.com/embed/2Npn2hA2tJU?autoplay=0&modestbranding=1&showinfo=0&controls=0&rel=0"
+  />
 
-  <HorizontalVideo videoSrc="https://www.youtube.com/embed/2Npn2hA2tJU?autoplay=0&modestbranding=1&showinfo=0&controls=0&rel=0" />
+  <TextSection
+    introText="Von der Kamera bis zur Nachbearbeitung: Alles wurde mit höchster Sorgfalt und Liebe zum Detail umgesetzt, um eine visuelle Geschichte zu erzählen, die die Qualität der Produkte unterstreicht."
+    secondText=""
+  />
 
-  <TextSection 
-  introText="Von der Kamera bis zur Nachbearbeitung: Alles wurde mit höchster Sorgfalt und Liebe zum Detail umgesetzt, um eine visuelle Geschichte zu erzählen, die die Qualität der Produkte unterstreicht."
-  secondText=""
-/>
+  <TextSection
+    title="Corporate Design"
+    introText="Einheitliche Gestaltungselemente wie Farben, Schriften und Layouts schaffen eine starke visuelle Identität, die sich durch alle Kommunikationsmittel zieht – online und offline."
+    secondText=""
+  />
 
-
-<TextSection 
-  title="Corporate Design"
-  introText="Einheitliche Gestaltungselemente wie Farben, Schriften und Layouts schaffen eine starke visuelle Identität, die sich durch alle Kommunikationsmittel zieht – online und offline."
-  secondText=""
-/>
-
-
-
-  <ContentSection 
-    imgSrc="/images/projects/10-ipad.webp" 
-    imgAlt="Mobile Ansicht der Felix-Website" 
+  <ContentSection
+    imgSrc="/images/projects/10-ipad.webp"
+    imgAlt="Mobile Ansicht der Felix-Website"
     title="Visitenkarten"
     introText="Klar & professionell: Alle wichtigen Infos auf einen Blick im Korparativen Design. Edles Schwarz, kraftvolles Rot – perfekt abgestimmt auf die Marke."
     secondText="Intuitiv & interaktiv: Einfach QR-Code scannen und direkt zur Website."
   />
 
-
-
-
   <SectionTitle title="Features der Website" />
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-24 mb-32">
-    <FeatureCard 
-      title="Benutzerfreundliches Design" 
-      description="Intuitives Design, das die Navigation vereinfacht und Inhalte klar in den Fokus rückt." 
+    <FeatureCard
+      title="Benutzerfreundliches Design"
+      description="Intuitives Design, das die Navigation vereinfacht und Inhalte klar in den Fokus rückt."
     />
-  
-    <FeatureCard 
-      title="Hochwertige Inhalte" 
-      description="Professionelle Fotos und Videos, die die Qualität und Regionalität der Produkte betonen." 
+
+    <FeatureCard
+      title="Hochwertige Inhalte"
+      description="Professionelle Fotos und Videos, die die Qualität und Regionalität der Produkte betonen."
     />
-  
-    <FeatureCard 
-      title="SEO-Optimierung" 
-      description="Gezielte Maßnahmen für bessere Sichtbarkeit und Auffindbarkeit online." 
+
+    <FeatureCard
+      title="SEO-Optimierung"
+      description="Gezielte Maßnahmen für bessere Sichtbarkeit und Auffindbarkeit online."
     />
-  
-    <FeatureCard 
-      title="Mobile-Optimierung" 
-      description="Optimiert für perfekte Darstellung auf Smartphone, Tablet und Desktop." 
+
+    <FeatureCard
+      title="Mobile-Optimierung"
+      description="Optimiert für perfekte Darstellung auf Smartphone, Tablet und Desktop."
     />
   </div>
 
@@ -95,13 +89,13 @@ import TextSection from '../TextSection.astro';
   <SectionTitle title="Video-Einblick in die Website" />
 
   <VideoWithCTA
-  videoSrc="https://www.youtube.com/embed/suND-lJeTec?autoplay=0&modestbranding=1&showinfo=0&controls=0&rel=0"
-  introText="Dieses Projekt kombiniert Kreativität und Technik – ein moderner Webauftritt, der beeindruckende Inhalte mit einem durchdachten Design verbindet."
-  secondText="Brauchst du eine professionelle Website oder hochwertige Inhalte? Lass uns gemeinsam deinen nächsten erfolgreichen Projekt starten!"
-  ctaText="Schau dir die Website an!"
-  primaryButtonLabel="Zurück"
-  primaryButtonLink="/projects" 
-  secondaryButtonLabel="Let's Talk"
-  secondaryButtonLink="/contact"
-/>
+    videoSrc="https://www.youtube-nocookie.com/embed/suND-lJeTec?autoplay=0&modestbranding=1&showinfo=0&controls=0&rel=0"
+    introText="Dieses Projekt kombiniert Kreativität und Technik – ein moderner Webauftritt, der beeindruckende Inhalte mit einem durchdachten Design verbindet."
+    secondText="Brauchst du eine professionelle Website oder hochwertige Inhalte? Lass uns gemeinsam deinen nächsten erfolgreichen Projekt starten!"
+    ctaText="Schau dir die Website an!"
+    primaryButtonLabel="Zurück"
+    primaryButtonLink="/projects"
+    secondaryButtonLabel="Let's Talk"
+    secondaryButtonLink="/contact"
+  />
 </div>
