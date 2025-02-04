@@ -1,41 +1,91 @@
 ---
-import { Icon } from 'astro-icon/components';
+import { Icon } from "astro-icon/components"
 ---
 
-<header class="fixed top-0 left-0 w-full bg-gradient-to-r from-[#090a1a] to-[#290065] text-white py-4 px-6 shadow-md z-50">  
+<header
+  class="md:fixed top-0 left-0 w-full bg-gradient-to-r from-[#090a1a] to-[#290065] text-white py-4 px-6 shadow-md z-50"
+>
   <div class="flex w-full justify-between items-center max-w-7xl mx-auto">
     <!-- Logo and Site Name (left aligned) -->
     <div class="flex items-center space-x-4">
       <!-- Clickable Logo and Site Name -->
       <a href="/" class="flex items-center space-x-4">
         <!-- SVG Logo -->
-        <img src="/images/logo.svg" alt="maxWapp, Webentwicklung München" class="w-8 h-8 logo-stable" />        
+        <img
+          src="/images/logo.svg"
+          alt="maxWapp, Webentwicklung München"
+          class="w-8 h-8 logo-stable"
+        />
         <!-- Site Name -->
-        <span class="text-2xl font-montserrat font-bold tracking-wider text-white">maxWapp</span>
+        <span
+          class="text-2xl font-montserrat font-bold tracking-wider text-white"
+          >maxWapp</span
+        >
       </a>
     </div>
 
     <!-- Hamburger Icon for mobile -->
     <button id="open-menu" class="block lg:hidden focus:outline-none py-2">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none">
-        <line x1="3" y1="6" x2="21" y2="6" stroke-linecap="round" stroke-linejoin="round"></line>
-        <line x1="3" y1="12" x2="21" y2="12" stroke-linecap="round" stroke-linejoin="round"></line>
-        <line x1="3" y1="18" x2="21" y2="18" stroke-linecap="round" stroke-linejoin="round"></line>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-8 w-8 text-white"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="1.5"
+        fill="none"
+      >
+        <line
+          x1="3"
+          y1="6"
+          x2="21"
+          y2="6"
+          stroke-linecap="round"
+          stroke-linejoin="round"></line>
+        <line
+          x1="3"
+          y1="12"
+          x2="21"
+          y2="12"
+          stroke-linecap="round"
+          stroke-linejoin="round"></line>
+        <line
+          x1="3"
+          y1="18"
+          x2="21"
+          y2="18"
+          stroke-linecap="round"
+          stroke-linejoin="round"></line>
       </svg>
     </button>
 
-<!-- Desktop Menu Items (centered for large screens) -->
-<nav id="desktop-menu" class="hidden lg:flex space-x-8 text-lg md:text-xl font-medium text-gray-300">
-  <ul class="flex flex-col lg:flex-row gap-16">
-    <li><a href="/" class="text-gray-300 hover:text-white transition">Home</a></li>
-    <li><a href="/projects" class="text-gray-300 hover:text-white transition">Projekte</a></li>
-    <li><a href="/about" class="text-gray-300 hover:text-white transition">Über mich</a></li>
-    <li><a href="/price" class="text-gray-300 hover:text-white transition">Preise</a></li>
-    <li><a href="/contact" class="text-gray-300 hover:text-white transition">Kontakt</a></li>
+    <!-- Desktop Menu Items (centered for large screens) -->
+    <nav
+      id="desktop-menu"
+      class="hidden lg:flex space-x-8 text-lg md:text-xl font-medium text-gray-300"
+    >
+      <ul class="flex flex-col lg:flex-row gap-16">
+        <li>
+          <a href="/" class="text-gray-300 hover:text-white transition">Home</a>
+        </li>
+        <li>
+          <a href="/projects" class="text-gray-300 hover:text-white transition"
+            >Projekte</a>
+        </li>
+        <li>
+          <a href="/about" class="text-gray-300 hover:text-white transition"
+            >Über mich</a>
+        </li>
+        <li>
+          <a href="/price" class="text-gray-300 hover:text-white transition"
+            >Preise</a>
+        </li>
+        <li>
+          <a href="/contact" class="text-gray-300 hover:text-white transition"
+            >Kontakt</a>
+        </li>
 
-
-<!-- Commenting out the Language Switcher -->
-<!--
+        <!-- Commenting out the Language Switcher -->
+        <!--
 
 <details class="group relative lg:flex">
   <summary class="flex items-center cursor-pointer text-lg font-medium text-gray-300 hover:text-white transition-all gap-2">
@@ -76,18 +126,22 @@ import { Icon } from 'astro-icon/components';
   </ul>
 </details>
 -->
-  </ul>
-</nav>
-
-
+      </ul>
+    </nav>
 
     <!-- Social Icons (right aligned for large screens) -->
     <div class="hidden lg:flex items-center space-x-6">
       <a href="https://www.instagram.com/maxwapp.de" class="ml-5">
-        <Icon name="fa:instagram" class="w-6 h-6 text-white hover:text-gray-200" />
+        <Icon
+          name="fa:instagram"
+          class="w-6 h-6 text-white hover:text-gray-200"
+        />
       </a>
       <a href="https://www.linkedin.com/in/juri-lorenz" class="ml-5">
-        <Icon name="fa:linkedin" class="w-6 h-6 text-white hover:text-gray-200" />
+        <Icon
+          name="fa:linkedin"
+          class="w-6 h-6 text-white hover:text-gray-200"
+        />
       </a>
       <a href="https://github.com/jurilorenz" class="ml-5">
         <Icon name="fa:github" class="w-6 h-6 text-white hover:text-gray-200" />
@@ -95,40 +149,82 @@ import { Icon } from 'astro-icon/components';
     </div>
   </div>
 
-
   <!-- Mobile Menu Section -->
-  <div id="mobile-menu" class="lg:hidden fixed top-0 left-0 w-full h-full text-white z-50 opacity-0 invisible transition-opacity duration-300 ease-in-out"
-  style="background: linear-gradient(to bottom, #090a1a, #290065);">
-  <div class="flex flex-col h-full justify-start py-2">
-      
-<!-- Top Section with Logo and Close Icon -->
-<div class="flex justify-between items-center mb-2 px-6">
-  <!-- Make the Logo and Company Name clickable -->
-  <a href="/" class="flex items-center space-x-4">
-    <img src="/images/logo.svg" alt="maxWapp, Webentwicklung München" class="w-10 h-10 logo-stable" />
+  <div
+    id="mobile-menu"
+    class="lg:hidden fixed top-0 left-0 w-full h-full text-white z-50 opacity-0 invisible transition-opacity duration-300 ease-in-out"
+    style="background: linear-gradient(to bottom, #090a1a, #290065);"
+  >
+    <div class="flex flex-col h-full justify-start py-2">
+      <!-- Top Section with Logo and Close Icon -->
+      <div class="flex justify-between items-center mb-2 px-6">
+        <!-- Make the Logo and Company Name clickable -->
+        <a href="/" class="flex items-center space-x-4">
+          <img
+            src="/images/logo.svg"
+            alt="maxWapp, Webentwicklung München"
+            class="w-10 h-10 logo-stable"
+          />
 
-    <span class="text-2xl font-montserrat tracking-wider font-bold">maxWapp</span>
-  </a>
-  <button id="close-menu" class="block lg:hidden focus:outline-none py-4">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none">
-      <line x1="6" y1="6" x2="18" y2="18" stroke-linecap="round" stroke-linejoin="round"></line>
-      <line x1="6" y1="18" x2="18" y2="6" stroke-linecap="round" stroke-linejoin="round"></line>
-    </svg>
-  </button>
-</div>
+          <span class="text-2xl font-montserrat tracking-wider font-bold"
+            >maxWapp</span
+          >
+        </a>
+        <button id="close-menu" class="block lg:hidden focus:outline-none py-4">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8 text-white"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="1.5"
+            fill="none"
+          >
+            <line
+              x1="6"
+              y1="6"
+              x2="18"
+              y2="18"
+              stroke-linecap="round"
+              stroke-linejoin="round"></line>
+            <line
+              x1="6"
+              y1="18"
+              x2="18"
+              y2="6"
+              stroke-linecap="round"
+              stroke-linejoin="round"></line>
+          </svg>
+        </button>
+      </div>
 
       <!-- Mobile Menu Items -->
       <nav>
         <ul class="text-lg font-light w-full">
-          <li class="w-full border-t border-b border-gray-600"><a href="/projects" class="block py-6 px-6 hover:text-gray-400 transition">Projekte</a></li>
-          <li class="w-full border-b border-gray-600"><a href="/about" class="block py-6 px-6 hover:text-gray-400 transition">Über mich</a></li>
-          <li class="w-full border-b border-gray-600"><a href="/price" class="block py-6 px-6 hover:text-gray-400 transition">Preise</a></li>
-          <li class="w-full border-b border-gray-600"><a href="/contact" class="block py-6 px-6 hover:text-gray-400 transition">Kontakt</a></li>
+          <li class="w-full border-t border-b border-gray-600">
+            <a
+              href="/projects"
+              class="block py-6 px-6 hover:text-gray-400 transition"
+              >Projekte</a>
+          </li>
+          <li class="w-full border-b border-gray-600">
+            <a
+              href="/about"
+              class="block py-6 px-6 hover:text-gray-400 transition"
+              >Über mich</a>
+          </li>
+          <li class="w-full border-b border-gray-600">
+            <a
+              href="/price"
+              class="block py-6 px-6 hover:text-gray-400 transition">Preise</a>
+          </li>
+          <li class="w-full border-b border-gray-600">
+            <a
+              href="/contact"
+              class="block py-6 px-6 hover:text-gray-400 transition">Kontakt</a>
+          </li>
 
-
-          
           <!-- Commenting out the Language Switcher -->
-<!--
+          <!--
           <details class="group relative">
             <summary class="flex justify-between items-center py-6 px-6 text-lg font-light cursor-pointer border-b border-gray-600">
               Language
@@ -183,26 +279,30 @@ import { Icon } from 'astro-icon/components';
         </div>
 
         <div class="flex justify-center">
-    <!-- Kontaktinformationen im Kartenstil -->
-    <section class="w-10/12 md:w-8/12 lg:w-6/12 ">
-
-
+          <!-- Kontaktinformationen im Kartenstil -->
+          <section class="w-10/12 md:w-8/12 lg:w-6/12">
             <!-- Buttons for Contact -->
-            <div class="flex flex-col md:flex-row gap-6 mt-8 justify-center md:justify-center items-center md:items-start w-full">
+            <div
+              class="flex flex-col md:flex-row gap-6 mt-8 justify-center md:justify-center items-center md:items-start w-full"
+            >
               <!-- Secondary Button - Telephone -->
-              <a href="tel:+491777594839" class="bg-[#1f1235] text-white font-bold py-3 px-8 rounded-full border-2 border-[#6d87d1] shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-500 hover:shadow-[0_0_10px_rgba(147,112,219,0.5),_0_0_25px_rgba(3,169,244,0.4)] text-center w-full max-w-xs md:max-w-none md:w-auto">
+              <a
+                href="tel:+491777594839"
+                class="bg-[#1f1235] text-white font-bold py-4 px-10 rounded-full border-2 border-[#6d87d1] shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-500 hover:shadow-[0_0_10px_rgba(147,112,219,0.5),_0_0_25px_rgba(3,169,244,0.4)] text-center w-full max-w-xs md:max-w-none md:w-auto"
+              >
                 Sofort anrufen
               </a>
-            
+
               <!-- Primary Button - WhatsApp -->
-              <a href="https://wa.me/491777594839" target="_blank" class="relative inline-block py-3 px-8 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-white text-[#090a1a] shadow-lg transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_rgba(147,112,219,0.8),_0_0_35px_rgba(3,169,244,0.6)] hover:border-[#6d87d1]">
+              <a
+                href="https://wa.me/491777594839"
+                target="_blank"
+                class="relative inline-block py-4 px-10 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-white text-[#090a1a] shadow-lg transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_rgba(147,112,219,0.8),_0_0_35px_rgba(3,169,244,0.6)] hover:border-[#6d87d1]"
+              >
                 Nachricht per WhatsApp
               </a>
             </div>
-
-
-
-    </section>
+          </section>
         </div>
       </div>
     </div>
@@ -211,38 +311,37 @@ import { Icon } from 'astro-icon/components';
 
 <script>
   // Toggle mobile menu visibility
-  const openMenu = document.getElementById('open-menu');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const closeMenu = document.getElementById('close-menu');
-  let menuOpen = false;
+  const openMenu = document.getElementById("open-menu")
+  const mobileMenu = document.getElementById("mobile-menu")
+  const closeMenu = document.getElementById("close-menu")
+  let menuOpen = false
 
-  openMenu.addEventListener('click', () => {
-  if (!menuOpen) {
-    mobileMenu.classList.remove('invisible');
-    mobileMenu.classList.add('opacity-100');
-    mobileMenu.classList.remove('opacity-0');
-    document.body.style.overflow = 'hidden'; // Block scrolling
-  }
-  menuOpen = true;
-});
+  openMenu.addEventListener("click", () => {
+    if (!menuOpen) {
+      mobileMenu.classList.remove("invisible")
+      mobileMenu.classList.add("opacity-100")
+      mobileMenu.classList.remove("opacity-0")
+      document.body.style.overflow = "hidden" // Block scrolling
+    }
+    menuOpen = true
+  })
 
-closeMenu.addEventListener('click', () => {
-  if (menuOpen) {
-    mobileMenu.classList.add('opacity-0');
-    mobileMenu.classList.remove('opacity-100');
-    setTimeout(() => {
-      mobileMenu.classList.add('invisible');
-      document.body.style.overflow = ''; // Allow scrolling
-    }, 300);
-  }
-  menuOpen = false;
-});
+  closeMenu.addEventListener("click", () => {
+    if (menuOpen) {
+      mobileMenu.classList.add("opacity-0")
+      mobileMenu.classList.remove("opacity-100")
+      setTimeout(() => {
+        mobileMenu.classList.add("invisible")
+        document.body.style.overflow = "" // Allow scrolling
+      }, 300)
+    }
+    menuOpen = false
+  })
 </script>
 
 <style>
   .logo-stable {
     width: 40px; /* Set a fixed width for the logo */
-    height: 40px; 
+    height: 40px;
   }
-  
 </style>

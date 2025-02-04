@@ -1,297 +1,400 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
+import MainLayout from "../layouts/MainLayout.astro"
 ---
 
-<MainLayout 
-title="Über Juri Lorenz | Web-Entwicklung & KI-Integration | maxWapp" 
-seoTitle={"Über Juri Lorenz | Web-Entwicklung & KI-Integration in München | maxWapp"} 
-seoDesc={"Erfahren Sie mehr über Juri Lorenz, den Web- und App-Entwickler hinter maxWapp. Spezialisiert auf WordPress, React und Astra-Entwicklung. Tätig in München, Deutschland, Österreich und der Schweiz. Fokussiert auf Wachstum durch innovative Technologien und KI-Integration."}
+<MainLayout
+  title="Über Juri Lorenz | Web-Entwicklung & KI-Integration | maxWapp"
+  seoTitle={"Über Juri Lorenz | Web-Entwicklung & KI-Integration in München | maxWapp"}
+  seoDesc={"Erfahren Sie mehr über Juri Lorenz, den Web- und App-Entwickler hinter maxWapp. Spezialisiert auf WordPress, React und Astra-Entwicklung. Tätig in München, Deutschland, Österreich und der Schweiz. Fokussiert auf Wachstum durch innovative Technologien und KI-Integration."}
 >
   <!-- Hintergrund mit Verlauf -->
-  <div class="min-h-screen bg-gradient-to-b from-[#090a1a] to-[#290065] text-white text-center flex flex-col items-center justify-center">
-    
-<!-- Titel -->
-<h1 class="text-center text-4xl md:text-6xl font-bold text-gray-100 drop-shadow-lg mt-20 md:my-24">
-  Über mich
-</h1>
+  <div
+    class="min-h-screen bg-gradient-to-b from-[#090a1a] to-[#290065] text-white text-center flex flex-col items-center justify-center"
+  >
+    <!-- Titel -->
+    <h1
+      class="text-center text-4xl md:text-6xl font-bold text-gray-100 drop-shadow-lg mt-20 md:my-24"
+    >
+      Über mich
+    </h1>
 
-<div class="flex flex-col items-center md:flex-row md:justify-center md:items-center md:space-x-32 mt-12">
-  <!-- Profilbild mit Farbverlauf-Rahmen und Schatten -->
-  <div class="rounded-full p-1 bg-gradient-to-r from-purple-400 to-blue-500 shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] profile-container">
-    <div class="rounded-full bg-[#090a1a] p-0">
-      <img src="/images/about.webp" class="rounded-full w-48 h-48 md:w-56 md:h-56 object-cover" alt="Juri Lorenz, Webentwickler in München" />
+    <div
+      class="flex flex-col items-center md:flex-row md:justify-center md:items-center md:space-x-32 mt-12"
+    >
+      <!-- Profilbild mit Farbverlauf-Rahmen und Schatten -->
+      <div
+        class="rounded-full p-1 bg-gradient-to-r from-purple-400 to-blue-500 shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] profile-container"
+      >
+        <div class="rounded-full bg-[#090a1a] p-0">
+          <img
+            src="/images/about.webp"
+            class="rounded-full w-48 h-48 md:w-56 md:h-56 object-cover"
+            alt="Juri Lorenz, Webentwickler in München"
+          />
+        </div>
+      </div>
+
+      <!-- Motto-Text neben dem Bild -->
+      <div class="text-center md:text-left md:pl-12 mt-6 md:mt-0">
+        <p class="text-2xl md:text-2xl font-medium text-gray-300">
+          <span>Webentwicklung</span><br />
+          <span>München</span><br />
+        </p>
+
+        <!-- Hauptmotto -->
+        <p
+          class="mt-4 text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500"
+        >
+          <span>Exzellenz</span><br />
+          <span>Erreichen</span>
+        </p>
+      </div>
     </div>
-  </div>
 
-  <!-- Motto-Text neben dem Bild -->
-  <div class="text-center md:text-left md:pl-12 mt-6 md:mt-0">
-    <p class="text-2xl md:text-2xl font-medium text-gray-300">
-      <span>Webentwicklung</span><br />
-      <span>München</span><br />
-    </p>
+    <!-- Inhalt Abschnitt -->
+    <div
+      class="w-11/12 md:w-10/12 lg:w-8/12 mx-auto text-lg md:text-xl text-gray-300 leading-relaxed mt-20 md:mt-32 flex flex-col-reverse md:flex-row items-center gap-16 md:gap-32"
+    >
+      <!-- Handybildabschnitt für Desktop links -->
+      <div
+        class="w-full md:w-5/12 flex justify-center md:justify-end mb-12 md:mb-0 rounded shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] phone-container"
+      >
+        <img
+          src="/images/about-phone1.webp"
+          alt="Phone Screenshot"
+          class="w-80 md:w-auto md:max-h-[60vh] object-contain rounded-lg"
+        />
+      </div>
 
-    <!-- Hauptmotto -->
-    <p class="mt-4 text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">
-      <span>Exzellenz</span><br />
-      <span>Erreichen</span>
-    </p>
-  </div>
-</div>
-   
-<!-- Inhalt Abschnitt -->
-<div class="w-11/12 md:w-10/12 lg:w-8/12 mx-auto text-lg md:text-xl text-gray-300 leading-relaxed mt-20 md:mt-32 flex flex-col-reverse md:flex-row items-center gap-16 md:gap-32">
-  
-<!-- Handybildabschnitt für Desktop links -->
-<div class="w-full md:w-5/12 flex justify-center md:justify-end mb-12 md:mb-0 rounded shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] phone-container">
-  <img src="/images/about-phone1.webp" alt="Phone Screenshot" class="w-80 md:w-auto md:max-h-[60vh] object-contain rounded-lg">
-</div>
-  
-  <!-- Textabschnitt für Desktop rechts -->
-  <div class="w-full md:w-7/12 text-center md:text-left">
-    <p class="text-xl md:text-2xl mt-4">
-      Hi, ich bin <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500">Juri Lorenz</span>, ein erfahrener App- und Webentwickler aus München, mit einem Hintergrund in Informatik und Marketing. Ich spezialisiere mich auf die Erstellung von <span class="underline-animation">conversion-orientierten, mobil-optimierten Webanwendungen</span>, die nahtlose Erlebnisse auf allen Geräten bieten.
-    </p>
-    
-    <p class="text-xl md:text-2xl mt-8">
-      Mit über <span class="text-gradient">15 Jahren Berufserfahrung</span> habe ich mir fundierte Kenntnisse in der Android- und iOS-Entwicklung, WordPress, Astro, React und Next.js erarbeitet. Meine Erfahrung in der App-Entwicklung sorgt dafür, dass jede Website, die ich erstelle, wirklich mobil-first ist und auf allen Geräten optimal funktioniert.
-    </p>
-  </div>
-</div>
+      <!-- Textabschnitt für Desktop rechts -->
+      <div class="w-full md:w-7/12 text-center md:text-left">
+        <p class="text-xl md:text-2xl mt-4">
+          Hi, ich bin <span
+            class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500"
+            >Juri Lorenz</span
+          >, ein erfahrener App- und Webentwickler aus München, mit einem
+          Hintergrund in Informatik und Marketing. Ich spezialisiere mich auf
+          die Erstellung von <span class="underline-animation"
+            >conversion-orientierten, mobil-optimierten Webanwendungen</span
+          >, die nahtlose Erlebnisse auf allen Geräten bieten.
+        </p>
 
-<!-- Was ich biete Abschnitt mit Karten -->
-<h2 class="text-center text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 mt-36 mb-24">
-  Was ich biete
-</h2>
+        <p class="text-xl md:text-2xl mt-8">
+          Mit über <span class="text-gradient">15 Jahren Berufserfahrung</span> habe
+          ich mir fundierte Kenntnisse in der Android- und iOS-Entwicklung, WordPress,
+          Astro, React und Next.js erarbeitet. Meine Erfahrung in der App-Entwicklung
+          sorgt dafür, dass jede Website, die ich erstelle, wirklich mobil-first
+          ist und auf allen Geräten optimal funktioniert.
+        </p>
+      </div>
+    </div>
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-12 px-6 md:px-0 max-w-6xl mx-auto">
-  <!-- Karte 1: Design -->
-  <div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]">
-    <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
-    <h4 class="text-3xl font-bold text-white mb-6">Design</h4>
-    <p class="text-lg text-gray-300 leading-relaxed">
-      Entwicklung kreativer Konzepte, <strong>Corporate Design</strong>, <strong>UI-Design</strong> und hochwertige <strong>Print-Designs</strong>, um Ihre Marke klar und überzeugend zu präsentieren.
-    </p>
-  </div>
+    <!-- Was ich biete Abschnitt mit Karten -->
+    <h2
+      class="text-center text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 mt-36 mb-24"
+    >
+      Was ich biete
+    </h2>
 
-  <!-- Karte 2: Foto/Video -->
-  <div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]">
-    <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
-    <h4 class="text-3xl font-bold text-white mb-6">Foto/Video</h4>
-    <p class="text-lg text-gray-300 leading-relaxed">
-      Professionelle <strong>Fotografie</strong> und <strong>Videoproduktion</strong> mit kreativer Postproduktion, um Ihre Marke emotional und visuell ansprechend darzustellen.
-    </p>
-  </div>
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 gap-12 px-6 md:px-0 max-w-6xl mx-auto"
+    >
+      <!-- Karte 1: Design -->
+      <div
+        class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
+      >
+        <div
+          class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
+        >
+        </div>
+        <h4 class="text-3xl font-bold text-white mb-6">Design</h4>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          Entwicklung kreativer Konzepte, <strong>Corporate Design</strong>, <strong
+            >UI-Design</strong
+          > und hochwertige <strong>Print-Designs</strong>, um Ihre Marke klar
+          und überzeugend zu präsentieren.
+        </p>
+      </div>
 
-  <!-- Karte 3: Entwicklung -->
-  <div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]">
-    <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
-    <h4 class="text-3xl font-bold text-white mb-6">Entwicklung</h4>
-    <p class="text-lg text-gray-300 leading-relaxed">
-      Erstellung von schnellen, skalierbaren <strong>Webseiten</strong>, <strong>Content-Management-Systemen</strong> und <strong>API-Integrationen</strong>, maßgeschneidert für Ihr Business.
-    </p>
-  </div>
+      <!-- Karte 2: Foto/Video -->
+      <div
+        class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
+      >
+        <div
+          class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
+        >
+        </div>
+        <h4 class="text-3xl font-bold text-white mb-6">Foto/Video</h4>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          Professionelle <strong>Fotografie</strong> und <strong
+            >Videoproduktion</strong
+          > mit kreativer Postproduktion, um Ihre Marke emotional und visuell ansprechend
+          darzustellen.
+        </p>
+      </div>
 
-  <!-- Karte 4: Optimierung -->
-  <div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]">
-    <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
-    <h4 class="text-3xl font-bold text-white mb-6">Optimierung</h4>
-    <p class="text-lg text-gray-300 leading-relaxed">
-      Steigerung der Performance durch <strong>SEO-Optimierung</strong>, <strong>PageSpeed-Optimierung</strong> und innovative <strong>KI-Integrationen</strong>, um den Erfolg Ihrer Plattform zu maximieren.
-    </p>
-  </div>
-</div>
+      <!-- Karte 3: Entwicklung -->
+      <div
+        class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
+      >
+        <div
+          class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
+        >
+        </div>
+        <h4 class="text-3xl font-bold text-white mb-6">Entwicklung</h4>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          Erstellung von schnellen, skalierbaren <strong>Webseiten</strong>, <strong
+            >Content-Management-Systemen</strong
+          > und <strong>API-Integrationen</strong>, maßgeschneidert für Ihr
+          Business.
+        </p>
+      </div>
 
-<!-- Warum mit mir arbeiten Abschnitt -->
-<h2 class="text-center text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 mt-36 mb-24 mx-2">
-  Warum mit mir arbeiten?
-</h2>
+      <!-- Karte 4: Optimierung -->
+      <div
+        class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
+      >
+        <div
+          class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
+        >
+        </div>
+        <h4 class="text-3xl font-bold text-white mb-6">Optimierung</h4>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          Steigerung der Performance durch <strong>SEO-Optimierung</strong>, <strong
+            >PageSpeed-Optimierung</strong
+          > und innovative <strong>KI-Integrationen</strong>, um den Erfolg
+          Ihrer Plattform zu maximieren.
+        </p>
+      </div>
+    </div>
 
-<div class="w-11/12 md:w-10/12 lg:w-8/12 mx-auto flex flex-col md:flex-row items-center mb-24">
+    <!-- Warum mit mir arbeiten Abschnitt -->
+    <h2
+      class="text-center text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 mt-36 mb-24 mx-2"
+    >
+      Warum mit mir arbeiten?
+    </h2>
 
-  <!-- Handybildabschnitt für Desktop links -->
-  <div class="w-full md:w-5/12 flex justify-center md:justify-start mb-12 md:mb-0 rounded shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] phone-container-second">
-    <img src="/images/about-phone2.webp" alt="Phone Screenshot" class="w-80 md:w-auto md:max-h-[60vh] object-contain rounded-lg">
-  </div>
+    <div
+      class="w-11/12 md:w-10/12 lg:w-8/12 mx-auto flex flex-col md:flex-row items-center mb-24"
+    >
+      <!-- Handybildabschnitt für Desktop links -->
+      <div
+        class="w-full md:w-5/12 flex justify-center md:justify-start mb-12 md:mb-0 rounded shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] phone-container-second"
+      >
+        <img
+          src="/images/about-phone2.webp"
+          alt="Phone Screenshot"
+          class="w-80 md:w-auto md:max-h-[60vh] object-contain rounded-lg"
+        />
+      </div>
 
-  <!-- Textabschnitt für Desktop rechts -->
-  <div class="w-full md:w-7/12 text-center md:text-left">
-    <p class="text-xl md:text-2xl mt-4">
-      Ich habe in verschiedenen Branchen wie Telemedizin, E-Commerce und Startups gearbeitet und vereine technisches Know-how mit einem starken Marketingverständnis. 
-      Mein Ziel ist es, <span class="underline-animation">schnelle, benutzerfreundliche und skalierbare Webanwendungen</span> zu entwickeln, die Geschäftsergebnisse liefern. 
-    </p>
+      <!-- Textabschnitt für Desktop rechts -->
+      <div class="w-full md:w-7/12 text-center md:text-left">
+        <p class="text-xl md:text-2xl mt-4">
+          Ich habe in verschiedenen Branchen wie Telemedizin, E-Commerce und
+          Startups gearbeitet und vereine technisches Know-how mit einem starken
+          Marketingverständnis. Mein Ziel ist es, <span
+            class="underline-animation"
+            >schnelle, benutzerfreundliche und skalierbare Webanwendungen</span
+          > zu entwickeln, die Geschäftsergebnisse liefern.
+        </p>
 
-    <p class="text-xl md:text-2xl mt-8">
-      Ob du eine schicke Unternehmenswebsite oder eine dynamische Webanwendung brauchst – ich bin hier, um es möglich zu machen.    </p>
+        <p class="text-xl md:text-2xl mt-8">
+          Ob du eine schicke Unternehmenswebsite oder eine dynamische
+          Webanwendung brauchst – ich bin hier, um es möglich zu machen.
+        </p>
 
-<!-- Call to Action -->
-<p class="text-xl md:text-2xl mt-8">
-  <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500">
-    Lass uns dein Projekt zu einem Meisterwerk machen!
-  </span>
-</p>
+        <!-- Call to Action -->
+        <p class="text-xl md:text-2xl mt-8">
+          <span
+            class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500"
+          >
+            Lass uns dein Projekt zu einem Meisterwerk machen!
+          </span>
+        </p>
 
-  <!-- Buttons at the bottom-right -->
-  <div class="flex flex-col md:flex-row gap-6 mt-8 md:mt-16 justify-center md:justify-start items-center md:items-start w-full md:w-auto">
-    <!-- Secondary Button -->
-    <a href="/projects" class="bg-[#1f1235] text-white font-bold py-3 px-8 rounded-full border-2 border-[#6d87d1] shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-500 hover:shadow-[0_0_10px_rgba(147,112,219,0.5),_0_0_25px_rgba(3,169,244,0.4)] text-center w-full max-w-xs md:max-w-none md:w-auto">
-      Projekte erleben
-    </a>
-  
-      <!-- Primary Button -->
-    <a href="/contact" class="relative inline-block py-3 px-8 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-white text-[#090a1a] shadow-lg transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_rgba(147,112,219,0.8),_0_0_35px_rgba(3,169,244,0.6)] hover:border-[#6d87d1]">
-      Let's talk
-    </a>
-  </div>
-</MainLayout>
+        <!-- Buttons at the bottom-right -->
+        <div
+          class="flex flex-col md:flex-row gap-6 mt-8 md:mt-16 justify-center md:justify-start items-center md:items-start w-full md:w-auto"
+        >
+          <!-- Secondary Button -->
+          <a
+            href="/projects"
+            class="bg-[#1f1235] text-white font-bold py-4 px-10 rounded-full border-2 border-[#6d87d1] shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-500 hover:shadow-[0_0_10px_rgba(147,112,219,0.5),_0_0_25px_rgba(3,169,244,0.4)] text-center w-full max-w-xs md:max-w-none md:w-auto"
+          >
+            Projekte erleben
+          </a>
 
-<style>
-  .text-gradient {
-    background: linear-gradient(to right, #9c27b0, #03a9f4);
-    -webkit-background-clip: text;
-    color: transparent;
-  }
+          <!-- Primary Button -->
+          <a
+            href="/contact"
+            class="relative inline-block py-4 px-10 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-white text-[#090a1a] shadow-lg transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_rgba(147,112,219,0.8),_0_0_35px_rgba(3,169,244,0.6)] hover:border-[#6d87d1]"
+          >
+            Let's talk
+          </a>
+        </div>
+      </div>
 
-
-  .drop-shadow-lg {
-    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
-  }
-
-  .border-gradient-to-r {
-    border-image-slice: 1;
-    border-image-source: linear-gradient(to right, #9c27b0, #03a9f4);
-  }
-
-    /* Container for the entire image, gradient, and shadow */
-    .profile-container {
-    transform: translateX(-150%); /* Start off-screen to the left */
-    opacity: 0; /* Initially hidden */
-    transition: transform 1.5s ease-out, opacity 1.5s ease-out;
-  }
-
-  /* Trigger the animation when the page loads */
-  .profile-container {
-    animation: flyInFromLeft 1.5s forwards;
-  }
-
-  /* Keyframes for the fly-in effect */
-  @keyframes flyInFromLeft {
-    0% {
-      transform: translateX(-150%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-
-  /* Container for the entire image and shadow */
-  .phone-container {
-    transform: translateX(-150%); /* Start off-screen to the left */
-    opacity: 0; /* Initially hidden */
-    transition: transform 1.5s ease-out, opacity 1.5s ease-out; /* Remove delay for mobile */
-  }
-
-  /* Fly in effect */
-  .fly-in {
-    transform: translateX(0);
-    opacity: 1;
-  }
-
-  /* Keyframes for desktop (initial load) */
-  @media (min-width: 768px) {
-    .phone-container {
-      animation: flyInFromLeftPhone 1.5s forwards 0.5s; /* Keep delay on desktop */
-    }
-
-    .underline-animation {
-    display: inline-block;
-    background-image: linear-gradient(120deg, #03a9f4, #9c27b0);
-    background-repeat: no-repeat;
-    background-size: 100% 3px;
-    background-position: 0 88%;
-    transition: background-size 0.3s ease-in-out;
-  }
-
-  .underline-animation:hover {
-    background-size: 100% 100%;
-  }
-
-  }
-
-  /* Keyframes for mobile (on scroll) */
-  @keyframes flyInFromLeftPhone {
-    0% {
-      transform: translateX(-150%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-
-  /* Initial state for the second phone container */
-.phone-container-second {
-  transform: translateX(-150%); /* Positioned off-screen to the left */
-  opacity: 0; /* Initially hidden */
-  transition: transform 1.5s ease-out, opacity 1.5s ease-out;
-}
-
-/* Fly-in effect when in view */
-.fly-in-second {
-  transform: translateX(0); /* Return to original position */
-  opacity: 1; /* Fully visible */
-}
-
-</style>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const phoneImage = document.querySelector('.phone-container');
-
-    // Detect if the element is in view for mobile
-    function isInViewPort(element) {
-      const rect = element.getBoundingClientRect();
-      return (
-        rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.bottom >= 0
-      );
-    }
-
-    // Add event listener for scroll to trigger the animation
-    window.addEventListener('scroll', function() {
-      if (window.innerWidth < 768) { // Only apply for mobile view
-        if (isInViewPort(phoneImage)) {
-          phoneImage.classList.add('fly-in');
+      <style>
+        .text-gradient {
+          background: linear-gradient(to right, #9c27b0, #03a9f4);
+          -webkit-background-clip: text;
+          color: transparent;
         }
-      }
-    });
-  });
 
-  document.addEventListener('DOMContentLoaded', function() {
-  const secondPhoneImage = document.querySelector('.phone-container-second');
+        .drop-shadow-lg {
+          filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
+        }
 
-  // Function to check if the element is in the viewport
-  function isInViewPort(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-      rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.bottom >= 0
-    );
-  }
+        .border-gradient-to-r {
+          border-image-slice: 1;
+          border-image-source: linear-gradient(to right, #9c27b0, #03a9f4);
+        }
 
-  // Function to add the fly-in class when in view
-  function handleScroll() {
-    if (isInViewPort(secondPhoneImage)) {
-      secondPhoneImage.classList.add('fly-in-second');
-    }
-  }
+        /* Container for the entire image, gradient, and shadow */
+        .profile-container {
+          transform: translateX(-150%); /* Start off-screen to the left */
+          opacity: 0; /* Initially hidden */
+          transition:
+            transform 1.5s ease-out,
+            opacity 1.5s ease-out;
+        }
 
-  // Add scroll event listener
-  window.addEventListener('scroll', handleScroll);
+        /* Trigger the animation when the page loads */
+        .profile-container {
+          animation: flyInFromLeft 1.5s forwards;
+        }
 
-  // Run on page load in case the element is already in view
-  handleScroll();
-});
-</script>
+        /* Keyframes for the fly-in effect */
+        @keyframes flyInFromLeft {
+          0% {
+            transform: translateX(-150%);
+            opacity: 0;
+          }
+          100% {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+
+        /* Container for the entire image and shadow */
+        .phone-container {
+          transform: translateX(-150%); /* Start off-screen to the left */
+          opacity: 0; /* Initially hidden */
+          transition:
+            transform 1.5s ease-out,
+            opacity 1.5s ease-out; /* Remove delay for mobile */
+        }
+
+        /* Fly in effect */
+        .fly-in {
+          transform: translateX(0);
+          opacity: 1;
+        }
+
+        /* Keyframes for desktop (initial load) */
+        @media (min-width: 768px) {
+          .phone-container {
+            animation: flyInFromLeftPhone 1.5s forwards 0.5s; /* Keep delay on desktop */
+          }
+
+          .underline-animation {
+            display: inline-block;
+            background-image: linear-gradient(120deg, #03a9f4, #9c27b0);
+            background-repeat: no-repeat;
+            background-size: 100% 3px;
+            background-position: 0 88%;
+            transition: background-size 0.3s ease-in-out;
+          }
+
+          .underline-animation:hover {
+            background-size: 100% 100%;
+          }
+        }
+
+        /* Keyframes for mobile (on scroll) */
+        @keyframes flyInFromLeftPhone {
+          0% {
+            transform: translateX(-150%);
+            opacity: 0;
+          }
+          100% {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+
+        /* Initial state for the second phone container */
+        .phone-container-second {
+          transform: translateX(-150%); /* Positioned off-screen to the left */
+          opacity: 0; /* Initially hidden */
+          transition:
+            transform 1.5s ease-out,
+            opacity 1.5s ease-out;
+        }
+
+        /* Fly-in effect when in view */
+        .fly-in-second {
+          transform: translateX(0); /* Return to original position */
+          opacity: 1; /* Fully visible */
+        }
+      </style>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const phoneImage = document.querySelector(".phone-container")
+
+          // Detect if the element is in view for mobile
+          function isInViewPort(element) {
+            const rect = element.getBoundingClientRect()
+            return (
+              rect.top <=
+                (window.innerHeight || document.documentElement.clientHeight) &&
+              rect.bottom >= 0
+            )
+          }
+
+          // Add event listener for scroll to trigger the animation
+          window.addEventListener("scroll", function () {
+            if (window.innerWidth < 768) {
+              // Only apply for mobile view
+              if (isInViewPort(phoneImage)) {
+                phoneImage.classList.add("fly-in")
+              }
+            }
+          })
+        })
+
+        document.addEventListener("DOMContentLoaded", function () {
+          const secondPhoneImage = document.querySelector(
+            ".phone-container-second"
+          )
+
+          // Function to check if the element is in the viewport
+          function isInViewPort(element) {
+            const rect = element.getBoundingClientRect()
+            return (
+              rect.top <=
+                (window.innerHeight || document.documentElement.clientHeight) &&
+              rect.bottom >= 0
+            )
+          }
+
+          // Function to add the fly-in class when in view
+          function handleScroll() {
+            if (isInViewPort(secondPhoneImage)) {
+              secondPhoneImage.classList.add("fly-in-second")
+            }
+          }
+
+          // Add scroll event listener
+          window.addEventListener("scroll", handleScroll)
+
+          // Run on page load in case the element is already in view
+          handleScroll()
+        })
+      </script>
+    </div>
+  </div></MainLayout
+>
