@@ -1,5 +1,8 @@
 ---
 // This is the Battle Calculator content component
+
+import HorizontalVideo from "../HorizontalVideo.astro"
+
 ---
 
 <section class="min-h-screen text-white py-20 md:py-4">
@@ -65,19 +68,19 @@
   <hr class="my-12 border-gray-600" />
 
   <!-- Visual Experience Section with Video -->
-  <section class="relative mt-16">
+  <section class="relative mt-16 mb-36">
     <h2
       class="md:text-5xl text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 text-center"
     >
       Erlebe Sound- und Visuelleffekte hautnah
     </h2>
-    <iframe
-      width="100%"
-      height="315"
-      src="https://www.youtube-nocookie.com/embed/axHB2DFny8Y"
-      frameborder="0"
-      allowfullscreen
-      class="mt-8 rounded-lg shadow-lg"></iframe>
+
+    <HorizontalVideo
+    videoSrc="https://www.youtube-nocookie.com/embed/axHB2DFny8Y?autoplay=1&modestbranding=1&showinfo=0&controls=1&rel=0"
+    thumbnailSrc="/images/projects/3.webp"
+  />
+
+
   </section>
 
   <!-- Buttons at the bottom-right -->

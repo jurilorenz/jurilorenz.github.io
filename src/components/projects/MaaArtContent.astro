@@ -1,6 +1,11 @@
 ---
 // This is the MAA Art website project component
+
+import VideoWithCTA from "../VideoWithCTA.astro"
+
 ---
+
+
 
 <section class="min-h-screen text-white py-20 md:py-4">
   <div class="text-center w-11/12 md:w-10/12 lg:w-8/12 mx-auto">
@@ -141,48 +146,20 @@
 
     <!-- YouTube Shorts Video -->
 
-    <div
-      class="relative bg-[#1b1b33] rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] transition-transform duration-500 mt-16 mx-auto"
-      style="max-width: 640px;"
-    >
-      <div
-        class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
-      >
-      </div>
-      <h3 class="text-2xl font-semibold text-white mb-4"></h3>
-      <div class="relative w-full" style="padding-top: 125%;">
-        <!-- 5:4 Aspect Ratio -->
-        <iframe
-          class="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
-          src="https://www.youtube-nocookie.com/embed/AGxdlF4EUHs?autoplay=0&modestbranding=1"
-          title="YouTube Shorts - MAA Art Website Project"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
-      </div>
-    </div>
-  </section>
-</section>
 
-<!-- Buttons Section -->
-<div
-  class="flex flex-col md:flex-row gap-6 md:mt-24 mb-36 justify-center md:justify-center items-center md:items-start w-full md:w-auto"
->
-  <!-- Primary Button -->
-  <a
-    href="https://github.com/jurilorenz/maa-art-react"
-    class="relative inline-block py-4 px-10 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-white text-[#090a1a] shadow-lg transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_rgba(147,112,219,0.8),_0_0_35px_rgba(3,169,244,0.6)] hover:border-[#6d87d1]"
-  >
-    Projekt auf GitHub ansehen
-  </a>
+</div>
 
-  <!-- Secondary Button -->
-  <a
-    href="/projects"
-    class="bg-[#1f1235] text-white font-bold py-4 px-10 rounded-full border-2 border-[#6d87d1] shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-500 hover:shadow-[0_0_10px_rgba(147,112,219,0.5),_0_0_25px_rgba(3,169,244,0.4)] text-center w-full max-w-xs md:max-w-none md:w-auto"
-  >
-    Zurück
-  </a>
+<VideoWithCTA
+videoSrc="https://www.youtube-nocookie.com/embed/AGxdlF4EUHs?autoplay=1&modestbranding=1&showinfo=0&controls=1&rel=0"
+thumbnailSrc="/images/projects/1.webp" 
+introText="Die Plattform bietet eine interaktive Galerie, Informationen zu Ausstellungen, ein Kontaktformular und einen Sprachwechsler für ein internationales Publikum."
+secondText="Entwickelt mit React.js, Tailwind CSS und Next.js, garantiert sie SEO-Optimierung und eine herausragende Nutzererfahrung."
+ctaText="Schau dir das Projekt an!"
+primaryButtonLabel="Zurück"
+primaryButtonLink="/projects"
+secondaryButtonLabel="Projekt auf GitHub ansehen"
+secondaryButtonLink="https://github.com/jurilorenz/maa-art-react"
+/>
 </div>
 
 <script>

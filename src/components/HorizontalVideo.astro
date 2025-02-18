@@ -3,24 +3,68 @@
 
 export interface HorizontalVideoProps {
   videoSrc: string; // URL for the YouTube video
+  thumbnailSrc: string; // Local thumbnail image (required)
 }
 
-const { videoSrc } = Astro.props;
+const { videoSrc, thumbnailSrc } = Astro.props;
+
+// Получаем YouTube ID из ссылки
+const videoId = videoSrc.split("/embed/")[1]?.split("?")[0];
 ---
 
-<div class="w-full mt-24 -mb-12 relative bg-[#1b1b33] rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] overflow-hidden">
-  <!-- Gradient shadow -->
-  <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2"></div>
-  
-  <!-- Full-width video -->
-  <div class="relative w-full" style="padding-top: 56.25%;"> <!-- 16:9 Aspect Ratio -->
-    <iframe
-      class="absolute top-0 left-0 w-full h-full"
-      src={videoSrc}
-      title="YouTube Video"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-    ></iframe>
+<div class="w-full md:w-8/12 lg:w-6/12 xl:w-7/12 mx-auto mt-24 -mb-12 relative bg-[#1b1b33] rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] overflow-hidden">  
+  <!-- Видео-заглушка -->
+  <div class="relative w-full flex flex-col items-center justify-center text-center p-6 space-y-4 bg-gray-900 text-white"
+    id={"video-wrapper-" + videoId}>
+
+    <!-- Используем переданный thumbnail, но показываем только верхнюю часть -->
+    <div class="relative w-full h-48 overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent to-indigo-900"></div>
+            <img src={thumbnailSrc} alt="Video Thumbnail" class="w-full object-cover" style="object-position: top;">
+    </div>
+    
+    <!-- STA-стилизованная кнопка -->
+    <button 
+      class="py-4 px-10 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-[#1f1235] text-white border-2 border-[#6d87d1] shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-500 hover:shadow-[0_0_10px_rgba(147,112,219,0.5),_0_0_25px_rgba(3,169,244,0.4)] play-button"
+      data-video-id={videoId}
+      data-video-src={videoSrc}
+    >
+      Video laden
+    </button>
+
+    <p class="text-sm text-gray-300 max-w-lg">
+      Ich möchte das eingebundene YouTube-Video sehen und stimme zu, dass personenbezogene Daten (z. B. IP-Adresse) an Google weitergegeben werden.
+    </p>
   </div>
+
+  <!-- Контейнер для YouTube -->
+  <div id={"video-container-" + videoId} class="hidden"></div>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".play-button").forEach(button => {
+      button.addEventListener("click", function () {
+        const videoId = this.getAttribute("data-video-id");
+        const videoSrc = this.getAttribute("data-video-src");
+        const videoWrapper = document.getElementById("video-wrapper-" + videoId);
+        const videoContainer = document.getElementById("video-container-" + videoId);
+
+        if (videoWrapper && videoContainer) {
+          videoWrapper.style.display = "none";
+          videoContainer.innerHTML = `
+            <iframe 
+              class="w-full h-64 md:h-80 lg:h-96"
+              src="${videoSrc}?autoplay=1&mute=1&rel=0" 
+              title="YouTube Video" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
+          `;
+          videoContainer.classList.remove("hidden");
+        }
+      });
+    });
+  });
+</script>

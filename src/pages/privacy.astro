@@ -196,18 +196,21 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 -->
 
-<h3 class="text-2xl font-bold mt-8">Einbindung von YouTube-Videos</h3>
+<h3 class="text-2xl font-bold mt-8">Eingebettete YouTube-Videos mit Platzhaltern</h3>
 <p class="mt-4">
-  Wir binden Videos der Plattform "YouTube" ein. Der Anbieter ist die Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland.
+  Unsere Website bindet YouTube-Videos nicht direkt ein, sondern verwendet eine Platzhalter-Funktion (Video-Vorschau). Dadurch werden keine personenbezogenen Daten an YouTube oder Google übertragen, solange das Video nicht aktiv abgespielt wird.
 </p>
+
 <p class="mt-4">
-  Die Videos werden im "erweiterten Datenschutzmodus" eingebunden. Das bedeutet, dass keine Cookies zur Analyse des Nutzerverhaltens gesetzt werden, solange das Video nicht abgespielt wird. Erst beim Abspielen des Videos können Daten durch YouTube verarbeitet werden, insbesondere die IP-Adresse des Nutzers.
+  Erst wenn Sie auf „Video laden“ klicken, wird eine Verbindung zu YouTube hergestellt und Ihre IP-Adresse sowie andere technische Daten an Google übertragen. Diese Verarbeitung basiert auf **Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)**, da der Nutzer aktiv zustimmen muss.
 </p>
+
 <p class="mt-4">
-  Diese Datenverarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO, basierend auf unserem berechtigten Interesse an einer attraktiven Darstellung unserer Online-Angebote. Sofern eine Einwilligung abgefragt wurde (z. B. durch Cookie-Banner), erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO.
+  Wir nutzen **https://www.youtube-nocookie.com/**, um Tracking-Cookies zu vermeiden. Dennoch kann Google Daten verarbeiten, wenn das Video gestartet wird. Falls Sie dies nicht wünschen, klicken Sie nicht auf „Video laden“.
 </p>
+
 <p class="mt-4">
-  Weitere Informationen zur Datenverarbeitung durch YouTube finden Sie in der <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" class="underline hover:text-[#6d87d1]">Datenschutzerklärung von Google</a>.
+  Weitere Informationen finden Sie in der <a href="https://policies.google.com/privacy" target="_blank" class="underline hover:text-[#6d87d1]">Datenschutzerklärung von Google</a>.
 </p>
 
 <h3 class="text-xl font-bold mt-4">Cloudflare</h3>

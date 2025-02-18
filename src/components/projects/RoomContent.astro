@@ -1,3 +1,11 @@
+---
+// RoomContent.astro
+
+import HorizontalVideo from "../HorizontalVideo.astro"
+
+---
+
+
 <section class="min-h-screen text-white py-20 md:py-4">
   <div class="text-center w-11/12 md:w-10/12 lg:w-8/12 mx-auto">
     <!-- Title with Gradient -->
@@ -115,20 +123,19 @@
   <hr class="my-12 border-gray-600" />
 
   <!-- Visual Experience Section with Video -->
-  <section class="relative mt-16">
+  <section class="relative mt-16 mb-36">
     <h2
       class="md:text-5xl text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 text-center"
     >
       Erlebe die visuellen und akustischen Effekte
     </h2>
-    <iframe
-      width="100%"
-      height="315"
-      src="https://www.youtube-nocookie.com/embed/u_h3aZ_qvfI"
-      frameborder="0"
-      loading="lazy"
-      allowfullscreen
-      class="mt-8 rounded-lg shadow-lg"></iframe>
+
+    <HorizontalVideo
+    videoSrc="https://www.youtube-nocookie.com/embed/u_h3aZ_qvfI?autoplay=1&modestbranding=1&showinfo=0&controls=1&rel=0"
+    thumbnailSrc="/images/projects/2.webp"
+  />
+
+
   </section>
 
   <!-- Buttons Section -->
