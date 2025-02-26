@@ -1,0 +1,70 @@
+---
+// AnnaMenci.astro
+
+import ContentSection from "../ContentSection.astro"
+import VideoWithCTA from "../VideoWithCTA.astro"
+import SectionTitle from "../SectionTitle.astro"
+import GradientDivider from "../GradientDivider.astro"
+import TextSection from "../TextSection.astro"
+---
+
+<div class="project-component">
+  <TextSection
+    title="E-Commerce für Anna Menci"
+    introText="Ein moderner Online-Shop für Anna Menci – eine exklusive Modemarke mit Fokus auf hochwertige Loungewear. Das minimalistische und elegante Design sorgt für eine perfekte User Experience."
+    secondText="Mit einem nahtlosen Kaufprozess, optimierten Produktseiten und einer klaren Markenidentität hebt sich dieser Shop von der Konkurrenz ab."
+  />
+
+  <ContentSection
+    imgSrc="/images/projects/4-1.webp"
+    imgAlt="Produktkategorie-Ansicht"
+    title="Elegantes Shopping-Erlebnis"
+    introText="Die Startseite bietet eine intuitive Navigation durch die verschiedenen Kategorien – klar strukturiert für eine einfache Produktauswahl."
+    secondText="Das mobile-optimierte Design sorgt für eine reibungslose Nutzung auf allen Endgeräten und garantiert eine hohe Conversion-Rate."
+  />
+
+  <ContentSection
+    imgSrc="/images/projects/4-3.webp"
+    imgAlt="Produktdetailseite im Shop"
+    title="Perfekt präsentierte Produkte"
+    introText="Detaillierte Produktseiten mit hochwertigen Bildern, flexiblen Größenoptionen und direkter Kaufmöglichkeit – ein Shopping-Erlebnis, das überzeugt."
+    secondText="Durch ansprechende Produktfotografie wird die Qualität der Kleidung hervorgehoben und das Interesse der Kunden gesteigert."
+    reverse={true} 
+
+    />
+
+
+
+  <ContentSection
+    imgSrc="/images/projects/4-4.webp"
+    imgAlt="Kontakt- und Checkout-Bereich"
+    title="Schneller Support & Kontakt"
+    introText="Kunden können einfach über verschiedene Kanäle Kontakt aufnehmen – WhatsApp, E-Mail oder Telegram – für eine schnelle und persönliche Beratung."
+    secondText="Der Checkout-Prozess ist schlank und effizient, um den Kaufabschluss so einfach wie möglich zu gestalten."
+    />
+
+  <ContentSection
+    imgSrc="/images/projects/4-5.webp"
+    imgAlt="Menüansicht der Website"
+    title="Minimalistisches UI-Design"
+    introText="Das Hauptmenü ist clean und benutzerfreundlich – mit direktem Zugriff auf den Shop, die Galerie und Kontaktmöglichkeiten."
+    secondText="Die Farbgebung und Typografie spiegeln die Exklusivität der Marke wider und schaffen ein kohärentes Markenbild."
+    reverse={true} 
+    />
+
+  <GradientDivider />
+
+  <SectionTitle title="Erlebe den Online-Shop in Aktion" />
+
+  <VideoWithCTA
+    videoSrc="https://www.youtube-nocookie.com/embed/KEseF_knapg?autoplay=1&modestbranding=1&showinfo=0&controls=1&rel=0"
+    thumbnailSrc="/images/projects/4.webp"
+    introText="Dieses Projekt kombiniert modernes Webdesign mit einer intuitiven Shopping-Experience. Perfekt für Brands, die online professionell auftreten möchten."
+    secondText="Möchtest du auch einen Online-Shop mit einzigartigem Design und perfekter Usability? Lass uns darüber sprechen!"
+    ctaText="Jetzt ansehen!"
+    primaryButtonLabel="Mehr Projekte"
+    primaryButtonLink="/projects"
+    secondaryButtonLabel="Let’s Talk"
+    secondaryButtonLink="/contact"
+  />
+</div>

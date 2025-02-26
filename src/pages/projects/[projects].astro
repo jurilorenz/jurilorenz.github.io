@@ -8,6 +8,11 @@ import AkimovaArt from "../../components/projects/AkimovaArt.astro";
 import Efimow from "../../components/projects/Efimow.astro";
 import BavarianIceRoll from "../../components/projects/BavarianIceRoll.astro";
 import Felix from "../../components/projects/Felix.astro";
+import StudioD from "../../components/projects/StudioD.astro";
+import AnnaMenci from "../../components/projects/AnnaMenci.astro";
+import Streetly from "../../components/projects/Streetly.astro";
+import VadimAevskiy from "../../components/projects/VadimAevskiy.astro";
+
 
 
 export async function getStaticPaths() {
@@ -30,6 +35,13 @@ export async function getStaticPaths() {
       params: { projects: "3" }, 
       props: {
         name: "Battle Calculator",
+        desc: "",
+      },
+    },
+    { 
+      params: { projects: "4" }, 
+      props: {
+        name: "AnnaMenci",
         desc: "",
       },
     },
@@ -68,6 +80,27 @@ export async function getStaticPaths() {
         desc: "",
       },
     },
+    { 
+      params: { projects: "11" }, 
+      props: {
+        name: "Streetly",
+        desc: "",
+      },
+    },
+    { 
+      params: { projects: "12" }, 
+      props: {
+        name: "Personal Website",
+        desc: "",
+      },
+    },
+    { 
+      params: { projects: "9" }, 
+      props: {
+        name: "Studio D",
+        desc: "",
+      },
+    },
   ];
 }
 
@@ -103,11 +136,15 @@ const { name, desc } = Astro.props;
       {projects === '1' && <MaaArt />}
       {projects === '2' && <RoomContent />}
       {projects === '3' && <BattleContent />}
+      {projects === '4' && <AnnaMenci />}
       {projects === '5' && <Brunner />}
       {projects === '6' && <AkimovaArt />}
       {projects === '7' && <Efimow />}
       {projects === '8' && <BavarianIceRoll />}
+      {projects === '9' && <StudioD />}
       {projects === '10' && <Felix />}
+      {projects === '11' && <Streetly />}
+      {projects === '12' && <VadimAevskiy />}
     </section>
 
 

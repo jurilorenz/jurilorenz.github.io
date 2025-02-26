@@ -1,0 +1,106 @@
+---
+// Streetly.astro
+
+import CircleImage from "../CircleImage.astro"
+import ContentSection from "../ContentSection.astro"
+import FeatureCard from "../FeatureCard.astro"
+import VideoWithCTA from "../VideoWithCTA.astro"
+import SectionTitle from "../SectionTitle.astro"
+import GradientDivider from "../GradientDivider.astro"
+import TextSection from "../TextSection.astro"
+import IpadComponent from "../IpadComponent.astro"
+---
+
+<div class="project-component">
+  <TextSection
+    title="Branding & Webdesign für eine smarte Navigation"
+    introText="Für Streetly habe ich ein komplettes digitales Konzept entwickelt – von der Logo-Gestaltung bis zur finalen Hero Page. Die Website kombiniert eine moderne Farbpalette mit einer klaren UX/UI-Struktur, um die Navigation durch Städte sicherer zu machen."
+    secondText="Dieses Projekt zeigt, wie Design und Technologie zusammenwirken, um eine starke digitale Identität zu schaffen. Die Website ist responsiv, SEO-optimiert und vermittelt Streetlys Mission auf einen Blick."
+  />
+
+  <SectionTitle title="Logo & Branding" />
+
+  <CircleImage
+    imgSrc="/images/projects/11-logo.webp"
+    altText="Streetly Logo"
+    title1="Marken"
+    title2="Identität"
+    motto1="Klares"
+    motto2="Branding"
+  />
+
+  <TextSection
+    introText="Das Streetly-Logo wurde so gestaltet, dass es Sicherheit und Technologie vereint. Die Farbpalette mit sanften Blau- und Violett-Tönen symbolisiert den Übergang von Unsicherheit zu Sicherheit – genau wie Streetly Nutzer zu sicheren Wegen führt."
+    secondText="Ein starkes Branding ist essenziell für jedes Projekt – es schafft Wiedererkennung, Vertrauen und eine klare Identität."
+  />
+
+  <ContentSection
+  imgSrc="/images/projects/11-2.webp"
+  imgAlt="Mobile Ansicht von Streetly"
+  title="Mobile-First Ansatz"
+  introText="Das Design wurde von Anfang an für mobile Endgeräte optimiert. Schnelle Ladezeiten, klare Call-to-Actions und eine flüssige Navigation sorgen für ein perfektes Nutzererlebnis auf Smartphones."
+  secondText="In der heutigen digitalen Welt ist eine mobile-first Strategie essenziell – und genau das habe ich für Streetly umgesetzt."
+/>
+
+  <SectionTitle title="Strukturiertes & modernes Webdesign" />
+
+  <IpadComponent
+    imgSrc="/images/projects/11-ipad.webp"
+    imgAlt="Streetly Website auf einem iPad"
+  />
+
+  <TextSection
+    introText="Ich habe ein minimalistisches, aber wirkungsvolles Design entwickelt, das sofort Vertrauen schafft. Die klare Typografie, abgestimmte Farben und strukturierte Inhalte sorgen für eine intuitive Nutzererfahrung."
+    secondText="Streetly zeigt, wie modernes Webdesign nicht nur ästhetisch ansprechend, sondern auch funktional und nutzerfreundlich sein kann."
+  />
+
+  <ContentSection
+    imgSrc="/images/projects/11-3.webp"
+    imgAlt="Contact & Community Section on Streetly Website"
+    title="Community & Kontakt"
+    introText="Streetly setzt auf Community-Engagement und einfache Kontaktmöglichkeiten. Die Website integriert soziale Netzwerke und sorgt dafür, dass Nutzer und Interessierte leicht in Verbindung treten können."
+    secondText="Durch einen klaren Call-to-Action und ein modernes, interaktives Design wird die Community aktiv eingebunden."
+  />
+
+  <SectionTitle title="Features & Vorteile meiner Arbeit" />
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-24 mb-32">
+    <FeatureCard
+      title="Logo & Branding"
+      description="Ein starkes visuelles Konzept mit Wiedererkennungswert."
+    />
+
+    <FeatureCard
+      title="Klares Webdesign"
+      description="Strukturierte Inhalte und intuitive Navigation für maximale Wirkung."
+    />
+
+    <FeatureCard
+      title="SEO-Optimierung"
+      description="Bessere Sichtbarkeit durch optimierte Inhalte & schnelle Ladezeiten."
+    />
+
+    <FeatureCard
+      title="0€ für Hosting & Domain"
+      description="Streetly läuft auf einer kostenlosen Plattform – keine versteckten Kosten!"
+    />
+  </div>
+
+
+
+  <GradientDivider />
+
+  <SectionTitle title="Video-Einblick: Branding & Webdesign" />
+
+  <VideoWithCTA
+    videoSrc="https://www.youtube-nocookie.com/embed/UZNtaKaXoGw?autoplay=1&modestbranding=1&showinfo=0&controls=1&rel=0"
+    thumbnailSrc="/images/projects/11.webp" 
+    introText="Hier siehst du, wie eine starke Marke entsteht!"
+    secondText="Egal ob für Startups, Unternehmen oder Personal Branding – ich entwickle moderne, professionelle Websites mit starker visueller Identität."
+    ctaText="Schau dir die Website an!"
+    primaryButtonLabel="Zurück"
+    primaryButtonLink="/projects"
+    secondaryButtonLabel="Let's Talk"
+    secondaryButtonLink="/contact"
+  />
+</div>

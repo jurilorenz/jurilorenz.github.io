@@ -1,0 +1,106 @@
+---
+// VadimAevskiy.astro
+
+import CircleImage from "../CircleImage.astro"
+import ContentSection from "../ContentSection.astro"
+import FeatureCard from "../FeatureCard.astro"
+import VideoWithCTA from "../VideoWithCTA.astro"
+import SectionTitle from "../SectionTitle.astro"
+import GradientDivider from "../GradientDivider.astro"
+import TextSection from "../TextSection.astro"
+import IpadComponent from "../IpadComponent.astro"
+---
+
+<div class="project-component">
+  <TextSection
+    title="Eine starke Online-Präsenz für Experten"
+    introText="Vadim Aevskiy ist ein angesehener Spezialist für Quantitative Finance, Risk Modeling und AI. Um seine Expertise optimal zu präsentieren, wurde eine minimalistische und professionelle Website erstellt, die Recruitern und Geschäftspartnern sofort einen klaren Überblick über seine Fähigkeiten bietet."
+    secondText="Mit einer eleganten Struktur, optimierten Inhalten und einer responsiven Gestaltung hebt sich die Website ab und unterstreicht Vadims Position als führender Experte in seinem Bereich."
+  />
+
+  <ContentSection
+    imgSrc="/images/projects/12-1.webp"
+    imgAlt="Mobile Ansicht von Vadim Aevskiy’s Website"
+    title="Ein professioneller erster Eindruck"
+    introText="Recruiter und Geschäftspartner gewinnen in wenigen Sekunden einen Überblick über Vadims Fachkenntnisse und Erfahrungen. Die Landingpage ist so gestaltet, dass sie Klarheit, Kompetenz und moderne Finanztechnologien vermittelt."
+    secondText="Durch eine mobilfreundliche Struktur bleibt das Nutzererlebnis auf allen Geräten einheitlich und hochwertig."
+  />
+
+  <SectionTitle title="Minimalistisches Design, maximale Wirkung" />
+
+  <IpadComponent
+    imgSrc="/images/projects/12-ipad.webp"
+    imgAlt="Website von Vadim Aevskiy auf einem iPad"
+  />
+
+  <TextSection
+    introText="Die Website kombiniert ein reduziertes, aber kraftvolles Design mit einer klaren Struktur, um Vadims Fachkompetenzen optimal zu präsentieren. Recruiter und Geschäftspartner finden alle wichtigen Informationen auf einen Blick."
+    secondText="Mit präzisen Call-to-Actions wird der Kontakt zu Vadim erleichtert, sodass Interessenten ihn direkt über E-Mail oder LinkedIn erreichen können."
+  />
+
+  <SectionTitle title="LinkedIn Optimierung & Branding" />
+
+  <IpadComponent
+    imgSrc="/images/projects/12-linkedin.webp"
+    imgAlt="LinkedIn-Präsentation von Vadim Aevskiy"
+  />
+
+  <TextSection
+    introText="Neben der Website wurde auch Vadims LinkedIn-Profil optisch optimiert. Mit einer professionellen Banner-Gestaltung und prägnantem Beschreibungstext wird sein Profil für potenzielle Geschäftspartner und Recruiter noch attraktiver."
+    secondText="Durch die gezielte Optimierung seiner digitalen Präsenz steigern wir seine Sichtbarkeit in der Finanz- und KI-Branche."
+  />
+
+  
+
+  <SectionTitle title="Features & Vorteile" />
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-24 mb-32">
+    <FeatureCard
+      title="Klare & professionelle Präsentation"
+      description="Die Website vermittelt Fachkompetenz und Erfahrung in wenigen Sekunden."
+    />
+
+    <FeatureCard
+      title="SEO-optimiert für mehr Sichtbarkeit"
+      description="Recruiter und Geschäftspartner finden die Website schneller über Google."
+    />
+
+    <FeatureCard
+      title="Mobilfreundliches Design"
+      description="Optimale Darstellung auf allen Geräten, von Smartphones bis Laptops."
+    />
+
+    <FeatureCard
+      title="Optimiert für LinkedIn"
+      description="Professionelles Banner-Design & gezielte Präsentation für Business-Netzwerke."
+    />
+
+    <FeatureCard
+      title="Kostenlose Domain & Hosting"
+      description="Keine zusätzlichen Kosten – inklusive kostenloser Domain und Hosting."
+    />
+
+    <FeatureCard
+      title="Einfache Kontaktaufnahme"
+      description="Direkte Verlinkung zu LinkedIn und E-Mail für Business-Anfragen."
+    />
+  </div>
+
+
+
+  <GradientDivider />
+
+  <SectionTitle title="Video-Einblick in die Website" />
+
+  <VideoWithCTA
+    videoSrc="https://www.youtube-nocookie.com/embed/pHtR70lncLw?autoplay=1&modestbranding=1&showinfo=0&controls=1&rel=0"
+    thumbnailSrc="/images/projects/12-1.webp" 
+    introText="Diese Landingpage ist ein Beispiel für effektive Selbstpräsentation im digitalen Zeitalter. Sie hilft Vadim, seine Reichweite zu vergrößern und mit den richtigen Business-Kontakten in Verbindung zu treten."
+    secondText="Ob für Business-Profis, Experten oder Unternehmen – ich entwickle Websites, die nicht nur modern aussehen, sondern auch echte Ergebnisse liefern."
+    ctaText="Schau dir die Website an!"
+    primaryButtonLabel="Zurück"
+    primaryButtonLink="/projects"
+    secondaryButtonLabel="Let's Talk"
+    secondaryButtonLink="/contact"
+  />
+</div>

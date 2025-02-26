@@ -1,0 +1,100 @@
+---
+// StudioD.astro
+
+import CircleImage from "../CircleImage.astro"
+import ContentSection from "../ContentSection.astro"
+import FeatureCard from "../FeatureCard.astro"
+import VideoWithCTA from "../VideoWithCTA.astro"
+import SectionTitle from "../SectionTitle.astro"
+import GradientDivider from "../GradientDivider.astro"
+import TextSection from "../TextSection.astro"
+---
+
+<div class="project-component">
+  <TextSection
+    title="Premium Webdesign für Studio D"
+    introText="Ein exklusiver Webauftritt für Studio D – ein moderner Friseursalon in München. Das Projekt umfasst nicht nur eine leistungsstarke Website, sondern auch ein vollständiges Branding-Paket inklusive Logo und Visitenkarten."
+    secondText="Das Ziel war es, eine starke digitale Präsenz zu schaffen, die Kunden begeistert und nahtloses Buchen von Terminen ermöglicht."
+  />
+
+  <ContentSection
+    imgSrc="/images/projects/9-1.webp"
+    imgAlt="Mobile Ansicht der Studio D Website"
+    title="Hochwertiges Webdesign & Branding"
+    introText="Die Website kombiniert modernes Design mit einer benutzerfreundlichen Struktur. Mobile-First optimiert und mit schneller Ladezeit garantiert sie eine perfekte User Experience."
+    secondText="Kunden können einfach durch die Dienstleistungen navigieren, Termine buchen und direkt online bezahlen."
+  />
+
+  <SectionTitle title="Branding & Corporate Design" />
+
+  <TextSection
+    introText="Neben der Website wurde ein komplettes Corporate Design entwickelt. Logo, Farben und Schriften wurden sorgfältig ausgewählt, um die moderne und exklusive Identität des Salons widerzuspiegeln."
+    secondText="Die konsistente visuelle Gestaltung schafft eine starke Wiedererkennbarkeit und stärkt die Markenpräsenz."
+  />
+
+  <SectionTitle title="Logo-Design" />
+
+  <CircleImage
+    imgSrc="/images/projects/9-logo.webp"
+    altText="Logo für Studio D"
+    title1="Logo"
+    title2="Design"
+    motto1="Max"
+    motto2="Wapp"
+  />
+
+  <TextSection
+    introText="Das Logo vereint Eleganz und Modernität. Die Typografie ist klar und professionell, während das Design den exklusiven Charakter des Studios betont."
+    secondText="Es wurde so konzipiert, dass es auf allen Medien perfekt wirkt – von der Website bis hin zu gedruckten Materialien."
+  />
+
+  <SectionTitle title="" />
+
+  <ContentSection
+    imgSrc="/images/projects/9-cards.webp"
+    imgAlt="Studio D Visitenkarten"
+    title="Visitenkarten-Design"
+    introText="Die Visitenkarten spiegeln das Branding des Salons wider – edle Farbakzente, klare Schrift und ein QR-Code für die direkte Terminbuchung."
+    secondText="Gedruckt auf hochwertigem Material, bieten sie einen starken ersten Eindruck und eine einfache Kontaktaufnahme für Kunden."
+  />
+
+  <SectionTitle title="Features der Website" />
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-24 mb-32">
+    <FeatureCard
+      title="SEO-Optimierung"
+      description="Gezielte Maßnahmen für bessere Sichtbarkeit bei Google – mehr Kunden, mehr Buchungen."
+    />
+
+    <FeatureCard
+      title="Benutzerfreundliches Design"
+      description="Intuitive Navigation, schnelle Ladezeiten und optimierte mobile Darstellung für ein perfektes Kundenerlebnis."
+    />
+
+    <FeatureCard
+      title="Integrierte Terminbuchung"
+      description="Kunden können Termine einfach online buchen und bezahlen – direkt über die Website."
+    />
+
+    <FeatureCard
+      title="Premium Branding"
+      description="Ein konsistentes Design mit hochwertigem Logo, Farben und Schriften für eine starke Markenidentität."
+    />
+  </div>
+
+  <GradientDivider />
+
+  <SectionTitle title="Erlebe die digitale Präsenz von Studio D" />
+
+  <VideoWithCTA
+    videoSrc="https://www.youtube-nocookie.com/embed/A1SwJ45SYHM?autoplay=1&modestbranding=1&showinfo=0&controls=1&rel=0"
+    thumbnailSrc="/images/projects/9.webp"
+    introText="Dieses Projekt kombiniert moderne Webentwicklung mit durchdachtem Branding. Perfekt für Unternehmen, die online professionell auftreten möchten."
+    secondText="Möchtest du eine maßgeschneiderte Website für dein Business? Lass uns darüber sprechen!"
+    ctaText="Jetzt live anschauen!"
+    primaryButtonLabel="Zur Website"
+    primaryButtonLink="https://hairstudio-d.de"
+    secondaryButtonLabel="Let's Talk"
+    secondaryButtonLink="/contact"
+  />
+</div>
