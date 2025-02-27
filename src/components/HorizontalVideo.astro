@@ -12,7 +12,7 @@ const { videoSrc, thumbnailSrc } = Astro.props;
 const videoId = videoSrc.split("/embed/")[1]?.split("?")[0];
 ---
 
-<div class="w-full md:w-8/12 lg:w-6/12 xl:w-7/12 mx-auto mt-24 -mb-12 relative bg-[#1b1b33] rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] overflow-hidden">  
+<div class="w-full md:w-8/12 lg:w-6/12 xl:w-7/12 mx-auto mt-24 mb-2 relative bg-[#1b1b33] rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] overflow-hidden">  
   <!-- Видео-заглушка -->
   <div class="relative w-full flex flex-col items-center justify-center text-center p-6 space-y-4 bg-gray-900 text-white"
     id={"video-wrapper-" + videoId}>
