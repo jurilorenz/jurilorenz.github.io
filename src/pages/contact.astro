@@ -65,7 +65,7 @@ import MainLayout from "../layouts/MainLayout.astro"
             class="bg-transparent border border-gray-300 text-gray-300 py-3 px-4 rounded-md w-full h-32 focus:outline-none focus:ring-2 focus:ring-[#6d87d1]"
           ></textarea>
 
-          <div class="mt-4 flex md:items-start gap-2">
+          <div class="mt-4 flex md:items-start gap-3">
             <input
               type="checkbox"
               id="privacy-policy"
@@ -270,6 +270,17 @@ import MainLayout from "../layouts/MainLayout.astro"
   .qr-code {
     width: 80%; /* Чуть больше на мобильных */
     max-width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-checkbox {
+    width: 3.5rem; /* Increase width */
+    height: 2.5rem; /* Increase height */
+  }
+
+  .custom-checkbox:checked::before {
+    font-size: 1rem; /* Make the checkmark bigger */
   }
 }
 </style>
