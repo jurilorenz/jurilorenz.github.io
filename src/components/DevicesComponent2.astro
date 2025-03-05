@@ -1,0 +1,78 @@
+---
+// DevicesComponent2.astro
+---
+
+<div class="relative w-full h-full flex items-center shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] justify-center py-48 md:py-96 overflow-hidden">
+  <!-- Animated Phones -->
+  <img src="/images/projects/4-5.webp" alt="Image 1" class="phone phone-1" />
+  <img src="/images/projects/4-1.webp" alt="Image 2" class="phone phone-2" />
+  <img src="/images/projects/4-3.webp" alt="Image 3" class="phone phone-3" />
+  <img src="/images/projects/4-2.webp" alt="Image 4" class="phone phone-4" />
+  <img src="/images/projects/4.webp" alt="Image 5" class="phone phone-5" />
+  <img src="/images/projects/4-4.webp" alt="Image 6" class="phone phone-6" />
+</div>
+
+<style>
+/* Parent Container */
+.relative {
+  position: relative;
+  max-height: 80vh; /* Keeps phones within the container */
+  overflow: hidden;
+}
+
+/* Phone Images */
+.phone {
+  position: absolute;
+  max-height: 80%;
+  width: auto;
+  object-fit: contain;
+  animation: flyInOut 8s ease-in-out infinite;
+  opacity: 0; /* Start invisible */
+}
+
+/* Custom Animations for Each Phone */
+.phone-1 {
+  animation-delay: 0s;
+}
+.phone-2 {
+  animation-delay: 1.6s; /* Staggered start */
+}
+.phone-3 {
+  animation-delay: 3.2s;
+}
+.phone-4 {
+  animation-delay: 4.8s;
+}
+.phone-5 {
+  animation-delay: 6.4s;
+}
+.phone-6 {
+  animation-delay: 8.0s;
+}
+
+
+/* Keyframes for Animation */
+@keyframes flyInOut {
+  0% {
+    transform: translateX(100%) scale(0.8); /* Start off-screen */
+    opacity: 0;
+  }
+ 10% {
+    transform: translateX(50%) scale(1); /* Slight zoom for focus */
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(0) scale(1); /* Full view */
+    opacity: 1;
+  }
+  90% {
+    transform: translateX(-50%) scale(0.9); /* Start moving out */
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(-100%) scale(0.8); /* Fully off-screen */
+    opacity: 0;
+  }
+}
+</style>
+
