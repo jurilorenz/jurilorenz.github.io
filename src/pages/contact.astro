@@ -110,8 +110,9 @@ import MainLayout from "../layouts/MainLayout.astro"
         </div>
 
         <!-- Контейнер для QR-кода и кнопок -->
-        <div class="flex flex-col md:flex-col lg:flex-row gap-8 items-center">          <!-- Левая колонка: Кнопки и текст -->
-          <div class="w-full md:w-6/12">
+        <div class="flex flex-col md:flex-col lg:flex-row gap-8 items-center">          
+          <!-- Левая колонка: Кнопки и текст -->
+          <div class="w-full md:w-8/12">
             <!-- Buttons for Contact -->
             <div
               class="flex flex-col md:flex-row gap-6 mt-8 justify-center items-center w-full"
@@ -165,7 +166,7 @@ import MainLayout from "../layouts/MainLayout.astro"
 
           <!-- Правая колонка: QR-код -->
           <div
-            class="w-full md:w-6/12 flex flex-col items-center drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)]"
+            class="w-full md:w-6/12 flex flex-col items-center "
           >
           <img
           src="/images/QR-code.webp"
