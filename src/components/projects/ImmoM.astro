@@ -1,0 +1,133 @@
+---
+import CircleImage from "../CircleImage.astro"
+import ContentSection from "../ContentSection.astro"
+import FeatureCard from "../FeatureCard.astro"
+import IpadComponent from "../IpadComponent.astro"
+import SectionTitle from "../SectionTitle.astro"
+import GradientDivider from "../GradientDivider.astro"
+import TextSection from "../TextSection.astro"
+---
+
+<div class="project-component">
+  <TextSection
+    title="Digitale Präsenz für Immobilien München"
+    introText="Für Immobilien München wurde ein starker digitaler Auftritt entwickelt, der Vertrauen schafft und Verkäufe fördert. Das Projekt umfasste die komplette Markenentwicklung – von Logo und Corporate Design bis hin zur performanten Website mit Objektintegration."
+    secondText="Das Ziel: maximale Sichtbarkeit, Nutzerfreundlichkeit und eine klare Kommunikation für Eigentümer und Suchende."
+  />
+
+  <ContentSection
+    imgSrc="/images/projects/13-1.webp"
+    imgAlt="Ansicht der Immobilien München Website auf dem Tablet"
+    title="Modernes Webdesign & Verkaufsstarke Struktur"
+    introText="Die Website wurde für hohe Conversion optimiert – mit aufmerksamkeitsstarkem Hero-Bereich, klarer Navigation und prominent platzierten Call-to-Actions."
+    secondText="Objekte aus OnOffice werden nahtlos integriert, sodass Interessenten direkt sehen, was verfügbar ist."
+  />
+
+  <SectionTitle title="Branding & Corporate Design" />
+
+  <TextSection
+    introText="Im Zentrum des Brandings steht ein elegantes Monogramm-Logo, das Vertrauen und Exklusivität vermittelt. Das Corporate Design basiert auf einer klassischen, blauen Farbpalette – professionell und zeitlos."
+    secondText="Visitenkarten, QR-Codes und Typografie wurden in Einklang gebracht, um eine starke Wiedererkennung zu gewährleisten."
+  />
+
+  <SectionTitle title="Logo-Design" />
+
+  <CircleImage
+    imgSrc="/images/projects/13-logo.webp"
+    altText="Logo für Immobilien München"
+    title1="Stark"
+    title2="Zeitlos"
+    motto1="Immobilien"
+    motto2="München"
+  />
+
+  <TextSection
+    introText="Das Logo verbindet klassische Formensprache mit modernem Minimalismus. Es steht für Seriosität und lokale Verankerung in München."
+    secondText="Der Schriftzug darunter stärkt die Markenidentität und positioniert das Unternehmen eindeutig als Immobilienpartner vor Ort."
+  />
+
+  <SectionTitle title="Visitenkarten & QR-Integration" />
+
+  <ContentSection
+    imgSrc="/images/projects/13-cards.webp"
+    imgAlt="Visitenkarten mit QR-Code"
+    title="Print-Design mit Funktion"
+    introText="Die hochwertigen Visitenkarten enthalten nicht nur das Branding, sondern auch einen QR-Code, der direkt zur Website führt."
+    secondText="So wird die Brücke zwischen Offline- und Online-Kommunikation nahtlos geschlagen."
+  />
+
+  <SectionTitle title="Website Highlights" />
+
+  <IpadComponent
+    imgSrc="/images/projects/13-ipad.webp"
+    imgAlt="Mobile Ansicht der Immobilien Website"
+  />
+
+  <TextSection
+    introText="Die Website ist vollständig responsiv gestaltet und bietet auf allen Geräten ein angenehmes Nutzererlebnis. Schnell, klar strukturiert und auf Conversion ausgelegt."
+    secondText="Hero-Texte, dynamische Objektansichten und ein Kontaktbereich mit WhatsApp-Integration machen sie zum perfekten Tool für die Akquise."
+  />
+
+  <SectionTitle title="Kontakt & Standort" />
+
+  <IpadComponent
+    imgSrc="/images/projects/13-ipad-2.webp"
+    imgAlt="Kontaktformular und Standortübersicht auf dem Tablet"
+  />
+
+  <TextSection
+    introText="Der Kontaktbereich der Website bietet verschiedene Möglichkeiten, schnell in Verbindung zu treten – per WhatsApp, Telefon oder E-Mail."
+  />
+
+  <SectionTitle title="Features der Website" />
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-24 mb-32">
+    <FeatureCard
+      title="OnOffice-Integration"
+      description="Nahtlose Verbindung zur Immobiliensoftware für automatische Objektpflege und Aktualisierung."
+    />
+
+    <FeatureCard
+      title="WhatsApp-Kontakt"
+      description="Direkte Kontaktaufnahme über WhatsApp – schnell, modern und bequem für Nutzer."
+    />
+
+    <FeatureCard
+      title="Hochkonvertierende Startseite"
+      description="Hero-Bereich mit starkem CTA, perfekt strukturiert für maximale Aufmerksamkeit und Handlungsbereitschaft."
+    />
+
+    <FeatureCard
+      title="Responsives Design"
+      description="Optimiert für alle Geräte – mobil, Tablet und Desktop. Immer perfekte Darstellung und Performance."
+    />
+  </div>
+
+  <GradientDivider />
+
+  <div class="w-full md:w-10/12 lg:w-full mx-auto mt-20 mb-32 flex flex-col md:flex-row items-center gap-16 md:gap-32">
+    <!-- Image -->
+    <div class="w-full md:w-6/12 lg:w-5/12 flex justify-center md:justify-end">
+      <img src="/images/projects/13-2.webp" alt="Immobilien Website Screenshot" class="w-full max-w-[450px] rounded-xl shadow-lg object-contain" />
+    </div>
+
+    <!-- Text + CTA -->
+    <div class="w-full md:w-6/12 lg:w-7/12 text-center md:text-left">
+      <p class="mb-8 text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">
+        Versuch live!
+      </p>
+
+      <p class="text-xl md:text-2xl mt-4">Erlebst du, wie ein durchdachtes Design und klare Nutzerführung den Unterschied machen.</p>
+      <p class="text-xl md:text-2xl mt-4">Diese Website verbindet starke Markenpräsenz mit maximaler Verkaufswirkung – bereit für den nächsten Schritt?</p>
+
+      <div class="flex flex-col md:flex-row gap-6 mt-10 justify-center md:justify-start">
+        <a href="https://wp.maxwapp.de" class="py-4 px-10 rounded-full font-bold bg-[#1f1235] text-white border-2 border-[#6d87d1] hover:bg-blue-500">
+          Zur Website
+        </a>
+        <a href="/contact" class="py-4 px-10 rounded-full font-bold bg-white text-[#090a1a] hover:shadow-lg">
+          Let's Talk
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

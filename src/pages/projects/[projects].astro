@@ -12,7 +12,7 @@ import StudioD from "../../components/projects/StudioD.astro";
 import AnnaMenci from "../../components/projects/AnnaMenci.astro";
 import Streetly from "../../components/projects/Streetly.astro";
 import VadimAevskiy from "../../components/projects/VadimAevskiy.astro";
-
+import ImmoM from "../../components/projects/ImmoM.astro";
 
 
 export async function getStaticPaths() {
@@ -95,6 +95,13 @@ export async function getStaticPaths() {
       },
     },
     { 
+      params: { projects: "13" }, 
+      props: {
+        name: "Immobilien München",
+        desc: "",
+      },
+    },
+    { 
       params: { projects: "9" }, 
       props: {
         name: "Studio D",
@@ -145,8 +152,8 @@ const { name, desc } = Astro.props;
       {projects === '10' && <Felix />}
       {projects === '11' && <Streetly />}
       {projects === '12' && <VadimAevskiy />}
+      {projects === '13' && <ImmoM />}
     </section>
-
 
     </div>
   </div>
