@@ -6,6 +6,7 @@ import IpadComponent from "../IpadComponent.astro"
 import SectionTitle from "../SectionTitle.astro"
 import GradientDivider from "../GradientDivider.astro"
 import TextSection from "../TextSection.astro"
+import FinalSection from "../FinalSection.astro"
 ---
 
 <div class="project-component">
@@ -23,22 +24,23 @@ import TextSection from "../TextSection.astro"
     secondText="Objekte aus OnOffice werden nahtlos integriert, sodass Interessenten direkt sehen, was verfügbar ist."
   />
 
-  <SectionTitle title="Branding & Corporate Design" />
+
 
   <TextSection
+  title="Branding & Corporate Design"
     introText="Im Zentrum des Brandings steht ein elegantes Monogramm-Logo, das Vertrauen und Exklusivität vermittelt. Das Corporate Design basiert auf einer klassischen, blauen Farbpalette – professionell und zeitlos."
     secondText="Visitenkarten, QR-Codes und Typografie wurden in Einklang gebracht, um eine starke Wiedererkennung zu gewährleisten."
   />
 
-  <SectionTitle title="Logo-Design" />
+  <SectionTitle title="Immobilien München" />
 
   <CircleImage
     imgSrc="/images/projects/13-logo.webp"
     altText="Logo für Immobilien München"
-    title1="Stark"
-    title2="Zeitlos"
-    motto1="Immobilien"
-    motto2="München"
+    title1="Logo"
+    title2="Design"
+    motto1="Max"
+    motto2="Wapp"
   />
 
   <TextSection
@@ -46,12 +48,12 @@ import TextSection from "../TextSection.astro"
     secondText="Der Schriftzug darunter stärkt die Markenidentität und positioniert das Unternehmen eindeutig als Immobilienpartner vor Ort."
   />
 
-  <SectionTitle title="Visitenkarten & QR-Integration" />
 
   <ContentSection
     imgSrc="/images/projects/13-cards.webp"
     imgAlt="Visitenkarten mit QR-Code"
-    title="Print-Design mit Funktion"
+    title="Visitenkarten mit QR-Code"
+
     introText="Die hochwertigen Visitenkarten enthalten nicht nur das Branding, sondern auch einen QR-Code, der direkt zur Website führt."
     secondText="So wird die Brücke zwischen Offline- und Online-Kommunikation nahtlos geschlagen."
   />
@@ -105,29 +107,16 @@ import TextSection from "../TextSection.astro"
 
   <GradientDivider />
 
-  <div class="w-full md:w-10/12 lg:w-full mx-auto mt-20 mb-32 flex flex-col md:flex-row items-center gap-16 md:gap-32">
-    <!-- Image -->
-    <div class="w-full md:w-6/12 lg:w-5/12 flex justify-center md:justify-end">
-      <img src="/images/projects/13-2.webp" alt="Immobilien Website Screenshot" class="w-full max-w-[450px] rounded-xl shadow-lg object-contain" />
-    </div>
+  <FinalSection
+  imgSrc="/images/projects/13-2.webp"
+  imgAlt="Immobilien Website Screenshot"
+  title="Versuch live!"
+  introText="Erlebst du, wie ein durchdachtes Design und klare Nutzerführung den Unterschied machen."
+  secondText="Diese Website verbindet starke Markenpräsenz mit maximaler Verkaufswirkung – bereit für den nächsten Schritt?"
+  primaryButtonLabel="Zur Website"
+  primaryButtonLink="https://immomuenchen.com"
+  secondaryButtonLabel="Let’s Talk"
+  secondaryButtonLink="/contact"
+/>
 
-    <!-- Text + CTA -->
-    <div class="w-full md:w-6/12 lg:w-7/12 text-center md:text-left">
-      <p class="mb-8 text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">
-        Versuch live!
-      </p>
-
-      <p class="text-xl md:text-2xl mt-4">Erlebst du, wie ein durchdachtes Design und klare Nutzerführung den Unterschied machen.</p>
-      <p class="text-xl md:text-2xl mt-4">Diese Website verbindet starke Markenpräsenz mit maximaler Verkaufswirkung – bereit für den nächsten Schritt?</p>
-
-      <div class="flex flex-col md:flex-row gap-6 mt-10 justify-center md:justify-start">
-        <a href="https://wp.maxwapp.de" class="py-4 px-10 rounded-full font-bold bg-[#1f1235] text-white border-2 border-[#6d87d1] hover:bg-blue-500">
-          Zur Website
-        </a>
-        <a href="/contact" class="py-4 px-10 rounded-full font-bold bg-white text-[#090a1a] hover:shadow-lg">
-          Let's Talk
-        </a>
-      </div>
-    </div>
-  </div>
 </div>
