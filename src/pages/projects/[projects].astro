@@ -12,132 +12,155 @@ import StudioD from "../../components/projects/StudioD.astro";
 import AnnaMenci from "../../components/projects/AnnaMenci.astro";
 import Streetly from "../../components/projects/Streetly.astro";
 import VadimAevskiy from "../../components/projects/VadimAevskiy.astro";
-import ImmoM from "../../components/projects/ImmoM.astro";
+import ImmobilienMuenchen from "../../components/projects/ImmobilienMuenchen.astro";
 import KleinesStadthaus from "../../components/projects/KleinesStadthaus.astro";
-
 
 export async function getStaticPaths() {
   return [
     { 
-      params: { projects: "1" }, 
+      params: { projects: "maa-art" }, 
       props: {
         name: "MAA Art",
-        desc: "",
+        introText: "Eine wunderschöne Website für eine renommierte Künstlerin – mit Galerie, Ausstellungen, Sprachwechsler & SEO.",
+        seoTitle: "MAA Art – Künstler Portfolio Website mit Galerie & SEO | maxWapp",
+        seoDesc: "Moderne Website für eine bekannte Künstlerin mit Galerie, Ausstellungen, Kontaktformular & SEO. Entdecke das digitale Portfolio auf höchstem Niveau."
       },
     },
     { 
-      params: { projects: "2" }, 
+      params: { projects: "room-planetarium" }, 
       props: {
         name: "ROOM Planetarium",
-        desc: "",
+        introText: "Interaktive Reise durch das Universum mit AR, intuitivem UI und galaktischem Sounddesign.",
+        seoTitle: "ROOM Planetarium App – Interaktive Weltraumreise in AR | maxWapp",
+        seoDesc: "Erlebe eine lehrreiche und fesselnde App-Reise durch das Universum mit AR, Animationen und intuitivem Design. Jetzt entdecken."
       },
     },
     { 
-      params: { projects: "3" }, 
+      params: { projects: "battle-calculator" }, 
       props: {
         name: "Battle Calculator",
-        desc: "",
+        introText: "Ein actiongeladener Rechner mit Sound- und visuellen Effekten für Spaß beim Rechnen.",
+        seoTitle: "Battle Calculator App – Der explosive Mathe-Rechner für dein Smartphone | maxWapp",
+        seoDesc: "Entdecke den Battle Calculator – eine einzigartige App mit Sounds, Animationen und Spaßfaktor. Jetzt downloaden."
       },
     },
     { 
-      params: { projects: "4" }, 
+      params: { projects: "anna-menci" }, 
       props: {
         name: "Anna Menci",
-        desc: "",
+        introText: "Online-Shop für exklusive Loungewear mit elegantem Design & optimierter Usability.",
+        seoTitle: "Anna Menci E-Commerce Website – Stilvoller Fashion-Shop | maxWapp",
+        seoDesc: "Moderner Online-Shop mit intuitiver UX, mobile-optimiert und markenstarkes Design. Jetzt Projekt entdecken."
       },
     },
     { 
-      params: { projects: "5" }, 
+      params: { projects: "brunner" }, 
       props: {
         name: "Brunner",
-        desc: "",
+        introText: "Minimalistische Business-Website mit Top-Performance, SEO und Nutzerfreundlichkeit.",
+        seoTitle: "Moderne Business-Website – Minimalistisch & SEO-stark | maxWapp",
+        seoDesc: "Klar strukturiertes Webdesign für Unternehmen mit Fokus auf Performance, mobile-first & Branding."
       },
     },
     { 
-      params: { projects: "6" }, 
+      params: { projects: "akimova-art" }, 
       props: {
         name: "Akimova-Art",
-        desc: "",
+        introText: "Digitale Galerie für moderne Kunst mit mobile-first Ansatz & Corporate Design.",
+        seoTitle: "Künstler Website für Akimova – Digitale Galerie & Branding | maxWapp",
+        seoDesc: "Exklusive Website für Margarita Akimova mit Galerie, Logo & Branding. Responsive & SEO-optimiert."
       },
     },
     { 
-      params: { projects: "7" }, 
+      params: { projects: "efimow-automobile" }, 
       props: {
-        name: "EFIMOW Automobile",
-        desc: "",
+        name: "Efimow Automobile",
+        introText: "Website für Autohandel mit Fokus auf Conversion, Branding & Anfrageformular.",
+        seoTitle: "Efimow Automobile – Fahrzeug-Website mit Performance & Corporate Design | maxWapp",
+        seoDesc: "Website für KFZ-Handel mit optimiertem Design, Logo, Branding und hoher Google Performance."
       },
     },
     { 
-      params: { projects: "8" }, 
+      params: { projects: "bavarian-ice-roll" }, 
       props: {
         name: "Bavarian Ice Roll",
-        desc: "",
+        introText: "Farbenfrohe Event-Website mit Anfrageformular & eindrucksvollem Design.",
+        seoTitle: "Bavarian Ice Roll – Event Website mit interaktivem Design & Anfrage | maxWapp",
+        seoDesc: "Moderne Event-Website mit Anfrageformular, responsivem Design & starker Markenpräsenz."
       },
     },
     { 
-      params: { projects: "10" }, 
-      props: {
-        name: "Felix Rheindorf",
-        desc: "",
-      },
-    },
-    { 
-      params: { projects: "11" }, 
-      props: {
-        name: "Streetly",
-        desc: "",
-      },
-    },
-    { 
-      params: { projects: "12" }, 
-      props: {
-        name: "Personal Website",
-        desc: "",
-      },
-    },
-    { 
-      params: { projects: "13" }, 
-      props: {
-        name: "Immobilien München",
-        desc: "",
-      },
-    },
-    {
-      params: { projects: "14" },
-      props: {
-        name: "Kleines Stadthaus",
-        desc: "",
-      },
-    },
-    { 
-      params: { projects: "9" }, 
+      params: { projects: "studio-d" }, 
       props: {
         name: "Studio D",
-        desc: "",
+        introText: "Premium-Website für Friseursalon mit Online-Buchung, Branding & Logo.",
+        seoTitle: "Studio D Webdesign – Friseursalon Website mit Terminbuchung | maxWapp",
+        seoDesc: "Exklusive Friseur-Website mit Branding, Logo, Print-Design & Buchungssystem – für Kunden aus München."
       },
     },
+    { 
+      params: { projects: "felix-rheindorf" }, 
+      props: {
+        name: "Felix Rheindorf",
+        introText: "Webdesign, Fotos & Video für Metzgermeister Felix – Corporate Identity auf allen Ebenen.",
+        seoTitle: "Metzgermeister Website & Video – Corporate Webdesign für Felix Rheindorf | maxWapp",
+        seoDesc: "Website, Visitenkarten, Logo & Imagefilm für Metzger Felix Rheindorf – hochwertig umgesetzt mit Fokus auf Branding."
+      },
+    },
+    { 
+      params: { projects: "streetly" }, 
+      props: {
+        name: "Streetly",
+        introText: "Branding & Webdesign für eine smarte Navigationslösung.",
+        seoTitle: "Streetly Webdesign – Smarte Navigation, Branding & kostenloses Hosting | maxWapp",
+        seoDesc: "Streetly: Moderne Navigation mit klarer Website, Branding & 0€ Hosting – ideal für Startups & Tech."
+      },
+    },
+    { 
+      params: { projects: "vadim-aevskiy" }, 
+      props: {
+        name: "Personal Website",
+        introText: "Landingpage für Experten – Klarheit, Fachkompetenz & digitale Sichtbarkeit.",
+        seoTitle: "Personal Branding Website – Für Experten & LinkedIn-Sichtbarkeit | maxWapp",
+        seoDesc: "Webseite für Vadim Aevskiy: Quant Finance & AI. Professionelle Darstellung, mobiloptimiert & SEO-ready."
+      },
+    },
+    { 
+      params: { projects: "immobilien-muenchen" }, 
+      props: {
+        name: "Immobilien München",
+        introText: "Verkaufsstarke Website für die Immobilienbranche – mit klarem Design und gezielter Nutzerführung.",
+        seoTitle: "Immobilien Website aus München – Webdesign, Logo & OnOffice Integration | maxWapp",
+        seoDesc: "Immobilien München: Webdesign & Branding mit Fokus auf Performance, mobile Optimierung und OnOffice Integration. Jetzt Projekt entdecken!"
+      },
+    },
+    { 
+      params: { projects: "kleines-stadthaus" }, 
+      props: {
+        name: "Kleines Stadthaus",
+        introText: "Shopify-Redesign für eine Boutique mit optimierter UX, Instagram-Integration & Markenauftritt.",
+        seoTitle: "Kleines Stadthaus – Shopify Redesign für Fashion & Lifestyle | maxWapp",
+        seoDesc: "Komplettes Shopify Redesign mit starker Markenidentität, mobile-first UX & Insta-Modul – für Fashion aus Deutschland."
+      },
+    }
   ];
 }
 
 const { projects } = Astro.params;
-const { name, desc } = Astro.props;
+const { name, introText, seoTitle, seoDesc } = Astro.props;
+
 ---
 
-<MainLayout>
-  <!-- Background with gradient similar to home page -->
+<MainLayout title={name} seoTitle={seoTitle} seoDesc={seoDesc}>
   <div class="min-h-screen text-white">
-
-    <!-- Title -->
     <h1 class="text-center text-4xl md:text-6xl font-bold drop-shadow-lg mt-24 mb-8 mx-2">
-       {name}
+      {name}
     </h1>
 
-    <!-- Description -->
     <p class="text-center text-lg px-4 md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
-      {desc}
+      {introText}
     </p>
 
-    <!-- Project Image -->
     <section class="mx-auto w-11/12 md:w-8/12 lg:w-6/12 flex flex-col items-center">
       <img 
         src={`/images/projects/${projects}.webp`}  
@@ -146,25 +169,22 @@ const { name, desc } = Astro.props;
       />
     </section>
 
-    <!-- Dynamic Content for each project -->
     <section class="my-12 w-10/12 md:w-8/12 lg:w-7/12 mx-auto">
-      {projects === '1' && <MaaArt />}
-      {projects === '2' && <RoomContent />}
-      {projects === '3' && <BattleContent />}
-      {projects === '4' && <AnnaMenci />}
-      {projects === '5' && <Brunner />}
-      {projects === '6' && <AkimovaArt />}
-      {projects === '7' && <Efimow />}
-      {projects === '8' && <BavarianIceRoll />}
-      {projects === '9' && <StudioD />}
-      {projects === '10' && <Felix />}
-      {projects === '11' && <Streetly />}
-      {projects === '12' && <VadimAevskiy />}
-      {projects === '13' && <ImmoM />}
-      {projects === '14' && <KleinesStadthaus />}
+      {projects === 'maa-art' && <MaaArt />}
+      {projects === 'room-planetarium' && <RoomContent />}
+      {projects === 'battle-calculator' && <BattleContent />}
+      {projects === 'anna-menci' && <AnnaMenci />}
+      {projects === 'brunner' && <Brunner />}
+      {projects === 'akimova-art' && <AkimovaArt />}
+      {projects === 'efimow-automobile' && <Efimow />}
+      {projects === 'bavarian-ice-roll' && <BavarianIceRoll />}
+      {projects === 'studio-d' && <StudioD />}
+      {projects === 'felix-rheindorf' && <Felix />}
+      {projects === 'streetly' && <Streetly />}
+      {projects === 'vadim-aevskiy' && <VadimAevskiy />}
+      {projects === 'immobilien-muenchen' && <ImmobilienMuenchen />}
+      {projects === 'kleines-stadthaus' && <KleinesStadthaus />}
     </section>
-
-    </div>
   </div>
 </MainLayout>
 

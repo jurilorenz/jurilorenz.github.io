@@ -1,5 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
 ---
 
 <MainLayout 
@@ -8,209 +9,143 @@ import MainLayout from "../layouts/MainLayout.astro";
   seoDesc="Exklusive Webdesign-Referenzen aus München – Websites mit Fokus auf Branding, Performance & Conversions. Entdecke moderne Kundenprojekte von maxWapp für Deutschland, Österreich & die Schweiz."
 >
   <div class="min-h-screen text-white py-20 md:py-24">
-    
-    <!-- Title with Gradient -->
     <h1 class="text-center text-4xl md:text-6xl font-bold drop-shadow-lg mb-16">
       Meine Projekte
     </h1>
 
-
-    <!-- Section 1: Web Development -->
     <section class="mb-12">
       <h2 class="text-center text-2xl md:text-3xl font-bold text-gray-300 drop-shadow-lg mb-12">Websites</h2>
-
-
       <div class="grid md:grid-cols-2 gap-12 w-10/12 mx-auto">
-        <!-- Project 13 -->
-        <a href="/projects/13" class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] hover:shadow-2xl transition-transform duration-500 hover:scale-105 flex flex-col items-center">
-          <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
-          <img class="rounded-lg shadow-md drop-shadow-[0px_-35px_35px_rgba(75,0,130,0.6)] object-contain w-full h-auto max-h-[60vh]" src="/images/projects/13.webp" alt="Immobilien München Projektansicht"/>
-          <h3 class="font-bold mb-4 mt-8 text-xl text-white">Immobilien München – Web, Branding & Integration</h3>
-          <p class="text-gray-300 leading-relaxed">
-            Ein umfassendes Projekt für einen Immobilienexperten aus München mit starkem Fokus auf Performance und Wiedererkennbarkeit.
-            <span class="bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent font-bold text-lg">
-              Webdesign, Logo, Visitenkarten & OnOffice-Integration
-            </span> 
-            – mobiloptimiert, verkaufsstark und mit WhatsApp-Button für direkte Kontaktaufnahme.
-          </p>
-        </a>
+        <ProjectCard 
+          title="Immobilien München – Web, Branding & Integration"
+          description="Ein umfassendes Projekt für einen Immobilienexperten aus München mit starkem Fokus auf Performance und Wiedererkennbarkeit. "
+          highlight="Webdesign, Logo, Visitenkarten & OnOffice-Integration"
+          image="/images/projects/immobilien-muenchen.webp"
+          alt="Immobilien München Projektansicht"
+          url="/projects/immobilien-muenchen"
+        />
 
-                                        <!-- Project 9 -->
-                                        <a href="/projects/9" class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] hover:shadow-2xl transition-transform duration-500 hover:scale-105 flex flex-col items-center">
-                                          <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
-                                          <img class="rounded-lg shadow-md drop-shadow-[0px_-35px_35px_rgba(75,0,130,0.6)] object-contain w-full h-auto max-h-[60vh]" src="/images/projects/9.webp" alt="Studio D Website & Branding"/>
-                                          <h3 class="font-bold mb-4 mt-8 text-xl text-white">Studio D – Digital & Branding</h3>
-                                          <p class="text-gray-300 leading-relaxed">
-                                            Ein exklusiver Webauftritt für Studio D: 
-                                            <span class="bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent font-bold text-lg">
-                                              Website, Corporate Design, Logo und Visitenkarten
-                                            </span>
-                                             – alles in einem modernen, durchdachten Branding vereint.
-                                          </p>
-                                        </a>
+        <ProjectCard 
+          title="Studio D – Digital & Branding"
+          description="Ein exklusiver Webauftritt für Studio D: "
+          highlight="Website, Corporate Design, Logo und Visitenkarten"
+          image="/images/projects/studio-d.webp"
+          alt="Studio D Website & Branding"
+          url="/projects/studio-d"
+        />
 
-                                       <!-- Project 14 -->
-<a href="/projects/14" class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] hover:shadow-2xl transition-transform duration-500 hover:scale-105 flex flex-col items-center">
-  <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
-  <img class="rounded-lg shadow-md drop-shadow-[0px_-35px_35px_rgba(75,0,130,0.6)] object-contain w-full h-auto max-h-[60vh]" src="/images/projects/14.webp" alt="Kleines Stadthaus – Shopify Redesign"/>
-  <h3 class="font-bold mb-4 mt-8 text-xl text-white">Kleines Stadthaus – Shopify Redesign</h3>
-  <p class="text-gray-300 leading-relaxed">
-    Komplettes Redesign für eine charmante Modeboutique –
-    <span class="bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent font-bold text-lg">
-      optimierte Startseite, klar strukturierte Kategorien & Integration aktueller Instagram-Posts
-    </span>.
-    Modern, mobilfreundlich und bereit für mehr Conversions.
-  </p>
-</a>
+        <ProjectCard 
+          title="Kleines Stadthaus – Shopify Redesign"
+          description="Komplettes Redesign für eine charmante Modeboutique – "
+          highlight="optimierte Startseite, klar strukturierte Kategorien & Integration aktueller Instagram-Posts"
+          image="/images/projects/kleines-stadthaus.webp"
+          alt="Kleines Stadthaus – Shopify Redesign"
+          url="/projects/kleines-stadthaus"
+        />
 
-<!-- Project 4 -->
-<a href="/projects/4" class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] hover:shadow-2xl transition-transform duration-500 hover:scale-105 flex flex-col items-center">
-  <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
-  <img class="rounded-lg shadow-md drop-shadow-[0px_-35px_35px_rgba(75,0,130,0.6)] object-contain w-full h-auto max-h-[60vh]" src="/images/projects/4.webp" alt="Anna Menci Online Shop"/>
-  <h3 class="font-bold mb-4 mt-8 text-xl text-white">Anna Menci – Fashion E-Commerce</h3>
-  <p class="text-gray-300 leading-relaxed">
+        <ProjectCard 
+          title="Anna Menci – Fashion E-Commerce"
+          description="Ein stilvoller Online-Shop für exklusive Mode. "
+          highlight="Schnelles, mobiles Shopping-Erlebnis mit intuitiver Navigation und klarem Design."
+          image="/images/projects/anna-menci.webp"
+          alt="Anna Menci Online Shop"
+          url="/projects/anna-menci"
+        />
 
-    <span class="bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent font-bold text-lg">
-      Ein stilvoller Online-Shop für exklusive Mode.
-    </span>
-     Schnelles, mobiles Shopping-Erlebnis mit intuitiver Navigation und klarem Design.
-  </p>
-</a>
+        <ProjectCard 
+          title="Web & Content Suite"
+          description="Von der Entwicklung über die Contentproduktion bis zum Corporate Design: "
+          highlight="Farben, Schriften und sogar die Visitenkarten wurden perfekt aufeinander abgestimmt, um eine einheitliche und starke Markenpräsenz zu schaffen."
+          image="/images/projects/felix-rheindorf.webp"
+          alt="Web & Content Suite für Felix Rheindorf"
+          url="/projects/felix-rheindorf"
+        />
 
+        <ProjectCard 
+          title="Design, das überzeugt"
+          description="Diese Website zeigt, wie durchdachtes Design und eine klare Nutzerführung das Branding eines Unternehmens stärken können. "
+          highlight="Farbakzente und intuitive Strukturen sorgen für eine visuelle Erfahrung, die begeistert."
+          image="/images/projects/bavarian-ice-roll.webp"
+          alt="Bavarian Ice Roll – Website Design"
+          url="/projects/bavarian-ice-roll"
+        />
 
-                                <!-- Project 10 -->
-                                <a href="/projects/10" class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] hover:shadow-2xl transition-transform duration-500 hover:scale-105 flex flex-col items-center">
-                                  <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
-                                  <img class="rounded-lg shadow-md drop-shadow-[0px_-35px_35px_rgba(75,0,130,0.6)] object-contain w-full h-auto max-h-[60vh]" src="/images/projects/10.webp" alt="Astro Gallery"/>
-                                  <h3 class="font-bold mb-4 mt-8 text-xl text-white">Web & Content Suite   </h3>
-                                  <p class="text-gray-300 leading-relaxed">
-                                    <span class="bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent font-bold text-lg">
-                                      Von der Entwicklung über die Contentproduktion bis zum Corporate Design:
-                                    </span>
-                                     Farben, Schriften und sogar die Visitenkarten wurden perfekt aufeinander abgestimmt, um eine einheitliche und starke Markenpräsenz zu schaffen.
-                                  </p>                        </a>
+        <ProjectCard 
+          title="Digitale Galerie für Kunstliebhaber"
+          description="Eine elegante Website als digitale Bühne für künstlerische Werke – "
+          highlight="mit Fokus auf modernem Design und nahtloser Nutzererfahrung. Zwei Sprachversionen, perfekt abgestimmt auf internationale Besucher, CMS-basiert für einfache Verwaltung."
+          image="/images/projects/akimova-art.webp"
+          alt="Digitale Galerie für Akimova"
+          url="/projects/akimova-art"
+        />
 
-                        <!-- Project 8 -->
-                        <a href="/projects/8" class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] hover:shadow-2xl transition-transform duration-500 hover:scale-105 flex flex-col items-center">
-                          <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
-                          <img class="rounded-lg shadow-md drop-shadow-[0px_-35px_35px_rgba(75,0,130,0.6)] object-contain w-full h-auto max-h-[60vh]" src="/images/projects/8.webp" alt="Astro Gallery"/>
-                          <h3 class="font-bold mb-4 mt-8 text-xl text-white">Design, das überzeugt   </h3>
-                          <p class="text-gray-300 leading-relaxed">
-                            Diese Website zeigt, wie durchdachtes Design und eine klare Nutzerführung das Branding eines Unternehmens stärken können.
-                            <span class="bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent font-bold text-lg">
-                              Farbakzente und intuitive Strukturen
-                            </span>
-                            sorgen für eine visuelle Erfahrung, die begeistert. 
-                          </p>
-                <!-- Project 6 -->
-                <a href="/projects/6" class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] hover:shadow-2xl transition-transform duration-500 hover:scale-105 flex flex-col items-center">
-                  <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
-                  <img class="rounded-lg shadow-md drop-shadow-[0px_-35px_35px_rgba(75,0,130,0.6)] object-contain w-full h-auto max-h-[60vh]" src="/images/projects/6.webp" alt="Astro Gallery"/>
-                  <h3 class="font-bold mb-4 mt-8 text-xl text-white">Digitale Galerie für Kunstliebhaber   </h3>
-                  <p class="text-gray-300 leading-relaxed">
-                    
-                    <span class="bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent font-bold text-lg">
-                      Eine elegante Website als digitale Bühne für künstlerische Werke
-                    </span>
-                     – mit Fokus auf modernem Design und nahtloser Nutzererfahrung. Zwei Sprachversionen, perfekt abgestimmt auf internationale Besucher, CMS-basiert für einfache Verwaltung. </p>
-                </a>
+        <ProjectCard 
+          title="Streetly – Smarte Navigation"
+          description="Eine moderne Plattform für sichere Navigation in Städten. Echtzeit-Daten, Community-Insights und intuitive Benutzerführung. "
+          highlight="0€ für Hosting & Domain – keine versteckten Kosten!"
+          image="/images/projects/streetly.webp"
+          alt="Streetly – Smarte Navigation"
+          url="/projects/streetly"
+        />
 
-<!-- Project 11 -->
-<a href="/projects/11" class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] hover:shadow-2xl transition-transform duration-500 hover:scale-105 flex flex-col items-center">
-  <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
-  <img class="rounded-lg shadow-md drop-shadow-[0px_-35px_35px_rgba(75,0,130,0.6)] object-contain w-full h-auto max-h-[60vh]" src="/images/projects/11.webp" alt="Streetly – Smarte Navigation"/>
-  
-  <h3 class="font-bold mb-4 mt-8 text-xl text-white">Streetly – Smarte Navigation</h3>
-  
-  <p class="text-gray-300 leading-relaxed">
-    Eine moderne Plattform für sichere Navigation in Städten. Echtzeit-Daten, Community-Insights und intuitive Benutzerführung.
-    <span class="bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent font-bold text-lg">
-      0€ für Hosting & Domain – keine versteckten Kosten!
-    </span>  
-  </p>
-</a>
+        <ProjectCard 
+          title="Autohandel mit Stil und Funktionalität"
+          description="Klar strukturiert mit integriertem Anfrageformular für einfache Kundenanfragen und Fahrzeugangebote – "
+          highlight="inklusive Branding und Logo-Erstellung."
+          image="/images/projects/efimow-automobile.webp"
+          alt="Efimow Automobile Webdesign"
+          url="/projects/efimow-automobile"
+        />
 
-                                        <!-- Project 7 -->
-                                        <a href="/projects/7" class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] hover:shadow-2xl transition-transform duration-500 hover:scale-105 flex flex-col items-center">
-                                          <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
-                                          <img class="rounded-lg shadow-md drop-shadow-[0px_-35px_35px_rgba(75,0,130,0.6)] object-contain w-full h-auto max-h-[60vh]" src="/images/projects/7.webp" alt="Astro Gallery"/>
-                                          <h3 class="font-bold mb-4 mt-8 text-xl text-white">Autohandel mit Stil und Funktionalität   </h3>
-                                          <p class="text-gray-300 leading-relaxed">
-                                            
-                                            <span class="bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent font-bold text-lg">
-                                              Klar strukturiert mit integriertem Anfrageformular
-                                            </span>  
-                                            für einfache Kundenanfragen und Fahrzeugangebote – inklusive Branding und Logo-Erstellung.</p>
-                                        </a>
+        <ProjectCard 
+          title="Minimalistische Webseite für ein modernes Unternehmen"
+          description="Eine stylische Website für eine starke Online-Präsenz – entwickelt, um deine Markenbotschaft klar und überzeugend zu vermitteln. "
+          highlight="Mit einem zeitgemäßen Design und Fokus auf Benutzerfreundlichkeit."
+          image="/images/projects/brunner.webp"
+          alt="Brunner Webdesign Projekt"
+          url="/projects/brunner"
+        />
 
+        <ProjectCard 
+          title="Personal Website"
+          description="Eine professionelle Online-Präsenz für einen Quantitative Finance & AI Experten. "
+          highlight="0€ für Hosting & Domain – keine versteckten Kosten!"
+          image="/images/projects/vadim-aevskiy.webp"
+          alt="Vadim Aevskiy – Personal Website"
+          url="/projects/vadim-aevskiy"
+        />
 
-      
-                        <!-- Project 5 -->
-        <a href="/projects/5" class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] hover:shadow-2xl transition-transform duration-500 hover:scale-105 flex flex-col items-center">
-          <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
-          <img class="rounded-lg shadow-md drop-shadow-[0px_-35px_35px_rgba(75,0,130,0.6)] object-contain w-full h-auto max-h-[60vh]" src="/images/projects/5.webp" alt="Astro Gallery"/>
-          <h3 class="font-bold mb-4 mt-8 text-xl text-white">Minimalistische Webseite für ein modernes Unternehmen   </h3>
-          <p class="text-gray-300 leading-relaxed">Eine stylische Website für eine starke Online-Präsenz – entwickelt, um deine Markenbotschaft klar und überzeugend zu vermitteln. 
-            <span class="bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent font-bold text-lg">
-              Mit einem zeitgemäßen Design und Fokus auf Benutzerfreundlichkeit.
-            </span>  
-            </p>
-        </a>
-
-        <!-- Project 12 -->
-<a href="/projects/12" class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] hover:shadow-2xl transition-transform duration-500 hover:scale-105 flex flex-col items-center">
-  <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
-  <img class="rounded-lg shadow-md drop-shadow-[0px_-35px_35px_rgba(75,0,130,0.6)] object-contain w-full h-auto max-h-[60vh]" src="/images/projects/12.webp" alt="Vadim Aevskiy – Personal Website"/>
-  <h3 class="font-bold mb-4 mt-8 text-xl text-white">Personal Website</h3>
-  <p class="text-gray-300 leading-relaxed">
-    Eine professionelle Online-Präsenz für einen Quantitative Finance & AI Experten. 
-    <span class="bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent font-bold text-lg">
-      0€ für Hosting & Domain – keine versteckten Kosten!
-    </span>  
-
-  </p>
-</a>
-
-        <!-- Project 1 -->
-        <a href="/projects/1" class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] hover:shadow-2xl transition-transform duration-500 hover:scale-105 flex flex-col items-center">
-          <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
-          <img class="rounded-lg shadow-md drop-shadow-[0px_-35px_35px_rgba(75,0,130,0.6)] object-contain w-full h-auto max-h-[60vh]" src="/images/projects/1.webp" alt="Astro Gallery"/>
-          <h3 class="font-bold my-4 text-xl text-white">Meisterhafte Webseite für eine berühmte Künstlerin   </h3>
-          <p class="text-gray-300 leading-relaxed">Eine wunderschöne Website, die für einen renommierten Künstler gestaltet wurde. Sie umfasst 
-            <span class="bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent font-bold text-lg">
-              eine Galerie, Ausstellungen, ein Kontaktformular und einen Sprachwechsler.
-            </span>  
-             Gebaut mit React.js, Tailwind CSS und Next.js, liegt der Fokus dieses Projekts auf mobile-first Design und SEO-Optimierung.</p>
-        </a>
-
-
+        <ProjectCard 
+          title="Meisterhafte Webseite für eine berühmte Künstlerin"
+          description="Eine wunderschöne Website, die für einen renommierten Künstler gestaltet wurde. Sie umfasst "
+          highlight="eine Galerie, Ausstellungen, ein Kontaktformular und einen Sprachwechsler."
+          image="/images/projects/maa-art.webp"
+          alt="MAA Art – Künstler Website"
+          url="/projects/maa-art"
+        />
       </div>
     </section>
 
-    <!-- Section 2: iOS Development -->
     <section class="mb-12">
       <h2 class="text-center text-2xl md:text-3xl font-bold text-gray-300 drop-shadow-lg mb-12 mt-24">Mobil-Apps</h2>
       <div class="grid md:grid-cols-2 gap-12 w-10/12 mx-auto">
-        <!-- Project 2 -->
-        <a href="/projects/2" class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] hover:shadow-2xl transition-transform duration-500 hover:scale-105 flex flex-col items-center">
-          <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
-          <img class="rounded-lg shadow-md drop-shadow-[0px_-35px_35px_rgba(75,0,130,0.6)] object-contain w-full h-auto max-h-[50vh]" src="/images/projects/2.webp" alt="React Portfolio"/>
-          <h3 class="font-bold my-4 text-xl text-white">ROOM Planetarium</h3>
-          <p class="text-gray-300 leading-relaxed">Entdecke das ROOM Planetarium, eine immersive und lehrreiche App, die Nutzer auf eine fesselnde Reise durch das Universum mitnimmt. ROOM Planetarium vereint modernste Technologie mit einem aufregenden Nutzererlebnis und bietet eine virtuelle Odyssee zu den Geheimnissen des Kosmos.</p>
-        </a>
+        <ProjectCard 
+          title="ROOM Planetarium"
+          description="Entdecke das ROOM Planetarium, eine immersive und lehrreiche App, die Nutzer auf eine fesselnde Reise durch das Universum mitnimmt. ROOM Planetarium vereint modernste Technologie mit einem aufregenden Nutzererlebnis und bietet eine virtuelle Odyssee zu den Geheimnissen des Kosmos."
+          image="/images/projects/room-planetarium.webp"
+          alt="ROOM Planetarium App"
+          url="/projects/room-planetarium"
+        />
 
-        <!-- Project 3 -->
-        <a href="/projects/3" class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] hover:shadow-2xl transition-transform duration-500 hover:scale-105 flex flex-col items-center">
-          <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
-          <img class="rounded-lg shadow-md drop-shadow-[0px_-35px_35px_rgba(75,0,130,0.6)] object-contain w-full h-auto max-h-[50vh]" src="/images/projects/3.webp" alt="Mobile App"/>
-          <h3 class="font-bold my-4 text-xl text-white">Battle Calculator</h3>
-          <p class="text-gray-300 leading-relaxed">Bist du es leid, langweilige Alltagsrechner zu nutzen, die jegliche Spannung vermissen lassen? Hier kommt der Battle Calculator – die App, die den Nervenkitzel eines actiongeladenen Spiels in die Welt der Mathematik bringt.</p>
-        </a>
+        <ProjectCard 
+          title="Battle Calculator"
+          description="Bist du es leid, langweilige Alltagsrechner zu nutzen, die jegliche Spannung vermissen lassen? Hier kommt der Battle Calculator – die App, die den Nervenkitzel eines actiongeladenen Spiels in die Welt der Mathematik bringt."
+          image="/images/projects/battle-calculator.webp"
+          alt="Battle Calculator App"
+          url="/projects/battle-calculator"
+        />
       </div>
     </section>
-
-
-
   </div>
 </MainLayout>
 
@@ -218,5 +153,4 @@ import MainLayout from "../layouts/MainLayout.astro";
   body {
     font-family: 'Poppins', sans-serif;
   }
-  
 </style>
