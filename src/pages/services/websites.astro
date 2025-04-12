@@ -1,0 +1,84 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import TextSection from "../../components/TextSection.astro";
+import ContentSection from "../../components/ContentSection.astro";
+import FeatureCard from "../../components/FeatureCard.astro";
+import GradientDivider from "../../components/GradientDivider.astro";
+import FinalSection from "../../components/FinalSection.astro";
+
+const pageTitle = "Professionelle Websites erstellen lassen in München | maxWapp";
+const seoTitle = "Webdesign München – Moderne Websites für Unternehmen | maxWapp";
+const seoDesc = "Maßgeschneiderte Websites aus München – mobil-optimiert, schnell & SEO-ready. Entdecke unser Webdesign für KMU, Startups & Selbständige.";
+---
+
+<MainLayout title={pageTitle} seoTitle={seoTitle} seoDesc={seoDesc}>
+  <div class="min-h-screen text-white py-20 md:py-24 w-11/12 md:w-10/12 lg:w-8/12 xl:w-7/12 mx-auto">
+
+    <h1 class="text-4xl md:text-6xl font-bold text-center text-white mb-12 leading-tight">
+      High-Conversion Websites
+    </h1>
+
+    <TextSection
+      title="Websites, die verkaufen"
+      introText="Deine Website ist mehr als nur eine Visitenkarte – sie ist dein wichtigster Vertriebskanal. Wir gestalten Weblösungen, die Vertrauen schaffen, überzeugen und konvertieren."
+      secondText="Unsere Websites sind mobil-optimiert, blitzschnell und perfekt auf deine Zielgruppe abgestimmt."
+    />
+
+    <ContentSection
+      imgSrc="/images/projects/immobilien-muenchen.webp"
+      imgAlt="Webdesign Immobilien München"
+      title="Maßgeschneidert für dein Business"
+      introText="Ob Dienstleister, Berater oder Online-Shop: Deine neue Website wird gezielt für deinen Erfolg entwickelt. Sie spiegelt deine Marke wider und spricht exakt die Sprache deiner Kunden."
+      secondText="Wir denken strategisch, gestalten mit Gefühl für Ästhetik und setzen technisch auf die besten Lösungen: blitzschnell, SEO-stark, mobilfreundlich."
+    />
+
+    <TextSection
+      title="Der maxWapp Vorteil"
+      introText="Du erhältst keine Website von der Stange, sondern eine individuelle Lösung, die wirkt."
+      secondText="Transparente Preise, persönliche Betreuung und schnelle Umsetzung garantiert – direkt aus München."
+    />
+
+    <h2 class="text-center text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 mb-12">
+      Deine Vorteile auf einen Blick
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12 mb-32">
+      <FeatureCard 
+        title="Schnelle Ladezeiten"
+        description="Blitzschnelle Performance dank moderner Technologien wie Astro, Tailwind und sauberem Code – wichtig für Google, entscheidend für deine Nutzer."
+      />
+      <FeatureCard 
+        title="SEO inklusive"
+        description="Von Anfang an suchmaschinenfreundlich aufgebaut: Struktur, Meta-Daten, Pagespeed und klare Navigation – bereit für Google Top-Rankings."
+      />
+      <FeatureCard 
+        title="Mobil-optimiert"
+        description="Responsive Design, das auf jedem Gerät überzeugt. Deine Inhalte sind überall perfekt dargestellt – egal ob Smartphone, Tablet oder Desktop."
+      />
+      <FeatureCard 
+        title="Persönlicher Support"
+        description="Kein Callcenter, keine Floskeln – du sprichst mit mir persönlich. Vom Kick-off bis zum Launch begleite ich dein Projekt mit echtem Einsatz."
+      />
+    </div>
+
+    <GradientDivider />
+
+    <FinalSection
+      imgSrc="/images/about-phone1.webp"
+      imgAlt="Call to Action für moderne Website"
+      title="Bereit für deinen Online-Erfolg?"
+      introText="Lass uns gemeinsam deine Website zur stärksten Waffe im digitalen Auftritt machen."
+      secondText="Jetzt kostenloses Beratungsgespräch vereinbaren."
+      primaryButtonLabel="Jetzt starten"
+      primaryButtonLink="/contact"
+      secondaryButtonLabel="Alle Projekte ansehen"
+      secondaryButtonLink="/projects"
+    />
+  </div>
+</MainLayout>
+
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+</style>
