@@ -74,7 +74,7 @@ import MainLayout from "../layouts/MainLayout.astro"
             />
             <label for="privacy-policy" class="text-gray-300 text-left"
               >Ich akzeptiere die <a
-                href="/privacy"
+                href="/datenschutz"
                 class="underline hover:text-[#6d87d1]">Datenschutzerklärung</a
               ></label
             >
@@ -110,10 +110,10 @@ import MainLayout from "../layouts/MainLayout.astro"
         </div>
 
         <!-- Контейнер для QR-кода и кнопок -->
-        <div class="flex flex-col md:flex-col lg:flex-row gap-8 items-center">          
+        <div class="flex flex-col md:flex-col lg:flex-row gap-8 items-center">
           <!-- Левая колонка: Кнопки и текст -->
           <div class="w-full md:w-8/12">
-            <!-- Buttons for Contact -->
+            <!-- Buttons for kontakt -->
             <div
               class="flex flex-col md:flex-row gap-6 mt-8 justify-center items-center w-full"
             >
@@ -134,10 +134,11 @@ import MainLayout from "../layouts/MainLayout.astro"
               </a>
             </div>
 
-            <!-- Contact Information -->
+            <!-- kontakt Information -->
             <p class="mt-4 text-xl text-gray-300">
               <a href="tel:+491777594839" class="hover:text-[#6d87d1]"
-                >+49 1 777 59 48 39</a>
+                >+49 1 777 59 48 39</a
+              >
             </p>
             <p class="mt-4 text-xl text-gray-300">
               (Mo – Fr von 8:00 bis 18:00 Uhr)
@@ -146,18 +147,19 @@ import MainLayout from "../layouts/MainLayout.astro"
               <strong>E-Mail:</strong>
               <a
                 href="mailto:info@maxwapp.de"
-                class="underline hover:text-[#6d87d1]">info@maxwapp.de</a>
+                class="underline hover:text-[#6d87d1]">info@maxwapp.de</a
+              >
             </p>
 
             <!-- Footer Links -->
             <div class="mt-4 flex justify-between">
               <a
-                href="/imprint"
+                href="/impressum"
                 class="underline text-gray-400 hover:text-[#6d87d1]"
                 >Impressum</a
               >
               <a
-                href="/privacy"
+                href="/datenschutz"
                 class="underline text-gray-400 hover:text-[#6d87d1]"
                 >Datenschutz</a
               >
@@ -165,14 +167,12 @@ import MainLayout from "../layouts/MainLayout.astro"
           </div>
 
           <!-- Правая колонка: QR-код -->
-          <div
-            class="w-full md:w-6/12 flex flex-col items-center "
-          >
-          <img
-          src="/images/QR-code.webp"
-          alt="QR-code"
-          class="qr-code md:w-64 md:h-64 w-80 md:max-h-[60vh] object-contain rounded-lg shadow-md"
-        />
+          <div class="w-full md:w-6/12 flex flex-col items-center">
+            <img
+              src="/images/QR-code.webp"
+              alt="QR-code"
+              class="qr-code md:w-64 md:h-64 w-80 md:max-h-[60vh] object-contain rounded-lg shadow-md"
+            />
             <p class="mt-4 text-xl text-gray-300">
               <a href="/" class="hover:text-[#6d87d1]">maxWapp.de</a>
             </p>
@@ -185,7 +185,7 @@ import MainLayout from "../layouts/MainLayout.astro"
 
 <script>
   document
-    .getElementById("contact-form")
+    .getElementById("kontakt-form")
     ?.addEventListener("submit", async function (e) {
       e.preventDefault()
 
@@ -261,27 +261,27 @@ import MainLayout from "../layouts/MainLayout.astro"
   }
 
   @media (max-width: 1024px) {
-  .qr-code {
-    width: 60%; /* Уменьшаем размер QR-кода */
-    max-width: 200px;
-  }
-}
-
-@media (max-width: 768px) {
-  .qr-code {
-    width: 80%; /* Чуть больше на мобильных */
-    max-width: 250px;
-  }
-}
-
-@media (max-width: 768px) {
-  .custom-checkbox {
-    width: 3.5rem; /* Increase width */
-    height: 2.5rem; /* Increase height */
+    .qr-code {
+      width: 60%; /* Уменьшаем размер QR-кода */
+      max-width: 200px;
+    }
   }
 
-  .custom-checkbox:checked::before {
-    font-size: 1rem; /* Make the checkmark bigger */
+  @media (max-width: 768px) {
+    .qr-code {
+      width: 80%; /* Чуть больше на мобильных */
+      max-width: 250px;
+    }
   }
-}
+
+  @media (max-width: 768px) {
+    .custom-checkbox {
+      width: 3.5rem; /* Increase width */
+      height: 2.5rem; /* Increase height */
+    }
+
+    .custom-checkbox:checked::before {
+      font-size: 1rem; /* Make the checkmark bigger */
+    }
+  }
 </style>

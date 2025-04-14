@@ -1,20 +1,25 @@
 ---
-import { Icon } from 'astro-icon/components';
+import { Icon } from "astro-icon/components"
 ---
 
 <footer class="bg-[#090a1a] text-white py-10 px-4 mt-auto">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
-    
+  <div
+    class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left"
+  >
     <!-- Address Section (Left-Aligned on Desktop) -->
     <div class="flex flex-col items-center md:items-start">
-      <a href="/" class="text-lg font-bold mb-4 hover:text-[#6d87d1]">maxWapp</a>
+      <a href="/" class="text-lg font-bold mb-4 hover:text-[#6d87d1]">maxWapp</a
+      >
 
       <!-- Align icons vertically on mobile -->
       <div class="flex flex-col space-y-4 md:space-y-2">
         <!-- Email -->
         <div class="flex items-center space-x-2">
           <i class="fas fa-envelope text-white w-6 h-6"></i>
-          <a href="mailto:info@maxwapp.de" class="hover:text-[#6d87d1] transition">
+          <a
+            href="mailto:info@maxwapp.de"
+            class="hover:text-[#6d87d1] transition"
+          >
             info@maxwapp.de
           </a>
         </div>
@@ -30,46 +35,60 @@ import { Icon } from 'astro-icon/components';
         <!-- Location -->
         <div class="flex items-center space-x-2">
           <i class="fas fa-map-marker-alt text-white w-6 h-6"></i>
-          <a href="https://www.google.com/maps/place/maxWapp+%7C+Juri+Lorenz/@48.0961762,11.5058474,17z/data=!3m2!4b1!5s0x479dd9218f79d1d3:0x204263009f086393!4m6!3m5!1s0xf3b4b557fd55469:0x893accd647bdc468!8m2!3d48.0961726!4d11.5084223!16s%2Fg%2F11wr1981wf?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="hover:text-[#6d87d1] transition">
-            Constanze-Hallgarten<br> Str. 40, 81379 München
+          <a
+            href="https://www.google.com/maps/place/maxWapp+%7C+Juri+Lorenz/@48.0961762,11.5058474,17z/data=!3m2!4b1!5s0x479dd9218f79d1d3:0x204263009f086393!4m6!3m5!1s0xf3b4b557fd55469:0x893accd647bdc468!8m2!3d48.0961726!4d11.5084223!16s%2Fg%2F11wr1981wf?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-[#6d87d1] transition"
+          >
+            Constanze-Hallgarten<br /> Str. 40, 81379 München
           </a>
         </div>
       </div>
     </div>
 
-  <!-- Social Media Icons Row -->
-  <div class="flex justify-center space-x-6 mb-6">
-    <a href="https://www.instagram.com/maxwapp.de" class="text-white hover:text-[#6d87d1] transition">
-      <Icon name="fa:instagram" class="w-6 h-6" />
-    </a>
-    <a href="https://www.linkedin.com/in/juri-lorenz" class="text-white hover:text-[#6d87d1] transition">
-      <Icon name="fa:linkedin" class="w-6 h-6" />
-    </a>
-    <a href="https://github.com/jurilorenz" class="text-white hover:text-[#6d87d1] transition">
-      <Icon name="fa:github" class="w-6 h-6" />
-    </a>
-  </div>
-
-    <!-- Imprint Section (Centered on Desktop)       <a href="/test" class="hover:text-[#6d87d1] transition">Test</a> -->
-    <div class="flex flex-col items-center md:items-center">
-      <a href="/imprint" class="hover:text-[#6d87d1] transition">Impressum</a>
-      <a href="/privacy" class="hover:text-[#6d87d1] transition mt-4">Datenschutz</a>
+    <!-- Social Media Icons Row -->
+    <div class="flex justify-center space-x-6 mb-6">
+      <a
+        href="https://www.instagram.com/maxwapp.de"
+        class="text-white hover:text-[#6d87d1] transition"
+      >
+        <Icon name="fa:instagram" class="w-6 h-6" />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/juri-lorenz"
+        class="text-white hover:text-[#6d87d1] transition"
+      >
+        <Icon name="fa:linkedin" class="w-6 h-6" />
+      </a>
+      <a
+        href="https://github.com/jurilorenz"
+        class="text-white hover:text-[#6d87d1] transition"
+      >
+        <Icon name="fa:github" class="w-6 h-6" />
+      </a>
     </div>
 
-
+    <!-- impressum Section (Centered on Desktop)       <a href="/test" class="hover:text-[#6d87d1] transition">Test</a> -->
+    <div class="flex flex-col items-center md:items-center">
+      <a href="/impressum" class="hover:text-[#6d87d1] transition">Impressum</a>
+      <a href="/datenschutz" class="hover:text-[#6d87d1] transition mt-4"
+        >Datenschutz</a
+      >
+    </div>
   </div>
 
   <!-- Divider -->
-  <hr class="my-8 border-gray-600"/>
-
-
+  <hr class="my-8 border-gray-600" />
 
   <!-- Links and Copyright in One Row -->
-  <div class="max-w-3xl mx-auto text-center ">
+  <div class="max-w-3xl mx-auto text-center">
     <small>&copy; <span id="copyright"></span> maxWapp</small>
   </div>
 </footer>
 
 <script>
-  document.querySelector('#copyright').textContent = new Date().getFullYear().toString();
+  document.querySelector("#copyright").textContent = new Date()
+    .getFullYear()
+    .toString()
 </script>

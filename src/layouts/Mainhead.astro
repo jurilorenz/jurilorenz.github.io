@@ -1,21 +1,21 @@
 ---
-import { SEO } from "astro-seo";
-const { title, seoTitle, seoDesc } = Astro.props;
+import { SEO } from "astro-seo"
+const { title, seoTitle, seoDesc } = Astro.props
 ---
 
 <head>
   <SEO title={seoTitle} description={seoDesc} />
 
   <!-- Favicon links -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
-<!-- TODO: Uncomment the following code to re-enable Google Analytics and consent bunner -->
+  <!-- TODO: Uncomment the following code to re-enable Google Analytics and consent bunner -->
 
-<!--
+  <!--
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.0/cookieconsent.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.0/cookieconsent.min.css" />
@@ -50,9 +50,9 @@ const { title, seoTitle, seoDesc } = Astro.props;
         allow: "Alle Cookies zulassen",    // Accept button
         deny: "Nur notwendige Cookies",    // Deny button for non-essential cookies
         link: "Datenschutz",
-        href: "/privacy",           // Privacy policy URL
+        href: "/datenschutz",           // datenschutz policy URL
         disclaimer: "Impressum",
-        disclaimerUrl: "/imprint"   // Imprint URL
+        disclaimerUrl: "/impressum"   // impressum URL
       },
       elements: {
         messagelink: `
@@ -113,31 +113,29 @@ const { title, seoTitle, seoDesc } = Astro.props;
 </script>
 -->
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>{title}</title>
 
-  
+  <!-- Open Graph Meta Tags for social sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={seoTitle} />
+  <meta property="og:description" content={seoDesc} />
+  <meta property="og:image" content="https://maxwapp.de/images/badge.webp" />
+  <meta property="og:image:width" content="1050" />
+  <meta property="og:image:height" content="600" />
+  <meta property="og:url" content="https://maxwapp.de" />
 
-    <!-- Open Graph Meta Tags for social sharing -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content={seoTitle} />
-    <meta property="og:description" content={seoDesc} />
-    <meta property="og:image" content="https://maxwapp.de/images/badge.webp" />
-    <meta property="og:image:width" content="1050" />
-    <meta property="og:image:height" content="600" />
-    <meta property="og:url" content="https://maxwapp.de" />
-  
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={seoTitle} />
-    <meta name="twitter:description" content={seoDesc} />
-    <meta name="twitter:image" content="https://maxwapp.de/images/badge.webp" />
-  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={seoTitle} />
+  <meta name="twitter:description" content={seoDesc} />
+  <meta name="twitter:image" content="https://maxwapp.de/images/badge.webp" />
+
   <!-- Fonts (Poppins) -->
-  <link rel="stylesheet" href="/css/fonts.css">
+  <link rel="stylesheet" href="/css/fonts.css" />
 
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="/css/all.min.css">
+  <link rel="stylesheet" href="/css/all.min.css" />
 </head>
