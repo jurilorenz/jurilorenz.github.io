@@ -1,84 +1,400 @@
 ---
-import MainLayout from "../../layouts/MainLayout.astro";
-import TextSection from "../../components/TextSection.astro";
-import ContentSection from "../../components/ContentSection.astro";
-import FeatureCard from "../../components/FeatureCard.astro";
-import GradientDivider from "../../components/GradientDivider.astro";
-import FinalSection from "../../components/FinalSection.astro";
-
-const pageTitle = "Professionelle Websites erstellen lassen in München | maxWapp";
-const seoTitle = "Webdesign München – Moderne Websites für Unternehmen | maxWapp";
-const seoDesc = "Maßgeschneiderte Websites aus München – mobil-optimiert, schnell & SEO-ready. Entdecke unser Webdesign für KMU, Startups & Selbständige.";
+import MainLayout from "../../layouts/MainLayout.astro"
 ---
 
-<MainLayout title={pageTitle} seoTitle={seoTitle} seoDesc={seoDesc}>
-  <div class="min-h-screen text-white py-20 md:py-24 w-11/12 md:w-10/12 lg:w-8/12 xl:w-7/12 mx-auto">
-
-    <h1 class="text-4xl md:text-6xl font-bold text-center text-white mb-12 leading-tight">
-      High-Conversion Websites
+<MainLayout
+title="Webdesign München ab 900 € – Inklusive Domain & Hosting | maxWapp"
+seoTitle="Webdesign aus München ab 900 € – Website, Domain & Hosting inklusive | maxWapp"
+seoDesc="Deine erste Website? Bei maxWapp bekommst du alles in einem Paket: Webdesign, Domain & Hosting – ab 900 €. Keine monatlichen Gebühren. Ideal für Selbstständige & Startups."
+>
+  <!-- Hintergrund mit Verlauf -->
+  <div
+    class="min-h-screen bg-gradient-to-b from-[#090a1a] to-[#290065] text-white text-center flex flex-col items-center justify-center"
+  >
+    <!-- Titel -->
+    <h1
+      class="text-center text-4xl md:text-6xl font-bold text-gray-100 drop-shadow-lg mt-12 md:mb-12 md:mt-36"
+    >
+      Websites
     </h1>
 
-    <TextSection
-      title="Websites, die verkaufen"
-      introText="Deine Website ist mehr als nur eine Visitenkarte – sie ist dein wichtigster Vertriebskanal. Wir gestalten Weblösungen, die Vertrauen schaffen, überzeugen und konvertieren."
-      secondText="Unsere Websites sind mobil-optimiert, blitzschnell und perfekt auf deine Zielgruppe abgestimmt."
-    />
+    <div
+      class="flex flex-col items-center md:flex-row md:justify-center md:items-center md:space-x-32 mt-12"
+    >
+      <!-- Profilbild mit Farbverlauf-Rahmen und Schatten -->
+      <div
+        class="rounded-full p-1 bg-gradient-to-r from-purple-400 to-blue-500 shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] profile-container"
+      >
+        <div class="rounded-full bg-[#090a1a] p-0">
+          <img
+            src="/images/maxwapp-logo-gray-bg.webp"
+            class="rounded-full w-48 h-48 md:w-56 md:h-56 object-cover"
+            alt="Juri Lorenz, Webentwickler in München"
+          />
+        </div>
+      </div>
 
-    <ContentSection
-      imgSrc="/images/projects/immobilien-muenchen.webp"
-      imgAlt="Webdesign Immobilien München"
-      title="Maßgeschneidert für dein Business"
-      introText="Ob Dienstleister, Berater oder Online-Shop: Deine neue Website wird gezielt für deinen Erfolg entwickelt. Sie spiegelt deine Marke wider und spricht exakt die Sprache deiner Kunden."
-      secondText="Wir denken strategisch, gestalten mit Gefühl für Ästhetik und setzen technisch auf die besten Lösungen: blitzschnell, SEO-stark, mobilfreundlich."
-    />
+      <!-- Motto-Text neben dem Bild -->
+      <div class="text-center md:text-left md:pl-12 mt-6 md:mt-0">
+        <p class="text-2xl md:text-2xl font-medium text-gray-300">
+          <span>Webentwicklung</span><br />
+          <span>München</span><br />
+        </p>
 
-    <TextSection
-      title="Der maxWapp Vorteil"
-      introText="Du erhältst keine Website von der Stange, sondern eine individuelle Lösung, die wirkt."
-      secondText="Transparente Preise, persönliche Betreuung und schnelle Umsetzung garantiert – direkt aus München."
-    />
-
-    <h2 class="text-center text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 mb-12">
-      Deine Vorteile auf einen Blick
-    </h2>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12 mb-32">
-      <FeatureCard 
-        title="Schnelle Ladezeiten"
-        description="Blitzschnelle Performance dank moderner Technologien wie Astro, Tailwind und sauberem Code – wichtig für Google, entscheidend für deine Nutzer."
-      />
-      <FeatureCard 
-        title="SEO inklusive"
-        description="Von Anfang an suchmaschinenfreundlich aufgebaut: Struktur, Meta-Daten, Pagespeed und klare Navigation – bereit für Google Top-Rankings."
-      />
-      <FeatureCard 
-        title="Mobil-optimiert"
-        description="Responsive Design, das auf jedem Gerät überzeugt. Deine Inhalte sind überall perfekt dargestellt – egal ob Smartphone, Tablet oder Desktop."
-      />
-      <FeatureCard 
-        title="Persönlicher Support"
-        description="Kein Callcenter, keine Floskeln – du sprichst mit mir persönlich. Vom Kick-off bis zum Launch begleite ich dein Projekt mit echtem Einsatz."
-      />
+        <!-- Hauptmotto -->
+        <p
+          class="mt-4 text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500"
+        >
+          <span>Exzellenz</span><br />
+          <span>Erreichen</span>
+        </p>
+      </div>
     </div>
 
-    <GradientDivider />
+    
 
-    <FinalSection
-      imgSrc="/images/about-phone1.webp"
-      imgAlt="Call to Action für moderne Website"
-      title="Bereit für deinen Online-Erfolg?"
-      introText="Lass uns gemeinsam deine Website zur stärksten Waffe im digitalen Auftritt machen."
-      secondText="Jetzt kostenloses Beratungsgespräch vereinbaren."
-      primaryButtonLabel="Jetzt starten"
-      primaryButtonLink="/contact"
-      secondaryButtonLabel="Alle Projekte ansehen"
-      secondaryButtonLink="/projects"
-    />
+    <!-- Inhalt Abschnitt -->
+    <div
+      class="w-11/12 md:w-10/12 lg:w-8/12 mx-auto text-lg md:text-xl text-gray-300 leading-relaxed mt-20 md:mt-32 flex flex-col-reverse md:flex-row items-center gap-16 md:gap-32"
+    >
+      <!-- Handybildabschnitt für Desktop links -->
+      <div
+        class="w-full md:w-5/12 flex justify-center md:justify-end mb-12 md:mb-0 rounded shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] phone-container"
+      >
+        <img
+          src="/images/projects/immobilien-muenchen.webp"
+          alt="Phone Screenshot"
+          class="w-80 md:w-auto md:max-h-[60vh] object-contain rounded-lg"
+        />
+      </div>
+
+      <!-- Textabschnitt für Desktop rechts -->
+      <div class="w-full md:w-5/12 text-center md:text-left">
+
+
+        <p class="text-xl md:text-2xl mt-4">
+          Deine Website ist der erste Eindruck – und der muss sitzen. Ich entwickle <span class="text-gradient">hochwertige und schnelle Websites</span>, die Vertrauen schaffen und deine Zielgruppe gezielt ansprechen.
+        </p>
+        
+        <p class="text-xl md:text-2xl mt-8">
+          Mit <span class="text-gradient">klarem Design, smarter Technik</span> und <span class="underline-animation">Conversion-Fokus</span> helfe ich dir, mehr Kunden zu gewinnen – egal ob als Einzelunternehmer, Start-up oder KMU.
+        </p>
+
+        <p class="text-xl md:text-2xl mt-8">
+          Du brauchst dich um nichts zu kümmern – ich übernehme die komplette Umsetzung. Als <span class="text-gradient">Webdesigner, Entwickler und Marketing-Experte</span> in einer Person denke ich strategisch mit und liefere dir ein rundum fertiges Produkt, das nicht nur gut aussieht, sondern auch verkauft.
+        </p>
+      </div>
+    </div>
+
+<!-- Was ich biete Abschnitt mit Karten -->
+<h2
+  class="text-center text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 my-24"
+>
+  Was ich biete
+</h2>
+
+<div
+  class="grid grid-cols-1 md:grid-cols-2 gap-12 px-6 md:px-0 max-w-6xl mx-auto"
+>
+  <!-- Karte 1: Schnelle Websites -->
+  <div
+    class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
+  >
+    <div
+      class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
+    ></div>
+    <h4 class="text-3xl font-bold text-white mb-6">Schnelle Websites</h4>
+    <p class="text-lg text-gray-300 leading-relaxed">
+      Niemand wartet gerne. Ich entwickle <strong>blitzschnelle Webseiten</strong>, die sofort laden – ideal für Nutzer und Suchmaschinen.
+      Mehr Performance bedeutet mehr Conversions.
+    </p>
   </div>
-</MainLayout>
 
-<style>
-  body {
-    font-family: 'Poppins', sans-serif;
-  }
-</style>
+  <!-- Karte 2: Next-Level Design -->
+  <div
+    class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
+  >
+    <div
+      class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
+    ></div>
+    <h4 class="text-3xl font-bold text-white mb-6">Next-Level Design</h4>
+    <p class="text-lg text-gray-300 leading-relaxed">
+      Visuelle Konzepte, die nicht nur schön aussehen, sondern auch verkaufen. <strong>Modernes Webdesign</strong> trifft auf Markenstrategie – abgestimmt auf dein Business.
+    </p>
+  </div>
+
+  <!-- Karte 3: Mobilfreundlich -->
+  <div
+    class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
+  >
+    <div
+      class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
+    ></div>
+    <h4 class="text-3xl font-bold text-white mb-6">Mobilfreundlich</h4>
+    <p class="text-lg text-gray-300 leading-relaxed">
+      Über 70% der Nutzer kommen über Smartphone oder Tablet. Deine Website wird <strong>100% responsive</strong> und sieht auf jedem Gerät perfekt aus – mobil zuerst gedacht.
+    </p>
+  </div>
+
+  <!-- Karte 4: Top-Google-Sichtbarkeit -->
+  <div
+    class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
+  >
+    <div
+      class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
+    ></div>
+    <h4 class="text-3xl font-bold text-white mb-6">Top-Google-Sichtbarkeit</h4>
+    <p class="text-lg text-gray-300 leading-relaxed">
+      SEO ist kein Extra – es ist Standard. Ich optimiere Struktur, Ladezeit und Inhalte für <strong>bessere Google-Rankings</strong> und mehr Sichtbarkeit bei deiner Zielgruppe.
+    </p>
+  </div>
+</div>
+
+<h2 class="text-center text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 mt-36 mb-12"
+style="line-height: 1.3;">
+  Preis-Leistung? Unschlagbar.
+</h2>
+
+<p class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-auto">
+  Als <strong>Einzelunternehmer</strong> kann ich dir etwas bieten, was viele Agenturen nicht schaffen:
+  <span class="text-gradient font-semibold">Top-Qualität zum fairen Preis</span> – ohne Agenturkosten, ohne Overhead.</span> 
+</p>
+
+<p class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-auto mt-8">
+  Mein <strong>Starter-Paket</strong> gibt’s schon ab <span class="text-gradient font-semibold">900 €</span> – 
+  <strong>inklusive Webdesign, Domain & Hosting</strong>. 
+  Du brauchst <strong>keine monatlichen Gebühren</strong> mehr zu zahlen. Alles ist im Preis enthalten.
+</p>
+
+<p class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-auto mt-6">
+  Ideal für alle, die zum ersten Mal eine Website erstellen lassen – 
+  <span class="underline-animation">komplett sorgenfrei</span>.
+</p>
+
+    <!-- Warum mit mir arbeiten Abschnitt -->
+    <h2
+      class="text-center text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 mt-36 mb-24 mx-2"
+      style="line-height: 1.3;"
+    >
+    Deine Website. Dein Erfolg.
+
+    </h2>
+    
+
+    <div
+      class="w-11/12 md:w-10/12 lg:w-8/12 mx-auto flex flex-col md:flex-row items-center mb-24"
+    >
+      <!-- Handybildabschnitt für Desktop links -->
+      <div
+        class="w-full md:w-5/12 flex justify-center md:justify-center mb-12 md:mb-0 rounded shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] phone-container-second"
+      >
+        <img
+          src="/images/about-phone1.webp"
+          alt="Phone Screenshot"
+          class="w-80 md:w-auto md:max-h-[60vh] object-contain rounded-lg"
+        />
+      </div>
+
+      <!-- Textabschnitt für Desktop rechts -->
+      <div class="w-full md:w-5/12 text-center md:text-left">
+        <p class="text-xl md:text-2xl mt-4">
+          Du willst keine Agentur, die einfach irgendein Design liefert – sondern jemanden, der dein Business versteht und daraus eine <span class="text-gradient">starke Website</span> macht? Dann bist du hier richtig.
+        </p>
+        
+        <p class="text-xl md:text-2xl mt-8">
+          Ich höre zu, denke mit und entwickle für dich eine Website, die nicht nur gut aussieht, sondern <span class="underline-animation">Ergebnisse bringt</span> – mit Fokus auf Conversion, SEO und Performance.
+        </p>
+        
+        <!-- Call to Action -->
+        <p class="text-xl md:text-2xl mt-8">
+          <span
+            class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500"
+          >
+            Du bekommst ein Gesamtpaket – klar, durchdacht und komplett umgesetzt.
+          </span>
+        </p>
+
+        <!-- Buttons at the bottom-right -->
+        <div
+          class="flex flex-col md:flex-row gap-6 mt-8 md:mt-16 justify-center md:justify-start items-center md:items-start w-full md:w-auto"
+        >
+          <!-- Secondary Button -->
+          <a
+            href="/projects"
+            class="bg-[#1f1235] text-white font-bold py-4 px-10 rounded-full border-2 border-[#6d87d1] shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-500 hover:shadow-[0_0_10px_rgba(147,112,219,0.5),_0_0_25px_rgba(3,169,244,0.4)] text-center w-full max-w-xs md:max-w-none md:w-auto"
+          >
+            Projekte erleben
+          </a>
+
+          <!-- Primary Button -->
+          <a
+            href="/contact"
+            class="relative inline-block py-4 px-10 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-white text-[#090a1a] shadow-lg transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_rgba(147,112,219,0.8),_0_0_35px_rgba(3,169,244,0.6)] hover:border-[#6d87d1]"
+          >
+            Let's talk
+          </a>
+        </div>
+      </div>
+
+      <style>
+        .text-gradient {
+          background: linear-gradient(to right, #9c27b0, #03a9f4);
+          -webkit-background-clip: text;
+          color: transparent;
+        }
+
+        .drop-shadow-lg {
+          filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
+        }
+
+        .border-gradient-to-r {
+          border-image-slice: 1;
+          border-image-source: linear-gradient(to right, #9c27b0, #03a9f4);
+        }
+
+        /* Container for the entire image, gradient, and shadow */
+        .profile-container {
+          transform: translateX(-150%); /* Start off-screen to the left */
+          opacity: 0; /* Initially hidden */
+          transition:
+            transform 1.5s ease-out,
+            opacity 1.5s ease-out;
+        }
+
+        /* Trigger the animation when the page loads */
+        .profile-container {
+          animation: flyInFromLeft 1.5s forwards;
+        }
+
+        /* Keyframes for the fly-in effect */
+        @keyframes flyInFromLeft {
+          0% {
+            transform: translateX(-150%);
+            opacity: 0;
+          }
+          100% {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+
+        /* Container for the entire image and shadow */
+        .phone-container {
+          transform: translateX(-150%); /* Start off-screen to the left */
+          opacity: 0; /* Initially hidden */
+          transition:
+            transform 1.5s ease-out,
+            opacity 1.5s ease-out; /* Remove delay for mobile */
+        }
+
+        /* Fly in effect */
+        .fly-in {
+          transform: translateX(0);
+          opacity: 1;
+        }
+
+        /* Keyframes for desktop (initial load) */
+        @media (min-width: 768px) {
+          .phone-container {
+            animation: flyInFromLeftPhone 1.5s forwards 0.5s; /* Keep delay on desktop */
+          }
+
+          .underline-animation {
+            display: inline-block;
+            background-image: linear-gradient(120deg, #03a9f4, #9c27b0);
+            background-repeat: no-repeat;
+            background-size: 100% 3px;
+            background-position: 0 88%;
+            transition: background-size 0.3s ease-in-out;
+          }
+
+          .underline-animation:hover {
+            background-size: 100% 100%;
+          }
+        }
+
+        /* Keyframes for mobile (on scroll) */
+        @keyframes flyInFromLeftPhone {
+          0% {
+            transform: translateX(-150%);
+            opacity: 0;
+          }
+          100% {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+
+        /* Initial state for the second phone container */
+        .phone-container-second {
+          transform: translateX(-150%); /* Positioned off-screen to the left */
+          opacity: 0; /* Initially hidden */
+          transition:
+            transform 1.5s ease-out,
+            opacity 1.5s ease-out;
+        }
+
+        /* Fly-in effect when in view */
+        .fly-in-second {
+          transform: translateX(0); /* Return to original position */
+          opacity: 1; /* Fully visible */
+        }
+      </style>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const phoneImage = document.querySelector(".phone-container")
+
+          // Detect if the element is in view for mobile
+          function isInViewPort(element) {
+            const rect = element.getBoundingClientRect()
+            return (
+              rect.top <=
+                (window.innerHeight || document.documentElement.clientHeight) &&
+              rect.bottom >= 0
+            )
+          }
+
+          // Add event listener for scroll to trigger the animation
+          window.addEventListener("scroll", function () {
+            if (window.innerWidth < 768) {
+              // Only apply for mobile view
+              if (isInViewPort(phoneImage)) {
+                phoneImage.classList.add("fly-in")
+              }
+            }
+          })
+        })
+
+        document.addEventListener("DOMContentLoaded", function () {
+          const secondPhoneImage = document.querySelector(
+            ".phone-container-second"
+          )
+
+          // Function to check if the element is in the viewport
+          function isInViewPort(element) {
+            const rect = element.getBoundingClientRect()
+            return (
+              rect.top <=
+                (window.innerHeight || document.documentElement.clientHeight) &&
+              rect.bottom >= 0
+            )
+          }
+
+          // Function to add the fly-in class when in view
+          function handleScroll() {
+            if (isInViewPort(secondPhoneImage)) {
+              secondPhoneImage.classList.add("fly-in-second")
+            }
+          }
+
+          // Add scroll event listener
+          window.addEventListener("scroll", handleScroll)
+
+          // Run on page load in case the element is already in view
+          handleScroll()
+        })
+      </script>
+    </div>
+  </div></MainLayout
+>
