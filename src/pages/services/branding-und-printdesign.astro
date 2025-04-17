@@ -1,11 +1,12 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro"
+import IpadComponent from "../../components/IpadComponent.astro"
 ---
 
 <MainLayout
-  title="Website-Optimierung aus München – schnell, sichtbar, konvertierend | maxWapp"
-  seoTitle="Webseiten optimieren lassen – ab 900 € inkl. Analyse & Conversion-Fokus | maxWapp"
-  seoDesc="Ich optimiere deine Website für mehr Geschwindigkeit, bessere Google-Rankings und höhere Conversion – inklusive kostenloser Analyse. Individuell. Professionell. Ab 900 €."
+  title="Branding & Printdesign aus München – visuell stark & strategisch durchdacht | maxWapp"
+  seoTitle="Professionelles Branding & Printdesign aus München – Logo, CI & mehr | maxWapp"
+  seoDesc="Ich entwickle starke Markenidentitäten – mit Logo, Corporate Design und hochwertigen Printmaterialien. Für Coaches, Selbstständige & Unternehmen, die Eindruck machen wollen."
 >
   <!-- Hintergrund mit Verlauf -->
   <div
@@ -15,23 +16,53 @@ import MainLayout from "../../layouts/MainLayout.astro"
     <h1
       class="text-center text-3xl md:text-6xl font-bold text-gray-100 drop-shadow-lg mt-12 md:mb-12 md:mt-36"
     >
-    Website-Optimierung
-
+      Branding & Printdesign
     </h1>
 
+    <div
+      class="flex flex-col items-center md:flex-row md:justify-center md:items-center md:space-x-32 mt-12"
+    >
+      <!-- Profilbild mit Farbverlauf-Rahmen und Schatten -->
+      <div
+        class="rounded-full p-1 bg-gradient-to-r from-purple-400 to-blue-500 shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] profile-container"
+      >
+        <div class="rounded-full bg-[#090a1a] p-0">
+          <img
+            src="/images/projects/streetly-logo.webp"
+            class="rounded-full w-48 h-48 md:w-56 md:h-56 object-cover"
+            alt="Juri Lorenz, Webentwickler in München"
+          />
+        </div>
+      </div>
 
+      <!-- Motto-Text neben dem Bild -->
+      <div class="text-center md:text-left md:pl-12 mt-6 md:mt-0">
+        <p class="text-2xl md:text-2xl font-medium text-gray-300">
+          <span>Corporate</span><br />
+          <span>Identity </span><br />
+        </p>
+
+        <!-- Hauptmotto -->
+        <p
+          class="mt-4 text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500"
+        >
+          <span>Max</span><br />
+          <span>Wapp</span>
+        </p>
+      </div>
+    </div>
 
     <!-- Inhalt Abschnitt -->
     <div
-      class="w-11/12 md:w-10/12 lg:w-8/12 mx-auto text-lg md:text-xl text-gray-300 leading-relaxed mt-12 flex flex-col-reverse md:flex-row items-center gap-16 md:gap-32"
+      class="w-11/12 md:w-10/12 lg:w-8/12 mx-auto text-lg md:text-xl text-gray-300 leading-relaxed mt-20 md:mt-32 flex flex-col-reverse md:flex-row items-center gap-16 md:gap-32"
     >
       <!-- Handybildabschnitt für Desktop links -->
       <div
         class="w-full md:w-5/12 flex justify-center md:justify-end mb-12 md:mb-0 rounded shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] phone-container"
       >
         <img
-          src="/images/maxwapp-website-optimierung.webp"
-          alt="Shopify Screenshot"
+          src="/images/projects/streetly-kontakt.webp"
+          alt="Phone Screenshot"
           class="w-80 md:w-auto md:max-h-[60vh] object-contain rounded-lg"
         />
       </div>
@@ -39,90 +70,118 @@ import MainLayout from "../../layouts/MainLayout.astro"
       <!-- Textabschnitt für Desktop rechts -->
       <div class="w-full md:w-5/12 text-center md:text-left">
         <p class="text-xl md:text-2xl mt-4">
-          Deine Website sieht gut aus, aber bringt keine Anfragen oder Verkäufe? Oder sie ist schon älter und technisch nicht mehr auf dem Stand? Ich finde die Schwachstellen – und optimiere sie gezielt.
+          Deine Marke ist mehr als nur ein Logo – sie ist das Gefühl, das du bei deiner Zielgruppe auslöst. Ich helfe dir, diese Wirkung bewusst zu gestalten.
+
         </p>
-        
+
         <p class="text-xl md:text-2xl mt-8">
-          Ob <strong>technisches Feintuning</strong>, <strong>Conversion-Optimierung</strong> oder <strong>SEO-Boost</strong> – schon kleine Anpassungen können <span class="text-gradient font-semibold">große Wirkung</span> zeigen. Du entscheidest, wie tief wir einsteigen.
+          Ob <strong>durchdachtes Branding</strong>, <strong>starkes visuelles Konzept</strong> oder <strong>professionelle Printmaterialien</strong> – ich mache deine Marke sichtbar, wiedererkennbar und vertrauenswürdig.
+
         </p>
-        
+
         <p class="text-xl md:text-2xl mt-8">
-          Und das Beste: Die Optimierung beginnt bei mir ab <span class="text-gradient font-semibold">nur 900 €</span> – inklusive einer kostenlosen Ersteinschätzung deiner Seite.
+          Vom Logo bis zur Visitenkarte bekommst du alles aus einer Hand – <span class="text-gradient font-semibold">kreativ, stimmig & individuell auf dein Business abgestimmt</span>.
+
         </p>
       </div>
     </div>
 
-   <!-- Was ich biete Abschnitt mit Karten -->
-<h2
-class="text-center text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 my-24"
->
-Was ich biete
-</h2>
-
-<div
-class="grid grid-cols-1 md:grid-cols-2 gap-12 px-6 md:px-0 max-w-6xl mx-auto"
->
-<!-- Karte 1: Shop-Redesign mit Conversion-Fokus -->
-<div
-  class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
->
-  <div
-    class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
-  ></div>
-  <h4 class="text-3xl font-bold text-white mb-6">Conversion-Optimierung</h4>
-  <p class="text-lg text-gray-300 leading-relaxed">
-    Deine Seite wird besucht, aber es passiert nichts? Ich optimiere <strong>Struktur, Design & Calls-to-Action</strong>, damit Besucher auch wirklich Kunden werden.
-  </p>
-</div>
-
-<!-- Karte 2: Shopify Setup & Startklar-Paket -->
-<div
-  class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
->
-  <div
-    class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
-  ></div>
-  <h4 class="text-3xl font-bold text-white mb-6">Pagespeed & Technik</h4>
-  <p class="text-lg text-gray-300 leading-relaxed">
-    Ich beschleunige deine Website und sorge für sauberen Code – <strong>schneller Laden = bessere Rankings + bessere UX</strong>. Auch Google liebt Performance.
-  </p>
-</div>
-
-<!-- Karte 3: Speed & Technik, die verkaufen -->
-<div
-  class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
->
-  <div
-    class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
-  ></div>
-  <h4 class="text-3xl font-bold text-white mb-6">SEO-Quickwins</h4>
-  <p class="text-lg text-gray-300 leading-relaxed">
-    Ich überarbeite Titel, Struktur & Inhalte gezielt für <strong>mehr Google-Sichtbarkeit</strong>. Keine Tricks – nur kluge Optimierung, die langfristig wirkt.
-  </p>
-</div>
-
-<!-- Karte 4: Mobile-First & Conversion-Ready -->
-<div
-  class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
->
-  <div
-    class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
-  ></div>
-  <h4 class="text-3xl font-bold text-white mb-6">Mobile-Optimierung</h4>
-  <p class="text-lg text-gray-300 leading-relaxed">
-    Ohne mobile Optimierung keine Sichtbarkeit: Ich mache deine Website <strong>mobilfreundlich, schnell & responsive</strong> – perfekt für Smartphone & Tablet.
-  </p>
-</div>
-</div>
-
-    <h2 class="text-center text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 mt-36 mb-12 mx-2" style="line-height: 1.3;">
-      Kleine Änderungen – große Wirkung
+    <!-- Was ich biete Abschnitt mit Karten -->
+    <h2
+      class="text-center text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 my-24"
+    >
+      Was ich biete
     </h2>
-    
+
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 gap-12 px-6 md:px-0 max-w-6xl mx-auto"
+    >
+      <!-- Karte 1: Schnelle Websites -->
+      <div
+        class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
+      >
+        <div
+          class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
+        >
+        </div>
+        <h4 class="text-3xl font-bold text-white mb-6">Konzeptentwicklung</h4>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          Ich entwickle visuelle Konzepte, die deine Werte, Ziele und Zielgruppe widerspiegeln. So entsteht ein <strong>einheitlicher Markenauftritt</strong> mit Klarheit und Charakter.
+
+        </p>
+      </div>
+
+      <!-- Karte 2: Next-Level Design -->
+      <div
+        class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
+      >
+        <div
+          class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
+        >
+        </div>
+        <h4 class="text-3xl font-bold text-white mb-6">Corporate Design</h4>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          Farbwelt, Typografie und Designrichtlinien – alles greift ineinander. Ich gestalte ein <strong>konsistentes Erscheinungsbild</strong>, das sich über alle Medien hinweg durchzieht.
+
+        </p>
+      </div>
+
+      <!-- Karte 3: Mobilfreundlich -->
+      <div
+        class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
+      >
+        <div
+          class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
+        >
+        </div>
+        <h4 class="text-3xl font-bold text-white mb-6">Printdesign</h4>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          Von der Visitenkarte bis zur Broschüre: Ich gestalte hochwertige Druckprodukte, die Eindruck hinterlassen und <strong>dein Business professionell repräsentieren</strong>.
+
+        </p>
+      </div>
+
+      <!-- Karte 4: Top-Google-Sichtbarkeit -->
+      <div
+        class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
+      >
+        <div
+          class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
+        >
+        </div>
+        <h4 class="text-3xl font-bold text-white mb-6">
+          Logoerstellung
+        </h4>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          Ein starkes Logo ist das Herzstück jeder Marke. Ich entwickle <strong>einzigartige Markenlogos</strong>, die auf den Punkt bringen, wer du bist – einprägsam und modern.
+
+        </p>
+      </div>
+    </div>
+
+    <IpadComponent
+    imgSrc="/images/maxwapp-visitenkarte.webp"
+    imgAlt="studio-d ipad style-guide by maxWapp"
+  />
+
+    <h2
+      class="text-center text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 mt-36 mb-12"
+      style="line-height: 1.3;"
+    >
+    Dein Branding – professionell & persönlich.
+  </h2>
+
     <p class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-2">
-      Schon <strong>kleine Optimierungen</strong> können zu mehr Sichtbarkeit, Anfragen und <span class="underline-animation">Umsatz</span> führen. Ich analysiere deine Seite <strong>kostenfrei</strong> und setze gezielte Verbesserungen ab <span class="text-gradient font-semibold">nur 900 €</span> um.
+      Ich entwickle <strong>maßgeschneiderte Designs</strong>, die deine Marke unverwechselbar machen – digital & im Druck.
     </p>
+
     
+
+    <IpadComponent
+    imgSrc="/images/projects/studio-d-ipad-style-guide.webp"
+    imgAlt="studio-d ipad style-guide by maxWapp"
+  />
+
 
 
   <!-- Warum mit mir arbeiten Abschnitt -->
@@ -130,36 +189,29 @@ class="grid grid-cols-1 md:grid-cols-2 gap-12 px-6 md:px-0 max-w-6xl mx-auto"
     class="text-center text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 mt-36 mb-24 mx-2"
     style="line-height: 1.3;"
   >
-  Analyse, Strategie, Umsetzung.
+  Deine Marke. Dein Stil. Dein Auftritt.
   </h2>
 
   <div
-    class="w-11/12 md:w-10/12 lg:w-8/12 mx-auto flex flex-col md:flex-row items-center mb-24"
+    class="w-11/12 md:w-10/12 lg:w-8/12 mx-auto flex flex-col md:flex-row items-center mb-24 md:mb-36"
   >
     <!-- Handybildabschnitt für Desktop links -->
     <div
-      class="w-full md:w-5/12 flex justify-center md:justify-center mb-12 md:mb-0 rounded shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] phone-container-second"
+      class="w-full md:w-6/12 flex justify-center md:justify-center mb-12 md:mb-0 rounded shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] phone-container-second"
     >
       <img
-        src="/images/maxwapp-iphone-2.webp"
-        alt="Shopify Screenshot Kollektion"
-        class="w-80 md:w-auto md:max-h-[60vh] object-contain rounded-lg"
+        src="/images/projects/studio-d-visitenkarte.webp"
+        alt="Phone Screenshot"
+        class="w-80 md:w-auto md:max-h-[20vh] object-contain rounded-lg"
       />
     </div>
 
     <!-- Textabschnitt für Desktop rechts -->
     <div class="w-full md:w-5/12 text-center md:text-left">
-      <p class="text-xl md:text-2xl mt-4">
-        Viele Agenturen sehen nur das Design. Ich schaue auf das, was wirklich zählt: <span class="text-gradient">Zielgruppen, Verhalten, Daten</span> – und mache daraus eine Website, die wirkt.
-      </p>
-  
-      <p class="text-xl md:text-2xl mt-8">
-        Egal ob du eine alte Seite überarbeiten oder eine neue fit für Google & Co. machen willst – wir starten mit einer <span class="underline-animation">kostenlosen Potenzialanalyse</span>.
-      </p>
-  
-      <p class="text-xl md:text-2xl mt-8">
-        <span class="text-gradient font-semibold">Optimierung heißt: keine neuen Kosten, sondern mehr aus dem Bestehenden holen.</span>
-      </p>
+      
+<p class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-auto">
+  Ich entwickle ein <span class="text-gradient font-semibold">Branding, das dich widerspiegelt</span> – strategisch durchdacht, visuell stark und technisch perfekt umgesetzt. Alles aus einer Hand. Alles, was bleibt, ist Eindruck.
+</p>
 
       <!-- Buttons at the bottom-right -->
       <div
@@ -178,8 +230,8 @@ class="grid grid-cols-1 md:grid-cols-2 gap-12 px-6 md:px-0 max-w-6xl mx-auto"
           href="/kontakt"
           class="relative inline-block py-4 px-10 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-white text-[#090a1a] shadow-lg transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_rgba(147,112,219,0.8),_0_0_35px_rgba(3,169,244,0.6)] hover:border-[#6d87d1]"
         >
-        Gratis Analyse
-      </a>
+          Let's talk
+        </a>
       </div>
     </div>
 
