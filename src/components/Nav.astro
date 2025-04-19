@@ -63,11 +63,7 @@ import { Icon } from "astro-icon/components"
       class="hidden lg:flex space-x-8 text-lg md:text-xl font-medium text-gray-300"
     >
       <ul class="flex flex-col lg:flex-row gap-16">
-        <li>
-          <a href="/projekte" class="text-gray-300 hover:text-white transition"
-            >Projekte</a
-          >
-        </li>
+
         <li>
           <details class="group relative lg:flex">
             <summary
@@ -130,6 +126,11 @@ import { Icon } from "astro-icon/components"
               </ul>
             </summary>
           </details>
+          <li>
+            <a href="/projekte" class="text-gray-300 hover:text-white transition"
+              >Projekte</a
+            >
+          </li>
           <li>
             <a href="/preise" class="text-gray-300 hover:text-white transition"
               >Preise</a
@@ -194,7 +195,7 @@ import { Icon } from "astro-icon/components"
         </li>
       </ul>
 
-      <!-- Social Icons (right aligned for large screens) -->
+      <!-- Social Icons (right aligned for large screens) 
       <div class="hidden lg:flex items-center space-x-6">
         <a href="https://www.instagram.com/maxwapp.de" class="ml-5">
           <Icon
@@ -215,7 +216,8 @@ import { Icon } from "astro-icon/components"
           />
         </a>
       </div>
-    </nav>
+      -->
+    </nav> 
 
     <!-- Mobile Menu Section -->
     <div
@@ -271,13 +273,7 @@ import { Icon } from "astro-icon/components"
         <!-- Mobile Menu Items -->
         <nav>
           <ul class="text-lg font-light w-full">
-            <li class="w-full border-t border-b border-gray-600">
-              <a
-                href="/projekte"
-                class="block py-6 px-6 hover:text-gray-400 transition"
-                >Projekte</a
-              >
-            </li>
+
             <li class="w-full border-t border-b border-gray-600">
               <details class="group relative">
                 <summary
@@ -343,6 +339,13 @@ import { Icon } from "astro-icon/components"
                   </li>
                 </ul>
               </details>
+              <li class="w-full border-t border-b border-gray-600">
+                <a
+                  href="/projekte"
+                  class="block py-6 px-6 hover:text-gray-400 transition"
+                  >Projekte</a
+                >
+              </li>
 
               <li class="w-full border-b border-gray-600">
                 <a
@@ -358,7 +361,7 @@ import { Icon } from "astro-icon/components"
                   >Über mich</a
                 >
               </li>
-
+<!--
               <li class="w-full border-b border-gray-600">
                 <a
                   href="/kontakt"
@@ -366,7 +369,7 @@ import { Icon } from "astro-icon/components"
                   >Kontakt</a
                 >
               </li>
-
+ -->
               <!-- Commenting out the Language Switcher -->
               <!--
           <details class="group relative">
@@ -408,7 +411,7 @@ import { Icon } from "astro-icon/components"
             </li>
           </ul>
 
-          <!-- Social Icons and kontakt Me Button -->
+          <!-- Social Icons and kontakt Me Button 
           <div class="mt-6 px-6">
             <div class="flex space-x-6 mb-6">
               <a href="https://www.instagram.com/maxwapp.de" class="text-white">
@@ -424,7 +427,7 @@ import { Icon } from "astro-icon/components"
                 <Icon name="fa:github" class="w-6 h-6" />
               </a>
             </div>
-
+-->
             <div class="flex justify-center">
               <!-- Kontaktinformationen im Kartenstil -->
               <section class="w-10/12 md:w-8/12 lg:w-6/12">
@@ -432,21 +435,15 @@ import { Icon } from "astro-icon/components"
                 <div
                   class="flex flex-col md:flex-row gap-6 mt-8 justify-center md:justify-center items-center md:items-start w-full"
                 >
-                  <!-- Secondary Button - Telephone -->
-                  <a
-                    href="tel:+491777594839"
-                    class="bg-[#1f1235] text-white font-bold py-4 px-10 rounded-full border-2 border-[#6d87d1] shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-500 hover:shadow-[0_0_10px_rgba(147,112,219,0.5),_0_0_25px_rgba(3,169,244,0.4)] text-center w-full max-w-xs md:max-w-none md:w-auto"
-                  >
-                    Sofort anrufen
-                  </a>
+
 
                   <!-- Primary Button - WhatsApp -->
                   <a
-                    href="https://wa.me/491777594839"
-                    target="_blank"
+                    href="/kontakt"
+                
                     class="relative inline-block py-4 px-10 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-white text-[#090a1a] shadow-lg transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_rgba(147,112,219,0.8),_0_0_35px_rgba(3,169,244,0.6)] hover:border-[#6d87d1]"
                   >
-                    Nachricht per WhatsApp
+                  KONTAKT
                   </a>
                 </div>
               </section>
