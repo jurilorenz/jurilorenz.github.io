@@ -1,0 +1,75 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import { blogPosts } from "../../data/blogPosts";
+import FinalSection from "../../components/FinalSection.astro";
+import GradientDivider from "../../components/GradientDivider.astro";
+import HeroComponent from "../../components/HeroComponent.astro";
+
+const { slug } = Astro.params;
+const post = blogPosts.find(p => p.slug === slug);
+
+if (!post) {
+  throw new Error(`Post not found for slug: ${slug}`);
+}
+
+export async function getStaticPaths() {
+  const { blogPosts } = await import("../../data/blogPosts");
+
+  return blogPosts.map((post) => ({
+    params: { slug: post.slug },
+    props: post
+  }));
+}
+---
+
+<MainLayout title={post.title} seoTitle={post.seoTitle} seoDesc={post.seoDesc}>
+  <article class="min-h-screen text-white pb-20 px-4 max-w-4xl mx-auto">
+    <h1 class="text-center text-4xl md:text-6xl font-bold drop-shadow-lg mt-12 md:mt-36 mb-8 mx-2">
+      {post.title}
+    </h1>
+
+    <p class="text-center text-lg px-4 md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
+      {post.intro}
+    </p>
+
+    <img src={post.image} alt={post.title} class="rounded shadow-md drop-shadow-[0px_-35px_35px_rgba(75,0,130,0.6)] object-contain w-full h-auto max-h-[90vh] mb-12" />
+
+    {post.body && (
+      <div class="text-lg md:text-xl text-gray-200 leading-relaxed whitespace-pre-line mb-6">
+        {post.body}
+      </div>
+    )}
+
+    {post.body2 && (
+      <div class="text-lg md:text-xl text-gray-300 leading-relaxed mb-6">
+        {post.body2}
+      </div>
+    )}
+
+    {post.quote && (
+      <blockquote class="border-l-4 border-purple-400 pl-4 italic text-gray-400 mb-10">
+        {post.quote}
+      </blockquote>
+    )}
+
+    {post.ctaText && (
+      <div class="bg-[#1b1b33] p-6 rounded-xl border border-gray-700 shadow mt-12">
+        <p class="text-white text-lg">{post.ctaText}</p>
+        <a href="/kontakt" class="inline-block mt-4 text-[#6d87d1] font-semibold hover:underline">Jetzt Kontakt aufnehmen</a>
+      </div>
+    )}
+
+    <p class="text-gray-500 text-sm mt-12">Kategorie: {post.category}</p>
+
+    <GradientDivider />
+
+    <h2 class="text-center text-2xl md:text-3xl font-semibold mt-12 mb-8 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">
+      Bereit, deine Website aufs nächste Level zu bringen?
+    </h2>
+
+  
+</MainLayout>
+
+<div class="md:-mt-48 -mt-24">
+  <HeroComponent />
+</div>

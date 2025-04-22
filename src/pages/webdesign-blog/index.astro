@@ -1,0 +1,28 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import { blogPosts } from "../../data/blogPosts";
+import BlogCard from "../../components/BlogCard.astro";
+---
+
+<MainLayout 
+  title="Webdesign Blog – Tipps, SEO & Performance | maxWapp"
+  seoTitle="Webdesign Blog – Insights für bessere Websites | maxWapp"
+  seoDesc="Lerne, wie du deine Website schneller, sichtbarer und erfolgreicher machst. Webdesign, SEO, Tools & Tipps von maxWapp."
+>
+  <div class="min-h-screen text-white py-12 md:pb-24 md:pt-36">
+    <h1 class="text-center text-4xl md:text-6xl font-bold drop-shadow-lg mb-16">
+      Webdesign-Blog
+    </h1>
+
+    <section class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 w-10/12 mx-auto">
+      {blogPosts.map(post => (
+        <BlogCard 
+          title={post.title}
+          intro={post.intro}
+          slug={post.slug}
+          image={post.image}
+        />
+      ))}
+    </section>
+  </div>
+</MainLayout>

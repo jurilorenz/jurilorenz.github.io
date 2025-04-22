@@ -1,0 +1,14 @@
+---
+const { title, intro, slug, image } = Astro.props;
+---
+
+<a href={`/webdesign-blog/${slug}`} class="relative bg-[#1b1b33] p-6 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] hover:shadow-2xl transition-transform duration-500 hover:scale-105 flex flex-col">
+  <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-1.5 rounded-t-xl"></div>
+
+  <img class="rounded-lg shadow-md drop-shadow-[0px_-35px_35px_rgba(75,0,130,0.6)] object-cover w-full h-48" src={image} alt={title} />
+
+  <h3 class="font-bold mt-6 text-lg text-white">{title}</h3>
+  <p class="text-gray-300 text-sm my-4">{intro}</p>
+
+  <span class="text-[#6d87d1] font-semibold mt-auto">Weiterlesen</span>
+</a>
