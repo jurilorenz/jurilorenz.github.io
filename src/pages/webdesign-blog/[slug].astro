@@ -40,6 +40,14 @@ export async function getStaticPaths() {
       </div>
     )}
 
+{post.image2 && (
+  <img 
+    src={post.image2} 
+    alt={post.title + ' Zusatzbild'} 
+    class="rounded shadow-md drop-shadow-[0px_-35px_35px_rgba(75,0,130,0.6)] object-contain w-full h-auto max-h-[90vh] mb-12" 
+  />
+)}
+
     {post.body2 && (
       <div class="text-lg md:text-xl text-gray-300 leading-relaxed mb-6">
         {post.body2}
@@ -52,12 +60,14 @@ export async function getStaticPaths() {
       </blockquote>
     )}
 
-    {post.ctaText && (
-      <div class="bg-[#1b1b33] p-6 rounded-xl border border-gray-700 shadow mt-12">
-        <p class="text-white text-lg">{post.ctaText}</p>
-        <a href="/kontakt" class="inline-block mt-4 text-[#6d87d1] font-semibold hover:underline">Jetzt Kontakt aufnehmen</a>
-      </div>
-    )}
+{post.ctaText && post.ctaLink && (
+  <div class="bg-[#1b1b33] p-6 rounded-xl border border-gray-700 shadow mt-12">
+    <p class="text-white text-lg">{post.ctaText}</p>
+    <a href={post.ctaLink} class="inline-block mt-4 text-[#6d87d1] font-semibold hover:underline" target="_blank" rel="noopener noreferrer">
+      Jetzt Kontakt aufnehmen
+    </a>
+  </div>
+)}
 
     <p class="text-gray-500 text-sm mt-12">Kategorie: {post.category}</p>
 
