@@ -42,12 +42,12 @@ export const blogPosts: BlogPost[] = [
   Nicht jeder verträgt viele visuelle Reize. Sorge für klare Inhalte, auch wenn Animationen deaktiviert sind.`,
     quote: "„Weniger ist mehr“ – das gilt besonders bei Webanimationen.",
   },
-  {
+{
     slug: "app-bis-web-partner-sachsen",
     title: "App bis Web. Ihr Partner für schnelle, individuelle Websites",
     category: "Partner, Performance",
     intro: "Hochperformante Weblösungen mit Fokus auf Interaktivität, Barrierefreiheit und Geschwindigkeit – direkt aus Sachsen.",
-    body: "App bis Web ist der zuverlässige Technikpartner für Unternehmen und Agenturen, die digitale Exzellenz suchen. Die Leistungen umfassen die Entwicklung von WordPress-Themes und Plugins, maßgeschneiderte Webanwendungen sowie performante Online-Shops mit Fokus auf Interaktivität, Barrierefreiheit und Ladezeit.\n\nMit einem klaren Anspruch an Qualität, Performance und Nutzerfreundlichkeit entstehen hier Websites, die nicht nur überzeugen, sondern auch konvertieren.",
+    body: "App bis Web ist der zuverlässige Partner für Unternehmen und Agenturen, die digitale Exzellenz suchen. Die Leistungen umfassen die Entwicklung von WordPress-Themes und Plugins, maßgeschneiderte Webanwendungen sowie performante Online-Shops mit Fokus auf Interaktivität, Barrierefreiheit und Ladezeit.\n\nMit einem klaren Anspruch an Qualität, Performance und Nutzerfreundlichkeit entstehen hier Websites, die nicht nur überzeugen, sondern auch konvertieren.",
   body2: "Besonderer Fokus liegt auf einem schnellen PageSpeed und der Umsetzung nach barrierefreien Standards – für alle Geräte und alle Nutzergruppen.",
   ctaText: "💡 Du brauchst zuverlässige technische Umsetzung auf Top-Niveau? Jetzt mehr über App bis Web erfahren.",
   ctaLink: "https://app-bis-web.de",
