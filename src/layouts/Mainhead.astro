@@ -131,9 +131,12 @@ const { title, seoTitle, seoDesc } = Astro.props
   <meta name="twitter:description" content={seoDesc} />
   <meta name="twitter:image" content="https://maxwapp.de/images/badge.webp" />
 
-  <!-- Fonts (Poppins) -->
+  <!-- Fonts -->
+  <link rel="preload" href="/css/fonts.css" as="style" />
   <link rel="stylesheet" href="/css/fonts.css" />
 
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="/css/all.min.css" />
+  <!-- FontAwesome (defer to avoid render-blocking) -->
+  <link rel="preload" href="/css/all.min.css" as="style" />
+  <link rel="stylesheet" href="/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="/css/all.min.css" /></noscript>
 </head>
