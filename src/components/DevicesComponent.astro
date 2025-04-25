@@ -2,21 +2,29 @@
 // DevicesComponent.astro
 ---
 
-<div class="relative w-full h-full flex items-center shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] justify-center py-48 md:py-96 overflow-hidden">
-  <!-- Animated Phones -->
-  <img src="/images/projects/anna-menci.webp" alt="Online-Shop für Anna Menci – Fashion-Webseite auf dem iPhone" class="phone phone-1" />
-  <img src="/images/projects/streetly.webp" alt="Mobile Navigationslösung Streetly – Website auf dem iPhone" class="phone phone-2" />
-  <img src="/images/projects/studio-d.webp" alt="Friseursalon Studio D – Premium Webdesign auf dem iPhone" class="phone phone-3" />
-  <img src="/images/projects/immobilien-muenchen.webp" alt="Immobilien-Website aus München – mobil optimiert auf dem iPhone" class="phone phone-4" />
-  <img src="/images/projects/akimova-art.webp" alt="Digitale Galerie für Margarita Akimova – Kunst-Website auf dem iPhone" class="phone phone-5" />
-  <img src="/images/projects/kleines-stadthaus.webp" alt="Shopify-Online-Shop für Kleines Stadthaus – Fashion-Webseite auf dem iPhone" class="phone phone-6" />
-</div>
+<h2
+class="text-center text-4xl md:text-6xl font-bold text-gray-100 drop-shadow-lg mt-12 md:mb-12 md:mt-36"
+>
+Web-Projekte
+</h2>
+
+<a href="/projekte">
+  <div class="relative w-full h-full flex items-center shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] justify-center py-48 md:py-96 overflow-hidden">
+    <!-- Animated Phones -->
+    <img src="/images/projects/anna-menci.webp" alt="Online-Shop für Anna Menci – Fashion-Webseite auf dem iPhone" class="phone phone-1 hover:scale-105 transition-transform duration-300 cursor-pointer" />
+    <img src="/images/projects/streetly.webp" alt="Mobile Navigationslösung Streetly – Website auf dem iPhone" class="phone phone-2 hover:scale-105 transition-transform duration-300 cursor-pointer" />
+    <img src="/images/projects/studio-d.webp" alt="Friseursalon Studio D – Premium Webdesign auf dem iPhone" class="phone phone-3 hover:scale-105 transition-transform duration-300 cursor-pointer" />
+    <img src="/images/projects/immobilien-muenchen.webp" alt="Immobilien-Website aus München – mobil optimiert auf dem iPhone" class="phone phone-4 hover:scale-105 transition-transform duration-300 cursor-pointer" />
+    <img src="/images/projects/akimova-art.webp" alt="Digitale Galerie für Margarita Akimova – Kunst-Website auf dem iPhone" class="phone phone-5 hover:scale-105 transition-transform duration-300 cursor-pointer" />
+    <img src="/images/projects/kleines-stadthaus.webp" alt="Shopify-Online-Shop für Kleines Stadthaus – Fashion-Webseite auf dem iPhone" class="phone phone-6 hover:scale-105 transition-transform duration-300 cursor-pointer" />
+  </div>
+</a>
 
 <style>
 /* Parent Container */
 .relative {
   position: relative;
-  max-height: 80vh; /* Keeps phones within the container */
+  max-height: 80vh;
   overflow: hidden;
 }
 
@@ -27,52 +35,21 @@
   width: auto;
   object-fit: contain;
   animation: flyInOut 8s ease-in-out infinite;
-  opacity: 0; /* Start invisible */
+  opacity: 0;
 }
 
-/* Custom Animations for Each Phone */
-.phone-1 {
-  animation-delay: 0s;
-}
-.phone-2 {
-  animation-delay: 1.6s; /* Staggered start */
-}
-.phone-3 {
-  animation-delay: 3.2s;
-}
-.phone-4 {
-  animation-delay: 4.8s;
-}
-.phone-5 {
-  animation-delay: 6.4s;
-}
-.phone-6 {
-  animation-delay: 8.0s;
-}
+.phone-1 { animation-delay: 0s; }
+.phone-2 { animation-delay: 1.6s; }
+.phone-3 { animation-delay: 3.2s; }
+.phone-4 { animation-delay: 4.8s; }
+.phone-5 { animation-delay: 6.4s; }
+.phone-6 { animation-delay: 8.0s; }
 
-
-/* Keyframes for Animation */
 @keyframes flyInOut {
-  0% {
-    transform: translateX(100%) scale(0.8); /* Start off-screen */
-    opacity: 0;
-  }
- 10% {
-    transform: translateX(50%) scale(1); /* Slight zoom for focus */
-    opacity: 1;
-  }
-  50% {
-    transform: translateX(0) scale(1); /* Full view */
-    opacity: 1;
-  }
-  90% {
-    transform: translateX(-50%) scale(0.9); /* Start moving out */
-    opacity: 0.5;
-  }
-  100% {
-    transform: translateX(-100%) scale(0.8); /* Fully off-screen */
-    opacity: 0;
-  }
+  0% { transform: translateX(100%) scale(0.8); opacity: 0; }
+  10% { transform: translateX(50%) scale(1); opacity: 1; }
+  50% { transform: translateX(0) scale(1); opacity: 1; }
+  90% { transform: translateX(-50%) scale(0.9); opacity: 0.5; }
+  100% { transform: translateX(-100%) scale(0.8); opacity: 0; }
 }
 </style>
-
