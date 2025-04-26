@@ -1,9 +1,7 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
 import { blogPosts } from "../../data/blogPosts";
-import FinalSection from "../../components/FinalSection.astro";
 import GradientDivider from "../../components/GradientDivider.astro";
-import HeroComponent from "../../components/HeroComponent.astro";
 
 const { slug } = Astro.params;
 const post = blogPosts.find(p => p.slug === slug);

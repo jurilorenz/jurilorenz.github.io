@@ -1,0 +1,31 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import { faqPosts } from "../../data/faqPosts";
+---
+
+<MainLayout 
+  title="Website-FAQ – Häufige Fragen & Antworten | maxWapp"
+  seoTitle="FAQ rund um Websites, SEO & Webdesign | maxWapp"
+  seoDesc="Antworten auf häufige Fragen zu Websites, SEO, Webdesign und Optimierung. Alles, was du wissen musst, kompakt erklärt von maxWapp."
+>
+  <div class="min-h-screen text-white py-12 md:pb-24 md:pt-36">
+    <h1 class="text-center text-4xl md:text-6xl font-bold mb-16 transition-all duration-300 drop-shadow-lg">
+      Website FAQ
+    </h1>
+
+    <section class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 w-10/12 mx-auto">
+      {faqPosts.map(post => (
+        <a 
+          href={`/faq/${post.slug}`} 
+          class="group relative bg-[#1b1b33] p-6 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] transition-transform duration-500 hover:scale-105 hover:shadow-none flex flex-col overflow-hidden"
+        >
+
+          <!-- Question title (white, no color change) -->
+          <h3 class="text-2xl font-bold text-white transition-all duration-300">
+            {post.question}
+          </h3>
+        </a>
+      ))}
+    </section>
+  </div>
+</MainLayout>
