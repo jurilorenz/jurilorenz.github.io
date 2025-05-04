@@ -72,6 +72,21 @@ export const blogPosts: BlogPost[] = [
     extraImageAlt: "Lighthouse Score 100 für maxWapp",
     seoTitle: "Website Performance steigern – Bilder richtig optimieren | maxWapp",
     seoDesc: "Bessere Ladezeiten dank WebP, Komprimierung und Lighthouse. So machst du deine Website blitzschnell. Tipps für Unternehmer & Webdesigner."
+  },
+  {
+    slug: "unilink-partner-dresden",
+    title: "Unilink Dresden – Business-Consulting & IT-Partner",
+    category: "Partner, Business-Consulting",
+    intro: "Unilink ist unser zuverlässiger Partner aus Dresden für Business-Consulting, Low-Code-Entwicklung und Prozessoptimierung.",
+    body: "Unilink begleitet Unternehmen seit über 25 Jahren und bietet maßgeschneiderte Lösungen in den Bereichen Business-Consulting, Low-Code-Entwicklung mit Microsoft Power Platform und agile Anforderungsanalysen. Der Fokus liegt auf Effizienz, Skalierbarkeit und Innovation – ideal für Unternehmen, die ihre Geschäftsprozesse modernisieren möchten.",
+    body2: "Wir freuen uns über die Partnerschaft mit Unilink – einem erfahrenen Unternehmen, das für Qualität, Verlässlichkeit und zukunftsorientierte Lösungen steht.",
+    ctaText: "Mehr über Unilink erfahren",
+    ctaLink: "https://unilink-dd.de",
+    image: "/images/blog/unilink.webp",
+    extraImage: "/images/blog/unilink.webp",
+    extraImageAlt: "Unilink Dresden – Business-Consulting Partner",
+    seoTitle: "Unilink Dresden – Business-Consulting & Low-Code Partner | maxWapp",
+    seoDesc: "Unilink Dresden: Consulting, Low-Code & Power Platform. Partner für Innovation und Effizienz."
   }
   // weitere Einträge...
 ];
