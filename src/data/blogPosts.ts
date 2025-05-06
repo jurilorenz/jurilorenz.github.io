@@ -26,19 +26,19 @@ export const blogPosts: BlogPost[] = [
     seoTitle: "Animationen auf Websites – Tipps für Performance & Usability | maxWapp",
     seoDesc: "Mehr Wirkung, weniger Ablenkung: Lerne, wie du Animationen sinnvoll in dein Webdesign integrierst. Mit Praxis-Tipps für UX & PageSpeed.",
     image: "/images/blog/animationen-smart.webp", 
-    body: `✅ 1. Benutzerfreundlichkeit im Fokus:
+    body: `🔸 1. Benutzerfreundlichkeit im Fokus:
   Animationen sollten den Nutzer unterstützen, nicht ablenken. Sanfte Übergänge und gezielte Hover-Effekte verbessern die Usability.
   
-  ✅ 2. Ladezeit beachten:
+  🔸 2. Ladezeit beachten:
   Jede Animation bedeutet mehr Code – was die Performance verschlechtert. Nutze Tools wie Lighthouse, um Schwachstellen zu erkennen.
   
-  ✅ 3. Zielgruppe verstehen:
+  🔸 3. Zielgruppe verstehen:
   Kreative Branchen lieben Animationen. Im Finanz- oder Medizinbereich wirken sie aber oft unpassend.
   
-  ✅ 4. Dezent ist modern:
+  🔸 4. Dezent ist modern:
   Mikro-Animationen (z.B. Button-Zoom bei Hover) wirken professionell und aufgeräumt.
   
-  ✅ 5. Barrierefreiheit bedenken:
+  🔸 5. Barrierefreiheit bedenken:
   Nicht jeder verträgt viele visuelle Reize. Sorge für klare Inhalte, auch wenn Animationen deaktiviert sind.`,
     quote: "„Weniger ist mehr“ – das gilt besonders bei Webanimationen.",
   },
@@ -87,6 +87,57 @@ export const blogPosts: BlogPost[] = [
     extraImageAlt: "Unilink Dresden – Business-Consulting Partner",
     seoTitle: "Unilink Dresden – Business-Consulting & Low-Code Partner | maxWapp",
     seoDesc: "Unilink Dresden: Consulting, Low-Code & Power Platform. Partner für Innovation und Effizienz."
-  }
+  },
+  {
+    slug: "shopify-store-redesign-checklist",
+    title: "Shopify Redesign 2025: Deine ultimative Checkliste",
+    category: "E-Commerce, Shopify",
+    intro: "Der Onlinehandel boomt – und ein starkes Shopify-Design ist 2025 wichtiger denn je. Hier erfährst du, worauf du beim Redesign achten musst, um vorne mitzuspielen.",
+    seoTitle: "Shopify Redesign Checkliste 2025 | maxWapp",
+    seoDesc: "Die ultimative Shopify Redesign Checkliste für 2025. Mehr Conversion, bessere UX, schnellere Ladezeiten – jetzt starten!",
+    image: "/images/blog/shopify-redesign.webp",
+    body: `🔸 1. Setz dir klare Ziele  
+    Willst du mehr Verkäufe, bessere Markenpräsenz oder schnellere Ladezeiten? Sei konkret, damit dein Redesign messbare Erfolge bringt.
+    
+    🔸 2. Mach einen Website-Check  
+    Was läuft gut, wo hakt's? Tools wie Google Analytics, Hotjar oder Shopify-Analytics helfen dir, Schwachstellen zu finden.
+    
+    🔸 3. Denk Mobile-First  
+    Über 70 % deiner Besucher kommen übers Smartphone. Dein Shop muss mobil einfach funktionieren – schnell, intuitiv und mit smarten Zahlungsoptionen.
+    
+    🔸 4. Mach UX & Design topfit  
+    Nutze ein responsives Theme, starke Bilder, intuitive Filter und klare CTAs. Dein Shop soll nicht nur gut aussehen, sondern auch verkaufen.
+    
+    🔸 5. Bring den Checkout in Bestform  
+    Weniger Schritte, weniger Frust. Express-Optionen wie Apple Pay oder Google Pay pushen die Conversion.
+    
+    🔸 6. Optimiere SEO & Speed  
+    Komprimiere Bilder, optimiere Meta-Tags und nutze strukturierte Daten – Google liebt schnelle Shops.
+    
+    🔸 7. Integriere AI & neue Trends  
+    Smarte Produktempfehlungen, Chatbots oder AR/VR sind 2025 echte Gamechanger.
+    
+    📌 Ein Praxisbeispiel:  
+    Beim Redesign von *Kleines Stadthaus* haben wir UX, Speed und Branding aufs nächste Level gebracht – mit Instagram-Integration, Conversion-optimierten Produktseiten und mobilem Feinschliff.`,
+    ctaText: "Mehr über das Projekt Kleines Stadthaus erfahren",
+    ctaLink: "/projects/kleines-stadthaus/",
+    quote: "„Ein gutes Redesign ist mehr als nur Optik – es ist dein Verkaufsmotor.“",
+  },
+  {
+      slug: "smartiee-partner-muenchen",
+      title: "Smartiee München – Legal Marketing & digitale Stärke für Kanzleien",
+      category: "Partner, Legal Marketing",
+      intro: "Smartiee ist eine führende Agentur aus München, spezialisiert auf Kanzlei-Marketing, Legal Branding und digitale Lösungen für die Rechtsbranche.",
+      seoTitle: "Smartiee München – Legal Marketing & Kanzlei-Digitalisierung | maxWapp",
+      seoDesc: "Smartiee München: Agentur für Kanzlei-Marketing, Legal Branding & Digitalisierung. Starke Partner für Juristen.",
+      image: "/images/blog/smartiee.webp",  // bitte dein Bildpfad ergänzen
+      body: "Smartiee begleitet Kanzleien und Rechtsdienstleister seit 2017 bei ihrem digitalen Auftritt. Die Agentur entwickelt maßgeschneiderte Strategien für Kanzlei-Websites, juristische PR, Content-Marketing sowie Rankings in Legal Directories. Ihr Fokus liegt darauf, Kanzleien nicht nur sichtbar, sondern auch als Expertenmarke zu positionieren.\n\nSmartiee bietet alles von der Markenidentität über Website-Design bis zu SEO-Optimierung, spezialisiert auf die besonderen Anforderungen der Rechtsbranche. Sie unterstützen sowohl kleine Kanzleien als auch große Sozietäten bei der Mandantengewinnung und Markenbildung.",
+      body2: "Wir freuen uns über die Partnerschaft mit Smartiee – einem innovativen Legal-Marketing-Partner, der Kanzleien hilft, sich klar am Markt zu positionieren, Rankings zu stärken und neue Mandate zu gewinnen.",
+      ctaText: "Mehr über Smartiee erfahren",
+      ctaLink: "https://smartiee.agency",
+      extraImage: "/images/blog/smartiee.webp",  // bitte dein Bildpfad ergänzen
+      extraImageAlt: "Smartiee München – Kanzlei-Marketing & Legal-Branding",
+      quote: "„Smartiee kennt die Spielregeln der Rechtsbranche – und macht Kanzleien digital stark.“"
+    }
   // weitere Einträge...
 ];

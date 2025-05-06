@@ -61,8 +61,9 @@ export async function getStaticPaths() {
 {post.ctaText && post.ctaLink && (
   <div class="bg-[#1b1b33] p-6 rounded-xl border border-gray-700 shadow mt-12">
     <p class="text-white text-lg">{post.ctaText}</p>
-    <a href={post.ctaLink} class="inline-block mt-4 text-[#6d87d1] font-semibold hover:underline" target="_blank" rel="noopener noreferrer">
-      Jetzt Kontakt aufnehmen
+    <a href={post.ctaLink} class="inline-block mt-4 text-[#6d87d1] font-semibold hover:underline"       target={post.ctaLink.startsWith('http') ? '_blank' : '_self'}
+ rel="noopener noreferrer">
+      Zum Page
     </a>
   </div>
 )}

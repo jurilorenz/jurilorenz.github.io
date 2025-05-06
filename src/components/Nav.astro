@@ -139,7 +139,7 @@ import { Icon } from "astro-icon/components"
 
           <li>
             <a
-              href="/ueber-mich"
+              href="/#ueber-mich"
               class="text-gray-300 hover:text-white transition">Über mich</a
             >
           </li>
@@ -356,8 +356,8 @@ import { Icon } from "astro-icon/components"
               </li>
               <li class="w-full border-b border-gray-600">
                 <a
-                  href="/ueber-mich"
-                  class="block py-6 px-6 hover:text-gray-400 transition"
+                href="/#ueber-mich"
+                class="block py-6 px-6 hover:text-gray-400 transition"
                   >Über mich</a
                 >
               </li>
@@ -481,6 +481,20 @@ import { Icon } from "astro-icon/components"
         }
         menuOpen = false
       })
+
+      document.querySelectorAll('#mobile-menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    if (menuOpen) {
+      mobileMenu.classList.add("opacity-0");
+      mobileMenu.classList.remove("opacity-100");
+      setTimeout(() => {
+        mobileMenu.classList.add("invisible");
+        document.body.style.overflow = "";
+      }, 300);
+      menuOpen = false;
+    }
+  });
+});
     </script>
 
     <style>
