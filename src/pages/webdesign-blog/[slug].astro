@@ -26,7 +26,7 @@ export async function getStaticPaths() {
       {post.title}
     </h1>
 
-    <p class="text-center text-lg px-4 md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
+    <p class="text-center text-lg px-4 md:text-2xl text-gray-300 mb-16 max-w-4xl mx-auto">
       {post.intro}
     </p>
 
@@ -38,16 +38,28 @@ export async function getStaticPaths() {
       </div>
     )}
 
+
+{(post.body2Title || post.body2Intro) && (
+  <div class="mb-10 mt-20">
+    {post.body2Title && (
+      <h2 class="text-3xl font-bold text-white mb-4">{post.body2Title}</h2>
+    )}
+    {post.body2Intro && (
+      <p class="text-lg md:text-xl text-gray-300 mb-8">{post.body2Intro}</p>
+    )}
+  </div>
+)}
+
 {post.image2 && (
   <img 
     src={post.image2} 
-    alt={post.title + ' Zusatzbild'} 
-    class="rounded shadow-md drop-shadow-[0px_-35px_35px_rgba(75,0,130,0.6)] object-contain w-full h-auto max-h-[90vh] mb-12" 
+    alt={post.image2Alt} 
+    class="rounded shadow-md drop-shadow-[0px_-35px_35px_rgba(75,0,130,0.6)] object-contain w-full h-auto max-h-[90vh] mb-12 mt-16" 
   />
 )}
 
     {post.body2 && (
-      <div class="text-lg md:text-xl text-gray-300 leading-relaxed mb-6">
+      <div class="text-lg md:text-xl text-gray-200 leading-relaxed whitespace-pre-line mb-6">
         {post.body2}
       </div>
     )}
