@@ -18,7 +18,7 @@ import KleinesStadthaus from "../../components/projects/KleinesStadthaus.astro";
 export async function getStaticPaths() {
   return [
     { 
-      params: { projects: "maa-art" }, 
+      params: { slug: "maa-art" }, 
       props: {
         name: "MAA Art",
         introText: "Eine wunderschöne Website für eine renommierte Künstlerin – mit Galerie, Ausstellungen, Sprachwechsler & SEO.",
@@ -27,7 +27,7 @@ export async function getStaticPaths() {
       },
     },
     { 
-      params: { projects: "room-planetarium" }, 
+      params: { slug: "room-planetarium" }, 
       props: {
         name: "ROOM Planetarium",
         introText: "Interaktive Reise durch das Universum mit AR, intuitivem UI und galaktischem Sounddesign.",
@@ -36,7 +36,7 @@ export async function getStaticPaths() {
       },
     },
     { 
-      params: { projects: "battle-calculator" }, 
+      params: { slug: "battle-calculator" }, 
       props: {
         name: "Battle Calculator",
         introText: "Ein actiongeladener Rechner mit Sound- und visuellen Effekten für Spaß beim Rechnen.",
@@ -45,7 +45,7 @@ export async function getStaticPaths() {
       },
     },
     { 
-      params: { projects: "anna-menci" }, 
+      params: { slug: "anna-menci" }, 
       props: {
         name: "Anna Menci",
         introText: "Online-Shop für exklusive Loungewear mit elegantem Design & optimierter Usability.",
@@ -54,7 +54,7 @@ export async function getStaticPaths() {
       },
     },
     { 
-      params: { projects: "brunner" }, 
+      params: { slug: "brunner" }, 
       props: {
         name: "Brunner",
         introText: "Minimalistische Business-Website mit Top-Performance, SEO und Nutzerfreundlichkeit.",
@@ -63,7 +63,7 @@ export async function getStaticPaths() {
       },
     },
     { 
-      params: { projects: "akimova-art" }, 
+      params: { slug: "akimova-art" }, 
       props: {
         name: "Akimova-Art",
         introText: "Digitale Galerie für moderne Kunst mit mobile-first Ansatz & Corporate Design.",
@@ -72,7 +72,7 @@ export async function getStaticPaths() {
       },
     },
     { 
-      params: { projects: "efimow-automobile" }, 
+      params: { slug: "efimow-automobile" }, 
       props: {
         name: "Efimow Automobile",
         introText: "Website für Autohandel mit Fokus auf Conversion, Branding & Anfrageformular.",
@@ -81,7 +81,7 @@ export async function getStaticPaths() {
       },
     },
     { 
-      params: { projects: "bavarian-ice-roll" }, 
+      params: { slug: "bavarian-ice-roll" }, 
       props: {
         name: "Bavarian Ice Roll",
         introText: "Farbenfrohe Event-Website mit Anfrageformular & eindrucksvollem Design.",
@@ -90,7 +90,7 @@ export async function getStaticPaths() {
       },
     },
     { 
-      params: { projects: "studio-d" }, 
+      params: { slug: "studio-d" }, 
       props: {
         name: "Studio D",
         introText: "Premium-Website für Friseursalon mit Online-Buchung, Branding & Logo.",
@@ -99,7 +99,7 @@ export async function getStaticPaths() {
       },
     },
     { 
-      params: { projects: "felix-rheindorf" }, 
+      params: { slug: "felix-rheindorf" }, 
       props: {
         name: "Felix Rheindorf",
         introText: "Webdesign, Fotos & Video für Metzgermeister Felix – Corporate Identity auf allen Ebenen.",
@@ -108,7 +108,7 @@ export async function getStaticPaths() {
       },
     },
     { 
-      params: { projects: "streetly" }, 
+      params: { slug: "streetly" }, 
       props: {
         name: "Streetly",
         introText: "Branding & Webdesign für eine smarte Navigationslösung.",
@@ -117,7 +117,7 @@ export async function getStaticPaths() {
       },
     },
     { 
-      params: { projects: "vadim-aevskiy" }, 
+      params: { slug: "vadim-aevskiy" }, 
       props: {
         name: "Personal Website",
         introText: "Landingpage für Experten – Klarheit, Fachkompetenz & digitale Sichtbarkeit.",
@@ -126,7 +126,7 @@ export async function getStaticPaths() {
       },
     },
     { 
-      params: { projects: "immobilien-muenchen" }, 
+      params: { slug: "immobilien-muenchen" }, 
       props: {
         name: "Immobilien München",
         introText: "Verkaufsstarke Website für die Immobilienbranche – mit klarem Design und gezielter Nutzerführung.",
@@ -135,7 +135,7 @@ export async function getStaticPaths() {
       },
     },
     { 
-      params: { projects: "kleines-stadthaus" }, 
+      params: { slug: "kleines-stadthaus" }, 
       props: {
         name: "Kleines Stadthaus",
         introText: "Shopify-Redesign für eine Boutique mit optimierter UX, Instagram-Integration & Markenauftritt.",
@@ -146,7 +146,7 @@ export async function getStaticPaths() {
   ];
 }
 
-const { projects } = Astro.params;
+const { slug } = Astro.params;
 const { name, introText, seoTitle, seoDesc } = Astro.props;
 
 ---
@@ -163,27 +163,27 @@ const { name, introText, seoTitle, seoDesc } = Astro.props;
 
     <section class="mx-auto w-11/12 md:w-8/12 lg:w-6/12 flex flex-col items-center">
       <img 
-        src={`/images/projects/${projects}.webp`}  
+        src={`/images/projects/${slug}.webp`}  
         class="rounded shadow-md drop-shadow-[0px_-35px_35px_rgba(75,0,130,0.6)] object-contain w-full h-auto max-h-[90vh]"
         alt={`Project ${name}`}
       />
     </section>
 
     <section class="my-12 w-10/12 md:w-8/12 lg:w-7/12 mx-auto">
-      {projects === 'maa-art' && <MaaArt />}
-      {projects === 'room-planetarium' && <RoomContent />}
-      {projects === 'battle-calculator' && <BattleContent />}
-      {projects === 'anna-menci' && <AnnaMenci />}
-      {projects === 'brunner' && <Brunner />}
-      {projects === 'akimova-art' && <AkimovaArt />}
-      {projects === 'efimow-automobile' && <Efimow />}
-      {projects === 'bavarian-ice-roll' && <BavarianIceRoll />}
-      {projects === 'studio-d' && <StudioD />}
-      {projects === 'felix-rheindorf' && <Felix />}
-      {projects === 'streetly' && <Streetly />}
-      {projects === 'vadim-aevskiy' && <VadimAevskiy />}
-      {projects === 'immobilien-muenchen' && <ImmobilienMuenchen />}
-      {projects === 'kleines-stadthaus' && <KleinesStadthaus />}
+      {slug === 'maa-art' && <MaaArt />}
+      {slug === 'room-planetarium' && <RoomContent />}
+      {slug === 'battle-calculator' && <BattleContent />}
+      {slug === 'anna-menci' && <AnnaMenci />}
+      {slug === 'brunner' && <Brunner />}
+      {slug === 'akimova-art' && <AkimovaArt />}
+      {slug === 'efimow-automobile' && <Efimow />}
+      {slug === 'bavarian-ice-roll' && <BavarianIceRoll />}
+      {slug === 'studio-d' && <StudioD />}
+      {slug === 'felix-rheindorf' && <Felix />}
+      {slug === 'streetly' && <Streetly />}
+      {slug === 'vadim-aevskiy' && <VadimAevskiy />}
+      {slug === 'immobilien-muenchen' && <ImmobilienMuenchen />}
+      {slug === 'kleines-stadthaus' && <KleinesStadthaus />}
     </section>
   </div>
 </MainLayout>

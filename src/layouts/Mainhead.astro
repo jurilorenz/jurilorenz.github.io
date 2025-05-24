@@ -1,10 +1,12 @@
 ---
 import { SEO } from "astro-seo"
-const { title, seoTitle, seoDesc } = Astro.props
+const { title, seoTitle, seoDesc, noindex } = Astro.props
 ---
 
 <head>
   <SEO title={seoTitle} description={seoDesc} />
+
+  {noindex && <meta name="robots" content="noindex, nofollow" />}
 
   <!-- Favicon links -->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />

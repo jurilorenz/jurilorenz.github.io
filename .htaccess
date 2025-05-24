@@ -1,0 +1,19 @@
+RewriteEngine On
+
+# Weiterleitung von www zu non-www
+RewriteCond %{HTTP_HOST} ^www\.maxwapp\.de$ [NC]
+RewriteRule ^(.*)$ https://maxwapp.de/$1 [R=301,L]
+
+# Weiterleitung aller alten /projects/... URLs zu /projekte/...
+RewriteCond %{REQUEST_URI} ^/projects/(.*)$
+RewriteRule ^projects/(.*)$ https://maxwapp.de/projekte/$1 [R=301,L]
+
+# Weiterleitungen alter URLs zu neuen Pfaden
+Redirect 301 /price /preise
+Redirect 301 /contact /kontakt
+Redirect 301 /about /ueber-mich
+Redirect 301 /privacy /datenschutz
+Redirect 301 /imprint /impressum
+
+Redirect gone /projects/5/
+Redirect gone /projects/2/
