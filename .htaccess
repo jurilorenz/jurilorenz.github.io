@@ -4,16 +4,20 @@ RewriteEngine On
 RewriteCond %{HTTP_HOST} ^www\.maxwapp\.de$ [NC]
 RewriteRule ^(.*)$ https://maxwapp.de/$1 [R=301,L]
 
+# Weiterleitung alter /projects/1 bis /projects/14 zu /projekte
+RewriteRule ^projects/([1-9]|1[0-4])/?$ https://maxwapp.de/projekte [R=301,L]
+
 # Weiterleitung aller alten /projects/... URLs zu /projekte/...
 RewriteCond %{REQUEST_URI} ^/projects/(.*)$
 RewriteRule ^projects/(.*)$ https://maxwapp.de/projekte/$1 [R=301,L]
 
-# Weiterleitungen alter URLs zu neuen Pfaden
-Redirect 301 /price /preise
-Redirect 301 /contact /kontakt
-Redirect 301 /about /ueber-mich
-Redirect 301 /privacy /datenschutz
-Redirect 301 /imprint /impressum
+# Weitere alte URLs (mit und ohne Slash am Ende)
+RedirectMatch 301 ^/price/?$ https://maxwapp.de/preise
+RedirectMatch 301 ^/contact/?$ https://maxwapp.de/kontakt
+RedirectMatch 301 ^/about/?$ https://maxwapp.de/ueber-mich
+RedirectMatch 301 ^/privacy/?$ https://maxwapp.de/datenschutz
+RedirectMatch 301 ^/imprint/?$ https://maxwapp.de/impressum
+RedirectMatch 301 ^/projects/?$ https://maxwapp.de/projekte
 
-Redirect gone /projects/5/
-Redirect gone /projects/2/
+# Fehlerseite
+ErrorDocument 404 /404.html

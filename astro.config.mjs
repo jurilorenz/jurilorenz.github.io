@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import icon from 'astro-icon';
-import sitemap from 'astro-sitemap';
+// import sitemap from 'astro-sitemap';
 // import partytown from '@astrojs/partytown'; 
 
 
@@ -26,6 +26,6 @@ export default defineConfig({
         fa: ["github","instagram", "linkedin"], 
       },
     }),
-    sitemap(),
+    // sitemap(),
   ],
 });
