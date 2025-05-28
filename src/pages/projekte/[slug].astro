@@ -14,6 +14,7 @@ import Streetly from "../../components/projects/Streetly.astro";
 import VadimAevskiy from "../../components/projects/VadimAevskiy.astro";
 import ImmobilienMuenchen from "../../components/projects/ImmobilienMuenchen.astro";
 import KleinesStadthaus from "../../components/projects/KleinesStadthaus.astro";
+import FirstLineArchitecture from "../../components/projects/FirstLineArchitecture.astro";
 
 export async function getStaticPaths() {
   return [
@@ -135,6 +136,15 @@ export async function getStaticPaths() {
       },
     },
     { 
+params: { slug: "1-line-architecture" },
+      props: {
+        name: "1 Line Architecture",
+        introText: "Webdesign für Architekturbüro in München: Spezialisiert auf denkmalgerechte Sanierung & Neubau. Moderne Online-Präsenz.",
+        seoTitle: "Webdesign für Architekten in München – sichtbar & stark",
+        seoDesc: "Moderne Website für Architekturbüro 1 Line Architecture in München – erstellt von maxWapp. Fokus auf Sichtbarkeit, Vertrauen & hochwertiges Design."
+      },
+    },
+    { 
       params: { slug: "kleines-stadthaus" }, 
       props: {
         name: "Kleines Stadthaus",
@@ -184,6 +194,7 @@ const { name, introText, seoTitle, seoDesc } = Astro.props;
       {slug === 'vadim-aevskiy' && <VadimAevskiy />}
       {slug === 'immobilien-muenchen' && <ImmobilienMuenchen />}
       {slug === 'kleines-stadthaus' && <KleinesStadthaus />}
+            {slug === '1-line-architecture' && <FirstLineArchitecture />}
     </section>
   </div>
 </MainLayout>

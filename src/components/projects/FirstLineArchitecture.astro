@@ -1,0 +1,94 @@
+---
+import ContentSection from "../ContentSection.astro"
+import FeatureCard from "../FeatureCard.astro"
+import SectionTitle from "../SectionTitle.astro"
+import GradientDivider from "../GradientDivider.astro"
+import TextSection from "../TextSection.astro"
+import FinalSection from "../FinalSection.astro"
+import IpadComponent from "../IpadComponent.astro"
+---
+
+<div class="project-component">
+  <TextSection
+  title="Startseite mit Wirkung"
+      introText="Der erste Eindruck zählt – und bleibt. Die Startseite bringt die Schwerpunkte denkmalgerechter Sanierung und moderner Architektur in Einklang."
+    secondText="Gezielte Call-to-Actions und ein klares Design holen Interessenten dort ab, wo ihre Suche beginnt."
+ />
+
+  <ContentSection
+    imgSrc="/images/projects/1-line-architecture-portfolio.webp"
+    imgAlt="Mobile Ansicht der Startseite von 1 Line Architecture"
+    title="Das Ziel?"
+introText="Sichtbarkeit für hochwertige Projekte im Raum München und Vertrauen bei potenziellen Bauherren."
+secondText="Die Website wurde als strategisches Kommunikationswerkzeug entwickelt – mit klarer Positionierung, starker visueller Sprache und echtem Mehrwert für Kunden, die Qualität erwarten."
+  />
+
+  <ContentSection
+    imgSrc="/images/projects/1-line-architecture-projekt.webp"
+    imgAlt="Projektdetail Seitenansicht auf dem Handy"
+    title="Projekte, die Vertrauen schaffen"
+    introText="Mit wenigen Klicks tauchen Besucher in realisierte Bauprojekte ein – bebildert, beschrieben, überzeugend."
+    secondText="Die Darstellung unterstützt Architekten dabei, Kompetenz zu zeigen und neue Kunden für sich zu gewinnen."
+    reverse={true}
+  />
+
+  <SectionTitle title="Tablet & Desktop" />
+
+  <IpadComponent
+    imgSrc="/images/projects/1-line-architecture-ipad.webp"
+    imgAlt="iPad-Ansicht des Projekts Lehel"
+  />
+
+  <TextSection
+    introText="Auf größeren Bildschirmen entfaltet das Design seine volle Wirkung: ideal für Präsentationen, Pitches oder Beratungsgespräche mit Bauherren."
+    secondText="Das Projekt 'Lehel' demonstriert die Stärke des Webauftritts: architektonischer Anspruch kombiniert mit digitaler Eleganz."
+  />
+
+  <ContentSection
+    imgSrc="/images/projects/1-line-architecture-footer.webp"
+    imgAlt="Footer mit Kontaktinformationen und Rechtstexten"
+    title="Kontakt, der hängen bleibt"
+    introText="Alle wichtigen Informationen – von Adresse bis Widerrufsbelehrung – übersichtlich und mobil optimiert."
+    secondText="Das Footer-Design steht für Transparenz, Seriosität und die Liebe zum Detail."
+    reverse={true}
+  />
+
+  <SectionTitle title="Stärken, die überzeugen" />
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-24 mb-32">
+    <FeatureCard
+      title="Architektur-Projekte visuell präsentiert"
+      description="Referenzen wie Maxvorstadt, Schwabing oder Pasing sind elegant eingebettet – für Kunden, die mit einem Klick Qualität erkennen."
+    />
+
+    <FeatureCard
+      title="SEO für Architekturbüros in München"
+      description="Optimiert für Suchanfragen wie ‘Architekturbüro München’ oder ‘Sanierung München’ – damit potenzielle Kunden genau dich finden."
+    />
+
+    <FeatureCard
+      title="Kontakt ohne Umwege"
+      description="Kontaktformular, E-Mail oder Anruf – alle Wege führen direkt zu dir. Ideal für schnelle Projektanfragen aus dem lokalen Umfeld."
+    />
+
+    <FeatureCard
+      title="Responsives Design, das begeistert"
+  description="Ob Baustelle, Büro oder Sofa – deine Website funktioniert auf jedem Gerät reibungslos und wirkt dabei immer professionell."
+    />
+  </div>
+
+  <GradientDivider />
+
+
+<FinalSection
+  imgSrc="/images/projects/1-line-architecture-contact.webp"
+  imgAlt="Call to Action für professionelle Weblösungen"
+  title="Bereit für eine Website, die überzeugt?"
+  introText="Egal ob Architektur, Design oder Beratung – dein Webauftritt ist heute entscheidend, um sichtbar, vertrauenswürdig und professionell zu wirken."
+  secondText="Ich gestalte Websites, die nicht nur gut aussehen, sondern richtig für dich arbeiten. Lass uns über dein Projekt sprechen!"
+  primaryButtonLabel="Zur Website"
+  primaryButtonLink="https://www.1-line-architecture.de/"
+  secondaryButtonLabel="Projekt starten"
+  secondaryButtonLink="/kontakt"
+/>
+</div>
