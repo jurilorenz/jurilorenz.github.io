@@ -1,5 +1,9 @@
 RewriteEngine On
 
+# Weiterleitung von HTTP zu HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
 # Weiterleitung von www zu non-www
 RewriteCond %{HTTP_HOST} ^www\.maxwapp\.de$ [NC]
 RewriteRule ^(.*)$ https://maxwapp.de/$1 [R=301,L]

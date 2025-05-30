@@ -19,7 +19,34 @@ export interface BlogPost {
   imageAlt?: string;
 }
 
-export const blogPosts: BlogPost[] = [
+export const blogPosts = [
+  {
+    slug: "google-gemini-email-summary",
+    title: "Gemini fasst jetzt automatisch deine E-Mails zusammen",
+    category: "KI, Gmail",
+    intro: "Googles KI Gemini erhält eine größere Rolle in Gmail: Lange E-Mails werden nun automatisch zusammengefasst – ganz ohne Klick.",
+    seoTitle: "Google Gemini fasst automatisch lange E-Mails zusammen",
+    seoDesc: "Gemini von Google erstellt jetzt automatisch Zusammenfassungen langer E-Mails direkt in deinem Gmail-Posteingang. Was das für deinen Arbeitsalltag bedeutet.",
+    image: "/images/blog/gemini-email-summary-1.webp",
+    imageAlt: "Smartphone mit Gmail und Gemini-Zusammenfassung",
+    body: `Googles KI-Tool Gemini bekommt eine neue Aufgabe in deinem Posteingang: Ab sofort fasst die KI automatisch lange E-Mails zusammen – direkt am Anfang der Nachricht als sogenannte Zusammenfassungskarte. 
+
+Bisher war diese Funktion manuell auswählbar. Nun erkennt Gemini selbstständig, wann eine E-Mail zu lang ist, und zeigt automatisch die wichtigsten Punkte an. Sobald neue Antworten hinzukommen, wird die Zusammenfassung aktualisiert.
+
+Damit gewinnt Gemini deutlich an Präsenz in Gmail – auch wenn das nicht jeder Nutzer sofort begrüßen dürfte.`,
+    body2Title: "Wird Gemini zu aufdringlich?",
+    body2Intro: "Nicht alle Nutzer sind begeistert, denn die KI-Funktion wird automatisch aktiviert – je nach Region.",
+    body2: `Gemini ist ein Beispiel für den zunehmenden Einfluss von KI in alltäglichen Tools. Doch die automatischen Zusammenfassungen sind nicht immer fehlerfrei – wie bereits Apple mit seinen Push-Zusammenfassungen für News erfahren musste.
+
+Google verspricht jedoch, dass die manuelle Zusammenfassung weiterhin verfügbar bleibt. Nutzer außerhalb der EU können die Funktion unter Gmail > Einstellungen > Smarte Funktionen aktivieren oder deaktivieren. 
+
+In der EU, UK, Schweiz und Japan ist die Funktion standardmäßig deaktiviert. Unternehmens-Admins können sie zentral steuern.`,
+    quote: "„AI fasst deine E-Mails zusammen – ganz ohne Klick. Praktisch oder zu viel?“",
+    ctaText: "Du willst KI clever in dein Business integrieren? Lass uns gemeinsam Lösungen finden.",
+    ctaLink: "/kontakt",
+    image2: "/images/blog/gemini-email-summary-2.webp",
+    image2Alt: "Gemini-Symbol mit Gmail-App und anderen Google-Icons"
+   },
 {
 
   slug: "openai-datenzentrum-abu-dhabi",

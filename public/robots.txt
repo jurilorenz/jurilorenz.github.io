@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /thank-you/
+Disallow: /404/
+Disallow: /impressum/
+Disallow: /datenschutz/
+
+Sitemap: https://maxwapp.de/sitemap.xml
