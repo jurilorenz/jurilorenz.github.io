@@ -10,6 +10,31 @@ if (!post) {
   throw new Error(`Post not found for slug: ${slug}`);
 }
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": post.title,
+  "description": post.seoDesc,
+  "image": `https://maxwapp.de${post.image}`,
+  "author": {
+    "@type": "Person",
+    "name": "Juri Lorenz",
+    "url": "https://maxwapp.de/#ueber-mich"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "maxWapp",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://maxwapp.de/images/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": `https://maxwapp.de/webdesign-blog/${post.slug}/`
+  }
+};
+
 export async function getStaticPaths() {
   const { blogPosts } = await import("../../data/blogPosts");
 
@@ -21,6 +46,7 @@ export async function getStaticPaths() {
 ---
 
 <MainLayout title={post.title} seoTitle={post.seoTitle} seoDesc={post.seoDesc}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   <article class="min-h-screen text-white pb-20 px-4 max-w-4xl mx-auto">
     <h1 class="text-center text-4xl md:text-6xl font-bold drop-shadow-lg mt-12 md:mt-36 mb-8 mx-2">
       {post.title}

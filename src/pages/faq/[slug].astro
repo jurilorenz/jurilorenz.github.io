@@ -9,6 +9,19 @@ if (!post) {
   throw new Error(`Post not found for slug: ${slug}`);
 }
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": post.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": post.answer
+    }
+  }]
+};
+
 export async function getStaticPaths() {
   const { faqPosts } = await import("../../data/faqPosts");
 
@@ -20,6 +33,7 @@ export async function getStaticPaths() {
 ---
 
 <MainLayout title={post.question} seoTitle={post.seoTitle} seoDesc={post.seoDesc}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   <article class="min-h-screen text-white pb-20 px-4 max-w-4xl mx-auto">
     <h1 class="text-center text-4xl md:text-5xl font-bold drop-shadow-lg mt-12 md:mt-48 mb-12">
       {post.question}

@@ -1,12 +1,37 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro"
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Website-Optimierung",
+    "image": "https://maxwapp.de/images/maxwapp-website-optimierung.webp",
+    "description": "Optimierung bestehender Websites mit Fokus auf SEO, Geschwindigkeit, Conversion und Technik.",
+    "brand": {
+      "@type": "Brand",
+      "name": "maxWapp"
+    },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "EUR",
+      "price": "900",
+      "availability": "http://schema.org/InStock",
+      "url": "https://maxwapp.de/services/website-optimierung/"
+    }
+  }
+];
 ---
+
 
 <MainLayout
   title="Website-Optimierung aus München – schnell, sichtbar, konvertierend | maxWapp"
   seoTitle="Webseiten optimieren – Analyse & Conversion-Fokus | maxWapp"
   seoDesc="Ich optimiere deine Website für mehr Geschwindigkeit, bessere Google-Rankings, höhere Conversion und Umsatz – Kostenlose Analyse. "
 >
+
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
   <!-- Hintergrund mit Verlauf -->
   <div
     class="min-h-screen bg-gradient-to-b from-[#090a1a] to-[#290065] text-white text-center flex flex-col items-center justify-center"

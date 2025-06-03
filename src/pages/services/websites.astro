@@ -1,5 +1,61 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro"
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Starter",
+    "image": "https://maxwapp.de/images/packages/starter-package-cover.webp",
+    "description": "Landingpage, mobilfreundlich, kostenloses Hosting & Domain, Datenschutz etc.",
+    "brand": {
+      "@type": "Brand",
+      "name": "maxWapp"
+    },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "EUR",
+      "price": "900",
+      "availability": "http://schema.org/InStock",
+      "url": "https://maxwapp.de/preise"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Basic",
+    "image": "https://maxwapp.de/images/packages/basic-package-cover.webp",
+    "description": "Startseite, bis 5 Menüpunkte, KI-Bilder, Logo, SEO & mehr.",
+    "brand": {
+      "@type": "Brand",
+      "name": "maxWapp"
+    },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "EUR",
+      "price": "1900",
+      "availability": "http://schema.org/InStock",
+      "url": "https://maxwapp.de/preise"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Business",
+    "image": "https://maxwapp.de/images/packages/business-package-cover.webp",
+    "description": "Komplettes Branding, professionelle Foto- & Videoproduktion, SEO, Visitenkarten & mehr.",
+    "brand": {
+      "@type": "Brand",
+      "name": "maxWapp"
+    },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "EUR",
+      "price": "3900",
+      "availability": "http://schema.org/InStock",
+      "url": "https://maxwapp.de/preise"
+    }
+  }
+];
 ---
 
 <MainLayout
@@ -7,6 +63,7 @@ import MainLayout from "../../layouts/MainLayout.astro"
   seoTitle="Schnelle Website in München – Fokus auf Conversion | maxWapp"
   seoDesc="Professionelle Website aus München – schnell, responsive und SEO-optimiert. Webauftritte, die Kunden überzeugen und Verkäufe steigern."
 >
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   <!-- Hintergrund mit Verlauf -->
   <div
     class="min-h-screen bg-gradient-to-b from-[#090a1a] to-[#290065] text-white text-center flex flex-col items-center justify-center"

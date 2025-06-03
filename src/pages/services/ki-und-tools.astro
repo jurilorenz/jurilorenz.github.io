@@ -1,5 +1,25 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro"
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "KI & Tools Integration",
+  "image": "https://maxwapp.de/images/projects/immobilien-muenchen-referenzobjekte.webp",
+  "description": "Ich integriere Tools, APIs und KI-Lösungen wie OnOffice, Planity & OpenAI direkt in deine Website – automatisiert und zukunftssicher.",
+  "brand": {
+    "@type": "Brand",
+    "name": "maxWapp"
+  },
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "EUR",
+    "price": "900",
+    "availability": "https://schema.org/InStock",
+    "url": "https://maxwapp.de/services/ki-tools/"
+  }
+};
+
 ---
 
 <MainLayout
@@ -7,6 +27,9 @@ title="KI & Tools Integration aus München – automatisiert, smart & leistungss
 seoTitle="KI & Tools Integration aus München – automatisiere | maxWapp"  
 seoDesc="Ich integriere Tools, APIs und KI-Lösungen wie OnOffice, Planity & OpenAI direkt in deine Website – automatisiert und zukunftssicher."
 >
+
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
   <!-- Hintergrund mit Verlauf -->
   <div
     class="min-h-screen bg-gradient-to-b from-[#090a1a] to-[#290065] text-white text-center flex flex-col items-center justify-center"

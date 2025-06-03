@@ -1,5 +1,25 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro"
+
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Shopify Onlineshop Erstellung & Redesign",
+  "description": "Professionelle Shopify Onlineshops aus München. Neu Design oder Redesign deines bestehenden Shops – schnell, mobiloptimiert & verkaufsstark.",
+  "image": "https://maxwapp.de/images/projects/kleines-stadthaus-bestsellers.webp",
+  "brand": {
+    "@type": "Brand",
+    "name": "maxWapp"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://maxwapp.de/services/shopify/",
+    "priceCurrency": "EUR",
+    "price": "900",
+    "availability": "https://schema.org/InStock"
+  }
+};
 ---
 
 <MainLayout
@@ -7,6 +27,7 @@ import MainLayout from "../../layouts/MainLayout.astro"
   seoTitle="Shopify Onlineshop Erstellung & Redesign – Umsatz | maxWapp"
   seoDesc="Professionelle Shopify Onlineshops aus München. Neu Design oder Redesign deines bestehenden Shops – schnell, mobiloptimiert & verkaufsstark."
 >
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   <!-- Hintergrund mit Verlauf -->
   <div
     class="min-h-screen bg-gradient-to-b from-[#090a1a] to-[#290065] text-white text-center flex flex-col items-center justify-center"

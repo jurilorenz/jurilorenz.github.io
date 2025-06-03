@@ -1,6 +1,19 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
 import { faqPosts } from "../../data/faqPosts";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqPosts.map(post => ({
+    "@type": "Question",
+    "name": post.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": post.answer
+    }
+  }))
+};
 ---
 
 <MainLayout 
@@ -8,6 +21,7 @@ import { faqPosts } from "../../data/faqPosts";
   seoTitle="FAQ rund um Websites, SEO & Webdesign | maxWapp"
   seoDesc="Antworten auf häufige Fragen zu Websites, SEO, Webdesign und Optimierung. Alles, was du wissen musst, kompakt erklärt von maxWapp."
 >
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   <div class="min-h-screen text-white py-12 md:pb-24 md:pt-36">
     <h1 class="text-center text-4xl md:text-6xl font-bold mb-16 transition-all duration-300 drop-shadow-lg">
       Website FAQ

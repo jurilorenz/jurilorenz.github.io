@@ -162,6 +162,23 @@ const { name, introText, seoTitle, seoDesc } = Astro.props;
 ---
 
 <MainLayout title={name} seoTitle={seoTitle} seoDesc={seoDesc}>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "name": name,
+    "description": seoDesc,
+    "url": `https://maxwapp.de/projekte/${slug}`,
+    "image": `https://maxwapp.de/images/projects/${slug}.webp`,
+    "author": {
+      "@type": "Person",
+      "name": "Juri Lorenz"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "maxWapp",
+      "url": "https://maxwapp.de"
+    }
+  })} />
   <div class="min-h-screen text-white">
     <h1 class="text-center text-4xl md:text-6xl font-bold drop-shadow-lg mt-12 md:mt-36 mb-8 mx-2">
       {name}

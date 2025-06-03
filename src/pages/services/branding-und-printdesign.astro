@@ -1,6 +1,25 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro"
 import IpadComponent from "../../components/IpadComponent.astro"
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Branding & Printdesign",
+  "description": "Ich entwickle starkes CI – mit Logo, Corporate Design und hochwertigen Printmaterialien. Für Unternehmen, die Eindruck machen wollen.",
+  "image": "https://maxwapp.de/images/maxwapp-visitenkarte.webp",
+  "brand": {
+    "@type": "Brand",
+    "name": "maxWapp"
+  },
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "EUR",
+    "price": "900",
+    "availability": "https://schema.org/InStock",
+    "url": "https://maxwapp.de/services/branding-und-printdesign/"
+  }
+};
 ---
 
 <MainLayout
@@ -8,6 +27,7 @@ import IpadComponent from "../../components/IpadComponent.astro"
   seoTitle="Branding & Printdesign aus München – Logo & CI | maxWapp"
   seoDesc="Ich entwickle starkes CI – mit Logo, Corporate Design und hochwertigen Printmaterialien. Für Unternehmen, die Eindruck machen wollen."
 >
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   <!-- Hintergrund mit Verlauf -->
   <div
     class="min-h-screen bg-gradient-to-b from-[#090a1a] to-[#290065] text-white text-center flex flex-col items-center justify-center"
