@@ -21,6 +21,44 @@ export interface BlogPost {
 
 export const blogPosts = [
   {
+    slug: "statische-astro-website",
+    title: "Astro ohne CMS: Statische Websites mit maximaler Performance",
+    category: "Astro, Webentwicklung",
+    intro: "Diese Website wurde in reinem Astro-Code entwickelt – ohne CMS, ohne Datenbank, dafür mit maximaler Kontrolle, Performance und SEO-Fokus.",
+    seoTitle: "Astro Website ohne CMS – Vorteile für Performance & SEO | maxWapp",
+    seoDesc: "Statische Website mit Astro: Vorteile, Nachteile & SEO-Potenzial. Warum eine Entwicklung ohne CMS sinnvoll sein kann.",
+    image: "/images/blog/astro-mobile-navigation.webp",
+    imageAlt: "Mobile Navigation einer Astro-Website mit Sprachauswahl und Raketen-Icon",
+    image2: "/images/blog/astro-website-maxwapp.webp",
+    image2Alt: "Astro Website mit maxWapp Branding auf Bildschirm und Raketen-Symbol",
+    body: `Diese Website – maxWapp.de – wurde vollständig in Astro umgesetzt. Ohne WordPress, ohne CMS, komplett im Code. Das Ergebnis: eine extrem schnelle, wartungsarme und suchmaschinenfreundliche Lösung, die speziell auf moderne Webanforderungen zugeschnitten ist.
+
+Astro erzeugt statische HTML-Dateien beim Build. Das bedeutet: keine Datenbank-Abfragen, kein Server-Rendering bei jedem Seitenaufruf. Dadurch profitieren Nutzer und Betreiber von:
+
+- exzellenten Ladezeiten
+- perfekten Lighthouse-Werten (Performance, SEO, Accessibility)
+- erhöhter Sicherheit (keine dynamischen Angriffsflächen)
+- einfacher Hosting-Infrastruktur
+
+Die Seitenstruktur, Inhalte und Komponenten sind direkt im Quellcode gepflegt – übersichtlich, sauber und individuell erweiterbar.`,
+    body2Title: "Was spricht für – und gegen – Astro ohne CMS?",
+    body2Intro: "Ein kurzer Überblick für alle, die über eine moderne Lösung ohne CMS nachdenken.",
+    body2: `Vorteile:
+- Vollständige Kontrolle über Code, Design und SEO
+- Extrem schnelle Auslieferung durch statisches HTML
+- Keine Abhängigkeit von Drittanbieter-Systemen
+- Leicht mit Git versionierbar und wartbar
+
+Mögliche Nachteile:
+- Inhalte können nicht über ein Admin-Panel gepflegt werden
+- Änderungen benötigen Zugriff auf den Code bzw. Entwickler-Know-how
+
+Für viele Projekte ist das jedoch kein Nachteil – im Gegenteil: Wer planbare, skalierbare und performance-orientierte Websites braucht, ist mit einer Lösung in Astro oft besser beraten als mit einem klassischen CMS.`,
+    quote: "„Statische Websites mit Astro – ideal für alle, die Wert auf Qualität, SEO und Kontrolle legen.“",
+    ctaText: "Website in Astro geplant? Ich unterstütze dich bei Umsetzung & Optimierung.",
+    ctaLink: "/kontakt"
+  },
+  {
     slug: "google-gemini-email-summary",
     title: "Gemini fasst jetzt automatisch deine E-Mails zusammen",
     category: "KI, Gmail",
