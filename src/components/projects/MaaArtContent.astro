@@ -2,16 +2,13 @@
 // This is the MAA Art website project component
 
 import VideoWithCTA from "../VideoWithCTA.astro"
-
 ---
-
-
 
 <section class="min-h-screen text-white py-20 md:py-4">
   <div class="text-center w-11/12 md:w-10/12 lg:w-8/12 mx-auto">
     <!-- Title with Gradient -->
     <h2
-      class="my-4 mb-16 text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500"
+      class="my-4 mb-16 text-3xl md:text-5xl font-extrabold"
       style="line-height: 1.2;"
     >
       Meisterhafte Webseite für eine berühmte Künstlerin
@@ -31,7 +28,7 @@ import VideoWithCTA from "../VideoWithCTA.astro"
   <!-- Visual Experience Section with Image -->
   <section class="relative mt-4" id="laptop-section">
     <h2
-      class="md:text-5xl text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 text-center leading-relaxed py-2 mb-32 md:mb-72"
+      class="md:text-5xl text-3xl font-bold text-center leading-relaxed py-2 mb-32 md:mb-72"
     >
     </h2>
     <!-- Image with responsiveness -->
@@ -139,28 +136,26 @@ import VideoWithCTA from "../VideoWithCTA.astro"
   <!-- Visual Experience Section with Image -->
   <section class="relative mt-16" id="laptop-section">
     <h2
-      class="md:text-5xl text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 text-center leading-relaxed py-2 mb-12 md:mb-24"
+      class="md:text-5xl text-3xl font-bold text-center leading-relaxed py-2 mb-12 md:mb-24"
     >
       Erleben Sie Kunst digital
     </h2>
 
     <!-- YouTube Shorts Video -->
+  </section>
 
-
-</div>
-
-<VideoWithCTA
-videoSrc="https://www.youtube-nocookie.com/embed/AGxdlF4EUHs?autoplay=1&modestbranding=1&showinfo=0&controls=1&rel=0"
-thumbnailSrc="/images/projects/maa-art.webp" 
-introText="Die Plattform bietet eine interaktive Galerie, Informationen zu Ausstellungen, ein Kontaktformular und einen Sprachwechsler für ein internationales Publikum."
-secondText="Entwickelt mit React.js, Tailwind CSS und Next.js, garantiert sie SEO-Optimierung und eine herausragende Nutzererfahrung."
-ctaText="Schau dir das Projekt an!"
-primaryButtonLabel="Zurück"
-primaryButtonLink="/projekte"
-secondaryButtonLabel="Projekt auf GitHub ansehen"
-secondaryButtonLink="https://github.com/jurilorenz/maa-art-react"
-/>
-</div>
+  <VideoWithCTA
+    videoSrc="https://www.youtube-nocookie.com/embed/AGxdlF4EUHs?autoplay=1&modestbranding=1&showinfo=0&controls=1&rel=0"
+    thumbnailSrc="/images/projects/maa-art.webp"
+    introText="Die Plattform bietet eine interaktive Galerie, Informationen zu Ausstellungen, ein Kontaktformular und einen Sprachwechsler für ein internationales Publikum."
+    secondText="Entwickelt mit React.js, Tailwind CSS und Next.js, garantiert sie SEO-Optimierung und eine herausragende Nutzererfahrung."
+    ctaText="Schau dir das Projekt an!"
+    primaryButtonLabel="Zurück"
+    primaryButtonLink="/projekte"
+    secondaryButtonLabel="Projekt auf GitHub ansehen"
+    secondaryButtonLink="https://github.com/jurilorenz/maa-art-react"
+  />
+</section>
 
 <script>
   // Function to handle the animation on scroll

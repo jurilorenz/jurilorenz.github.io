@@ -4,31 +4,45 @@ import MainLayout from "../../layouts/MainLayout.astro"
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Product",
-  "name": "KI & Tools Integration",
-  "image": "https://maxwapp.de/images/projects/immobilien-muenchen-referenzobjekte.webp",
-  "description": "Ich integriere Tools, APIs und KI-Lösungen wie OnOffice, Planity & OpenAI direkt in deine Website – automatisiert und zukunftssicher.",
-  "brand": {
+  name: "KI & Tools Integration",
+  image:
+    "https://maxwapp.de/images/projects/immobilien-muenchen-referenzobjekte.webp",
+  description:
+    "Ich integriere Tools, APIs und KI-Lösungen wie OnOffice, Planity & OpenAI direkt in deine Website – automatisiert und zukunftssicher.",
+  brand: {
     "@type": "Brand",
-    "name": "maxWapp"
+    name: "maxWapp",
   },
-  "offers": {
+  offers: {
     "@type": "Offer",
-    "priceCurrency": "EUR",
-    "price": "900",
-    "availability": "https://schema.org/InStock",
-    "url": "https://maxwapp.de/services/ki-tools/"
-  }
-};
-
+    priceCurrency: "EUR",
+    price: "900",
+    availability: "https://schema.org/InStock",
+    url: "https://maxwapp.de/services/ki-tools/",
+  },
+}
 ---
 
 <MainLayout
-title="KI & Tools Integration aus München – automatisiert, smart & leistungsstark | maxWapp"
-seoTitle="KI & Tools Integration aus München – automatisiere | maxWapp"  
-seoDesc="Ich integriere Tools, APIs und KI-Lösungen wie OnOffice, Planity & OpenAI direkt in deine Website – automatisiert und zukunftssicher."
+  title="KI & Tools Integration aus München – automatisiert, smart & leistungsstark | maxWapp"
+  seoTitle="Planity, OnOffice & KI Tools Integration München | maxWapp"
+  seoDesc="Ich integriere Tools wie Planity, OnOffice, Calendly & KI Tools direkt in deine Website. Zukunftssichere Automatisierung und individuelle Weblösungen für München."
 >
+  <p class="sr-only">
+    Du suchst eine Möglichkeit, Planity oder OnOffice in deine Website zu
+    integrieren? Oder brauchst du ein smartes Terminbuchungssystem mit Planity
+    für Friseure, Shore für Studios oder Calendly für Berater? Ich biete dir
+    individuelle Tools-Integration und KI-basierte Lösungen wie Chatbots, um
+    deine Abläufe zu automatisieren. Auch bei Zahlungsanbietern wie Stripe,
+    PayPal oder Mollie, bei CRM-Systemen wie HubSpot und Zoho oder
+    E-Mail-Marketing-Tools wie Mailchimp oder Brevo helfe ich mit der nahtlosen
+    Einbindung. Egal ob du nach den besten KI Tools suchst, deine Buchhaltung
+    mit LexOffice oder FastBill verbinden möchtest oder automatisierte
+    Übersetzungen mit DeepL brauchst – ich unterstütze dich mit Erfahrung,
+    Technik und durchdachter Umsetzung.
+  </p>
 
-    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
   <!-- Hintergrund mit Verlauf -->
   <div
@@ -38,11 +52,8 @@ seoDesc="Ich integriere Tools, APIs und KI-Lösungen wie OnOffice, Planity & Ope
     <h1
       class="text-center text-3xl md:text-6xl font-bold text-gray-100 drop-shadow-lg mt-12 md:mb-12 md:mt-36"
     >
-    KI & Tools Integration
-
+      KI, Tools & API Integration
     </h1>
-
-
 
     <!-- Inhalt Abschnitt -->
     <div
@@ -62,307 +73,361 @@ seoDesc="Ich integriere Tools, APIs und KI-Lösungen wie OnOffice, Planity & Ope
       <!-- Textabschnitt für Desktop rechts -->
       <div class="w-full md:w-5/12 text-center md:text-left">
         <p class="text-xl md:text-2xl mt-4">
-          Du willst mehr aus deinem Webprojekt herausholen? Ich integriere smarte Tools, APIs und KI-Lösungen direkt in deine Website – für mehr Automatisierung, bessere Nutzererfahrung und messbare Effizienz.
+          Du willst mehr aus deinem Webprojekt herausholen? Ich integriere
+          smarte Tools, APIs und KI-Lösungen direkt in deine Website – für mehr
+          Automatisierung, bessere Nutzererfahrung und messbare Effizienz.
         </p>
-        
+
         <p class="text-xl md:text-2xl mt-8">
-          Ob <strong>Immobilienplattform mit OnOffice</strong>, <strong>Online-Terminbuchung mit Planity, Calendly</strong> oder <strong>eigener KI-Chatbot</strong> – ich bringe alles nahtlos zusammen.
+          Ob <strong>Immobilienplattform mit OnOffice</strong>, <strong
+            >Online-Terminbuchung mit Planity, Calendly</strong
+          > oder <strong>eigener KI-Chatbot</strong> – ich bringe alles nahtlos zusammen.
         </p>
-        
+
         <p class="text-xl md:text-2xl mt-8">
-          Du brauchst keine Standardlösung. Du bekommst maßgeschneiderte <span class="text-gradient font-semibold">Systeme, die funktionieren</span> – direkt in deine Website integriert.
+          Du brauchst keine Standardlösung. Du bekommst maßgeschneiderte <span
+            class="text-gradient font-semibold">Systeme, die funktionieren</span
+          > – direkt in deine Website integriert.
         </p>
       </div>
     </div>
 
-   <!-- Was ich biete Abschnitt mit Karten -->
-<h2
-class="text-center text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 my-24"
->
-Was ich biete
-</h2>
+    <!-- Was ich biete Abschnitt mit Karten -->
+    <h2 class="text-center text-4xl md:text-5xl font-extrabold my-24">
+      Was ich biete
+    </h2>
 
-<div
-class="grid grid-cols-1 md:grid-cols-2 gap-12 px-6 md:px-0 max-w-6xl mx-auto"
->
-<!-- Karte 1: Shop-Redesign mit Conversion-Fokus -->
-<div
-  class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
->
-  <div
-    class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
-  ></div>
-  <h4 class="text-3xl font-bold text-white mb-6">OnOffice Integration</h4>
-  <p class="text-lg text-gray-300 leading-relaxed">
-    Ich binde dein OnOffice-Konto direkt auf deiner Website ein – <strong>automatisierter Objektimport</strong>, Referenznummern, Live-Synchronisation und vieles mehr.
-  </p>
-</div>
-
-<!-- Karte 2: Shopify Setup & Startklar-Paket -->
-<div
-  class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
->
-  <div
-    class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
-  ></div>
-  <h4 class="text-3xl font-bold text-white mb-6">KI-Chatbots</h4>
-  <p class="text-lg text-gray-300 leading-relaxed">
-    Eigener Chatbot für deine Website? Kein Problem. Ich entwickle <strong>OpenAI-basierte Lösungen</strong> für Support, Content oder Lead-Generierung – trainiert auf deine Daten.
-  </p>
-</div>
-
-<!-- Karte 3: Speed & Technik, die verkaufen -->
-<div
-  class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
->
-  <div
-    class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
-  ></div>
-  <h4 class="text-3xl font-bold text-white mb-6">SEO-Quickwins</h4>
-  <p class="text-lg text-gray-300 leading-relaxed">
-    Ich überarbeite Titel, Struktur & Inhalte gezielt für <strong>mehr Google-Sichtbarkeit</strong>. Keine Tricks – nur kluge Optimierung, die langfristig wirkt.
-  </p>
-</div>
-
-<!-- Karte 4: Mobile-First & Conversion-Ready -->
-<div
-  class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
->
-  <div
-    class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
-  ></div>
-  <h4 class="text-3xl font-bold text-white mb-6">Tools & API-Verknüpfung</h4>
-  <p class="text-lg text-gray-300 leading-relaxed">
-    Ich verknüpfe externe Tools, Datenbanken & Schnittstellen (z. B. Zahlungsanbieter, CRM, Immobilien-Exporte) direkt mit deinem System – für <strong>automatisierte Workflows</strong>.
-  </p>
-</div>
-</div>
-
-<h2 class="text-center text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 mt-36 mb-12" style="line-height: 1.3;">
-  Systeme, die dir Arbeit abnehmen.
-</h2>
-
-<p class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-auto">
-  Ich bringe Tools und KI direkt auf deine Website – für echte Erleichterung und <span class="text-gradient font-semibold">neue digitale Möglichkeiten</span>.
-</p>
-
-
-  <!-- Warum mit mir arbeiten Abschnitt -->
-  <h2
-    class="text-center text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 mt-36 mb-24 mx-2"
-    style="line-height: 1.3;"
-  >
-  Warum mit mir arbeiten?
-  </h2>
-
-  <div
-    class="w-11/12 md:w-10/12 lg:w-8/12 mx-auto flex flex-col md:flex-row items-center mb-24"
-  >
-    <!-- Handybildabschnitt für Desktop links -->
     <div
-      class="w-full md:w-5/12 flex justify-center md:justify-center mb-12 md:mb-0 rounded shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] phone-container-second"
+      class="grid grid-cols-1 md:grid-cols-2 gap-12 px-6 md:px-0 max-w-6xl mx-auto"
     >
-      <img
-        src="/images/projects/studio-d-termin.webp"
-        alt="Shopify Screenshot Kollektion"
-        class="w-80 md:w-auto md:max-h-[60vh] object-contain rounded-lg"
-      />
-    </div>
-
-    <!-- Textabschnitt für Desktop rechts -->
-    <div class="w-full md:w-5/12 text-center md:text-left">
-      <p class="text-xl md:text-2xl mt-4">
-        Ich entwickle keine Spielereien – sondern <span class="text-gradient">digitale Lösungen mit Mehrwert</span>. Von der Idee bis zur Umsetzung bekommst du alles aus einer Hand.
-      </p>
-  
-      <p class="text-xl md:text-2xl mt-8">
-        Egal ob du Prozesse automatisieren oder deinen Kunden smarte Funktionen bieten willst – wir starten mit einer <span class="underline-animation">kostenlosen Analyse deiner Anforderungen</span>.
-      </p>
-  
-      <p class="text-xl md:text-2xl mt-8">
-        <span class="text-gradient font-semibold">Weniger Aufwand, mehr Wirkung</span> – so funktioniert moderne Webentwicklung.
-      </p>
-
-      <!-- Buttons at the bottom-right -->
+      <!-- Karte 1: Shop-Redesign mit Conversion-Fokus -->
       <div
-        class="flex flex-col md:flex-row gap-6 mt-8 md:mt-16 justify-center md:justify-start items-center md:items-start w-full md:w-auto"
+        class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
       >
-        <!-- Secondary Button -->
-        <a
-          href="/projekte"
-          class="bg-[#1f1235] text-white font-bold py-4 px-10 rounded-full border-2 border-[#6d87d1] shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-500 hover:shadow-[0_0_10px_rgba(147,112,219,0.5),_0_0_25px_rgba(3,169,244,0.4)] text-center w-full max-w-xs md:max-w-none md:w-auto"
+        <div
+          class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
         >
-          Projekte erleben
-        </a>
+        </div>
+        <h4 class="text-3xl font-bold text-white mb-6">OnOffice Integration</h4>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          Ich binde dein OnOffice-Konto direkt auf deiner Website ein – <strong
+            >automatisierter Objektimport</strong
+          >, Referenznummern, Live-Synchronisation und vieles mehr.
+        </p>
+      </div>
 
-        <!-- Primary Button -->
-        <a
-          href="/kontakt"
-          class="relative inline-block py-4 px-10 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-white text-[#090a1a] shadow-lg transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_rgba(147,112,219,0.8),_0_0_35px_rgba(3,169,244,0.6)] hover:border-[#6d87d1]"
+      <!-- Karte 2: Shopify Setup & Startklar-Paket -->
+      <div
+        class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
+      >
+        <div
+          class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
         >
-        Gratis Analyse
-      </a>
+        </div>
+        <h4 class="text-3xl font-bold text-white mb-6">KI-Chatbots</h4>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          Eigener Chatbot für deine Website? Kein Problem. Ich entwickle <strong
+            >OpenAI-basierte Lösungen</strong
+          > für Support, Content oder Lead-Generierung – trainiert auf deine Daten.
+        </p>
+      </div>
+
+      <!-- Karte 3: Speed & Technik, die verkaufen -->
+      <div
+        class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
+      >
+        <div
+          class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
+        >
+        </div>
+        <h4 class="text-3xl font-bold text-white mb-6">SEO-Quickwins</h4>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          Ich überarbeite Titel, Struktur & Inhalte gezielt für <strong
+            >mehr Google-Sichtbarkeit</strong
+          >. Keine Tricks – nur kluge Optimierung, die langfristig wirkt.
+        </p>
+      </div>
+
+      <!-- Karte 4: Mobile-First & Conversion-Ready -->
+      <div
+        class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
+      >
+        <div
+          class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
+        >
+        </div>
+        <h4 class="text-3xl font-bold text-white mb-6">
+          Tools & API-Verknüpfung
+        </h4>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          Ich verknüpfe externe Tools, Datenbanken & Schnittstellen (z. B.
+          Zahlungsanbieter, CRM, Immobilien-Exporte) direkt mit deinem System –
+          für <strong>automatisierte Workflows</strong>.
+        </p>
       </div>
     </div>
 
-    <style>
-      .text-gradient {
-        background: linear-gradient(to right, #9c27b0, #03a9f4);
-        -webkit-background-clip: text;
-        color: transparent;
-      }
+    <!-- Sichtbarer Infoblock zu Integrationen -->
+    <h2
+      class="text-center text-3xl md:text-4xl font-extrabold mt-36 mb-12"
+      style="line-height: 1.3;"
+    >
+      Beliebte Integrationen für deine Website
+    </h2>
 
-      .drop-shadow-lg {
-        filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
-      }
+    <ul
+      class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-4 list-disc pl-6 space-y-3 text-left leading-relaxed"
+    >
+      <li><strong>Terminbuchung:</strong> Planity, Shore, Calendly</li>
+      <li><strong>Immobilien:</strong> OnOffice, FlowFact</li>
+      <li><strong>Zahlungssysteme:</strong> Stripe, PayPal, Mollie</li>
+      <li><strong>CRM & Marketing:</strong> HubSpot, Zoho, Mailchimp, Brevo</li>
+      <li>
+        <strong>AI & Automation:</strong> OpenAI Chatbots, DeepL Übersetzungen
+      </li>
+      <li><strong>Buchhaltung:</strong> LexOffice, FastBill</li>
+      <li><strong>Shops:</strong> Shopify, WooCommerce</li>
+    </ul>
 
-      .border-gradient-to-r {
-        border-image-slice: 1;
-        border-image-source: linear-gradient(to right, #9c27b0, #03a9f4);
-      }
+    <h2
+      class="text-center text-3xl md:text-4xl font-extrabold mt-36 mb-12"
+      style="line-height: 1.3;"
+    >
+      Systeme, die dir Arbeit abnehmen.
+    </h2>
 
-      /* Container for the entire image, gradient, and shadow */
-      .profile-container {
-        transform: translateX(-150%); /* Start off-screen to the left */
-        opacity: 0; /* Initially hidden */
-        transition:
-          transform 1.5s ease-out,
-          opacity 1.5s ease-out;
-      }
+    <p class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-4">
+      Ich bringe Tools und KI direkt auf deine Website – für echte Erleichterung
+      und <span class="text-gradient font-semibold"
+        >neue digitale Möglichkeiten</span
+      >.
+    </p>
 
-      /* Trigger the animation when the page loads */
-      .profile-container {
-        animation: flyInFromLeft 1.5s forwards;
-      }
+    <!-- Warum mit mir arbeiten Abschnitt -->
+    <h2
+      class="text-center text-4xl md:text-5xl font-extrabold mt-36 mb-24 mx-2"
+      style="line-height: 1.3;"
+    >
+      Warum mit mir arbeiten?
+    </h2>
 
-      /* Keyframes for the fly-in effect */
-      @keyframes flyInFromLeft {
-        0% {
-          transform: translateX(-150%);
-          opacity: 0;
+    <div
+      class="w-11/12 md:w-10/12 lg:w-8/12 mx-auto flex flex-col md:flex-row items-center mb-24"
+    >
+      <!-- Handybildabschnitt für Desktop links -->
+      <div
+        class="w-full md:w-5/12 flex justify-center md:justify-center mb-12 md:mb-0 rounded shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] phone-container-second"
+      >
+        <img
+          src="/images/projects/studio-d-termin.webp"
+          alt="Shopify Screenshot Kollektion"
+          class="w-80 md:w-auto md:max-h-[60vh] object-contain rounded-lg"
+        />
+      </div>
+
+      <!-- Textabschnitt für Desktop rechts -->
+      <div class="w-full md:w-5/12 text-center md:text-left">
+        <p class="text-xl md:text-2xl mt-4">
+          Ich entwickle keine Spielereien – sondern <span class="text-gradient"
+            >digitale Lösungen mit Mehrwert</span
+          >. Von der Idee bis zur Umsetzung bekommst du alles aus einer Hand.
+        </p>
+
+        <p class="text-xl md:text-2xl mt-8">
+          Egal ob du Prozesse automatisieren oder deinen Kunden smarte
+          Funktionen bieten willst – wir starten mit einer <span
+            class="underline-animation"
+            >kostenlosen Analyse deiner Anforderungen</span
+          >.
+        </p>
+
+        <p class="text-xl md:text-2xl mt-8">
+          <span class="text-gradient font-semibold"
+            >Weniger Aufwand, mehr Wirkung</span
+          > – so funktioniert moderne Webentwicklung.
+        </p>
+
+        <!-- Buttons at the bottom-right -->
+        <div
+          class="flex flex-col md:flex-row gap-6 mt-8 md:mt-16 justify-center md:justify-start items-center md:items-start w-full md:w-auto"
+        >
+          <!-- Secondary Button -->
+          <a
+            href="/projekte"
+            class="bg-[#1f1235] text-white font-bold py-4 px-10 rounded-full border-2 border-[#6d87d1] shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-500 hover:shadow-[0_0_10px_rgba(147,112,219,0.5),_0_0_25px_rgba(3,169,244,0.4)] text-center w-full max-w-xs md:max-w-none md:w-auto"
+          >
+            Projekte erleben
+          </a>
+
+          <!-- Primary Button -->
+          <a
+            href="/kontakt"
+            class="relative inline-block py-4 px-10 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-white text-[#090a1a] shadow-lg transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_rgba(147,112,219,0.8),_0_0_35px_rgba(3,169,244,0.6)] hover:border-[#6d87d1]"
+          >
+            Gratis Analyse
+          </a>
+        </div>
+      </div>
+
+      <style>
+        .text-gradient {
+          background: linear-gradient(to right, #9c27b0, #03a9f4);
+          -webkit-background-clip: text;
+          color: transparent;
         }
-        100% {
-          transform: translateX(0);
-          opacity: 1;
+
+        .drop-shadow-lg {
+          filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
         }
-      }
 
-      /* Container for the entire image and shadow */
-      .phone-container {
-        transform: translateX(-150%); /* Start off-screen to the left */
-        opacity: 0; /* Initially hidden */
-        transition:
-          transform 1.5s ease-out,
-          opacity 1.5s ease-out; /* Remove delay for mobile */
-      }
+        .border-gradient-to-r {
+          border-image-slice: 1;
+          border-image-source: linear-gradient(to right, #9c27b0, #03a9f4);
+        }
 
-      /* Fly in effect */
-      .fly-in {
-        transform: translateX(0);
-        opacity: 1;
-      }
+        /* Container for the entire image, gradient, and shadow */
+        .profile-container {
+          transform: translateX(-150%); /* Start off-screen to the left */
+          opacity: 0; /* Initially hidden */
+          transition:
+            transform 1.5s ease-out,
+            opacity 1.5s ease-out;
+        }
 
-      /* Keyframes for desktop (initial load) */
-      @media (min-width: 768px) {
+        /* Trigger the animation when the page loads */
+        .profile-container {
+          animation: flyInFromLeft 1.5s forwards;
+        }
+
+        /* Keyframes for the fly-in effect */
+        @keyframes flyInFromLeft {
+          0% {
+            transform: translateX(-150%);
+            opacity: 0;
+          }
+          100% {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+
+        /* Container for the entire image and shadow */
         .phone-container {
-          animation: flyInFromLeftPhone 1.5s forwards 0.5s; /* Keep delay on desktop */
+          transform: translateX(-150%); /* Start off-screen to the left */
+          opacity: 0; /* Initially hidden */
+          transition:
+            transform 1.5s ease-out,
+            opacity 1.5s ease-out; /* Remove delay for mobile */
         }
 
-        .underline-animation {
-          display: inline-block;
-          background-image: linear-gradient(120deg, #03a9f4, #9c27b0);
-          background-repeat: no-repeat;
-          background-size: 100% 3px;
-          background-position: 0 88%;
-          transition: background-size 0.3s ease-in-out;
-        }
-
-        .underline-animation:hover {
-          background-size: 100% 100%;
-        }
-      }
-
-      /* Keyframes for mobile (on scroll) */
-      @keyframes flyInFromLeftPhone {
-        0% {
-          transform: translateX(-150%);
-          opacity: 0;
-        }
-        100% {
+        /* Fly in effect */
+        .fly-in {
           transform: translateX(0);
           opacity: 1;
         }
-      }
 
-      /* Initial state for the second phone container */
-      .phone-container-second {
-        transform: translateX(-150%); /* Positioned off-screen to the left */
-        opacity: 0; /* Initially hidden */
-        transition:
-          transform 1.5s ease-out,
-          opacity 1.5s ease-out;
-      }
+        /* Keyframes for desktop (initial load) */
+        @media (min-width: 768px) {
+          .phone-container {
+            animation: flyInFromLeftPhone 1.5s forwards 0.5s; /* Keep delay on desktop */
+          }
 
-      /* Fly-in effect when in view */
-      .fly-in-second {
-        transform: translateX(0); /* Return to original position */
-        opacity: 1; /* Fully visible */
-      }
-    </style>
+          .underline-animation {
+            display: inline-block;
+            background-image: linear-gradient(120deg, #03a9f4, #9c27b0);
+            background-repeat: no-repeat;
+            background-size: 100% 3px;
+            background-position: 0 88%;
+            transition: background-size 0.3s ease-in-out;
+          }
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const phoneImage = document.querySelector(".phone-container")
-
-        // Detect if the element is in view for mobile
-        function isInViewPort(element) {
-          const rect = element.getBoundingClientRect()
-          return (
-            rect.top <=
-              (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.bottom >= 0
-          )
+          .underline-animation:hover {
+            background-size: 100% 100%;
+          }
         }
 
-        // Add event listener for scroll to trigger the animation
-        window.addEventListener("scroll", function () {
-          if (window.innerWidth < 768) {
-            // Only apply for mobile view
-            if (isInViewPort(phoneImage)) {
-              phoneImage.classList.add("fly-in")
+        /* Keyframes for mobile (on scroll) */
+        @keyframes flyInFromLeftPhone {
+          0% {
+            transform: translateX(-150%);
+            opacity: 0;
+          }
+          100% {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+
+        /* Initial state for the second phone container */
+        .phone-container-second {
+          transform: translateX(-150%); /* Positioned off-screen to the left */
+          opacity: 0; /* Initially hidden */
+          transition:
+            transform 1.5s ease-out,
+            opacity 1.5s ease-out;
+        }
+
+        /* Fly-in effect when in view */
+        .fly-in-second {
+          transform: translateX(0); /* Return to original position */
+          opacity: 1; /* Fully visible */
+        }
+      </style>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const phoneImage = document.querySelector(".phone-container")
+
+          // Detect if the element is in view for mobile
+          function isInViewPort(element) {
+            const rect = element.getBoundingClientRect()
+            return (
+              rect.top <=
+                (window.innerHeight || document.documentElement.clientHeight) &&
+              rect.bottom >= 0
+            )
+          }
+
+          // Add event listener for scroll to trigger the animation
+          window.addEventListener("scroll", function () {
+            if (window.innerWidth < 768) {
+              // Only apply for mobile view
+              if (isInViewPort(phoneImage)) {
+                phoneImage.classList.add("fly-in")
+              }
+            }
+          })
+        })
+
+        document.addEventListener("DOMContentLoaded", function () {
+          const secondPhoneImage = document.querySelector(
+            ".phone-container-second"
+          )
+
+          // Function to check if the element is in the viewport
+          function isInViewPort(element) {
+            const rect = element.getBoundingClientRect()
+            return (
+              rect.top <=
+                (window.innerHeight || document.documentElement.clientHeight) &&
+              rect.bottom >= 0
+            )
+          }
+
+          // Function to add the fly-in class when in view
+          function handleScroll() {
+            if (isInViewPort(secondPhoneImage)) {
+              secondPhoneImage.classList.add("fly-in-second")
             }
           }
+
+          // Add scroll event listener
+          window.addEventListener("scroll", handleScroll)
+
+          // Run on page load in case the element is already in view
+          handleScroll()
         })
-      })
-
-      document.addEventListener("DOMContentLoaded", function () {
-        const secondPhoneImage = document.querySelector(
-          ".phone-container-second"
-        )
-
-        // Function to check if the element is in the viewport
-        function isInViewPort(element) {
-          const rect = element.getBoundingClientRect()
-          return (
-            rect.top <=
-              (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.bottom >= 0
-          )
-        }
-
-        // Function to add the fly-in class when in view
-        function handleScroll() {
-          if (isInViewPort(secondPhoneImage)) {
-            secondPhoneImage.classList.add("fly-in-second")
-          }
-        }
-
-        // Add scroll event listener
-        window.addEventListener("scroll", handleScroll)
-
-        // Run on page load in case the element is already in view
-        handleScroll()
-      })
-    </script>
+      </script>
+    </div>
   </div>
 </MainLayout>

@@ -5,27 +5,28 @@ import IpadComponent from "../../components/IpadComponent.astro"
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Product",
-  "name": "Branding & Printdesign",
-  "description": "Ich entwickle starkes CI – mit Logo, Corporate Design und hochwertigen Printmaterialien. Für Unternehmen, die Eindruck machen wollen.",
-  "image": "https://maxwapp.de/images/maxwapp-visitenkarte.webp",
-  "brand": {
+  name: "Branding & Printdesign",
+  description:
+    "Ich entwickle starkes CI – mit Logo, Corporate Design und hochwertigen Printmaterialien. Für Unternehmen, die Eindruck machen wollen.",
+  image: "https://maxwapp.de/images/maxwapp-visitenkarte.webp",
+  brand: {
     "@type": "Brand",
-    "name": "maxWapp"
+    name: "maxWapp",
   },
-  "offers": {
+  offers: {
     "@type": "Offer",
-    "priceCurrency": "EUR",
-    "price": "900",
-    "availability": "https://schema.org/InStock",
-    "url": "https://maxwapp.de/services/branding-und-printdesign/"
-  }
-};
+    priceCurrency: "EUR",
+    price: "900",
+    availability: "https://schema.org/InStock",
+    url: "https://maxwapp.de/services/branding-und-printdesign/",
+  },
+}
 ---
 
 <MainLayout
   title="Branding & Printdesign aus München – visuell stark & strategisch durchdacht | maxWapp"
-  seoTitle="Branding & Printdesign aus München – Logo & CI | maxWapp"
-  seoDesc="Ich entwickle starkes CI – mit Logo, Corporate Design und hochwertigen Printmaterialien. Für Unternehmen, die Eindruck machen wollen."
+  seoTitle="CI & Printdesign in München – Visitenkarten & Flyer | maxWapp"
+  seoDesc="Professionelles Branding & Printdesign in München: Logo erstellen lassen, Visitenkarten mit QR-Code, Flyer gestalten & drucken. Corporate Identity für starke Marken."
 >
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   <!-- Hintergrund mit Verlauf -->
@@ -38,6 +39,20 @@ const jsonLd = {
     >
       Branding & Printdesign
     </h1>
+
+    <p class="sr-only">
+      Flyer erstellen, Flyer Design, Flyer designen lassen – ich unterstütze
+      dich beim professionellen Druck & Gestaltung deiner Flyer. Auch für
+      Visitenkarten mit QR-Code oder digitale Visitenkarten bin ich dein
+      Ansprechpartner. Du suchst ein Logo Redesign oder willst ein neues Logo
+      erstellen lassen? Als Agentur für Corporate Identity und Corporate Design
+      in München biete ich ganzheitliche Lösungen. Ich kümmere mich auch um den
+      Druck deiner Printmaterialien. Ich helfe dir beim Flyer drucken sowie beim
+      Visitenkarten Design – auch mit QR-Code. Alles rund um Corporate Identity
+      Design & Corporate Design aus einer Hand – auch Logo Redesign für
+      bestehende Marken. Als Corporate Identity Agentur in München unterstütze
+      ich dich ganzheitlich.
+    </p>
 
     <div
       class="flex flex-col items-center md:flex-row md:justify-center md:items-center md:space-x-32 mt-12"
@@ -63,9 +78,7 @@ const jsonLd = {
         </p>
 
         <!-- Hauptmotto -->
-        <p
-          class="mt-4 text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500"
-        >
+        <p class="mt-4 text-5xl md:text-6xl font-extrabold">
           <span>Max</span><br />
           <span>Wapp</span>
         </p>
@@ -90,26 +103,29 @@ const jsonLd = {
       <!-- Textabschnitt für Desktop rechts -->
       <div class="w-full md:w-5/12 text-center md:text-left">
         <p class="text-xl md:text-2xl mt-4">
-          Deine Marke ist mehr als nur ein Logo – sie ist das Gefühl, das du bei deiner Zielgruppe auslöst. Ich helfe dir, diese Wirkung bewusst zu gestalten.
-
+          Deine Marke ist mehr als nur ein Logo – sie ist das Gefühl, das du bei
+          deiner Zielgruppe auslöst. Ich helfe dir, diese Wirkung bewusst zu
+          gestalten.
         </p>
 
         <p class="text-xl md:text-2xl mt-8">
-          Ob <strong>durchdachtes Branding</strong>, <strong>starkes visuelles Konzept</strong> oder <strong>professionelle Printmaterialien</strong> – ich mache deine Marke sichtbar, wiedererkennbar und vertrauenswürdig.
-
+          Ob <strong>durchdachtes Branding</strong>, <strong
+            >starkes visuelles Konzept</strong
+          > oder <strong>professionelle Printmaterialien</strong> – ich mache deine
+          Marke sichtbar, wiedererkennbar und vertrauenswürdig.
         </p>
 
         <p class="text-xl md:text-2xl mt-8">
-          Vom Logo bis zur Visitenkarte bekommst du alles aus einer Hand – <span class="text-gradient font-semibold">kreativ, stimmig & individuell auf dein Business abgestimmt</span>.
-
+          Vom Logo bis zur Visitenkarte bekommst du alles aus einer Hand – <span
+            class="text-gradient font-semibold"
+            >kreativ, stimmig & individuell auf dein Business abgestimmt</span
+          >.
         </p>
       </div>
     </div>
 
     <!-- Was ich biete Abschnitt mit Karten -->
-    <h2
-      class="text-center text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 my-24"
-    >
+    <h2 class="text-center text-4xl md:text-5xl font-extrabold my-24">
       Was ich biete
     </h2>
 
@@ -126,8 +142,10 @@ const jsonLd = {
         </div>
         <h4 class="text-3xl font-bold text-white mb-6">Konzeptentwicklung</h4>
         <p class="text-lg text-gray-300 leading-relaxed">
-          Ich entwickle visuelle Konzepte, die deine Werte, Ziele und Zielgruppe widerspiegeln. So entsteht ein <strong>einheitlicher Markenauftritt</strong> mit Klarheit und Charakter.
-
+          Ich entwickle visuelle Konzepte, die deine Werte, Ziele und Zielgruppe
+          widerspiegeln. So entsteht ein <strong
+            >einheitlicher Markenauftritt</strong
+          > mit Klarheit und Charakter.
         </p>
       </div>
 
@@ -141,8 +159,9 @@ const jsonLd = {
         </div>
         <h4 class="text-3xl font-bold text-white mb-6">Corporate Design</h4>
         <p class="text-lg text-gray-300 leading-relaxed">
-          Farbwelt, Typografie und Designrichtlinien – alles greift ineinander. Ich gestalte ein <strong>konsistentes Erscheinungsbild</strong>, das sich über alle Medien hinweg durchzieht.
-
+          Farbwelt, Typografie und Designrichtlinien – alles greift ineinander.
+          Ich gestalte ein <strong>konsistentes Erscheinungsbild</strong>, das
+          sich über alle Medien hinweg durchzieht.
         </p>
       </div>
 
@@ -156,8 +175,10 @@ const jsonLd = {
         </div>
         <h4 class="text-3xl font-bold text-white mb-6">Printdesign</h4>
         <p class="text-lg text-gray-300 leading-relaxed">
-          Von der Visitenkarte bis zur Broschüre: Ich gestalte hochwertige Druckprodukte, die Eindruck hinterlassen und <strong>dein Business professionell repräsentieren</strong>.
-
+          Von der Visitenkarte bis zur Broschüre: Ich gestalte hochwertige
+          Druckprodukte, die Eindruck hinterlassen und <strong
+            >dein Business professionell repräsentieren</strong
+          >.
         </p>
       </div>
 
@@ -169,250 +190,251 @@ const jsonLd = {
           class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
         >
         </div>
-        <h4 class="text-3xl font-bold text-white mb-6">
-          Logoerstellung
-        </h4>
+        <h4 class="text-3xl font-bold text-white mb-6">Logoerstellung</h4>
         <p class="text-lg text-gray-300 leading-relaxed">
-          Ein starkes Logo ist das Herzstück jeder Marke. Ich entwickle <strong>einzigartige Markenlogos</strong>, die auf den Punkt bringen, wer du bist – einprägsam und modern.
-
+          Ein starkes Logo ist das Herzstück jeder Marke. Ich entwickle <strong
+            >einzigartige Markenlogos</strong
+          >, die auf den Punkt bringen, wer du bist – einprägsam und modern.
         </p>
       </div>
     </div>
 
     <IpadComponent
-    imgSrc="/images/maxwapp-visitenkarte.webp"
-    imgAlt="studio-d ipad style-guide by maxWapp"
-  />
+      imgSrc="/images/maxwapp-visitenkarte.webp"
+      imgAlt="studio-d ipad style-guide by maxWapp"
+    />
 
     <h2
-      class="text-center text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 mt-36 mb-12"
+      class="text-center text-3xl md:text-4xl font-extrabold mt-36 mb-12"
       style="line-height: 1.3;"
     >
-    Dein Branding – professionell & persönlich.
-  </h2>
+      Dein Branding – professionell & persönlich.
+    </h2>
 
     <p class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-2">
-      Ich entwickle <strong>maßgeschneiderte Designs</strong>, die deine Marke unverwechselbar machen – digital & im Druck.
+      Ich entwickle <strong>maßgeschneiderte Designs</strong>, die deine Marke
+      unverwechselbar machen – digital & im Druck.
     </p>
 
-    
-
     <IpadComponent
-    imgSrc="/images/projects/studio-d-ipad-style-guide.webp"
-    imgAlt="studio-d ipad style-guide by maxWapp"
-  />
+      imgSrc="/images/projects/studio-d-ipad-style-guide.webp"
+      imgAlt="studio-d ipad style-guide by maxWapp"
+    />
 
-
-
-  <!-- Warum mit mir arbeiten Abschnitt -->
-  <h2
-    class="text-center text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 mt-36 mb-24 mx-2"
-    style="line-height: 1.3;"
-  >
-  Deine Marke. Dein Stil. Dein Auftritt.
-  </h2>
-
-  <div
-    class="w-11/12 md:w-10/12 lg:w-8/12 mx-auto flex flex-col md:flex-row items-center mb-24 md:mb-36"
-  >
-    <!-- Handybildabschnitt für Desktop links -->
-    <div
-      class="w-full md:w-6/12 flex justify-center md:justify-center mb-12 md:mb-0 rounded shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] phone-container-second"
+    <!-- Warum mit mir arbeiten Abschnitt -->
+    <h2
+      class="text-center text-4xl md:text-5xl font-extrabold mt-36 mb-24 mx-2"
+      style="line-height: 1.3;"
     >
-      <img
-        src="/images/projects/studio-d-visitenkarte.webp"
-        alt="Phone Screenshot"
-        class="w-80 md:w-auto md:max-h-[20vh] object-contain rounded-lg"
-      />
-    </div>
+      Deine Marke. Dein Stil. Dein Auftritt.
+    </h2>
 
-    <!-- Textabschnitt für Desktop rechts -->
-    <div class="w-full md:w-5/12 text-center md:text-left">
-      
-<p class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-auto">
-  Ich entwickle ein <span class="text-gradient font-semibold">Branding, das dich widerspiegelt</span> – strategisch durchdacht, visuell stark und technisch perfekt umgesetzt. Alles aus einer Hand. Alles, was bleibt, ist Eindruck.
-</p>
-
-      <!-- Buttons at the bottom-right -->
+    <div
+      class="w-11/12 md:w-10/12 lg:w-8/12 mx-auto flex flex-col md:flex-row items-center mb-24 md:mb-36"
+    >
+      <!-- Handybildabschnitt für Desktop links -->
       <div
-        class="flex flex-col md:flex-row gap-6 mt-8 md:mt-16 justify-center md:justify-start items-center md:items-start w-full md:w-auto"
+        class="w-full md:w-6/12 flex justify-center md:justify-center mb-12 md:mb-0 rounded shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] phone-container-second"
       >
-        <!-- Secondary Button -->
-        <a
-          href="/projekte"
-          class="bg-[#1f1235] text-white font-bold py-4 px-10 rounded-full border-2 border-[#6d87d1] shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-500 hover:shadow-[0_0_10px_rgba(147,112,219,0.5),_0_0_25px_rgba(3,169,244,0.4)] text-center w-full max-w-xs md:max-w-none md:w-auto"
-        >
-          Projekte erleben
-        </a>
-
-        <!-- Primary Button -->
-        <a
-          href="/kontakt"
-          class="relative inline-block py-4 px-10 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-white text-[#090a1a] shadow-lg transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_rgba(147,112,219,0.8),_0_0_35px_rgba(3,169,244,0.6)] hover:border-[#6d87d1]"
-        >
-          Let's talk
-        </a>
+        <img
+          src="/images/projects/studio-d-visitenkarte.webp"
+          alt="Phone Screenshot"
+          class="w-80 md:w-auto md:max-h-[20vh] object-contain rounded-lg"
+        />
       </div>
-    </div>
 
-    <style>
-      .text-gradient {
-        background: linear-gradient(to right, #9c27b0, #03a9f4);
-        -webkit-background-clip: text;
-        color: transparent;
-      }
+      <!-- Textabschnitt für Desktop rechts -->
+      <div class="w-full md:w-5/12 text-center md:text-left">
+        <p
+          class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-auto"
+        >
+          Ich entwickle ein <span class="text-gradient font-semibold"
+            >Branding, das dich widerspiegelt</span
+          > – strategisch durchdacht, visuell stark und technisch perfekt umgesetzt.
+          Alles aus einer Hand. Alles, was bleibt, ist Eindruck.
+        </p>
 
-      .drop-shadow-lg {
-        filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
-      }
+        <!-- Buttons at the bottom-right -->
+        <div
+          class="flex flex-col md:flex-row gap-6 mt-8 md:mt-16 justify-center md:justify-start items-center md:items-start w-full md:w-auto"
+        >
+          <!-- Secondary Button -->
+          <a
+            href="/projekte"
+            class="bg-[#1f1235] text-white font-bold py-4 px-10 rounded-full border-2 border-[#6d87d1] shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-500 hover:shadow-[0_0_10px_rgba(147,112,219,0.5),_0_0_25px_rgba(3,169,244,0.4)] text-center w-full max-w-xs md:max-w-none md:w-auto"
+          >
+            Projekte erleben
+          </a>
 
-      .border-gradient-to-r {
-        border-image-slice: 1;
-        border-image-source: linear-gradient(to right, #9c27b0, #03a9f4);
-      }
+          <!-- Primary Button -->
+          <a
+            href="/kontakt"
+            class="relative inline-block py-4 px-10 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-white text-[#090a1a] shadow-lg transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_rgba(147,112,219,0.8),_0_0_35px_rgba(3,169,244,0.6)] hover:border-[#6d87d1]"
+          >
+            Let's talk
+          </a>
+        </div>
+      </div>
 
-      /* Container for the entire image, gradient, and shadow */
-      .profile-container {
-        transform: translateX(-150%); /* Start off-screen to the left */
-        opacity: 0; /* Initially hidden */
-        transition:
-          transform 1.5s ease-out,
-          opacity 1.5s ease-out;
-      }
-
-      /* Trigger the animation when the page loads */
-      .profile-container {
-        animation: flyInFromLeft 1.5s forwards;
-      }
-
-      /* Keyframes for the fly-in effect */
-      @keyframes flyInFromLeft {
-        0% {
-          transform: translateX(-150%);
-          opacity: 0;
+      <style>
+        .text-gradient {
+          background: linear-gradient(to right, #9c27b0, #03a9f4);
+          -webkit-background-clip: text;
+          color: transparent;
         }
-        100% {
-          transform: translateX(0);
-          opacity: 1;
+
+        .drop-shadow-lg {
+          filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
         }
-      }
 
-      /* Container for the entire image and shadow */
-      .phone-container {
-        transform: translateX(-150%); /* Start off-screen to the left */
-        opacity: 0; /* Initially hidden */
-        transition:
-          transform 1.5s ease-out,
-          opacity 1.5s ease-out; /* Remove delay for mobile */
-      }
+        .border-gradient-to-r {
+          border-image-slice: 1;
+          border-image-source: linear-gradient(to right, #9c27b0, #03a9f4);
+        }
 
-      /* Fly in effect */
-      .fly-in {
-        transform: translateX(0);
-        opacity: 1;
-      }
+        /* Container for the entire image, gradient, and shadow */
+        .profile-container {
+          transform: translateX(-150%); /* Start off-screen to the left */
+          opacity: 0; /* Initially hidden */
+          transition:
+            transform 1.5s ease-out,
+            opacity 1.5s ease-out;
+        }
 
-      /* Keyframes for desktop (initial load) */
-      @media (min-width: 768px) {
+        /* Trigger the animation when the page loads */
+        .profile-container {
+          animation: flyInFromLeft 1.5s forwards;
+        }
+
+        /* Keyframes for the fly-in effect */
+        @keyframes flyInFromLeft {
+          0% {
+            transform: translateX(-150%);
+            opacity: 0;
+          }
+          100% {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+
+        /* Container for the entire image and shadow */
         .phone-container {
-          animation: flyInFromLeftPhone 1.5s forwards 0.5s; /* Keep delay on desktop */
+          transform: translateX(-150%); /* Start off-screen to the left */
+          opacity: 0; /* Initially hidden */
+          transition:
+            transform 1.5s ease-out,
+            opacity 1.5s ease-out; /* Remove delay for mobile */
         }
 
-        .underline-animation {
-          display: inline-block;
-          background-image: linear-gradient(120deg, #03a9f4, #9c27b0);
-          background-repeat: no-repeat;
-          background-size: 100% 3px;
-          background-position: 0 88%;
-          transition: background-size 0.3s ease-in-out;
-        }
-
-        .underline-animation:hover {
-          background-size: 100% 100%;
-        }
-      }
-
-      /* Keyframes for mobile (on scroll) */
-      @keyframes flyInFromLeftPhone {
-        0% {
-          transform: translateX(-150%);
-          opacity: 0;
-        }
-        100% {
+        /* Fly in effect */
+        .fly-in {
           transform: translateX(0);
           opacity: 1;
         }
-      }
 
-      /* Initial state for the second phone container */
-      .phone-container-second {
-        transform: translateX(-150%); /* Positioned off-screen to the left */
-        opacity: 0; /* Initially hidden */
-        transition:
-          transform 1.5s ease-out,
-          opacity 1.5s ease-out;
-      }
+        /* Keyframes for desktop (initial load) */
+        @media (min-width: 768px) {
+          .phone-container {
+            animation: flyInFromLeftPhone 1.5s forwards 0.5s; /* Keep delay on desktop */
+          }
 
-      /* Fly-in effect when in view */
-      .fly-in-second {
-        transform: translateX(0); /* Return to original position */
-        opacity: 1; /* Fully visible */
-      }
-    </style>
+          .underline-animation {
+            display: inline-block;
+            background-image: linear-gradient(120deg, #03a9f4, #9c27b0);
+            background-repeat: no-repeat;
+            background-size: 100% 3px;
+            background-position: 0 88%;
+            transition: background-size 0.3s ease-in-out;
+          }
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const phoneImage = document.querySelector(".phone-container")
-
-        // Detect if the element is in view for mobile
-        function isInViewPort(element) {
-          const rect = element.getBoundingClientRect()
-          return (
-            rect.top <=
-              (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.bottom >= 0
-          )
+          .underline-animation:hover {
+            background-size: 100% 100%;
+          }
         }
 
-        // Add event listener for scroll to trigger the animation
-        window.addEventListener("scroll", function () {
-          if (window.innerWidth < 768) {
-            // Only apply for mobile view
-            if (isInViewPort(phoneImage)) {
-              phoneImage.classList.add("fly-in")
+        /* Keyframes for mobile (on scroll) */
+        @keyframes flyInFromLeftPhone {
+          0% {
+            transform: translateX(-150%);
+            opacity: 0;
+          }
+          100% {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+
+        /* Initial state for the second phone container */
+        .phone-container-second {
+          transform: translateX(-150%); /* Positioned off-screen to the left */
+          opacity: 0; /* Initially hidden */
+          transition:
+            transform 1.5s ease-out,
+            opacity 1.5s ease-out;
+        }
+
+        /* Fly-in effect when in view */
+        .fly-in-second {
+          transform: translateX(0); /* Return to original position */
+          opacity: 1; /* Fully visible */
+        }
+      </style>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const phoneImage = document.querySelector(".phone-container")
+
+          // Detect if the element is in view for mobile
+          function isInViewPort(element) {
+            const rect = element.getBoundingClientRect()
+            return (
+              rect.top <=
+                (window.innerHeight || document.documentElement.clientHeight) &&
+              rect.bottom >= 0
+            )
+          }
+
+          // Add event listener for scroll to trigger the animation
+          window.addEventListener("scroll", function () {
+            if (window.innerWidth < 768) {
+              // Only apply for mobile view
+              if (isInViewPort(phoneImage)) {
+                phoneImage.classList.add("fly-in")
+              }
+            }
+          })
+        })
+
+        document.addEventListener("DOMContentLoaded", function () {
+          const secondPhoneImage = document.querySelector(
+            ".phone-container-second"
+          )
+
+          // Function to check if the element is in the viewport
+          function isInViewPort(element) {
+            const rect = element.getBoundingClientRect()
+            return (
+              rect.top <=
+                (window.innerHeight || document.documentElement.clientHeight) &&
+              rect.bottom >= 0
+            )
+          }
+
+          // Function to add the fly-in class when in view
+          function handleScroll() {
+            if (isInViewPort(secondPhoneImage)) {
+              secondPhoneImage.classList.add("fly-in-second")
             }
           }
+
+          // Add scroll event listener
+          window.addEventListener("scroll", handleScroll)
+
+          // Run on page load in case the element is already in view
+          handleScroll()
         })
-      })
-
-      document.addEventListener("DOMContentLoaded", function () {
-        const secondPhoneImage = document.querySelector(
-          ".phone-container-second"
-        )
-
-        // Function to check if the element is in the viewport
-        function isInViewPort(element) {
-          const rect = element.getBoundingClientRect()
-          return (
-            rect.top <=
-              (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.bottom >= 0
-          )
-        }
-
-        // Function to add the fly-in class when in view
-        function handleScroll() {
-          if (isInViewPort(secondPhoneImage)) {
-            secondPhoneImage.classList.add("fly-in-second")
-          }
-        }
-
-        // Add scroll event listener
-        window.addEventListener("scroll", handleScroll)
-
-        // Run on page load in case the element is already in view
-        handleScroll()
-      })
-    </script>
+      </script>
+    </div>
   </div>
 </MainLayout>

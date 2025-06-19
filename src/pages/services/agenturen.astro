@@ -4,32 +4,42 @@ import MainLayout from "../../layouts/MainLayout.astro"
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Freelance Webentwicklung für Agenturen",
-  "description": "Ich unterstütze Agenturen flexibel bei Webprojekten – mit Expertise in WordPress, Astro, Frontend, Schnittstellen und Mobile Development.",
-  "provider": {
+  name: "Freelance Webentwicklung für Agenturen",
+  description:
+    "Ich unterstütze Agenturen flexibel bei Webprojekten – mit Expertise in WordPress, Astro, Frontend, Schnittstellen und Mobile Development.",
+  provider: {
     "@type": "Organization",
-    "name": "maxWapp",
-    "url": "https://maxwapp.de"
+    name: "maxWapp",
+    url: "https://maxwapp.de",
   },
-  "areaServed": {
+  areaServed: {
     "@type": "Place",
-    "name": "Deutschland, Österreich, Schweiz"
+    name: "Deutschland, Österreich, Schweiz",
   },
-  "offers": {
+  offers: {
     "@type": "Offer",
-    "priceCurrency": "EUR",
-    "price": "900",
-    "availability": "https://schema.org/InStock",
-    "url": "https://maxwapp.de/services/agenturen/"
-  }
-};
+    priceCurrency: "EUR",
+    price: "900",
+    availability: "https://schema.org/InStock",
+    url: "https://maxwapp.de/services/agenturen/",
+  },
+}
 ---
 
 <MainLayout
   title="Freelancer für Agenturen – Webentwicklung, Design & Schnittstellen | maxWapp"
-  seoTitle="Freelance Webdesigner für Agenturen | WordPress & Astro"
-  seoDesc="Ich unterstütze Agenturen als Partner & Freelancer mit Webentwicklung, Spezialisiert auf WordPress, Astro, UI/UX & moderne Technologien."
+  seoTitle="Freelancer für Agenturen | WordPress Webentwicklung München"
+  seoDesc="Webentwickler & WordPress Freelancer in München – Unterstützung für Agenturen bei Webdesign, UI/UX, Website Betreuung & API-Integration."
 >
+  <p class="sr-only">
+    Du brauchst Web Applikation Entwicklung? Oder du suchst einen WordPress
+    Freelancer, UX Designer oder Webentwickler in München? Ich unterstütze
+    Agenturen mit professionellem Webdesign, WordPress Programmierung, Website
+    Betreuung und individuellen Schnittstellen. Als erfahrener UI/UX Designer
+    entwickle ich performante Websites und moderne Komponenten. Ob komplette
+    Projektumsetzung oder technische Unterstützung – ich bin dein Partner für
+    professionelle Webentwicklung.
+  </p>
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   <!-- Hintergrund mit Verlauf -->
   <div
@@ -39,7 +49,7 @@ const jsonLd = {
     <h1
       class="text-center text-4xl md:text-6xl font-bold text-gray-100 drop-shadow-lg mt-12 md:mb-12 md:mt-36"
     >
-    Für Agenturen
+      Für Agenturen
     </h1>
 
     <div
@@ -66,9 +76,7 @@ const jsonLd = {
         </p>
 
         <!-- Hauptmotto -->
-        <p
-          class="mt-4 text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500"
-        >
+        <p class="mt-4 text-5xl md:text-6xl font-extrabold">
           <span>Max</span><br />
           <span>Wapp</span>
         </p>
@@ -76,35 +84,37 @@ const jsonLd = {
     </div>
 
     <h2
-    class="text-center text-3xl md:text-4xl font-extrabold text-gray-100 bg-clip-text mt-36 mb-12 mx-2"
-    style="line-height: 1.3;"
-  >
-  Freelance Support  </h2>
+      class="text-center text-3xl md:text-4xl font-extrabold text-gray-100 bg-clip-text mt-36 mb-12 mx-2"
+      style="line-height: 1.3;"
+    >
+      Freelance Support
+    </h2>
 
-  <p class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-2">
-    Du suchst temporäre Verstärkung oder ein zuverlässiges externes Teammitglied? Ich unterstütze Agenturen flexibel und kompetent – mit technischem Know-how, Design-Verständnis und einem Blick fürs Wesentliche.
+    <p class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-2">
+      Du suchst temporäre Verstärkung oder ein zuverlässiges externes
+      Teammitglied? Ich unterstütze Agenturen flexibel und kompetent – mit
+      technischem Know-how, Design-Verständnis und einem Blick fürs Wesentliche.
+    </p>
 
-  </p>
+    <p
+      class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-2 mt-8"
+    >
+      Egal ob <strong>komplette Projektumsetzung</strong>, <strong
+        >UI-Komponenten</strong
+      >, <strong>Mobile App</strong> oder <strong>API-Schnittstelle</strong> – ich
+      bringe mich strukturiert ein und arbeite lösungsorientiert.
+    </p>
 
-
-<p
-  class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-2 mt-8"
->
-Egal ob <strong>komplette Projektumsetzung</strong>, <strong>UI-Komponenten</strong>, <strong>Mobile App</strong> oder <strong>API-Schnittstelle</strong> – ich bringe mich strukturiert ein und arbeite lösungsorientiert.
-
-</p>
-
-<p
-  class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-2 mt-6"
->
-<span class="text-gradient font-semibold">WordPress, Astro, UI/UX, CSS, HTML, JS, iOS, Android, Python & KI</span> – ich setze auf moderne Technologien und liefere Ergebnisse, die überzeugen.
-
-</p>
+    <p
+      class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-2 mt-6"
+    >
+      <span class="text-gradient font-semibold"
+        >WordPress, Astro, UI/UX, CSS, HTML, JS, iOS, Android, Python & KI</span
+      > – ich setze auf moderne Technologien und liefere Ergebnisse, die überzeugen.
+    </p>
 
     <!-- Was ich biete Abschnitt mit Karten -->
-    <h2
-      class="text-center text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 my-24"
-    >
+    <h2 class="text-center text-4xl md:text-5xl font-extrabold my-24">
       Was ich biete
     </h2>
 
@@ -119,10 +129,13 @@ Egal ob <strong>komplette Projektumsetzung</strong>, <strong>UI-Komponenten</str
           class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
         >
         </div>
-        <h4 class="text-3xl font-bold text-white mb-6">Frontend & UI-Komponenten</h4>
+        <h4 class="text-3xl font-bold text-white mb-6">
+          Frontend & UI-Komponenten
+        </h4>
         <p class="text-lg text-gray-300 leading-relaxed">
-          Von kleinen Modulen bis zu komplexen Interfaces – ich entwickle performante, responsive und wartbare Komponenten mit Fokus auf Nutzererlebnis und Accessibility.
-
+          Von kleinen Modulen bis zu komplexen Interfaces – ich entwickle
+          performante, responsive und wartbare Komponenten mit Fokus auf
+          Nutzererlebnis und Accessibility.
         </p>
       </div>
 
@@ -136,8 +149,8 @@ Egal ob <strong>komplette Projektumsetzung</strong>, <strong>UI-Komponenten</str
         </div>
         <h4 class="text-3xl font-bold text-white mb-6">WordPress & Astro</h4>
         <p class="text-lg text-gray-300 leading-relaxed">
-          Maßgeschneiderte Themes und moderne Static-Sites – ich bringe dein Design pixelgenau ins Web. Schnell, sicher und zukunftsfähig.
-
+          Maßgeschneiderte Themes und moderne Static-Sites – ich bringe dein
+          Design pixelgenau ins Web. Schnell, sicher und zukunftsfähig.
         </p>
       </div>
 
@@ -149,10 +162,12 @@ Egal ob <strong>komplette Projektumsetzung</strong>, <strong>UI-Komponenten</str
           class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
         >
         </div>
-        <h4 class="text-3xl font-bold text-white mb-6">API- & KI-Integration</h4>
+        <h4 class="text-3xl font-bold text-white mb-6">
+          API- & KI-Integration
+        </h4>
         <p class="text-lg text-gray-300 leading-relaxed">
-          Ob Buchungssysteme, Schnittstellen zu CRMs oder OpenAI – ich sorge für nahtlose Verbindungen, die Arbeitsprozesse smarter machen.
-
+          Ob Buchungssysteme, Schnittstellen zu CRMs oder OpenAI – ich sorge für
+          nahtlose Verbindungen, die Arbeitsprozesse smarter machen.
         </p>
       </div>
 
@@ -168,250 +183,242 @@ Egal ob <strong>komplette Projektumsetzung</strong>, <strong>UI-Komponenten</str
           Verlässliche Zusammenarbeit
         </h4>
         <p class="text-lg text-gray-300 leading-relaxed">
-          Klare Kommunikation, transparente Zeiterfassung (z. B. mit Toggl) und zuverlässige Deadlines – so wird Freelancing zur echten Partnerschaft.
-
+          Klare Kommunikation, transparente Zeiterfassung (z. B. mit Toggl) und
+          zuverlässige Deadlines – so wird Freelancing zur echten Partnerschaft.
         </p>
       </div>
     </div>
 
+    <!-- Warum mit mir arbeiten Abschnitt -->
     <h2
-      class="text-center text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 mt-36 mb-12 mx-2"
+      class="text-center text-4xl md:text-5xl font-extrabold mt-36 mb-24 mx-2"
       style="line-height: 1.3;"
     >
-    Externe Expertise
+      Gemeinsam mehr erreichen
     </h2>
 
-    <p class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-2">
-      Für interaktive 3D-Visualisierungen und Datenlösungen arbeite ich mit <a href="https://app-bis-web.de/" target="_blank" class="underline-animation font-semibold">App bis Web</a> zusammen – ein zuverlässiger Technologiepartner für anspruchsvolle Webanwendungen mit Echtzeit-Daten.
-
-    </p>
-
-
-
-
-  <!-- Warum mit mir arbeiten Abschnitt -->
-  <h2
-    class="text-center text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 mt-36 mb-24 mx-2"
-    style="line-height: 1.3;"
-  >
-  Gemeinsam mehr erreichen
-  </h2>
-
-  <div
-    class="w-11/12 md:w-10/12 lg:w-8/12 mx-auto flex flex-col md:flex-row items-center mb-24"
-  >
-    <!-- Handybildabschnitt für Desktop links -->
     <div
-      class="w-full md:w-5/12 flex justify-center md:justify-center mb-12 md:mb-0 rounded shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] phone-container-second"
+      class="w-11/12 md:w-10/12 lg:w-8/12 mx-auto flex flex-col md:flex-row items-center mb-24"
     >
-      <img
-        src="/images/maxwapp-iphone-1.webp"
-        alt="Phone Screenshot"
-        class="w-80 md:w-auto md:max-h-[60vh] object-contain rounded-lg"
-      />
-    </div>
-
-    <!-- Textabschnitt für Desktop rechts -->
-    <div class="w-full md:w-5/12 text-center md:text-left">
-      <p class="text-xl md:text-2xl mt-4">
-        Ich bin kein reiner Coder oder nur Designer – ich denke ganzheitlich und begleite dein Webprojekt <strong>von der Idee bis zum Launch</strong>. Dabei vereine ich UI/UX-Know-how, sauberes Development und ein Gespür für Marketing.
-
-      </p>
-
-      <p class="text-xl md:text-2xl mt-8">
-        Ob neue Website, Relaunch oder individuelle Lösung – ich entwickle ein durchdachtes Konzept und setze es <span class="underline-animation">technisch präzise und verkaufsstark</span> um.
-
-      </p>
-
-      <!-- Call to Action -->
-      <p class="text-xl md:text-2xl mt-8">
-        <span
-          class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500"
-        >
-        Full Service aus einer Hand – effizient, modern und mit echtem Mehrwert für deine Kunden.
-      </span>
-      </p>
-
-      <!-- Buttons at the bottom-right -->
+      <!-- Handybildabschnitt für Desktop links -->
       <div
-        class="flex flex-col md:flex-row gap-6 mt-8 md:mt-16 justify-center md:justify-start items-center md:items-start w-full md:w-auto"
+        class="w-full md:w-5/12 flex justify-center md:justify-center mb-12 md:mb-0 rounded shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] phone-container-second"
       >
-        <!-- Secondary Button -->
-        <a
-          href="/projekte"
-          class="bg-[#1f1235] text-white font-bold py-4 px-10 rounded-full border-2 border-[#6d87d1] shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-500 hover:shadow-[0_0_10px_rgba(147,112,219,0.5),_0_0_25px_rgba(3,169,244,0.4)] text-center w-full max-w-xs md:max-w-none md:w-auto"
-        >
-          Projekte erleben
-        </a>
-
-        <!-- Primary Button -->
-        <a
-          href="/kontakt"
-          class="relative inline-block py-4 px-10 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-white text-[#090a1a] shadow-lg transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_rgba(147,112,219,0.8),_0_0_35px_rgba(3,169,244,0.6)] hover:border-[#6d87d1]"
-        >
-          Let's talk
-        </a>
+        <img
+          src="/images/maxwapp-iphone-1.webp"
+          alt="Phone Screenshot"
+          class="w-80 md:w-auto md:max-h-[60vh] object-contain rounded-lg"
+        />
       </div>
-    </div>
 
-    <style>
-      .text-gradient {
-        background: linear-gradient(to right, #9c27b0, #03a9f4);
-        -webkit-background-clip: text;
-        color: transparent;
-      }
+      <!-- Textabschnitt für Desktop rechts -->
+      <div class="w-full md:w-5/12 text-center md:text-left">
+        <p class="text-xl md:text-2xl mt-4">
+          Ich bin kein reiner Coder oder nur Designer – ich denke ganzheitlich
+          und begleite dein Webprojekt <strong
+            >von der Idee bis zum Launch</strong
+          >. Dabei vereine ich UI/UX-Know-how, sauberes Development und ein
+          Gespür für Marketing.
+        </p>
 
-      .drop-shadow-lg {
-        filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
-      }
+        <p class="text-xl md:text-2xl mt-8">
+          Ob neue Website, Relaunch oder individuelle Lösung – ich entwickle ein
+          durchdachtes Konzept und setze es <span class="underline-animation"
+            >technisch präzise und verkaufsstark</span
+          > um.
+        </p>
 
-      .border-gradient-to-r {
-        border-image-slice: 1;
-        border-image-source: linear-gradient(to right, #9c27b0, #03a9f4);
-      }
+        <!-- Call to Action -->
+        <p class="text-xl md:text-2xl mt-8">
+          <span
+            class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500"
+          >
+            Full Service aus einer Hand – effizient, modern und mit echtem
+            Mehrwert für deine Kunden.
+          </span>
+        </p>
 
-      /* Container for the entire image, gradient, and shadow */
-      .profile-container {
-        transform: translateX(-150%); /* Start off-screen to the left */
-        opacity: 0; /* Initially hidden */
-        transition:
-          transform 1.5s ease-out,
-          opacity 1.5s ease-out;
-      }
+        <!-- Buttons at the bottom-right -->
+        <div
+          class="flex flex-col md:flex-row gap-6 mt-8 md:mt-16 justify-center md:justify-start items-center md:items-start w-full md:w-auto"
+        >
+          <!-- Secondary Button -->
+          <a
+            href="/projekte"
+            class="bg-[#1f1235] text-white font-bold py-4 px-10 rounded-full border-2 border-[#6d87d1] shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-500 hover:shadow-[0_0_10px_rgba(147,112,219,0.5),_0_0_25px_rgba(3,169,244,0.4)] text-center w-full max-w-xs md:max-w-none md:w-auto"
+          >
+            Projekte erleben
+          </a>
 
-      /* Trigger the animation when the page loads */
-      .profile-container {
-        animation: flyInFromLeft 1.5s forwards;
-      }
+          <!-- Primary Button -->
+          <a
+            href="/kontakt"
+            class="relative inline-block py-4 px-10 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-white text-[#090a1a] shadow-lg transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_rgba(147,112,219,0.8),_0_0_35px_rgba(3,169,244,0.6)] hover:border-[#6d87d1]"
+          >
+            Let's talk
+          </a>
+        </div>
+      </div>
 
-      /* Keyframes for the fly-in effect */
-      @keyframes flyInFromLeft {
-        0% {
-          transform: translateX(-150%);
-          opacity: 0;
+      <style>
+        .text-gradient {
+          background: linear-gradient(to right, #9c27b0, #03a9f4);
+          -webkit-background-clip: text;
+          color: transparent;
         }
-        100% {
-          transform: translateX(0);
-          opacity: 1;
+
+        .drop-shadow-lg {
+          filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
         }
-      }
 
-      /* Container for the entire image and shadow */
-      .phone-container {
-        transform: translateX(-150%); /* Start off-screen to the left */
-        opacity: 0; /* Initially hidden */
-        transition:
-          transform 1.5s ease-out,
-          opacity 1.5s ease-out; /* Remove delay for mobile */
-      }
+        .border-gradient-to-r {
+          border-image-slice: 1;
+          border-image-source: linear-gradient(to right, #9c27b0, #03a9f4);
+        }
 
-      /* Fly in effect */
-      .fly-in {
-        transform: translateX(0);
-        opacity: 1;
-      }
+        /* Container for the entire image, gradient, and shadow */
+        .profile-container {
+          transform: translateX(-150%); /* Start off-screen to the left */
+          opacity: 0; /* Initially hidden */
+          transition:
+            transform 1.5s ease-out,
+            opacity 1.5s ease-out;
+        }
 
-      /* Keyframes for desktop (initial load) */
-      @media (min-width: 768px) {
+        /* Trigger the animation when the page loads */
+        .profile-container {
+          animation: flyInFromLeft 1.5s forwards;
+        }
+
+        /* Keyframes for the fly-in effect */
+        @keyframes flyInFromLeft {
+          0% {
+            transform: translateX(-150%);
+            opacity: 0;
+          }
+          100% {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+
+        /* Container for the entire image and shadow */
         .phone-container {
-          animation: flyInFromLeftPhone 1.5s forwards 0.5s; /* Keep delay on desktop */
+          transform: translateX(-150%); /* Start off-screen to the left */
+          opacity: 0; /* Initially hidden */
+          transition:
+            transform 1.5s ease-out,
+            opacity 1.5s ease-out; /* Remove delay for mobile */
         }
 
-        .underline-animation {
-          display: inline-block;
-          background-image: linear-gradient(120deg, #03a9f4, #9c27b0);
-          background-repeat: no-repeat;
-          background-size: 100% 3px;
-          background-position: 0 88%;
-          transition: background-size 0.3s ease-in-out;
-        }
-
-        .underline-animation:hover {
-          background-size: 100% 100%;
-        }
-      }
-
-      /* Keyframes for mobile (on scroll) */
-      @keyframes flyInFromLeftPhone {
-        0% {
-          transform: translateX(-150%);
-          opacity: 0;
-        }
-        100% {
+        /* Fly in effect */
+        .fly-in {
           transform: translateX(0);
           opacity: 1;
         }
-      }
 
-      /* Initial state for the second phone container */
-      .phone-container-second {
-        transform: translateX(-150%); /* Positioned off-screen to the left */
-        opacity: 0; /* Initially hidden */
-        transition:
-          transform 1.5s ease-out,
-          opacity 1.5s ease-out;
-      }
+        /* Keyframes for desktop (initial load) */
+        @media (min-width: 768px) {
+          .phone-container {
+            animation: flyInFromLeftPhone 1.5s forwards 0.5s; /* Keep delay on desktop */
+          }
 
-      /* Fly-in effect when in view */
-      .fly-in-second {
-        transform: translateX(0); /* Return to original position */
-        opacity: 1; /* Fully visible */
-      }
-    </style>
+          .underline-animation {
+            display: inline-block;
+            background-image: linear-gradient(120deg, #03a9f4, #9c27b0);
+            background-repeat: no-repeat;
+            background-size: 100% 3px;
+            background-position: 0 88%;
+            transition: background-size 0.3s ease-in-out;
+          }
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const phoneImage = document.querySelector(".phone-container")
-
-        // Detect if the element is in view for mobile
-        function isInViewPort(element) {
-          const rect = element.getBoundingClientRect()
-          return (
-            rect.top <=
-              (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.bottom >= 0
-          )
+          .underline-animation:hover {
+            background-size: 100% 100%;
+          }
         }
 
-        // Add event listener for scroll to trigger the animation
-        window.addEventListener("scroll", function () {
-          if (window.innerWidth < 768) {
-            // Only apply for mobile view
-            if (isInViewPort(phoneImage)) {
-              phoneImage.classList.add("fly-in")
+        /* Keyframes for mobile (on scroll) */
+        @keyframes flyInFromLeftPhone {
+          0% {
+            transform: translateX(-150%);
+            opacity: 0;
+          }
+          100% {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+
+        /* Initial state for the second phone container */
+        .phone-container-second {
+          transform: translateX(-150%); /* Positioned off-screen to the left */
+          opacity: 0; /* Initially hidden */
+          transition:
+            transform 1.5s ease-out,
+            opacity 1.5s ease-out;
+        }
+
+        /* Fly-in effect when in view */
+        .fly-in-second {
+          transform: translateX(0); /* Return to original position */
+          opacity: 1; /* Fully visible */
+        }
+      </style>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const phoneImage = document.querySelector(".phone-container")
+
+          // Detect if the element is in view for mobile
+          function isInViewPort(element) {
+            const rect = element.getBoundingClientRect()
+            return (
+              rect.top <=
+                (window.innerHeight || document.documentElement.clientHeight) &&
+              rect.bottom >= 0
+            )
+          }
+
+          // Add event listener for scroll to trigger the animation
+          window.addEventListener("scroll", function () {
+            if (window.innerWidth < 768) {
+              // Only apply for mobile view
+              if (isInViewPort(phoneImage)) {
+                phoneImage.classList.add("fly-in")
+              }
+            }
+          })
+        })
+
+        document.addEventListener("DOMContentLoaded", function () {
+          const secondPhoneImage = document.querySelector(
+            ".phone-container-second"
+          )
+
+          // Function to check if the element is in the viewport
+          function isInViewPort(element) {
+            const rect = element.getBoundingClientRect()
+            return (
+              rect.top <=
+                (window.innerHeight || document.documentElement.clientHeight) &&
+              rect.bottom >= 0
+            )
+          }
+
+          // Function to add the fly-in class when in view
+          function handleScroll() {
+            if (isInViewPort(secondPhoneImage)) {
+              secondPhoneImage.classList.add("fly-in-second")
             }
           }
+
+          // Add scroll event listener
+          window.addEventListener("scroll", handleScroll)
+
+          // Run on page load in case the element is already in view
+          handleScroll()
         })
-      })
-
-      document.addEventListener("DOMContentLoaded", function () {
-        const secondPhoneImage = document.querySelector(
-          ".phone-container-second"
-        )
-
-        // Function to check if the element is in the viewport
-        function isInViewPort(element) {
-          const rect = element.getBoundingClientRect()
-          return (
-            rect.top <=
-              (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.bottom >= 0
-          )
-        }
-
-        // Function to add the fly-in class when in view
-        function handleScroll() {
-          if (isInViewPort(secondPhoneImage)) {
-            secondPhoneImage.classList.add("fly-in-second")
-          }
-        }
-
-        // Add scroll event listener
-        window.addEventListener("scroll", handleScroll)
-
-        // Run on page load in case the element is already in view
-        handleScroll()
-      })
-    </script>
+      </script>
+    </div>
   </div>
 </MainLayout>

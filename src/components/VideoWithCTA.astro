@@ -1,7 +1,6 @@
 ---
 // УСТАНОВИТЬ ОБЛОЖКУ  ContentWithCTA.astro
 
-
 export interface VideoWithCTAProps {
   videoSrc: string // URL for the YouTube Shorts video
   thumbnailSrc: string // Local thumbnail image (required)
@@ -29,39 +28,58 @@ const {
 } = Astro.props
 
 // Получаем YouTube ID из ссылки
-const videoId = videoSrc.split("/embed/")[1]?.split("?")[0];
+const videoId = videoSrc.split("/embed/")[1]?.split("?")[0]
 
 // Используем стандартное YouTube-превью
-const thumbnail = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+const thumbnail = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
 ---
 
-<div class="w-full md:w-10/12 lg:w-full rounded-xl mx-auto text-lg md:text-xl text-gray-300 leading-relaxed mt-20 mb-32 flex flex-col md:flex-row items-center gap-16 md:gap-32">
+<div
+  class="w-full md:w-10/12 lg:w-full rounded-xl mx-auto text-lg md:text-xl text-gray-300 leading-relaxed mt-20 mb-32 flex flex-col md:flex-row items-center gap-16 md:gap-32"
+>
   <!-- Video section with responsive sizing and styled frame -->
-  <div class="relative w-full md:w-6/12 lg:w-5/12 bg-[#1b1b33] rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] transition-transform duration-500 overflow-hidden">    <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-0 rounded-t-xl"></div>
-
-<!-- Видео-заглушка -->
-<div class="relative w-full flex flex-col items-center justify-center text-center p-6 space-y-4 bg-gray-900 text-white"
-  id={"video-wrapper-" + videoId}>
-
-  <!-- Используем переданный thumbnail, но показываем только верхнюю часть -->
-  <div class="relative w-full h-48 overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-indigo-900"></div>
-        <img src={thumbnailSrc} alt="Video Thumbnail" class="w-full object-cover rounded-xl" style="object-position: top;">
-  </div>
-
-  <!-- STA-стилизованная кнопка -->
-  <button 
-    class="py-4 px-10 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-[#1f1235] text-white border-2 border-[#6d87d1] shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-500 play-button"
-    data-video-id={videoId}
-    data-video-src={videoSrc}
+  <div
+    class="relative w-full md:w-6/12 lg:w-5/12 bg-[#1b1b33] rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] transition-transform duration-500 overflow-hidden"
   >
-    Video laden
-  </button>
+    <div
+      class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-0 rounded-t-xl"
+    >
+    </div>
 
-  <p class="text-sm text-gray-300 max-w-lg">
-    Ich möchte das eingebundene YouTube-Video sehen und stimme zu, dass personenbezogene Daten (z. B. IP-Adresse) an Google weitergegeben werden.
-  </p>
-</div>
+    <!-- Видео-заглушка -->
+    <div
+      class="relative w-full flex flex-col items-center justify-center text-center p-6 space-y-4 bg-gray-900 text-white"
+      id={"video-wrapper-" + videoId}
+    >
+      <!-- Используем переданный thumbnail, но показываем только верхнюю часть -->
+      <div class="relative w-full h-48 overflow-hidden">
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-transparent to-indigo-900"
+        >
+        </div>
+        <img
+          src={thumbnailSrc}
+          alt="Video Thumbnail"
+          class="w-full object-cover rounded-xl"
+          style="object-position: top;"
+        />
+      </div>
+
+      <!-- STA-стилизованная кнопка -->
+      <button
+        class="py-4 px-10 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-[#1f1235] text-white border-2 border-[#6d87d1] shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-500 play-button"
+        data-video-id={videoId}
+        data-video-src={videoSrc}
+      >
+        Video laden
+      </button>
+
+      <p class="text-sm text-gray-300 max-w-lg">
+        Ich möchte das eingebundene YouTube-Video sehen und stimme zu, dass
+        personenbezogene Daten (z. B. IP-Adresse) an Google weitergegeben
+        werden.
+      </p>
+    </div>
 
     <!-- Контейнер для YouTube -->
     <div id={"video-container-" + videoId} class="hidden"></div>
@@ -90,16 +108,22 @@ const thumbnail = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
     </h3>
 
     <!-- Buttons with hover effects -->
-    <div class="flex flex-col md:flex-row gap-6 mt-8 md:mt-16 justify-center md:justify-start items-center md:items-start w-full md:w-auto">
+    <div
+      class="flex flex-col md:flex-row gap-6 mt-8 md:mt-16 justify-center md:justify-start items-center md:items-start w-full md:w-auto"
+    >
       <!-- Primary Button -->
-      <a href={primaryButtonLink}
-        class="py-4 px-10 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-[#1f1235] text-white border-2 border-[#6d87d1] shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-500 hover:shadow-[0_0_10px_rgba(147,112,219,0.5),_0_0_25px_rgba(3,169,244,0.4)]">
+      <a
+        href={primaryButtonLink}
+        class="py-4 px-10 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-[#1f1235] text-white border-2 border-[#6d87d1] shadow-lg transition-all duration-300 ease-in-out hover:bg-blue-500 hover:shadow-[0_0_10px_rgba(147,112,219,0.5),_0_0_25px_rgba(3,169,244,0.4)]"
+      >
         {primaryButtonLabel}
       </a>
 
       <!-- Secondary Button -->
-      <a href={secondaryButtonLink}
-        class="py-4 px-10 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-white text-[#090a1a] shadow-lg transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_rgba(147,112,219,0.8),_0_0_35px_rgba(3,169,244,0.6)]">
+      <a
+        href={secondaryButtonLink}
+        class="py-4 px-10 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-white text-[#090a1a] shadow-lg transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_rgba(147,112,219,0.8),_0_0_35px_rgba(3,169,244,0.6)]"
+      >
         {secondaryButtonLabel}
       </a>
     </div>
@@ -108,15 +132,17 @@ const thumbnail = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".play-button").forEach(button => {
+    document.querySelectorAll(".play-button").forEach((button) => {
       button.addEventListener("click", function () {
-        const videoId = this.getAttribute("data-video-id");
-        const videoSrc = this.getAttribute("data-video-src");
-        const videoWrapper = document.getElementById("video-wrapper-" + videoId);
-        const videoContainer = document.getElementById("video-container-" + videoId);
+        const videoId = this.getAttribute("data-video-id")
+        const videoSrc = this.getAttribute("data-video-src")
+        const videoWrapper = document.getElementById("video-wrapper-" + videoId)
+        const videoContainer = document.getElementById(
+          "video-container-" + videoId
+        )
 
         if (videoWrapper && videoContainer) {
-          videoWrapper.style.display = "none";
+          videoWrapper.style.display = "none"
           videoContainer.innerHTML = `
             <iframe 
               class="w-full h-64 md:h-80 lg:h-96 rounded-xl shadow-lg"
@@ -126,10 +152,10 @@ const thumbnail = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
               allowfullscreen>
             </iframe>
-          `;
-          videoContainer.classList.remove("hidden");
+          `
+          videoContainer.classList.remove("hidden")
         }
-      });
-    });
-  });
+      })
+    })
+  })
 </script>

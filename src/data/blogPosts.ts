@@ -306,36 +306,42 @@ Tipp aus der Praxis: Viele unserer Kunden erreichen nach einer einfachen Bildopt
   },
   {
     slug: "shopify-store-redesign-checklist",
-    title: "Shopify Redesign 2025: Deine ultimative Checkliste",
+    title: "Shopify Redesign: Deine ultimative Checkliste",
     category: "E-Commerce, Shopify",
-    intro: "Der Onlinehandel boomt – und ein starkes Shopify-Design ist 2025 wichtiger denn je. Hier erfährst du, worauf du beim Redesign achten musst, um vorne mitzuspielen.",
-    seoTitle: "Shopify Redesign Checkliste 2025 | maxWapp",
-    seoDesc: "Die ultimative Shopify Redesign Checkliste für 2025. Mehr Conversion, bessere UX, schnellere Ladezeiten – jetzt starten!",
+    intro: "Der Onlinehandel boomt – und ein starkes Shopify-Design ist wichtiger denn je. Hier erfährst du, worauf du beim Redesign achten musst, um vorne mitzuspielen.",
+    seoTitle: "Shopify Redesign Checkliste für mehr Conversion & UX | maxWapp",
+    seoDesc: "Die ultimative Shopify Redesign Checkliste – bessere UX, Conversion-Steigerung, SEO & Ladezeiten. Jetzt durchstarten!",
     image: "/images/blog/shopify-redesign.webp",
-    imageAlt: "Shopify Redesign 2025 – Checkliste",
+    imageAlt: "Shopify Redesign – Checkliste",
     body: `1. Setz dir klare Ziele  
-    Willst du mehr Verkäufe, bessere Markenpräsenz oder schnellere Ladezeiten? Sei konkret, damit dein Redesign messbare Erfolge bringt.
-    
-    2. Mach einen Website-Check  
-    Was läuft gut, wo hakt's? Tools wie Google Analytics, Hotjar oder Shopify-Analytics helfen dir, Schwachstellen zu finden.
-    
-    3. Denk Mobile-First  
-    Über 70 % deiner Besucher kommen übers Smartphone. Dein Shop muss mobil einfach funktionieren – schnell, intuitiv und mit smarten Zahlungsoptionen.
-    
-    4. Mach UX & Design topfit  
-    Nutze ein responsives Theme, starke Bilder, intuitive Filter und klare CTAs. Dein Shop soll nicht nur gut aussehen, sondern auch verkaufen.
-    
-    5. Bring den Checkout in Bestform  
-    Weniger Schritte, weniger Frust. Express-Optionen wie Apple Pay oder Google Pay pushen die Conversion.
-    
-    6. Optimiere SEO & Speed  
-    Komprimiere Bilder, optimiere Meta-Tags und nutze strukturierte Daten – Google liebt schnelle Shops.
-    
-    7. Integriere AI & neue Trends  
-    Smarte Produktempfehlungen, Chatbots oder AR/VR sind 2025 echte Gamechanger.
-    
-    Ein Praxisbeispiel:  
-    Beim Redesign von *Kleines Stadthaus* haben wir UX, Speed und Branding aufs nächste Level gebracht – mit Instagram-Integration, Conversion-optimierten Produktseiten und mobilem Feinschliff.`,
+Willst du mehr Verkäufe, bessere Markenpräsenz oder schnellere Ladezeiten? Sei konkret, damit dein Redesign messbare Erfolge bringt.
+
+2. Mach einen Website-Check  
+Was läuft gut, wo hakt's? Tools wie Google Analytics, Hotjar oder Shopify-Analytics helfen dir, Schwachstellen zu finden.
+
+3. Denk Mobile-First  
+Über 70 % deiner Besucher kommen übers Smartphone. Dein Shop muss mobil einfach funktionieren – schnell, intuitiv und mit smarten Zahlungsoptionen.
+
+4. Mach UX & Design topfit  
+Nutze ein responsives Theme, starke Bilder, intuitive Filter und klare CTAs. Dein Shop soll nicht nur gut aussehen, sondern auch verkaufen.
+
+5. Bring den Checkout in Bestform  
+Weniger Schritte, weniger Frust. Express-Optionen wie Apple Pay oder Google Pay pushen die Conversion.
+
+6. Optimiere SEO & Speed  
+Komprimiere Bilder, optimiere Meta-Tags und nutze strukturierte Daten – Google liebt schnelle Shops. Eine Shopify SEO Agentur hilft dir hier entscheidend weiter.
+
+7. Integriere AI & neue Trends  
+Smarte Produktempfehlungen, Chatbots oder AR/VR sind echte Gamechanger im modernen E-Commerce.
+
+8. Shopify Plus oder klassisch?  
+Shopify Plus bietet viele Features für wachsende Shops – wir als Shopify Plus Agentur beraten dich gern zu den Vorteilen.
+
+9. Relaunch nicht vergessen  
+Ein Website Relaunch braucht eine klare Checkliste und Strategie – dafür sind wir als Shopify Agentur München dein Ansprechpartner.
+
+Ein Praxisbeispiel:  
+Beim Redesign von Kleines Stadthaus haben wir UX, Speed und Branding aufs nächste Level gebracht – mit Instagram-Integration, Conversion-optimierten Produktseiten und mobilem Feinschliff.`,
     ctaText: "Mehr über das Projekt Kleines Stadthaus erfahren",
     ctaLink: "/projects/kleines-stadthaus/",
     quote: "„Ein gutes Redesign ist mehr als nur Optik – es ist dein Verkaufsmotor.“",
