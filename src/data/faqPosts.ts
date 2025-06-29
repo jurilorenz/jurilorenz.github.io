@@ -97,21 +97,21 @@ export const faqPosts: FaqPost[] = [
     seoDesc: "Wie du deine Website selbst verwalten kannst – Infos im maxWapp FAQ.",
   },
   
-  {
-    slug: "wo-finde-ich-bilder-fuer-meine-website",
-    question: "Woher bekomme ich Bilder für meine Website?",
-    answer: "Du kannst professionelle Bilder kaufen oder auf kostenlose Bilddatenbanken zurückgreifen. Wichtig: Achte auf hohe Qualität und Lizenzrechte.",
-    seoTitle: "Bilder für die Website finden | FAQ maxWapp",
-    seoDesc: "Tipps, wo du passende Bilder für deine Website findest – erklärt von maxWapp.",
-  },
+{
+  slug: "wo-finde-ich-bilder-fuer-meine-website",
+  question: "Woher bekomme ich Bilder für meine Website?",
+  answer: "Du kannst professionelle Bilder kaufen oder auf kostenlose Bilddatenbanken zurückgreifen. Wichtig: Achte auf hohe Qualität und Lizenzrechte. Außerdem biete ich selbst professionelle Foto- und Videoaufnahmen an – mit hochwertiger Kamera, Post-Production und individueller Bildsprache, perfekt abgestimmt auf dein Business.",
+  seoTitle: "Bilder für die Website finden | FAQ maxWapp",
+  seoDesc: "Tipps, wo du passende Bilder für deine Website findest – inklusive Profi-Fotoservice von maxWapp.",
+},
   
-  {
-    slug: "was-kostet-eine-website-im-monat",
-    question: "Was kostet eine Website monatlich?",
-    answer: "Neben der Erstellung entstehen Hosting- und Domainkosten. Übliche Preise: Hosting ab ca. 5 €/Monat, Domain ab ca. 10 €/Jahr. Keine versteckten Kosten bei maxWapp.",
-    seoTitle: "Monatliche Website-Kosten? | FAQ maxWapp",
-    seoDesc: "Erfahre, welche monatlichen Kosten für Website-Betrieb anfallen.",
-  },
+{
+  slug: "was-kostet-eine-website-im-monat",
+  question: "Was kostet eine Website monatlich?",
+  answer: "Neben der Erstellung entstehen Hosting- und Domainkosten. Übliche Preise: Hosting ab ca. 5 €/Monat, Domain ab ca. 10 €/Jahr. Bei Bedarf biete ich auch Optionen mit kostenlosem Hosting und Domain an, z. B. für kleinere Projekte oder Starter-Websites. Keine versteckten Kosten bei maxWapp.",
+  seoTitle: "Monatliche Website-Kosten? | FAQ maxWapp",
+  seoDesc: "Erfahre, welche monatlichen Kosten für Website-Betrieb anfallen – inklusive Optionen für kostenloses Hosting.",
+},
   
   {
     slug: "brauche-ich-eine-komplett-neue-website",
