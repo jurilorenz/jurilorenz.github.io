@@ -345,7 +345,7 @@ Beim Redesign von Kleines Stadthaus haben wir UX, Speed und Branding aufs nächs
     ctaText: "Mehr über das Projekt Kleines Stadthaus erfahren",
     ctaLink: "/projects/kleines-stadthaus/",
     quote: "„Ein gutes Redesign ist mehr als nur Optik – es ist dein Verkaufsmotor.“",
-  },
+      },
   {
       slug: "smartiee-partner-muenchen",
       title: "Smartiee München – Legal Marketing & digitale Stärke für Kanzleien",
@@ -359,6 +359,22 @@ Beim Redesign von Kleines Stadthaus haben wir UX, Speed und Branding aufs nächs
       ctaText: "Mehr über Smartiee erfahren",
       ctaLink: "https://smartiee.agency",
       quote: "„Smartiee kennt die Spielregeln der Rechtsbranche – und macht Kanzleien digital stark.“"
+  },
+  {
+  slug: "unilink-partner-dresden",
+  title: "Unilink Dresden – Business-Consulting & IT-Partner",
+  category: "Partner, Business-Consulting",
+  intro: "Unilink ist unser zuverlässiger Partner aus Dresden für Business-Consulting, Low-Code-Entwicklung und Prozessoptimierung.",
+  body: "Unilink begleitet Unternehmen seit über 25 Jahren und bietet maßgeschneiderte Lösungen in den Bereichen Business-Consulting, Low-Code-Entwicklung mit Microsoft Power Platform und agile Anforderungsanalysen. Der Fokus liegt auf Effizienz, Skalierbarkeit und Innovation – ideal für Unternehmen, die ihre Geschäftsprozesse modernisieren möchten.",
+  body2: "Wir freuen uns über die Partnerschaft mit Unilink – einem Unternehmen, das wie maxWapp für Qualität, Verlässlichkeit und zukunftsorientierte Lösungen steht.",
+  ctaText: "Mehr über Unilink erfahren",
+  ctaLink: "https://unilink-dd.de",
+  image: "/images/blog/unilink.webp",
+  extraImage: "/images/blog/unilink.webp",
+  extraImageAlt: "Unilink Dresden – Business-Consulting Partner",
+  seoTitle: "Unilink Dresden – Business-Consulting & Low-Code Partner | maxWapp",
+  seoDesc: "Unilink Dresden: Consulting, Low-Code & Power Platform. Partner für Innovation und Effizienz."
+
   }
     
   // weitere Einträge...
