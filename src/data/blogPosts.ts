@@ -20,6 +20,37 @@ export interface BlogPost {
 }
 
 export const blogPosts = [
+{
+  slug: "bing-video-sora-launch",
+  title: "Bing Video Creator: KI-Videos kostenlos mit Sora erstellen",
+  category: "KI, Tools, Video",
+  intro: "Jetzt wird’s wild: Microsoft bringt den Sora-Videogenerator kostenlos in die Bing-App. Einfach Text eintippen, KI-Magie abwarten – fertig ist dein virales Video.",
+  seoTitle: "Bing Video Creator mit Sora – Kostenlose KI-Videos | maxWapp",
+  seoDesc: "Mit dem Bing Video Creator kannst du ab sofort kostenlose Sora-Videos direkt am Smartphone generieren. Einfach, schnell und perfekt für Social Media.",
+  image: "/images/blog/video-creator.webp",
+  imageAlt: "KI-Video Kamera",
+  image2: "/images/blog/bing-video-creator-screenshot.webp",
+  image2Alt: "Screenshot der Bing Video Creator Benutzeroberfläche auf bing.com",
+  body: `Microsoft zündet den Turbo für Creator: Der kostenlose KI-Video-Generator Bing Video Creator bringt OpenAIs Sora direkt in deine Bing‑App. KI‑Videos erstellen geht jetzt überall – einfach Text eingeben, Bing erledigt den Rest.
+
+Alles was du brauchst ist ein Microsoft‑Konto. Die ersten zehn Clips sind gratis, danach bezahlst du mit Microsoft Rewards‑Punkten. So holst du dir in Deutschland bis zu 150 Punkte täglich allein durchs Suchen.
+
+Aktuell rendert der Generator vertikale 5‑Sekunden‑Videos (9:16) – ideal für TikTok, Instagram Reels oder YouTube Shorts.`,
+  body2Title: "Warum ist das so besonders?",
+  body2Intro: "Sora war bisher nur für zahlende Power-User verfügbar. Jetzt bringt Bing die KI-Videomagie in die Hosentasche – kostenlos.",
+  body2: `Screenshot: bing.com
+
+Mit Sora erzeugst du hyperrealistische oder stylische Clips allein durch Spracheingabe – ein echter Game‑Changer für Content‑Marketing. Warum ist das wichtig?
+
+– Bing Video Creator Deutschland: Erstmals lässt sich Sora hierzulande gratis nutzen.  
+– KI‑Video schneller produzieren: Spare Kamera, Schnitt und Postproduktion.  
+– Mehr Reichweite auf Social Media: Frische, KI‑generierte Clips pushen deine Sichtbarkeit.
+
+Die Renderzeit liegt aktuell noch bei mehreren Stunden, doch für einen kostenlosen KI‑Video‑Service ist das ein starker Auftakt. Beobachter rechnen damit, dass Microsoft bald längere Laufzeiten und horizontale 16:9‑Formate freischaltet.`,
+  quote: "„Ein Text, ein Klick – und du hast dein eigenes KI-Video. Welcome to the future of content.“",
+  ctaText: "Lust auf mehr KI-Power für dein Business? Lass uns gemeinsam neue Ideen entwickeln.",
+  ctaLink: "/kontakt"
+  },
   {
     slug: "statische-astro-website",
     title: "Astro ohne CMS: Statische Websites mit maximaler Performance",
