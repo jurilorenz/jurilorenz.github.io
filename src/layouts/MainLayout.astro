@@ -9,6 +9,14 @@ const { title, seoTitle, seoDesc, noindex } = Astro.props;
 <html lang="en">
   <Mainhead title={title} seoTitle={seoTitle} seoDesc={seoDesc} noindex={noindex} />
   <body class="bg-slate-900 text-white grid gap-0">
+
+        <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M89XMKWG"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+     
     <!-- Navigation Component -->
     <Nav />
 

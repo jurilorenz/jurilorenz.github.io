@@ -75,6 +75,7 @@ const { title, seoTitle, seoDesc, noindex } = Astro.props
     });
   });
 
+  /*
   function enableAnalytics() {
     if (document.cookie.includes("cookieconsent_status=allow")) {
       const script = document.createElement("script");
@@ -98,6 +99,7 @@ const { title, seoTitle, seoDesc, noindex } = Astro.props
   window.addEventListener("load", function () {
     enableAnalytics();
   });
+*/
 
     // Hide the revoke button
     window.addEventListener("load", function () {
@@ -107,6 +109,29 @@ const { title, seoTitle, seoDesc, noindex } = Astro.props
     }
 });
 
+function enableGTM() {
+  const script = document.createElement("script");
+  script.async = true;
+  script.src = "https://www.googletagmanager.com/gtm.js?id=GTM-M89XMKWG";
+  document.head.appendChild(script);
+}
+
+window.addEventListener("load", function () {
+  if (document.cookie.includes("cookieconsent_status=allow")) {
+    enableGTM();
+  }
+});
+
+// Virtual pageview tracking for Astro navigation
+window.addEventListener("astro:after-swap", function () {
+  if (document.cookie.includes("cookieconsent_status=allow")) {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'virtualPageview',
+      page: window.location.pathname
+    });
+  }
+});
 
 </script>
 
@@ -141,4 +166,6 @@ const { title, seoTitle, seoDesc, noindex } = Astro.props
   <link rel="preload" href="/css/all.min.css" as="style" />
   <link rel="stylesheet" href="/css/all.min.css" media="print" onload="this.media='all'" />
   <noscript><link rel="stylesheet" href="/css/all.min.css" /></noscript>
+
+ 
 </head>
