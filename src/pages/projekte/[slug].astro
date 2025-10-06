@@ -9,6 +9,7 @@ import Efimow from "../../components/projects/Efimow.astro";
 import BavarianIceRoll from "../../components/projects/BavarianIceRoll.astro";
 import Felix from "../../components/projects/Felix.astro";
 import StudioD from "../../components/projects/StudioD.astro";
+import BavariaBarbershop from "../../components/projects/BavariaBarbershop.astro";
 import AnnaMenci from "../../components/projects/AnnaMenci.astro";
 import Streetly from "../../components/projects/Streetly.astro";
 import VadimAevskiy from "../../components/projects/VadimAevskiy.astro";
@@ -97,6 +98,15 @@ export async function getStaticPaths() {
         introText: "Premium-Website für Friseursalon mit Online-Buchung, Branding & Logo.",
         seoTitle: "CI für Friseursalon - Website mit Terminbuchung | maxWapp",
         seoDesc: "Exklusive Friseur-Website mit Branding, Logo, Print-Design & Buchungssystem – für Kunden aus München."
+      },
+    },
+    { 
+      params: { slug: "bavaria-barbershop" },
+      props: {
+        name: "Bavaria Barbershop",
+        introText: "Barbershop Webdesign für München: ultraschnelle, mobile‑first Website mit Profi‑Fotos sowie gratis Domain & Hosting.",
+        seoTitle: "Barbershop Webdesign München | Bavaria Barbershop | maxWapp",
+        seoDesc: "Barbershop Website für Bavaria Barbershop in München: blitzschnell, inklusive Fotos, Branding, kostenloser Domain und Hosting. Jetzt entdecken!"
       },
     },
     { 
@@ -206,6 +216,7 @@ const { name, introText, seoTitle, seoDesc } = Astro.props;
       {slug === 'efimow-automobile' && <Efimow />}
       {slug === 'bavarian-ice-roll' && <BavarianIceRoll />}
       {slug === 'studio-d' && <StudioD />}
+      {slug === 'bavaria-barbershop' && <BavariaBarbershop />}
       {slug === 'felix-rheindorf' && <Felix />}
       {slug === 'streetly' && <Streetly />}
       {slug === 'vadim-aevskiy' && <VadimAevskiy />}

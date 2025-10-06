@@ -1,0 +1,71 @@
+---
+import ContentSection from "../ContentSection.astro"
+import FeatureCard from "../FeatureCard.astro"
+import SectionTitle from "../SectionTitle.astro"
+import GradientDivider from "../GradientDivider.astro"
+import TextSection from "../TextSection.astro"
+import FinalSection from "../FinalSection.astro"
+---
+
+<div class="project-component">
+
+  <TextSection
+    title="Barbershop Webdesign München"
+    introText="Bavaria Barbershop in München – vom präzisen Fade bis zum klassischen Scissor‑Cut: Dein Style startet mit einer blitzschnellen, modernen Website."
+    secondText="Mobile‑first Design, klare Call‑to‑Actions und Online‑Terminbuchung holen neue Kunden direkt in den Salon."
+  />
+
+  <ContentSection
+    imgSrc="/images/projects/bavaria-barbershop-hero.webp"
+    imgAlt="Startseite Bavaria Barbershop auf dem Smartphone"
+    title="Erster Eindruck, der Kunden gewinnt"
+    introText="Auf der Startseite verschmelzen Barber‑Atmosphäre, starke Bilder und intuitive Bedienung: sofortige Kontakt‑Buttons und alle wichtigen Infos."
+    secondText="Klick – Kontakt ‑ Schnitt: Besucher werden in Kunden verwandelt."
+  />
+
+  <ContentSection
+    imgSrc="/images/projects/bavaria-barbershop-price.webp"
+    imgAlt="Leistungen & Preise auf dem Smartphone"
+    title="Alle Leistungen auf einen Blick"
+    introText="Preislisten für Herren, Damen und Kids sind übersichtlich gestaltet – Kunden erkennen sofort Service und Kosten."
+    secondText="Transparenz schafft Vertrauen – so kommt der Kunde vorbereitet ins Geschäft."
+    reverse={true}
+  />
+
+
+
+  <SectionTitle title="Stärken des Projekts" />
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-24 mb-32">
+    <FeatureCard
+      title="Mobile‑first Webdesign"
+      description="Blitzschnelle Ladezeiten (Core Web Vitals) – deine Website fühlt sich auf jedem Gerät wie eine native App an."
+    />
+    <FeatureCard
+      title="Website, Domain & Hosting inklusive"
+      description="0 € Folgekosten – perfekt für Barber‑Startups und etablierte Salons."
+    />
+    <FeatureCard
+      title="Authentische Barber‑Fotos"
+      description="Eigenes Shooting liefert Local‑SEO‑starkes Bildmaterial für Website & Google Profil."
+    />
+    <FeatureCard
+      title="Google Maps & Bewertungen"
+      description="Bewertungs‑Widget und Maps‑Einbindung erhöhen Reichweite und Vertrauen deiner Kunden."
+    />
+  </div>
+
+  <GradientDivider />
+
+  <FinalSection
+    imgSrc="/images/projects/bavaria-barbershop-footer.webp"
+    imgAlt="Aufruf zur Barbershop Website München"
+    title="Barbershop Website erstellen lassen?"
+    introText="Ob Herrensalon oder klassischer Friseur – mit dem maxWapp‑Starterpaket erhältst du eine maßgeschneiderte Barbershop‑Website, Fotos, Branding, Domain und Hosting zum Fixpreis."
+    secondText="Sichere dir deine Online‑Sichtbarkeit in München und gewinne mehr Stammkunden."
+    primaryButtonLabel="Mehr Projekte"
+    primaryButtonLink="/projekte"
+    secondaryButtonLabel="Projekt starten"
+    secondaryButtonLink="/kontakt"
+  />
+</div>
