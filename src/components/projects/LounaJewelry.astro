@@ -1,0 +1,103 @@
+---
+import ContentSection from "../ContentSection.astro"
+import FeatureCard from "../FeatureCard.astro"
+import SectionTitle from "../SectionTitle.astro"
+import GradientDivider from "../GradientDivider.astro"
+import TextSection from "../TextSection.astro"
+import FinalSection from "../FinalSection.astro"
+import IpadComponent from "../IpadComponent.astro"
+---
+
+<div class="project-component">
+  <TextSection
+    title="Online Shop mit Stil & Story"
+    introText="Der Shop wurde als professionelle Alternative zu Shopify realisiert – mit Fokus auf Performance, Conversion und mobile Nutzerführung."
+    secondText="Ein idealer Einstiegspunkt für kleine Marken, die ihren Online Shop erstellen lassen möchten – authentisch, mobilfreundlich und verkaufsstark."
+  />
+
+  <ContentSection
+    imgSrc="/images/projects/louna-jewelry-hero-mobile.webp"
+    imgAlt="Startseite von Louna Jewelry – Online Shop für handgemachten Schmuck"
+    title="Handgemachter Schmuck – online perfekt inszeniert"
+    introText="Die Startseite bringt die Geschichte der Marke auf den Punkt – mit starken Bildern, sanften Farbtönen und einer klaren Botschaft."
+    secondText="Gezielte Call-to-Actions und ein bewusst minimalistisches Design holen Nutzer dort ab, wo ihre Suche beginnt."
+  />
+
+  <ContentSection
+    imgSrc="/images/projects/louna-jewelry-about.webp"
+    imgAlt="Über die Gründerin – Louna Jewelry Mobile Ansicht"
+    title="Vertrauen durch Persönlichkeit"
+    introText="Die 'Über uns'-Sektion zeigt die Gründerin persönlich – ein Schlüssel zur Kundenbindung und Differenzierung im E-Commerce."
+    secondText="Storytelling, das wirkt: Kunden erfahren, warum Louna für Qualität, Authentizität und handgefertigte Ästhetik steht."
+    reverse={true}
+  />
+
+  <SectionTitle title="Produktseiten & UX" />
+
+  <ContentSection
+    imgSrc="/images/projects/louna-jewelry-necklace.webp"
+    imgAlt="Mobile Produktseite – Necklace auf dem iPhone"
+    title="Produktpräsentation, die verkauft"
+    introText="Klar strukturierte Produktseiten mit Fokus auf Material, Nutzen und Emotion."
+    secondText="Jedes Produkt wurde visuell inszeniert und textlich optimiert – mit Zielrichtung Conversion und mobile UX."
+  />
+
+  <ContentSection
+    imgSrc="/images/projects/louna-jewelry-earrings.webp"
+    imgAlt="Mobile Produktseite – Khaki Heart Earrings auf dem iPhone"
+    title="Mobile Shopping Experience"
+    introText="Mehr als 70 % der Besucher nutzen den Shop mobil – entsprechend wurde das Interface speziell für Smartphones optimiert."
+    secondText="Responsives Webdesign, intuitive Navigation und große Bilder sorgen für maximale Benutzerfreundlichkeit."
+    reverse={true}
+  />
+
+  <SectionTitle title="Tablet & Desktop" />
+
+  <IpadComponent
+    imgSrc="/images/projects/louna-jewelry-ipad-hero.webp"
+    imgAlt="Tablet-Ansicht von Louna Jewelry – eleganter Online Shop"
+  />
+
+  <TextSection
+    introText="Auch auf größeren Screens überzeugt der Shop mit stimmiger Bildsprache, klarer Struktur und hochwertiger Typografie."
+    secondText="Ideal für Präsentationen, Pinterest-Nutzer oder Käuferinnen, die gerne am Desktop stöbern."
+  />
+
+  <SectionTitle title="Stärken, die überzeugen" />
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-24 mb-32">
+    <FeatureCard
+      title="Alternative zu Shopify – individuell & performant"
+      description="Keine Miete, keine Abhängigkeit: Louna Jewelry wurde ohne Shopify realisiert und ist dennoch schnell, schön und skalierbar."
+    />
+
+    <FeatureCard
+      title="Onlineshop erstellen lassen – günstig & professionell"
+      description="Ideal für kleine Marken und Startups, die einen stilvollen Webshop benötigen – ohne hohe monatliche Kosten."
+    />
+
+<FeatureCard
+  title="Mobil shoppen, ganz easy"
+  description="Ob auf dem Sofa oder unterwegs – der Shop ist fürs Smartphone optimiert und macht den Einkauf zum Erlebnis. Schnell, übersichtlich und konversionsstark."
+/>
+
+<FeatureCard
+  title="Hochwertige Fotos"
+  description="Für diesen Shop wurde eine professionelle Fotosession organisiert – so kommen die Schmuckstücke auf jeder Seite optimal zur Geltung, egal ob am Handy oder Computer."
+/>
+  </div>
+
+  <GradientDivider />
+
+  <FinalSection
+    imgSrc="/images/projects/louna-jewelry-gallery.webp"
+    imgAlt="Mobile gallery – Online Shop erstellen lassen mit maxWapp"
+    title="Bereit für deinen eigenen Online Shop?"
+    introText="Du willst deinen Shop erstellen lassen – günstig, professionell und auf deine Marke zugeschnitten?"
+    secondText="Dann lass uns gemeinsam dein Projekt realisieren – mit Stil, Strategie und Performance."
+    primaryButtonLabel="Zurück"
+    primaryButtonLink="/projekte"
+    secondaryButtonLabel="Let's Talk"
+    secondaryButtonLink="/kontakt"
+  />
+</div>

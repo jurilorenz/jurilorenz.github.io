@@ -16,6 +16,8 @@ import VadimAevskiy from "../../components/projects/VadimAevskiy.astro";
 import ImmobilienMuenchen from "../../components/projects/ImmobilienMuenchen.astro";
 import KleinesStadthaus from "../../components/projects/KleinesStadthaus.astro";
 import FirstLineArchitecture from "../../components/projects/FirstLineArchitecture.astro";
+import LounaJewelry from "../../components/projects/LounaJewelry.astro";
+
 
 export async function getStaticPaths() {
   return [
@@ -154,6 +156,15 @@ params: { slug: "1-line-architecture" },
         seoDesc: "Moderne Website Architektur für Architekturbüros – erstellt von maxWapp. Webdesign für Architekten mit Fokus auf Sichtbarkeit, Vertrauen & hochwertiges Design."
       },
     },
+{ 
+  params: { slug: "louna-jewelry" },
+  props: {
+    name: "Louna Jewelry",
+    introText: "Online Shop für handgefertigten Schmuck aus Naturmaterialien – mit Fokus auf Ästhetik, Performance und Benutzererlebnis.",
+    seoTitle: "Online Shop & Webdesign für Handmade Schmuck | maxWapp",
+    seoDesc: "Louna Jewelry – moderner Online Shop für handgemachten Schmuck aus München. Entwickelt von maxWapp mit Fokus auf Design, Conversion & Performance. Alternative zu Shopify mit mobilem E‑Commerce‑Design für kleine Marken."
+  },
+},
     { 
       params: { slug: "kleines-stadthaus" }, 
       props: {
@@ -223,6 +234,7 @@ const { name, introText, seoTitle, seoDesc } = Astro.props;
       {slug === 'immobilien-muenchen' && <ImmobilienMuenchen />}
       {slug === 'kleines-stadthaus' && <KleinesStadthaus />}
             {slug === '1-line-architecture' && <FirstLineArchitecture />}
+             {slug === 'louna-jewelry' && <LounaJewelry />}
     </section>
   </div>
 </MainLayout>
