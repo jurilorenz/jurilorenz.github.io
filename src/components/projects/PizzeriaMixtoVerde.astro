@@ -1,0 +1,100 @@
+---
+import ContentSection from "../ContentSection.astro"
+import FeatureCard from "../FeatureCard.astro"
+import IpadComponent from "../IpadComponent.astro"
+import SectionTitle from "../SectionTitle.astro"
+import GradientDivider from "../GradientDivider.astro"
+import TextSection from "../TextSection.astro"
+import FinalSection from "../FinalSection.astro"
+---
+
+<div class="project-component">
+
+  <p class="sr-only">
+    Moderne Restaurant-Website mit Online-Reservierung und Google-Optimierung – dieses Projekt zeigt, wie sich Gastronomie digital präsentieren kann.
+    Ob glutenfreie Pizzeria, Café oder Lieferservice – mit Fotoshooting, Speisekarte, Mehrsprachigkeit und SEO gelingt ein überzeugender Auftritt.
+    Mixto Verde München bietet ein Beispiel für ein gelungenes Webdesign für die Gastronomie – inkl. Buchungssystem, lokaler Sichtbarkeit bei Google und professionellen Food-Fotos.
+    Jetzt Restaurant-Website erstellen lassen – schnell, mobilfreundlich und markenstark.
+  </p>
+
+  <TextSection
+    title="Online-Präsenz für glutenfreie Pizzeria"
+introText="Für Mixto Verde wurde eine komplette Restaurant-Website umgesetzt – mit stilvollem Design, Fotografie, Promo-Video, SEO-Optimierung und integriertem Reservierungssystem."    secondText="Das Ziel: neue Gäste gewinnen, den Bestellprozess vereinfachen und die Marke Mixto Verde klar und professionell präsentieren."
+  />
+
+  <ContentSection
+    imgSrc="/images/projects/pizzeria-mixto-verde-startseite.webp"
+    imgAlt="Startseite der glutenfreien Pizzeria Website"
+    title="Startseite mit Booking & Performance"
+    introText="Die Startseite überzeugt mit klarem Aufbau, appetitlichen Bildern und direkter Buchungsmöglichkeit."
+    secondText="Besucher finden sofort, was sie suchen – ob Reservierung, Menü oder Kontakt."
+  />
+
+<ContentSection
+  imgSrc="/images/projects/pizzeria-mixto-verde-menu-icons.webp"
+  imgAlt="Illustrationen für das Menü von Mixto Verde – Coffee, Drinks und Wine"
+  reverse={true}
+  title="Ein Menü mit Charakter"
+  introText="Für die Website wurden bestehende Illustrationen aus dem Brandbook integriert – sie bringen Persönlichkeit und Wiedererkennungswert."
+  secondText="Die minimalistischen Illustrationen verleihen dem Menü Charme und schaffen eine visuelle Verbindung zur Markenidentität des Restaurants. Mit nur einem Klick gelangen Besucher direkt zum gewünschten Menübereich."
+/>
+
+  <ContentSection
+    imgSrc="/images/projects/pizzeria-mixto-verde-speisekarte.webp"
+    imgAlt="Digitale Speisekarte der Pizzeria Mixto Verde"
+    title="Interaktive Speisekarte"
+    introText="Das Menü ist übersichtlich, modern und für mobile Nutzung optimiert."
+    secondText="Besonders wichtig für Gäste mit speziellen Ernährungsbedürfnissen: Alle Infos sind sofort ersichtlich."
+  />
+
+  <SectionTitle title="Galerie mit 3D-Ansicht" />
+
+  <IpadComponent
+    imgSrc="/images/projects/pizzeria-mixto-verde-ipad-galerie.webp"
+    imgAlt="Galerieansicht der Pizzeria Website auf dem iPad"
+  />
+
+  <TextSection
+    introText="Die Galerie zeigt nicht nur das Ambiente der Pizzeria, sondern schafft Emotionen."
+    secondText="Bilder in hoher Qualität wurden speziell für die Website aufgenommen und sorgen für Atmosphäre."
+  />
+
+  <SectionTitle title="Besondere Features" />
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-24 mb-32">
+<FeatureCard
+  title="Online-Reservierung"
+  description="Gäste können ihren Tisch bequem direkt auf der Website reservieren – schnell, einfach und jederzeit verfügbar."
+/>
+
+<FeatureCard
+  title="Lokale SEO für München"
+  description="Dank gezielter Optimierung wird die Website bei Google besser gefunden – besonders von Menschen in München, die glutenfrei essen möchten."
+/>
+
+    <FeatureCard
+      title="Mehrsprachigkeit"
+      description="Die Website ist auf Deutsch und Englisch verfügbar – ideal für internationale Gäste."
+    />
+
+    <FeatureCard
+      title="Mobile First Design"
+      description="Perfekte Darstellung auf Smartphones – schnell, übersichtlich und verkaufsstark."
+    />
+  </div>
+
+  <GradientDivider />
+
+  <FinalSection
+    imgSrc="/images/projects/pizzeria-mixto-verde-bilder.webp"
+    imgAlt="Screenshot der Startseite auf Mobilgerät"
+    title="Bereit für mehr Gäste und Sichtbarkeit?"
+    introText="Diese Website zeigt, wie modernes Gastronomie-Marketing funktioniert – authentisch, effizient und verkaufsorientiert."
+    secondText="Ob Café, Restaurant oder Lieferservice – mit einer starken Website erreichst du mehr."
+    primaryButtonLabel="Zurück"
+    primaryButtonLink="/projekte"
+    secondaryButtonLabel="Let's Talk"
+    secondaryButtonLink="/kontakt"
+  />
+
+</div>

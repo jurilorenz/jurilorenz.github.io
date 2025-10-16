@@ -17,7 +17,9 @@ import ImmobilienMuenchen from "../../components/projects/ImmobilienMuenchen.ast
 import KleinesStadthaus from "../../components/projects/KleinesStadthaus.astro";
 import FirstLineArchitecture from "../../components/projects/FirstLineArchitecture.astro";
 import LounaJewelry from "../../components/projects/LounaJewelry.astro";
-
+import SweetBerryBox from "../../components/projects/SweetBerryBox.astro";
+import PizzeriaMixtoVerde from "../../components/projects/PizzeriaMixtoVerde.astro";
+import AkamReinigung from "../../components/projects/AkamReinigung.astro";
 
 export async function getStaticPaths() {
   return [
@@ -118,8 +120,17 @@ export async function getStaticPaths() {
         introText: "Webdesign, Fotos & Video für Metzgermeister Felix – Corporate Identity auf allen Ebenen.",
         seoTitle: "Metzger Website & Video – Corporate Webdesign | maxWapp",
         seoDesc: "Website, Visitenkarten, Logo & Imagefilm für Metzger Felix Rheindorf – hochwertig umgesetzt mit Fokus auf Branding."
-      },
+       },
     },
+{
+  params: { slug: "akam-reinigung" },
+  props: {
+    name: "Akam Reinigung",
+    introText: "Website für eine Reinigungsfirma aus München – klar, vertrauensvoll und bereit für neue Kundenanfragen.",
+    seoTitle: "Moderne Reinigungsfirma Website in München | maxWapp",
+    seoDesc: "Professionelle Website für Gebäudereinigung in München – erstellt von maxWapp. Inklusive Branding, Anfrageformular und SEO-Optimierung."
+  },
+},
     { 
       params: { slug: "streetly" }, 
       props: {
@@ -147,6 +158,15 @@ export async function getStaticPaths() {
         seoDesc: "Immobilienmakler Website erstellen lassen? maxWapp entwickelt professionelle Immobilienmakler Webseiten mit OnOffice Integration, Logo, CI & Visitenkarte."
       },
     },
+{ 
+  params: { slug: "pizzeria-mixto-verde" },
+  props: {
+    name: "Website für Pizzeria in München",
+    introText: "Moderne Restaurant‑Website mit Online‑Reservierung, zweisprachigem Aufbau, Food‑Fotografie und starkem SEO für lokale Sichtbarkeit.",
+    seoTitle: "Pizzeria Website erstellen lassen – Web München | maxWapp",
+    seoDesc: "Professionelle Website für Restaurants & Pizzerien in München – inkl. Online‑Reservierung, Speisekarte, Fotoshooting, SEO & Mehrsprachigkeit"
+  },
+},
     { 
 params: { slug: "1-line-architecture" },
       props: {
@@ -157,12 +177,21 @@ params: { slug: "1-line-architecture" },
       },
     },
 { 
+  params: { slug: "sweet-berry-box" },
+  props: {
+    name: "Sweet Berry Box",
+    introText: "Online-Shop für handgemachte Dessertboxen – entwickelt mit WordPress & WooCommerce für ein starkes Markenerlebnis ohne laufende Abo-Kosten.",
+    seoTitle: "Online Shop mit WordPress und WooCommerce | maxWapp",
+    seoDesc: "Professioneller Online Shop für Dessertboxen – entwickelt von maxWapp mit WordPress & WooCommerce – Alternative zu Shopify."
+  },
+},
+{ 
   params: { slug: "louna-jewelry" },
   props: {
     name: "Louna Jewelry",
     introText: "Online Shop für handgefertigten Schmuck aus Naturmaterialien – mit Fokus auf Ästhetik, Performance und Benutzererlebnis.",
     seoTitle: "Online Shop & Webdesign für Handmade Schmuck | maxWapp",
-    seoDesc: "Louna Jewelry – moderner Online Shop für handgemachten Schmuck aus München. Entwickelt von maxWapp mit Fokus auf Design, Conversion & Performance. Alternative zu Shopify mit mobilem E‑Commerce‑Design für kleine Marken."
+    seoDesc: "Louna Jewelry – moderner Online Shop für handgemachten Schmuck aus Aachen. Entwickelt von maxWapp mit Fokus auf Design & Conversion. "
   },
 },
     { 
@@ -235,6 +264,10 @@ const { name, introText, seoTitle, seoDesc } = Astro.props;
       {slug === 'kleines-stadthaus' && <KleinesStadthaus />}
             {slug === '1-line-architecture' && <FirstLineArchitecture />}
              {slug === 'louna-jewelry' && <LounaJewelry />}
+                          {slug === 'sweet-berry-box' && <SweetBerryBox />}
+                                                    {slug === 'pizzeria-mixto-verde' && <PizzeriaMixtoVerde />}
+                                                    {slug === 'akam-reinigung' && <AkamReinigung />}
+
     </section>
   </div>
 </MainLayout>

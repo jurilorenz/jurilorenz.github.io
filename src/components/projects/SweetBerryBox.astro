@@ -1,0 +1,98 @@
+---
+import ContentSection from "../ContentSection.astro"
+import FeatureCard from "../FeatureCard.astro"
+import SectionTitle from "../SectionTitle.astro"
+import GradientDivider from "../GradientDivider.astro"
+import TextSection from "../TextSection.astro"
+import FinalSection from "../FinalSection.astro"
+import IpadComponent from "../IpadComponent.astro"
+---
+
+<div class="project-component">
+
+  <TextSection
+    title="Online-Shop mit Geschmack"
+    introText="Keine monatlichen Gebühren, volle Kontrolle und eine unverwechselbare Markenpräsenz. "
+    secondText="Dieser neue Online-Shop zeigt, wie man einen Online-Shop professionell erstellen lässt und dabei unabhängig bleibt."
+  />
+
+  <ContentSection
+    imgSrc="/images/projects/sweet-berry-box-mobile-shop.webp"
+    imgAlt="Mobile Ansicht der Startseite von Sweet Berry Box"
+    title="Handgemachter Genuss online erleben"
+    introText="Der Shop bringt die handgemachten Dessertboxen perfekt zur Geltung – mit feinen Bildern, klarer Struktur und emotionaler Ansprache."
+    secondText="Besucher können bequem mobil bestellen, durch liebevoll gestaltete Produktseiten stöbern und den gesamten Kaufprozess in wenigen Klicks abschließen."
+  />
+
+  <ContentSection
+    imgSrc="/images/projects/sweet-berry-box-mobile-galerie.webp"
+    imgAlt="Mobile Galerieansicht mit Erdbeerboxen"
+    title="Verführung in jedem Detail"
+    introText="Die Galerie präsentiert die Produkte als visuelles Erlebnis – jede Box ist individuell, edel und einladend fotografiert."
+    secondText="Das Layout ist für Smartphones optimiert, sodass Nutzer:innen die Produkte sofort genießen können – digital wie visuell."
+    reverse={true}
+  />
+
+  <SectionTitle title="Tablet & Desktop" />
+
+  <IpadComponent
+    imgSrc="/images/projects/sweet-berry-box-ipad-hero.webp"
+    imgAlt="Tablet-Ansicht der Startseite mit Hero-Header und Shop-Button"
+  />
+
+
+<TextSection
+  introText="Auf Tablet & Desktop entfaltet der Online-Shop seine volle Eleganz – mit klarer Typografie, sanften Farben und hochwertigen Bildern."
+  secondText="Ein durchdachtes Design, das Professionalität, Emotion und Markenidentität vereint – und aus Besuchern zufriedene Kunden macht."
+/>
+
+
+
+  <ContentSection
+    imgSrc="/images/projects/sweet-berry-box-mobile-ueber-uns.webp"
+    imgAlt="Mobile Ansicht der Über-uns-Seite von Sweet Berry Box"
+    title="Marke mit Persönlichkeit"
+    introText="Die Über-uns-Seite erzählt die Geschichte der Gründerin – authentisch, sympathisch und mit Liebe zum Detail."
+    secondText="So entsteht Vertrauen – ein entscheidender Faktor für den Erfolg jedes Online-Shops."
+    reverse={false}
+  />
+
+  <SectionTitle title="Besondere Highlights" />
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-24 mb-32">
+<FeatureCard
+  title="Verkaufen ab dem ersten Tag"
+  description="Der Shop wurde von Anfang an so aufgebaut, dass Verkäufe leicht möglich sind – mit klaren Produktseiten, einfachem Bestellprozess und direktem Call-to-Action. Ideal für Startups, die schnell durchstarten wollen."
+/>
+
+<FeatureCard
+  title="Mobil optimiert für mehr Umsatz"
+  description="Die mobile Version wurde mit höchster Priorität entwickelt: klare Struktur, große Bilder, intuitive Bedienung. Kunden können unterwegs bequem bestellen – das sorgt für bessere Conversion und mehr Verkäufe."
+/>
+
+<FeatureCard
+  title="Klarer Fokus auf Marketing & Sichtbarkeit"
+  description="Von Anfang an wurde der Shop auf Sichtbarkeit und Marketingwirkung ausgerichtet – mit starkem Branding, prägnanten Texten und integrierten Weiterempfehlungs-Features wie Google Bewertungen und Social Sharing."
+/>
+
+<FeatureCard
+  title="Freiheit ohne monatliche Gebühren"
+  description="Statt Shopify wurde bewusst auf WordPress + WooCommerce gesetzt – ohne Abo, mit voller Kontrolle. So bleibt das Unternehmen unabhängig und spart dauerhaft Kosten."
+/>
+  </div>
+
+  <GradientDivider />
+
+  <FinalSection
+    imgSrc="/images/projects/sweet-berry-box-mobile-startseite.webp"
+    imgAlt="Hero-Bild des Sweet Berry Box Projekts"
+    title="Bereit für deinen eigenen Online-Shop?"
+    introText="Du möchtest deinen Online-Shop erstellen lassen – ohne Abo-Kosten, aber mit professionellem Design und voller Kontrolle?"
+    secondText="Ich entwickle moderne E‑Commerce‑Lösungen auf WordPress, die unabhängig, schön und verkaufsstark sind."
+    primaryButtonLabel="Zurück"
+    primaryButtonLink="/projekte"
+    secondaryButtonLabel="Let's Talk"
+    secondaryButtonLink="/kontakt"
+  />
+
+</div>

@@ -1,0 +1,94 @@
+---
+import ContentSection from "../ContentSection.astro"
+import FeatureCard from "../FeatureCard.astro"
+import IpadComponent from "../IpadComponent.astro"
+import SectionTitle from "../SectionTitle.astro"
+import GradientDivider from "../GradientDivider.astro"
+import TextSection from "../TextSection.astro"
+import FinalSection from "../FinalSection.astro"
+---
+
+<div class="project-component">
+
+  <p class="sr-only">
+    Moderne Website für Reinigungsfirmen mit Preisübersicht, Angebotsformular und lokalen Google-Bewertungen. Dieses Projekt zeigt, wie sich Dienstleister in der Gebäudereinigung professionell online präsentieren können – mit klarer Struktur, hoher Conversion und smarter Kundenkommunikation. Jetzt Reinigungs-Website erstellen lassen: mobilfreundlich, sichtbar bei Google, inklusive SEO und Kontaktformular.
+  </p>
+
+  <TextSection
+    title="Professionelle Reinigung mit moderner Website"
+    introText="Für Akam Dienstleistungen wurde eine Website entwickelt, die Vertrauen schafft und Kundengewinnung vereinfacht – mit klarem Design, Preisliste, Buchungsformular und SEO-Optimierung."
+    secondText="Das Ziel: neue Kundenanfragen generieren, Leistungen transparent darstellen und eine lokale Sichtbarkeit in München aufbauen."
+  />
+
+  <IpadComponent
+  imgSrc="/images/projects/akam-reinigung-ipad-startseite.webp"
+  imgAlt="Startseite der Website von Akam Reinigungsfirma auf dem iPad"
+/>
+
+<TextSection
+  title="Strukturierte Startseite mit klarer Conversion-Führung"
+  introText="Die Startseite zeigt auf einen Blick, was das Unternehmen bietet: professionelle Reinigung in München, Vertrauensvorteile und einen direkten Call-to-Action."
+  secondText="Buttons wie 'Jetzt buchen' und Übersichten der Leistungen sorgen für Orientierung und schnelle Kontaktaufnahme."
+/>
+
+<ContentSection
+  imgSrc="/images/projects/akam-reinigung-iphone-bewertungen.webp"
+  imgAlt="Preise, Leistungen und Kundenbewertungen der Reinigungsfirma auf dem Smartphone"
+  title="Preise, Leistungen & Kundenstimmen"
+  introText="Die Website präsentiert eine klare Übersicht der angebotenen Reinigungsleistungen sowie aktuelle Preise – direkt sichtbar und gut strukturiert."
+  secondText="Kundenbewertungen sorgen für Vertrauen und runden den professionellen Gesamteindruck der Seite ab."
+/>
+
+  <SectionTitle title="Kontakt & F.A.Q." />
+
+  <IpadComponent
+    imgSrc="/images/projects/akam-reinigung-ipad-kontakt.webp"
+    imgAlt="Kontaktseite und FAQ auf dem iPad Screenshot"
+  />
+
+  <TextSection
+    introText="Die Website bietet ein Kontaktformular sowie eine FAQ für häufige Fragen."
+    secondText="So sparen Besucher Zeit, finden schnell Antworten und nehmen unkompliziert Kontakt auf."
+  />
+
+
+
+  <SectionTitle title="Website Features" />
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-24 mb-32">
+    <FeatureCard
+      title="Modernes Webdesign"
+      description="Klare Struktur, dynamische Farben und einfache Navigation sorgen für ein professionelles Erscheinungsbild."
+    />
+
+    <FeatureCard
+      title="Buchungsformular"
+      description="Interessenten können direkt auf der Website Anfragen senden – ohne Umwege, schnell und verbindlich."
+    />
+
+<FeatureCard
+  title="SEO für München"
+  description="Die Website ist so gestaltet, dass sie bei Google besser gefunden wird – besonders von Menschen aus München, die einen Reinigungsservice suchen."
+/>
+
+    <FeatureCard
+      title="Mobile Optimierung"
+      description="Perfekte Darstellung auf allen Geräten – mit Fokus auf schnelle Ladezeiten und benutzerfreundliches Design."
+    />
+  </div>
+
+  <GradientDivider />
+
+  <FinalSection
+    imgSrc="/images/projects/akam-reinigung-iphone-footer.webp"
+    imgAlt="Mobile Ansicht der Reinigungs-Website im Footerbereich"
+    title="Bereit für eine Website, die Anfragen generiert?"
+    introText="Diese Seite zeigt, wie sich lokale Dienstleister modern, vertrauenswürdig und zielgerichtet präsentieren."
+    secondText="Du brauchst auch eine Website mit starkem Auftritt und klarer Struktur? Dann lass uns sprechen."
+    primaryButtonLabel="Zurück"
+    primaryButtonLink="/projekte"
+    secondaryButtonLabel="Let's Talk"
+    secondaryButtonLink="/kontakt"
+  />
+
+</div>
