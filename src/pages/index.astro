@@ -3,12 +3,14 @@ import MainLayout from "../layouts/MainLayout.astro";
 import DevicesComponent from '../components/DevicesComponent.astro';
 import ServicesComponent from '../components/ServicesComponent.astro';
 import HeroComponent from "../components/HeroComponent.astro";
+import TestimonialsComponent from "../components/TestimonialsComponent.astro";
+
 ---
 
 <MainLayout 
 title="Professionelles Webdesign München – Websites, die verkaufen | maxWapp"
-seoTitle="Website erstellen lassen in München – WordPress Agentur maxWapp"
-seoDesc="Professionelles Webdesign für Unternehmen in München: Websites erstellen lassen, Landingpages, WordPress & responsive Design. Jetzt optimieren & starten!"
+seoTitle="Professionelles Webdesign München – Top Websites | maxWapp"
+  seoDesc="Webdesign in der Nähe (München): Website & Landingpage erstellen lassen. Responsive Webdesign, SEO-Optimierung, WordPress. Jetzt starten mit maxWapp."
 >
 <script type="application/ld+json">
 {
@@ -118,18 +120,22 @@ seoDesc="Professionelles Webdesign für Unternehmen in München: Websites erstel
   }
   </script>
   
-    <!-- Devices Section -->
+    <!-- Hero Section -->
     <HeroComponent />
 
-    <p class="sr-only">
-  Du suchst modernes Webdesign in deiner Nähe? Oder suchst du einen professionellem Webdesigner in München?  Als professioneller Webentwickler aus München und Web Agency für Web & Design erstelle ich hochwertige Websites, Landingpages und Homepages für kleine Unternehmen, Coaches und Selbstständige. Ob modernes Webdesign, professioneller Webdesigner, Homepage erstellen lassen oder Landingpage Design – unser Website Design Agency helfe dir, online sichtbar zu werden. Jetzt Website erstellen lassen – schnell, responsiv und suchmaschinenoptimiert. Webagentur München Webdesign.
+<p class="sr-only">
+  Webdesign München: Professioneller Webdesigner & Webentwickler für
+  moderne Websites und Landingpages. Homepage erstellen lassen,
+  responsive Webdesign & Landingpage Design – in München und Umgebung.
+  Suchanfragen: Webdesign in meiner Nähe, Webdesign in der Nähe,
+  Landingpage erstellen lassen, professionelle Website erstellen.
 </p>
 
     <h2
     id="ueber-mich"
     class="text-center text-4xl md:text-6xl font-bold text-gray-100 drop-shadow-lg mt-12 md:mb-12 md:mt-36"
     >
-    Webdesign aus München</h2>
+    Webdesign München</h2>
 
     <div
       class="flex flex-col items-center md:flex-row md:justify-center md:items-center md:space-x-32 mt-12"
@@ -179,48 +185,49 @@ seoDesc="Professionelles Webdesign für Unternehmen in München: Websites erstel
         />
       </div>
 
-      <!-- Textabschnitt für Desktop rechts -->
-      <div class="w-full md:w-7/12 text-center md:text-left">
-        <p class="text-xl md:text-2xl mt-4">
-          Hi, ich bin 
-          <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500">
-            Juri Lorenz
-          </span>,
-          ein erfahrener Webdesigner aus München. Ich spezialisiere mich auf professionelles Webdesign, das
-          <span class="underline-animation">
-            Kunden gewinnt
-          </span>– mit responsiven Websites und schnellen Ladezeiten.
-</p>
-        </p>
-        
-        <p class="text-xl md:text-2xl mt-8">
-          Ich entwickle moderne
+<!-- Textabschnitt für Desktop rechts -->
+<div class="w-full md:w-7/12 text-center md:text-left">
+  <p class="text-xl md:text-2xl mt-4">
+    <strong>Webdesign aus München</strong> mit Fokus auf
+    <span class="underline-animation">Conversion</span>, Klarheit und Tempo.
+    Ich liefere
+    <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500">professionelle Websites</span>
+    im <strong>responsive Webdesign</strong> – präzise, schnell, skalierbar.
+  </p>
 
-          <strong>Landingpages</strong>, <strong>Websites</strong> und <strong>Onlineshops</strong> für Selbstständige und kleine Unternehmen.
-</p>
-        </p>
+  <p class="text-xl md:text-2xl mt-8">
+    Du willst eine <strong>Landingpage </strong> oder 
+    <strong>Homepage erstellen lassen</strong>? Ich entwickle
+    <strong>Top Websites</strong> und
+    <strong>Onlineshops</strong> für Selbstständige und kleine Unternehmen in 
+<a href="/webdesign-in-der-naehe-muenchen/"
+   title="Webdesign in der Nähe München"
+   class="inline-flex items-center gap-1 underline underline-offset-4 decoration-2
+          hover:no-underline hover:text-white/90
+          focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-sm">
+  München &amp; Umgebung
 
-        <p class="text-xl md:text-2xl mt-8">
-          <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500">
-            Bereit, deine Website erstellen zu lassen?
-          </span>
-        </p>
+</a>.
+  </p>
 
-                <!-- Buttons at the bottom-right -->
-                <div
-                class="flex flex-col md:flex-row gap-6 mt-8 md:mt-16 justify-center md:justify-start items-center md:items-start w-full md:w-auto"
-              >
+  <p class="text-xl md:text-2xl mt-8">
+    <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500">
+      Bereit für ein Webdesign, das Kunden gewinnt?
+    </span>
+  </p>
 
-      
-                <!-- Primary Button -->
-                <a
-                  href="/kontakt"
-                  class="relative inline-block py-4 px-10 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-white text-[#090a1a] shadow-lg transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_rgba(147,112,219,0.8),_0_0_35px_rgba(3,169,244,0.6)] hover:border-[#6d87d1]"
-                >
-                  Let's talk
-                </a>
-              </div>
-      </div>
+  <!-- Buttons at the bottom-right -->
+  <div
+    class="flex flex-col md:flex-row gap-6 mt-8 md:mt-16 justify-center md:justify-start items-center md:items-start w-full md:w-auto"
+  >
+    <a
+      href="/kontakt"
+      class="relative inline-block py-4 px-10 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-white text-[#090a1a] shadow-lg transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_rgba(147,112,219,0.8),_0_0_35px_rgba(3,169,244,0.6)] hover:border-[#6d87d1]"
+    >
+      Let's talk
+    </a>
+  </div>
+</div>
 
       
     </div>
@@ -232,11 +239,11 @@ seoDesc="Professionelles Webdesign für Unternehmen in München: Websites erstel
              <!-- Devices Section -->
              <DevicesComponent />
 
-
+<TestimonialsComponent />
              
     <!-- Warum mit mir arbeiten Abschnitt -->
     <h2
-      class="text-center text-4xl md:text-5xl font-extrabold   mt-36 mb-12 mx-2"
+      class="text-center text-4xl md:text-5xl font-extrabold   mt-2 mb-12 mx-2"
     >
       Warum mit mir arbeiten?
     </h2>
@@ -258,12 +265,13 @@ seoDesc="Professionelles Webdesign für Unternehmen in München: Websites erstel
 <!-- Textabschnitt für Desktop rechts -->
 <div class="w-full md:w-7/12 text-center md:text-left">
   <p class="text-xl md:text-2xl mt-4">
-  Ich bringe meine Erfahrung aus Projekten in den Bereichen Immobilien, Architektur und E-Commerce ein, um <span class="underline-animation">deinen Umsatz zu steigern</span> – mit <strong>professionellem Webdesign</strong> aus München.
+    Deine Website soll <span class="underline-animation">Kunden gewinnen</span> – nicht nur gut aussehen.  
   </p>
-  
+
   <p class="text-xl md:text-2xl mt-8">
-  Mein Fokus liegt auf <strong>responsive Webdesign</strong>, modernen <strong>Landingpages</strong> und <strong>WordPress-Websites</strong>, die blitzschnell laden und Kunden begeistern.
+      Ich verbinde <strong>Design, Strategie & Technik</strong>, damit deine Marke online überzeugt und <strong>mehr Anfragen</strong> generiert.
   </p>
+
 
   <p class="text-xl md:text-2xl mt-8">
     Überzeuge dich selbst von meinem

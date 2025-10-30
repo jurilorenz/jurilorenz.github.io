@@ -2,6 +2,7 @@
 import MainLayout from "../../layouts/MainLayout.astro"
 import IpadComponent from "../../components/IpadComponent.astro"
 
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -27,9 +28,9 @@ const jsonLd = {
 ---
 
 <MainLayout
-  title="Printdesign München: Flyer, Visitenkarten & Logo – maxWapp"
-  seoTitle="Flyer erstellen & Visitenkarten Design in München – maxWapp"
-  seoDesc="Flyer erstellen & drucken, Visitenkarten-Design (QR-Code) & Logo erstellen lassen – Printdesign aus München. Corporate Design inklusive, bereit für Druck & Web."
+  title="Printdesign & Branding in München – Flyer, Visitenkarten & Logo | maxWapp"
+  seoTitle="Visitenkarten & Flyer erstellen in München | maxWapp"
+  seoDesc="Printdesign in München: Flyer erstellen & drucken, Visitenkarten mit QR Code, Logo erstellen lassen & Corporate Design. Alles aus einer Hand."
 >
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   <!-- Hintergrund mit Verlauf -->
@@ -40,14 +41,24 @@ const jsonLd = {
     <h1
       class="text-center text-3xl md:text-6xl font-bold text-gray-100 drop-shadow-lg mt-12 md:mb-12 md:mt-36"
     >
-      Printdesign & Branding aus München
+      Printdesign & Corporate Identity aus München
     </h1>
 
 <p class="sr-only">
-  Diese Seite stellt meine Leistungen im Printdesign und Branding aus München vor:
-  Flyer erstellen & drucken, Visitenkarten-Design (inkl. QR-Code), Broschüren sowie
-  Corporate Design und Logoentwicklung.
+  Printdesign & Branding in München: Flyer erstellen und drucken, Flyer Design,
+  Visitenkarten Design und Visitenkarten mit QR-Code, digitale Visitenkarte erstellen,
+  Logo erstellen lassen und Logo Redesign, Corporate Identity & Corporate Design.
 </p>
+
+<p class="max-w-3xl mx-2 text-lg md:text-2xl text-gray-300 mt-6">
+  Alles für deinen Auftritt: <strong>Flyer erstellen &amp; drucken</strong>,
+  Visitenkarten mit QR Code,
+  <strong>Logo erstellen lassen</strong> und
+  <span class="text-gradient font-semibold">Corporate Design</span>.
+  Lokal in München, professionell umgesetzt – von der Idee bis zur
+  <span class="underline-animation">Druckabnahme</span>.
+</p>
+
 
     <div
       class="flex flex-col items-center md:flex-row md:justify-center md:items-center md:space-x-32 mt-12"
@@ -60,7 +71,7 @@ const jsonLd = {
           <img
             src="/images/projects/streetly-logo.webp"
             class="rounded-full w-48 h-48 md:w-56 md:h-56 object-cover"
-            alt="Juri Lorenz, Webentwickler in München"
+            alt="Branding und Logodesing für ein Start-up in München - maxWapp"
           />
         </div>
       </div>
@@ -68,8 +79,8 @@ const jsonLd = {
       <!-- Motto-Text neben dem Bild -->
       <div class="text-center md:text-left md:pl-12 mt-6 md:mt-0">
         <p class="text-2xl md:text-2xl font-medium text-gray-300">
-          <span>Corporate</span><br />
-          <span>Identity </span><br />
+          <span>Logo</span><br />
+          <span>Design </span><br />
         </p>
 
         <!-- Hauptmotto -->
@@ -89,8 +100,8 @@ const jsonLd = {
         class="w-full md:w-5/12 flex justify-center md:justify-end mb-12 md:mb-0 rounded shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] phone-container"
       >
         <img
-          src="/images/projects/streetly-kontakt.webp"
-          alt="Phone Screenshot"
+          src="/images/projects/pizzeria-mondo-menu-flyer.webp"
+          alt="Branding, Flyer- und Speisekartedesign für Pizza Mondo in München – erstellt von maxWapp"
           class="w-80 md:w-auto md:max-h-[60vh] object-contain rounded-lg"
         />
       </div>
@@ -224,6 +235,8 @@ const jsonLd = {
   Visitenkarten Design in München
 </h2>
 
+
+
 <p class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-4">
   Eine <strong>Visitenkarte</strong> ist oft der erste Eindruck deiner Marke –
   deshalb gestalte ich Designs, die <strong>ästhetisch, durchdacht und funktional</strong>
@@ -264,6 +277,31 @@ Ob mit <strong>integriertem QR-Code</strong> oder <strong>besonderen Druckverede
       imgSrc="/images/projects/studio-d-ipad-style-guide.webp"
       imgAlt="studio-d ipad style-guide by maxWapp"
     />
+
+    <h2
+  class="text-center text-3xl md:text-4xl font-extrabold mt-24 mb-12"
+  style="line-height: 1.3;"
+>
+  Schaufenster, Schilder & T-Shirts – Branding direkt in München
+</h2>
+
+<p class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-4 leading-relaxed">
+  Neben Web&nbsp;&amp;&nbsp;Print übernehme ich auch <strong>Schaufensterbeschriftung in München</strong>,
+  <strong>Firmenschilder &amp; Leuchtkästen</strong>, Aufkleber/Folierungen sowie
+  <strong>T-Shirt&nbsp;Druck</strong>. Ich liefere Design, druckfertige Daten und die Abstimmung mit
+  der Produktion – alles aus einer Hand und lokal vor Ort.
+</p>
+
+<p class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-4 mt-8 leading-relaxed">
+  Ideal für Cafés, Barbershops, Studios, Handwerk & kleine Läden:
+  Ein einheitliches <strong>Branding von Website bis Schaufenster</strong> sorgt für Wiedererkennung
+  in deiner Nähe und stärkt die <span class="text-gradient font-semibold">lokale Sichtbarkeit</span>.
+</p>
+
+<IpadComponent
+  imgSrc="/images/ipad-t-short-print-maxwapp.webp" 
+  imgAlt="T-Shirt Werbung maxWapp: Schaufensterbeschriftung, Schilder & T-Shirt-Druck in München"
+/>
 
 <!-- FAQ Abschnitt mit Karten -->
 <h2 class="text-center text-4xl md:text-5xl font-extrabold md:mt-24 mt-12 mb-24">

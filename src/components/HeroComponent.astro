@@ -1,5 +1,5 @@
 ---
-// HeroComponent.astro
+const { title = "Websites,", subtitle = "die verkaufen" } = Astro.props;
 ---
 
 <!-- Hero Section --><!-- ✅ Десктопная версия -->
@@ -32,16 +32,16 @@ class="hidden 2xl:flex flex-col items-start mb-6 rounded-lg transition-all durat
       </div>
     </div>
     <div class="text-gray-300 text-xl mt-1 underline">
-      über 50 Google-Bewertungen
+      über 60 Google-Bewertungen
     </div>
   </a>
 
     <!-- Заголовок -->
-    <p class="text-8xl font-bold leading-tight">
-      Websites,<span class="block text-6xl mt-[-0.5rem]">die verkaufen</span>
-    </p>
+    <h1 class="text-8xl font-bold leading-tight">
+      {title}<span class="block text-6xl mt-[-0.5rem]">{subtitle}</span>
+    </h1>
     <!-- Список преимуществ -->
-    <h2 class="sr-only">Unsere Vorteile</h2>
+    <h2 class="sr-only">Services</h2>
     <ul class="text-lg md:text-2xl mt-10 text-gray-100 space-y-2">
       <li>
         <i class="fas fa-check text-white mr-4"></i>Websites und Online-Shops
@@ -85,13 +85,13 @@ class="hidden 2xl:flex flex-col items-start mb-6 rounded-lg transition-all durat
     </div>
   </div>
   <div class="text-gray-300 mt-1 underline">
-    über 50 Bewertungen
+    über 60 Bewertungen
   </div>
 </a>
   <!-- Заголовок (mobile) -->
   <h1 class="text-5xl font-bold leading-tight">
-    Websites,<br />
-    <span class="text-4xl">die verkaufen</span>
+    {title}<br />
+    <span class="text-4xl">{subtitle}</span>
   </h1>
 
   <!-- Список преимуществ -->
@@ -129,16 +129,6 @@ class="hidden 2xl:flex flex-col items-start mb-6 rounded-lg transition-all durat
     />
   </div>
 </div>
-
-<script>
-  import Typed from "typed.js"
-  var typed = new Typed("#typed", {
-    stringsElement: "#typed-strings",
-    typeSpeed: 120,
-    backSpeed: 30,
-    loop: true,
-  })
-</script>
 
 <style>
   h1 {

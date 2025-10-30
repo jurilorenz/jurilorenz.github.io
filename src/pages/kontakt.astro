@@ -29,7 +29,7 @@ import MainLayout from "../layouts/MainLayout.astro"
 
 
     <!-- Kontaktinformationen im Kartenstil -->
-    <section class="w-10/12 md:w-8/12 lg:w-6/12 mt-4 mb-12">
+    <section class="w-10/12 md:w-8/12 lg:w-6/12 mt-4 mb-24">
       <div
         class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
       >
@@ -110,7 +110,58 @@ import MainLayout from "../layouts/MainLayout.astro"
       </div>
     </section>
 
+    <!-- Standort / Karte Abschnitt -->
+ 
+    <h2
+      class="text-center text-2xl md:text-3xl font-bold text-gray-300 drop-shadow-lg mx-4 my-4 mb-12"
+    >
+  <div>Standort in München</div>
+    
+    </h2>
+
+<div
+  class="w-11/12 md:w-10/12 lg:w-8/12 mx-auto flex flex-col md:flex-row items-center mb-24 gap-12 md:gap-24"
+>
+  <!-- Kartenbildabschnitt (links auf Desktop) -->
+  <div
+    class="w-full md:w-5/12 flex justify-center md:justify-center rounded shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)]"
+  >
+    <img
+          src="/images/maxwapp-map-muenchen.webp"
+alt="maxWapp Webdesign Standort in München Obersendling – Karte"
+          class="w-80 md:w-auto md:max-h-[60vh] object-contain rounded-lg"
+    />
+  </div>
+
+  <!-- Textabschnitt (rechts auf Desktop) -->
+  <div class="w-full md:w-5/12 text-center md:text-left">
+<p class="text-xl md:text-2xl mb-6 text-gray-300 text-center md:text-left">
+<strong>Constanze-Hallgarten-Str. 40</strong>
+  <br>
+<strong>81379 München</strong>
+</p>
+
+<!-- CTA Button -->
+<div class="flex justify-center md:justify-start mt-8 md:mt-16">
+  <a
+    href="https://www.google.com/maps/place/maxWapp+%7C+Juri+Lorenz/@48.0961762,11.505842,17z/data=!3m1!4b1!4m6!3m5!1s0xf3b4b557fd55469:0x893accd647bdc468!8m2!3d48.0961726!4d11.5084223!16s%2Fg%2F11wr1981wf?entry=ttu&g_ep=EgoyMDI1MTAyNy4wIKXMDSoASAFQAw%3D%3D"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="relative inline-block py-4 px-10 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-white text-[#090a1a] shadow-lg transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_rgba(147,112,219,0.8),_0_0_35px_rgba(3,169,244,0.6)] hover:border-[#6d87d1]"
+  >
+    Auf Google Maps öffnen
+  </a>
+</div>
+  </div>
+</div>
+
         <!-- Kontakt form -->
+             <h2
+      class="text-center text-2xl md:text-3xl font-bold text-gray-300 drop-shadow-lg mx-4 my-4 md:mb-8"
+    >
+  <div>Schreib mir – dein Projekt startet hier</div>
+    
+    </h2>
 
     <section class="w-10/12 md:w-8/12 lg:w-6/12 mt-8 mb-12">
       <div
