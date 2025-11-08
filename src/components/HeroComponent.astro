@@ -36,10 +36,16 @@ class="hidden 2xl:flex flex-col items-start mb-6 rounded-lg transition-all durat
     </div>
   </a>
 
-    <!-- Заголовок -->
-    <h1 class="text-8xl font-bold leading-tight">
-      {title}<span class="block text-6xl mt-[-0.5rem]">{subtitle}</span>
-    </h1>
+  <!-- Заголовок -->
+  <p
+    class="text-8xl font-bold leading-tight"
+    role="heading"
+    aria-level="1"
+  >
+    {title}
+    <span class="block text-6xl mt-[-0.5rem]">{subtitle}</span>
+  </p>
+  
     <!-- Список преимуществ -->
     <h2 class="sr-only">Services</h2>
     <ul class="text-lg md:text-2xl mt-10 text-gray-100 space-y-2">
