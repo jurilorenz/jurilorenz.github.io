@@ -1,0 +1,122 @@
+---
+import PrimaryButton from "./PrimaryButton.astro";
+
+const {
+  eyebrow = "",
+  title,
+  intro = "",
+  cards = [], // [{ icon:"calendar", title:"...", text:"..." }, ...]
+  ctaLabel = "",
+  ctaHref = "",
+  cols = 3,
+  className = "",
+} = Astro.props;
+
+const iconPaths = {
+  calendar:
+    "M7 3v2M17 3v2M4 7h16M6 11h4M6 15h4M14 11h4M14 15h4M5 5h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z",
+  bolt:
+    "M13 2L3 14h7l-1 8 10-12h-7l1-8z",
+  link:
+    "M10 13a5 5 0 0 1 0-7l1.5-1.5a5 5 0 0 1 7 7L17 13M14 11a5 5 0 0 1 0 7L12.5 19.5a5 5 0 0 1-7-7L7 11",
+  creditcard:
+    "M3 7h18M5 11h6M3 6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6z",
+  euro:
+    "M17 5H11a7 7 0 1 0 0 14h6M8 10h6M8 14h6",
+  chat:
+    "M21 15a4 4 0 0 1-4 4H8l-5 3 1.5-5A4 4 0 0 1 4 15V7a4 4 0 0 1 4-4h9a4 4 0 0 1 4 4v8z",
+
+  // NEW: UI/UX Design icon
+  design:
+    "M3 21l3-.8L19 7.2l-3.4-3.4L2.6 16.8 3 21zM14.8 4.8l3.4 3.4",
+
+  // NEW: Website Betreuung / maintenance icon
+  maintenance:
+    "M4 12h4M16 12h4M12 4v4M12 16v4M6.5 6.5l2.5 2.5M15 15l2.5 2.5M6.5 17.5l2.5-2.5M15 9l2.5-2.5",
+
+  // NEW: WordPress programming / development icon
+  code:
+    "M16 18l6-6-6-6M8 6l-6 6 6 6",
+};
+const gridCols =
+  cols === 2 ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1 md:grid-cols-3";
+---
+
+<section class={`relative w-full section-pad ${className}`.trim()}>
+  <div class="section-container">
+    <div class="mx-auto max-w-5xl text-center">
+      {eyebrow && <p class="mw-eyebrow">{eyebrow}</p>}
+      <h2 class="mw-h2 mt-4">{title}</h2>
+      {intro && <p class="mw-lead mt-4">{intro}</p>}
+    </div>
+
+    <div class={`mt-10 grid gap-6 ${gridCols}`}>
+      {cards.map((c, i) => {
+        const gid = `mw-ic-${i}`;
+        return (
+          <article class="mw-glass-card p-7 md:p-8">
+            <div class="mw-topbar-gradient" aria-hidden="true"></div>
+
+            <div class="mw-icon-wrap" aria-hidden="true">
+              <svg
+                class="mw-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d={iconPaths[c.icon] ?? iconPaths.link} />
+              </svg>
+            </div>
+
+            <h3 class="mw-card-title">{c.title}</h3>
+            <p class="mw-card-text">{c.text}</p>
+          </article>
+        );
+      })}
+    </div>
+
+    {ctaLabel && ctaHref && (
+      <div class="mt-10 flex justify-center">
+        <PrimaryButton label={ctaLabel} href={ctaHref} />
+      </div>
+    )}
+  </div>
+</section>
+
+<style>
+  /* Keep only what we don't have globally */
+  .mw-icon-wrap {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    margin-bottom: 18px;
+  }
+
+  .mw-icon {
+    width: 34px;
+    height: 34px;
+    opacity: 0.98;
+    color: #ffffff;
+  }
+
+  .mw-card-title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.15rem;
+    line-height: 1.2;
+    color: rgba(255, 255, 255, 0.95);
+  }
+
+  .mw-card-text {
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.72);
+    line-height: 1.6;
+  }
+</style>

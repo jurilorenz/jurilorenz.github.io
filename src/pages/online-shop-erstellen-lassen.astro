@@ -1,0 +1,709 @@
+---
+import MainLayout from "../layouts/MainLayout.astro"
+import IpadComponent from "../components/IpadComponent.astro"
+import InfoCard from "../components/InfoCard.astro";
+import PrimaryButton from "../components/PrimaryButton.astro"
+import FinalCTASection from "../components/FinalCTASection.astro"
+import ComparisonSection from "../components/ComparisonSection.astro"
+
+
+
+const offers = [
+  {
+    title: "Redesign mit Conversion-Fokus",
+    text: `Dein aktueller Shop wirkt nicht professionell oder bringt kaum Verkäufe? Ich gestalte ihn <strong>komplett neu</strong> – mit Fokus auf Vertrauen, Klarheit und <strong>maximale Conversion</strong>.`,
+  },
+  {
+    title: "Shopify Setup",
+    text: `Du startest bei Null? Ich übernehme alles – von der Theme-Auswahl bis zur fertigen Shopstruktur. Du bekommst einen <strong>markenstarken Onlineshop</strong> – ready to sell.`,
+  },
+  {
+    title: "Speed & Technik, die verkaufen",
+    text: `Ich optimiere Ladezeiten, Navigation und technische Struktur – für <strong>mehr Vertrauen und bessere Nutzererfahrung</strong>. Denn jeder Sekundenbruchteil entscheidet beim Verkauf.`,
+  },
+  {
+    title: "Mobile-First",
+    text: `Über 70 % der Nutzer kaufen mobil. Ich entwickle deinen Shop <strong>mobile-first</strong> – perfekt auf Smartphone, Tablet & Desktop. Damit keine Verkäufe verloren gehen.`,
+  },
+];
+
+const pricingFactors = [
+  {
+    title: "Anzahl der Produkte",
+    text: `Je mehr Artikel, Kategorien und Varianten – desto mehr Struktur und Setup braucht der Shop.`,
+  },
+  {
+    title: "Payment-Integration",
+    text: `<span class=\"underline-animation\">PayPal</span>, <span class=\"underline-animation\">Stripe</span> oder andere Anbieter müssen sauber eingebunden werden.`,
+  },
+  {
+    title: "Versand & Logik",
+    text: `Versandarten, Lieferzonen und automatische Regeln sind oft entscheidend für den Checkout.`,
+  },
+  {
+    title: "SEO-Optimierung",
+    text: `Ein Shop soll nicht nur online sein – sondern bei Google <span class=\"text-gradient font-semibold\">gefunden werden</span>.`,
+  },
+];
+
+
+
+const faqs = [
+  {
+    title: "Was kostet es, einen Online Shop erstellen zu lassen?",
+    text: `Der Preis hängt vom Umfang ab: Anzahl der Produkte, gewünschte Funktionen (Payment, Versand) und Design.
+    Du bekommst vorab ein klares Angebot – <strong>transparent</strong> und ohne Überraschungen.
+    Mehr Infos findest du auf der <a href="/preise" class="underline">Preise</a>-Seite.`,
+  },
+  {
+    title: "Wie lange dauert es, einen Online Shop zu erstellen?",
+    text: `Im Durchschnitt dauert ein Online-Shop-Projekt etwa <strong>zwei bis drei Wochen</strong>.
+    Wenn es besonders schnell gehen muss, ist oft auch eine <span class="underline-animation">Express-Umsetzung</span> möglich.`,
+  },
+  {
+    title: "Kann ich Produkte und Inhalte später selbst pflegen?",
+    text: `Ja. Shopify und moderne Shop-Systeme sind <strong>einfach pflegbar</strong>.
+    Du kannst Produkte, Texte und Bilder später selbst aktualisieren.
+    Du bekommst eine kurze Einführung, damit du unabhängig bleibst.`,
+  },
+  {
+    title: "Shop-Redesign & Relaunch – verliere ich Google-Rankings?",
+    text: `Ein Relaunch muss nicht riskant sein.
+    Ich achte darauf, dass Struktur, Weiterleitungen und SEO sauber übernommen werden,
+    damit deine Sichtbarkeit erhalten bleibt – und dein Shop langfristig <span class="text-gradient font-semibold">mehr Umsatz</span> aufbaut.`,
+  },
+];
+
+
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Shopify Onlineshop Erstellung & Redesign",
+  description: "Professionelle Shopify Onlineshops aus München. Neu Design oder Redesign deines bestehenden Shops – schnell, mobiloptimiert & verkaufsstark.",
+  image: "https://maxwapp.de/images/projects/kleines-stadthaus-bestsellers.webp",
+  brand: {
+    "@type": "Brand",
+    name: "maxWapp"
+  },
+  offers: {
+    "@type": "Offer",
+      url: "https://maxwapp.de/preise",
+
+    priceCurrency: "EUR",
+    price: "2500",
+    availability: "https://schema.org/InStock"
+  }
+};
+---
+
+<MainLayout
+  title="Online Shop erstellen lassen – Shopify & starke Alternativen | maxWapp"
+  seoTitle="Online Shop erstellen lassen – Shopify & starke Alternativen"
+  seoDesc="Dein Online Shop soll verkaufen – nicht nur gut aussehen. Ich baue oder optimiere deinen Shop mit Shopify oder Alternativen: Conversion, Speed & SEO im Fokus."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <!-- Hintergrund mit Verlauf -->
+  <div
+    class="min-h-screen bg-gradient-to-b from-[#090a1a] to-[#290065] text-white text-center flex flex-col items-center justify-center"
+  >
+    <!-- Titel -->
+    <h1
+      class="text-center text-3xl md:text-6xl font-bold text-gray-100 drop-shadow-lg mt-12 md:mb-12 md:mt-36"
+    >
+    Online Shop erstellen lassen
+
+    </h1>
+
+<p class="sr-only">
+  Du möchtest einen Online Shop erstellen lassen oder suchst eine Möglichkeit, einen Onlineshop kostenlos zu erstellen? Ich biete dir eine individuelle Lösung für deinen Online Shop – egal ob du neu startest oder einen Website Relaunch planst. Gemeinsam setzen wir deinen Online Shop professionell um, mit Fokus auf Strategie, Technik und Conversion. 
+</p>
+
+    <!-- Hero: Bild + Intro-Text -->
+    <div
+      class="w-11/12 md:w-10/12 lg:w-8/12 mx-auto text-lg md:text-xl text-gray-300 leading-relaxed mt-12 flex flex-col-reverse md:flex-row items-center gap-16 md:gap-32"
+    >
+      <!-- Hero-Bild (links) -->
+      <div
+        class="w-full md:w-5/12 flex justify-center md:justify-end mb-12 md:mb-0 rounded shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] phone-container"
+      >
+        <img
+          src="/images/shop-der-verkauft.webp"
+alt="Professioneller Online Shop erstellen lassen – Shop der verkauft"
+          class="w-80 md:w-auto md:max-h-[60vh] object-contain rounded-lg"
+        />
+      </div>
+
+<!-- Hero-Text (rechts) -->
+<div class="w-full md:w-5/12 text-center md:text-left">
+  <p class="text-xl md:text-2xl ">
+    Dein Shopify-Shop sieht gut aus, aber verkauft nicht? Oder du stehst noch ganz am Anfang? Ich helfe dir, das volle <span class="underline-animation">Potenzial</span> deines Onlineshops zu entfalten.
+  </p>
+  
+  <p class="text-xl md:text-2xl mt-8 mb-12">
+    Ob <strong>Redesign eines bestehenden Shops</strong>, <strong>Website Relaunch</strong> oder <strong>kompletter Neuaufbau</strong> – ich entwickle für dich einen <span class="text-gradient">Shop, der verkauft</span>.
+  </p>
+  
+<PrimaryButton href="/kontakt" label="Kostenlos beraten lassen" />
+</div>
+    </div>
+
+   <!-- Was ich biete Abschnitt mit Karten -->
+<h2
+class="text-center text-4xl md:text-5xl font-extrabold  my-12 md:mt-36"
+>
+Was ich biete
+</h2>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 px-6 md:px-0 max-w-6xl mx-auto">
+  {offers.map((item) => (
+    <InfoCard title={item.title} text={item.text} />
+  ))}
+</div>
+
+<h2 class="text-center text-3xl md:text-4xl font-extrabold mt-24 mb-10 mx-4" style="line-height: 1.25;">
+  Für wen ist dieser Online Shop gedacht?
+</h2>
+
+<div class="max-w-5xl mx-auto px-6 md:px-0 text-center text-gray-300">
+  <p class="text-xl md:text-2xl leading-relaxed">
+    Diese Seite ist für dich, wenn du nicht einfach nur online präsent sein willst –
+    sondern einen <strong>Online Shop</strong>, der gezielt
+    <span class="underline-animation">Bestellungen</span> und Umsatz bringt.
+    Besonders passend ist sie für <strong>Marken</strong>, <strong>Selbstständige</strong>
+    und <strong>kleine Unternehmen</strong>, die ihre Produkte professionell verkaufen möchten.
+  </p>
+
+    <!-- Zielgruppe: Bild + Liste -->
+    <div
+      class="w-11/12 md:w-10/12 lg:w-8/12 mx-auto text-lg md:text-xl text-gray-300 leading-relaxed mt-20 md:mt-12 flex flex-col md:flex-row items-center gap-0 md:gap-32"
+    >
+      <!-- Beispiel-Referenz (links) -->
+<div
+  class="w-full md:w-6/12 flex justify-center md:justify-end mb-12 md:mb-0 rounded-3xl shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] phone-container-static"
+>
+  <img
+    src="/images/projects/louna-jewelry-hero-mobile.webp"
+    alt="Screenshot louna jewelry mobile - maxWapp"
+    class="w-80 md:w-full md:max-w-[420px] md:max-h-[70vh] object-contain rounded-3xl"
+  />
+</div>
+
+
+      
+      <!-- Zielgruppe-Liste (rechts) -->
+      <div class="w-full md:w-5/12 text-center md:text-left">
+
+        
+        <p class="text-xl md:text-2xl mt-4">
+        Ideal für:
+    </p>
+                <p class="text-xl md:text-2xl mt-8">
+
+        <span class="text-gradient">•</span> Unternehmen, die online verkaufen wollen
+      </p>
+
+      <p class="text-xl md:text-2xl mt-8">
+        <span class="text-gradient">•</span> Startups mit einem neuen Produkt
+      </p>
+
+      <p class="text-xl md:text-2xl mt-8">
+        <span class="text-gradient">•</span> Shops, die ein Redesign oder Relaunch brauchen
+      </p>
+
+      <p class="text-xl md:text-2xl mt-8">
+        <span class="text-gradient">•</span> Brands, die eine Shopify Alternative suchen
+        </p>
+      </div>
+    </div>
+
+
+  <p class="text-xl md:text-2xl leading-relaxed mt-12">
+    Kurz gesagt: Du bekommst einen <span class="text-gradient font-semibold">Online Shop</span>,
+    der modern aussieht, mobil perfekt funktioniert und durch klare Struktur dauerhaft
+    <span class="underline-animation">Käufe unterstützt</span>.
+  </p>
+</div>
+
+    <h2 class="text-center text-3xl md:text-4xl font-extrabold mt-24 mb-12 mx-4" style="line-height: 1.3;">
+      Investiere clever – und spare bares Geld.
+    </h2>
+    
+    <p class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-4">
+      Viele Shops sehen schick aus – aber konvertieren nicht. Ich entwickle <span class="text-gradient font-semibold">Shops mit Strategie</span>, die dein Budget nicht verbrennen, sondern <strong>mehr aus deinem Traffic holen</strong>.
+    </p>
+    
+<div class="w-full max-w-4xl mx-auto mt-12">
+  <IpadComponent
+    imgSrc="/images/projects/sweet-berry-box-ipad-hero.webp"
+    imgAlt="Tablet-Ansicht der Startseite mit Hero-Header und Shop-Button - maxWapp"
+  />
+</div>
+
+<h2 class="text-center text-3xl md:text-4xl font-extrabold mt-24 mb-12 mx-4" style="line-height: 1.3;">
+  Kosten & Aufwand – was steckt hinter einem Online Shop?
+</h2>
+
+<p class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-4 mt-8 leading-relaxed">
+  Jeder <span class="text-gradient font-semibold">Online Shop</span> ist unterschiedlich –
+  und genau deshalb hängt der Aufwand nicht nur vom Design ab,
+  sondern vor allem von den Funktionen, die dein Shop wirklich braucht.
+</p>
+
+<p class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-4 mt-8 leading-relaxed">
+  Besonders wichtig für die Kalkulation sind z. B. diese Punkte:
+</p>
+
+<div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6 text-left max-w-5xl mx-auto px-6">
+  {pricingFactors.map((item) => (
+    <InfoCard title={item.title} text={item.text} />
+  ))}
+</div>
+
+<p class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-4 mt-12 leading-relaxed">
+  Kurz gesagt: Du bekommst kein Baukasten-System, sondern einen Shop,
+  der <span class="underline-animation">professionell funktioniert</span> und langfristig wachsen kann.
+</p>
+
+<div class="mt-10 text-center">
+  <PrimaryButton 
+    href="/preise" 
+    label="Preise ansehen"
+  />
+</div>
+
+    <h2 class="text-center text-3xl md:text-4xl font-extrabold mt-24 mx-2" style="line-height: 1.25;">
+      Shopify oder lieber Alternative?
+</h2>
+
+    <!-- Vergleich: Beratung + Beispielbild -->
+    <div
+      class="w-11/12 md:w-10/12 lg:w-8/12 mx-auto text-lg md:text-xl text-gray-100 leading-relaxed mt-12 md:mt-24 flex flex-col-reverse md:flex-row items-center gap-16 md:gap-32"
+    >
+
+                <!-- Vergleichsbild  -->
+      <div
+        class="w-full md:w-5/12 flex justify-center md:justify-end mb-12 md:mb-0 rounded-3xl shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] phone-container-static"
+      >
+        <img
+        src="/images/shopify-oder-alternative.webp"
+        alt="Shopify Screenshot Kollektion"
+          class="w-80 md:w-auto md:max-h-[55vh] object-contain rounded-3xl"
+        />
+      </div>
+
+      <!-- Beratungstext  -->
+      <div class="w-full md:w-5/12 text-center md:text-left">
+
+    <p class="text-xl md:text-2xl leading-relaxed">
+  Du willst einen <strong>Online Shop erstellen lassen</strong>, bist dir aber unsicher,
+  ob <strong>Shopify</strong> wirklich die beste Lösung für dein Business ist?
+</p>
+
+    <p class="text-xl md:text-2xl mt-8 leading-relaxed">
+  Ich berate dich ehrlich und finde das System, das zu deinen Produkten,
+  deinem Budget und <span class="underline-animation">deinem Wachstum</span> passt.
+</p>
+    <p class="text-xl md:text-2xl mt-8 leading-relaxed">
+  Denn es gibt starke <span class="text-gradient font-semibold">Alternativen zu Shopify</span> –
+  oft flexibler oder günstiger, je nach Ziel.
+  Gemeinsam bauen wir einen Shop, der nicht nur online ist,
+  sondern <strong>verkauft</strong>.
+</p>
+      </div>
+
+
+    </div>
+
+<ComparisonSection
+  leftLabel="WooCommerce (WordPress)"
+  rightLabel="Shopify"
+  intro="WooCommerce vs. Shopify – welche Lösung ist langfristig flexibler?"
+  rows={[
+    { 
+      label: "Kosten & Kontrolle", 
+      left: "Keine fixen Plattformgebühren – Hosting & Erweiterungen nach Bedarf", 
+      right: "Monatliche Gebühren + kostenpflichtige Apps" 
+    },
+    { 
+      label: "Flexibilität", 
+      left: "Volle Freiheit mit Themes, Plugins & individuellem Code", 
+      right: "Abhängig vom Shopify-Ökosystem" 
+    },
+    { 
+      label: "SEO & Content", 
+      left: "Sehr stark durch WordPress-Struktur & Content-Möglichkeiten", 
+      right: "Gut möglich, aber systembedingt eingeschränkt" 
+    },
+    { 
+      label: "Langfristiger Wert", 
+      left: "Eigene Plattform mit voller Daten- & Strukturkontrolle", 
+      right: "Anbietergebundenes System" 
+    },
+  ]}
+  summary={`
+    Wenn du schnell starten willst, ist Shopify eine solide Lösung.  
+    Wenn du jedoch langfristig skalieren, SEO strategisch nutzen und volle Kontrolle behalten möchtest, ist <strong>WooCommerce auf WordPress</strong> die stärkere Basis.
+  `}
+  ctaLabel="Passendes System finden"
+  ctaHref="/kontakt"
+/>
+
+    <h2 class="text-center text-3xl md:text-4xl font-extrabold mt-24 mx-2" style="line-height: 1.25;">
+      Website Relaunch & Shop-Redesign
+    </h2>
+
+    <!-- Relaunch: Bild + Erklärung -->
+    <div
+      class="w-11/12 md:w-10/12 lg:w-8/12 mx-auto text-lg md:text-xl text-gray-100 leading-relaxed mt-12 md:mt-24 flex flex-col md:flex-row items-center gap-16 md:gap-32"
+    >
+          <!-- Relaunch-Beispielbild (links) -->
+      <div
+        class="w-full md:w-5/12 flex justify-center md:justify-start mb-12 md:mb-0 rounded-3xl shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] phone-container-static"
+      >
+        <img
+             src="/images/bereit-fuer-mehr-bestellungen-shopify.webp"
+          alt="Website Relaunch und Shop-Redesign – moderner Online Shop mit besserer Struktur"
+          class="w-80 md:w-auto md:max-h-[70vh] object-contain rounded-3xl"
+        />
+      </div>
+      <!-- Relaunch-Erklärung (rechts) -->
+      <div class="w-full md:w-5/12 text-center md:text-left">
+
+        <p class="text-xl md:text-2xl leading-relaxed">
+          Dein Online Shop ist online – aber wirkt veraltet oder bringt zu wenig Verkäufe?
+          Dann ist ein <strong>Shop-Redesign</strong> oder ein kompletter <strong>Website Relaunch</strong>
+          oft der nächste logische Schritt.
+        </p>
+
+        <p class="text-xl md:text-2xl mt-8 leading-relaxed">
+          Beim Relaunch wird nicht einfach nur „schöner gemacht“.
+          Ich <span class="text-gradient font-semibold">verbessere die Struktur</span>, die Navigation,
+          Produktseiten und den Checkout – damit Besucher schneller kaufen.
+        </p>
+
+        <p class="text-xl md:text-2xl mt-8 leading-relaxed">
+          Und wichtig: Deine Google-Sichtbarkeit bleibt erhalten.
+          Ich achte darauf, dass beim Umbau alles sauber übernommen wird,
+          damit du keine Rankings verlierst – sondern langfristig <span class="underline-animation">mehr Umsatz</span>
+           gewinnst.
+        </p>
+      </div>
+    </div>
+
+    <!-- Projektablauf: 4 Schritte als Karten -->
+<h2 class="text-center text-3xl md:text-4xl font-extrabold mt-24 mb-12 mx-2" style="line-height:1.3;">
+  So laufen Projekte mit mir
+</h2>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 px-6 md:px-0 max-w-6xl mx-auto">
+  <!-- Karte 1 -->
+  <div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]">
+    <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
+    <h4 class="text-2xl md:text-3xl font-bold text-white mb-4">
+      <span class="text-gradient">1.</span> Analyse & Ziele
+    </h4>
+    <p class="text-lg text-gray-300 leading-relaxed">
+      Wir starten mit einem kurzen Gespräch: Was verkaufst du, wer ist deine Zielgruppe und welches Ziel soll dein Shop erreichen?
+      Ich analysiere deinen aktuellen Shop (oder deine Idee) und die wichtigsten <strong>SEO-Chancen</strong> – damit wir von Anfang an auf die richtigen Suchanfragen optimieren.
+    </p>
+  </div>
+
+  <!-- Karte 2 -->
+  <div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]">
+    <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
+    <h4 class="text-2xl md:text-3xl font-bold text-white mb-4">
+      <span class="text-gradient">2.</span> Konzept & Design
+    </h4>
+    <p class="text-lg text-gray-300 leading-relaxed">
+      Danach planen wir Struktur und Inhalte: Welche Produkte, Kategorien und Seiten brauchst du (Start, Kollektionen, Produktseiten, Checkout)?
+      Ich entwickle ein klares Layout mit Fokus auf <span class="underline-animation">Conversion</span> – damit Besucher schneller Vertrauen aufbauen und leichter kaufen.
+    </p>
+  </div>
+
+  <!-- Karte 3 -->
+  <div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]">
+    <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
+    <h4 class="text-2xl md:text-3xl font-bold text-white mb-4">
+      <span class="text-gradient">3.</span> Umsetzung & Optimierung
+    </h4>
+    <p class="text-lg text-gray-300 leading-relaxed">
+      Ich setze deinen <strong>Online Shop</strong> technisch sauber um – mobil, schnell und übersichtlich.
+      Dabei optimiere ich Navigation, Produktseiten und SEO-Struktur für bessere <strong>Google-Sichtbarkeit</strong> und mehr Bestellungen.
+    </p>
+  </div>
+
+  <!-- Karte 4 -->
+  <div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]">
+    <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
+    <h4 class="text-2xl md:text-3xl font-bold text-white mb-4">
+      <span class="text-gradient">4.</span> Launch & Übergabe
+    </h4>
+    <p class="text-lg text-gray-300 leading-relaxed">
+      Nach dem Launch bekommst du eine kurze Einführung, damit du Produkte, Texte und Bilder selbst pflegen kannst.
+      Auf Wunsch erhältst du Checklisten für neue Kollektionen – so bleibt dein Shop <strong>einfach erweiterbar</strong> und kann langfristig wachsen.
+    </p>
+  </div>
+</div>
+
+<!-- CTA: Kostenloses Beratungsgespräch -->
+<div class="max-w-6xl mx-auto px-6 md:px-0 mt-8">
+  <div class="relative bg-[#13132a] p-6 md:p-8 rounded-xl border border-gray-700 text-center shadow-[0px_0px_35px_rgba(147,112,219,0.35)]">
+    <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-1 rounded-t-xl"></div>
+    <p class="text-base md:text-lg text-gray-200">
+      Bereit, einen <strong>Online Shop erstellen lassen</strong>?
+      Starte mit einem kostenlosen <a href="/kontakt" class="underline underline-offset-4 decoration-2">Beratungsgespräch</a> –
+      und erfahre, welche Struktur und Inhalte bei dir am schnellsten zu <strong>Anfragen</strong> führen.
+    </p>
+  </div>
+</div>
+
+<section class="w-full max-w-6xl mx-auto px-6 md:px-0">
+  <h2 class="text-center text-3xl md:text-4xl font-extrabold mt-24 mb-16">
+    Kostenloser Shop-Check
+  </h2>
+
+  <div
+    class="flex flex-col md:flex-row items-center gap-12 md:gap-24"
+  >
+
+    <!-- Bild -->
+    <div class="w-full md:w-1/2 flex justify-center">
+      <img
+        src="/images/shop-check-analyse-conversion.webp"
+        alt="Kostenloser Shop-Check – Analyse von Online Shop Conversion und SEO"
+        class="w-96 md:w-[520px] lg:w-[600px] object-contain"
+        loading="lazy"
+      />
+    </div>
+
+    <!-- Text -->
+    <div class="w-full md:w-1/2 text-center md:text-left">
+
+      <p class="text-xl md:text-2xl leading-relaxed">
+        Dein Shop bekommt Besucher – aber die <strong>Bestellungen</strong> bleiben aus?
+        Dann finden wir gemeinsam heraus, <span class="text-gradient font-semibold">wo Nutzer abspringen</span>
+        und was sie am Kauf hindert.
+      </p>
+
+      <p class="text-xl md:text-2xl leading-relaxed mt-8">
+        Ich prüfe kostenlos die wichtigsten Hebel: Struktur,
+        Vertrauen, Produktseiten und den Checkout.
+        Du bekommst klare, direkt umsetzbare Schritte – <strong>ohne Fachchinesisch</strong>.
+      </p>
+
+      <p class="text-xl md:text-2xl leading-relaxed mt-8">
+        Am Ende weißt du genau, welche <strong>3–5 Änderungen</strong> den größten Effekt haben –
+        für mehr Klarheit, mehr Vertrauen und <span class="underline-animation">mehr Umsatz</span>.
+      </p>
+
+
+      <div class="mt-12">
+        <PrimaryButton
+          href="/kontakt"
+          label="Kostenlos beraten lassen"
+        />
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- FAQ: Häufige Fragen als Karten -->
+<h2 class="text-center text-4xl md:text-5xl font-extrabold mt-24 mb-12">
+Häufige Fragen zu Online Shops
+</h2>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 px-6 md:px-0 max-w-6xl mx-auto mb-24">
+  {faqs.map((item) => (
+    <InfoCard title={item.title} text={item.text} />
+  ))}
+</div>
+
+<div class="flex justify-center my-8">
+  <div class="w-48 h-[3px] rounded-full bg-gradient-to-r from-purple-800 to-indigo-800 shadow-[0_0_25px_rgba(168,85,247,0.6)]"></div>
+</div>
+
+
+        <FinalCTASection
+  title="Bereit für einen Online Shop, der wirklich verkauft?"
+  description={`
+    <p>Viele Shops sehen gut aus, aber verkaufen nicht. Der Unterschied? <strong>Strategie</strong>.</p>
+    <p class="mt-4">Ich verbinde <strong>Design, Technik und Marketingwissen</strong> zu einem Shop, der wirklich funktioniert – für dich, deine Zielgruppe und <span class="underline-animation">deinen Umsatz</span>.</p>
+    <p class="mt-4"><span class="text-gradient font-semibold">Conversion, Geschwindigkeit und Klarheit</span> stehen im Fokus – nicht Spielereien. Damit dein Budget arbeitet – statt verpufft.</p>
+  `}
+  ctaLabel="Kostenloses Erstgespräch"
+  ctaHref="/kontakt"
+/>
+    </div>
+
+    
+
+    <style>
+      .text-gradient {
+        background: linear-gradient(to right, #9c27b0, #03a9f4);
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+
+      .drop-shadow-lg {
+        filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
+      }
+
+      .border-gradient-to-r {
+        border-image-slice: 1;
+        border-image-source: linear-gradient(to right, #9c27b0, #03a9f4);
+      }
+
+      /* Container for the entire image, gradient, and shadow */
+      .profile-container {
+        transform: translateX(-150%); /* Start off-screen to the left */
+        opacity: 0; /* Initially hidden */
+        transition:
+          transform 1.5s ease-out,
+          opacity 1.5s ease-out;
+      }
+
+      /* Trigger the animation when the page loads */
+      .profile-container {
+        animation: flyInFromLeft 1.5s forwards;
+      }
+
+      /* Keyframes for the fly-in effect */
+      @keyframes flyInFromLeft {
+        0% {
+          transform: translateX(-150%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      /* Container for the entire image and shadow */
+      .phone-container {
+        transform: translateX(-150%); /* Start off-screen to the left */
+        opacity: 0; /* Initially hidden */
+        transition:
+          transform 1.5s ease-out,
+          opacity 1.5s ease-out; /* Remove delay for mobile */
+      }
+
+      /* Fly in effect */
+      .fly-in {
+        transform: translateX(0);
+        opacity: 1;
+      }
+
+      /* Keyframes for desktop (initial load) */
+      @media (min-width: 768px) {
+        .phone-container {
+          animation: flyInFromLeftPhone 1.5s forwards 0.5s; /* Keep delay on desktop */
+        }
+
+        .underline-animation {
+          display: inline-block;
+          background-image: linear-gradient(120deg, #03a9f4, #9c27b0);
+          background-repeat: no-repeat;
+          background-size: 100% 3px;
+          background-position: 0 88%;
+          transition: background-size 0.3s ease-in-out;
+        }
+
+        .underline-animation:hover {
+          background-size: 100% 100%;
+        }
+      }
+
+      /* Keyframes for mobile (on scroll) */
+      @keyframes flyInFromLeftPhone {
+        0% {
+          transform: translateX(-150%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      /* Initial state for the second phone container */
+      .phone-container-second {
+        transform: translateX(-150%); /* Positioned off-screen to the left */
+        opacity: 0; /* Initially hidden */
+        transition:
+          transform 1.5s ease-out,
+          opacity 1.5s ease-out;
+      }
+
+      /* Fly-in effect when in view */
+      .fly-in-second {
+        transform: translateX(0); /* Return to original position */
+        opacity: 1; /* Fully visible */
+      }
+    </style>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const phoneImage = document.querySelector(".phone-container")
+        if (!phoneImage) return
+
+        function isInViewPort(element) {
+          const rect = element.getBoundingClientRect()
+          return (
+            rect.top <=
+              (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.bottom >= 0
+          )
+        }
+
+        function triggerMobileHeroAnimation() {
+          // Only apply for mobile view
+          if (window.innerWidth < 768 && isInViewPort(phoneImage)) {
+            phoneImage.classList.add("fly-in")
+          }
+        }
+
+        // Run immediately on load (fix: no need to scroll first)
+        triggerMobileHeroAnimation()
+
+        // Also re-check on scroll + resize (orientation change)
+        window.addEventListener("scroll", triggerMobileHeroAnimation)
+        window.addEventListener("resize", triggerMobileHeroAnimation)
+      })
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const secondPhoneImage = document.querySelector(
+          ".phone-container-second"
+        )
+
+        // Function to check if the element is in the viewport
+        function isInViewPort(element) {
+          const rect = element.getBoundingClientRect()
+          return (
+            rect.top <=
+              (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.bottom >= 0
+          )
+        }
+
+        // Function to add the fly-in class when in view
+        function handleScroll() {
+          if (isInViewPort(secondPhoneImage)) {
+            secondPhoneImage.classList.add("fly-in-second")
+          }
+        }
+
+        // Add scroll event listener
+        window.addEventListener("scroll", handleScroll)
+
+        // Run on page load in case the element is already in view
+        handleScroll()
+      })
+    </script>
+
+  </div>
+
+
+</MainLayout>

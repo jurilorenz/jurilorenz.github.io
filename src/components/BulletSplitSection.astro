@@ -1,0 +1,232 @@
+---
+  // Split section with optional image + bullet cards (reusable for Problem, Audience, Benefits, etc.)
+
+type BulletSplitSectionProps = {
+  id?: string;
+
+  // Content
+  eyebrow?: string;
+  title: string;
+  highlight?: string;
+  subtitle?: string;
+  showHighlight?: boolean;
+  listLabel?: string;
+
+  // Extra text block
+  extraText?: string;
+  extraTextPosition?: "before" | "after";
+
+  // List
+  items?: string[];
+
+  // Optional image
+  imgSrc?: string;
+  imgAlt?: string;
+  imgClass?: string;
+
+  // Layout
+  imageFirstOnMobile?: boolean;
+  contentFirstOnMobile?: boolean;
+
+  // Visuals
+  glow?: boolean;
+  compact?: boolean;
+  className?: string;
+};
+
+const {
+  id,
+
+  // Content
+  eyebrow,
+  title,
+  highlight,
+  subtitle = "",
+  showHighlight = false,
+  listLabel = "",
+
+  // Extra text block
+  extraText,
+  extraTextPosition = "after",
+
+  // List
+  items,
+
+  // Optional image
+  imgSrc,
+  imgAlt = "",
+  imgClass =
+    "w-full max-w-[360px] sm:max-w-[420px] md:max-w-[480px] lg:max-w-[540px] max-h-[560px] md:max-h-[600px] object-contain",
+
+  // Layout
+  imageFirstOnMobile = false,
+  contentFirstOnMobile = true,
+
+  // Visuals
+  glow = true,
+  compact = true,
+  className = "",
+} = Astro.props as BulletSplitSectionProps;
+
+// Mobile order helpers
+const hasImage = !!imgSrc;
+
+const mobileOrderLeft = hasImage
+  ? imageFirstOnMobile
+    ? "order-1 md:order-none"
+    : "order-2 md:order-none"
+  : contentFirstOnMobile
+    ? "order-1 md:order-none"
+    : "order-2 md:order-none";
+
+const mobileOrderRight = hasImage
+  ? imageFirstOnMobile
+    ? "order-2 md:order-none"
+    : "order-1 md:order-none"
+  : contentFirstOnMobile
+    ? "order-2 md:order-none"
+    : "order-1 md:order-none";
+
+const listItems = Array.isArray(items) ? items : [];
+const hasList = listItems.length > 0;
+const showExtra = typeof extraText === "string" && extraText.trim().length > 0;
+const pad = compact ? "section-pad-compact" : "section-pad";
+---
+
+<section id={id} class={`relative w-full ${pad} overflow-hidden ${className}`.trim()}>
+
+  {glow && (
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-transparent pointer-events-none"></div>
+  )}
+
+  <div class="relative section-container max-w-7xl px-6 md:px-12">
+    <div class="grid md:grid-cols-2 gap-10 md:gap-14 lg:gap-16 items-center">
+
+      {/* LEFT: Image (optional) OR Headline/Highlight */}
+      {imgSrc ? (
+        <div class={`flex justify-center md:justify-center ${mobileOrderLeft}`}>
+          <div class="media-rounded shadow-purple-drop">
+            <img
+              src={imgSrc}
+              alt={imgAlt}
+              class={imgClass}
+              loading="lazy"
+            />
+          </div>
+        </div>
+      ) : (
+        <div class={mobileOrderLeft}>
+          {eyebrow && (
+            <p class="mw-eyebrow mb-3 text-center">
+              {eyebrow}
+            </p>
+          )}
+
+          <h2 class="mw-h2 text-center">
+            {title}
+          </h2>
+
+          {showHighlight && (
+            <div class="mt-8 space-y-6 text-center">
+              <span class="mw-highlight">
+                {highlight}
+              </span>
+              <p class="mw-body text-center">
+                {subtitle}
+              </p>
+            </div>
+          )}
+
+          {!showHighlight && subtitle && (
+            <p class="mw-lead-narrow mt-6 text-center">
+              {subtitle}
+            </p>
+          )}
+        </div>
+      )}
+
+      {/* RIGHT: Headline/Highlight (when image exists) OR List */}
+      {imgSrc ? (
+        <div class={mobileOrderRight}>
+          {eyebrow && (
+            <p class="mw-eyebrow mb-3 text-center md:text-left">
+              {eyebrow}
+            </p>
+          )}
+
+          <h2 class="mw-h2 text-center md:text-left">
+            {title}
+          </h2>
+
+          {subtitle && (
+            <p class="mw-body mt-6 text-center md:text-left">
+              {subtitle}
+            </p>
+          )}
+
+          {showExtra && extraTextPosition === "before" && (
+            <p class="mw-body mt-6 text-center md:text-left">
+              <Fragment set:html={extraText} />
+            </p>
+          )}
+
+          {listLabel && (
+            <p class="mw-lead mb-4 text-center md:text-left">
+              {listLabel}
+            </p>
+          )}
+
+          {hasList && (
+            <div class="grid gap-6 mt-10">
+              {listItems.map((item) => (
+                <div class="bullet-card">
+                  <span class="bullet-dot" aria-hidden="true"></span>
+                  <p class="mw-body">{item}</p>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {showExtra && extraTextPosition === "after" && (
+            <p class="mw-body mt-8 text-center md:text-left">
+              <Fragment set:html={extraText} />
+            </p>
+          )}
+        </div>
+      ) : (
+        <div class={mobileOrderRight}>
+          {showExtra && extraTextPosition === "before" && (
+            <p class="mw-body mb-6 text-center">
+              <Fragment set:html={extraText} />
+            </p>
+          )}
+
+          {listLabel && (
+            <p class="mw-lead mb-4 text-center">
+              {listLabel}
+            </p>
+          )}
+
+          {hasList && (
+            <div class="grid gap-6">
+              {listItems.map((item) => (
+                <div class="bullet-card">
+                  <span class="bullet-dot" aria-hidden="true"></span>
+                  <p class="mw-body">{item}</p>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {showExtra && extraTextPosition === "after" && (
+            <p class="mw-body mt-8 text-center">
+              <Fragment set:html={extraText} />
+            </p>
+          )}
+        </div>
+      )}
+
+    </div>
+  </div>
+
+</section>

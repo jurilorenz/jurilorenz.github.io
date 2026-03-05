@@ -1,0 +1,93 @@
+---
+const {
+  text = `Eine <strong>professionelle Website</strong> ist keine Ausgabe, sondern eine Investition,
+die sich durch neue Kunden, bessere Sichtbarkeit und Vertrauen mehrfach auszahlt.`,
+  href = "/kontakt",
+  pillSmall = "Heute investieren",
+  pillBig = "morgen mehr Anfragen &amp; Umsatz",
+} = Astro.props;
+---
+
+<!-- 🔥 ROI-Highlight-Block -->
+<div class="roi-highlight">
+  <div class="bg-[#1b1b33] p-6 md:p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] inline-block text-center">
+    <p class="roi-text text-base md:text-lg mb-8 text-center" set:html={text}></p>
+
+    <a href={href} class="inline-block">
+      <div class="roi-pill">
+        <span class="roi-pill-small">{pillSmall}</span>
+        <span class="roi-pill-arrow">→</span>
+        <span class="roi-pill-big" set:html={pillBig}></span>
+      </div>
+    </a>
+  </div>
+</div>
+<!-- 🔥 /ROI-Highlight-Block -->
+
+<style>
+  /* ROI-Highlight: Investment -> Ergebnis */
+.roi-highlight {
+  margin: 2.5rem auto 2rem;
+  max-width: 48rem;
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+  .roi-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.9rem 1.6rem;
+    border-radius: 9999px;
+    background: linear-gradient(120deg, #9c27b0, #03a9f4, #9c27b0);
+    background-size: 200% 200%;
+    animation: roiGradient 6s ease infinite;
+    box-shadow: 0 0 18px rgba(147, 112, 219, 0.6);
+  }
+
+  .roi-pill-small {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .roi-pill-big {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  .roi-pill-arrow {
+    font-size: 1.2rem;
+    color: #ffe082;
+    animation: roiArrow 1.8s ease-in-out infinite;
+  }
+
+  .roi-text {
+    margin-top: 0.75rem;
+    font-size: 1.1rem;
+    color: #e5e5f5;
+  }
+
+  @media (min-width: 768px) {
+    .roi-pill-big {
+      font-size: 1.15rem;
+    }
+    .roi-text {
+      font-size: 1.25rem;
+    }
+  }
+
+  @keyframes roiGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes roiArrow {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(4px); }
+  }
+</style>

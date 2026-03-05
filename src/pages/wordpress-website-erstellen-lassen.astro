@@ -1,0 +1,312 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import PrimaryHeroSection from "../components/PrimaryHeroSection.astro";
+import BulletSplitSection from "../components/BulletSplitSection.astro";
+import SolutionSection from "../components/SolutionSection.astro";
+import FeatureGridSection from "../components/FeatureGridSection.astro";
+import BarSection from "../components/BarSection.astro";
+import MotionSection from "../components/MotionSection.astro";
+import LongformSection from "../components/LongformSection.astro";
+import ImageBanner from "../components/ImageBanner.astro";
+import ComparisonSection from "../components/ComparisonSection.astro";
+import FinalCTASection from "../components/FinalCTASection.astro";
+import IconCardsSection from "../components/IconCardsSection.astro";
+
+const features = [
+  { title: "Klares Angebot", description: "Besucher verstehen in Sekunden, was du anbietest – ohne Scroll-Marathon." },
+  { title: "Conversion-Flow", description: "Struktur, CTAs und Vertrauenselemente sind so platziert, dass Anfragen wahrscheinlicher werden." },
+  { title: "WordPress Performance", description: "Sauberes Setup, Bildoptimierung & schlanke Komponenten – damit deine WordPress Website schnell lädt." },
+  { title: "SEO-Basics", description: "Titel/Meta, Struktur (H1–H3), interne Links & Snippets – damit Google deine WordPress Seite sauber einordnet." },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "WordPress Website erstellen lassen",
+  "provider": { "@type": "Brand", "name": "maxWapp" },
+  "areaServed": "DE",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "EUR",
+    "price": "900",
+    "availability": "https://schema.org/InStock",
+    "url": "https://maxwapp.de/preise"
+  }
+};
+---
+
+<MainLayout
+  title="WordPress Website erstellen lassen | SEO & Conversion | maxWapp"
+  seoTitle="WordPress Website erstellen lassen – modern & sichtbar"
+  seoDesc="WordPress Website erstellen lassen: moderne, SEO-starke Websites & Landingpages mit klarem Conversion-Fokus und individueller Umsetzung."
+>
+   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+
+<PrimaryHeroSection
+  title="WordPress Website erstellen lassen"
+
+  lead="Ich erstelle WordPress Websites mit klarer Struktur, hoher Performance und messbarem Conversion-Fokus."
+  leadMobile="Ich erstelle WordPress Websites mit klarer Struktur und dem Ziel, Anfragen zu generieren."
+
+  desktopImgSrc="/images/juri-lorenz-maxwapp-wordpress.webp"
+  mobileImgSrc="/images/home-page-juri-lorenz-mobile.webp"
+  imgAlt="Juri Lorenz – WordPress Website erstellen lassen (München)"
+
+  ctaLabel="Kostenlos beraten"
+  ctaHref="/kontakt"
+/>
+
+<BulletSplitSection
+  title="Deine Website kostet dich Anfragen."
+  highlight="Weil:"
+  showHighlight={true}
+  imageFirstOnMobile={true}
+  items={[
+      "Keine klare Nutzerführung",
+        "Unklare Botschaft auf der Startseite",
+    "SEO-Struktur nicht sauber umgesetzt",
+      "Technisch überladen durch zu viele Plugins",
+
+  ]}
+/>
+
+<MotionSection
+  eyebrow="Performance"
+  title="Langsame WordPress Website = weniger Anfragen"
+  intro="Ladezeit ist kein Technik-Detail, sondern ein Conversion-Faktor. Wenn deine WordPress Website zu langsam ist, springen Besucher ab – noch bevor sie dein Angebot verstehen."
+  points={[
+    "Schnelle Ladezeit reduziert Absprünge – besonders mobil",
+    "Weniger Plugins = stabileres & sichereres Setup",
+    "Performance ist ein Ranking-Faktor und erhöht die Conversion",
+  ]}
+  imgSrc="/images/snail.webp"
+  imgAlt="Langsame WordPress Website – Symbolbild Schnecke"
+  ctaLabel="Speed-Check starten"
+  ctaHref="/kontakt"
+  compact={true}
+/>
+
+
+<SolutionSection
+  title="So entsteht deine WordPress Website, die konvertiert"
+  intro="Eine erfolgreiche WordPress Website entsteht nicht zufällig. Sie folgt einer klaren Strategie: Positionierung, Struktur und technisches Setup greifen ineinander – damit aus Besuchern planbar Anfragen werden."
+  steps={[
+{ num: "1", title: "Ziel, Angebot & Suchintention", text: "Wir klären dein Angebot, deine Zielgruppe und die Suchintention: Was sollen potenzielle Kunden bei Google eingeben – und auf welcher Seite sollen sie landen?" },   
+ { num: "2", title: "Struktur & Seitenplan", text: "Auf Basis dieser Klarheit entsteht ein durchdachter Seitenplan: Startseite, Leistungen, Über mich und Kontakt greifen logisch ineinander. Jede Sektion erfüllt eine klare Funktion." },
+{ 
+  num: "3", 
+  title: "WordPress-Setup & Performance", 
+  text: "Ich setze deine Website technisch sauber um: optimierte Bilder und klare Struktur. Das Ergebnis ist eine stabile, schnelle und mobiloptimierte Website." 
+},    { num: "4", title: "SEO-Basics & Launch",   text: "Ich optimiere deine Website für Google – damit sie besser gefunden wird. Nach der Veröffentlichung erhältst du eine strukturierte Übergabe – damit du Inhalte selbst pflegen kannst." },
+  ]}
+  ctaLabel="Let's Talk"
+  ctaHref="/kontakt"
+/>
+
+<IconCardsSection
+  eyebrow="Smarte Integrationen"
+  title="Tools, die dir Arbeit abnehmen"
+  intro="Terminbuchung, Payments, CRM oder Automatisierung – sauber integriert, damit es sich für Kunden wie aus einem Guss anfühlt."
+  cards={[
+    {
+      icon: "calendar",
+      title: "Terminbuchung & Leads",
+      text: "Planity, Calendly oder Shore – inkl. Formular-Flows, Bestätigungen und klarer Übergabe."
+    },
+    {
+      icon: "euro",
+      title: "Zahlung & Prozesse",
+      text: "Stripe/PayPal, einfache Abläufe und weniger Rückfragen – damit Anfragen schneller zu Umsatz werden."
+    },
+    {
+      icon: "chat",
+      title: "KI & Automatisierung",
+      text: "Chatbot, smarte Antworten, OnOffice-Setup oder Workflows – passend zu deiner Branche."
+    },
+  ]}
+  ctaLabel="KI & Tools Integration ansehen"
+  ctaHref="/ki-tools"
+  cols={3}
+/>
+
+<BulletSplitSection
+  title="Die ersten Sekunden entscheiden"
+
+  imgSrc="/images/hero-section-struktur.webp"
+  imgAlt="Struktur einer strategisch aufgebauten Hero-Section WordPress Website – maxWapp"
+  showHighlight={false}
+  imageFirstOnMobile={false}
+  items={[]}
+  extraText={`Die Hero-Section ist auch bei einer <strong>WordPress Website</strong> der wichtigste Bereich: In wenigen Sekunden muss klar sein, worum es geht – sonst springen Besucher ab. <br /> <br />
+
+Eine professionelle Struktur sorgt dafür, dass Angebot, Nutzen und nächster Schritt sofort verständlich sind. <br /> <br />
+
+Headline + Lead-Text, ein klarer Call-to-Action und Vertrauenselemente (Bewertungen/Referenzen) folgen einer logischen Reihenfolge – der Blick wird geführt, nicht dem Zufall überlassen.
+
+Conversion entsteht nicht durch Design allein, sondern durch strategischen Aufbau.`}
+  extraTextPosition="before"
+/>
+
+<FeatureGridSection
+  title="Was eine WordPress Website erfolgreich macht"
+  intro="4 Bausteine für Sichtbarkeit, Struktur und planbare Anfragen."
+  features={features}
+  cols={2}
+  afterText={`<strong>Entscheidend ist nicht das Design allein,</strong> sondern eine klare Struktur, schnelle Ladezeit und ein sauberer CTA-Flow. Ich übernehme WordPress Webdesign und Umsetzung so, dass aus Besuchern Anfragen werden – inklusive SEO-Basics für bessere Sichtbarkeit.`}
+  ctaLabel="WordPress Website erstellen lassen"
+  ctaHref="/kontakt"
+/>
+
+<BulletSplitSection
+  title="Diese WordPress Website ist ideal für dich, wenn…"
+
+  imgSrc="/images/website-fuer-wen-ideal.webp"
+  imgAlt="Professionelle WordPress Website für Unternehmen und Selbstständige"
+  showHighlight={false}
+  imageFirstOnMobile={true}
+  items={[
+    "Du über Google besser gefunden werden willst",
+    "Du Anfragen statt nur Besucher möchtest",
+    "Du Inhalte später selbst pflegen willst",
+  ]}
+extraText={`WordPress ist ideal für Selbstständige, Dienstleister und kleine Unternehmen,
+die online professionell auftreten und über Google planbar Anfragen gewinnen wollen.
+
+Du bekommst eine <strong>klar strukturierte, performante WordPress Website</strong>,
+die Vertrauen aufbaut, sichtbar ist und langfristig mit deinem Business mitwächst.`}
+ extraTextPosition="after"
+/>
+
+<ComparisonSection
+  leftLabel="WordPress"
+  rightLabel="Baukasten"
+  eyebrow="Vergleich"
+  title="WordPress Website vs. Baukasten – was ist langfristig sinnvoller?"
+  intro="Viele starten mit Wix, Jimdo oder Squarespace. Die Frage ist: Reicht das für dein Business – oder brauchst du eine skalierbare Lösung?"
+  rows={[
+{ label: "Flexibilität", left: "Individuell anpassbar (Themes, Plugins, Code)", right: "Begrenzt durch System" },
+{ label: "SEO-Potenzial", left: "Volle Kontrolle über Struktur & Inhalte", right: "Eingeschränkt" },
+{ label: "Performance", left: "Optimierbar & technisch sauber umsetzbar", right: "Abhängig vom Anbieter" },
+{ label: "Wachstum", left: "Erweiterbar (Blog, Shop, Mehrsprachigkeit)", right: "Schnell am Limit" },
+  ]}
+  summary={`
+    Ein Baukasten kann für den Start reichen –
+    aber wenn du langfristig über Google sichtbar sein und wachsen willst,
+    ist eine <strong>professionelle WordPress Website</strong> die stabilere Basis.
+  `}
+  ctaLabel="Kostenlos beraten"
+  ctaHref="/kontakt"
+/>
+
+
+<LongformSection
+  eyebrow="Content & Umsetzung"
+  title="Kein Content? Ich übernehme deine WordPress Website komplett."
+
+  topText={`<p>Viele Unternehmen wollen eine <strong>WordPress Website erstellen lassen</strong>, stehen aber vor demselben Punkt: Es fehlen Fotos, Videos oder klar formulierte Texte.</p>
+
+<p>Gerade beim Start ist das normal. Die Positionierung entwickelt sich noch, Referenzen entstehen erst – aber die Website soll trotzdem professionell online gehen.</p>
+
+<p>Ich unterstütze dich genau hier: <strong>Struktur, Texte und visuelle Inhalte</strong> werden strategisch aufgebaut – damit deine WordPress Website nicht improvisiert wirkt, sondern klar, hochwertig und überzeugend.</p>`}
+
+  imgSrc="/images/wordpress-website-bavaria-pro.webp"
+  imgAlt="WordPress Website mit individuell produzierten Fotos und Video-Content"
+  caption="Beispielprojekt: Konzeption, Content-Produktion und WordPress-Umsetzung aus einer Hand."
+
+  bottomText={`<p>Ob neues Unternehmen oder Relaunch: Du brauchst keinen fertigen Content-Ordner, um zu starten. Wir entwickeln gemeinsam eine klare Struktur – und ich kümmere mich auf Wunsch um passende Texte, Bildmaterial oder Video-Elemente.</p>
+
+<p><strong>Das Ziel:</strong> Eine performante WordPress Website, die Vertrauen aufbaut, professionell wirkt und Besucher in Anfragen verwandelt.</p>`}
+
+  ctaLabel="Projekt besprechen"
+  ctaHref="/kontakt"
+/>
+
+<BarSection
+  eyebrow="Vertrauen"
+  title="Warum du mir deine WordPress Website anvertrauen kannst"
+  intro="Als spezialisierter WordPress Freelancer entwickle ich seit Jahren Websites für Dienstleister und Unternehmen im deutschsprachigen Raum."
+  badges={[
+    { label: "70+ Bewertungen", sublabel: "Google", href: "https://maps.app.goo.gl/93PpiX2gyiVCfcGd7" },
+    { label: "5.0 Sterne", sublabel: "Top Rating", href: "https://maps.app.goo.gl/93PpiX2gyiVCfcGd7" },
+    { label: "Klar & Fair", sublabel: "Transparente Preise", href: "/preise" },
+    { label: "Direkt mit mir", sublabel: "kein Agentur-Overhead", href: "/kontakt" },
+  ]}
+  note="Einzelunternehmer = direkte Kommunikation, schnellere Umsetzung, klare Verantwortung."
+/>
+
+<FeatureGridSection
+  title="Typische Fehler bei WordPress Projekten – und wie ich sie vermeide"
+  intro="Viele Unternehmen wollen eine Website mit WordPress erstellen – doch im Ergebnis bleibt sie unter ihrem Potenzial. Nicht wegen des Designs, sondern wegen strategischer und technischer Fehler im Aufbau."
+  features={[
+    {
+      title: "1. Plugin-Chaos statt sauberes Setup",
+      description: "Wer eine Website mit WordPress erstellt, installiert oft zu viele Plugins. Das macht die Website langsam, unsicher und instabil. Ich arbeite mit einem schlanken, durchdachten Setup – nur das, was wirklich nötig ist."
+    },
+    {
+      title: "2. Text-Overload ohne klare Struktur",
+      description: "Viele WordPress Websites sind überladen mit Text, aber ohne klare Nutzerführung. Besucher verstehen nicht sofort, worum es geht. Ich entwickle zuerst Struktur, Hierarchie und Botschaft – dann folgen Inhalte und Design."
+    },
+    {
+      title: "3. WordPress Homepage ohne SEO-Strategie",
+      description: "Ob jemand eine WordPress Homepage erstellen – ohne saubere Struktur, klare Überschriften und Suchintention bleibt das SEO-Potenzial ungenutzt. Ich baue jede WordPress Website von Anfang an suchmaschinenfreundlich auf."
+    },
+    {
+      title: "4. Keine Planung für Wachstum & Wartung",
+      description: "Viele Projekte enden nach dem Launch. Updates, Sicherheit und Erweiterbarkeit werden nicht mitgedacht. Ich plane Skalierung, Wartung und Weiterentwicklung von Beginn an ein – damit deine Website langfristig stabil bleibt."
+    }
+  ]}
+  cols={2}
+  ctaLabel="Projekt starten"
+  ctaHref="/kontakt"
+/>
+
+<ImageBanner
+  imgSrc="/images/wordpress-website-workspace-performance.webp"
+  imgAlt="Arbeitsplatz mit zwei Monitoren und Neon-Rakete – Symbol für schnelle, strukturierte WordPress Website Umsetzung – maxWapp"
+  eyebrow="Preis & Value"
+  title="Mehr Leistung fürs Budget – ohne Agentur-Overhead"
+  text={`
+    <p><strong>Du willst eine WordPress Website erstellen lassen</strong>, aber keine Agenturpreise zahlen? Genau hier ist der Vorteil: Bei mir bekommst du Strategie, WordPress Webdesign und Umsetzung direkt aus einer Hand – ohne unnötige Abstimmungswege.</p>
+    <p>Das bedeutet: klare Struktur, schnelle Umsetzung und ein Ergebnis, das nicht nur gut aussieht, sondern <strong>Anfragen bringt</strong>. Du investierst in Wirkung – nicht in Overhead.</p>
+  `}
+  ctaLabel="Zu den Preisen"
+  ctaHref="/preise"
+/>
+
+<FeatureGridSection
+  title="Häufige Fragen zu WordPress Websites"
+  intro="Die wichtigsten Antworten rund um Umsetzung, SEO, Inhalte und Tracking – klar und transparent erklärt."
+  features={[
+    {
+      title: "Was kostet es, eine WordPress Website erstellen zu lassen?",
+      description: "Der Preis hängt vom Umfang ab (One-Pager, Unternehmensseite, Landingpages, Blog oder Shop). Du bekommst vorab ein klares Angebot – transparent und ohne Überraschungen. Details findest du auf der Preise-Seite."
+    },
+    {
+      title: "Wie lange dauert es, eine WordPress Website zu erstellen?",
+      description: "Im Durchschnitt dauert ein Projekt etwa 2–4 Wochen – je nach Umfang und wie schnell Inhalte/Feedback vorliegen. Wenn es besonders schnell gehen muss, ist oft auch eine Express-Umsetzung möglich."
+    },
+    {
+      title: "Kann ich Inhalte später selbst ändern?",
+      description: "Ja. WordPress ist einfach pflegbar: Texte, Bilder und Seiten kannst du später selbst aktualisieren. Du bekommst eine kurze Einführung und eine saubere Struktur, damit du dein Angebot jederzeit erweitern kannst."
+    },
+    {
+      title: "Ist WordPress SEO-freundlich?",
+      description: "WordPress ist eine starke Basis für SEO – entscheidend sind Struktur, interne Verlinkung, Ladezeit und Inhalte. Ich optimiere Titles & Descriptions, saubere Überschriften (H1–H3) und Performance, damit deine Seite langfristig bessere Rankings aufbauen kann."
+    }
+  ]}
+  cols={2}
+  ctaLabel="WordPress Website erstellen lassen"
+  ctaHref="/kontakt"
+/>
+
+<FinalCTASection
+  title="Bereit für eine WordPress Website, die wirklich Anfragen bringt?"
+  description={`
+    <p>In einem kurzen Gespräch klären wir Ziel, Strategie und nächsten Schritt.</p>
+  `}
+  ctaLabel="Kostenloses Erstgespräch"
+  ctaHref="/kontakt"
+/>
+  </div>
+</MainLayout>

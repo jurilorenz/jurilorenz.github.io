@@ -2,28 +2,28 @@
 import MainLayout from "../../layouts/MainLayout.astro"
 import IpadComponent from "../../components/IpadComponent.astro"
 
-
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Printdesign & Branding aus München",
-  "description": "Flyer erstellen & drucken, Visitenkarten Design (QR-Code), Corporate Design & Logo-Erstellung – alles aus einer Hand.",
-  "provider": {
+  name: "Printdesign & Branding aus München",
+  description:
+    "Flyer erstellen & drucken, Visitenkarten Design (QR-Code), Corporate Design & Logo-Erstellung – alles aus einer Hand.",
+  provider: {
     "@type": "Organization",
-    "name": "maxWapp",
-    "url": "https://maxwapp.de"
+    name: "maxWapp",
+    url: "https://maxwapp.de",
   },
-  "areaServed": {
+  areaServed: {
     "@type": "City",
-    "name": "München"
+    name: "München",
   },
-  "offers": {
+  offers: {
     "@type": "Offer",
-    "priceCurrency": "EUR",
-    "price": "900",
-    "availability": "https://schema.org/InStock",
-    "url": "https://maxwapp.de/services/branding-und-printdesign/"
-  }
+    priceCurrency: "EUR",
+    price: "900",
+    availability: "https://schema.org/InStock",
+    url: "https://maxwapp.de/printdesign-muenchen/",
+  },
 }
 ---
 
@@ -44,21 +44,21 @@ const jsonLd = {
       Printdesign & Corporate Identity aus München
     </h1>
 
-<p class="sr-only">
-  Printdesign & Branding in München: Flyer erstellen und drucken, Flyer Design,
-  Visitenkarten Design und Visitenkarten mit QR-Code, digitale Visitenkarte erstellen,
-  Logo erstellen lassen und Logo Redesign, Corporate Identity & Corporate Design.
-</p>
+    <p class="sr-only">
+      Printdesign & Branding in München: Flyer erstellen und drucken, Flyer
+      Design, Visitenkarten Design und Visitenkarten mit QR-Code, digitale
+      Visitenkarte erstellen, Logo erstellen lassen und Logo Redesign, Corporate
+      Identity & Corporate Design.
+    </p>
 
-<p class="max-w-3xl mx-2 text-lg md:text-2xl text-gray-300 mt-6">
-  Alles für deinen Auftritt: <strong>Flyer erstellen &amp; drucken</strong>,
-  Visitenkarten mit QR Code,
-  <strong>Logo erstellen lassen</strong> und
-  <span class="text-gradient font-semibold">Corporate Design</span>.
-  Lokal in München, professionell umgesetzt – von der Idee bis zur
-  <span class="underline-animation">Druckabnahme</span>.
-</p>
-
+    <p class="max-w-3xl mx-2 text-lg md:text-2xl text-gray-300 mt-6">
+      Alles für deinen Auftritt: <strong>Flyer erstellen &amp; drucken</strong>,
+      Visitenkarten mit QR Code,
+      <strong>Logo erstellen lassen</strong> und
+      <span class="text-gradient font-semibold">Corporate Design</span>. Lokal
+      in München, professionell umgesetzt – von der Idee bis zur
+      <span class="underline-animation">Druckabnahme</span>.
+    </p>
 
     <div
       class="flex flex-col items-center md:flex-row md:justify-center md:items-center md:space-x-32 mt-12"
@@ -117,8 +117,8 @@ const jsonLd = {
         <p class="text-xl md:text-2xl mt-8">
           Ob <strong>durchdachtes Branding</strong>, <strong
             >starkes visuelles Konzept</strong
-          > oder <strong>professionelles Printdesign</strong> – ich mache deine
-          Marke sichtbar, wiedererkennbar und vertrauenswürdig.
+          > oder <strong>professionelles Printdesign</strong> – ich mache deine Marke
+          sichtbar, wiedererkennbar und vertrauenswürdig.
         </p>
 
         <p class="text-xl md:text-2xl mt-8">
@@ -130,8 +130,10 @@ const jsonLd = {
       </div>
     </div>
 
- <!-- Was ich biete Abschnitt mit Karten -->
-    <h2 class="text-center text-4xl md:text-5xl font-extrabold md:mt-24 mt-12 mb-24">
+    <!-- Was ich biete Abschnitt mit Karten -->
+    <h2
+      class="text-center text-4xl md:text-5xl font-extrabold md:mt-24 mt-12 mb-24"
+    >
       Was ich biete
     </h2>
 
@@ -205,147 +207,206 @@ const jsonLd = {
       </div>
     </div>
 
-<h2
-  class="text-center text-3xl md:text-4xl font-extrabold md:mt-24 mt-12 mb-12 mx-2"
-  style="line-height: 1.3;"
->
-  Flyer erstellen & drucken in München
-</h2>
+    <h2
+      class="text-center text-3xl md:text-4xl font-extrabold md:mt-24 mt-12 mb-12 mx-2"
+      style="line-height: 1.3;"
+    >
+      Flyer erstellen & drucken in München
+    </h2>
 
-<p class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-4">
-  Ob <strong>Flyer, Broschüren oder Faltblätter</strong> – jedes Detail zählt.
-  Ich gestalte <strong>hochwertige Druckprodukte</strong>, die deine Marke klar,
-  modern und professionell präsentieren. Vom ersten Entwurf bis zum fertigen
-  Druck bekommst du alles aus einer Hand – <span
-    class="text-gradient font-semibold"
-    >Design & Produktion made in München</span
-  >.
-</p>
+    <p class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-4">
+      Ob <strong>Flyer, Broschüren oder Faltblätter</strong> – jedes Detail zählt.
+      Ich gestalte <strong>hochwertige Druckprodukte</strong>, die deine Marke
+      klar, modern und professionell präsentieren. Vom ersten Entwurf bis zum
+      fertigen Druck bekommst du alles aus einer Hand – <span
+        class="text-gradient font-semibold"
+        >Design & Produktion made in München</span
+      >.
+    </p>
 
-<IpadComponent
-  imgSrc="/images/projects/flyer-salon.webp"
-  imgAlt="Flyer- und Broschürendesign für Beauty Studio in München – erstellt von maxWapp"
-/>
-   
+    <IpadComponent
+      imgSrc="/images/projects/flyer-salon.webp"
+      imgAlt="Flyer- und Broschürendesign für Beauty Studio in München – erstellt von maxWapp"
+    />
 
-<h2
-  class="text-center text-3xl md:text-4xl font-extrabold mt-24 mb-12 mx-2"
-  style="line-height: 1.3;"
->
-  Visitenkarten Design in München
-</h2>
+    <h2
+      class="text-center text-3xl md:text-4xl font-extrabold mt-24 mb-12 mx-2"
+      style="line-height: 1.3;"
+    >
+      Visitenkarten Design in München
+    </h2>
 
+    <p class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-4">
+      Eine <strong>Visitenkarte</strong> ist oft der erste Eindruck deiner Marke
+      – deshalb gestalte ich Designs, die <strong
+        >ästhetisch, durchdacht und funktional</strong
+      >
+      sind.
+    </p>
 
-
-<p class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-4">
-  Eine <strong>Visitenkarte</strong> ist oft der erste Eindruck deiner Marke –
-  deshalb gestalte ich Designs, die <strong>ästhetisch, durchdacht und funktional</strong>
-  sind. 
-</p>
-
-<p class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-4 mt-8 leading-relaxed">
-Ob mit <strong>integriertem QR-Code</strong> oder <strong>besonderen Druckveredelungen</strong> –
-  jede Karte wird individuell auf dein Branding abgestimmt. Ideal für Unternehmen,
-  die <span class="text-gradient font-semibold">Professionalität & Wiedererkennung</span>
-  zeigen wollen.
-</p>
+    <p
+      class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-4 mt-8 leading-relaxed"
+    >
+      Ob mit <strong>integriertem QR-Code</strong> oder <strong
+        >besonderen Druckveredelungen</strong
+      > – jede Karte wird individuell auf dein Branding abgestimmt. Ideal für Unternehmen,
+      die <span class="text-gradient font-semibold"
+        >Professionalität & Wiedererkennung</span
+      >
+      zeigen wollen.
+    </p>
 
     <IpadComponent
       imgSrc="/images/projects/visitenkarte-yuleksa.webp"
       imgAlt="Visitenkarten-Design für YULEKSA in München – QR-Code & Branding von maxWapp"
     />
 
-<h2
-  class="text-center text-3xl md:text-4xl font-extrabold mt-24 mb-12"
-  style="line-height: 1.3;"
->
-  Dein Branding – professionell & persönlich.
-</h2>
+    <h2
+      class="text-center text-3xl md:text-4xl font-extrabold mt-24 mb-12"
+      style="line-height: 1.3;"
+    >
+      Dein Branding – professionell & persönlich.
+    </h2>
 
-<p class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-4 leading-relaxed">
-  Jedes Unternehmen hat seine eigene Geschichte – und ein starkes <strong>Branding</strong>
-  erzählt sie auf den ersten Blick. Ich entwickle <strong>Designs mit Wiedererkennungswert</strong>,
-  die deine Werte sichtbar machen und deine Zielgruppe ansprechen.
-</p>
+    <p
+      class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-4 leading-relaxed"
+    >
+      Jedes Unternehmen hat seine eigene Geschichte – und ein starkes <strong
+        >Branding</strong
+      >
+      erzählt sie auf den ersten Blick. Ich entwickle <strong
+        >Designs mit Wiedererkennungswert</strong
+      >, die deine Werte sichtbar machen und deine Zielgruppe ansprechen.
+    </p>
 
-<p class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-4 mt-8 leading-relaxed">
-  Vom Farbkonzept bis zur Typografie – alles ist <span class="text-gradient font-semibold">
-  auf dein Business abgestimmt</span>. So entsteht ein einheitlicher, professioneller Auftritt,
-  der online und im Druck überzeugt.
-</p>
+    <p
+      class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-4 mt-8 leading-relaxed"
+    >
+      Vom Farbkonzept bis zur Typografie – alles ist <span
+        class="text-gradient font-semibold"
+      >
+        auf dein Business abgestimmt</span
+      >. So entsteht ein einheitlicher, professioneller Auftritt, der online und
+      im Druck überzeugt.
+    </p>
     <IpadComponent
       imgSrc="/images/projects/studio-d-ipad-style-guide.webp"
       imgAlt="studio-d ipad style-guide by maxWapp"
     />
 
     <h2
-  class="text-center text-3xl md:text-4xl font-extrabold mt-24 mb-12"
-  style="line-height: 1.3;"
->
-  Schaufenster, Schilder & T-Shirts – Branding direkt in München
-</h2>
+      class="text-center text-3xl md:text-4xl font-extrabold mt-24 mb-12"
+      style="line-height: 1.3;"
+    >
+      Schaufenster, Schilder & T-Shirts – Branding direkt in München
+    </h2>
 
-<p class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-4 leading-relaxed">
-  Neben Web&nbsp;&amp;&nbsp;Print übernehme ich auch <strong>Schaufensterbeschriftung in München</strong>,
-  <strong>Firmenschilder &amp; Leuchtkästen</strong>, Aufkleber/Folierungen sowie
-  <strong>T-Shirt&nbsp;Druck</strong>. Ich liefere Design, druckfertige Daten und die Abstimmung mit
-  der Produktion – alles aus einer Hand und lokal vor Ort.
-</p>
-
-<p class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-4 mt-8 leading-relaxed">
-  Ideal für Cafés, Barbershops, Studios, Handwerk & kleine Läden:
-  Ein einheitliches <strong>Branding von Website bis Schaufenster</strong> sorgt für Wiedererkennung
-  in deiner Nähe und stärkt die <span class="text-gradient font-semibold">lokale Sichtbarkeit</span>.
-</p>
-
-<IpadComponent
-  imgSrc="/images/ipad-t-short-print-maxwapp.webp" 
-  imgAlt="T-Shirt Werbung maxWapp: Schaufensterbeschriftung, Schilder & T-Shirt-Druck in München"
-/>
-
-<!-- FAQ Abschnitt mit Karten -->
-<h2 class="text-center text-4xl md:text-5xl font-extrabold md:mt-24 mt-12 mb-24">
-  Häufige Fragen zu Printdesign & Branding
-</h2>
-
-<div class="grid grid-cols-1 md:grid-cols-2 gap-12 px-6 md:px-0 max-w-6xl mx-auto">
-  <!-- Karte 1 -->
-  <div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]">
-    <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
-    <h4 class="text-3xl font-bold text-white mb-6">Wie lange dauert es, bis mein Flyer erstellt ist?</h4>
-    <p class="text-lg text-gray-300 leading-relaxed">
-      Je nach Umfang 3–7 Werktage vom Briefing bis zum Druck-PDF. Express ist möglich.
+    <p
+      class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-4 leading-relaxed"
+    >
+      Neben Web&nbsp;&amp;&nbsp;Print übernehme ich auch <strong
+        >Schaufensterbeschriftung in München</strong
+      >,
+      <strong>Firmenschilder &amp; Leuchtkästen</strong>, Aufkleber/Folierungen
+      sowie
+      <strong>T-Shirt&nbsp;Druck</strong>. Ich liefere Design, druckfertige
+      Daten und die Abstimmung mit der Produktion – alles aus einer Hand und
+      lokal vor Ort.
     </p>
-  </div>
 
-  <!-- Karte 2 -->
-  <div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]">
-    <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
-    <h4 class="text-3xl font-bold text-white mb-6">Übernehmt ihr auch den Druck?</h4>
-    <p class="text-lg text-gray-300 leading-relaxed">
-      Ja. Ich koordiniere den <strong>Druck in München</strong> – Papier, Veredelung, Auflage.
+    <p
+      class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-4 mt-8 leading-relaxed"
+    >
+      Ideal für Cafés, Barbershops, Studios, Handwerk & kleine Läden: Ein
+      einheitliches <strong>Branding von Website bis Schaufenster</strong> sorgt
+      für Wiedererkennung in deiner Nähe und stärkt die <span
+        class="text-gradient font-semibold">lokale Sichtbarkeit</span
+      >.
     </p>
-  </div>
 
-  <!-- Karte 3 -->
-  <div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]">
-    <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
-    <h4 class="text-3xl font-bold text-white mb-6">Bietet ihr Visitenkarten mit QR-Code an?</h4>
-    <p class="text-lg text-gray-300 leading-relaxed">
-      Klar. QR-Codes verlinken z. B. auf Website, Kontakt oder digitale Visitenkarte.
-    </p>
-  </div>
+    <IpadComponent
+      imgSrc="/images/ipad-t-short-print-maxwapp.webp"
+      imgAlt="T-Shirt Werbung maxWapp: Schaufensterbeschriftung, Schilder & T-Shirt-Druck in München"
+    />
 
-  <!-- Karte 4 -->
-  <div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]">
-    <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
-    <h4 class="text-3xl font-bold text-white mb-6">Kann ich ein bestehendes Logo überarbeiten lassen?</h4>
-    <p class="text-lg text-gray-300 leading-relaxed">
-      Ja, <strong>Logo-Redesign</strong> inkl. moderner Typografie, Farbwelt und Guidelines.
-    </p>
-  </div>
-</div>
+    <!-- FAQ Abschnitt mit Karten -->
+    <h2
+      class="text-center text-4xl md:text-5xl font-extrabold md:mt-24 mt-12 mb-24"
+    >
+      Häufige Fragen zu Printdesign & Branding
+    </h2>
 
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 gap-12 px-6 md:px-0 max-w-6xl mx-auto"
+    >
+      <!-- Karte 1 -->
+      <div
+        class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
+      >
+        <div
+          class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
+        >
+        </div>
+        <h4 class="text-3xl font-bold text-white mb-6">
+          Wie lange dauert es, bis mein Flyer erstellt ist?
+        </h4>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          Je nach Umfang 3–7 Werktage vom Briefing bis zum Druck-PDF. Express
+          ist möglich.
+        </p>
+      </div>
+
+      <!-- Karte 2 -->
+      <div
+        class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
+      >
+        <div
+          class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
+        >
+        </div>
+        <h4 class="text-3xl font-bold text-white mb-6">
+          Übernehmt ihr auch den Druck?
+        </h4>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          Ja. Ich koordiniere den <strong>Druck in München</strong> – Papier, Veredelung,
+          Auflage.
+        </p>
+      </div>
+
+      <!-- Karte 3 -->
+      <div
+        class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
+      >
+        <div
+          class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
+        >
+        </div>
+        <h4 class="text-3xl font-bold text-white mb-6">
+          Bietet ihr Visitenkarten mit QR-Code an?
+        </h4>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          Klar. QR-Codes verlinken z. B. auf Website, Kontakt oder digitale
+          Visitenkarte.
+        </p>
+      </div>
+
+      <!-- Karte 4 -->
+      <div
+        class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
+      >
+        <div
+          class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
+        >
+        </div>
+        <h4 class="text-3xl font-bold text-white mb-6">
+          Kann ich ein bestehendes Logo überarbeiten lassen?
+        </h4>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          Ja, <strong>Logo-Redesign</strong> inkl. moderner Typografie, Farbwelt
+          und Guidelines.
+        </p>
+      </div>
+    </div>
 
     <!-- Warum mit mir arbeiten Abschnitt -->
     <h2
@@ -363,8 +424,7 @@ Ob mit <strong>integriertem QR-Code</strong> oder <strong>besonderen Druckverede
         class="w-full md:w-6/12 flex justify-center md:justify-center mb-12 md:mb-0 rounded shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] phone-container-second"
       >
         <img
-      src="/images/maxWapp-business-card.webp"
-
+          src="/images/maxWapp-business-card.webp"
           alt="maxWapp Visitenkarte | Juri Lorenz – Corporate Design von maxWapp"
           class="w-80 md:w-auto md:max-h-[20vh] object-contain rounded-lg"
         />
@@ -385,8 +445,6 @@ Ob mit <strong>integriertem QR-Code</strong> oder <strong>besonderen Druckverede
         <div
           class="flex flex-col md:flex-row gap-6 mt-8 md:mt-16 justify-center md:justify-start items-center md:items-start w-full md:w-auto"
         >
-
-
           <!-- Primary Button -->
           <a
             href="/kontakt"
@@ -529,7 +587,7 @@ Ob mit <strong>integriertem QR-Code</strong> oder <strong>besonderen Druckverede
 
         document.addEventListener("DOMContentLoaded", function () {
           const secondPhoneImage = document.querySelector(
-            ".phone-container-second"
+            ".phone-container-second",
           )
 
           // Function to check if the element is in the viewport
@@ -556,8 +614,6 @@ Ob mit <strong>integriertem QR-Code</strong> oder <strong>besonderen Druckverede
           handleScroll()
         })
       </script>
-
-
     </div>
   </div>
 </MainLayout>

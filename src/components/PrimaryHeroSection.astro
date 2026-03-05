@@ -1,0 +1,155 @@
+--- 
+
+import SocialProof from "./SocialProof.astro";
+
+type HeroProps = {
+  title: string;                 // H1 (SEO)
+  subtitle?: string;             // Optional smaller line inside H1 (mobile only)
+
+  lead?: string;                 // Main descriptive lead (desktop)
+  leadMobile?: string;           // Optional different mobile lead
+
+  desktopImgSrc: string;
+  mobileImgSrc?: string;
+  imgAlt?: string;
+
+  bullets?: string[];
+  bulletsMobile?: string[];
+
+  ctaHref?: string;
+  ctaLabel?: string;
+};
+
+const {
+  title,
+  subtitle,
+  lead,
+  leadMobile,
+
+  desktopImgSrc,
+  mobileImgSrc,
+  imgAlt = "",
+
+  bullets = [],
+  bulletsMobile,
+
+  ctaHref = "/kontakt",
+  ctaLabel = "Jetzt starten",
+} = Astro.props as HeroProps;
+
+const mobileBullets = bulletsMobile ?? bullets;
+---
+
+<section class="mw-hero section-pad pt-6 md:pt-28 pb-12 relative overflow-hidden">
+  <div class="section-container">
+    <div class="mw-hero-grid">
+
+      <!-- IMAGE (desktop only) -->
+      <div class="mw-hero-image-wrapper !hidden md:!block">
+        <img
+          src={desktopImgSrc}
+          alt={imgAlt}
+          loading="eager"
+          decoding="async"
+          class="mw-hero-image"
+        />
+      </div>
+
+      <!-- CONTENT -->
+      <div class="mw-hero-content">
+
+<SocialProof />
+        
+        <!-- H1 (mobile-first SEO) -->
+        <h1 class="mw-hero-title md:!hidden">
+          {title}
+          {subtitle && <span class="block">{subtitle}</span>}
+        </h1>
+
+        <!-- Desktop visual heading (no SEO weight) -->
+        <div
+          class="mw-hero-title !hidden md:!block"
+          role="heading"
+          aria-level="2"
+        >
+          {title}
+          {subtitle && <span class="block">{subtitle}</span>}
+        </div>
+
+        {/* Lead text */}
+        {(lead || leadMobile) && (
+          <>
+            {leadMobile && (
+              <p class="mw-lead mt-6 md:hidden">
+                {leadMobile}
+              </p>
+            )}
+
+            {lead && (
+              <p class="mw-lead mt-6 hidden md:block">
+                {lead}
+              </p>
+            )}
+          </>
+        )}
+
+        {/* Bullets */}
+        {bullets.length > 0 && (
+          <>
+            {/* Desktop bullets */}
+            <ul class="mw-bullet-list mt-10 !hidden md:!block">
+              {bullets.map((item) => (
+                <li class="mw-bullet-item text-xl md:text-2xl">
+                  <i class="fas fa-check mw-bullet-icon" aria-hidden="true"></i>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            {/* Mobile bullets */}
+            <ul class="mw-bullet-list mt-8 md:!hidden">
+              {mobileBullets.map((item) => (
+                <li class="mw-bullet-item text-lg">
+                  <i class="fas fa-check mw-bullet-icon" aria-hidden="true"></i>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+
+        {/* CTA */}
+        <div class="mt-12">
+          <a href={ctaHref} class="mw-primary-btn">
+            {ctaLabel}
+          </a>
+        </div>
+
+        {/* Mobile image after CTA */}
+        {mobileImgSrc && (
+          <div class="mt-10 md:!hidden">
+            <img
+              src={mobileImgSrc}
+              alt={imgAlt}
+              loading="eager"
+              decoding="async"
+              class="mw-hero-image mw-hero-image--mobile"
+            />
+          </div>
+        )}
+
+      </div>
+    </div>
+  </div>
+  <style>
+    /* Ensure the mobile hero image really appears AFTER the CTA (normal document flow) */
+    .mw-hero-image--mobile {
+      position: relative !important;
+      inset: auto !important;
+      width: 100% !important;
+      height: auto !important;
+      display: block !important;
+      object-fit: cover;
+    }
+  </style>
+</section>

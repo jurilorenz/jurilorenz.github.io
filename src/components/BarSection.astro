@@ -1,0 +1,130 @@
+---
+type Badge = {
+  label: string;
+  sublabel?: string;
+  href?: string;
+};
+
+type BarSectionProps = {
+  id?: string;
+  eyebrow?: string;
+  title?: string;
+  intro?: string;
+  // Optional defaults for external links
+  googleMapsHref?: string;
+  directHref?: string;
+  badges?: Badge[];
+  note?: string;
+  compact?: boolean;
+  className?: string;
+};
+
+const {
+  id,
+  eyebrow,
+  title,
+  intro,
+  googleMapsHref,
+  directHref,
+  badges = [],
+  note,
+  compact = true,
+    className = "",
+} = Astro.props as BarSectionProps;
+
+const pad = compact ? "section-pad-compact" : "section-pad";
+---
+
+<section id={id} class={`w-full ${className} ${pad}`.trim()}>
+  <div class="section-container">
+  <div class="mw-step-card mw-trust-panel p-6 md:p-10">
+    <!-- top gradient line -->
+    <div class="mw-step-topbar"></div>
+
+    <!-- soft glow -->
+    <div class="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-purple-500/15 blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-indigo-500/15 blur-3xl pointer-events-none"></div>
+
+      <header class="max-w-3xl mx-auto text-center">
+        {eyebrow && (
+          <p class="mw-eyebrow mb-3">
+            {eyebrow}
+          </p>
+        )}
+        {title && (
+          <h2 class="mw-h2 text-3xl md:text-4xl leading-tight">
+            {title}
+          </h2>
+        )}
+        {intro && (
+          <p class="mw-lead text-lg md:text-xl mt-4">
+            {intro}
+          </p>
+        )}
+      </header>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-8">
+      {badges.map((b) => {
+        const inferredHref = b.href
+          ?? (googleMapsHref && /(Bewertungen|Sterne)/i.test(b.label) ? googleMapsHref : undefined)
+          ?? (directHref && /(Direkt|Agentur)/i.test(b.label) ? directHref : undefined);
+
+        const Inner = (
+          <div class="mw-step-card rounded-xl p-4 md:p-5">
+            <div class="mw-step-topbar"></div>
+            <p class="text-xl md:text-xl font-semibold text-gray-100 leading-snug">
+              {b.label}
+            </p>
+            {b.sublabel && (
+              <p class="text-base md:text-base text-gray-300/80 mt-1">
+                {b.sublabel}
+              </p>
+            )}
+            <div class="mw-step-glow" aria-hidden="true"></div>
+          </div>
+        );
+
+        if (!inferredHref) {
+          return Inner;
+        }
+
+        const isExternal = /^https?:\/\//.test(inferredHref);
+
+        return (
+          <a
+            href={inferredHref}
+            class="block"
+            {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+          >
+            {Inner}
+          </a>
+        );
+      })}
+    </div>
+
+    {note && (
+      <p class="mw-body mt-8 text-center text-gray-300/90">
+        <span class="font-semibold bg-gradient-to-r from-purple-500 to-indigo-500 bg-clip-text text-transparent">💡</span> {note}
+      </p>
+    )}
+  </div>
+  </div>
+  <style>
+    /* TrustBar: outer panel stays static on hover (only inner cards react) */
+    .mw-trust-panel.mw-step-card:hover {
+      transform: none;
+      box-shadow: none;
+      border-color: rgba(255, 255, 255, 0.08);
+    }
+
+    /* Prevent the OUTER panel hover from lighting up ALL inner glows */
+    .mw-trust-panel:hover .mw-step-glow {
+      opacity: 0 !important;
+    }
+
+    /* Re-enable glow only for the hovered small card itself */
+    .mw-trust-panel .mw-step-card:hover > .mw-step-glow {
+      opacity: 1 !important;
+    }
+  </style>
+</section>

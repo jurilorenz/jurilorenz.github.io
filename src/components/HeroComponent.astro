@@ -1,5 +1,30 @@
 ---
-const { title = "Websites,", subtitle = "die verkaufen" } = Astro.props;
+const {
+  // Text
+  title = "Websites,",
+  subtitle = "die verkaufen",
+
+  // Images (defaults keep current behavior)
+  desktopImgSrc = "/images/home-page-juri-lorenz-desktop.webp",
+  mobileImgSrc = "/images/home-page-juri-lorenz-mobile.webp",
+  imgAlt = "Juri Lorenz",
+
+  // Bullet points (defaults keep current behavior)
+  bulletsDesktop = [
+    "Websites und Online-Shops",
+    "Mehr Google Sichtbarkeit",
+    "Printdesign und Druck",
+  ],
+  bulletsMobile = [
+    "Mehr Google Sichtbarkeit",
+    "Websites und Online-Shops",
+    "Branding, Logo & Print-Design",
+  ],
+
+  // CTA (defaults keep current behavior)
+  ctaHref = "/kontakt",
+  ctaLabel = "Let's Talk",
+} = Astro.props;
 ---
 
 <!-- Hero Section --><!-- ✅ Десктопная версия -->
@@ -9,9 +34,11 @@ const { title = "Websites,", subtitle = "die verkaufen" } = Astro.props;
   <!-- Левая часть: Изображение (опускаем вниз) -->
   <div class="w-1/2 flex justify-end items-end mt-48">
     <img
-      src="/images/home-page-juri-lorenz-desktop.webp"
+      src={desktopImgSrc}
       class="w-auto h-[80vh] object-cover object-top hero-image"
-      alt="Juri Lorenz"
+      alt={imgAlt}
+      loading="eager"
+      decoding="async"
     />
   </div>
 
@@ -32,43 +59,33 @@ class="hidden 2xl:flex flex-col items-start mb-6 rounded-lg transition-all durat
       </div>
     </div>
     <div class="text-gray-300 text-xl mt-1 underline">
-      über 60 Google-Bewertungen
+      über 70 Google-Bewertungen
     </div>
   </a>
 
-  <!-- Заголовок -->
-  <p
-    class="text-8xl font-bold leading-tight"
-    role="heading"
-    aria-level="1"
-  >
+  <!-- Заголовок (desktop visual only, no H1 for SEO) -->
+  <div class="text-8xl font-bold leading-tight" role="heading" aria-level="2">
     {title}
     <span class="block text-6xl mt-[-0.5rem]">{subtitle}</span>
-  </p>
+  </div>
   
     <!-- Список преимуществ -->
     <h2 class="sr-only">Services</h2>
     <ul class="text-lg md:text-2xl mt-10 text-gray-100 space-y-2">
-      <li>
-        <i class="fas fa-check text-white mr-4"></i>Websites und Online-Shops
-      </li>
-      <li>
-                <i class="fas fa-check text-white mr-4"></i>Mehr Google Sichtbarkeit
-
-      </li>
-      <li>
-        <i class="fas fa-check text-white mr-4"></i>Printdesign und Druck
-      </li>
+      {bulletsDesktop.map((item) => (
+        <li>
+          <i class="fas fa-check text-white mr-4"></i>{item}
+        </li>
+      ))}
     </ul>
 
     <!-- Кнопка (всегда видна) -->
     <div class="mt-20">
-
       <a
-        href="/kontakt"
+        href={ctaHref}
         class="bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-bold py-4 px-20 rounded-full shadow-md transition-all duration-300 text-xl tracking-wider ease-in-out hover:brightness-110 hover:shadow-lg"
       >
-        Let's Talk
+        {ctaLabel}
       </a>
     </div>
   </div>
@@ -91,7 +108,7 @@ class="hidden 2xl:flex flex-col items-start mb-6 rounded-lg transition-all durat
     </div>
   </div>
   <div class="text-gray-300 mt-1 underline">
-    über 60 Bewertungen
+    über 70 Bewertungen
   </div>
 </a>
   <!-- Заголовок (mobile) -->
@@ -102,15 +119,11 @@ class="hidden 2xl:flex flex-col items-start mb-6 rounded-lg transition-all durat
 
   <!-- Список преимуществ -->
   <ul class="text-lg mt-6 text-gray-100 space-y-2">
-    <li>
-      <i class="fas fa-check text-white mr-4"></i>Mehr Google Sichtbarkeit 
-    </li>
-    <li>
-      <i class="fas fa-check text-white mr-4"></i>Websites und Online-Shops
-    </li>
-    <li>
-      <i class="fas fa-check text-white mr-4"></i>Branding, Logo & Print-Design
-    </li>
+    {bulletsMobile.map((item) => (
+      <li>
+        <i class="fas fa-check text-white mr-4"></i>{item}
+      </li>
+    ))}
   </ul>
 
   <div
@@ -119,27 +132,32 @@ class="hidden 2xl:flex flex-col items-start mb-6 rounded-lg transition-all durat
     <!-- Secondary Button -->
 
     <a
-      href="/kontakt"
+      href={ctaHref}
       class="relative inline-block py-4 px-10 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-gradient-to-r from-purple-500 to-indigo-500 text-white shadow-md transition-all text-xl duration-300 ease-in-out"
     >
-      Let's Talk
+      {ctaLabel}
     </a>
   </div>
 
   <!-- Изображение (расположено ниже) -->
   <div class="mt-10">
     <img
-      src="/images/home-page-juri-lorenz-mobile.webp"
+      src={mobileImgSrc}
       class="w-full h-auto object-cover rounded-lg shadow-lg hero-image"
-      alt="Juri Lorenz"
+      alt={imgAlt}
+      loading="eager"
+      decoding="async"
     />
   </div>
 </div>
 
 <style>
-  h1 {
-    line-height: 1.2; /* Adjust line height for better spacing */
-    max-width: 18ch; /* Prevents awkward breaking */
+  /* Only constrain the mobile hero headline */
+  @media (max-width: 767px) {
+    h1 {
+      line-height: 1.2; /* Adjust line height for better spacing */
+      max-width: 18ch; /* Prevents awkward breaking */
+    }
   }
   .hero-image {
     position: relative;

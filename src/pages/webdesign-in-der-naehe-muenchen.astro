@@ -1,14 +1,13 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro"
 import IpadComponent from "../components/IpadComponent.astro"
-import HeroComponent from "../components/HeroComponent.astro";
-
-
+import HeroComponent from "../components/HeroComponent.astro"
+import FinalCTASection from "../components/FinalCTASection.astro"
 
 const jsonLd = [
   {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Service",
     name: "Starter",
     image: "https://maxwapp.de/images/packages/starter-package-cover.webp",
     description:
@@ -27,7 +26,7 @@ const jsonLd = [
   },
   {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Service",
     name: "Basic",
     image: "https://maxwapp.de/images/packages/basic-package-cover.webp",
     description: "Startseite, bis 5 Menüpunkte, KI-Bilder, Logo, SEO & mehr.",
@@ -45,7 +44,7 @@ const jsonLd = [
   },
   {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Service",
     name: "Business",
     image: "https://maxwapp.de/images/packages/business-package-cover.webp",
     description:
@@ -70,135 +69,180 @@ const jsonLd = [
   seoTitle="Webdesign in der Nähe München – Website & Landingpage erstellen lassen"
   seoDesc="Webdesign in der Nähe (München): Professionelle WordPress-Websites & Landingpages. Responsive Webdesign, schnelle Ladezeiten, SEO. Website erstellen lassen – lokal & zuverlässig."
 >
-
-  <link rel="canonical" href="https://maxwapp.de/webdesign-in-der-naehe-muenchen/" />
+  <link
+    rel="canonical"
+    href="https://maxwapp.de/webdesign-in-der-naehe-muenchen/"
+  />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Webdesign in der Nähe (München)",
-    "serviceType": "Webdesign & Webentwicklung",
-    "description": "Moderne WordPress-Websites und Landingpages aus München: responsive Webdesign, SEO und schnelle Performance.",
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "maxWapp",
-      "image": "https://maxwapp.de/images/logo.png",
-      "url": "https://maxwapp.de",
-      "telephone": "+49 1777 59 48 39",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Constanze-Hallgarten Str. 40",
-        "addressLocality": "München",
-        "postalCode": "81379",
-        "addressCountry": "DE"
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "München"
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Webdesign in der Nähe (München)",
+      "serviceType": "Webdesign & Webentwicklung",
+      "description": "Moderne WordPress-Websites und Landingpages aus München: responsive Webdesign, SEO und schnelle Performance.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "maxWapp",
+        "image": "https://maxwapp.de/images/logo.png",
+        "url": "https://maxwapp.de",
+        "telephone": "+49 1777 59 48 39",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Constanze-Hallgarten Str. 40",
+          "addressLocality": "München",
+          "postalCode": "81379",
+          "addressCountry": "DE"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "München"
+        }
       }
     }
-  }
   </script>
 
-
-<HeroComponent
-  title="Webdesign in der Nähe - München"
-  subtitle=""
-/>
+  <HeroComponent title="Webdesign in der Nähe - München" subtitle="" />
 
   <!-- Hintergrund mit Verlauf -->
   <div
     class="min-h-screen bg-gradient-to-b from-[#090a1a] to-[#290065] text-white text-center flex flex-col items-center justify-center"
   >
     <!-- Titel -->
-<h2
-  class="text-center text-4xl md:text-5xl font-extrabold mt-12 md:mt-24 mb-8 mx-4"
->
-  Professionelles Webdesign für München & Umgebung
-</h2>
-
-<p class="max-w-3xl mx-4 text-xl md:text-2xl text-gray-300 mt-6">
-  Moderne <strong>WordPress-Websites</strong> und <strong>Landingpages</strong> 
-  im <strong>responsive Webdesign</strong> – 
-  klar strukturiert, schnell und auf <span class="underline-animation">Conversion</span> ausgelegt.  
-  Perfekt für Selbstständige und kleine Unternehmen, die in München online sichtbar werden wollen.
-</p>
-    <div
+    <h2
+      class="text-center text-4xl md:text-5xl font-extrabold mt-12 md:mt-24 mb-8 mx-4"
     >
+      Professionelles Webdesign für München & Umgebung
+    </h2>
 
-
-    <p class="sr-only">
-      Webdesign in der Nähe München: Website erstellen lassen, Landingpage erstellen lassen, responsive Webdesign, WordPress Website, Webentwickler in München.
+    <p class="max-w-3xl mx-4 text-xl md:text-2xl text-gray-300 mt-6">
+      Moderne <strong>WordPress-Websites</strong> und <strong
+        >Landingpages</strong
+      >
+      im <strong>responsive Webdesign</strong> – klar strukturiert, schnell und auf
+      <span class="underline-animation">Conversion</span> ausgelegt. Perfekt für
+      Selbstständige und kleine Unternehmen, die in München online sichtbar werden
+      wollen.
     </p>
-
-    
-
-
+    <div>
+      <p class="sr-only">
+        Webdesign in der Nähe München: Website erstellen lassen, Landingpage
+        erstellen lassen, responsive Webdesign, WordPress Website, Webentwickler
+        in München.
+      </p>
     </div>
     <IpadComponent
-  imgSrc="/images/ipad-t-short-print-maxwapp.webp" 
-  imgAlt="Webdesigner in München – maxWapp 'Websites, die verkaufen' im Stadtblick"
-/>
+      imgSrc="/images/ipad-t-short-print-maxwapp.webp"
+      imgAlt="Webdesigner in München – maxWapp 'Websites, die verkaufen' im Stadtblick"
+    />
 
-    <h2 class="text-center text-3xl md:text-4xl font-extrabold mt-24 mb-12">Was ich anbiete</h2>
+    <h2 class="text-center text-3xl md:text-4xl font-extrabold mt-24 mb-12">
+      Was ich anbiete
+    </h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 px-6 md:px-0 max-w-6xl mx-auto">
-      <div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0_0_35px_rgba(147,112,219,0.6)]">
-        <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
-        <h3 class="text-3xl font-bold text-white mb-6"><strong>
-  <a href="/services/websites" class="underline underline-offset-4 hover:text-purple-200 transition">
-    Website erstellen lassen
-  </a>
-</strong></h3>
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 gap-12 px-6 md:px-0 max-w-6xl mx-auto"
+    >
+      <div
+        class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0_0_35px_rgba(147,112,219,0.6)]"
+      >
+        <div
+          class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
+        >
+        </div>
+        <h3 class="text-3xl font-bold text-white mb-6">
+          <strong>
+            <a
+              href="/wordpress-website-erstellen-lassen"
+              class="underline underline-offset-4 hover:text-purple-200 transition"
+            >
+              Website erstellen lassen
+            </a>
+          </strong>
+        </h3>
         <p class="text-lg text-gray-300 leading-relaxed">
-          <strong>Professionelle Website erstellen lassen</strong> – klar, schnell, suchmaschinenfreundlich. 
-          Ideal für Selbstständige & kleine Unternehmen in München.
+          <strong>Professionelle Website erstellen lassen</strong> – klar, schnell,
+          suchmaschinenfreundlich. Ideal für Selbstständige & kleine Unternehmen
+          in München.
         </p>
       </div>
 
-      <div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0_0_35px_rgba(147,112,219,0.6)]">
-        <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
-        <h3 class="text-3xl font-bold text-white mb-6"><strong>
-  <a href="/services/websites" class="underline underline-offset-4 hover:text-purple-200 transition">
-    Landingpage erstellen
-  </a>
-</strong></h3>
+      <div
+        class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0_0_35px_rgba(147,112,219,0.6)]"
+      >
+        <div
+          class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
+        >
+        </div>
+        <h3 class="text-3xl font-bold text-white mb-6">
+          <strong>
+            <a
+              href="/wordpress-website-erstellen-lassen"
+              class="underline underline-offset-4 hover:text-purple-200 transition"
+            >
+              Landingpage erstellen
+            </a>
+          </strong>
+        </h3>
         <p class="text-lg text-gray-300 leading-relaxed">
-          <strong>Landingpage erstellen lassen</strong> mit Fokus auf <span class="underline-animation">Conversion</span> – 
-          ideal für Kampagnen, Ads und schnelle Leads.
+          <strong>Landingpage erstellen lassen</strong> mit Fokus auf <span
+            class="underline-animation">Conversion</span
+          > – ideal für Kampagnen, Ads und schnelle Leads.
         </p>
       </div>
 
-<!-- Karte 3: Responsive Webdesign -->
-<div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0_0_35px_rgba(147,112,219,0.6)]">
-  <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
-  <h3 class="text-3xl font-bold text-white mb-6"><strong>
-  <a href="/services/website-optimierung" class="underline underline-offset-4 hover:text-purple-200 transition">
-    Website Redesign & Optimierung
-  </a>
-</strong></h3>
-  <p class="text-lg text-gray-300 leading-relaxed">
-    Ich <strong>optimiere oder redesign</strong> deine Website 
-    für <span class="underline-animation">schnellere Ladezeiten</span> und bessere Google-Sichtbarkeit.  
-    Das Ergebnis: mehr Reichweite, ein moderner Auftritt und deutlich <strong>mehr Anfragen über deine Website</strong>.
-  </p>
-</div>
+      <!-- Karte 3: Responsive Webdesign -->
+      <div
+        class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0_0_35px_rgba(147,112,219,0.6)]"
+      >
+        <div
+          class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
+        >
+        </div>
+        <h3 class="text-3xl font-bold text-white mb-6">
+          <strong>
+            <a
+              href="/website-optimieren-muenchen"
+              class="underline underline-offset-4 hover:text-purple-200 transition"
+            >
+              Website Redesign & Optimierung
+            </a>
+          </strong>
+        </h3>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          Ich <strong>optimiere oder redesign</strong> deine Website für <span
+            class="underline-animation">schnellere Ladezeiten</span
+          > und bessere Google-Sichtbarkeit. Das Ergebnis: mehr Reichweite, ein moderner
+          Auftritt und deutlich <strong>mehr Anfragen über deine Website</strong
+          >.
+        </p>
+      </div>
 
-<!-- Karte 4: WordPress Agentur München -->
-<div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0_0_35px_rgba(147,112,219,0.6)]">
-  <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
-  <h3 class="text-3xl font-bold text-white mb-6"><strong>
-  <a href="/services/online-shop" class="underline underline-offset-4 hover:text-purple-200 transition">
-    Online-Shop erstellen lassen
-  </a>
-</strong></h3>
-  <p class="text-lg text-gray-300 leading-relaxed">
-    Ich entwickle <strong>Online-Shops mit Shopify oder WordPress</strong> – individuell, benutzerfreundlich und suchmaschinenoptimiert.  
-   
-    Das Ergebnis: <span class="underline-animation">mehr Verkäufe</span> , mehr Reichweite und eine starke Online-Präsenz.
-  </p>
-</div>
+      <!-- Karte 4: WordPress Agentur München -->
+      <div
+        class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0_0_35px_rgba(147,112,219,0.6)]"
+      >
+        <div
+          class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
+        >
+        </div>
+        <h3 class="text-3xl font-bold text-white mb-6">
+          <strong>
+            <a
+              href="/online-shop-erstellen-lassen"
+              class="underline underline-offset-4 hover:text-purple-200 transition"
+            >
+              Online-Shop erstellen lassen
+            </a>
+          </strong>
+        </h3>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          Ich entwickle <strong>Online-Shops mit Shopify oder WordPress</strong>
+          – individuell, benutzerfreundlich und suchmaschinenoptimiert. Das Ergebnis:
+          <span class="underline-animation">mehr Verkäufe</span> , mehr Reichweite
+          und eine starke Online-Präsenz.
+        </p>
+      </div>
     </div>
 
     <!-- Inhalt Abschnitt -->
@@ -211,7 +255,7 @@ const jsonLd = [
       >
         <img
           src="/images/projects/immobilien-muenchen.webp"
-alt="Webdesign in der Nähe München – Projekt Immobilien München (WordPress Website)"
+          alt="Webdesign in der Nähe München – Projekt Immobilien München (WordPress Website)"
           class="w-80 md:w-auto md:max-h-[60vh] object-contain rounded-lg"
         />
       </div>
@@ -219,106 +263,149 @@ alt="Webdesign in der Nähe München – Projekt Immobilien München (WordPress 
       <!-- Textabschnitt für Desktop rechts -->
       <div class="w-full md:w-5/12 text-center md:text-left">
         <p class="text-xl md:text-2xl mt-4">
-  <strong>Webdesign in München</strong> – klar, schnell, verkaufsstark. 
-  Ich verbinde <span class="text-gradient">modernes Webdesign</span> mit sauberer 
-  <strong>Webentwicklung</strong> für <span class="underline-animation">mehr Sichtbarkeit</span>, 
-  mehr Anfragen und messbare Ergebnisse – lokal gedacht, skalierbar gebaut.
-</p>
+          <strong>Webdesign in München</strong> – klar, schnell, verkaufsstark. Ich
+          verbinde <span class="text-gradient">modernes Webdesign</span> mit sauberer
+          <strong>Webentwicklung</strong> für <span class="underline-animation"
+            >mehr Sichtbarkeit</span
+          >, mehr Anfragen und messbare Ergebnisse – lokal gedacht, skalierbar
+          gebaut.
+        </p>
 
         <p class="text-xl md:text-2xl mt-8">
-  Du willst eine <strong>Landingpage</strong> oder eine 
-  <strong>Website erstellen lassen</strong>? Als <strong>Webdesigner & Webentwickler</strong> liefere ich 
-  <strong>responsive Webdesign</strong> – präzise umgesetzt für Selbstständige und 
-  kleine Unternehmen in München & Umgebung.
-</p>
+          Du willst eine <strong>Landingpage</strong> oder eine
+          <strong>Website erstellen lassen</strong>? Als <strong
+            >Webdesigner & Webentwickler</strong
+          > liefere ich
+          <strong>responsive Webdesign</strong> – präzise umgesetzt für Selbstständige
+          und kleine Unternehmen in München & Umgebung.
+        </p>
       </div>
     </div>
 
     <!-- Prozess als Karten (B2C-freundlich) -->
-<h2 class="text-center text-3xl md:text-4xl font-extrabold mt-36 mb-12 mx-2" style="line-height:1.3;">
-  So laufen Projekte mit mir
-</h2>
+    <h2
+      class="text-center text-3xl md:text-4xl font-extrabold mt-36 mb-12 mx-2"
+      style="line-height:1.3;"
+    >
+      So laufen Projekte mit mir
+    </h2>
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-12 px-6 md:px-0 max-w-6xl mx-auto">
-  <!-- Karte 1 -->
-  <div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]">
-    <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
-    <h4 class="text-2xl md:text-3xl font-bold text-white mb-4">
-      <span class="text-gradient">1.</span> Analyse
-    </h4>
-    <p class="text-lg text-gray-300 leading-relaxed">
- Wir starten mit einem kurzen Gespräch: Worum geht es bei deinem Unternehmen? 
-      Wer sind deine Kunden in München und was willst du mit deiner Website erreichen?
-            Ich prüfe, wie du aktuell online auftrittst und welche Chancen du bei Google hast.
-     
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 gap-12 px-6 md:px-0 max-w-6xl mx-auto"
+    >
+      <!-- Karte 1 -->
+      <div
+        class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
+      >
+        <div
+          class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
+        >
+        </div>
+        <h4 class="text-2xl md:text-3xl font-bold text-white mb-4">
+          <span class="text-gradient">1.</span> Analyse
+        </h4>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          Wir starten mit einem kurzen Gespräch: Worum geht es bei deinem
+          Unternehmen? Wer sind deine Kunden in München und was willst du mit
+          deiner Website erreichen? Ich prüfe, wie du aktuell online auftrittst
+          und welche Chancen du bei Google hast.
+        </p>
+      </div>
 
-      
+      <!-- Karte 2 -->
+      <div
+        class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
+      >
+        <div
+          class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
+        >
+        </div>
+        <h4 class="text-2xl md:text-3xl font-bold text-white mb-4">
+          <span class="text-gradient">2.</span> Konzept
+        </h4>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          Gemeinsam planen wir deine neue Website: welche Seiten du brauchst
+          (Startseite, Leistungen, Über mich, Kontakt) und wie Besucher schnell
+          zu den wichtigsten Infos kommen. Auf Wunsch bekommst du auch
+          Design-Vorschläge, die perfekt zu deiner Marke passen.
+        </p>
+      </div>
 
-     </p>
-  </div>
+      <!-- Karte 3 -->
+      <div
+        class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
+      >
+        <div
+          class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
+        >
+        </div>
+        <h4 class="text-2xl md:text-3xl font-bold text-white mb-4">
+          <span class="text-gradient">3.</span> Vorbereitung
+        </h4>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          Ich kann deine <strong>Fotos und Texte</strong> verwenden – oder neue Inhalte
+          erstellen. Auf Wunsch organisiere ich ein <strong>Fotoshooting</strong
+          > in München (Bilder, Video, kurze Clips für Website oder Social Media).
+          Texte werden von mir mit <span class="underline-animation"
+            >künstlicher Intelligenz</span
+          > erstellt und anschließend manuell angepasst, damit alles natürlich klingt.
+        </p>
+      </div>
 
-  <!-- Karte 2 -->
-  <div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]">
-    <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
-    <h4 class="text-2xl md:text-3xl font-bold text-white mb-4">
-      <span class="text-gradient">2.</span> Konzept
-    </h4>
-    <p class="text-lg text-gray-300 leading-relaxed">
-      Gemeinsam planen wir deine neue Website:  
-      welche Seiten du brauchst (Startseite, Leistungen, Über mich, Kontakt)  
-      und wie Besucher schnell zu den wichtigsten Infos kommen.
-   Auf Wunsch bekommst du auch Design-Vorschläge, die perfekt zu deiner Marke passen.
-   
-    </p>
-  </div>
+      <!-- Karte 4 -->
+      <div
+        class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
+      >
+        <div
+          class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
+        >
+        </div>
+        <h4 class="text-2xl md:text-3xl font-bold text-white mb-4">
+          <span class="text-gradient">4.</span> Umsetzung
+        </h4>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          Danach baue ich deine <strong>WordPress Website</strong> oder <strong
+            >Landingpage</strong
+          >
+          im <strong>responsive Webdesign</strong> – also für Handy, Tablet und PC.
+          Alles wird auf <strong>Schnelligkeit</strong>, <strong
+            >Google-Sichtbarkeit</strong
+          > und <strong>gute Struktur</strong> optimiert. Nach dem Start bekommst
+          du eine kurze Einführung und Tipps, wie du Inhalte selbst ändern kannst.
+        </p>
+      </div>
+    </div>
 
-  <!-- Karte 3 -->
-  <div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]">
-    <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
-    <h4 class="text-2xl md:text-3xl font-bold text-white mb-4">
-      <span class="text-gradient">3.</span> Vorbereitung
-    </h4>
-    <p class="text-lg text-gray-300 leading-relaxed">
-      Ich kann deine <strong>Fotos und Texte</strong> verwenden – oder neue Inhalte erstellen.
-      Auf Wunsch organisiere ich ein <strong>Fotoshooting</strong> in München
-      (Bilder, Video, kurze Clips für Website oder Social Media).
-      Texte werden von mir mit <span class="underline-animation">künstlicher Intelligenz</span> erstellt
-      und anschließend manuell angepasst, damit alles natürlich klingt.
-    </p>
-  </div>
-
-  <!-- Karte 4 -->
-  <div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]">
-    <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
-    <h4 class="text-2xl md:text-3xl font-bold text-white mb-4">
-      <span class="text-gradient">4.</span> Umsetzung
-    </h4>
-    <p class="text-lg text-gray-300 leading-relaxed">
-      Danach baue ich deine <strong>WordPress Website</strong> oder <strong>Landingpage</strong>
-      im <strong>responsive Webdesign</strong> – also für Handy, Tablet und PC.
-      Alles wird auf <strong>Schnelligkeit</strong>, <strong>Google-Sichtbarkeit</strong> und <strong>gute Struktur</strong> optimiert.
-      Nach dem Start bekommst du eine kurze Einführung und Tipps, wie du Inhalte selbst ändern kannst.    </p>
-  </div>
-</div>
-
-<!-- CTA-Karte (ohne Preise) -->
-<div class="max-w-6xl mx-auto px-6 md:px-0 mt-8">
-  <div class="relative bg-[#13132a] p-6 md:p-8 rounded-xl border border-gray-700 text-center shadow-[0px_0px_35px_rgba(147,112,219,0.35)]">
-    <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-1 rounded-t-xl"></div>
-    <p class="text-base md:text-lg text-gray-200">
-      Bereit für deine neue <strong>Website</strong> oder <strong>Landingpage</strong>?
-      Starte mit einem kostenlosen <a href="/kontakt" class="underline underline-offset-4 decoration-2">Beratungsgespräch</a> –
-      und erfahre, wie du mit professionellem <strong>Webdesign in München</strong>
-      mehr Kunden erreichst und online sichtbar wirst.
-    </p>
-  </div>
-</div>
+    <!-- CTA-Karte (ohne Preise) -->
+    <div class="max-w-6xl mx-auto px-6 md:px-0 mt-8">
+      <div
+        class="relative bg-[#13132a] p-6 md:p-8 rounded-xl border border-gray-700 text-center shadow-[0px_0px_35px_rgba(147,112,219,0.35)]"
+      >
+        <div
+          class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-1 rounded-t-xl"
+        >
+        </div>
+        <p class="text-base md:text-lg text-gray-200">
+          Bereit für deine neue <strong>Website</strong> oder <strong
+            >Landingpage</strong
+          >? Starte mit einem kostenlosen <a
+            href="/kontakt"
+            class="underline underline-offset-4 decoration-2"
+            >Beratungsgespräch</a
+          > – und erfahre, wie du mit professionellem <strong
+            >Webdesign in München</strong
+          >
+          mehr Kunden erreichst und online sichtbar wirst.
+        </p>
+      </div>
+    </div>
 
     <h2
       class="text-center text-3xl md:text-4xl font-extrabold mt-36 mb-2 mx-2"
       style="line-height: 1.3;"
     >
-Keine Zeit für Website-Projekte? Ich übernehme das für dich.   </h2>
+      Keine Zeit für Website-Projekte? Ich übernehme das für dich.
+    </h2>
 
     <div
       class="w-11/12 md:w-10/12 lg:w-8/12 mx-auto text-lg md:text-xl text-gray-300 leading-relaxed mt-8 flex flex-col-reverse md:flex-row items-center gap-16 md:gap-32"
@@ -329,178 +416,75 @@ Keine Zeit für Website-Projekte? Ich übernehme das für dich.   </h2>
       >
         <img
           src="/images/projects/pizzeria-mixto-verde.webp"
-  alt="Webdesign in der Nähe München – Projekt Pizzeria Mixto Verde München (WordPress Website)"
+          alt="Webdesign in der Nähe München – Projekt Pizzeria Mixto Verde München (WordPress Website)"
           class="w-80 md:w-auto md:max-h-[60vh] object-contain rounded-lg"
         />
       </div>
 
       <!-- Textabschnitt für Desktop rechts -->
       <div class="w-full md:w-5/12 text-center md:text-left">
-
-
-        
         <p class="text-xl md:text-2xl mb-6">
-      Ich setze dein Projekt vollständig um.  
-      Von <span class="text-gradient">Texten, Bildern, Videos</span> bis hin zur kompletten Umsetzung deiner Website.
-      Du kannst dich auf dein Geschäft konzentrieren, während ich alles digital perfekt aufstelle.
-    </p>
+          Ich setze dein Projekt vollständig um. Von <span class="text-gradient"
+            >Texten, Bildern, Videos</span
+          > bis hin zur kompletten Umsetzung deiner Website. Du kannst dich auf dein
+          Geschäft konzentrieren, während ich alles digital perfekt aufstelle.
+        </p>
         <p class="text-xl md:text-2xl mb-6">
-  Ich organisiere ein <strong>Fotoshooting direkt bei dir</strong> – individuell abgestimmt auf dein Unternehmen.  
-
-</p>
+          Ich organisiere ein <strong>Fotoshooting direkt bei dir</strong> – individuell
+          abgestimmt auf dein Unternehmen.
+        </p>
 
         <p class="text-xl md:text-2xl mb-6">
- 
-  Ob in <em>Giesing, Sendling, Haidhausen, Schwabing, Maxvorstadt oder im Glockenbachviertel</em> –  
-  wir schaffen authentische Fotos und Videos, die deine Marke perfekt zeigen und Vertrauen schaffen.
-</p>
-
-
+          Ob in <em
+            >Giesing, Sendling, Haidhausen, Schwabing, Maxvorstadt oder im
+            Glockenbachviertel</em
+          > – wir schaffen authentische Fotos und Videos, die deine Marke perfekt
+          zeigen und Vertrauen schaffen.
+        </p>
       </div>
     </div>
-<h2
-  class="text-center text-3xl md:text-4xl font-extrabold mt-12 md:mt-24 mb-12 mx-4"
-  style="line-height: 1.3;"
->
-  Top Webdesign aus München – persönlich & fair
-</h2>
+    <h2
+      class="text-center text-3xl md:text-4xl font-extrabold mt-12 md:mt-24 mb-12 mx-4"
+      style="line-height: 1.3;"
+    >
+      Top Webdesign aus München – persönlich & fair
+    </h2>
 
-<p class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-4">
-  Als <strong>freier Webdesigner aus München</strong> arbeite ich ohne großes Agenturteam – 
-  direkt, effizient und mit Fokus auf dein Projekt.  
-  So bekommst du <span class="text-gradient font-semibold">erstklassiges Webdesign</span> 
-  zu einem <strong>
-  <a href="/preise" class="underline underline-offset-4 hover:text-blue-100 transition">
-    fairen Preis
-  </a>
-</strong> – ohne Umwege, ohne unnötige Zusatzkosten.
-</p>
+    <p class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-4">
+      Als <strong>freier Webdesigner aus München</strong> arbeite ich ohne großes
+      Agenturteam – direkt, effizient und mit Fokus auf dein Projekt. So bekommst
+      du <span class="text-gradient font-semibold">erstklassiges Webdesign</span
+      >
+      zu einem <strong>
+        <a
+          href="/preise"
+          class="underline underline-offset-4 hover:text-blue-100 transition"
+        >
+          fairen Preis
+        </a>
+      </strong> – ohne Umwege, ohne unnötige Zusatzkosten.
+    </p>
 
-<p class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-4 mt-8">
-  Ob für Selbstständige, kleine Unternehmen oder lokale Betriebe in 
-  <em>Sendling, Schwabing, Maxvorstadt oder Giesing</em> –  
-  ich biete <strong>Webdesign in der Nähe</strong>, das persönlich, zuverlässig und klar strukturiert ist.
-</p>
+    <p
+      class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-4 mt-8"
+    >
+      Ob für Selbstständige, kleine Unternehmen oder lokale Betriebe in
+      <em>Sendling, Schwabing, Maxvorstadt oder Giesing</em> – ich biete <strong
+        >Webdesign in der Nähe</strong
+      >, das persönlich, zuverlässig und klar strukturiert ist.
+    </p>
 
     <IpadComponent
-  imgSrc="/images/projects/efimow-automobile-ipad.webp"
-  imgAlt="iPad-Ansicht: Website für Efimow Automobile – Webdesign München von maxWapp"
-/>
-
-<!-- FAQ Abschnitt mit Karten -->
-<h2 class="text-center text-4xl md:text-5xl font-extrabold md:mt-36 mt-24 mb-12">
-  Häufige Fragen zu Webdesign in der Nähe München
-</h2>
-
-<div class="grid grid-cols-1 md:grid-cols-2 gap-12 px-6 md:px-0 max-w-6xl mx-auto">
-
-  <!-- Karte 1 -->
-  <div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]">
-    <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
-    <h4 class="text-3xl font-bold text-white mb-6">
-      Was beinhaltet professionelles Webdesign in München?
-    </h4>
-    <p class="text-lg text-gray-300 leading-relaxed">
-      <strong>Professionelles Webdesign</strong> bedeutet: modernes Layout, klare Struktur, schnelle Ladezeit und mobile Optimierung.
-      Als <strong>Webdesigner in München</strong> achte ich auf <span class="underline-animation">Conversion, SEO und Design</span> – damit deine Website wirklich Ergebnisse bringt.
-    </p>
-  </div>
-
-  <!-- Karte 2 -->
-  <div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]">
-    <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
-    <h4 class="text-3xl font-bold text-white mb-6">
-      Wie lange dauert es, eine Website oder Landingpage zu erstellen?
-    </h4>
-    <p class="text-lg text-gray-300 leading-relaxed">
-      Eine <strong>Landingpage erstellen lassen</strong> dauert meist 5–7 Tage.  
-      Eine komplette <strong>Website erstellen lassen</strong> – etwa zwei bis drei Wochen.  
-      Ich arbeite effizient und lokal in München, damit dein Projekt schnell online geht.
-    </p>
-  </div>
-
-  <!-- Karte 3 -->
-  <div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]">
-    <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
-    <h4 class="text-3xl font-bold text-white mb-6">
-      Website mit WordPress erstellen – ist das sinnvoll?
-    </h4>
-    <p class="text-lg text-gray-300 leading-relaxed">
-      Ja! <strong>WordPress Websites</strong> sind flexibel, sicher und leicht zu pflegen.  
-      Ich bin auf <strong>WordPress Webdesign in München</strong> spezialisiert – vom <strong>One Pager</strong> bis zur umfangreichen Firmenwebsite mit SEO-Optimierung und Schulung zur eigenständigen Pflege.
-    </p>
-  </div>
-
-  <!-- Karte 4 -->
-  <div class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]">
-    <div class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"></div>
-    <h4 class="text-3xl font-bold text-white mb-6">
-      Warum einen lokalen Webentwickler aus München wählen?
-    </h4>
-    <p class="text-lg text-gray-300 leading-relaxed">
-      Ein <strong>Webentwickler in der Nähe</strong> versteht deine Zielgruppe und den lokalen Markt.  
-      Ich biete persönliche Beratung, kurze Wege und <span class="text-gradient font-semibold">Webentwicklung direkt aus München</span> – perfekt für Selbstständige und kleine Unternehmen in deiner Umgebung.
-    </p>
-  </div>
-</div>
-
-<!-- Standort / Karte Abschnitt -->
-<h2
-  class="text-center text-4xl md:text-5xl font-extrabold mt-36 mb-12 mx-2"
-  style="line-height: 1.3;"
->
-  maxWapp in München – lokal & erreichbar
-</h2>
-
-<div
-  class="w-11/12 md:w-10/12 lg:w-8/12 mx-auto flex flex-col md:flex-row items-center mb-24 gap-12 md:gap-24"
->
-  <!-- Kartenbildabschnitt (links auf Desktop) -->
-  <div
-    class="w-full md:w-5/12 flex justify-center md:justify-center rounded shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)]"
-  >
-    <img
-          src="/images/maxwapp-map-muenchen.webp"
-alt="maxWapp Standort in München Obersendling – Karte mit regionalem Fokus auf Webdesign in der Nähe"
-          class="w-80 md:w-auto md:max-h-[60vh] object-contain rounded-lg"
+      imgSrc="/images/projects/efimow-automobile-ipad.webp"
+      imgAlt="iPad-Ansicht: Website für Efimow Automobile – Webdesign München von maxWapp"
     />
-  </div>
-
-  <!-- Textabschnitt (rechts auf Desktop) -->
-  <div class="w-full md:w-5/12 text-center md:text-left">
-    <p class="text-xl md:text-2xl mb-6">
-      Ich arbeite von <strong>Obersendling</strong> aus – gut erreichbar aus allen Stadtteilen
-      Münchens.  
-      Hier entstehen <span class="text-gradient">Websites, die verkaufen</span> – lokal gedacht, professionell umgesetzt.
-    </p>
-
-    <p class="text-xl md:text-2xl mb-6 text-center md:text-left">
-<strong>Constanze-Hallgarten-Str. 40</strong>
-  <br>
-<strong>81379 München</strong>
-</p>
-<!-- CTA Button -->
-<div class="flex justify-center md:justify-start mt-8 md:mt-16">
-  <a
-    href="https://www.google.com/maps/place/maxWapp+%7C+Juri+Lorenz/@48.0961762,11.505842,17z/data=!3m1!4b1!4m6!3m5!1s0xf3b4b557fd55469:0x893accd647bdc468!8m2!3d48.0961726!4d11.5084223!16s%2Fg%2F11wr1981wf?entry=ttu&g_ep=EgoyMDI1MTAyNy4wIKXMDSoASAFQAw%3D%3D"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="relative inline-block py-4 px-10 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-white text-[#090a1a] shadow-lg transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_rgba(147,112,219,0.8),_0_0_35px_rgba(3,169,244,0.6)] hover:border-[#6d87d1]"
-  >
-    Auf Google Maps anzeigen
-  </a>
-</div>
-  </div>
-</div>
-
-
 
     <!-- Warum mit mir arbeiten Abschnitt -->
     <h2
-      class="text-center text-4xl md:text-5xl font-extrabold mt-12 mb-12  mx-2"
+      class="text-center text-4xl md:text-5xl font-extrabold mt-24 mb-12 mx-2"
       style="line-height: 1.3;"
     >
-        Webdesign in München – nah & verlässlich
+      Webdesign in München – nah & verlässlich
     </h2>
 
     <div
@@ -512,221 +496,362 @@ alt="maxWapp Standort in München Obersendling – Karte mit regionalem Fokus au
       >
         <img
           src="/images/projects/akam-reinigung.webp"
-alt="Webdesign-Projekt Akam Reinigung München – moderne WordPress-Website von maxWapp"
+          alt="Webdesign-Projekt Akam Reinigung München – moderne WordPress-Website von maxWapp"
           class="w-80 md:w-auto md:max-h-[60vh] object-contain rounded-lg"
         />
       </div>
 
       <!-- Textabschnitt für Desktop rechts -->
       <div class="w-full md:w-5/12 text-center md:text-left">
-
         <p class="text-xl md:text-2xl mt-8">
-          <strong>Mein Fokus:</strong>. <span class="underline-animation">Conversion</span>, SEO und Performance,
-          damit du in München sichtbar wirst und <strong>mehr Kunden gewinnst</strong>.
+          <strong>Mein Fokus:</strong>. <span class="underline-animation"
+            >Conversion</span
+          >, SEO und Performance, damit du in München sichtbar wirst und <strong
+            >mehr Kunden gewinnst</strong
+          >.
         </p>
         <p class="text-xl md:text-2xl mt-8">
-          Klare Struktur, überzeugende Texte und schnelle Ladezeiten –
-          so werden aus Besuchern <strong>echte Anfragen</strong>.
+          Klare Struktur, überzeugende Texte und schnelle Ladezeiten – so werden
+          aus Besuchern <strong>echte Anfragen</strong>.
         </p>
 
-  <p class="text-xl md:text-2xl mt-8">
-    Überzeuge dich selbst von meinem
-    <a
-      href="https://www.google.com/maps/place/maxWapp+%7C+Juri+Lorenz/@48.0961726,11.5084223,17z/data=!3m1!5s0x479dd9218f79d1d3:0x204263009f086393!4m8!3m7!1s0xf3b4b557fd55469:0x893accd647bdc468!8m2!3d48.0961726!4d11.5084223!9m1!1b1!16s%2Fg%2F11wr1981wf?entry=ttu&g_ep=EgoyMDI1MDUwMy4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="inline-flex items-center font-semibold text-orange-300 hover:text-orange-200 transition"
-    >
-      ★ ★ ★ ★ ★ Top-Rating auf Google
-    </a>
-  </p>
-
-  <!-- Call to Action -->
-  <p class="text-xl md:text-2xl mt-8">
-    <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500">
-      Bereit, deine Website oder Landingpage erstellen zu lassen?
-    </span>
-  </p>
+        <p class="text-xl md:text-2xl mt-8">
+          Überzeuge dich selbst von meinem
+          <a
+            href="https://www.google.com/maps/place/maxWapp+%7C+Juri+Lorenz/@48.0961726,11.5084223,17z/data=!3m1!5s0x479dd9218f79d1d3:0x204263009f086393!4m8!3m7!1s0xf3b4b557fd55469:0x893accd647bdc468!8m2!3d48.0961726!4d11.5084223!9m1!1b1!16s%2Fg%2F11wr1981wf?entry=ttu&g_ep=EgoyMDI1MDUwMy4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center font-semibold text-orange-300 hover:text-orange-200 transition"
+          >
+            ★ ★ ★ ★ ★ Top-Rating auf Google
+          </a>
+        </p>
 
         <!-- Buttons at the bottom-right -->
         <div
           class="flex flex-col md:flex-row gap-6 mt-8 md:mt-16 justify-center md:justify-start items-center md:items-start w-full md:w-auto"
         >
-
-
           <!-- Primary Button -->
           <a
-            href="/kontakt"
+            href="https://www.google.com/maps/place/maxWapp+%7C+Juri+Lorenz/@48.0961726,11.5084223,17z/data=!3m1!5s0x479dd9218f79d1d3:0x204263009f086393!4m8!3m7!1s0xf3b4b557fd55469:0x893accd647bdc468!8m2!3d48.0961726!4d11.5084223!9m1!1b1!16s%2Fg%2F11wr1981wf?entry=ttu&g_ep=EgoyMDI1MDUwMy4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
+            target="_blank"
+            rel="noopener noreferrer"
             class="relative inline-block py-4 px-10 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-white text-[#090a1a] shadow-lg transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_rgba(147,112,219,0.8),_0_0_35px_rgba(3,169,244,0.6)] hover:border-[#6d87d1]"
           >
-            Let's talk
+            Bewertungen ansehen
           </a>
         </div>
       </div>
-
-      <style>
-        .text-gradient {
-          background: linear-gradient(to right, #9c27b0, #03a9f4);
-          -webkit-background-clip: text;
-          color: transparent;
-        }
-
-        .drop-shadow-lg {
-          filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
-        }
-
-        .border-gradient-to-r {
-          border-image-slice: 1;
-          border-image-source: linear-gradient(to right, #9c27b0, #03a9f4);
-        }
-
-        /* Container for the entire image, gradient, and shadow */
-        .profile-container {
-          transform: translateX(-150%); /* Start off-screen to the left */
-          opacity: 0; /* Initially hidden */
-          transition:
-            transform 1.5s ease-out,
-            opacity 1.5s ease-out;
-        }
-
-        /* Trigger the animation when the page loads */
-        .profile-container {
-          animation: flyInFromLeft 1.5s forwards;
-        }
-
-        /* Keyframes for the fly-in effect */
-        @keyframes flyInFromLeft {
-          0% {
-            transform: translateX(-150%);
-            opacity: 0;
-          }
-          100% {
-            transform: translateX(0);
-            opacity: 1;
-          }
-        }
-
-        /* Container for the entire image and shadow */
-        .phone-container {
-          transform: translateX(-150%); /* Start off-screen to the left */
-          opacity: 0; /* Initially hidden */
-          transition:
-            transform 1.5s ease-out,
-            opacity 1.5s ease-out; /* Remove delay for mobile */
-        }
-
-        /* Fly in effect */
-        .fly-in {
-          transform: translateX(0);
-          opacity: 1;
-        }
-
-        /* Keyframes for desktop (initial load) */
-        @media (min-width: 768px) {
-          .phone-container {
-            animation: flyInFromLeftPhone 1.5s forwards 0.5s; /* Keep delay on desktop */
-          }
-
-          .underline-animation {
-            display: inline-block;
-            background-image: linear-gradient(120deg, #03a9f4, #9c27b0);
-            background-repeat: no-repeat;
-            background-size: 100% 3px;
-            background-position: 0 88%;
-            transition: background-size 0.3s ease-in-out;
-          }
-
-          .underline-animation:hover {
-            background-size: 100% 100%;
-          }
-        }
-
-        /* Keyframes for mobile (on scroll) */
-        @keyframes flyInFromLeftPhone {
-          0% {
-            transform: translateX(-150%);
-            opacity: 0;
-          }
-          100% {
-            transform: translateX(0);
-            opacity: 1;
-          }
-        }
-
-        /* Initial state for the second phone container */
-        .phone-container-second {
-          transform: translateX(-150%); /* Positioned off-screen to the left */
-          opacity: 0; /* Initially hidden */
-          transition:
-            transform 1.5s ease-out,
-            opacity 1.5s ease-out;
-        }
-
-        /* Fly-in effect when in view */
-        .fly-in-second {
-          transform: translateX(0); /* Return to original position */
-          opacity: 1; /* Fully visible */
-        }
-      </style>
-
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const phoneImage = document.querySelector(".phone-container")
-
-          // Detect if the element is in view for mobile
-          function isInViewPort(element) {
-            const rect = element.getBoundingClientRect()
-            return (
-              rect.top <=
-                (window.innerHeight || document.documentElement.clientHeight) &&
-              rect.bottom >= 0
-            )
-          }
-
-          // Add event listener for scroll to trigger the animation
-          window.addEventListener("scroll", function () {
-            if (window.innerWidth < 768) {
-              // Only apply for mobile view
-              if (isInViewPort(phoneImage)) {
-                phoneImage.classList.add("fly-in")
-              }
-            }
-          })
-        })
-
-        document.addEventListener("DOMContentLoaded", function () {
-          const secondPhoneImage = document.querySelector(
-            ".phone-container-second"
-          )
-          const lastPhoneImage = document.querySelector(".last-image")
-
-          // Function to check if the element is in the viewport
-          function isInViewPort(element) {
-            const rect = element.getBoundingClientRect()
-            return (
-              rect.top <=
-                (window.innerHeight || document.documentElement.clientHeight) &&
-              rect.bottom >= 0
-            )
-          }
-
-          // Function to add the fly-in class when in view
-          function handleScroll() {
-            if (isInViewPort(secondPhoneImage)) {
-              secondPhoneImage.classList.add("fly-in-second")
-            }
-            if (isInViewPort(lastPhoneImage)) {
-              lastPhoneImage.classList.add("fly-in-second")
-            }
-          }
-
-          // Add scroll event listener
-          window.addEventListener("scroll", handleScroll)
-
-          // Run on page load in case the element is already in view
-          handleScroll()
-        })
-      </script>
     </div>
+
+    <!-- FAQ Abschnitt mit Karten -->
+    <h2 class="text-center text-4xl md:text-5xl font-extrabold mt-12 mb-12">
+      Häufige Fragen zu Webdesign in der Nähe München
+    </h2>
+
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 gap-12 px-6 md:px-0 max-w-6xl mx-auto"
+    >
+      <!-- Karte 1 -->
+      <div
+        class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
+      >
+        <div
+          class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
+        >
+        </div>
+        <h4 class="text-3xl font-bold text-white mb-6">
+          Was beinhaltet professionelles Webdesign in München?
+        </h4>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          <strong>Professionelles Webdesign</strong> bedeutet: modernes Layout, klare
+          Struktur, schnelle Ladezeit und mobile Optimierung. Als <strong
+            >Webdesigner in München</strong
+          > achte ich auf <span class="underline-animation"
+            >Conversion, SEO und Design</span
+          > – damit deine Website wirklich Ergebnisse bringt.
+        </p>
+      </div>
+
+      <!-- Karte 2 -->
+      <div
+        class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
+      >
+        <div
+          class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
+        >
+        </div>
+        <h4 class="text-3xl font-bold text-white mb-6">
+          Wie lange dauert es, eine Website oder Landingpage zu erstellen?
+        </h4>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          Eine <strong>Landingpage erstellen lassen</strong> dauert meist 5–7 Tage.
+          Eine komplette <strong>Website erstellen lassen</strong> – etwa zwei bis
+          drei Wochen. Ich arbeite effizient und lokal in München, damit dein Projekt
+          schnell online geht.
+        </p>
+      </div>
+
+      <!-- Karte 3 -->
+      <div
+        class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
+      >
+        <div
+          class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
+        >
+        </div>
+        <h4 class="text-3xl font-bold text-white mb-6">
+          Website mit WordPress erstellen – ist das sinnvoll?
+        </h4>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          Ja! <strong>WordPress Websites</strong> sind flexibel, sicher und leicht
+          zu pflegen. Ich bin auf <strong>WordPress Webdesign in München</strong
+          > spezialisiert – vom <strong>One Pager</strong> bis zur umfangreichen
+          Firmenwebsite mit SEO-Optimierung und Schulung zur eigenständigen Pflege.
+        </p>
+      </div>
+
+      <!-- Karte 4 -->
+      <div
+        class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
+      >
+        <div
+          class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
+        >
+        </div>
+        <h4 class="text-3xl font-bold text-white mb-6">
+          Warum einen lokalen Webentwickler aus München wählen?
+        </h4>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          Ein <strong>Webentwickler in der Nähe</strong> versteht deine Zielgruppe
+          und den lokalen Markt. Ich biete persönliche Beratung, kurze Wege und <span
+            class="text-gradient font-semibold"
+            >Webentwicklung direkt aus München</span
+          > – perfekt für Selbstständige und kleine Unternehmen in deiner Umgebung.
+        </p>
+      </div>
+    </div>
+
+    <!-- Standort / Karte Abschnitt -->
+    <h2
+      class="text-center text-4xl md:text-5xl font-extrabold mt-36 mb-12 mx-2"
+      style="line-height: 1.3;"
+    >
+      maxWapp in München – lokal & erreichbar
+    </h2>
+
+    <div
+      class="w-11/12 md:w-10/12 lg:w-8/12 mx-auto flex flex-col md:flex-row items-center mb-24 gap-12 md:gap-24"
+    >
+      <!-- Kartenbildabschnitt (links auf Desktop) -->
+      <div
+        class="w-full md:w-5/12 flex justify-center md:justify-center rounded shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)]"
+      >
+        <img
+          src="/images/maxwapp-map-muenchen.webp"
+          alt="maxWapp Standort in München Obersendling – Karte mit regionalem Fokus auf Webdesign in der Nähe"
+          class="w-80 md:w-auto md:max-h-[60vh] object-contain rounded-lg"
+        />
+      </div>
+
+      <!-- Textabschnitt (rechts auf Desktop) -->
+      <div class="w-full md:w-5/12 text-center md:text-left">
+        <p class="text-xl md:text-2xl mb-6">
+          Ich arbeite von <strong>Obersendling</strong> aus – gut erreichbar aus
+          allen Stadtteilen Münchens. Hier entstehen <span class="text-gradient"
+            >Websites, die verkaufen</span
+          > – lokal gedacht, professionell umgesetzt.
+        </p>
+
+        <p class="text-xl md:text-2xl mb-6 text-center md:text-left">
+          <strong>Constanze-Hallgarten-Str. 40</strong>
+          <br />
+          <strong>81379 München</strong>
+        </p>
+        <!-- CTA Button -->
+        <div class="flex justify-center md:justify-start mt-8 md:mt-16">
+          <a
+            href="https://www.google.com/maps/place/maxWapp+%7C+Juri+Lorenz/@48.0961762,11.505842,17z/data=!3m1!4b1!4m6!3m5!1s0xf3b4b557fd55469:0x893accd647bdc468!8m2!3d48.0961726!4d11.5084223!16s%2Fg%2F11wr1981wf?entry=ttu&g_ep=EgoyMDI1MTAyNy4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="relative inline-block py-4 px-10 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-white text-[#090a1a] shadow-lg transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_rgba(147,112,219,0.8),_0_0_35px_rgba(3,169,244,0.6)] hover:border-[#6d87d1]"
+          >
+            Auf Google Maps anzeigen
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <FinalCTASection
+      title="Lass uns kurz über dein Projekt sprechen."
+      description={`
+    <p>In einem kurzen, kostenlosen Gespräch klären wir, was du brauchst: Website, Landingpage, Redesign oder Online-Shop – und welches Ziel dahintersteht (mehr Anfragen, bessere Sichtbarkeit, mehr Verkäufe).</p>
+    <p>Du bekommst eine klare Empfehlung, einen realistischen nächsten Schritt und auf Wunsch ein transparentes Angebot – persönlich, schnell und ohne Agentur-Overhead.</p>
+  `}
+      ctaLabel="Kostenloses Erstgespräch"
+      ctaHref="/kontakt"
+    />
   </div>
+
+  <style>
+    .text-gradient {
+      background: linear-gradient(to right, #9c27b0, #03a9f4);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .drop-shadow-lg {
+      filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
+    }
+
+    .border-gradient-to-r {
+      border-image-slice: 1;
+      border-image-source: linear-gradient(to right, #9c27b0, #03a9f4);
+    }
+
+    /* Container for the entire image, gradient, and shadow */
+    .profile-container {
+      transform: translateX(-150%); /* Start off-screen to the left */
+      opacity: 0; /* Initially hidden */
+      transition:
+        transform 1.5s ease-out,
+        opacity 1.5s ease-out;
+    }
+
+    /* Trigger the animation when the page loads */
+    .profile-container {
+      animation: flyInFromLeft 1.5s forwards;
+    }
+
+    /* Keyframes for the fly-in effect */
+    @keyframes flyInFromLeft {
+      0% {
+        transform: translateX(-150%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    /* Container for the entire image and shadow */
+    .phone-container {
+      transform: translateX(-150%); /* Start off-screen to the left */
+      opacity: 0; /* Initially hidden */
+      transition:
+        transform 1.5s ease-out,
+        opacity 1.5s ease-out; /* Remove delay for mobile */
+    }
+
+    /* Fly in effect */
+    .fly-in {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    /* Keyframes for desktop (initial load) */
+    @media (min-width: 768px) {
+      .phone-container {
+        animation: flyInFromLeftPhone 1.5s forwards 0.5s; /* Keep delay on desktop */
+      }
+
+      .underline-animation {
+        display: inline-block;
+        background-image: linear-gradient(120deg, #03a9f4, #9c27b0);
+        background-repeat: no-repeat;
+        background-size: 100% 3px;
+        background-position: 0 88%;
+        transition: background-size 0.3s ease-in-out;
+      }
+
+      .underline-animation:hover {
+        background-size: 100% 100%;
+      }
+    }
+
+    /* Keyframes for mobile (on scroll) */
+    @keyframes flyInFromLeftPhone {
+      0% {
+        transform: translateX(-150%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    /* Initial state for the second phone container */
+    .phone-container-second {
+      transform: translateX(-150%); /* Positioned off-screen to the left */
+      opacity: 0; /* Initially hidden */
+      transition:
+        transform 1.5s ease-out,
+        opacity 1.5s ease-out;
+    }
+
+    /* Fly-in effect when in view */
+    .fly-in-second {
+      transform: translateX(0); /* Return to original position */
+      opacity: 1; /* Fully visible */
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const phoneImage = document.querySelector(".phone-container")
+
+      // Detect if the element is in view for mobile
+      function isInViewPort(element) {
+        const rect = element.getBoundingClientRect()
+        return (
+          rect.top <=
+            (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.bottom >= 0
+        )
+      }
+
+      // Add event listener for scroll to trigger the animation
+      window.addEventListener("scroll", function () {
+        if (window.innerWidth < 768) {
+          // Only apply for mobile view
+          if (isInViewPort(phoneImage)) {
+            phoneImage.classList.add("fly-in")
+          }
+        }
+      })
+    })
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const secondPhoneImage = document.querySelector(".phone-container-second")
+      const lastPhoneImage = document.querySelector(".last-image")
+
+      // Function to check if the element is in the viewport
+      function isInViewPort(element) {
+        const rect = element.getBoundingClientRect()
+        return (
+          rect.top <=
+            (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.bottom >= 0
+        )
+      }
+
+      // Function to add the fly-in class when in view
+      function handleScroll() {
+        if (isInViewPort(secondPhoneImage)) {
+          secondPhoneImage.classList.add("fly-in-second")
+        }
+        if (isInViewPort(lastPhoneImage)) {
+          lastPhoneImage.classList.add("fly-in-second")
+        }
+      }
+
+      // Add scroll event listener
+      window.addEventListener("scroll", handleScroll)
+
+      // Run on page load in case the element is already in view
+      handleScroll()
+    })
+  </script>
 </MainLayout>

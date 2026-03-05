@@ -1,0 +1,420 @@
+/* src/styles/global.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -------- Design Tokens -------- */
+:root {
+  --mw-bg-top: #090a1a;
+  --mw-bg-bottom: #290065;
+  --mw-card: rgba(255, 255, 255, 0.03);
+  --mw-border: rgba(255, 255, 255, 0.1);
+  --mw-border-strong: rgba(147, 112, 219, 0.55);
+  --mw-grad-from: 168 85 247;
+  --mw-grad-to: 99 102 241;
+  --mw-card-glow: 0 0 40px rgba(147, 112, 219, 0.18);
+}
+
+/* ================= HERO SYSTEM ================= */
+
+.mw-hero-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 items-center md:mt-24 gap-24;
+}
+
+.mw-hero-image-wrapper {
+  @apply flex justify-center md:justify-end;
+}
+
+.mw-hero-image {
+  @apply w-full max-w-md md:max-w-lg object-contain;
+  mask-image: linear-gradient(to bottom, black 70%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent);
+}
+
+.mw-hero-content {
+  @apply text-left;
+}
+
+.mw-primary-btn {
+  @apply inline-block px-10 py-4 rounded-full font-bold text-white text-lg transition-all duration-300;
+  background: linear-gradient(
+    to right,
+    rgb(var(--mw-grad-from)),
+    rgb(var(--mw-grad-to))
+  );
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.25);
+}
+
+.mw-primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 40px rgba(99, 102, 241, 0.35);
+}
+
+.mw-hero-title {
+  @apply text-5xl md:text-7xl font-extrabold leading-[1.15] md:leading-[1.1] tracking-tight text-gray-100;
+}
+
+.mw-hero-subtitle {
+  @apply block text-2xl md:text-4xl font-extrabold text-gray-200/90;
+}
+
+.mw-bullet-list {
+  @apply space-y-3;
+}
+
+.mw-bullet-item {
+  @apply flex items-start gap-3 leading-relaxed text-gray-100;
+}
+
+.mw-bullet-icon {
+  @apply text-white mr-4 mt-1;
+}
+
+/* Ensure the mobile hero image appears AFTER the CTA (normal document flow) */
+.mw-hero-image--mobile {
+  @apply w-full h-auto block;
+  position: relative;
+  inset: auto;
+  object-fit: cover;
+}
+
+/* -------- Reusable UI patterns -------- */
+@layer components {
+  /* shared card base + hover (DRY) */
+  .mw-card-base {
+    @apply relative rounded-2xl border backdrop-blur-sm overflow-hidden;
+    background: var(--mw-card);
+    border-color: var(--mw-border);
+  }
+
+  .mw-card-hoverable {
+    @apply transition-all duration-300;
+  }
+
+  .mw-card-hoverable:hover {
+    border-color: var(--mw-border-strong);
+    box-shadow: var(--mw-card-glow);
+    transform: translateY(-2px);
+  }
+
+  /* brand gradient (DRY) */
+  .mw-gradient-bar {
+    height: 3px;
+    background: linear-gradient(
+      to right,
+      rgb(var(--mw-grad-from)),
+      rgb(var(--mw-grad-to))
+    );
+    opacity: 0.9;
+  }
+
+  /* Bullet cards (used across sections) */
+  .bullet-card {
+    @apply mw-card-base mw-card-hoverable flex items-center gap-4 px-6 py-5;
+  }
+
+  /* gradient dot (purple → indigo) */
+  .bullet-dot {
+    @apply inline-block w-2.5 h-2.5 rounded-full flex-shrink-0;
+    background: linear-gradient(
+      to right,
+      rgb(var(--mw-grad-from)),
+      rgb(var(--mw-grad-to))
+    );
+  }
+
+  /* generic glass card (for FeatureCard, StepCard, etc.) */
+  .mw-glass-card {
+    @apply mw-card-base mw-card-hoverable;
+  }
+
+  /* thin gradient top line */
+  .mw-topbar-gradient {
+    @apply absolute top-0 left-0 w-full;
+    height: 3px;
+    background: linear-gradient(
+      to right,
+      rgb(var(--mw-grad-from)),
+      rgb(var(--mw-grad-to))
+    );
+    opacity: 0.9;
+  }
+
+  /* Purple drop shadow (unified) */
+  .shadow-purple-drop {
+    filter: drop-shadow(-35px 0px 35px rgba(75, 0, 130, 0.55));
+  }
+
+  /* Rounded media wrapper */
+  .media-rounded {
+    @apply rounded-[20px] overflow-hidden;
+  }
+
+  /* Standard section container */
+  .section-container {
+    @apply w-full max-w-6xl mx-auto px-6 md:px-0;
+  }
+
+  /* Standard vertical padding */
+  .section-pad {
+    @apply py-24 md:py-28;
+  }
+
+  .section-pad-compact {
+    @apply py-16 md:py-20;
+  }
+
+  /* Typography helpers (DRY) */
+  .mw-eyebrow {
+    @apply text-sm md:text-base tracking-wider uppercase text-gray-300/80;
+  }
+
+  .mw-h2 {
+    @apply text-4xl md:text-6xl font-extrabold leading-[1.22] md:leading-[1.28] text-gray-100 tracking-tight;
+  }
+
+  .mw-h2-compact {
+    @apply text-3xl md:text-5xl font-extrabold leading-[1.2] md:leading-[1.25] text-gray-100;
+  }
+
+  .mw-lead {
+    @apply text-xl md:text-2xl text-gray-300 leading-relaxed;
+  }
+
+  .mw-body {
+    @apply text-lg md:text-xl text-gray-200 leading-relaxed;
+  }
+
+  /* Big gradient highlight (e.g. 90%) */
+  .mw-highlight {
+    @apply inline-block text-7xl md:text-8xl font-bold bg-clip-text text-transparent leading-none;
+    background: linear-gradient(
+      to right,
+      rgb(var(--mw-grad-from)),
+      rgb(var(--mw-grad-to))
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Grid helper for split sections */
+  .mw-split-grid {
+    @apply grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-14 items-center;
+  }
+
+  /* MotionSection image base style */
+  .mw-speed-media {
+    @apply w-72 md:w-[360px] lg:w-[420px] object-contain;
+    will-change: transform;
+    transition: none;
+  }
+
+  /* ---- Solution / Steps reusable styles ---- */
+  .mw-noise {
+    background-image: repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.4) 0px,
+      rgba(255, 255, 255, 0.4) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+  }
+
+  .mw-step-card {
+    @apply relative rounded-[18px] p-[22px] border backdrop-blur-[10px] overflow-hidden;
+    background: var(--mw-card);
+    border-color: rgba(255, 255, 255, 0.08);
+    transition:
+      transform 0.25s ease,
+      border-color 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+
+  .mw-step-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--mw-border-strong);
+    box-shadow: 0 0 40px rgba(147, 112, 219, 0.18);
+  }
+
+  .mw-step-topbar {
+    @apply absolute top-0 left-0 w-full h-[3px];
+    background: linear-gradient(
+      to right,
+      rgb(var(--mw-grad-from)),
+      rgb(var(--mw-grad-to))
+    );
+    opacity: 0.9;
+  }
+
+  .mw-step-badge {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    font-weight: 800;
+    color: white;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 30px rgba(99, 102, 241, 0.12);
+    flex-shrink: 0;
+  }
+
+  .mw-step-glow {
+    position: absolute;
+    inset: -40% -40% auto -40%;
+    height: 260px;
+    background: radial-gradient(
+      circle at 30% 30%,
+      rgba(168, 85, 247, 0.18),
+      transparent 55%
+    );
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    pointer-events: none;
+  }
+
+  .mw-step-card:hover .mw-step-glow {
+    opacity: 1;
+  }
+
+  /* underline-only helper */
+  .mw-underline-word {
+    position: relative;
+    display: inline-block;
+    padding: 0 0.08em;
+    color: inherit;
+  }
+
+  .mw-underline-word::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0.1em;
+    height: 0.18em;
+    border-radius: 9999px;
+    background: linear-gradient(
+      to right,
+      rgba(168, 85, 247, 0.9),
+      rgba(99, 102, 241, 0.9)
+    );
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: mwUnderlineBuild 900ms ease-out 180ms forwards;
+    opacity: 0.95;
+    filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.25));
+  }
+
+  @keyframes mwUnderlineBuild {
+    from {
+      transform: scaleX(0);
+      opacity: 0.35;
+    }
+    to {
+      transform: scaleX(1);
+      opacity: 0.95;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .mw-underline-word::before {
+      animation: none;
+      transform: none;
+    }
+  }
+
+  /* ---- Full-width image banner / pricing section (overlay + glass panel) ---- */
+  .mw-cover-section {
+    @apply relative w-full overflow-hidden;
+  }
+
+  /* Full-bleed image layer */
+  .mw-cover-image {
+    @apply absolute inset-0 w-full h-full object-cover;
+    transform: scale(1.02);
+  }
+
+  /* Darken + brand gradient overlay (image readability) */
+  .mw-cover-overlay {
+    @apply absolute inset-0 pointer-events-none;
+    /* 1) soft darken  2) brand tint  3) subtle vignette */
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.55) 0%,
+        rgba(0, 0, 0, 0.78) 100%
+      ),
+      radial-gradient(
+        circle at 75% 35%,
+        rgba(168, 85, 247, 0.22),
+        transparent 60%
+      ),
+      radial-gradient(
+        circle at 20% 80%,
+        rgba(99, 102, 241, 0.18),
+        transparent 55%
+      );
+  }
+
+  /* Optional subtle texture on top */
+  .mw-cover-noise {
+    @apply absolute inset-0 pointer-events-none opacity-[0.05] mix-blend-overlay;
+  }
+
+  /* Content wrapper: keeps text readable and aligned */
+  .mw-cover-inner {
+    @apply relative section-container py-20 md:py-28;
+  }
+
+  /* Glass panel for text (uses your global card tokens) */
+  .mw-cover-panel {
+    @apply relative max-w-4xl mx-auto text-center md:text-left;
+  }
+
+  .mw-cover-card {
+    @apply mw-glass-card p-7 md:p-10;
+  }
+
+  /* Top gradient line on the card (DRY) */
+  .mw-cover-card::before {
+    content: "";
+    @apply mw-topbar-gradient;
+  }
+
+  /* Strong price/value pill */
+  .mw-price-pill {
+    @apply inline-flex items-center gap-2 rounded-full px-4 py-2 border text-sm md:text-base font-semibold;
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.14);
+    box-shadow: 0 0 28px rgba(99, 102, 241, 0.12);
+  }
+
+  .mw-gradient-text {
+    @apply bg-clip-text text-transparent;
+    background: linear-gradient(
+      to right,
+      rgb(var(--mw-grad-from)),
+      rgb(var(--mw-grad-to))
+    );
+    -webkit-background-clip: text;
+  }
+
+  /* Slightly tighter headline for image banners */
+  .mw-cover-h2 {
+    @apply text-4xl md:text-6xl font-extrabold tracking-tight text-gray-100;
+    line-height: 1.12;
+  }
+
+  .mw-cover-actions {
+    @apply mt-10 flex flex-col sm:flex-row gap-4 justify-center md:justify-start;
+  }
+
+  /* Optional: keep section looking premium on huge screens */
+  @media (min-width: 1280px) {
+    .mw-cover-inner {
+      @apply py-28;
+    }
+  }
+}

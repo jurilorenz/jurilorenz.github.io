@@ -15,6 +15,15 @@ RewriteRule ^projects/([1-9]|1[0-4])/?$ https://maxwapp.de/projekte [R=301,L]
 RewriteCond %{REQUEST_URI} ^/projects/(.*)$
 RewriteRule ^projects/(.*)$ https://maxwapp.de/projekte/$1 [R=301,L]
 
+# --- Services (alt -> neu) ---
+RedirectMatch 301 ^/services/websites/?$ https://maxwapp.de/wordpress-website-erstellen-lassen
+RedirectMatch 301 ^/services/online-shop/?$ https://maxwapp.de/online-shop-erstellen-lassen
+RedirectMatch 301 ^/services/website-optimierung/?$ https://maxwapp.de/website-optimieren-muenchen
+RedirectMatch 301 ^/services/branding-und-printdesign/?$ https://maxwapp.de/printdesign-muenchen
+RedirectMatch 301 ^/services/google-bewertungen-verbessern/?$ https://maxwapp.de/google-bewertungen-verbessern
+RedirectMatch 301 ^/services/agenturen/?$ https://maxwapp.de/wordpress-freelancer
+RedirectMatch 301 ^/services/ki-und-tools/?$ https://maxwapp.de/ki-tools
+
 # Weitere alte URLs (mit und ohne Slash am Ende)
 RedirectMatch 301 ^/price/?$ https://maxwapp.de/preise
 RedirectMatch 301 ^/contact/?$ https://maxwapp.de/kontakt

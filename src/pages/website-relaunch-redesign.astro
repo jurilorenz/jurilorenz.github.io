@@ -1,0 +1,373 @@
+---
+import MainLayout from "../layouts/MainLayout.astro"
+import PrimaryHeroSection from "../components/PrimaryHeroSection.astro"
+import BulletSplitSection from "../components/BulletSplitSection.astro"
+import SolutionSection from "../components/SolutionSection.astro"
+import FeatureGridSection from "../components/FeatureGridSection.astro"
+import BarSection from "../components/BarSection.astro"
+import MotionSection from "../components/MotionSection.astro"
+import LongformSection from "../components/LongformSection.astro"
+import ImageBanner from "../components/ImageBanner.astro"
+import ComparisonSection from "../components/ComparisonSection.astro"
+import FinalCTASection from "../components/FinalCTASection.astro"
+
+const features = [
+  {
+    title: "Klarer Fokus",
+    description:
+      "Dein Angebot ist in Sekunden verständlich – ohne Ablenkung und ohne Scroll-Marathon.",
+  },
+  {
+    title: "Conversion-Flow",
+    description:
+      "Struktur, CTAs und Trust-Elemente sind so platziert, dass mehr Besucher zu Anfragen werden.",
+  },
+  {
+    title: "Performance & Technik",
+    description:
+      "Ich optimiere Ladezeit, Assets und Setup – damit dein Redesign schnell lädt und stabil läuft.",
+  },
+  {
+    title: "SEO-Setup",
+    description:
+      "Titel/Meta, saubere H-Struktur, interne Links & Snippets – damit Google deinen Relaunch richtig einordnet.",
+  },
+]
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Website Relaunch & Redesign",
+  description:
+    "Strategischer Website Relaunch & Redesign mit klarer Struktur und moderner Technik – für mehr Anfragen.",
+  provider: { "@type": "Brand", name: "maxWapp" },
+  areaServed: "DE",
+  offers: {
+    "@type": "Offer",
+    priceCurrency: "EUR",
+    price: "900",
+    availability: "https://schema.org/InStock",
+    url: "https://maxwapp.de/preise",
+  },
+}
+---
+
+<MainLayout
+  title="Website Redesign & Relaunch | Website optimieren | maxWapp"
+  seoTitle="Website Relaunch & Redesign – Struktur, SEO & Performance"
+  seoDesc="Strategischer Website Relaunch & Redesign für mehr Struktur, modernes Design und bessere Sichtbarkeit bei Google. Für Unternehmen, die mehr Anfragen wollen."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <PrimaryHeroSection
+    title="Website Relaunch & Redesign"
+    lead="Deine Website wirkt veraltet oder bringt zu wenig Anfragen? Mit einem strategischen Website-Relaunch schaffen wir klare Struktur, modernes Design und bessere Sichtbarkeit – damit aus Besuchern Kunden werden."
+    leadMobile="Website Relaunch & Redesign: mehr Klarheit, mehr Tempo, mehr Anfragen."
+    desktopImgSrc="/images/website-redesign-hero.webp"
+    mobileImgSrc="/images/website-redesign-hero.webp"
+    imgAlt="Juri Lorenz – WordPress Website erstellen lassen (München)"
+    ctaLabel="Relaunch besprechen"
+    ctaHref="/kontakt"
+  />
+
+  <BulletSplitSection
+    title="Die Mehrheit ist mobil unterwegs"
+    subtitle="Wenn deine Website auf dem Smartphone nicht klar, schnell und strukturiert wirkt, verlierst du den Großteil deiner Besucher – noch bevor sie dein Angebot verstehen."
+    showHighlight={true}
+    highlight="ca. 70 %"
+    imageFirstOnMobile={true}
+    extraText={`<strong>Typische Mobile-Probleme:</strong>`}
+    extraTextPosition="before"
+    items={[
+      "Texte & Buttons sind zu klein oder unklar platziert",
+      "Wichtige Inhalte verschwinden im Scroll-Chaos",
+      "Langsame Ladezeit auf mobilen Netzen",
+    ]}
+  />
+
+  <MotionSection
+    eyebrow="Markenwirkung"
+    title="Dein Auftritt formt Vertrauen"
+    intro="Noch bevor jemand deine Texte liest, entsteht ein Gefühl. Wirkt deine Website unruhig, alt oder beliebig, sinkt automatisch das Vertrauen. Ein strategischer Relaunch sorgt dafür, dass dein Auftritt klar, hochwertig und professionell wahrgenommen wird."
+    points={[
+      "Design transportiert Kompetenz – oder Unsicherheit",
+      "Visuelle Klarheit stärkt deine Positionierung",
+      "Ein stimmiger Look macht dein Angebot glaubwürdig",
+    ]}
+    imgSrc="/images/website-redesign-mobile.webp"
+    imgAlt="Modernes Website Redesign mit klarer visueller Struktur und professioneller Markenwirkung"
+    ctaLabel="Redesign besprechen"
+    ctaHref="/kontakt"
+    compact={true}
+  />
+
+  <BulletSplitSection
+    title="Klare Führung statt schönes Chaos"
+    imgSrc="/images/hero-section-struktur.webp"
+    imgAlt="Strategisch aufgebaute Hero-Section mit klarer Nutzerführung – Website Redesign Beispiel"
+    showHighlight={false}
+    imageFirstOnMobile={false}
+    items={[]}
+    extraText={`Viele Websites sehen gut aus – aber sie führen nicht.  
+
+Eine starke Startsektion braucht eine klare Aussage, einen erkennbaren Nutzen und einen eindeutigen nächsten Schritt.  <br /> <br />
+
+Conversion entsteht durch Struktur, nicht durch Animationen. Genau hier setze ich beim <strong>Website Redesign</strong> an: klare Botschaft, logischer Aufbau und ein Flow, der Besucher gezielt zur Anfrage führt.`}
+    extraTextPosition="before"
+  />
+
+  <SolutionSection
+    title="Der strukturierte Weg zum erfolgreichen Relaunch"
+    intro="Ein Website Redesign ist kein Schnellschuss. Es braucht Analyse, klare Ziele und einen sauberen Übergang – damit Design, Technik und SEO zusammenspielen."
+    steps={[
+      {
+        num: "1",
+        title: "Audit & Zieldefinition",
+        text: "Wir analysieren deine aktuelle Website: Performance, Nutzerverhalten, Struktur und Rankings. Danach definieren wir klare Ziele – z. B. mehr Anfragen oder bessere Sichtbarkeit.",
+      },
+      {
+        num: "2",
+        title: "Struktur & Nutzerführung",
+        text: "Navigation, Inhalte und Seitenaufbau werden neu gedacht – mit Fokus auf Nutzerführung und Conversion statt reinem Design.",
+      },
+      {
+        num: "3",
+        title: "Umsetzung & Optimierung",
+        text: "Modernes Design, saubere Technik, schnelle Ladezeiten und Mobile-Optimierung – ohne Plugin-Chaos.",
+      },
+      {
+        num: "4",
+        title: "SEO-Übergang & Launch",
+        text: "301-Weiterleitungen, strukturierte Daten, Meta-Optimierung und Testing sorgen dafür, dass Rankings stabil bleiben oder sich verbessern.",
+      },
+    ]}
+    ctaLabel="Redesign strategisch planen"
+    ctaHref="/kontakt"
+  />
+
+  <ComparisonSection
+    leftLabel="Relaunch"
+    rightLabel="Redesign"
+    eyebrow="Vergleich"
+    title="Relaunch vs. Redesign – was bringt dir wirklich mehr?"
+    intro="Ein Redesign poliert oft nur die Oberfläche. Beim Relaunch wird die Website strategisch neu aufgebaut – damit Struktur, Technik und Inhalte wieder Anfragen bringen."
+    rows={[
+      {
+        label: "Ansatz",
+        left: "Strategischer Neustart (Technik + Inhalte)",
+        right: "Optik auffrischen",
+      },
+      {
+        label: "Struktur & Flow",
+        left: "Neu: klare Nutzerführung & CTAs",
+        right: "Bleibt meist ähnlich",
+      },
+      {
+        label: "Technik",
+        left: "Sauberer Neuaufbau, weniger Ballast",
+        right: "Alte Basis bleibt bestehen",
+      },
+      {
+        label: "Performance",
+        left: "Schnelles, schlankes Setup",
+        right: "Nur begrenzt verbesserbar",
+      },
+      {
+        label: "SEO-Übergang",
+        left: "Geplant: 301, Indexierung, Titles/Meta",
+        right: "Oft nachrangig behandelt",
+      },
+      {
+        label: "Ergebnis",
+        left: "Messbar mehr Anfragen",
+        right: "Sieht moderner aus",
+      },
+    ]}
+    summary={`
+    Für die meisten kleinen Unternehmen ist ein <strong>Relaunch</strong> der nachhaltigere Weg:
+    neue Struktur, moderne Technik und ein sauberer SEO-Übergang – damit die Website wieder Anfragen bringt.
+  `}
+    ctaLabel="Relaunch einschätzen lassen"
+    ctaHref="/kontakt"
+  />
+
+  <BulletSplitSection
+    title="Ein Relaunch ist ideal für dich, wenn…"
+    imgSrc="/images/website-fuer-wen-ideal.webp"
+    imgAlt="Professionelle Website für Unternehmen – Relaunch statt altem Baukasten"
+    showHighlight={false}
+    imageFirstOnMobile={true}
+    items={[
+      "deine Website alt wirkt oder nicht mehr zur Marke passt",
+      "du trotz Traffic zu wenige Anfragen bekommst",
+      "du Inhalte nicht selbst pflegen kannst oder ständig auf Hilfe angewiesen bist",
+    ]}
+    extraText={`Viele Websites sind gewachsen – aber nicht strategisch geplant.  
+Ein Relaunch schafft Klarheit.
+
+Neu aufgebaut, technisch sauber und strategisch ausgerichtet – damit deine Website Anfragen bringt.`}
+    extraTextPosition="after"
+  />
+
+  <FeatureGridSection
+    title="Woran du einen starken Website Relaunch erkennst"
+    intro="Ein Relaunch ist mehr als ein neues Design. Er sorgt dafür, dass Struktur, Technik und Inhalte wieder zusammenspielen – und messbar besser performen."
+    features={[
+      {
+        title: "Klare Struktur",
+        description:
+          "Navigation, Seitenlogik und Inhalte sind neu geordnet. Besucher verstehen sofort, was du anbietest – ohne Scroll-Chaos.",
+      },
+      {
+        title: "Strategischer Nutzerfluss",
+        description:
+          "Jede Seite führt zu einem klaren nächsten Schritt. Nutzen, Vertrauen und CTA greifen logisch ineinander.",
+      },
+      {
+        title: "Sauberes technisches Fundament",
+        description:
+          "Schlankes Setup, schnelle Ladezeiten und mobile Optimierung – ohne unnötigen Plugin-Ballast.",
+      },
+      {
+        title: "Geplanter SEO-Übergang",
+        description:
+          "301-Weiterleitungen, strukturierte Daten und optimierte Meta-Daten sorgen dafür, dass Rankings stabil bleiben oder wachsen.",
+      },
+    ]}
+    cols={2}
+    afterText={`Ein starker <strong>Website Relaunch</strong> erkennt man daran, dass nicht nur das Design moderner wirkt – sondern Anfragen, Performance und Sichtbarkeit nachhaltig steigen.`}
+    ctaLabel="Relaunch mit Substanz starten"
+    ctaHref="/kontakt"
+  />
+
+  <LongformSection
+    eyebrow="Content & Umsetzung"
+    title="Relaunch ohne Stress: Struktur, Texte & Umsetzung aus einer Hand"
+    topText={`<p>Viele wollen ein <strong>Website Redesign</strong> – aber es fehlen Texte, Fotos oder eine klare Botschaft. Gleichzeitig soll der <strong>Relaunch</strong> schnell online gehen.</p>
+
+<p>Das ist normal. Wichtig ist ein klarer Plan: Positionierung, Struktur und Inhalte müssen zusammenpassen.</p>
+
+<p>Ich unterstütze dich dabei, deine <strong>Website zu optimieren</strong>: neue Struktur, überzeugende Texte und visuelle Inhalte – damit die Seite hochwertig wirkt und Anfragen auslöst.</p>`}
+    imgSrc="/images/website-redesign-content.webp"
+    imgAlt="Tablet mit Content-Elementen auf modernem Workspace – Symbol für Website Redesign und Content-Umsetzung"
+    bottomText={`<p>Ob kompletter Relaunch oder gezieltes Redesign: Du brauchst keinen fertigen Content-Ordner. Wir entwickeln gemeinsam die Struktur – und ich kümmere mich auf Wunsch um Text, Bildmaterial oder Video-Elemente.</p>
+
+<p><strong>Das Ziel:</strong> Eine schnelle, klare Website, die für Nutzer verständlich ist – und die Google sauber einordnen kann.</p>`}
+    ctaLabel="Projekt besprechen"
+    ctaHref="/kontakt"
+  />
+
+  <BarSection
+    eyebrow="Vertrauen"
+    title="Warum du deinen Website Relaunch mit mir umsetzen kannst"
+    intro="Ich begleite Website Redesigns und Relaunches für Unternehmen im deutschsprachigen Raum – mit Fokus auf Klarheit und Performance."
+    badges={[
+      {
+        label: "70+ Bewertungen",
+        sublabel: "Google",
+        href: "https://maps.app.goo.gl/93PpiX2gyiVCfcGd7",
+      },
+      {
+        label: "5.0 Sterne",
+        sublabel: "Top Rating",
+        href: "https://maps.app.goo.gl/93PpiX2gyiVCfcGd7",
+      },
+      {
+        label: "Klare Strategie",
+        sublabel: "Transparente Preise",
+        href: "/preise",
+      },
+      {
+        label: "Direkt mit mir",
+        sublabel: "kein Agentur-Overhead",
+        href: "/kontakt",
+      },
+    ]}
+    note="Einzelunternehmer = direkte Kommunikation, schnellere Umsetzung, klare Verantwortung."
+  />
+
+  <FeatureGridSection
+    title="Typische Relaunch-Fehler – und wie ich sie vermeide"
+    intro="Viele Relaunches sehen besser aus – verlieren aber Rankings oder bleiben langsam. Diese Fehler kosten Sichtbarkeit und Anfragen."
+    features={[
+      {
+        title: "1. Relaunch ohne Weiterleitungen",
+        description:
+          "Wenn URLs sich ändern, müssen 301-Weiterleitungen sauber gesetzt werden. Sonst verliert die Website Sichtbarkeit. Ich plane den SEO-Übergang von Beginn an.",
+      },
+      {
+        title: "2. Neues Design ohne klare Nutzerführung",
+        description:
+          "Ein Website Redesign braucht Struktur: klare Botschaft, CTAs und Trust. Sonst bleibt es hübsch – aber verkauft nicht.",
+      },
+      {
+        title: "3. Website für Google optimieren – aber ohne Basis",
+        description:
+          "Titles/Meta, H1–H3, interne Links und Snippets müssen stimmen. Ich optimiere die Website so, dass Google die neue Struktur versteht.",
+      },
+      {
+        title: "4. Performance wird erst am Ende geprüft",
+        description:
+          "Ladezeit entscheidet über Conversion und Rankings. Ich optimiere Bilder/Assets und halte das Setup schlank – damit die Website schnell bleibt.",
+      },
+    ]}
+    cols={2}
+    ctaLabel="Projekt starten"
+    ctaHref="/kontakt"
+  />
+
+  <ImageBanner
+    imgSrc="/images/website-redesign-umsetzung-handwerk.webp"
+    imgAlt="Arbeitsplatz mit zwei Monitoren – strukturierte Website Relaunch Umsetzung mit klarer Strategie – maxWapp"
+    eyebrow="Preis & Value"
+    title="Strategischer Website Relaunch – ohne Agentur-Overhead"
+    text={`
+    <p>Ein <strong>Website Relaunch</strong> muss weder kompliziert noch überteuert sein. 
+    Du bekommst Strategie, Struktur und Umsetzung direkt aus einer Hand – ohne lange Abstimmungswege.</p>
+
+    <p>Das Ergebnis: ein sauberes technisches Fundament, klare Nutzerführung und ein Setup, das mit deinem Business wachsen kann – damit deine Website nachhaltig <strong>mehr Anfragen</strong> bringt.</p>
+  `}
+    ctaLabel="Zu den Preisen"
+    ctaHref="/preise"
+  />
+
+  <FeatureGridSection
+    title="Häufige Fragen zum Website Relaunch"
+    intro="Die wichtigsten Antworten rund um Ablauf, SEO-Übergang, Inhalte und Kosten – klar und transparent erklärt."
+    features={[
+      {
+        title: "Was kostet ein Website Relaunch?",
+        description:
+          "Das hängt vom Umfang ab: Seitenanzahl, Content, Technik und SEO-Übergang. Du bekommst vorab ein transparentes Angebot – ohne versteckte Kosten.",
+      },
+      {
+        title: "Wie lange dauert ein Relaunch?",
+        description:
+          "Typisch sind 2–4 Wochen. Kleine Projekte gehen schneller, komplexe Relaunches brauchen mehr Planung bei Struktur, Inhalten und Weiterleitungen.",
+      },
+      {
+        title: "Verliere ich Google-Rankings beim Relaunch?",
+        description:
+          "Nicht bei sauberer Planung. Mit 301-Weiterleitungen, klarer Struktur und optimierten Meta-Daten bleibt Sichtbarkeit erhalten – und kann sich langfristig verbessern.",
+      },
+      {
+        title: "Brauche ich neue Texte für den Relaunch?",
+        description:
+          "Oft ja – zumindest in Teilen. Wir prüfen, was übernommen werden kann und was strategisch neu aufgebaut werden sollte, damit die Website klarer und überzeugender wirkt.",
+      },
+    ]}
+    cols={2}
+    ctaLabel="Relaunch besprechen"
+    ctaHref="/kontakt"
+  />
+
+  <FinalCTASection
+    title="Bereit für einen Relaunch, der sich lohnt?"
+    description={`
+    <p>In einem kurzen Gespräch schauen wir auf deine aktuelle Website: Struktur, Performance und SEO-Basis.</p>
+    <p>Du bekommst eine klare Empfehlung, ob ein strategischer <strong>Website Relaunch</strong> der schnellste Weg zu mehr Anfragen ist.</p>
+  `}
+    ctaLabel="Kostenlose Einschätzung"
+    ctaHref="/kontakt"
+  />
+</MainLayout>

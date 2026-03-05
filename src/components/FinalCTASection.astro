@@ -1,0 +1,95 @@
+---
+import PrimaryButton from "./PrimaryButton.astro";
+
+const {
+  eyebrow,
+  title,
+  description,
+  ctaLabel,
+  ctaHref,
+  note,
+  boxed = true,
+  darken = true,
+  compact = true,
+  className = "",
+} = Astro.props;
+
+const pad = compact ? "section-pad-compact" : "section-pad";
+---
+
+<section class={`relative w-full overflow-hidden ${pad} pb-24 md:pb-32 ${className}`.trim()}>
+  {/* Smooth vertical gradient */}
+  <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/60"></div>
+  </div>
+
+  <div class="relative section-container">
+    <div class={`mx-auto max-w-4xl ${boxed ? "mw-final-cta-card" : "text-center"}`.trim()}>
+
+      <div class={boxed ? "text-center" : "text-center"}>
+        {eyebrow && (
+          <p class="mw-eyebrow mb-4">{eyebrow}</p>
+        )}
+
+        <h2 class="mw-h2">{title}</h2>
+
+        <div class={boxed ? "mw-body mt-6 space-y-4" : "mw-body mt-6 space-y-4"}>
+          <Fragment set:html={description} />
+        </div>
+
+        <div class="mt-10 flex justify-center">
+          <PrimaryButton href={ctaHref} label={ctaLabel} />
+        </div>
+
+        {note && (
+          <p class="mw-body mt-4 text-gray-300/70">{note}</p>
+        )}
+      </div>
+
+    </div>
+  </div>
+
+  <style>
+    /* Final CTA: premium boxed look that matches the footer */
+    .mw-final-cta-card{
+      position:relative;
+      border-radius:26px;
+      padding:32px 22px;
+      border:1px solid rgba(255,255,255,0.18);
+      background:rgba(10,12,24,0.52);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow:
+        0 0 0 1px rgba(168,85,247,0.25),
+        0 18px 70px rgba(0,0,0,0.40);
+      overflow:hidden;
+    }
+
+    @media (min-width:768px){
+      .mw-final-cta-card{ padding:44px 46px; }
+    }
+
+    /* subtle top gradient line (like your other cards) */
+    .mw-final-cta-card::before{
+      content:"";
+      position:absolute;
+      left:18px; right:18px; top:14px;
+      height:3px;
+      border-radius:9999px;
+      background: linear-gradient(90deg, rgba(168,85,247,0.75), rgba(99,102,241,0.75));
+      opacity:0.85;
+      filter: blur(0.1px);
+    }
+
+    /* inner glow, very subtle (no hover, stays premium) */
+    .mw-final-cta-card::after{
+      content:"";
+      position:absolute;
+      inset:-120px -120px auto -120px;
+      height:320px;
+      background: radial-gradient(circle at 50% 50%, rgba(168,85,247,0.22), transparent 62%);
+      pointer-events:none;
+      opacity:0.9;
+    }
+  </style>
+</section>

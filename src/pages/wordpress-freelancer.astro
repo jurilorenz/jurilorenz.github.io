@@ -1,0 +1,343 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import PrimaryHeroSection from "../components/PrimaryHeroSection.astro";
+import BulletSplitSection from "../components/BulletSplitSection.astro";
+import SolutionSection from "../components/SolutionSection.astro";
+import FeatureGridSection from "../components/FeatureGridSection.astro";
+import BarSection from "../components/BarSection.astro";
+import MotionSection from "../components/MotionSection.astro";
+import LongformSection from "../components/LongformSection.astro";
+import ImageBanner from "../components/ImageBanner.astro";
+import ComparisonSection from "../components/ComparisonSection.astro";
+import FinalCTASection from "../components/FinalCTASection.astro";
+import IconCardsSection from "../components/IconCardsSection.astro";
+
+const features = [
+  {
+    title: "Schnelle Umsetzung",
+    description:
+      "Als WordPress Freelancer setze ich Websites und Landingpages zügig um – ohne Agentur-Overhead und ohne lange Abstimmungswege.",
+  },
+  {
+    title: "Website Betreuung",
+    description:
+      "Updates, kleine Fixes, Inhalte, Performance: Du bekommst zuverlässige Website Betreuung – planbar und transparent.",
+  },
+  {
+    title: "Sauberes Development",
+    description:
+      "Webentwickler-Mindset statt Plugin-Chaos: schlankes Setup, klare Struktur und wartbarer Code – auch als WordPress Programmierer.",
+  },
+  {
+    title: "UI/UX mit Conversion-Fokus",
+    description:
+      "Als UI/UX Designer denke ich Nutzerführung, Texte und CTAs mit – damit aus Besuchern Anfragen werden.",
+  },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "WordPress Freelancer & Webentwicklung",
+  provider: { "@type": "Brand", name: "maxWapp" },
+  areaServed: "DE",
+  offers: {
+    "@type": "Offer",
+    priceCurrency: "EUR",
+    price: "900",
+    availability: "https://schema.org/InStock",
+    url: "https://maxwapp.de/kontakt",
+  },
+};
+---
+
+<MainLayout
+  title="WordPress Freelancer & Webentwickler | Website Betreuung | maxWapp"
+  seoTitle="WordPress Freelancer – Webentwickler & Website Betreuung"
+  seoDesc="WordPress Freelancer für Webentwicklung, UI/UX Design und Website Betreuung. Unterstützung für Unternehmen und Selbstständige – flexibel und schnell."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <PrimaryHeroSection
+    title="WordPress Freelancer & Webentwickler"
+    lead="Ich unterstütze dich als WordPress Freelancer – von Struktur & UI/UX bis zur sauberen Umsetzung und laufenden Betreuung."
+    leadMobile="WordPress Freelancer: schnell umsetzen, sauber übergeben, auf Wunsch betreuen – Fokus auf Anfragen."
+    desktopImgSrc="/images/juri-lorenz-wordpress-freelancer.webp"
+    mobileImgSrc="/images/juri-lorenz-wordpress-freelancer.webp"
+    imgAlt="Juri Lorenz – WordPress Freelancer & Webentwickler"
+    ctaLabel="Projekt anfragen"
+    ctaHref="/kontakt"
+  />
+
+<BulletSplitSection
+  title="Warum viele lieber mit einem Freelancer arbeiten"
+  listLabel="Typische Gründe:"
+  highlight="?"
+  showHighlight={true}
+  imageFirstOnMobile={true}
+  items={[
+    "Direkte Kommunikation – kein Projektmanager, keine Umwege",
+    "Klare Verantwortung – ein Ansprechpartner von Start bis Übergabe",
+    "Flexibel im Umfang – von kleinen Fixes bis zum kompletten Sprint",
+  ]}
+/>
+<MotionSection
+  eyebrow="Zusammenarbeit"
+  title="Mit einem Freelancer geht’s meistens schneller"
+  intro="Wenn du schnelle Ergebnisse willst, zählt der Prozess: kurze Abstimmungen, klare Entscheidungen und saubere Umsetzung. Als WordPress Freelancer arbeite ich direkt mit dir (oder deinem Team) – ohne Umwege und ohne unnötige Meetings."
+  points={[
+  ]}
+  imgSrc="/images/freelancer-wordpress-schnelle-umsetzung-rakete.webp"
+  imgAlt="WordPress Freelancer – schnelle Umsetzung von Websites und Projekten"
+  ctaLabel="Verfügbarkeit checken"
+  ctaHref="/kontakt"
+  compact={true}
+/>
+
+  <SolutionSection
+    title="So arbeite ich als WordPress Freelancer"
+    intro="Du bekommst keine Zufalls-Umsetzung, sondern ein klares Vorgehen: Ziel, Struktur und sauberes Development – damit Website erstellen lassen als Freelancer planbar wird."
+    steps={[
+      {
+        num: "1",
+        title: "Ziel & Umfang",
+        text: "Wir klären, was du brauchst: neue Website, Relaunch, Landingpage oder laufende Website Betreuung. Dazu: Zielgruppe, Angebot und der wichtigste CTA.",
+      },
+      {
+        num: "2",
+        title: "Struktur & UI/UX",
+        text: "Als UI/UX Designer plane ich Nutzerführung, Sektionen und Inhalte so, dass Besucher schnell verstehen, was du anbietest – und warum sie dich kontaktieren sollen.",
+      },
+      {
+        num: "3",
+        title: "WordPress Umsetzung",
+        text: "Ich setze sauber um: schlankes Theme/Builder-Setup, Performance, responsive UI und – wenn nötig – WordPress Programmierung (Custom Module, kleine Features, Integrationen).",
+      },
+      {
+        num: "4",
+        title: "Launch & Betreuung",
+        text: "Nach dem Launch bekommst du eine verständliche Übergabe. Auf Wunsch übernehme ich Website Betreuung: Updates, Fixes, Content, Speed und Weiterentwicklung.",
+      },
+    ]}
+    ctaLabel="Verfügbarkeit prüfen"
+    ctaHref="/kontakt"
+  />
+
+  <IconCardsSection
+    eyebrow="Freelancer Skills"
+    title="Webdesign, Development & Betreuung"
+    intro="Du brauchst Unterstützung für Design, Umsetzung oder laufende Pflege? Ich steige flexibel ein – vom ersten Layout bis zu Updates, Fixes und Weiterentwicklung."
+    cards={[
+{
+  icon: "design",
+  title: "UI/UX & Webdesign",
+  text: "Saubere Nutzerführung, klare CTAs und modernes Design – damit deine Website nicht nur gut aussieht, sondern konvertiert.",
+},
+{
+    icon: "code",
+  title: "WordPress Programmierung",
+  text: "Individuelle Anpassungen, Module und Integrationen – wenn Standard nicht reicht.",
+},
+{
+  icon: "maintenance",
+  title: "Website Betreuung",
+  text: "Updates, kleine Änderungen, Bugfixes und Performance – verlässlich, transparent und ohne Ticket-Chaos.",
+},
+    ]}
+    ctaLabel="Kostenloses Erstgespräch"
+    ctaHref="/kontakt"
+    cols={3}
+  />
+
+  <LongformSection
+  eyebrow="Über mich"
+  title="Juri Lorenz – Klar in der Umsetzung. Stark im Ergebnis."
+  topText={`<p>Ich bin <strong>Dipl.-Ing. Juri Lorenz</strong> aus München. Ich arbeite direkt mit Unternehmen und Teams zusammen – mit klarer Kommunikation, sauberer Umsetzung und Ergebnissen, die im Alltag funktionieren.</p>
+
+<p>Mein Hintergrund ist Software-Entwicklung (Web + Mobile). Dadurch denke ich in Systemen: Anforderungen sauber klären, Risiken früh erkennen, Lösungen strukturiert liefern – ohne unnötigen Overhead.</p>`}
+  imgSrc="/images/juri-lorenz-webdesign-freelancer.webp"
+  imgAlt="Juri Lorenz aus München – WordPress Freelancer, Webentwickler und UI/UX Designer"
+  caption="Direkte Zusammenarbeit: schnelle Abstimmungen, klare Verantwortung und verlässliche Lieferung."
+  bottomText={`<p><strong>Was du von mir bekommst:</strong> einen Ansprechpartner, der mitdenkt, Entscheidungen dokumentiert und Aufgaben sauber abschließt – von Anpassungen und Integrationen bis zur Weiterentwicklung nach dem Launch.</p>
+
+<p>Technisch arbeite ich u. a. mit <strong>WordPress</strong>, <strong>JavaScript</strong>, <strong>React</strong>, <strong>Astro</strong> und <strong>Python</strong>. Kommunikation auf <strong>Deutsch</strong>, <strong>Englisch</strong> und <strong>Russisch</strong>.</p>`}
+  ctaLabel="Kurz sprechen"
+  ctaHref="/kontakt"
+/>
+
+<BulletSplitSection
+  title="Struktur statt Chaos im Projekt"
+  imgSrc="/images/wordpress-website-projekt-ablauf-struktur.webp"
+  imgAlt="Struktur eines Website-Projekts – Planung, Design, Entwicklung und Launch – maxWapp"
+  showHighlight={false}
+  imageFirstOnMobile={false}
+  items={[]}
+  extraText={`
+Als WordPress Freelancer arbeite ich deshalb mit einem einfachen Ablauf: Ziel definieren, Struktur festlegen und dann Schritt für Schritt umsetzen.<br /><br />
+
+Du weißt jederzeit, woran gerade gearbeitet wird, was als Nächstes kommt und wann etwas fertig ist. Keine endlosen Abstimmungen – sondern sichtbarer Fortschritt.<br /><br />
+
+<strong>Das Ergebnis:</strong> ein Projekt, das planbar vorankommt und eine Website, die wirklich fertig wird.`}
+  extraTextPosition="before"
+/>
+
+  <FeatureGridSection
+    title="Was eine Freelancer-Website erfolgreich macht"
+    intro="4 Bausteine für Struktur, Vertrauen und planbare Anfragen – umgesetzt von einem Webdesign Freelancer."
+    features={features}
+    cols={2}
+    afterText={`<strong>Entscheidend ist nicht nur das Design,</strong> sondern Struktur, Ladezeit und ein klarer CTA‑Flow. Ziel: Besucher verstehen dein Angebot sofort – und werden zu Anfragen. Updates und Weiterentwicklung sind auf Wunsch dauerhaft abgedeckt.`}
+    ctaLabel="Freelancer anfragen"
+    ctaHref="/kontakt"
+  />
+
+  <BulletSplitSection
+    title="Diese Freelancer-Lösung passt zu dir, wenn…"
+    imgSrc="/images/website-fuer-wen-ideal.webp"
+    imgAlt="Professionelle Website vom WordPress Freelancer – für Unternehmen und Selbstständige"
+    showHighlight={false}
+    imageFirstOnMobile={true}
+    items={[
+      "Du eine Website erstellen lassen willst – aber flexibel als Freelancer",
+      "Du regelmäßige Website Betreuung brauchst (Updates, Fixes, Inhalte)",
+      "Du eine klare Nutzerführung und bessere Anfragen willst",
+    ]}
+    extraText={`Ideal für Selbstständige und Unternehmen, die schnell professionell online gehen wollen – ohne Agenturstruktur.
+
+Du bekommst eine <strong>klar strukturierte, performante Website</strong> – umgesetzt durch einen WordPress Freelancer, der Design, Webentwicklung und Website Betreuung sinnvoll verbindet.`}
+    extraTextPosition="after"
+  />
+
+  <ComparisonSection
+    leftLabel="Freelancer"
+    rightLabel="Agentur"
+    eyebrow="Vergleich"
+    title="WordPress Freelancer vs. Agentur – was passt besser?"
+    intro="Die Frage ist weniger ‚Agentur oder nicht‘ – sondern: Brauchst du Team‑Struktur oder direkte Umsetzung ohne Umwege?"
+    rows={[
+      { label: "Kommunikation", left: "Direkt mit dem Umsetzer", right: "Mehr Abstimmungen/Projektmanagement" },
+      { label: "Kosten", left: "Weniger Overhead", right: "Höher durch Team/Struktur" },
+      { label: "Tempo", left: "Schnelle Entscheidungen", right: "Abhängig von Prozessen" },
+      { label: "Website Betreuung", left: "Flexibel & pragmatisch", right: "Oft als Paket/Retainer" },
+    ]}
+    summary={`
+      Wenn du eine <strong>professionelle WordPress Website</strong> willst – schnell, sauber und ohne Overhead –
+      ist ein <strong>WordPress Freelancer</strong> oft die effizientere Wahl.
+    `}
+    ctaLabel="Projekt anfragen"
+    ctaHref="/kontakt"
+  />
+
+  <LongformSection
+    eyebrow="Content & Umsetzung"
+    title="Kein Content? Ich setze deine Website als Freelancer komplett um."
+    topText={`<p>Viele wollen eine Website erstellen lassen – aber ohne endlose Briefings, Ordner und Abstimmungen.</p>
+
+<p>Gerade bei kleinen Teams fehlt oft Zeit für Texte, Fotos oder eine saubere Struktur. Das ist normal.</p>
+
+<p>Ich unterstütze dich als <strong>Webdesign Freelancer</strong>: Struktur, Texte und visuelle Inhalte werden so aufgebaut, dass deine Website klar, hochwertig und überzeugend wirkt.</p>`}
+    imgSrc="/images/ipad-t-short-print-maxwapp.webp"
+    imgAlt="Website Beispielprojekt – umgesetzt vom WordPress Freelancer inkl. Content"
+    bottomText={`<p>Ob neue Website oder Relaunch: Wir starten mit einer klaren Struktur – und ich kümmere mich auf Wunsch um Text, Bildmaterial oder Video-Elemente.</p>
+
+<p><strong>Das Ziel:</strong> Eine performante Website, die Vertrauen aufbaut, professionell wirkt und Besucher in Anfragen verwandelt – plus Website Betreuung, wenn du sie brauchst.</p>`}
+    ctaLabel="Projekt besprechen"
+    ctaHref="/kontakt"
+  />
+
+  <BarSection
+    eyebrow="Vertrauen"
+    title="Warum du mit mir als Freelancer gut arbeitest"
+    intro="Als WordPress Freelancer und Webentwickler unterstütze ich Unternehmen im deutschsprachigen Raum – schnell, direkt und zuverlässig."
+    badges={[
+      { label: "70+ Bewertungen", sublabel: "Google", href: "https://maps.app.goo.gl/93PpiX2gyiVCfcGd7" },
+      { label: "5.0 Sterne", sublabel: "Top Rating", href: "https://maps.app.goo.gl/93PpiX2gyiVCfcGd7" },
+      { label: "Klar & Fair", sublabel: "Transparente Preise", href: "/preise" },
+      { label: "Direkt mit mir", sublabel: "kein Overhead", href: "/kontakt" },
+    ]}
+    note="Direktkontakt statt Agentur: klare Verantwortung, schnelle Umsetzung, transparente Kommunikation."
+  />
+
+  <FeatureGridSection
+    title="Typische Fehler bei Freelancer-Projekten – und wie ich sie vermeide"
+    intro="Viele beauftragen einen Webdesigner oder WordPress Programmierer – und verlieren Zeit durch Unklarheit, Plugin-Chaos oder fehlende Betreuung. So arbeite ich dagegen."
+    features={[
+      {
+        title: "1. Unklare Ziele",
+        description:
+          "Ohne klares Ziel wird es teuer. Ich kläre zuerst Nutzerführung, Angebot und CTA – bevor ich baue.",
+      },
+      {
+        title: "2. Plugin-Chaos",
+        description:
+          "Zu viele Plugins machen WordPress langsam und instabil. Ich setze auf ein schlankes Setup – nur das, was wirklich nötig ist.",
+      },
+      {
+        title: "3. Kein UI/UX",
+        description:
+          "Schön reicht nicht. Als UI/UX Designer plane ich Struktur und Inhalte so, dass Besucher dich verstehen – und handeln.",
+      },
+      {
+        title: "4. Keine Website Betreuung",
+        description:
+          "Nach dem Launch beginnt der Alltag: Updates, Fixes, kleine Änderungen. Ich biete Website Betreuung, damit deine Seite langfristig stabil bleibt.",
+      },
+    ]}
+    cols={2}
+    ctaLabel="Projekt starten"
+    ctaHref="/kontakt"
+  />
+
+  <ImageBanner
+    imgSrc="/images/coffee-espresso-machine-background.webp"
+    imgAlt="Arbeitsplatz mit zwei Monitoren und Neon-Rakete – Symbol für strukturierte Umsetzung – maxWapp"
+    eyebrow="Preis & Value"
+    title="Mehr Output – ohne Agentur-Overhead"
+    text={`
+      <p>Du willst einen <strong>WordPress Freelancer</strong>, der zuverlässig liefert – ohne Agenturpreise?</p>
+      <p>Du bekommst Webdesign, Webentwicklung und auf Wunsch <strong>Website Betreuung</strong> direkt aus einer Hand. Transparent, effizient und mit Fokus auf Anfragen.</p>
+    `}
+    ctaLabel="Preise anfragen"
+    ctaHref="/kontakt"
+  />
+
+  <FeatureGridSection
+    title="Häufige Fragen zum WordPress Freelancer"
+    intro="Kurz & klar: Kosten, Ablauf, Betreuung, Anpassungen und Design."
+    features={[
+      {
+        title: "Was kostet ein WordPress Freelancer?",
+        description:
+          "Das hängt vom Umfang ab (Landingpage, Unternehmensseite, Relaunch oder Betreuung). Du bekommst vorab eine klare Einschätzung und ein transparentes Angebot.",
+      },
+      {
+        title: "Bietest du Website Betreuung an?",
+        description:
+          "Ja. Updates, kleine Änderungen, Bugfixes und Performance-Optimierung – flexibel als laufende Betreuung oder nach Bedarf.",
+      },
+      {
+        title: "Übernimmst du auch WordPress Programmierung?",
+        description:
+          "Ja. Wenn Standard-Builder nicht reichen, setze ich individuelle Anpassungen, Module oder Integrationen sauber um.",
+      },
+      {
+        title: "Machst du auch UI/UX Design?",
+        description:
+          "Ja. Nutzerführung, Struktur, Inhalte und CTAs gehören dazu – damit die Website nicht nur schön ist, sondern Anfragen generiert.",
+      },
+    ]}
+    cols={2}
+    ctaLabel="Freelancer anfragen"
+    ctaHref="/kontakt"
+  />
+
+  <FinalCTASection
+    title="Lass uns kurz über dein Projekt sprechen"
+    description={`
+      <p>In einem kurzen Gespräch klären wir, was du wirklich brauchst: neue Website, Relaunch oder Unterstützung als WordPress Freelancer.</p>
+      <p>Du bekommst eine ehrliche Einschätzung, eine klare Struktur für die nächsten Schritte – und wenn es passt, setze ich das Projekt direkt mit dir um.</p>
+    `}
+    ctaLabel="Projekt anfragen"
+    ctaHref="/kontakt"
+  />
+</MainLayout>

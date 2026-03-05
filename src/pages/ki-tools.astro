@@ -1,0 +1,596 @@
+---
+import MainLayout from "../layouts/MainLayout.astro"
+import SolutionSection from "../components/SolutionSection.astro";
+import FeatureGridSection from "../components/FeatureGridSection.astro";
+import MotionSection from "../components/MotionSection.astro";
+import ImageBanner from "../components/ImageBanner.astro";
+import FinalCTASection from "../components/FinalCTASection.astro";
+
+const features = [
+  { title: "Klare Prozesse", description: "Planity Termin, Calendly Buchung & OnOffice Daten sind logisch eingebunden – ohne Chaos." },
+  { title: "Saubere Integration", description: "Tools, APIs und Formulare arbeiten zusammen – stabil, wartbar und verständlich übergeben." },
+  { title: "Automatisierung", description: "Weniger Nachfassen: Bestätigungen, Erinnerungen und smarte Abläufe laufen automatisch." },
+  { title: "Mehr Anfragen", description: "Bessere Nutzerführung + klare CTAs = mehr Leads, die wirklich passen." },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "KI & Tools Integration",
+  image:
+    "https://maxwapp.de/images/projects/immobilien-muenchen-referenzobjekte.webp",
+  description:
+    "Ich integriere Tools, APIs und KI-Lösungen wie OnOffice, Planity & OpenAI direkt in deine Website – automatisiert und zukunftssicher.",
+  brand: {
+    "@type": "Brand",
+    name: "maxWapp",
+  },
+  offers: {
+    "@type": "Offer",
+    priceCurrency: "EUR",
+    price: "900",
+    availability: "https://schema.org/InStock",
+    url: "https://maxwapp.de/preise",
+  },
+}
+---
+
+<MainLayout
+  title="KI & Tools Integration aus München – automatisiert, smart & leistungsstark | maxWapp"
+  seoTitle="Planity, OnOffice & KI Tools Integration München | maxWapp"
+  seoDesc="Ich integriere Tools wie Planity, OnOffice, Calendly & KI Tools direkt in deine Website. Zukunftssichere Automatisierung und individuelle Weblösungen für München."
+>
+  <p class="sr-only">
+    Du suchst eine Möglichkeit, Planity oder OnOffice in deine Website zu
+    integrieren? Oder brauchst du ein smartes Terminbuchungssystem mit Planity
+    für Friseure, Shore für Studios oder Calendly für Berater? Ich biete dir
+    individuelle Tools-Integration und KI-basierte Lösungen wie Chatbots, um
+    deine Abläufe zu automatisieren. Auch bei Zahlungsanbietern wie Stripe,
+    PayPal oder Mollie, bei CRM-Systemen wie HubSpot und Zoho oder
+    E-Mail-Marketing-Tools wie Mailchimp oder Brevo helfe ich mit der nahtlosen
+    Einbindung. Egal ob du nach den besten KI Tools suchst, deine Buchhaltung
+    mit LexOffice oder FastBill verbinden möchtest oder automatisierte
+    Übersetzungen mit DeepL brauchst – ich unterstütze dich mit Erfahrung,
+    Technik und durchdachter Umsetzung.
+  </p>
+
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <!-- Hintergrund mit Verlauf -->
+  <div
+    class="min-h-screen bg-gradient-to-b from-[#090a1a] to-[#290065] text-white text-center flex flex-col items-center justify-center"
+  >
+    <!-- Titel -->
+    <h1
+      class="text-center text-3xl md:text-6xl font-bold text-gray-100 drop-shadow-lg mt-12 md:mb-12 md:mt-36"
+    >
+      KI, Tools & CRM Integration
+    </h1>
+
+    <!-- Inhalt Abschnitt -->
+    <div
+      class="w-11/12 md:w-10/12 lg:w-8/12 mx-auto text-lg md:text-xl text-gray-300 leading-relaxed mt-12 flex flex-col-reverse md:flex-row items-center gap-16 md:gap-32"
+    >
+      <!-- Handybildabschnitt für Desktop links -->
+      <div
+        class="w-full md:w-5/12 flex justify-center md:justify-end mb-12 md:mb-0 rounded shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] phone-container"
+      >
+        <img
+          src="/images/projects/immobilien-muenchen-referenzobjekte.webp"
+          alt="immobilien muenchen referenzobjekte Screenshot"
+          class="w-80 md:w-auto md:max-h-[60vh] object-contain rounded-lg"
+        />
+      </div>
+
+      <!-- Textabschnitt für Desktop rechts -->
+      <div class="w-full md:w-5/12 text-center md:text-left">
+        <p class="text-xl md:text-2xl mt-4">
+          Du willst mehr aus deinem Webprojekt herausholen? Ich integriere
+          smarte Tools, APIs und KI-Lösungen direkt in deine Website – für mehr
+          Automatisierung, bessere Nutzererfahrung und messbare Effizienz.
+        </p>
+
+        <p class="text-xl md:text-2xl mt-8">
+          Ob <strong>Immobilienplattform mit OnOffice</strong>, <strong
+            >Online-Terminbuchung mit Planity, Calendly</strong
+          > oder <strong>eigener KI-Chatbot</strong> – ich bringe alles nahtlos zusammen.
+        </p>
+
+        <p class="text-xl md:text-2xl mt-8">
+          Du brauchst keine Standardlösung. Du bekommst maßgeschneiderte <span
+            class="text-gradient font-semibold">Systeme, die funktionieren</span
+          > – direkt in deine Website integriert.
+        </p>
+      </div>
+    </div>
+
+
+  <MotionSection
+    eyebrow="Automatisierung"
+    title="KI Tools sollen Arbeit abnehmen"
+    intro={`Viele nutzen Planity, Calendly oder OnOffice – aber ohne saubere Integration. Erst wenn Terminbuchung, Datenflüsse und Automatisierung logisch zusammenspielen, entsteht echte Effizienz.`}
+    points={[
+      "Termine direkt online buchbar",
+      "Automatische Bestätigungen & Reminder",
+      "Weniger manuelle Arbeit = klarere Prozesse",
+    ]}
+    imgSrc="/images/ki-tools-integration-toolbox.webp"
+    imgAlt="Toolbox Icon – Symbol für KI Tools, Automatisierung und Integrationen (Planity, Calendly, OnOffice) – maxWapp"
+    ctaLabel="Integration prüfen"
+    ctaHref="/kontakt"
+    compact={true}
+  />
+
+    <SolutionSection
+    title="So entsteht dein KI & Tools Setup"
+    intro="Eine erfolgreiche Integration ist kein Plugin-Experiment. Wir bauen ein klares System: Analyse, Struktur und technische Umsetzung greifen ineinander."
+    steps={[
+      {
+        num: "1",
+        title: "Analyse & Ziel",
+        text: "Wir klären, was automatisiert werden soll: Planity Termin, Calendly Buchung, OnOffice Daten oder ein KI-Chatbot – und welches Ziel dahinter steht (Zeit sparen, mehr Leads, weniger Rückfragen).",
+      },
+      {
+        num: "2",
+        title: "Tool-Auswahl",
+        text: "Nicht jedes Tool passt zu jedem Business. Wir wählen die sinnvollsten KI Tools und Integrationen – statt eine unübersichtliche Tool-Sammlung aufzubauen.",
+      },
+      {
+        num: "3",
+        title: "Integration & Testing",
+        text: "Saubere Einbindung in deine Website inkl. Testing: Formulare, Buchungsflow, Bestätigungen, Daten-Importe und Übergaben an CRM oder Systeme.",
+      },
+      {
+        num: "4",
+        title: "Optimierung & Übergabe",
+        text: "Du bekommst ein stabiles Setup – verständlich übergeben und langfristig wartbar, damit du später Inhalte selbst pflegen kannst.",
+      },
+    ]}
+    ctaLabel="Let’s Talk"
+    ctaHref="/kontakt"
+  />
+
+
+
+    <!-- Was ich biete Abschnitt mit Karten -->
+    <h2 class="text-center text-4xl md:text-5xl font-extrabold my-24">
+      Was ich biete
+    </h2>
+
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 gap-12 px-6 md:px-0 max-w-6xl mx-auto"
+    >
+      <!-- Karte 1: Shop-Redesign mit Conversion-Fokus -->
+      <div
+        class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
+      >
+        <div
+          class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
+        >
+        </div>
+        <h4 class="text-3xl font-bold text-white mb-6">OnOffice Integration</h4>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          Ich binde dein OnOffice-Konto direkt auf deiner Website ein – <strong
+            >automatisierter Objektimport</strong
+          >, Referenznummern, Live-Synchronisation und vieles mehr.
+        </p>
+      </div>
+
+      <!-- Karte 2: Shopify Setup & Startklar-Paket -->
+      <div
+        class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
+      >
+        <div
+          class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
+        >
+        </div>
+        <h4 class="text-3xl font-bold text-white mb-6">KI-Chatbots</h4>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          Eigener Chatbot für deine Website? Kein Problem. Ich entwickle <strong
+            >OpenAI-basierte Lösungen</strong
+          > für Support, Content oder Lead-Generierung – trainiert auf deine Daten.
+        </p>
+      </div>
+
+      <!-- Karte 3: Speed & Technik, die verkaufen -->
+      <div
+        class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
+      >
+        <div
+          class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
+        >
+        </div>
+        <h4 class="text-3xl font-bold text-white mb-6">SEO-Quickwins</h4>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          Ich überarbeite Titel, Struktur & Inhalte gezielt für <strong
+            >mehr Google-Sichtbarkeit</strong
+          >. Keine Tricks – nur kluge Optimierung, die langfristig wirkt.
+        </p>
+      </div>
+
+      <!-- Karte 4: Mobile-First & Conversion-Ready -->
+      <div
+        class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
+      >
+        <div
+          class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
+        >
+        </div>
+        <h4 class="text-3xl font-bold text-white mb-6">
+          Tools & API-Verknüpfung
+        </h4>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          Ich verknüpfe externe Tools, Datenbanken & Schnittstellen (z. B.
+          Zahlungsanbieter, CRM, Immobilien-Exporte) direkt mit deinem System –
+          für <strong>automatisierte Workflows</strong>.
+        </p>
+      </div>
+    </div>
+
+
+
+    
+    <!-- Sichtbarer Infoblock zu Integrationen -->
+    <h2
+      class="text-center text-3xl md:text-4xl font-extrabold mt-36 mb-12"
+      style="line-height: 1.3;"
+    >
+      Beliebte Integrationen für deine Website
+    </h2>
+
+    <ul
+      class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-4 list-disc pl-6 space-y-3 text-left leading-relaxed"
+    >
+      <li><strong>Terminbuchung:</strong> Planity, Shore, Calendly</li>
+      <li><strong>Immobilien:</strong> OnOffice, FlowFact</li>
+      <li><strong>Zahlungssysteme:</strong> Stripe, PayPal, Mollie</li>
+      <li><strong>CRM & Marketing:</strong> HubSpot, Zoho, Mailchimp, Brevo</li>
+      <li>
+        <strong>AI & Automation:</strong> OpenAI Chatbots, DeepL Übersetzungen
+      </li>
+      <li><strong>Buchhaltung:</strong> LexOffice, FastBill</li>
+      <li><strong>Shops:</strong> Shopify, WooCommerce</li>
+    </ul>
+
+
+<FeatureGridSection
+  title="CRM & Systeme für dein Business"
+  intro="Viele Unternehmen arbeiten mit verstreuten Tools. Ich helfe dabei, CRM-Systeme, Projektmanagement und Cloud-Strukturen sauber aufzusetzen und miteinander zu verbinden."
+  features={[
+    {
+      title: "CRM Setup",
+      description:
+        "Einrichtung von CRM-Systemen wie Notion, HubSpot oder Zoho – damit Kunden, Leads und Projekte sauber organisiert sind.",
+    },
+    {
+      title: "Projekt & Team Workflows",
+      description:
+        "Strukturierte Workspaces für Teams: Aufgaben, Prozesse und Dokumentation klar aufgebaut.",
+    },
+    {
+      title: "Cloud & Datenstruktur",
+      description:
+        "Google Drive, Dropbox oder andere Cloud-Systeme logisch strukturieren – damit Dateien und Informationen sofort auffindbar sind.",
+    },
+    {
+      title: "System-Integration",
+      description:
+        "CRM, Website, Formulare und Tools miteinander verbinden – für automatisierte Abläufe statt manueller Arbeit.",
+    },
+  ]}
+  cols={2}
+/>
+
+        <h2
+      class="text-center text-3xl md:text-4xl font-extrabold mt-12 mb-12"
+      style="line-height: 1.3;"
+    >
+      Systeme, die dir Arbeit abnehmen.
+    </h2>
+
+    <p class="text-xl md:text-2xl text-gray-300 text-center max-w-4xl mx-4">
+      Ich bringe Tools und KI direkt auf deine Website – für echte Erleichterung
+      und <span class="text-gradient font-semibold"
+        >neue digitale Möglichkeiten</span
+      >.
+    </p>
+
+  <FeatureGridSection
+    title="Typische Integrations-Fehler – und wie ich sie vermeide"
+    intro="Viele Integrationen wirken gut – bis sie im Alltag nerven. Diese Fehler kosten Zeit, Leads und Nerven."
+    features={[
+      {
+        title: "1. Tool ohne Strategie",
+        description: "Planity oder Calendly wird eingebaut – aber ohne klare Nutzerführung. Ich plane Flow, Texte und CTAs so, dass Buchungen wirklich passieren.",
+      },
+      {
+        title: "2. Manuelle Datenpflege",
+        description: "OnOffice oder CRM wird nicht sauber angebunden. Ich setze Datenflüsse so auf, dass Inhalte aktuell bleiben – ohne Copy/Paste.",
+      },
+      {
+        title: "3. Plugin-Chaos statt System",
+        description: "Zu viele KI Tools ohne Plan. Ich baue ein schlankes Setup, das stabil läuft und wartbar bleibt.",
+      },
+      {
+        title: "4. Keine Messbarkeit",
+        description: "Ohne Tracking weiß niemand, ob Calendly Buchung oder Planity Termin wirklich konvertiert. Ich sorge für Klarheit in den wichtigsten Kennzahlen.",
+      },
+    ]}
+    cols={2}
+    ctaLabel="Projekt starten"
+    ctaHref="/kontakt"
+  />
+
+  <ImageBanner
+    imgSrc="/images/wordpress-website-workspace-performance.webp"
+    imgAlt="Arbeitsplatz mit zwei Monitoren – saubere Tools Integration mit klarer Strategie – maxWapp"
+    eyebrow="Preis & Value"
+    title="Mehr Effizienz – ohne Agentur-Overhead"
+    text={`
+      <p>Du willst <strong>Planity</strong>, <strong>Calendly</strong> oder <strong>OnOffice</strong> integrieren, aber keine riesige Agentur bezahlen?</p>
+      <p>Bei mir bekommst du Strategie, Integration und Umsetzung direkt aus einer Hand – klar strukturiert, technisch sauber und langfristig wartbar.</p>
+    `}
+ctaLabel="Angebot anfragen"
+ctaHref="/kontakt"
+  />
+
+  <FeatureGridSection
+    title="Häufige Fragen zu KI & Tools Integration"
+    intro="Die wichtigsten Antworten rund um Planity, Calendly, OnOffice und KI Tools – klar und transparent."
+    features={[
+      {
+        title: "Kannst du Planity integrieren?",
+        description: "Ja. Ich integriere Planity inklusive klarer Termin-Flows, Bestätigungen und – wenn sinnvoll – Reminder. Gerade für Planity Friseur-Setups ist das extrem effektiv.",
+      },
+      {
+        title: "Calendly oder Planity – was ist besser?",
+        description: "Kommt auf dein Business an: Calendly passt oft für Beratung/Coaching, Planity ist stark für Termine im Salon. Wichtig ist, dass der Flow zur Zielgruppe passt.",
+      },
+      {
+        title: "Wie funktioniert OnOffice Integration?",
+        description: "OnOffice kann so angebunden werden, dass Objekte/Referenzen automatisiert auf der Website erscheinen und aktuell bleiben – ohne manuelle Pflege.",
+      },
+      {
+        title: "Was sind die besten KI Tools?",
+        description: "Die besten KI Tools sind die, die zu deinem Prozess passen. Statt Hype bauen wir eine Lösung, die im Alltag Zeit spart und Kunden schneller zum passenden Angebot führt.",
+      },
+    ]}
+    cols={2}
+    ctaLabel="Integration besprechen"
+    ctaHref="/kontakt"
+  />
+
+
+
+
+
+
+    <!-- Warum mit mir arbeiten Abschnitt -->
+    <h2
+      class="text-center text-4xl md:text-5xl font-extrabold mt-12 mb-12 md:mb-24 mx-2"
+      style="line-height: 1.3;"
+    >
+      Warum mit mir arbeiten?
+    </h2>
+
+    <div
+      class="w-11/12 md:w-10/12 lg:w-8/12 mx-auto flex flex-col md:flex-row items-center mb-24 md:gap-24"
+    >
+      <!-- Handybildabschnitt für Desktop links -->
+      <div
+        class="w-full md:w-5/12 flex justify-center md:justify-center mb-12 md:mb-0 rounded shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] phone-container-second"
+      >
+        <img
+          src="/images/projects/studio-d-termin.webp"
+          alt="Shopify Screenshot Kollektion"
+          class="w-80 md:w-auto md:max-h-[60vh] object-contain rounded-lg"
+        />
+      </div>
+
+      <!-- Textabschnitt für Desktop rechts -->
+      <div class="w-full md:w-5/12 text-center md:text-left">
+        <p class="text-xl md:text-2xl mt-4">
+          Ich entwickle keine Spielereien – sondern <span class="text-gradient"
+            >digitale Lösungen mit Mehrwert</span
+          >. Von der Idee bis zur Umsetzung bekommst du alles aus einer Hand.
+        </p>
+
+        <p class="text-xl md:text-2xl mt-8">
+          Egal ob du Prozesse automatisieren oder deinen Kunden smarte
+          Funktionen bieten willst – wir starten mit einer
+          <span class="text-gradient"
+            >kostenlosen Analyse deiner Anforderungen</span
+          >
+           .
+        </p>
+
+
+        
+
+        <!-- Buttons at the bottom-right -->
+        <div
+          class="flex flex-col md:flex-row gap-6 mt-8 md:mt-16 justify-center md:justify-start items-center md:items-start w-full md:w-auto"
+        >
+
+
+          <!-- Primary Button -->
+          <a
+            href="/kontakt"
+            class="relative inline-block py-4 px-10 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-white text-[#090a1a] shadow-lg transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_rgba(147,112,219,0.8),_0_0_35px_rgba(3,169,244,0.6)] hover:border-[#6d87d1]"
+          >
+            Let`s Talk
+          </a>
+        </div>
+      </div>
+      </div>
+  <FinalCTASection
+    title="Bereit für ein Setup, das wirklich funktioniert?"
+    description={`
+      <p>In einem kurzen Gespräch schauen wir auf deine aktuelle Website und deine Tools.</p>
+      <p>Du bekommst eine klare Empfehlung, welche Integration (Planity, Calendly, OnOffice oder KI Tools) dir wirklich Zeit spart – und wie du mehr Anfragen daraus machst.</p>
+    `}
+    ctaLabel="Kostenlose Analyse"
+    ctaHref="/kontakt"
+  />
+      <style>
+        .text-gradient {
+          background: linear-gradient(to right, #9c27b0, #03a9f4);
+          -webkit-background-clip: text;
+          color: transparent;
+        }
+
+        .drop-shadow-lg {
+          filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
+        }
+
+        .border-gradient-to-r {
+          border-image-slice: 1;
+          border-image-source: linear-gradient(to right, #9c27b0, #03a9f4);
+        }
+
+        /* Container for the entire image, gradient, and shadow */
+        .profile-container {
+          transform: translateX(-150%); /* Start off-screen to the left */
+          opacity: 0; /* Initially hidden */
+          transition:
+            transform 1.5s ease-out,
+            opacity 1.5s ease-out;
+        }
+
+        /* Trigger the animation when the page loads */
+        .profile-container {
+          animation: flyInFromLeft 1.5s forwards;
+        }
+
+        /* Keyframes for the fly-in effect */
+        @keyframes flyInFromLeft {
+          0% {
+            transform: translateX(-150%);
+            opacity: 0;
+          }
+          100% {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+
+        /* Container for the entire image and shadow */
+        .phone-container {
+          transform: translateX(-150%); /* Start off-screen to the left */
+          opacity: 0; /* Initially hidden */
+          transition:
+            transform 1.5s ease-out,
+            opacity 1.5s ease-out; /* Remove delay for mobile */
+        }
+
+        /* Fly in effect */
+        .fly-in {
+          transform: translateX(0);
+          opacity: 1;
+        }
+
+        /* Keyframes for desktop (initial load) */
+        @media (min-width: 768px) {
+          .phone-container {
+            animation: flyInFromLeftPhone 1.5s forwards 0.5s; /* Keep delay on desktop */
+          }
+
+          .underline-animation {
+            display: inline-block;
+            background-image: linear-gradient(120deg, #03a9f4, #9c27b0);
+            background-repeat: no-repeat;
+            background-size: 100% 3px;
+            background-position: 0 88%;
+            transition: background-size 0.3s ease-in-out;
+          }
+
+          .underline-animation:hover {
+            background-size: 100% 100%;
+          }
+        }
+
+        /* Keyframes for mobile (on scroll) */
+        @keyframes flyInFromLeftPhone {
+          0% {
+            transform: translateX(-150%);
+            opacity: 0;
+          }
+          100% {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+
+        /* Initial state for the second phone container */
+        .phone-container-second {
+          transform: translateX(-150%); /* Positioned off-screen to the left */
+          opacity: 0; /* Initially hidden */
+          transition:
+            transform 1.5s ease-out,
+            opacity 1.5s ease-out;
+        }
+
+        /* Fly-in effect when in view */
+        .fly-in-second {
+          transform: translateX(0); /* Return to original position */
+          opacity: 1; /* Fully visible */
+        }
+      </style>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const phoneImage = document.querySelector(".phone-container")
+
+          // Detect if the element is in view for mobile
+          function isInViewPort(element) {
+            const rect = element.getBoundingClientRect()
+            return (
+              rect.top <=
+                (window.innerHeight || document.documentElement.clientHeight) &&
+              rect.bottom >= 0
+            )
+          }
+
+          // Add event listener for scroll to trigger the animation
+          window.addEventListener("scroll", function () {
+            if (window.innerWidth < 768) {
+              // Only apply for mobile view
+              if (isInViewPort(phoneImage)) {
+                phoneImage.classList.add("fly-in")
+              }
+            }
+          })
+        })
+
+        document.addEventListener("DOMContentLoaded", function () {
+          const secondPhoneImage = document.querySelector(
+            ".phone-container-second"
+          )
+
+          // Function to check if the element is in the viewport
+          function isInViewPort(element) {
+            const rect = element.getBoundingClientRect()
+            return (
+              rect.top <=
+                (window.innerHeight || document.documentElement.clientHeight) &&
+              rect.bottom >= 0
+            )
+          }
+
+          // Function to add the fly-in class when in view
+          function handleScroll() {
+            if (isInViewPort(secondPhoneImage)) {
+              secondPhoneImage.classList.add("fly-in-second")
+            }
+          }
+
+          // Add scroll event listener
+          window.addEventListener("scroll", handleScroll)
+
+          // Run on page load in case the element is already in view
+          handleScroll()
+        })
+      </script>
+    </div>
+  </div>
+</MainLayout>

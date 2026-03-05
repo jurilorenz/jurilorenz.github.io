@@ -1,0 +1,101 @@
+---
+import FeatureCard from "./FeatureCard.astro";
+import PrimaryButton from "./PrimaryButton.astro";
+
+type Feature = {
+  title: string;
+  description: string;
+};
+
+type FeatureGridSectionProps = {
+  id?: string;
+  eyebrow?: string;
+  title: string;
+  intro?: string;
+  features?: Feature[];
+  cols?: 1 | 2 | 3 | 4;
+  compact?: boolean;
+  center?: boolean;
+  /** Optional text shown between cards and CTA (for SEO / explanation) */
+  afterText?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+  className?: string;
+};
+
+const {
+  id,
+  eyebrow,
+  title,
+  intro,
+  features = [],
+  cols = 2,
+  compact = true,
+  center = true,
+  afterText,
+  ctaLabel,
+  ctaHref,
+  className = "",
+} = Astro.props as FeatureGridSectionProps;
+
+const colsClass =
+  cols === 1
+    ? "md:grid-cols-1"
+    : cols === 2
+      ? "md:grid-cols-2"
+      : cols === 3
+        ? "md:grid-cols-3"
+        : "md:grid-cols-4";
+
+const alignText = center ? "text-center" : "text-left";
+const alignCta = center ? "justify-center" : "justify-start";
+
+const hasAfterText = typeof afterText === "string" && afterText.trim().length > 0;
+const hasCta =
+  typeof ctaLabel === "string" &&
+  ctaLabel.trim().length > 0 &&
+  typeof ctaHref === "string" &&
+  ctaHref.trim().length > 0;
+
+const padClass = compact ? "section-pad-compact" : "section-pad";
+---
+
+<section id={id} class={`w-full ${padClass} ${className}`.trim()}>
+  <div class="section-container">
+    <header class="max-w-4xl mx-auto">
+      {eyebrow && (
+        <p class={`${alignText} mw-eyebrow mb-3`}>
+          {eyebrow}
+        </p>
+      )}
+
+      <h2 class={`${alignText} ${compact ? "mw-h2-compact" : "mw-h2"}`}>
+        {title}
+      </h2>
+
+      {intro && (
+        <p class={`${alignText} mw-lead mt-6`}>
+          <Fragment set:html={intro} />
+        </p>
+      )}
+    </header>
+
+    <div class={`grid grid-cols-1 ${colsClass} gap-8 md:gap-12 mt-12`}>
+      {features.map((f) => (
+        <FeatureCard title={f.title} description={f.description} />
+      ))}
+    </div>
+
+    {hasAfterText && (
+      <p class={`${alignText} mw-body mt-14 max-w-3xl mx-auto`}>
+        <Fragment set:html={afterText} />
+      </p>
+    )}
+
+    {hasCta && (
+      <div class={`flex ${alignCta} ${hasAfterText ? "mt-12" : "mt-14"}`}>
+        <PrimaryButton href={ctaHref} label={ctaLabel} />
+      </div>
+    )}
+  </div>
+</section>

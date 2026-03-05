@@ -1,0 +1,141 @@
+---
+import PrimaryButton from "./PrimaryButton.astro";
+
+type Props = {
+  id?: string;
+  eyebrow?: string;
+  title: string;
+  intro: string;
+  points: string[];
+  imgSrc: string;
+  imgAlt: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+  compact?: boolean;
+  className?: string;
+};
+
+const {
+  id,
+  eyebrow,
+  title,
+  intro,
+  points,
+  imgSrc,
+  imgAlt,
+  ctaLabel,
+  ctaHref,
+  compact,
+  className,
+} = Astro.props as Props;
+
+const pad = (compact ?? false) ? "section-pad-compact" : "section-pad";
+const hasCta = typeof ctaLabel === "string" && ctaLabel.trim().length > 0 && typeof ctaHref === "string" && ctaHref.trim().length > 0;
+---
+
+<section
+  id={id}
+  data-speed-section
+  class={`relative w-full overflow-hidden ${pad} ${(className ?? "")}`.trim()}
+>
+  <!-- IMPORTANT:
+       No extra background blobs/circles here.
+       Section stays “clean” to match the global page gradient seamlessly. -->
+
+  <div class="relative section-container">
+    <div class="mw-split-grid">
+
+      <!-- Visual -->
+      <div class="md:col-span-5 flex justify-center md:justify-start">
+        <img
+          data-speed-media
+          src={imgSrc}
+          alt={imgAlt}
+          loading="lazy"
+          class="mw-speed-media shadow-purple-drop"
+        />
+      </div>
+
+      <!-- Content -->
+      <div class="md:col-span-7 text-center md:text-left">
+        {eyebrow && <p class="mw-eyebrow mb-3">{eyebrow}</p>}
+
+        <h2 class="mw-h2">{title}</h2>
+
+        <p class="mw-lead mt-6 max-w-3xl md:max-w-none">{intro}</p>
+
+        <div class="mt-10 grid gap-5">
+          {points.map((p) => (
+            <div class="bullet-card">
+              <span class="bullet-dot" aria-hidden="true"></span>
+              <p class="mw-body">{p}</p>
+            </div>
+          ))}
+        </div>
+
+        {hasCta && (
+          <div class="mt-10 flex justify-center md:justify-start">
+            <PrimaryButton href={ctaHref!} label={ctaLabel!} />
+          </div>
+        )}
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const section = document.querySelector("[data-speed-section]");
+      if (!(section instanceof HTMLElement)) return;
+
+      const media = section.querySelector("[data-speed-media]") as HTMLElement | null;
+      if (!media) return;
+
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduceMotion) return;
+
+      let raf = null;
+
+      function clamp(n, a, b) {
+        return Math.min(b, Math.max(a, n));
+      }
+
+      function update() {
+        raf = null;
+
+        const rect = section.getBoundingClientRect();
+        const vh = window.innerHeight || document.documentElement.clientHeight;
+
+        // progress: 0 when section just enters, 1 around center-ish
+        const start = vh * 1.05; // start earlier (more travel time)
+        const end = vh * 0.15; // end later (closer to top)
+        const t = (start - rect.top) / (start - end);
+        const p = clamp(t, 0, 1);
+
+        // start well off-screen (left), end close to the content
+        const isMobile = window.innerWidth < 768;
+        const xStart = isMobile ? -260 : -420;
+        const xEnd = isMobile ? -6 : 6;
+
+        const sStart = 0.92;
+        const sEnd = 1.05;
+
+        const x = xStart + (xEnd - xStart) * p;
+        const s = sStart + (sEnd - sStart) * p;
+
+        media.style.transform = `translate3d(${x}px, 0, 0) scale(${s})`;
+      }
+
+      function onScroll() {
+        if (raf) return;
+        raf = window.requestAnimationFrame(update);
+      }
+
+      window.addEventListener("scroll", onScroll, { passive: true });
+      window.addEventListener("resize", onScroll, { passive: true });
+
+      // initial position (no “auto animation”, just correct scroll state)
+      update();
+    })();
+  </script>
+</section>

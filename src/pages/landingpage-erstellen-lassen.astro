@@ -1,0 +1,334 @@
+---
+import MainLayout from "../layouts/MainLayout.astro"
+import PrimaryHeroSection from "../components/PrimaryHeroSection.astro"
+import BulletSplitSection from "../components/BulletSplitSection.astro"
+import SolutionSection from "../components/SolutionSection.astro"
+import FeatureGridSection from "../components/FeatureGridSection.astro"
+import BarSection from "../components/BarSection.astro"
+import MotionSection from "../components/MotionSection.astro"
+import LongformSection from "../components/LongformSection.astro"
+import ImageBanner from "../components/ImageBanner.astro"
+import ComparisonSection from "../components/ComparisonSection.astro"
+import FinalCTASection from "../components/FinalCTASection.astro"
+
+const features = [
+  {
+    title: "Klares Angebot",
+    description:
+      "Besucher verstehen in Sekunden, was du anbietest – ohne Scroll-Marathon.",
+  },
+  {
+    title: "Conversion-Flow",
+    description:
+      "Struktur, CTAs und Vertrauenselemente sind so platziert, dass Anfragen wahrscheinlicher werden.",
+  },
+  {
+    title: "Performance",
+    description:
+      "Schnelle Ladezeit, saubere Technik und mobile Optimierung – damit Traffic nicht verpufft.",
+  },
+  {
+    title: "SEO-Basics",
+    description:
+      "Titel/Meta, Struktur (H1–H3), interne Links & Snippets – damit Google dich besser einordnet.",
+  },
+]
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Landingpage erstellen lassen",
+  provider: { "@type": "Brand", name: "maxWapp" },
+  areaServed: "DE",
+  offers: {
+    "@type": "Offer",
+    priceCurrency: "EUR",
+    price: "900",
+    availability: "https://schema.org/InStock",
+    url: "https://maxwapp.de/preise",
+  },
+}
+---
+
+<MainLayout
+  title="Landingpage erstellen lassen – Conversion & SEO | maxWapp"
+  seoTitle="Landingpage erstellen lassen – Conversion & SEO | maxWapp"
+  seoDesc="Ich erstelle Landingpages, die Anfragen bringen: klare Struktur, starke Texte, schnelle Ladezeit und saubere SEO-Basics – ideal für Ads & Google."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <PrimaryHeroSection
+    title="Landingpage erstellen lassen"
+    lead="Ich erstelle Landingpages mit klarem Design, schneller Ladezeit und sauberer SEO-Struktur – ideal für Google Ads und organischen Traffic."
+    leadMobile="Conversion-optimierte Landingpage – Design & Umsetzung für Ads & Google"
+    desktopImgSrc="/images/juri-lorenz-desktop.webp"
+    mobileImgSrc="/images/juri-lorenz-mobile.webp"
+    imgAlt="Juri Lorenz – Landingpage & Webdesign in München"
+    ctaLabel="Kostenlos beraten"
+    ctaHref="/kontakt"
+  />
+
+  <BulletSplitSection
+    title="Warum viele Landingpages nicht funktionieren?"
+    highlight="90%"
+    subtitle="Seiten sehen ok aus – aber führen nicht."
+    showHighlight={true}
+    imageFirstOnMobile={true}
+    items={[
+      "Zu viele Infos",
+      "Kein klarer CTA",
+      "Kein Vertrauen",
+      "Schlechte Struktur",
+      "Nicht mobiloptimiert",
+    ]}
+  />
+
+  <MotionSection
+    eyebrow="Performance"
+    title="Zu langsam = weniger Anfragen"
+    intro="Speed ist kein Technik-Detail – er entscheidet, ob Besucher bleiben, vertrauen und handeln."
+    points={[
+      "Schnelle Ladezeit reduziert Absprünge (vor allem mobil)",
+      "Bessere UX = mehr Vertrauen = höhere Conversion",
+      "Saubere Performance ist auch ein SEO-Signal",
+    ]}
+    imgSrc="/images/snail.webp"
+    imgAlt="Illustration: Schnecke als Symbol für langsame Ladezeit"
+    ctaLabel="Speed-Check starten"
+    ctaHref="/kontakt"
+    compact={true}
+  />
+
+  <SolutionSection
+    title="So baue ich Landingpages, die konvertieren"
+    intro="Ich arbeite wie ein Stratege: klare Botschaft, sauberer Flow und messbare Schritte – damit aus Klicks Anfragen werden."
+    steps={[
+      {
+        num: "1",
+        title: "Ziel & Angebot klar definieren",
+        text: "Damit Besucher sofort wissen: Was bekomme ich – und warum jetzt?",
+      },
+      {
+        num: "2",
+        title: "Struktur & Nutzenargumente entwickeln",
+        text: "Wir bauen einen logischen Flow – vom Hook bis zum CTA.",
+      },
+      {
+        num: "3",
+        title: "Social Proof & Vertrauen einbauen",
+        text: "Beweise statt Behauptungen: Cases, Bewertungen, Signale.",
+      },
+      {
+        num: "4",
+        title: "CTA-Flow optimieren",
+        text: "CTAs dort, wo Entscheidungen fallen – klar, sichtbar, passend.",
+      },
+    ]}
+    ctaLabel="Let's Talk"
+    ctaHref="/kontakt"
+  />
+
+  <BulletSplitSection
+    title="Hero-Section: Aufbau & strategische Funktion"
+    imgSrc="/images/hero-section-struktur.webp"
+    imgAlt="Struktur einer strategisch aufgebauten Hero-Section – maxWapp"
+    showHighlight={false}
+    imageFirstOnMobile={false}
+    items={[]}
+    extraText={`Die Hero-Section ist der entscheidende Bereich einer Landingpage. Hier wird in wenigen Sekunden klar, ob Besucher weiterlesen oder abspringen. <br /> <br />
+
+Eine professionelle Struktur sorgt dafür, dass Angebot, Nutzen und nächster Schritt sofort verständlich sind. <br /> <br />Social Proof, präzise Headline und ein klar positionierter Call-to-Action folgen einer logischen Reihenfolge – der Blick wird geführt, nicht dem Zufall überlassen.
+
+Conversion entsteht nicht durch Design allein, sondern durch strategischen Aufbau.`}
+    extraTextPosition="before"
+  />
+
+  <FeatureGridSection
+    title="Was eine starke Landingpage wirklich ausmacht"
+    intro="4 Bausteine, die aus Besuchern <span class='underline-animation'>Anfragen</span> machen — ohne Overload."
+    features={features}
+    cols={2}
+    afterText={`<strong>Entscheidend ist nicht das Design allein,</strong> sondern eine klare Struktur, schnelle Ladezeit und ein sauberer CTA-Flow. Ich übernehme Landingpage Design und Umsetzung so, dass aus Besuchern Anfragen werden – ideal für Ads, Launches und Google.`}
+    ctaLabel="Landingpage erstellen lassen"
+    ctaHref="/kontakt"
+  />
+
+  <BulletSplitSection
+    title="Eine Landingpage ist ideal für dich, wenn…"
+    imgSrc="/images/fuer-wen-ist-diese-website.webp"
+    imgAlt="Für wen ist eine Landingpage ideal? – maxWapp"
+    showHighlight={false}
+    imageFirstOnMobile={true}
+    items={[
+      "Du Google oder Social Ads schaltest",
+      "Du ein neues Angebot launchst",
+      "Du Leads sammeln willst",
+    ]}
+    extraText={`Eine professionelle Landingpage ist ideal, wenn du gezielt Traffic einkaufst oder organisch über Google Besucher gewinnst.
+Statt Streuverlusten bekommst du eine klar strukturierte Seite, die dein Angebot verständlich erklärt und Besucher zu Anfragen führt.`}
+    extraTextPosition="after"
+  />
+
+  <ComparisonSection
+    leftLabel="Landingpage"
+    rightLabel="Website"
+    eyebrow="Vergleich"
+    title="Landingpage vs. Website – was passt zu deinem Ziel?"
+    intro="Eine Landingpage ist auf <strong>ein Ziel</strong> optimiert (z. B. Anfragen). Eine klassische Website deckt meist mehrere Ziele ab."
+    rows={[
+      {
+        label: "Fokus",
+        left: "1 Ziel (Anfragen / Leads)",
+        right: "Viele Ziele (Info, Branding)",
+      },
+      {
+        label: "Navigation",
+        left: "Minimal / ohne Ablenkung",
+        right: "Umfangreicher Menü-Aufbau",
+      },
+      {
+        label: "Conversion",
+        left: "In der Regel höher",
+        right: "Gemischt – je nach Seite",
+      },
+      {
+        label: "Ads-Eignung",
+        left: "Optimal (Google/Social Ads)",
+        right: "Ok – aber weniger fokussiert",
+      },
+    ]}
+    summary={`
+    Die Frage ist nicht „Landingpage oder Website?“ –
+    sondern <strong>welches Ziel du gerade verfolgst</strong>.
+    Lass uns das sauber klären – und die richtige Struktur dafür bauen.
+  `}
+    ctaLabel="Kostenlos beraten"
+    ctaHref="/kontakt"
+  />
+
+  <LongformSection
+    eyebrow="Content & Umsetzung"
+    title="Kein Content? Ich übernehme deine Landingpage komplett."
+    topText={`<p><strong>Du willst eine Landingpage erstellen</strong>, aber dir fehlen noch Inhalte? Kein Problem: Ich entwickle nicht nur das Layout, sondern kümmere mich auf Wunsch um <strong>Texte, Struktur und visuelle Inhalte</strong> – damit deine Seite schnell online gehen kann.</p>
+<p>Beim <strong>Landingpage Design</strong> geht es nicht um „schön“, sondern um Klarheit: Nutzen in der Headline, eine logische Reihenfolge der Inhalte und ein Call-to-Action, der sichtbar ist. So versteht ein Besucher in Sekunden, worum es geht – und was der nächste Schritt ist.</p>
+<p>Texte erstelle ich strukturiert mit Unterstützung durch KI und optimiere sie anschließend manuell, damit alles natürlich klingt, zu deiner Marke passt und Suchmaschinen deine Seite sauber einordnen können – besonders wichtig, wenn du <strong>eine Landingpage erstellen lassen</strong> willst, die auch über Google gefunden wird.</p>`}
+    imgSrc="/images/landingpage-skillful-fence.webp"
+    imgAlt="Landingpage Beispiel – Webdesign für Skillful Fence mit klarer Hero-Section und Video-Content – maxWapp"
+    caption="Referenzprojekt: Landingpage mit eigens produziertem Promo-Video und individuell erstellten Visuals."
+    bottomText={`<p>Auch ohne eigenes Material bekommst du einen professionellen Auftritt: Ich nutze eine kuratierte Medien-Bibliothek mit hochwertigen Fotos & Videos. Auf Wunsch übernehme ich auch Zuschnitt und Optimierung, damit deine Landingpage schnell lädt und hochwertig wirkt.</p>
+<p><strong>Fazit:</strong> Du bekommst eine komplette Landingpage – inklusive Konzept, Landingpage Design, Text und Umsetzung – damit aus Besuchern Anfragen werden.</p>`}
+    ctaLabel="Landingpage Check starten"
+    ctaHref="/kontakt"
+  />
+
+  <BarSection
+    eyebrow="Vertrauen"
+    title="Warum du mir das Projekt ruhig geben kannst"
+    intro="Ein paar Fakten, die man direkt prüfen kann."
+    badges={[
+      {
+        label: "70+ Bewertungen",
+        sublabel: "Google",
+        href: "https://maps.app.goo.gl/93PpiX2gyiVCfcGd7",
+      },
+      {
+        label: "5.0 Sterne",
+        sublabel: "Top Rating",
+        href: "https://maps.app.goo.gl/93PpiX2gyiVCfcGd7",
+      },
+      {
+        label: "Klar & Fair",
+        sublabel: "Transparente Preise",
+        href: "/preise",
+      },
+      {
+        label: "Direkt mit mir",
+        sublabel: "kein Agentur-Overhead",
+        href: "/kontakt",
+      },
+    ]}
+    note="Einzelunternehmer = direkte Kommunikation, schnellere Umsetzung, klare Verantwortung."
+  />
+
+  <FeatureGridSection
+    title="Typische Fehler bei Landingpages – und wie ich sie vermeide"
+    intro="Viele Unternehmen wollen eine Landingpage erstellen – doch oft bleibt sie unter ihren Möglichkeiten. Nicht wegen des Designs, sondern wegen strategischer Fehler im Aufbau."
+    features={[
+      {
+        title: "1. Schönes Landingpage Design – aber kein klares Ziel",
+        description:
+          "Eine Landingpage ist kein Mini-Imagefilm. Wenn Ziel, Botschaft und Conversion-Fokus nicht sauber definiert sind, bringt selbst gutes Landingpage Design keine Anfragen. Ich starte immer mit einem klaren Conversion-Ziel.",
+      },
+      {
+        title: "2. Zu viele Inhalte statt klarer Struktur",
+        description:
+          "Viele Landingpages sind überladen mit Text, Abschnitten und Ablenkungen. Eine starke Landingpage führt Besucher mit klarem Flow – vom Problem über den Nutzen bis zum sichtbaren Call-to-Action.",
+      },
+      {
+        title: "3. Keine klare Nutzerführung",
+        description:
+          "Fehlende Vertrauenselemente, schwache Headlines oder versteckte Buttons kosten Leads. Ich strukturiere jede Landingpage so, dass der nächste Schritt jederzeit klar ist.",
+      },
+      {
+        title: "4. Technisch nicht auf Performance optimiert",
+        description:
+          "Langsame Ladezeiten oder fehlende mobile Optimierung reduzieren die Conversion massiv. Jede Landingpage wird von mir schnell, mobiloptimiert und suchmaschinenfreundlich umgesetzt.",
+      },
+    ]}
+    cols={2}
+    ctaLabel="Landingpage erstellen lassen"
+    ctaHref="/kontakt"
+  />
+
+  <ImageBanner
+    imgSrc="/images/landingpage-performance-workspace.webp"
+    imgAlt="Workspace mit Neon-Rakete als Symbol für Performance und Landingpage-Launch – maxWapp"
+    eyebrow="Preis & Value"
+    title="Mehr Leistung fürs Budget – ohne Agentur-Overhead"
+    text={`
+    <p><strong>Du willst eine Landingpage erstellen lassen</strong>, aber keine Agenturpreise zahlen? Genau hier ist der Vorteil: Bei mir bekommst du Strategie, Landingpage Design und Umsetzung direkt aus einer Hand – ohne unnötige Abstimmungswege.</p>
+    <p>Das bedeutet: klare Struktur, schnelle Umsetzung und ein Ergebnis, das nicht nur gut aussieht, sondern <strong>Anfragen bringt</strong>. Du investierst in Wirkung – nicht in Overhead.</p>
+  `}
+    ctaLabel="Zu den Preisen"
+    ctaHref="/preise"
+  />
+
+  <FeatureGridSection
+    title="Häufige Fragen zur Landingpage"
+    intro="Die wichtigsten Antworten rund um Umsetzung, SEO, Inhalte und Tracking – klar und transparent erklärt."
+    features={[
+      {
+        title: "Wie lange dauert die Umsetzung?",
+        description:
+          "Eine professionelle Landingpage dauert in der Regel 2–4 Wochen – abhängig vom Umfang und der Abstimmung. Wenn du eine Landingpage erstellen lassen möchtest, starten wir mit klarer Zieldefinition, danach folgen Struktur, Design und technische Umsetzung. Bei klarer Kommunikation geht es meist sehr effizient.",
+      },
+      {
+        title: "Ist SEO bei einer Landingpage sinnvoll?",
+        description:
+          "Ja – besonders dann, wenn deine Landingpage nicht nur für Ads, sondern auch für Google sichtbar sein soll. Ich optimiere Struktur, Meta-Daten und Inhalte so, dass Suchmaschinen deine Seite sauber einordnen können. Eine Landingpage ersetzt keine große SEO-Website, kann aber gezielt für bestimmte Keywords sehr gut performen.",
+      },
+      {
+        title: "Kann ich später Inhalte selbst ändern?",
+        description:
+          "Natürlich. Du bekommst eine kurze Einführung, damit du Texte, Bilder oder kleinere Inhalte selbst anpassen kannst. Auf Wunsch übernehme ich auch die laufende Betreuung – so bleibt deine Landingpage technisch sauber und conversion-optimiert.",
+      },
+      {
+        title: "Welche Tools & Tracking sind möglich?",
+        description:
+          "Tracking ist problemlos integrierbar – z. B. GA4, Meta Pixel oder andere Analyse-Tools. So kannst du nachvollziehen, wie viele Besucher deine Landingpage erreicht und wie gut sie konvertiert. Die Implementierung erfolgt DSGVO-konform und technisch sauber.",
+      },
+    ]}
+    cols={2}
+    ctaLabel="Landingpage erstellen lassen"
+    ctaHref="/kontakt"
+  />
+
+  <FinalCTASection
+    title="Bereit für eine Landingpage, die wirklich Anfragen bringt?"
+    description={`
+    <p>In einem kurzen Gespräch klären wir Ziel, Strategie und nächsten Schritt.</p>
+  `}
+    ctaLabel="Kostenloses Erstgespräch"
+    ctaHref="/kontakt"
+  />
+</MainLayout>

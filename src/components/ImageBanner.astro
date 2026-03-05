@@ -1,0 +1,120 @@
+---
+import PrimaryButton from "./PrimaryButton.astro";
+
+type ImageBannerProps = {
+  id?: string;
+  imgSrc: string;
+  imgAlt?: string;
+
+  eyebrow?: string;
+  title?: string;
+  text?: string; // HTML string
+
+  ctaLabel?: string;
+  ctaHref?: string;
+  secondaryCtaLabel?: string;
+  secondaryCtaHref?: string;
+
+  // layout
+  heightClass?: string;
+  className?: string;
+};
+
+const {
+  id,
+  imgSrc,
+  imgAlt,
+  eyebrow,
+  title,
+  text,
+  ctaLabel,
+  ctaHref,
+  secondaryCtaLabel,
+  secondaryCtaHref,
+  heightClass,
+  className,
+} = Astro.props as ImageBannerProps;
+
+const height = heightClass ?? "min-h-[520px] md:min-h-[560px]";
+const cls = className ?? "";
+const showText = typeof text === "string" && text.trim().length > 0;
+const showCtas = (typeof ctaLabel === "string" && ctaLabel.trim().length > 0 && typeof ctaHref === "string" && ctaHref.trim().length > 0)
+  || (typeof secondaryCtaLabel === "string" && secondaryCtaLabel.trim().length > 0 && typeof secondaryCtaHref === "string" && secondaryCtaHref.trim().length > 0);
+---
+
+<section id={id} class={`mw-cover-section ${height} ${cls}`.trim()}>
+  <img src={imgSrc} alt={imgAlt ?? ""} class="mw-cover-image" loading="lazy" />
+
+  <div class="mw-cover-overlay" aria-hidden="true"></div>
+  <div class="mw-cover-noise mw-noise" aria-hidden="true"></div>
+
+  <div class="mw-cover-inner">
+    <div class="mw-cover-panel">
+      <div class="mw-cover-card">
+        {eyebrow && <p class="mw-eyebrow mb-4">{eyebrow}</p>}
+
+        {title && <h2 class="mw-cover-h2">{title}</h2>}
+
+        {showText && (
+          <div class="mw-body mt-6 space-y-5">
+            <Fragment set:html={text} />
+          </div>
+        )}
+
+        {showCtas && (
+          <div class="mw-cover-actions">
+            {ctaLabel && ctaHref && (
+              <PrimaryButton href={ctaHref} label={ctaLabel} />
+            )}
+
+            {secondaryCtaLabel && secondaryCtaHref && (
+              <a
+                href={secondaryCtaHref}
+                class="inline-flex items-center justify-center rounded-full px-7 py-4 text-lg md:text-xl font-semibold border border-white/15 text-white/90 hover:border-white/25 hover:text-white transition"
+              >
+                {secondaryCtaLabel}
+              </a>
+            )}
+          </div>
+        )}
+      </div>
+    </div>
+  </div>
+
+  <style>
+    /* Keep the photo, but pull it into the purple brand mood (less blue) */
+    .mw-cover-image {
+      filter: saturate(0.9) hue-rotate(22deg) brightness(0.82) contrast(1.06);
+    }
+
+    /* Overlay: violet/indigo depth instead of blue */
+    .mw-cover-overlay {
+      background:
+        radial-gradient(circle at 20% 25%, rgba(168, 85, 247, 0.35), transparent 55%),
+        radial-gradient(circle at 80% 65%, rgba(99, 102, 241, 0.22), transparent 60%),
+        linear-gradient(180deg, rgba(9, 10, 26, 0.70) 0%, rgba(41, 0, 101, 0.78) 55%, rgba(9, 10, 26, 0.88) 100%);
+    }
+
+    /* ---- Cover Card: dark matte, no hover reaction ---- */
+
+    .mw-cover-card {
+      background: rgba(12, 14, 30, 0.60); /* slightly more transparent dark matte */
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+      transition: none !important; /* disable any hover animation */
+    }
+
+    .mw-cover-card:hover {
+      transform: none !important;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45) !important;
+      border-color: rgba(255, 255, 255, 0.08) !important;
+    }
+
+    /* Ensure only buttons react */
+    .mw-cover-card *:not(a):not(button) {
+      transition: none !important;
+    }
+  </style>
+</section>

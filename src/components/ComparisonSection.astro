@@ -1,0 +1,164 @@
+---
+import PrimaryButton from "./PrimaryButton.astro";
+
+type Row = {
+  label: string;
+  left: string;
+  right: string;
+};
+
+const {
+  id,
+  eyebrow,
+  title,
+  intro,
+  rows,
+  leftLabel,
+  rightLabel,
+  summary,
+  ctaLabel,
+  ctaHref = "/kontakt",
+  showCta = true,
+  compact = true,
+  className = "",
+} = Astro.props as {
+  id?: string;
+  eyebrow?: string;
+  title: string;
+  intro?: string;
+  rows: Row[];
+  leftLabel?: string;
+  rightLabel?: string;
+    summary?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+  showCta?: boolean;
+  compact?: boolean;
+  className?: string;
+};
+
+const pad = compact ? "section-pad-compact" : "section-pad";
+const hasIntro = typeof intro === "string" && intro.trim().length > 0;
+const hasRows = Array.isArray(rows) && rows.length > 0;
+---
+
+<section id={id} class={`relative w-full overflow-hidden ${pad} ${className}`.trim()}>
+
+  <div class="relative section-container">
+    <header class="max-w-4xl mx-auto text-center">
+      {eyebrow && <p class="mw-eyebrow mb-3">{eyebrow}</p>}
+      <h2 class="mw-h2">{title}</h2>
+
+      {hasIntro && (
+        <p class="mw-lead mt-6">
+          <Fragment set:html={intro} />
+        </p>
+      )}
+
+      <div class="mt-8 mx-auto w-[220px] h-[4px] rounded-full bg-gradient-to-r from-purple-500/90 to-indigo-500/90 shadow-[0_0_28px_rgba(99,102,241,0.25)]"></div>
+    </header>
+
+    <!-- Table -->
+    {hasRows && (
+      <div class="mt-10 md:mt-12 mw-compare-table">
+        <div class="mw-compare-head">
+          <div class="mw-compare-head-label" aria-hidden="true"></div>
+
+          <div class="mw-compare-head-col mw-compare-head-col--left">
+            <span class="mw-compare-badge">{leftLabel}</span>
+          </div>
+
+          <div class="mw-compare-head-col">
+            <span class="mw-compare-badge mw-compare-badge--muted">{rightLabel}</span>
+          </div>
+        </div>
+
+        <div class="mw-compare-body">
+          {rows.map((r) => (
+            <div class="mw-compare-row">
+              <div class="mw-compare-cell mw-compare-label">
+                <span class="text-gray-200/90 font-semibold">{r.label}</span>
+              </div>
+
+              <div class="mw-compare-cell mw-compare-left">
+                <span class="mw-compare-check" aria-hidden="true">✓</span>
+                <span class="text-gray-100">{r.left}</span>
+              </div>
+
+              <div class="mw-compare-cell mw-compare-right">
+                <span class="mw-compare-dot" aria-hidden="true"></span>
+                <span class="text-gray-100/90">{r.right}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
+
+    {showCta && (
+      <>
+        {summary && (
+          <p class="mw-body mt-12 max-w-3xl mx-auto text-center">
+            <Fragment set:html={summary} />
+          </p>
+        )}
+
+        {ctaLabel && (
+          <div class="mt-10 flex justify-center">
+            <PrimaryButton href={ctaHref} label={ctaLabel} />
+          </div>
+        )}
+      </>
+    )}
+  </div>
+
+  <style>
+    .mw-compare-table{
+      border-radius:22px;border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.02);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+      overflow:hidden;
+    }
+    .mw-compare-head{
+      display:grid;grid-template-columns:1fr;gap:10px;padding:18px;
+      border-bottom:1px solid rgba(255,255,255,.08);background:rgba(0,0,0,.12);
+    }
+    @media (min-width:768px){.mw-compare-head{grid-template-columns:180px 1fr 1fr;align-items:center;}}
+    .mw-compare-head-col{display:flex;justify-content:center;}
+    @media (min-width:768px){.mw-compare-head-col{justify-content:flex-start;}}
+
+    .mw-compare-badge{
+      display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:9999px;
+      font-weight:800;color:white;border:1px solid rgba(168,85,247,.35);background:rgba(168,85,247,.12);
+    }
+    .mw-compare-badge--muted{border-color:rgba(255,255,255,.14);background:rgba(255,255,255,.06);color:rgba(255,255,255,.90);}
+
+    .mw-compare-row{
+      display:grid;grid-template-columns:1fr;gap:12px;padding:18px;border-top:1px solid rgba(255,255,255,.06);
+      background-color: transparent;
+      transition: background-color 160ms ease;
+    }
+    .mw-compare-row:hover{background-color: rgba(168,85,247,.06);}
+    @media (min-width:768px){.mw-compare-row{grid-template-columns:180px 1fr 1fr;align-items:center;gap:16px;}}
+
+    .mw-compare-cell{display:flex;gap:12px;align-items:flex-start;}
+    .mw-compare-label{justify-content:center;text-align:center;}
+    @media (min-width:768px){.mw-compare-label{justify-content:flex-start;text-align:left;}}
+
+    .mw-compare-left{
+      border-radius:16px;padding:14px;border:1px solid rgba(168,85,247,.20);background:rgba(168,85,247,.08);
+    }
+    .mw-compare-right{
+      border-radius:16px;padding:14px;border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.04);
+    }
+    .mw-compare-check{
+      width:22px;height:22px;border-radius:9999px;display:inline-flex;align-items:center;justify-content:center;
+      font-weight:900;color:white;background:linear-gradient(to right, rgba(168,85,247,.85), rgba(99,102,241,.85));
+      box-shadow:0 0 22px rgba(99,102,241,.20);flex-shrink:0;margin-top:2px;
+    }
+    .mw-compare-dot{width:10px;height:10px;border-radius:9999px;background:rgba(255,255,255,.30);flex-shrink:0;margin-top:7px;}
+
+    @media (prefers-reduced-motion: reduce){
+      .mw-compare-row{transition:none;}
+    }
+  </style>
+</section>

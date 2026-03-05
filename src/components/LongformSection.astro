@@ -1,0 +1,92 @@
+---
+import PrimaryButton from "./PrimaryButton.astro";
+
+type LongformSectionProps = {
+  id?: string;
+  eyebrow?: string;
+  title?: string;
+  subtitle?: string;
+  topText?: string;
+  imgSrc?: string;
+  imgAlt?: string;
+  caption?: string;
+  bottomText?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+  compact?: boolean;
+  className?: string;
+};
+
+const {
+  id,
+  eyebrow,
+  title,
+  subtitle,
+  topText,
+  imgSrc,
+  imgAlt,
+  caption,
+  bottomText,
+  ctaLabel,
+  ctaHref,
+  compact = true,
+  className = "",
+} = Astro.props as LongformSectionProps;
+
+const pad = compact ? "section-pad-compact" : "section-pad";
+const hasTop = typeof topText === "string" && topText.trim().length > 0;
+const hasBottom = typeof bottomText === "string" && bottomText.trim().length > 0;
+---
+
+<section id={id} class={`w-full ${pad} ${className}`.trim()}>
+  <div class="section-container text-center">
+
+    <header class="max-w-4xl mx-auto">
+      {eyebrow && <p class="mw-eyebrow mb-3">{eyebrow}</p>}
+      {title && <h2 class={compact ? "mw-h2-compact" : "mw-h2"}>{title}</h2>}
+      {subtitle && <p class="mw-lead mt-6">{subtitle}</p>}
+    </header>
+
+    {hasTop && (
+      <div class="max-w-5xl md:max-w-6xl mx-auto mt-8">
+        <div class="mw-body space-y-6">
+          <Fragment set:html={topText} />
+        </div>
+      </div>
+    )}
+
+    {imgSrc && (
+      <div class="max-w-5xl mx-auto mt-14">
+        <div class="flex justify-center">
+          <img
+            src={imgSrc}
+            alt={imgAlt}
+            loading="lazy"
+            class="w-full max-w-[720px] md:max-w-[820px] object-contain shadow-purple-drop"
+          />
+        </div>
+
+        {caption && (
+          <p class="mt-6 text-sm md:text-base text-gray-300/80">
+            {caption}
+          </p>
+        )}
+      </div>
+    )}
+
+    {hasBottom && (
+      <div class="max-w-5xl md:max-w-6xl mx-auto mt-12">
+        <div class="mw-body space-y-6">
+          <Fragment set:html={bottomText} />
+        </div>
+      </div>
+    )}
+
+    {ctaLabel && (
+      <div class="mt-12 flex justify-center">
+        <PrimaryButton href={ctaHref ?? "/kontakt"} label={ctaLabel} />
+      </div>
+    )}
+
+  </div>
+</section>
