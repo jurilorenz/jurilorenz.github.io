@@ -1,9 +1,11 @@
 ---
 import { SEO } from "astro-seo"
-const { title, seoTitle, seoDesc, noindex } = Astro.props
+const { seoTitle, seoDesc, noindex } = Astro.props
 ---
 
 <head>
+    <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <SEO title={seoTitle} description={seoDesc} />
 
   {noindex && <meta name="robots" content="noindex, nofollow" />}
@@ -15,10 +17,8 @@ const { title, seoTitle, seoDesc, noindex } = Astro.props
   <link rel="manifest" href="/site.webmanifest" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.0/cookieconsent.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.0/cookieconsent.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent/3.1.0/cookieconsent.min.css" />
-
-
 
 <style>
   .cc-revoke {
@@ -68,7 +68,7 @@ const { title, seoTitle, seoDesc, noindex } = Astro.props
       },
       onStatusChange: function (status) {
         if (this.hasConsented()) { 
-          document.cookie = "cookieconsent_status=allow"; 
+         document.cookie = "cookieconsent_status=allow; path=/; SameSite=Lax";
           location.reload(); // Reload the page after consent is given
         }
       }
@@ -79,13 +79,11 @@ const { title, seoTitle, seoDesc, noindex } = Astro.props
   function enableAnalytics() {
     if (document.cookie.includes("cookieconsent_status=allow")) {
       const script = document.createElement("script");
-      script.type = "text/partytown";
       script.async = true;
       script.src = "https://www.googletagmanager.com/gtag/js?id=G-KBB0D00K79";
       document.head.appendChild(script);
 
       const inlineScript = document.createElement("script");
-      inlineScript.type = "text/partytown";
       inlineScript.innerHTML = `
         window.dataLayer = window.dataLayer || [];
         function gtag(){window.dataLayer.push(arguments);}
@@ -103,10 +101,11 @@ const { title, seoTitle, seoDesc, noindex } = Astro.props
 
     // Hide the revoke button
     window.addEventListener("load", function () {
-    const revokeBtn = document.querySelector(".cc-revoke.cc-bottom.cc-color-override-670204628");
-    if (revokeBtn) {
-        (revokeBtn as HTMLElement).style.display = "none";
-    }
+const revokeBtn = document.querySelector<HTMLElement>(".cc-revoke.cc-bottom.cc-color-override-670204628");
+
+if (revokeBtn) {
+  revokeBtn.style.display = "none";
+}
 });
 
   /*
@@ -136,10 +135,6 @@ window.addEventListener("astro:after-swap", function () {
 */
 </script>
 
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <!-- Open Graph Meta Tags for social sharing -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content={seoTitle} />
@@ -163,10 +158,10 @@ window.addEventListener("astro:after-swap", function () {
   <link rel="preload" href="/css/fonts.css" as="style" />
   <link rel="stylesheet" href="/css/fonts.css" />
 
-  <!-- FontAwesome (defer to avoid render-blocking) -->
+  <!-- FontAwesome (defer to avoid render-blocking) 
   <link rel="preload" href="/css/all.min.css" as="style" />
   <link rel="stylesheet" href="/css/all.min.css" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="/css/all.min.css" /></noscript>
+  <noscript><link rel="stylesheet" href="/css/all.min.css" /></noscript> -->
 
  
 </head>
