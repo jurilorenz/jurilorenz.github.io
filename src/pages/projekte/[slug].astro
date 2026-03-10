@@ -14,12 +14,16 @@ import AnnaMenci from "../../components/projects/AnnaMenci.astro";
 import Streetly from "../../components/projects/Streetly.astro";
 import VadimAevskiy from "../../components/projects/VadimAevskiy.astro";
 import ImmobilienMuenchen from "../../components/projects/ImmobilienMuenchen.astro";
+import SkillfulFence from "../../components/projects/SkillfulFence.astro";
 import KleinesStadthaus from "../../components/projects/KleinesStadthaus.astro";
 import FirstLineArchitecture from "../../components/projects/FirstLineArchitecture.astro";
 import LounaJewelry from "../../components/projects/LounaJewelry.astro";
 import SweetBerryBox from "../../components/projects/SweetBerryBox.astro";
 import PizzeriaMixtoVerde from "../../components/projects/PizzeriaMixtoVerde.astro";
 import AkamReinigung from "../../components/projects/AkamReinigung.astro";
+import Agbasa from "../../components/projects/Agbasa.astro";
+import BavarisPro from "../../components/projects/BavarisPro.astro";
+import Atelier from "../../components/projects/Atelier.astro";
 
 export async function getStaticPaths() {
   return [
@@ -148,6 +152,15 @@ introText: "Professionelle Immobilien Website für Makler in München. Modernes 
         seoTitle: "Immobilienmakler Website München – mit OnOffice | maxWapp",
 seoDesc: "Immobilien Website erstellen lassen in München: moderne Makler Website mit OnOffice, Branding & SEO. Ideal für Immobilienbüros, die online Kunden gewinnen möchten."      },
     },
+    { 
+  params: { slug: "wordpress-website-zaunbau-seattle" },
+  props: {
+    name: "Website für Zaunbau-Unternehmen",
+    introText: "Entwicklung einer modernen WordPress Website für ein Zaunbau-Unternehmen. Klare Struktur, SEO-optimierte Inhalte und responsives Design sorgen für hohe Sichtbarkeit und eine starke Online-Präsenz.",
+    seoTitle: "WordPress Website für Zaunbau-Unternehmen | maxWapp",
+    seoDesc: "Webdesign Referenz von Webentwickler aus München: moderne WordPress Website für ein Zaunbau-Unternehmen mit klarer Struktur, mobilem Design und SEO-optimierter Umsetzung."
+  },
+},
 { 
   params: { slug: "pizzeria-mixto-verde" },
   props: {
@@ -182,7 +195,34 @@ seoDesc: "Online Shop mit WordPress & WooCommerce – modern, schnell und ohne m
   introText: "E-Commerce mit WordPress & WooCommerce: schneller, mobiloptimierter Shop mit starker Produktpräsentation, Conversion-Fokus und SEO.",
   seoTitle: "Online Shop Schmuck erstellen lassen – WordPress | maxWapp",
   seoDesc: "Online-Shop für handgemachten Schmuck erstellen lassen: Louna Jewelry mit WordPress & WooCommerce – schnell und mobil-first. Entwickelt von maxWapp München."
-  },
+},
+},
+{ 
+  params: { slug: "bauen-sanieren-website" },
+  props: {
+    name: "Altersgerechtes Bauen & Sanieren Website",
+    introText: "WordPress Website für ein Bauunternehmen in München: moderne Struktur, mobiloptimiertes Design, Kontaktformular mit Datei-Upload und Terminbuchung für kostenlose Erstberatung.",
+    seoTitle: "Website für Bauunternehmen in München erstellen lassen",
+    seoDesc: "Webdesign und WordPress Website für Bauunternehmen in München: Projekt AGBASA – Altersgerechtes Bauen & Sanieren mit Conversion-optimiertem Design und Kontaktformular."
+},
+},
+{
+  params: { slug: "pflegedienst-muenchen-website" },
+  props: {
+    name: "Pflegedienst Website München – BavarisPro",
+    introText: "WordPress Website und Recruiting-Landingpage für einen ambulanten Pflegedienst in München: klare Struktur, mobiloptimiertes Design, SEO-Grundoptimierung und individuelles Bewerbungsformular mit PDF-Upload für Pflegekräfte.",
+    seoTitle: "Pflegedienst Website München & Recruiting Landingpage",
+    seoDesc: "Webdesign und WordPress Website für einen Pflegedienst in München: Projekt BavarisPro mit Recruiting-Landingpage, Bewerbungsformular für Pflegekräfte."
+},
+},
+{
+  params: { slug: "atelier-yu-le-ksa-muenchen-website" },
+  props: {
+    name: "Atelier Website München – YU-LE-KSA",
+    introText: "WordPress Website für ein exklusives Schneideratelier im Herzen Münchens: elegantes Design, Galerie für maßgeschneiderte Mode, klare Struktur und SEO-Grundoptimierung für lokale Sichtbarkeit.",
+    seoTitle: "Schneideratelier Website München – Webdesign für Atelier ",
+seoDesc: "Premium Website für ein Schneideratelier in München: Webdesign, Galerie für Maßanfertigungen, Branding und responsives Design für das Atelier YU-LE-KSA."  
+},
 },
     { 
       params: { slug: "kleines-stadthaus" }, 
@@ -250,7 +290,12 @@ const { name, introText, seoTitle, seoDesc } = Astro.props;
       {slug === 'felix-rheindorf' && <Felix />}
       {slug === 'streetly' && <Streetly />}
       {slug === 'vadim-aevskiy' && <VadimAevskiy />}
-      {slug === 'immobilien-muenchen' && <ImmobilienMuenchen />}
+      {slug === 'wordpress-website-zaunbau-seattle' && <SkillfulFence />}
+            {slug === 'bauen-sanieren-website' && <Agbasa />}
+            {slug === 'pflegedienst-muenchen-website' && <BavarisPro />}
+            {slug === 'atelier-yu-le-ksa-muenchen-website' && <Atelier />}
+
+            {slug === 'immobilien-muenchen' && <ImmobilienMuenchen />}
       {slug === 'kleines-stadthaus' && <KleinesStadthaus />}
             {slug === '1-line-architecture' && <FirstLineArchitecture />}
              {slug === 'louna-jewelry' && <LounaJewelry />}

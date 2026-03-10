@@ -1,0 +1,117 @@
+---
+import ContentSection from "../ContentSection.astro"
+import FeatureCard from "../FeatureCard.astro"
+import IpadComponent from "../IpadComponent.astro"
+import SectionTitle from "../SectionTitle.astro"
+import GradientDivider from "../GradientDivider.astro"
+import TextSection from "../TextSection.astro"
+import FinalSection from "../FinalSection.astro"
+---
+
+<div class="project-component">
+
+<p class="sr-only">
+WordPress Website Referenz für ein Bauunternehmen in München.
+Dieses Projekt zeigt die Entwicklung einer modernen Website für altersgerechtes Bauen und Sanieren.
+Responsives Webdesign, klare Struktur, Conversion-optimierte Inhalte, Kontaktformular mit Datei-Upload und Terminbuchung.
+Webdesign Referenz umgesetzt von Webentwickler aus München.
+</p>
+  
+  <TextSection
+    introText="Für AGBASA entstand eine moderne WordPress Website für altersgerechtes Bauen und Sanieren in München. Ziel war ein klarer, vertrauensvoller Online‑Auftritt für ein lokales Bauunternehmen."
+    secondText="Die Seite kombiniert einfache Struktur, klare Leistungen und schnelle Kontaktmöglichkeiten – damit Besucher sofort verstehen, was angeboten wird und direkt eine Anfrage stellen können."
+  />
+
+  <IpadComponent
+    imgSrc="/images/projects/agbasa-webdesign-muenchen-hero-desktop.webp"
+    imgAlt="Hero Bereich der WordPress Website für AGBASA – Altersgerechtes Bauen und Sanieren in München"
+  />
+
+    <TextSection
+    introText="Die Website wurde vollständig responsiv umgesetzt und funktioniert auf Smartphone, Tablet und Desktop gleichermaßen intuitiv."
+    secondText="Klare Call‑to‑Actions führen Besucher direkt zur Projektanfrage oder zur Terminvereinbarung – ideal für lokale Dienstleister." 
+  />
+
+  <ContentSection
+    imgSrc="/images/projects/agbasa-beratung-prozess-mobile.webp"
+    imgAlt="Beratungs- und Prozessbereich der AGBASA Website auf mobiler Ansicht"
+    title="Klare Nutzerführung & Conversion"
+    introText="Die Seitenstruktur wurde bewusst einfach aufgebaut: Leistungen, Ablauf und Kontakt sind schnell verständlich und führen Besucher Schritt für Schritt zur Anfrage."
+    secondText="Durch klare Abschnitte und eine ruhige visuelle Struktur entsteht eine Website, die Vertrauen schafft und Anfragen unterstützt."
+  />
+
+    <ContentSection
+    imgSrc="/images/projects/agbasa-treppenlift-video-preview.webp"
+    imgAlt="Video-Vorschau mit Treppenlift auf der AGBASA Website"
+    title="Video-Element für mehr Aufmerksamkeit"
+    introText="Da zu Beginn kaum Bildmaterial vorhanden war, wurde der visuelle Content speziell für die Website erstellt. Dazu gehört auch ein kurzes Promo‑Video, das das Thema altersgerechter Umbauten verständlich zeigt."
+    secondText="So entsteht trotz fehlender Projektfotos ein klarer visueller Eindruck der Leistungen und der möglichen Lösungen."
+    reverse={true}
+  />
+
+  <SectionTitle title="Website Highlights" />
+
+  <IpadComponent
+    imgSrc="/images/projects/agbasa-kontaktformular-website.webp"
+    imgAlt="Kontaktformular und Projektanfrage auf der AGBASA Website"
+  />
+
+  <TextSection
+    introText="Ein Schwerpunkt liegt auf der Kontaktstrecke: Besucher können entweder direkt einen Termin buchen oder eine Projektanfrage senden."
+    secondText="Das Formular ermöglicht auch das Hochladen von Fotos oder Dokumenten. Anfragen werden sofort per E‑Mail weitergeleitet, sodass schnelle Rückmeldungen möglich sind."
+  />
+
+  <ContentSection
+    imgSrc="/images/projects/agbasa-termin-buchen-mobile.webp"
+    imgAlt="Terminbuchung auf der AGBASA Website in mobiler Ansicht"
+    title="Terminbuchung mit klarer Funktion"
+    introText="Zusätzlich zum Formular wurde eine einfache Terminbuchung integriert. Interessenten können direkt einen Beratungstermin auswählen."
+    secondText="Diese Kombination aus Anfrageformular und Terminoption erhöht die Wahrscheinlichkeit, dass Besucher tatsächlich Kontakt aufnehmen."
+  />
+
+      <ContentSection
+    imgSrc="/images/projects/agbasa-bauen-sanieren-muenchen-flyer.webp"
+    imgAlt="Flyer und Branding für AGBASA – Altersgerechtes Bauen und Sanieren"
+    title="Branding, Logo & Flyer-Konzept"
+    introText="Für AGBASA wurde nicht nur die Website entwickelt, sondern auch das visuelle Grundkonzept der Marke. Dazu gehörten Logo‑Design, Farbwelt und eine klare gestalterische Linie, die Vertrauen und Seriosität im Bau‑ und Sanierungsbereich vermittelt."
+    secondText="Auf dieser Basis entstand ein mehrseitiger Unternehmens‑Flyer, der Leistungen, Ablauf und Kontaktmöglichkeiten verständlich erklärt. Der Flyer dient als Ergänzung zur Website und unterstützt die Kommunikation mit potenziellen Kunden auch offline."
+     reverse={true}
+  />
+
+  <SectionTitle title="Features der Website" />
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-24 mb-32">
+    <FeatureCard
+      title="WordPress CMS"
+      description="Die Website basiert auf WordPress und kann vom Unternehmen einfach selbst gepflegt und erweitert werden – ideal für Inhalte, Bilder und spätere Ergänzungen."
+    />
+
+    <FeatureCard
+      title="Projektanfrage mit Datei-Upload"
+      description="Das Kontaktformular wurde individuell erweitert und ermöglicht strukturierte Anfragen inklusive Upload von Fotos, Plänen und Dokumenten."
+    />
+
+    <FeatureCard
+      title="Terminbuchung integriert"
+      description="Neben dem Formular wurde eine klare Terminoption eingebunden, damit Interessenten direkt einen Beratungstermin auswählen können."
+    />
+
+    <FeatureCard
+      title="Responsives Conversion-Design"
+      description="Die Website wurde vollständig für mobile Nutzung optimiert – übersichtlich, schnell und mit klaren Handlungsaufforderungen für lokale Anfragen."
+    />
+  </div>
+
+  <GradientDivider />
+
+  <FinalSection
+    imgSrc="/images/projects/agbasa-erstberatung-cta-mobile.webp"
+    imgAlt="Call-to-Action Bereich der AGBASA Website"
+    title="Website, Branding & starke Nutzerführung"
+    introText="Dieses Projekt zeigt, wie Website, Branding und klare Nutzerführung zusammenarbeiten können, um lokale Anfragen zu generieren."
+    secondText="Ich entwickle Websites für Unternehmen und Dienstleister in München – mit Fokus auf klare Struktur, Vertrauen und Conversion."
+    secondaryButtonLabel="Projekt anfragen"
+    secondaryButtonLink="/kontakt"
+  />
+
+</div>
