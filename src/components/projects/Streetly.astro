@@ -9,6 +9,9 @@ import SectionTitle from "../SectionTitle.astro"
 import GradientDivider from "../GradientDivider.astro"
 import TextSection from "../TextSection.astro"
 import IpadComponent from "../IpadComponent.astro"
+import InfoBanner from "../InfoBanner.astro"
+import ProjectCardsGrid from "../ProjectCardsGrid.astro"
+
 ---
 
 <div class="project-component">
@@ -85,6 +88,47 @@ import IpadComponent from "../IpadComponent.astro"
       description="Streetly läuft auf einer kostenlosen Plattform – keine versteckten Kosten!"
     />
   </div>
+
+<InfoBanner>
+  Dieses Projekt zeigt, wie eine <strong>moderne Landingpage</strong> für ein
+  Startup oder digitales Produkt aufgebaut sein kann – mit klarem Branding,
+  starker Nutzerführung und fokussierter Kommunikation der Idee.
+  Mehr dazu auf der Seite
+  <a
+    href="/landingpage-erstellen-lassen/"
+    class="underline underline-offset-4 decoration-2 hover:text-white transition"
+  >
+    Landingpage erstellen lassen
+  </a>.
+</InfoBanner>
+
+<ProjectCardsGrid
+  title="Ähnliche Projekte"
+  items={[
+    {
+      href: "/projekte/efimow-automobile",
+      district: "Branding",
+      title: "Efimow Automobile",
+      description: "Corporate Design und Website für ein Automobilprojekt.",
+    },
+    {
+      href: "/projekte/immobilien-muenchen",
+      district: "Branding",
+      title: "Immobilien München",
+      description: "Website, Logo und Markenauftritt für ein Immobilienunternehmen.",
+    },
+    {
+      href: "/projekte/akimova-art",
+      district: "Portfolio",
+      title: "Akimova Art",
+      description: "Digitale Galerie und Branding für eine Künstlerin.",
+    },
+  ]}
+  cols={3}
+  ctaLabel="Alle Projekte ansehen"
+  ctaHref="/projekte"
+  className="pt-0"
+/>
 
   <GradientDivider />
 

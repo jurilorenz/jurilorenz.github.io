@@ -5,6 +5,9 @@ import SectionTitle from "../SectionTitle.astro"
 import GradientDivider from "../GradientDivider.astro"
 import TextSection from "../TextSection.astro"
 import FinalSection from "../FinalSection.astro"
+import InfoBanner from "../InfoBanner.astro"
+import ProjectCardsGrid from "../ProjectCardsGrid.astro"
+
 ---
 
 <div class="project-component">
@@ -54,6 +57,46 @@ import FinalSection from "../FinalSection.astro"
       description="Bewertungs‑Widget und Maps‑Einbindung erhöhen Reichweite und Vertrauen deiner Kunden."
     />
   </div>
+
+<InfoBanner>
+  Dieses Projekt zeigt, wie <strong>Webdesign in München</strong> in der Praxis aussieht –
+  mit Fokus auf Struktur, Sichtbarkeit und Conversion für lokale Unternehmen.
+  Mehr dazu auf der Seite
+  <a
+    href="/webdesign-in-der-naehe-muenchen/"
+    class="underline underline-offset-4 decoration-2 hover:text-white transition"
+  >
+    Webdesign in München
+  </a>.
+</InfoBanner>
+
+<ProjectCardsGrid
+  title="Ähnliche Projekte"
+  items={[
+    {
+      href: "/projekte/studio-d",
+      district: "Beauty",
+      title: "Studio D",
+      description: "Website, Branding und Terminbuchung für ein Beauty-Studio.",
+    },
+    {
+      href: "/projekte/atelier-yu-le-ksa-muenchen-website",
+      district: "Fashion",
+      title: "Atelier YU-LE-KSA",
+      description: "Elegante Website für ein Schneideratelier in München.",
+    },
+    {
+      href: "/projekte/akam-reinigung",
+      district: "Dienstleistung",
+      title: "Akam Reinigung",
+      description: "Website für lokale Sichtbarkeit und neue Kundenanfragen.",
+    },
+  ]}
+  cols={3}
+  ctaLabel="Alle Projekte ansehen"
+  ctaHref="/projekte"
+  className="pt-0"
+/>
 
   <GradientDivider />
 

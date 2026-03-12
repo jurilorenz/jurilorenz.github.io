@@ -1,0 +1,24 @@
+
+---
+export interface Props {
+  className?: string
+}
+
+const { className = "" } = Astro.props
+---
+
+<div class={`section-container mt-8 mb-24 ${className}`.trim()}>
+  <div class="mw-glass-card relative p-6 md:p-8 text-center overflow-hidden">
+
+    <div class="mw-topbar-gradient"></div>
+
+    <!-- stronger glow background -->
+    <div class="absolute -top-32 -right-32 w-[420px] h-[420px] rounded-full bg-purple-500/30 blur-[120px] pointer-events-none"></div>
+    <div class="absolute -bottom-32 -left-32 w-[420px] h-[420px] rounded-full bg-indigo-500/30 blur-[120px] pointer-events-none"></div>
+
+    <div class="mw-body relative">
+      <slot />
+    </div>
+
+  </div>
+</div>

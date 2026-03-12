@@ -6,6 +6,10 @@ import VideoWithCTA from "../VideoWithCTA.astro"
 import SectionTitle from "../SectionTitle.astro"
 import GradientDivider from "../GradientDivider.astro"
 import TextSection from "../TextSection.astro"
+import FeatureCard from "../FeatureCard.astro"
+import InfoBanner from "../InfoBanner.astro"
+import ProjectCardsGrid from "../ProjectCardsGrid.astro"
+
 ---
 
 <div class="project-component">
@@ -48,6 +52,73 @@ import TextSection from "../TextSection.astro"
     secondText="Die Farbgebung und Typografie spiegeln die Exklusivität der Marke wider und schaffen ein kohärentes Markenbild."
     reverse={true}
   />
+
+<SectionTitle title="Shop Features" />
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-24 mb-32">
+
+  <FeatureCard
+    title="Eleganter Fashion-Online-Shop"
+    description="Minimalistisches Design und hochwertige Bildsprache präsentieren die Produkte stilvoll und stärken die Markenwirkung."
+  />
+
+  <FeatureCard
+    title="Conversion-optimierte Produktseiten"
+    description="Klare Struktur, große Produktbilder und intuitive Kaufbuttons sorgen für eine einfache und schnelle Kaufentscheidung."
+  />
+
+  <FeatureCard
+    title="Mobile Shopping Experience"
+    description="Der Shop wurde vollständig für Smartphones optimiert – schnelle Ladezeiten, intuitive Navigation und angenehme Nutzerführung."
+  />
+
+  <FeatureCard
+    title="Direkte Kundenkommunikation"
+    description="Kontaktmöglichkeiten über WhatsApp, E-Mail oder Telegram ermöglichen schnelle Beratung und erhöhen die Kaufwahrscheinlichkeit."
+  />
+
+</div>
+
+<InfoBanner>
+  Dieses Projekt zeigt, wie ein moderner <strong>Online-Shop</strong> für
+  Fashion-Brands aufgebaut sein kann – mit klarem Design, starker
+  Produktpräsentation und optimierter User Experience.
+  Mehr dazu auf der Seite
+  <a
+    href="/online-shop-erstellen-lassen/"
+    class="underline underline-offset-4 decoration-2 hover:text-white transition"
+  >
+    Online-Shop erstellen lassen
+  </a>.
+</InfoBanner>
+
+<ProjectCardsGrid
+  title="Ähnliche Projekte"
+  items={[
+    {
+      href: "/projekte/louna-jewelry",
+      district: "E-Commerce",
+      title: "Louna Jewelry",
+      description: "Online-Shop für handgefertigten Schmuck mit elegantem Design.",
+    },
+    {
+      href: "/projekte/sweet-berry-box",
+      district: "E-Commerce",
+      title: "SweetBerryBox",
+      description: "Online-Shop für Geschenkboxen mit modernem Design und klarer Struktur.",
+    },
+    {
+      href: "/projekte/studio-d",
+      district: "Beauty",
+      title: "Studio D",
+      description: "Website, Branding und Terminbuchung für ein Beauty-Studio.",
+    },
+  ]}
+  cols={3}
+  ctaLabel="Alle Projekte ansehen"
+  ctaHref="/projekte"
+  className="pt-0"
+/>
 
   <GradientDivider />
 

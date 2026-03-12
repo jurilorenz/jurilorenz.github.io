@@ -6,6 +6,9 @@ import SectionTitle from "../SectionTitle.astro"
 import GradientDivider from "../GradientDivider.astro"
 import TextSection from "../TextSection.astro"
 import FinalSection from "../FinalSection.astro"
+import InfoBanner from "../InfoBanner.astro"
+import ProjectCardsGrid from "../ProjectCardsGrid.astro"
+
 ---
 
 <div class="project-component">
@@ -82,6 +85,46 @@ introText="Für Mixto Verde wurde eine komplette Restaurant-Website umgesetzt �
       description="Perfekte Darstellung auf Smartphones – schnell, übersichtlich und verkaufsstark."
     />
   </div>
+
+  <InfoBanner>
+  Dieses Projekt zeigt, wie <strong>Webdesign in München</strong> in der Praxis aussieht –
+  mit Fokus auf Struktur, Sichtbarkeit und Conversion für lokale Unternehmen.
+  Mehr dazu auf der Seite
+  <a
+    href="/webdesign-in-der-naehe-muenchen/"
+    class="underline underline-offset-4 decoration-2 hover:text-white transition"
+  >
+    Webdesign in München
+  </a>.
+</InfoBanner>
+
+<ProjectCardsGrid
+  title="Ähnliche Projekte"
+  items={[
+    {
+      href: "/projekte/bavarian-ice-roll",
+      district: "Gastronomie",
+      title: "Bavarian Ice Roll",
+      description: "Event-Website für Catering und Food-Events mit Anfrageformular.",
+    },
+    {
+      href: "/projekte/felix-rheindorf",
+      district: "Local Business",
+      title: "Felix Rheindorf",
+      description: "Website und Contentproduktion für einen Metzgermeister.",
+    },
+    {
+      href: "/projekte/bavaria-barbershop",
+      district: "Local Business",
+      title: "Bavaria Barbershop",
+      description: "Website für einen Barbershop mit Preisübersicht und Terminoption.",
+    },
+  ]}
+  cols={3}
+  ctaLabel="Alle Projekte ansehen"
+  ctaHref="/projekte"
+  className="pt-0"
+/>
 
   <GradientDivider />
 

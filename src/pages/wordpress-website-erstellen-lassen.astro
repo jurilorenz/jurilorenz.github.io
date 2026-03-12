@@ -11,6 +11,7 @@ import ImageBanner from "../components/ImageBanner.astro";
 import ComparisonSection from "../components/ComparisonSection.astro";
 import FinalCTASection from "../components/FinalCTASection.astro";
 import IconCardsSection from "../components/IconCardsSection.astro";
+import ProjectCardsGrid from "../components/ProjectCardsGrid.astro";
 
 const features = [
   { title: "Klares Angebot", description: "Besucher verstehen in Sekunden, was du anbietest – ohne Scroll-Marathon." },
@@ -18,6 +19,45 @@ const features = [
   { title: "WordPress Performance", description: "Sauberes Setup, Bildoptimierung & schlanke Komponenten – damit deine WordPress Website schnell lädt." },
   { title: "SEO-Basics", description: "Titel/Meta, Struktur (H1–H3), interne Links & Snippets – damit Google deine WordPress Seite sauber einordnet." },
 ];
+
+const wordpressProjects = [
+  {
+    href: "/projekte/immobilien-muenchen",
+    district: "Immobilien",
+    title: "Immobilien München",
+    description: "WordPress Website mit Branding und OnOffice-Integration.",
+  },
+  {
+    href: "/projekte/pizzeria-mixto-verde",
+    district: "Restaurant",
+    title: "Mixto Verde",
+    description: "Restaurant-Website mit Reservierung, SEO und Fotoshooting.",
+  },
+  {
+    href: "/projekte/studio-d",
+    district: "Beauty",
+    title: "Studio D",
+    description: "Website, Branding und Planity-Integration für einen Salon.",
+  },
+  {
+    href: "/projekte/akam-reinigung",
+    district: "Dienstleistung",
+    title: "Akam Reinigung",
+    description: "Klare WordPress Website für lokale Sichtbarkeit und Anfragen.",
+  },
+  {
+    href: "/projekte/wordpress-website-zaunbau-seattle",
+    district: "Handwerk",
+    title: "Skillful Fence",
+    description: "WordPress Website für ein Handwerksunternehmen mit klarer Struktur.",
+  },
+  {
+    href: "/projekte/atelier-yu-le-ksa-muenchen-website",
+    district: "Atelier",
+    title: "Atelier YU-LE-KSA",
+    description: "Elegante WordPress Website mit Galerie und lokaler SEO-Basis.",
+  },
+]
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -214,12 +254,23 @@ die Vertrauen aufbaut, sichtbar ist und langfristig mit deinem Business mitwäch
   imgAlt="WordPress Website mit individuell produzierten Fotos und Video-Content"
   caption="Beispielprojekt: Konzeption, Content-Produktion und WordPress-Umsetzung aus einer Hand."
 
-  bottomText={`<p>Ob neues Unternehmen oder Relaunch: Du brauchst keinen fertigen Content-Ordner, um zu starten. Wir entwickeln gemeinsam eine klare Struktur – und ich kümmere mich auf Wunsch um passende Texte, Bildmaterial oder Video-Elemente.</p>
+  bottomText={`<p>Ob neues Unternehmen oder <a href="/website-relaunch-redesign" class="underline underline-offset-4">Relaunch</a>: Du brauchst keinen fertigen Content-Ordner, um zu starten. Wir entwickeln gemeinsam eine klare Struktur – und ich kümmere mich auf Wunsch um passende Texte, Bildmaterial oder Video-Elemente.</p>
 
 <p><strong>Das Ziel:</strong> Eine performante WordPress Website, die Vertrauen aufbaut, professionell wirkt und Besucher in Anfragen verwandelt.</p>`}
 
   ctaLabel="Projekt besprechen"
   ctaHref="/kontakt"
+/>
+
+<ProjectCardsGrid
+  title="WordPress-Projekte aus der Praxis"
+  intro="Diese Referenzen zeigen, wie unterschiedlich WordPress Websites aufgebaut sein können – je nach Branche, Zielgruppe und Conversion-Ziel."
+  items={wordpressProjects}
+  cols={3}
+afterText="Du möchtest mehr Beispiele sehen? In meinem Portfolio findest du weitere Projekte aus verschiedenen Branchen."
+  ctaLabel="Alle Projekte ansehen"
+  ctaHref="/projekte"
+  className="pt-0"
 />
 
 <BarSection

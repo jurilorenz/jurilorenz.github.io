@@ -6,6 +6,9 @@ import SectionTitle from "../SectionTitle.astro"
 import GradientDivider from "../GradientDivider.astro"
 import TextSection from "../TextSection.astro"
 import FinalSection from "../FinalSection.astro"
+import InfoBanner from "../InfoBanner.astro"
+import ProjectCardsGrid from "../ProjectCardsGrid.astro"
+
 ---
 
 <div class="project-component">
@@ -76,6 +79,46 @@ import FinalSection from "../FinalSection.astro"
       description="Perfekte Darstellung auf allen Geräten – mit Fokus auf schnelle Ladezeiten und benutzerfreundliches Design."
     />
   </div>
+
+  <InfoBanner>
+  Dieses Projekt zeigt, wie <strong>Webdesign in München</strong> in der Praxis aussieht –
+  mit Fokus auf Struktur, Sichtbarkeit und Conversion für lokale Unternehmen.
+  Mehr dazu auf der Seite
+  <a
+    href="/webdesign-in-der-naehe-muenchen/"
+    class="underline underline-offset-4 decoration-2 hover:text-white transition"
+  >
+    Webdesign in München
+  </a>.
+</InfoBanner>
+
+<ProjectCardsGrid
+  title="Ähnliche Projekte"
+  items={[
+    {
+      href: "/projekte/immobilien-muenchen",
+      district: "Immobilien",
+      title: "Immobilien München",
+      description: "Website mit Branding und OnOffice-Integration.",
+    },
+    {
+      href: "/projekte/bauen-sanieren-website",
+      district: "Bau",
+      title: "AGBASA",
+      description: "Website für altersgerechtes Bauen und Sanieren.",
+    },
+    {
+      href: "/projekte/studio-d",
+      district: "Beauty",
+      title: "Studio D",
+      description: "Website, Branding und Terminbuchung.",
+    },
+  ]}
+  cols={3}
+  ctaLabel="Alle Projekte ansehen"
+  ctaHref="/projekte"
+  className="pt-0"
+/>
 
   <GradientDivider />
 

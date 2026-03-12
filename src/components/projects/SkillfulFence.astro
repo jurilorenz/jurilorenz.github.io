@@ -6,6 +6,9 @@ import SectionTitle from "../SectionTitle.astro"
 import GradientDivider from "../GradientDivider.astro"
 import TextSection from "../TextSection.astro"
 import FinalSection from "../FinalSection.astro"
+import InfoBanner from "../InfoBanner.astro"
+import ProjectCardsGrid from "../ProjectCardsGrid.astro"
+
 ---
 
 <div class="project-component">
@@ -112,6 +115,46 @@ Webdesign Referenz umgesetzt von Webentwickler aus München.
       description="Die Website wurde vollständig für mobile Nutzung optimiert – schnell, übersichtlich und mit klaren Handlungsaufforderungen."
     />
   </div>
+<InfoBanner>
+  Dieses Projekt zeigt, wie eine <strong>professionelle WordPress Website</strong>
+  in der Praxis aussehen kann – mit klarer Struktur, starker Nutzerführung und
+  einem Auftritt, der Vertrauen schafft.
+  Mehr dazu auf der Seite
+  <a
+    href="/wordpress-website-erstellen-lassen/"
+    class="underline underline-offset-4 decoration-2 hover:text-white transition"
+  >
+    Website erstellen lassen
+  </a>.
+</InfoBanner>
+
+<ProjectCardsGrid
+  title="Ähnliche Projekte"
+  items={[
+    {
+      href: "/projekte/1-line-architecture",
+      district: "Architektur",
+      title: "1-Line Architecture",
+      description: "Portfolio-Website für ein Architekturbüro aus München mit klarem, architektonischem Design.",
+    },
+    {
+      href: "/projekte/bauen-sanieren-website",
+      district: "Bau",
+      title: "AGBASA",
+      description: "Website für altersgerechtes Bauen und Sanieren mit klarer Struktur und lokaler Ausrichtung.",
+    },
+    {
+      href: "/projekte/akam-reinigung",
+      district: "Dienstleistung",
+      title: "Akam Reinigung",
+      description: "Website für lokale Sichtbarkeit und Anfragen.",
+    },
+  ]}
+  cols={3}
+  ctaLabel="Alle Projekte ansehen"
+  ctaHref="/projekte"
+  className="pt-0"
+/>
 
   <GradientDivider />
 

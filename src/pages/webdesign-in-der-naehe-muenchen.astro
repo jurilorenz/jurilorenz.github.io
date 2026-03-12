@@ -3,6 +3,8 @@ import MainLayout from "../layouts/MainLayout.astro"
 import IpadComponent from "../components/IpadComponent.astro"
 import HeroComponent from "../components/HeroComponent.astro"
 import FinalCTASection from "../components/FinalCTASection.astro"
+import ImageBanner from "../components/ImageBanner.astro";
+import ProjectCardsGrid from "../components/ProjectCardsGrid.astro";
 
 const jsonLd = [
   {
@@ -62,6 +64,46 @@ const jsonLd = [
     },
   },
 ]
+
+const munichProjects = [
+  {
+    href: "/projekte/immobilien-muenchen",
+    district: "Untersendling",
+    title: "Immobilien München",
+    description: "Makler-Website mit Branding und OnOffice-Integration.",
+  },
+  {
+    href: "/projekte/1-line-architecture",
+    district: "Sendling",
+    title: "1 Line Architecture",
+    description: "Architektur-Website mit klarer Struktur und starkem Auftritt.",
+  },
+  {
+    href: "/projekte/pizzeria-mixto-verde",
+    district: "Glockenbachviertel",
+    title: "Mixto Verde",
+    description: "Restaurant-Website mit SEO, Reservierung und Fotoshooting.",
+  },
+  {
+    href: "/projekte/atelier-yu-le-ksa-muenchen-website",
+    district: "Maxvorstadt",
+    title: "Atelier YU-LE-KSA",
+    description: "Elegante Atelier-Website mit Galerie und lokaler SEO-Basis.",
+  },
+  {
+    href: "/projekte/pflegedienst-muenchen-website",
+    district: "Freiham",
+    title: "BavarisPro",
+    description: "Pflegedienst-Website mit Recruiting-Landingpage.",
+  },
+  {
+    href: "/projekte/studio-d",
+    district: "Obersendling",
+    title: "Studio D",
+    description: "Website und Branding für einen Friseursalon in München.",
+  },
+]
+
 ---
 
 <MainLayout
@@ -177,7 +219,7 @@ const jsonLd = [
         <h3 class="text-3xl font-bold text-white mb-6">
           <strong>
             <a
-              href="/wordpress-website-erstellen-lassen"
+              href="/landingpage-erstellen-lassen"
               class="underline underline-offset-4 hover:text-purple-200 transition"
             >
               Landingpage erstellen
@@ -205,12 +247,12 @@ const jsonLd = [
               href="/website-optimieren-muenchen"
               class="underline underline-offset-4 hover:text-purple-200 transition"
             >
-              Website Redesign & Optimierung
+              Website-Optimierung & SEO
             </a>
           </strong>
         </h3>
         <p class="text-lg text-gray-300 leading-relaxed">
-          Ich <strong>optimiere oder redesign</strong> deine Website für <span
+          Ich <strong>optimiere </strong> oder <a href="/website-relaunch-redesign" class="underline underline-offset-4">redesign</a> deine Website für <span
             class="underline-animation">schnellere Ladezeiten</span
           > und bessere Google-Sichtbarkeit. Das Ergebnis: mehr Reichweite, ein moderner
           Auftritt und deutlich <strong>mehr Anfragen über deine Website</strong
@@ -273,7 +315,7 @@ const jsonLd = [
 
         <p class="text-xl md:text-2xl mt-8">
           Du willst eine <strong>Landingpage</strong> oder eine
-          <strong>Website erstellen lassen</strong>? Als <strong
+          <a href="/wordpress-website-erstellen-lassen" class="underline underline-offset-4">Website erstellen lassen</a>? Als <strong
             >Webdesigner & Webentwickler</strong
           > liefere ich
           <strong>responsive Webdesign</strong> – präzise umgesetzt für Selbstständige
@@ -377,7 +419,7 @@ const jsonLd = [
     </div>
 
     <!-- CTA-Karte (ohne Preise) -->
-    <div class="max-w-6xl mx-auto px-6 md:px-0 mt-8">
+    <div class="max-w-6xl mx-auto px-6 md:px-0 mt-8 mb-24">
       <div
         class="relative bg-[#13132a] p-6 md:p-8 rounded-xl border border-gray-700 text-center shadow-[0px_0px_35px_rgba(147,112,219,0.35)]"
       >
@@ -400,8 +442,34 @@ const jsonLd = [
       </div>
     </div>
 
+<ImageBanner
+  imgSrc="/images/muenchen-frauenkirche-altstadt.webp"
+  imgAlt="München Altstadt mit Frauenkirche – Blick über die Stadt"
+  eyebrow="Webdesign aus München"
+  title="Warum lokale Erfahrung beim Webdesign entscheidend ist"
+  text={`
+    <p>Eine Website für ein Unternehmen in München funktioniert nicht isoliert. Sie steht immer im Zusammenhang mit <strong>Google-Suche, Google Business Profil, <a href="/google-bewertungen-verbessern" class="underline underline-offset-4">Google Bewertungen</a> und lokaler Sichtbarkeit</strong>.</p>
+
+    <p>Wer hier erfolgreich sein möchte, muss verstehen, wie Menschen in München nach Dienstleistungen suchen, wie Google Maps funktioniert und welche lokalen Plattformen oder Branchenportale die Sichtbarkeit zusätzlich stärken.</p>
+
+    <p>Als <strong>Webdesigner aus München</strong> entwickle ich Websites deshalb immer im Zusammenspiel mit lokaler SEO, Struktur und Nutzerführung. Website, Google Präsenz und Auffindbarkeit gehören zusammen.</p>
+  `}
+  ctaLabel="Projekt besprechen"
+  ctaHref="/kontakt"
+/>
+
+<ProjectCardsGrid
+  title="Webdesign-Projekte aus München"
+  intro="Echte Referenzen aus München zeigen, wie modernes Webdesign, klare Struktur und lokale Ausrichtung zusammenwirken."
+  items={munichProjects}
+  cols={3}
+  afterText="Du möchtest mehr Beispiele aus München? Dann wirf einen Blick in mein Portfolio mit Referenzen aus München und darüber hinaus."  ctaLabel="Alle Projekte ansehen"
+  ctaHref="/projekte"
+  className="pt-0"
+/>
+
     <h2
-      class="text-center text-3xl md:text-4xl font-extrabold mt-36 mb-2 mx-2"
+      class="text-center text-3xl md:text-4xl font-extrabold mt-2 mb-2 mx-2"
       style="line-height: 1.3;"
     >
       Keine Zeit für Website-Projekte? Ich übernehme das für dich.

@@ -9,6 +9,9 @@ import SectionTitle from "../SectionTitle.astro"
 import GradientDivider from "../GradientDivider.astro"
 import TextSection from "../TextSection.astro"
 import IpadComponent from "../IpadComponent.astro"
+import InfoBanner from "../InfoBanner.astro"
+import ProjectCardsGrid from "../ProjectCardsGrid.astro"
+
 ---
 
 <div class="project-component">
@@ -82,6 +85,46 @@ import IpadComponent from "../IpadComponent.astro"
     imgSrc="/images/projects/bavarian-ice-roll-desktop-berries.webp"
     imgAlt="Ice Roll Galerie auf dem Tablet"
   />
+
+    <InfoBanner>
+  Dieses Projekt zeigt, wie eine <strong>Conversion‑optimierte Landingpage</strong> in der Praxis aussehen kann –
+  entwickelt für Kampagnen, Events und gezielte Kundenanfragen.
+  Mehr dazu auf der Seite
+  <a
+    href="/landingpage-erstellen-lassen/"
+    class="underline underline-offset-4 decoration-2 hover:text-white transition"
+  >
+    Landingpage erstellen lassen
+  </a>.
+</InfoBanner>
+
+<ProjectCardsGrid
+  title="Ähnliche Projekte"
+  items={[
+    {
+      href: "/projekte/pizzeria-mixto-verde",
+      district: "Gastronomie",
+      title: "Mixto Verde",
+      description: "Restaurant-Website mit Reservierung, SEO und Fotoshooting.",
+    },
+    {
+      href: "/projekte/bavaria-barbershop",
+      district: "Local Business",
+      title: "Bavaria Barbershop",
+      description: "Website für einen Barbershop mit Preisübersicht und Terminoption.",
+    },
+    {
+      href: "/projekte/akam-reinigung",
+      district: "Dienstleistung",
+      title: "Akam Reinigung",
+      description: "Website für lokale Sichtbarkeit und neue Kundenanfragen.",
+    },
+  ]}
+  cols={3}
+  ctaLabel="Alle Projekte ansehen"
+  ctaHref="/projekte"
+  className="pt-0"
+/>
 
   <GradientDivider />
 

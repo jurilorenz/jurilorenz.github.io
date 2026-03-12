@@ -1,9 +1,13 @@
 ---
 import ContentSection from "../ContentSection.astro"
-import SectionTitle from "../SectionTitle.astro"
+import InfoBanner from "../InfoBanner.astro"
 import GradientDivider from "../GradientDivider.astro"
 import TextSection from "../TextSection.astro"
 import FinalSection from "../FinalSection.astro"
+import FeatureCard from "../FeatureCard.astro"
+import SectionTitle from "../SectionTitle.astro"
+import ProjectCardsGrid from "../ProjectCardsGrid.astro"
+
 ---
 
 <div class="project-component">
@@ -46,6 +50,73 @@ import FinalSection from "../FinalSection.astro"
     secondText="So entsteht eine direkte Verbindung zwischen Social Media und Shopping-Erlebnis."
     reverse={true}
   />
+
+  <SectionTitle title="Besondere Features" />
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-24 mb-32">
+
+  <FeatureCard
+    title="Shopify Redesign mit klarer Struktur"
+    description="Der bestehende Shop wurde vollständig überarbeitet – mit moderner Navigation, klarer Seitenstruktur und besserer Nutzerführung."
+  />
+
+  <FeatureCard
+    title="Website Relaunch für mehr Conversion"
+    description="Produktseiten, Call-to-Actions und Layout wurden gezielt optimiert, damit Besucher schneller zum Kauf gelangen."
+  />
+
+  <FeatureCard
+    title="Optimierte Mobile Experience"
+    description="Der Relaunch wurde stark auf mobile Nutzung ausgerichtet – mit klarer Navigation, großen Bildern und intuitiver Bedienung."
+  />
+
+  <FeatureCard
+    title="Stärkeres Branding im Online Shop"
+    description="Farben, Typografie und Bildsprache wurden vereinheitlicht, um einen konsistenten und hochwertigen Markenauftritt zu schaffen."
+  />
+
+</div>
+
+<InfoBanner>
+  Dieses Projekt zeigt, wie ein <strong>Shopify-Redesign</strong> in der Praxis
+  aussehen kann – mit moderner Gestaltung, klarer Struktur und optimierten
+  Produktseiten für mehr Conversion.
+  Mehr dazu auf der Seite
+  <a
+    href="/website-relaunch-redesign/"
+    class="underline underline-offset-4 decoration-2 hover:text-white transition"
+  >
+    Website-Relaunch & Redesign
+  </a>.
+</InfoBanner>
+
+<ProjectCardsGrid
+  title="Ähnliche Projekte"
+  items={[
+    {
+      href: "/projekte/louna-jewelry",
+      district: "E-Commerce",
+      title: "Louna Jewelry",
+      description: "Online-Shop für handgefertigten Schmuck mit elegantem Design.",
+    },
+    {
+      href: "/projekte/anna-menci",
+      district: "Fashion",
+      title: "Anna Menci",
+      description: "Eleganter Fashion Online-Shop mit klarer Markenpräsentation.",
+    },
+    {
+      href: "/projekte/sweet-berry-box",
+      district: "E-Commerce",
+      title: "SweetBerryBox",
+      description: "Online-Shop für Geschenkboxen mit modernem Design und klarer Struktur.",
+    },
+  ]}
+  cols={3}
+  ctaLabel="Alle Projekte ansehen"
+  ctaHref="/projekte"
+  className="pt-0"
+/>
 
   <GradientDivider />
 

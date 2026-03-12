@@ -6,6 +6,9 @@ import GradientDivider from "../GradientDivider.astro"
 import TextSection from "../TextSection.astro"
 import FinalSection from "../FinalSection.astro"
 import IpadComponent from "../IpadComponent.astro"
+import InfoBanner from "../InfoBanner.astro"
+import ProjectCardsGrid from "../ProjectCardsGrid.astro"
+
 ---
 
 <div class="project-component">
@@ -86,6 +89,46 @@ import IpadComponent from "../IpadComponent.astro"
   description="Für diesen Shop wurde eine professionelle Fotosession organisiert – so kommen die Schmuckstücke auf jeder Seite optimal zur Geltung, egal ob am Handy oder Computer."
 />
   </div>
+<InfoBanner>
+  Dieses Projekt zeigt, wie ein moderner <strong>Online-Shop</strong> in der Praxis
+  aussehen kann – mit klarer Struktur, starker Produktpräsentation und
+  mobile-optimierter Nutzerführung.
+  Mehr dazu auf der Seite
+  <a
+    href="/online-shop-erstellen-lassen/"
+    class="underline underline-offset-4 decoration-2 hover:text-white transition"
+  >
+    Online-Shop erstellen lassen
+  </a>.
+</InfoBanner>
+
+<ProjectCardsGrid
+  title="Ähnliche Projekte"
+  items={[
+    {
+      href: "/projekte/anna-menci",
+      district: "Fashion",
+      title: "Anna Menci",
+      description: "Eleganter Fashion Online-Shop mit klarer Markenpräsentation.",
+    },
+    {
+      href: "/projekte/kleines-stadthaus",
+      district: "E-Commerce",
+      title: "Kleines Stadthaus",
+      description: "Shopify-Redesign für einen Fashion-Online-Shop.",
+    },
+    {
+      href: "/projekte/sweet-berry-box",
+      district: "E-Commerce",
+      title: "SweetBerryBox",
+      description: "Online-Shop für Geschenkboxen mit modernem Design.",
+    },
+  ]}
+  cols={3}
+  ctaLabel="Alle Projekte ansehen"
+  ctaHref="/projekte"
+  className="pt-0"
+/>
 
   <GradientDivider />
 

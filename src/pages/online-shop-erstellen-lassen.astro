@@ -5,7 +5,7 @@ import InfoCard from "../components/InfoCard.astro";
 import PrimaryButton from "../components/PrimaryButton.astro"
 import FinalCTASection from "../components/FinalCTASection.astro"
 import ComparisonSection from "../components/ComparisonSection.astro"
-
+import ProjectCardsGrid from "../components/ProjectCardsGrid.astro"
 
 
 const offers = [
@@ -26,6 +26,33 @@ const offers = [
     text: `Über 70 % der Nutzer kaufen mobil. Ich entwickle deinen Shop <strong>mobile-first</strong> – perfekt auf Smartphone, Tablet & Desktop. Damit keine Verkäufe verloren gehen.`,
   },
 ];
+
+const shopProjects = [
+  {
+    href: "/projekte/sweet-berry-box",
+    district: "Dessert / Food",
+    title: "Sweet Berry Box",
+    description: "WooCommerce Shop für Geschenk- und Dessertboxen.",
+  },
+  {
+    href: "/projekte/louna-jewelry",
+    district: "Schmuck",
+    title: "Louna Jewelry",
+    description: "Eleganter Online Shop mit Storytelling und mobilem Fokus.",
+  },
+  {
+    href: "/projekte/anna-menci",
+    district: "Fashion",
+    title: "Anna Menci",
+    description: "Online Shop für Mode mit klarer Produktpräsentation.",
+  },
+  {
+    href: "/projekte/kleines-stadthaus",
+    district: "Fashion Boutique",
+    title: "Kleines Stadthaus",
+    description: "Shopify-Redesign mit stärkerer Struktur und Conversion-Fokus.",
+  },
+]
 
 const pricingFactors = [
   {
@@ -347,6 +374,17 @@ Was ich biete
   `}
   ctaLabel="Passendes System finden"
   ctaHref="/kontakt"
+/>
+
+<ProjectCardsGrid
+  title="Beispiele für Online-Shops aus der Praxis"
+  intro="Diese Projekte zeigen, wie unterschiedlich Online-Shops aufgebaut sein können – je nach Marke, Sortiment und Verkaufsziel."
+  items={shopProjects}
+  cols={2}
+  afterText="Du möchtest mehr Beispiele sehen? In meinem Portfolio findest du weitere Projekte aus verschiedenen Branchen."
+  ctaLabel="Alle Projekte ansehen"
+  ctaHref="/projekte"
+  className="pt-0"
 />
 
     <h2 class="text-center text-3xl md:text-4xl font-extrabold mt-24 mx-2" style="line-height: 1.25;">

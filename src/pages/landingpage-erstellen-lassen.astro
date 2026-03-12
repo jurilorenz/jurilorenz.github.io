@@ -10,6 +10,7 @@ import LongformSection from "../components/LongformSection.astro"
 import ImageBanner from "../components/ImageBanner.astro"
 import ComparisonSection from "../components/ComparisonSection.astro"
 import FinalCTASection from "../components/FinalCTASection.astro"
+import ProjectCardsGrid from "../components/ProjectCardsGrid.astro"
 
 const features = [
   {
@@ -31,6 +32,33 @@ const features = [
     title: "SEO-Basics",
     description:
       "Titel/Meta, Struktur (H1–H3), interne Links & Snippets – damit Google dich besser einordnet.",
+  },
+]
+
+const landingpageProjects = [
+  {
+    href: "/projekte/bauen-sanieren-website",
+    district: "Bau",
+    title: "AGBASA",
+    description: "Landingpage für altersgerechtes Bauen und Sanieren.",
+  },
+  {
+    href: "/projekte/akam-reinigung",
+    district: "Dienstleistung",
+    title: "Akam Reinigung",
+    description: "Klare Landingpage für lokale Sichtbarkeit und Anfragen.",
+  },
+  {
+    href: "/projekte/bavarian-ice-roll",
+    district: "Event",
+    title: "Bavarian Ice Roll",
+    description: "Landingpage für Events mit Anfragefokus.",
+  },
+  {
+    href: "/projekte/efimow-automobile",
+    district: "Automotive",
+    title: "Efimow Automobile",
+    description: "Landingpage mit klarer Struktur und starker Präsentation.",
   },
 ]
 
@@ -220,6 +248,17 @@ Statt Streuverlusten bekommst du eine klar strukturierte Seite, die dein Angebot
     ctaLabel="Landingpage Check starten"
     ctaHref="/kontakt"
   />
+
+  <ProjectCardsGrid
+  title="Beispiele für Landingpages aus der Praxis"
+  intro="Diese Projekte zeigen, wie Landingpages für unterschiedliche Branchen aufgebaut sein können – mit klarem Fokus auf Struktur, Sichtbarkeit und Anfragen."
+  items={landingpageProjects}
+  cols={2}
+  afterText="Du möchtest mehr Beispiele sehen? In meinem Portfolio findest du weitere Projekte aus verschiedenen Branchen."
+  ctaLabel="Alle Projekte ansehen"
+  ctaHref="/projekte"
+  className="pt-0"
+/>
 
   <BarSection
     eyebrow="Vertrauen"

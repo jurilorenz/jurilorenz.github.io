@@ -9,6 +9,9 @@ import SectionTitle from "../SectionTitle.astro"
 import GradientDivider from "../GradientDivider.astro"
 import TextSection from "../TextSection.astro"
 import IpadComponent from "../IpadComponent.astro"
+import InfoBanner from "../InfoBanner.astro"
+import ProjectCardsGrid from "../ProjectCardsGrid.astro"
+
 ---
 
 <div class="project-component">
@@ -77,6 +80,48 @@ import IpadComponent from "../IpadComponent.astro"
       description="Ein benutzerfreundlicher Kontaktbereich ermöglicht es Besuchern, direkt mit der Künstlerin in Kontakt zu treten – sei es für Anfragen, Informationen oder persönliche Gespräche."
     />
   </div>
+
+  <InfoBanner>
+  Dieses Projekt zeigt, wie eine <strong>moderne Landingpage</strong> für
+  Künstler, Kreative oder persönliche Marken aufgebaut sein kann – mit
+  klarem Design, schneller Performance und einer starken visuellen
+  Präsentation.
+  Mehr dazu auf der Seite
+  <a
+    href="/landingpage-erstellen-lassen/"
+    class="underline underline-offset-4 decoration-2 hover:text-white transition"
+  >
+    Landingpage erstellen lassen
+  </a>.
+</InfoBanner>
+
+<ProjectCardsGrid
+  title="Ähnliche Projekte"
+  items={[
+    {
+      href: "/projekte/studio-d",
+      district: "Beauty",
+      title: "Studio D",
+      description: "Website, Branding und Terminbuchung für ein Beauty-Studio.",
+    },
+    {
+      href: "/projekte/louna-jewelry",
+      district: "E-Commerce",
+      title: "Louna Jewelry",
+      description: "Online-Shop für handgefertigten Schmuck mit elegantem Design.",
+    },
+    {
+      href: "/projekte/sweet-berry-box",
+      district: "E-Commerce",
+      title: "SweetberryBox",
+      description: "Online-Shop für Geschenkboxen mit modernem Design und klarer Struktur.",
+    },
+  ]}
+  cols={3}
+  ctaLabel="Alle Projekte ansehen"
+  ctaHref="/projekte"
+  className="pt-0"
+/>
 
   <GradientDivider />
 

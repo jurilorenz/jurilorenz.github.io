@@ -1,0 +1,88 @@
+---
+export interface ProjectCardItem {
+  href: string
+  district: string
+  title: string
+  description: string
+}
+
+export interface Props {
+  title: string
+  intro?: string
+  items: ProjectCardItem[]
+  className?: string
+  cols?: 2 | 3
+  afterText?: string
+  ctaLabel?: string
+  ctaHref?: string
+}
+
+const {
+  title,
+  intro = "",
+  items = [],
+  className = "",
+  cols = 3,
+  afterText = "",
+  ctaLabel = "",
+  ctaHref = "",
+} = Astro.props
+
+const gridColsClass = cols === 3 ? "md:grid-cols-2 xl:grid-cols-3" : "md:grid-cols-2"
+---
+
+<section class={`section-container section-pad-compact ${className}`.trim()}>
+  
+  <h2 class="mw-h2-compact text-center mb-6">{title}</h2>
+
+  {intro && (
+    <p class="mw-lead text-center max-w-4xl mx-auto mb-12">
+      {intro}
+    </p>
+  )}
+
+  <div class={`grid grid-cols-1 ${gridColsClass} gap-6`}>
+    {items.map((item) => (
+      <a
+        href={item.href}
+        class="mw-glass-card p-6 md:p-7 block"
+      >
+        <div class="mw-topbar-gradient"></div>
+
+        <p class="mw-eyebrow text-purple-200 mb-3">
+          {item.district}
+        </p>
+
+        <h3 class="text-xl md:text-2xl font-bold text-gray-100 mb-3 leading-snug">
+          {item.title}
+        </h3>
+
+        <p class="mw-body text-gray-300">
+          {item.description}
+        </p>
+
+        <p class="mt-4 font-semibold underline underline-offset-4">
+          Projekt ansehen
+        </p>
+      </a>
+    ))}
+  </div>
+
+  {(afterText || (ctaLabel && ctaHref)) && (
+    <div class="mt-10 text-center max-w-4xl mx-auto">
+
+      {afterText && (
+        <p class="mw-body text-gray-200 mb-6">
+          {afterText}
+        </p>
+      )}
+
+      {ctaLabel && ctaHref && (
+        <a href={ctaHref} class="mw-primary-btn">
+          {ctaLabel}
+        </a>
+      )}
+
+    </div>
+  )}
+</section>

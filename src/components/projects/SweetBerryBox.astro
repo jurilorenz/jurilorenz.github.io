@@ -6,6 +6,9 @@ import GradientDivider from "../GradientDivider.astro"
 import TextSection from "../TextSection.astro"
 import FinalSection from "../FinalSection.astro"
 import IpadComponent from "../IpadComponent.astro"
+import InfoBanner from "../InfoBanner.astro"
+import ProjectCardsGrid from "../ProjectCardsGrid.astro"
+
 ---
 
 <div class="project-component">
@@ -80,6 +83,48 @@ import IpadComponent from "../IpadComponent.astro"
   description="Statt Shopify wurde bewusst auf WordPress + WooCommerce gesetzt – ohne Abo, mit voller Kontrolle. So bleibt das Unternehmen unabhängig und spart dauerhaft Kosten."
 />
   </div>
+
+  <InfoBanner>
+    Dieses Projekt zeigt, wie ein moderner <strong>Online‑Shop mit WordPress und WooCommerce</strong>
+    aufgebaut werden kann – mit Fokus auf Design, Nutzerführung und Conversion.
+    
+    Mehr darüber erfährst du auf der Seite
+    <a
+      href="/online-shop-erstellen-lassen/"
+      class="underline underline-offset-4 decoration-2 hover:text-white transition"
+    >
+      Online‑Shop erstellen lassen
+    </a>,
+    wo ich den Aufbau, die Technik und die Vorteile solcher Shops genauer erkläre.
+  </InfoBanner>
+
+<ProjectCardsGrid
+  title="Ähnliche Projekte"
+  items={[
+    {
+      href: "/projekte/louna-jewelry",
+      district: "E-Commerce",
+      title: "Louna Jewelry",
+      description: "Online-Shop für handgefertigten Schmuck mit elegantem Design.",
+    },
+    {
+      href: "/projekte/kleines-stadthaus",
+      district: "E-Commerce",
+      title: "Kleines Stadthaus",
+      description: "Shopify-Redesign für einen Fashion-Online-Shop.",
+    },
+    {
+      href: "/projekte/anna-menci",
+      district: "Fashion",
+      title: "Anna Menci",
+      description: "Eleganter Fashion-Online-Shop mit klarer Markenpräsentation.",
+    },
+  ]}
+  cols={3}
+  ctaLabel="Alle Projekte ansehen"
+  ctaHref="/projekte"
+  className="pt-0"
+/>
 
   <GradientDivider />
 
