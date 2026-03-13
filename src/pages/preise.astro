@@ -2,6 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro"
 import IpadComponent from "../components/IpadComponent.astro"
 import RoiHighlight from "../components/RoiHighlight.astro"
+import PriceCalculator from "../components/PriceCalculator.astro"
 
 const jsonLd = [
   {
@@ -79,29 +80,32 @@ const jsonLd = [
 
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
+
+
   <!-- Background with gradient -->
   <div
     class="min-h-screen bg-gradient-to-b from-[#090a1a] to-[#290065] text-white text-center flex flex-col items-center justify-center"
   >
-    <!-- Title -->
+    <!-- Title 
     <h1
       class="text-center text-4xl md:text-6xl font-bold text-gray-100 drop-shadow-lg mx-4 mt-12 md:mt-36 mb-12 md:mb-16 max-w-5xl"
     >
       Website erstellen lassen – Kosten & Preise
     </h1>
+-->
+    <PriceCalculator />
 
-    <!-- Pricing Info Section -->
+    <!-- Pricing Info Section 
     <h2
       class="text-center text-xl md:text-3xl font-bold text-gray-300 -mt-4 mb-12 max-w-5xl mx-auto"
     >
       Wieviel investierst du in deinen Online-Erfolg?
     </h2>
 
-    <!-- Pricing Cards -->
+
     <div
       class="grid grid-cols-1 md:grid-cols-3 gap-16 px-4 pb-24 md:px-4 max-w-7xl mx-auto"
     >
-      <!-- Start-Up Package -->
       <div
         class="relative bg-[#1b1b33] p-6 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
       >
@@ -152,7 +156,6 @@ const jsonLd = [
         </div>
       </div>
 
-      <!-- Business Package -->
       <div
         class="relative bg-[#1b1b33] p-6 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
       >
@@ -209,7 +212,6 @@ const jsonLd = [
         </div>
       </div>
 
-      <!-- Big Business Package -->
       <div
         class="relative bg-[#1b1b33] p-6 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
       >
@@ -284,7 +286,7 @@ const jsonLd = [
         </div>
       </div>
     </div>
-
+-->
     <!-- Sektion: Was kostet eine Website wirklich? -->
     <section
       class="w-11/12 md:w-10/12 lg:w-8/12 mx-auto text-centr text-gray-200 mb-24"

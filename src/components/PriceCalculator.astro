@@ -1,0 +1,945 @@
+---
+const includedItems = [
+  { id: "concept", label: "Konzept & Design", price: 650 },
+  { id: "setup", label: "Technische Einrichtung", price: 200 },
+  { id: "mobile", label: "Mobil optimiert", price: 300 },
+  { id: "form", label: "Kontaktformular", price: 95 },
+  { id: "legal", label: "Impressum & Datenschutz (DSGVO‑Basis)", price: 190 },
+];
+
+const basePackagePrice = includedItems.reduce((sum, item) => sum + item.price, 0);
+
+const extras = [
+  {
+    id: "calendar",
+    label: "Kalender / Termine",
+    price: 190,
+  },
+  {
+    id: "multi",
+    label: "Mehrsprachigkeit",
+    price: 190,
+  },
+  {
+    id: "gmb",
+label: "Google Maps Profil erstellen / optimieren",
+    price: 190,
+  },
+  {
+    id: "shop",
+    label: "Online-Shop",
+    price: 390,
+    from: true,
+  },
+];
+
+// --- Removed old seoOptions block ---
+
+const perPagePrice = 90;
+
+const seoPagePrice = 190;
+const keywordResearchPrice = 190;
+const googleSetupPrice = 190;
+
+const minSeoPages = 1;
+const maxSeoPages = 10;
+const initialSeoPages = 1;
+
+const minPages = 1;
+const maxPages = 20;
+const initialPages = 4;
+
+const minProducts = 1;
+const maxProducts = 100;
+const initialProducts = 10;
+const shopBasePrice = 390;
+const productPrice = 20;
+const paymentIntegrationPrice = 90;
+---
+
+<section class="section-container section-pad">
+  <div class="text-center max-w-4xl mx-auto mb-14">
+    <p class="mw-eyebrow mb-4">Preise & Projektumfang</p>
+    <h2 class="mw-h2 mb-6">Website-Kalkulator für dein Projekt</h2>
+    <p class="mw-body max-w-3xl mx-auto">
+      Hier bekommst du eine einfache Orientierung, wie sich Seitenanzahl,
+      Google-Sichtbarkeit und optionale Funktionen auf dein Website-Projekt
+      auswirken.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 xl:grid-cols-12 gap-8 items-start">
+    <!-- LEFT -->
+    <div class="xl:col-span-7">
+      <div class="mw-glass-card relative p-6 md:p-8 rounded-[24px] overflow-hidden">
+        <div class="mw-topbar-gradient"></div>
+
+        <div class="mb-8">
+          <h3 class="text-2xl md:text-3xl font-extrabold text-gray-100 mb-2">
+            Website Optionen
+          </h3>
+
+        </div>
+
+        <!-- Pages -->
+        <div class="mw-glass-card p-5 md:p-6 rounded-[20px] mb-8">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-5">
+            <div>
+              <div class="text-gray-100 text-xl font-bold">Anzahl der Seiten</div>
+            </div>
+            <div class="text-right">
+              <div class="flex items-baseline gap-2">
+                <div class="text-3xl md:text-4xl font-extrabold mw-gradient-text">
+                  <span id="pages-count">{initialPages}</span>
+                </div>
+                <div id="pages-count-label" class="text-gray-300 text-xl uppercase tracking-wide">Seiten</div>
+              </div>
+            </div>
+          </div>
+
+          <input
+            id="pages-range"
+            type="range"
+            min={minPages}
+            max={maxPages}
+            value={initialPages}
+            step="1"
+            class="w-full accent-indigo-500 cursor-pointer"
+          />
+        </div>
+
+        <!-- Google Visibility -->
+
+        <label class="extra-row mb-6" for="google-seo-toggle">
+          <div class="extra-row__left">
+            <input id="google-seo-toggle" type="checkbox" class="extra-checkbox" />
+            <div>
+              <div class="extra-row__label">Google-Sichtbarkeit (SEO)</div>
+              <div class="extra-row__hint">Struktur, Keywords und technische Vorbereitung für Google.</div>
+            </div>
+          </div>
+        </label>
+
+        <div id="seo-options" class="shop-options hidden mt-2">
+
+          <div class="mw-glass-card p-5 md:p-6 rounded-[20px] mb-4">
+
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-5">
+
+              <div>
+                <div class="text-gray-100 text-xl font-bold">SEO-optimierte Seiten</div>
+                <p class="text-gray-300 text-base mt-1">
+                  Seiten, die gezielt für Suchanfragen optimiert werden.
+                </p>
+              </div>
+
+              <div class="text-right">
+                <div class="text-3xl md:text-4xl font-extrabold mw-gradient-text">
+                  <span id="seo-pages-count">{initialSeoPages}</span>
+                </div>
+                <div class="text-gray-300 text-sm uppercase tracking-wide">Seiten</div>
+              </div>
+
+            </div>
+
+            <input
+              id="seo-pages-range"
+              type="range"
+              min={minSeoPages}
+              max={maxSeoPages}
+              value={initialSeoPages}
+              step="1"
+              class="w-full accent-indigo-500 cursor-pointer"
+            />
+
+          </div>
+
+          <div class="space-y-3">
+
+            <label class="extra-row" for="keyword-research">
+              <div class="extra-row__left">
+
+                <input
+                  id="keyword-research"
+                  type="checkbox"
+                  class="seo-checkbox"
+                  data-seo-extra-price={keywordResearchPrice}
+                />
+
+                <div>
+                  <div class="extra-row__label">Keyword-Recherche</div>
+                  <div class="extra-row__hint">Analyse relevanter Suchbegriffe für dein Angebot.</div>
+                </div>
+
+              </div>
+
+              <div class="extra-row__price">{keywordResearchPrice} €</div>
+
+            </label>
+
+            <label class="extra-row" for="google-setup">
+
+              <div class="extra-row__left">
+
+                <input
+                  id="google-setup"
+                  type="checkbox"
+                  class="seo-checkbox"
+                  data-seo-extra-price={googleSetupPrice}
+                />
+
+                <div>
+                  <div class="extra-row__label">Google-Einrichtung</div>
+                  <div class="extra-row__hint">RankMath, Sitemap, Robots und Search Console.</div>
+                </div>
+
+              </div>
+
+              <div class="extra-row__price">{googleSetupPrice} €</div>
+
+            </label>
+
+          </div>
+
+        </div>
+
+        <div class="space-y-3">
+          {extras.map((extra) => (
+            <label class="extra-row" for={`extra-${extra.id}`}>
+              <div class="extra-row__left">
+                <input
+                  id={`extra-${extra.id}`}
+                  type="checkbox"
+                  class="extra-checkbox"
+                  data-extra-id={extra.id}
+                  data-extra-label={extra.label}
+                  data-extra-price={extra.price}
+                />
+                <div>
+                  <div class="extra-row__label">{extra.label}</div>
+
+                </div>
+              </div>
+              <div class="extra-row__price">
+                {extra.from ? "ab " : ""}{extra.price} €
+              </div>
+            </label>
+          ))}
+        </div>
+
+        <div id="shop-options" class="shop-options hidden mt-6">
+          <div class="mw-glass-card p-5 md:p-6 rounded-[20px] mb-4">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-5">
+              <div>
+                <div class="text-gray-100 text-xl font-bold">Anzahl der Produkte</div>
+                <p class="text-gray-300 text-base mt-1">
+                  Wähle grob, wie viele Produkte in deinem Shop starten sollen.
+                </p>
+              </div>
+              <div class="text-right">
+                <div class="text-3xl md:text-4xl font-extrabold mw-gradient-text">
+                  <span id="products-count">{initialProducts}</span>
+                </div>
+                <div class="text-gray-300 text-sm uppercase tracking-wide">Produkte</div>
+              </div>
+            </div>
+
+            <input
+              id="products-range"
+              type="range"
+              min={minProducts}
+              max={maxProducts}
+              value={initialProducts}
+              step="1"
+              class="w-full accent-indigo-500 cursor-pointer"
+            />
+          </div>
+
+          <div class="space-y-3">
+            <label class="extra-row" for="paypal-integration">
+              <div class="extra-row__left">
+                <input
+                  id="paypal-integration"
+                  type="checkbox"
+                  class="shop-checkbox"
+                  data-shop-extra-id="paypal"
+                  data-shop-extra-label="PayPal-Integration"
+                  data-shop-extra-price={paymentIntegrationPrice}
+                />
+                <div>
+                  <div class="extra-row__label">PayPal-Integration</div>
+                  <div class="extra-row__hint">Für Zahlungen per PayPal im Online-Shop.</div>
+                </div>
+              </div>
+              <div class="extra-row__price">{paymentIntegrationPrice} €</div>
+            </label>
+
+            <label class="extra-row" for="stripe-integration">
+              <div class="extra-row__left">
+                <input
+                  id="stripe-integration"
+                  type="checkbox"
+                  class="shop-checkbox"
+                  data-shop-extra-id="stripe"
+                  data-shop-extra-label="Stripe-Integration"
+                  data-shop-extra-price={paymentIntegrationPrice}
+                />
+                <div>
+                  <div class="extra-row__label">Stripe-Integration</div>
+                  <div class="extra-row__hint">Für Kartenzahlungen und weitere Online-Zahlungsmethoden.</div>
+                </div>
+              </div>
+              <div class="extra-row__price">{paymentIntegrationPrice} €</div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="xl:col-span-5 xl:sticky xl:top-28">
+      <div class="mw-glass-card relative p-6 md:p-8 rounded-[24px] overflow-hidden">
+        <div class="mw-topbar-gradient"></div>
+
+        <div class="mb-2">
+          <h3 class="text-2xl md:text-3xl font-extrabold text-gray-100">
+            Preisübersicht
+          </h3>
+        </div>
+
+        <div class="summary-stack" id="summary-list">
+          <div class="summary-base-box">
+            <div class="summary-base-box__top">
+              <div>
+                <div class="summary-base-box__title">Startpaket Website</div>
+              </div>
+<div class="summary-base-box__price">
+  {basePackagePrice} €
+</div>            </div>
+
+            <ul class="summary-base-box__list">
+              {includedItems.map((item) => (
+                <li class="summary-base-box__item">{item.label}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="summary-item" id="pages-summary-row">
+            <div class="summary-item__left">
+              <span class="summary-item__label">
+                <span id="pages-summary-count">{initialPages}</span> <span id="pages-summary-label">Seiten</span>
+              </span>
+            </div>
+            <div class="summary-item__price" id="pages-summary-price">480,00 €</div>
+          </div>
+
+          <div class="summary-item hidden" id="seo-summary-row">
+            <div class="summary-item__left">
+              <span class="summary-item__label">
+                SEO-optimierte Seiten (<span id="seo-pages-summary-count">{initialSeoPages}</span>)
+              </span>
+            </div>
+            <div class="summary-item__price" id="seo-pages-summary-price">0,00 €</div>
+          </div>
+
+          <div class="summary-item hidden" id="keyword-summary-row">
+            <div class="summary-item__left">
+              <span class="summary-item__label">Keyword-Recherche</span>
+            </div>
+            <div class="summary-item__price">190,00 €</div>
+          </div>
+
+          <div class="summary-item hidden" id="google-summary-row">
+            <div class="summary-item__left">
+              <span class="summary-item__label">Google-Einrichtung</span>
+            </div>
+            <div class="summary-item__price">190,00 €</div>
+          </div>
+
+          <div class="summary-item hidden" id="shop-summary-row">
+            <div class="summary-item__left">
+              <span class="summary-item__label">
+                Online-Shop Basis mit <span id="products-summary-count">{initialProducts}</span> Produkten
+              </span>
+            </div>
+            <div class="summary-item__price" id="shop-summary-price">590,00 €</div>
+          </div>
+
+          <div class="summary-item hidden" id="paypal-summary-row">
+            <div class="summary-item__left">
+              <span class="summary-item__label">PayPal-Integration</span>
+            </div>
+            <div class="summary-item__price">90,00 €</div>
+          </div>
+
+          <div class="summary-item hidden" id="stripe-summary-row">
+            <div class="summary-item__left">
+              <span class="summary-item__label">Stripe-Integration</span>
+            </div>
+            <div class="summary-item__price">90,00 €</div>
+          </div>
+        </div>
+
+        <div class="total-summary-box mt-8 p-5 md:p-6 rounded-[20px] bg-white/[0.04] border border-white/10">
+          <div class="total-summary-box__eyebrow text-gray-300 text-sm uppercase tracking-[0.18em] mb-2">
+            Gesamt
+          </div>
+          <div class="total-summary-box__price-wrap text-4xl md:text-5xl font-extrabold text-gray-100 leading-none">
+            ab <span id="total-price" class="mw-gradient-text">1.795,00 €</span>
+          </div>
+          <div class="total-summary-box__actions mt-6 flex flex-col sm:flex-row gap-4">
+            <a href="/kontakt" class="mw-primary-btn text-center">
+              Projekt besprechen
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script
+  define:vars={{
+    includedItems,
+    perPagePrice,
+    shopBasePrice,
+    productPrice,
+    initialProducts,
+    seoPagePrice,
+    keywordResearchPrice,
+    googleSetupPrice,
+    initialSeoPages
+  }}
+>
+const formatPrice = (value) => {
+  return new Intl.NumberFormat("de-DE", {
+    maximumFractionDigits: 0
+  }).format(Math.round(value)) + " €";
+};
+
+  const pagesRange = document.getElementById("pages-range");
+  const pagesCount = document.getElementById("pages-count");
+  const pagesSummaryCount = document.getElementById("pages-summary-count");
+  const pagesSummaryPrice = document.getElementById("pages-summary-price");
+  const pagesSummaryLabel = document.getElementById("pages-summary-label");
+  const pagesCountLabel = document.getElementById("pages-count-label");
+  const productsRange = document.getElementById("products-range");
+  const productsCount = document.getElementById("products-count");
+  const productsSummaryCount = document.getElementById("products-summary-count");
+  const shopOptions = document.getElementById("shop-options");
+  const shopSummaryRow = document.getElementById("shop-summary-row");
+  const shopSummaryPrice = document.getElementById("shop-summary-price");
+  const paypalSummaryRow = document.getElementById("paypal-summary-row");
+  const stripeSummaryRow = document.getElementById("stripe-summary-row");
+
+  // --- Removed old SEO card/summary DOM refs ---
+
+  const extraCheckboxes = Array.from(document.querySelectorAll(".extra-checkbox"));
+  const shopCheckboxes = Array.from(document.querySelectorAll(".shop-checkbox"));
+  const shopTrigger = document.querySelector('[data-extra-id="shop"]');
+  const summaryList = document.getElementById("summary-list");
+  const totalPrice = document.getElementById("total-price");
+
+  // let selectedSeo = initialSeo; // Removed
+
+  const getBaseTotal = () => includedItems.reduce((sum, item) => sum + item.price, 0);
+
+  const seoToggle = document.getElementById("google-seo-toggle");
+  const seoOptionsBlock = document.getElementById("seo-options");
+
+  const seoPagesRange = document.getElementById("seo-pages-range");
+  const seoPagesCount = document.getElementById("seo-pages-count");
+
+  const seoPagesSummaryCount = document.getElementById("seo-pages-summary-count");
+  const seoPagesSummaryPrice = document.getElementById("seo-pages-summary-price");
+
+  const seoSummaryRow = document.getElementById("seo-summary-row");
+
+  const seoCheckboxes = Array.from(document.querySelectorAll(".seo-checkbox"));
+
+  const keywordSummaryRow = document.getElementById("keyword-summary-row");
+  const googleSummaryRow = document.getElementById("google-summary-row");
+
+  const getPagesValue = () => Number(pagesRange.value);
+
+  const isShopSelected = () => Boolean(shopTrigger?.checked);
+
+  const getProductsValue = () => Number(productsRange?.value || initialProducts);
+
+  const getPagesCost = () => {
+    return getPagesValue() * perPagePrice;
+  };
+
+  // const getSeoOption = () => seoOptions.find((option) => option.id === selectedSeo); // Removed
+
+  const getSelectedExtras = () => {
+    return extraCheckboxes
+      .filter((checkbox) => checkbox.checked && checkbox.dataset.extraId)
+      .map((checkbox) => ({
+        id: checkbox.dataset.extraId,
+        label: checkbox.dataset.extraLabel,
+        price: Number(checkbox.dataset.extraPrice),
+      }));
+  };
+
+  const getShopCost = () => {
+    if (!isShopSelected()) return 0;
+    return shopBasePrice + getProductsValue() * productPrice;
+  };
+
+  const getSelectedShopExtras = () => {
+    if (!isShopSelected()) return [];
+
+    return shopCheckboxes
+      .filter((checkbox) => checkbox.checked)
+      .map((checkbox) => ({
+        id: checkbox.dataset.shopExtraId,
+        label: checkbox.dataset.shopExtraLabel,
+        price: Number(checkbox.dataset.shopExtraPrice),
+      }));
+  };
+
+const renderExtrasInSummary = () => {
+  document.querySelectorAll(".summary-item.extra-summary").forEach((row) => row.remove());
+
+  const selectedExtras = getSelectedExtras().filter((extra) => extra.id !== "shop");
+
+  selectedExtras.forEach((extra) => {
+    const row = document.createElement("div");
+    row.className = "summary-item extra-summary";
+    row.style.display = "flex";
+    row.style.justifyContent = "space-between";
+    row.style.alignItems = "flex-start";
+    row.style.gap = "1rem";
+    row.style.padding = "1rem 0";
+    row.style.borderBottom = "1px solid rgba(255, 255, 255, 0.08)";
+
+    const left = document.createElement("div");
+    left.className = "summary-item__left extra-summary__left";
+    left.style.flex = "1";
+    left.style.minWidth = "0";
+    left.style.display = "flex";
+    left.style.justifyContent = "flex-start";
+
+    const label = document.createElement("span");
+    label.className = "summary-item__label extra-summary__label";
+    label.textContent = extra.label;
+    label.style.display = "block";
+    label.style.width = "100%";
+    label.style.textAlign = "left";
+    label.style.color = "#f3f4f6";
+    label.style.fontSize = "1.05rem";
+    label.style.lineHeight = "1.45";
+
+    const price = document.createElement("div");
+    price.className = "summary-item__price extra-summary__price";
+    price.textContent = formatPrice(extra.price);
+    price.style.flexShrink = "0";
+    price.style.textAlign = "right";
+    price.style.whiteSpace = "nowrap";
+    price.style.color = "#f8fafc";
+    price.style.fontSize = "1.05rem";
+    price.style.fontWeight = "800";
+
+    left.appendChild(label);
+    row.appendChild(left);
+    row.appendChild(price);
+    summaryList.appendChild(row);
+  });
+};
+
+  // --- New SEO logic ---
+  const isSeoSelected = () => Boolean(seoToggle?.checked);
+
+  const getSeoPagesValue = () => Number(seoPagesRange?.value || initialSeoPages);
+
+  const getSeoPagesCost = () => { 
+    if (!isSeoSelected()) return 0;
+    return getSeoPagesValue() * seoPagePrice;
+  };
+
+  const getSeoExtrasCost = () => {
+    if (!isSeoSelected()) return 0;
+
+    return seoCheckboxes
+      .filter(c => c.checked)
+      .reduce((sum, c) => sum + Number(c.dataset.seoExtraPrice), 0);
+  };
+
+  const updateSeoUI = () => {
+
+    const enabled = isSeoSelected();
+    const pages = getSeoPagesValue();
+    const cost = getSeoPagesCost();
+
+    seoOptionsBlock?.classList.toggle("hidden", !enabled);
+    seoSummaryRow?.classList.toggle("hidden", !enabled);
+
+    const keywordChecked = document.getElementById("keyword-research")?.checked;
+    const googleChecked = document.getElementById("google-setup")?.checked;
+
+    keywordSummaryRow?.classList.toggle("hidden", !enabled || !keywordChecked);
+    googleSummaryRow?.classList.toggle("hidden", !enabled || !googleChecked);
+
+    if (seoPagesCount) seoPagesCount.textContent = pages;
+    if (seoPagesSummaryCount) seoPagesSummaryCount.textContent = pages;
+
+    if (seoPagesSummaryPrice)
+      seoPagesSummaryPrice.textContent = formatPrice(cost);
+  };
+
+  const updateShopUI = () => {
+    const shopSelected = isShopSelected();
+    const products = getProductsValue();
+    const shopCost = getShopCost();
+    const selectedShopExtras = getSelectedShopExtras();
+
+    shopOptions?.classList.toggle("hidden", !shopSelected);
+    shopSummaryRow?.classList.toggle("hidden", !shopSelected);
+
+    if (productsCount) productsCount.textContent = products;
+    if (productsSummaryCount) productsSummaryCount.textContent = products;
+    if (shopSummaryPrice) shopSummaryPrice.textContent = formatPrice(shopCost);
+
+    const hasPaypal = selectedShopExtras.some((item) => item.id === "paypal");
+    const hasStripe = selectedShopExtras.some((item) => item.id === "stripe");
+
+    paypalSummaryRow?.classList.toggle("hidden", !shopSelected || !hasPaypal);
+    stripeSummaryRow?.classList.toggle("hidden", !shopSelected || !hasStripe);
+  };
+
+  const updatePagesUI = () => {
+    const pages = getPagesValue();
+    const pageCost = getPagesCost();
+
+    pagesCount.textContent = pages;
+    pagesSummaryCount.textContent = pages;
+    pagesSummaryPrice.textContent = formatPrice(pageCost);
+
+    if (pagesSummaryLabel) {
+      pagesSummaryLabel.textContent = pages === 1 ? "Seite" : "Seiten";
+    }
+
+    if (pagesCountLabel) {
+      pagesCountLabel.textContent = pages === 1 ? "Seite" : "Seiten";
+    }
+  };
+
+  const updateTotal = () => {
+    const baseTotal = getBaseTotal();
+    const pagesCost = getPagesCost();
+    const seoPagesCost = getSeoPagesCost();
+    const seoExtrasTotal = getSeoExtrasCost();
+    const normalExtrasTotal = getSelectedExtras()
+      .filter((item) => item.id !== "shop")
+      .reduce((sum, item) => sum + item.price, 0);
+    const shopCost = getShopCost();
+    const shopExtrasTotal = getSelectedShopExtras().reduce((sum, item) => sum + item.price, 0);
+
+    const total = baseTotal + pagesCost + seoPagesCost + seoExtrasTotal + normalExtrasTotal + shopCost + shopExtrasTotal;
+    totalPrice.textContent = formatPrice(total);
+  };
+
+  const updateCalculator = () => {
+    updatePagesUI();
+    updateSeoUI();
+    updateShopUI();
+    renderExtrasInSummary();
+    updateTotal();
+  };
+
+  pagesRange.addEventListener("input", updateCalculator);
+  productsRange?.addEventListener("input", updateCalculator);
+
+  // SEO listeners
+  seoToggle?.addEventListener("change", updateCalculator);
+  seoPagesRange?.addEventListener("input", updateCalculator);
+  seoCheckboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", updateCalculator);
+  });
+
+  extraCheckboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", updateCalculator);
+  });
+  shopCheckboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", updateCalculator);
+  });
+
+  updateCalculator();
+</script>
+
+<style>
+  .summary-base-box {
+    margin-bottom: 0.5rem;
+    padding: 1rem 0 1.25rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .summary-base-box__top {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 0.85rem;
+  }
+
+  .summary-base-box__eyebrow {
+    color: #9ca3af;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+  }
+
+  .summary-base-box__title {
+    color: #f3f4f6;
+    font-size: 1.15rem;
+    font-weight: 800;
+    line-height: 1.3;
+  }
+
+  .summary-base-box__price {
+    color: #f8fafc;
+    font-size: 1.15rem;
+    font-weight: 800;
+    white-space: nowrap;
+  }
+
+  .summary-base-box__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .summary-base-box__item {
+    position: relative;
+    padding-left: 1rem;
+    color: #cbd5e1;
+    font-size: 0.98rem;
+    line-height: 1.45;
+  }
+
+  .summary-base-box__item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.62rem;
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background: linear-gradient(
+      to right,
+      rgb(var(--mw-grad-from)),
+      rgb(var(--mw-grad-to))
+    );
+  }
+.hidden {
+  display: none !important;
+}
+  .seo-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.04);
+    padding: 1.1rem 1rem 1rem;
+    transition:
+      transform 0.25s ease,
+      border-color 0.25s ease,
+      box-shadow 0.25s ease,
+      background 0.25s ease;
+    cursor: pointer;
+    min-height: 152px;
+  }
+
+  .seo-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--mw-border-strong);
+    box-shadow: var(--mw-card-glow);
+  }
+
+  .seo-card.active {
+    border-color: rgba(168, 85, 247, 0.55);
+    background: rgba(255, 255, 255, 0.07);
+    box-shadow: 0 0 30px rgba(99, 102, 241, 0.16);
+  }
+
+  .seo-card__glow {
+    position: absolute;
+    inset: auto -20% -50% auto;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(168, 85, 247, 0.24), transparent 65%);
+    pointer-events: none;
+  }
+
+  .seo-card__title {
+    display: block;
+    color: #f3f4f6;
+    font-size: 1.15rem;
+    font-weight: 800;
+    margin-bottom: 0.45rem;
+  }
+
+  .seo-card__desc {
+    display: block;
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.45;
+    margin-bottom: 1rem;
+    max-width: 18ch;
+  }
+
+  .seo-card__price {
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #f8fafc;
+  }
+
+  .extra-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1rem 1rem;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.035);
+    transition:
+      border-color 0.25s ease,
+      background 0.25s ease,
+      transform 0.25s ease;
+    cursor: pointer;
+  }
+
+  .extra-row:hover {
+    border-color: var(--mw-border-strong);
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-1px);
+  }
+
+  .extra-row__left {
+    display: flex;
+    gap: 0.85rem;
+    align-items: flex-start;
+  }
+
+  .extra-checkbox {
+    width: 20px;
+    height: 20px;
+    margin-top: 0.15rem;
+    accent-color: rgb(var(--mw-grad-to));
+    flex-shrink: 0;
+  }
+
+  .extra-row__label {
+    color: #f3f4f6;
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  .extra-row__hint {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-top: 0.2rem;
+    max-width: 58ch;
+  }
+
+  .extra-row__price {
+    white-space: nowrap;
+    color: #f8fafc;
+    font-size: 1.1rem;
+    font-weight: 800;
+    padding-left: 1rem;
+  }
+
+  .shop-options {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 1.5rem;
+  }
+
+  .summary-stack {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .summary-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .summary-item__left {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    align-items: center;
+  }
+
+  .summary-item__label {
+    color: #f3f4f6;
+    font-size: 1.05rem;
+    line-height: 1.45;
+  }
+
+  .summary-item__badge {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: 0.32rem 0.65rem;
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #dbe4ff;
+    background: rgba(99, 102, 241, 0.16);
+    border: 1px solid rgba(99, 102, 241, 0.22);
+  }
+
+  .summary-item__price {
+    color: #f8fafc;
+    font-size: 1.05rem;
+    font-weight: 800;
+    white-space: nowrap;
+  }
+
+  .total-summary-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .total-summary-box__eyebrow,
+  .total-summary-box__price-wrap,
+  .total-summary-box__actions {
+    width: 100%;
+    text-align: center;
+  }
+
+  .total-summary-box__actions {
+    justify-content: center;
+  }
+
+  @media (max-width: 767px) {
+    .summary-item,
+    .summary-base-box__top,
+    .extra-row {
+      flex-direction: column;
+    }
+
+    .extra-row__price,
+    .summary-item__price {
+      padding-left: 0;
+    }
+  }
+</style>
