@@ -1,0 +1,101 @@
+---
+export interface CircleImageProps {
+  imgSrc: string
+  altText: string
+  subtitle1?: string
+  subtitle2?: string
+  title1: string
+  title2?: string
+}
+
+const {
+  imgSrc,
+  altText,
+  subtitle1 = "Kontakt",
+  subtitle2 = "",
+  title1,
+  title2 = "",
+} = Astro.props
+---
+
+<div class="section-container pt-0 md:pt-0 pb-6 md:pb-8">
+  <div class="mw-split-grid gap-3 md:gap-16 lg:gap-24 overflow-hidden">
+    <!-- Profilbild -->
+    <div class="md:col-span-5 flex justify-center md:justify-center translate-x-0 md:translate-x-24 lg:translate-x-32 my-0 md:my-0">
+      <div
+        class="mw-profile-ring profile-container"
+      >
+        <div class="rounded-full bg-[#090a1a] p-0">
+          <img
+            src={imgSrc}
+            alt={altText}
+            class="rounded-full w-48 h-48 md:w-56 md:h-56 object-cover"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Text -->
+    <div class="md:col-span-7 text-center md:text-left mt-2 md:mt-0 md:translate-x-12 lg:translate-x-16">
+      <h1 class="mw-h2 mb-4">
+        {subtitle1}
+      </h1>
+
+      <p class="mw-lead">
+        {title1}
+        {title2 && <><br />{title2}</>}
+      </p>
+    </div>
+  </div>
+</div>
+
+<script>
+  (() => {
+    const container = document.querySelector('.profile-container')
+    if (!(container instanceof HTMLElement)) return
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    if (reduceMotion) {
+      container.classList.add('profile-container--visible')
+      return
+    }
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        container.classList.add('profile-container--visible')
+      })
+    })
+  })()
+</script>
+
+<style>
+  .profile-container {
+    opacity: 0;
+    transform: translate3d(-140px, 0, 0) scale(0.92);
+    transition:
+      transform 850ms cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 850ms ease;
+    will-change: transform, opacity;
+  }
+
+  .profile-container--visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  @media (max-width: 767px) {
+    .profile-container {
+      transform: none;
+      opacity: 1;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .profile-container,
+    .profile-container--visible {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+</style>

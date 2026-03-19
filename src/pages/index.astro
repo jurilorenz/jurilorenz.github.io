@@ -2,16 +2,19 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import DevicesComponent from '../components/DevicesComponent.astro';
 import ServicesComponent from '../components/ServicesComponent.astro';
-import HeroComponent from "../components/HeroComponent.astro";
+import PrimaryHeroSection from "../components/PrimaryHeroSection.astro";
 import TestimonialsComponent from "../components/TestimonialsComponent.astro";
 import FinalCTASection from "../components/FinalCTASection.astro";
+import SolutionSection from "../components/SolutionSection.astro";
+import AboutCompactSection from "../components/AboutCompactSection.astro";
+import FeatureGridSection from "../components/FeatureGridSection.astro";
 
 ---
 
 <MainLayout 
-title="Professionelles Webdesign München – Websites, die verkaufen | maxWapp"
-seoTitle="Professionelles Webdesign München – Top Websites | maxWapp"
-  seoDesc="Professionelles Webdesign aus München: moderne, schnelle und SEO-optimierte Websites für Unternehmen – mit Fokus auf Sichtbarkeit, Performance und Conversions."
+title="Professionelles Webdesign aus München für Unternehmen"
+seoTitle="Professionelles Webdesign aus München für Unternehmen"
+  seoDesc="Professionelles Webdesign aus München: Websites, Landingpages und Onlineshops für Unternehmen. Klar strukturiert, SEO-optimiert und auf Anfragen ausgerichtet."
 >
 <script type="application/ld+json">
 {
@@ -122,230 +125,93 @@ seoTitle="Professionelles Webdesign München – Top Websites | maxWapp"
   </script>
   
     <!-- Hero Section -->
-    <HeroComponent />
+<PrimaryHeroSection
+  title="Professionelles Webdesign aus München"
+  lead="Ich entwickle professionelle Websites, Landingpages und Onlineshops für lokale Unternehmen – klar strukturiert, sichtbar bei Google und auf Anfragen ausgerichtet."
+leadMobile="Ich entwickle professionelle Websites – klar strukturiert, sichtbar bei Google und auf Anfragen ausgerichtet."  desktopImgSrc="/images/home-page-juri-lorenz-desktop.webp"
+  mobileImgSrc="/images/home-page-juri-lorenz-mobile.webp"
+  imgAlt="Juri Lorenz – professionelles Webdesign aus München"
+  ctaLabel="Kostenloses Erstgespräch"
+  ctaHref="/kontakt"
+/>
 
 <p class="sr-only">
-  Webdesign München: Professioneller Webdesigner & Webentwickler für
-  moderne Websites und Landingpages. Homepage erstellen lassen,
-  responsive Webdesign & Landingpage Design – in München und Umgebung.
-  Suchanfragen: Webdesign in meiner Nähe, Webdesign in der Nähe,
-  Landingpage erstellen lassen, professionelle Website erstellen.
+  Webdesign München: Erstellung moderner, responsiver Websites und Landingpages für Unternehmen. Fokus auf klare Struktur, schnelle Ladezeiten und gute Auffindbarkeit bei Google. Leistungen: Website erstellen lassen, WordPress Websites, Landingpages und Onlineshops in München und Umgebung.
 </p>
-
-    <h2
-    id="ueber-mich"
-    class="text-center text-4xl md:text-6xl font-bold text-gray-100 drop-shadow-lg mt-12 md:mb-12 md:mt-36"
-    >
-    Webdesign München</h2>
-
-    <div
-      class="flex flex-col items-center md:flex-row md:justify-center md:items-center md:space-x-32 mt-12"
-    >
-      <!-- Profilbild mit Farbverlauf-Rahmen und Schatten -->
-      <div
-        class="rounded-full p-1 bg-gradient-to-r from-purple-400 to-blue-500 shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] profile-container"
-      >
-        <div class="rounded-full bg-[#090a1a] p-0">
-          <img
-            src="/images/juri-lorenz-foto.webp"
-            class="rounded-full w-48 h-48 md:w-56 md:h-56 object-cover"
-            alt="Juri Lorenz, Webentwickler in München"
-          />
-        </div>
-      </div>
-
-      <!-- Motto-Text neben dem Bild -->
-      <div class="text-center md:text-left md:pl-12 mt-6 md:mt-0">
-        <p class="text-2xl md:text-2xl font-medium text-gray-300">
-          <span>Juri</span><br />
-          <span>Lorenz</span><br />
-        </p>
-
-        <!-- Hauptmotto -->
-        <p
-          class="mt-4 text-5xl md:text-6xl font-extrabold  "
-        >
-          <span>Max</span><br />
-          <span>Wapp</span>
-        </p>
-      </div>
-    </div>
-
-    <!-- Inhalt Abschnitt -->
-    <div
-      class="w-11/12 md:w-10/12 lg:w-8/12 mx-auto text-lg md:text-xl text-gray-300 leading-relaxed mt-20 md:mt-32 flex flex-col-reverse md:flex-row items-center gap-16 md:gap-32"
-    >
-      <!-- Handybildabschnitt für Desktop links -->
-      <div
-        class="w-full md:w-5/12 flex justify-center md:justify-end mb-12 md:mb-0 rounded shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] phone-container"
-      >
-        <img
-          src="/images/maxwapp-iphone-1.webp"
-          alt="Phone Screenshot"
-          class="w-80 md:w-auto md:max-h-[60vh] object-contain rounded-lg"
-        />
-      </div>
-
-<!-- Textabschnitt für Desktop rechts -->
-<div class="w-full md:w-7/12 text-center md:text-left">
-  <p class="text-xl md:text-2xl mt-4">
-    <strong>Webdesign aus München</strong> mit Fokus auf
-    <span class="underline-animation">Conversion</span>, Klarheit und Tempo.
-    Ich liefere
-    <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500">professionelle Websites</span>
-    im <strong>responsive Webdesign</strong> – präzise, schnell, skalierbar.
-  </p>
-
-  <p class="text-xl md:text-2xl mt-8">
-    Du willst eine <strong>Landingpage </strong> oder 
-    <strong>Homepage erstellen lassen</strong>? Ich entwickle
-    <strong>Top Websites</strong> und
-    <strong>Onlineshops</strong> für Selbstständige und kleine Unternehmen in 
-<a href="/webdesign-in-der-naehe-muenchen/"
-   title="Webdesign in der Nähe München"
-   class="inline-flex items-center gap-1 underline underline-offset-4 decoration-2
-          hover:no-underline hover:text-white/90
-          focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-sm">
-  München &amp; Umgebung
-
-</a>.
-  </p>
-
-  <p class="text-xl md:text-2xl mt-8">
-    <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500">
-      Bereit für ein Webdesign, das Kunden gewinnt?
-    </span>
-  </p>
-
-  <!-- Buttons at the bottom-right -->
-  <div
-    class="flex flex-col md:flex-row gap-6 mt-8 md:mt-16 justify-center md:justify-start items-center md:items-start w-full md:w-auto"
-  >
-    <a
-      href="/kontakt"
-      class="relative inline-block py-4 px-10 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-white text-[#090a1a] shadow-lg transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_rgba(147,112,219,0.8),_0_0_35px_rgba(3,169,244,0.6)] hover:border-[#6d87d1]"
-    >
-      Let's talk
-    </a>
-  </div>
-</div>
-
-      
-    </div>
-
-
             <!-- Services Section -->
             <ServicesComponent />
+
+<SolutionSection
+  title="Warum Unternehmen ihre Website mit maxWapp umsetzen"
+intro="Du brauchst keine Website, die nur gut aussieht. Du brauchst einen Auftritt, der professionell wirkt, Vertrauen schafft und neue Anfragen bringt."  steps={[
+{
+  num: "1",
+  title: "Du brauchst nichts vorzubereiten",
+  text: "Ich übernehme alles – von Struktur und Texten bis zu Bildern und Umsetzung. Du musst nur entscheiden, dass du starten willst.",
+},
+{
+  num: "2",
+title: "Minimaler Aufwand für dich",
+text: "Du musst dich nicht in Details einarbeiten oder ständig abstimmen – ich halte den Prozess schlank und bringe dein Projekt effizient voran."},
+    {
+      num: "3",
+      title: "Dein Angebot wird klar präsentiert",
+      text: "Besucher sollen sofort verstehen, was du anbietest, warum sie dir vertrauen können und was der nächste Schritt ist.",
+    },
+    {
+      num: "4",
+      title: "Die Website soll Ergebnisse bringen",
+      text: "Mehr Sichtbarkeit, mehr Vertrauen und mehr Anfragen – genau darauf ist der Aufbau ausgerichtet.",
+    },
+  ]}
+  ctaLabel="Projekt besprechen"
+  ctaHref="/kontakt"
+/>
 
              <!-- Devices Section -->
              <DevicesComponent />
 
 <TestimonialsComponent />
-             
-    <!-- Warum mit mir arbeiten Abschnitt -->
-    <h2
-      class="text-center text-4xl md:text-5xl font-extrabold   mt-2 mb-12 mx-2"
-    >
-      Warum mit mir arbeiten?
-    </h2>
 
-    <div
-      class="w-11/12 md:w-10/12 lg:w-8/12 mx-auto flex flex-col md:flex-row items-center mb-12 md:gap-24"
-    >
-      <!-- Handybildabschnitt für Desktop links -->
-      <div
-        class="w-full md:w-5/12 flex justify-center md:justify-center mb-12 md:mb-0 rounded shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] phone-container-second"
-      >
-        <img
-          src="/images/maxwapp-iphone-2.webp"
-          alt="Phone Screenshot"
-          class="w-80 md:w-auto md:max-h-[60vh] object-contain rounded-lg"
-        />
-      </div>
+<AboutCompactSection />
 
-<!-- Textabschnitt für Desktop rechts -->
-<div class="w-full md:w-7/12 text-center md:text-left">
-  <p class="text-xl md:text-2xl mt-4">
-    Deine Website soll <span class="underline-animation">Kunden gewinnen</span> – nicht nur gut aussehen.  
-  </p>
+<FeatureGridSection
+  title="So läuft dein Projekt ab"
+  intro="Klare Schritte, feste Kosten und minimale Abstimmung – damit du schnell zu einer Website kommst, die professionell wirkt und Anfragen bringt."
+  features={[
+    {
+      title: "1. Kostenlose Erstberatung",
+      description: "Wir klären dein Ziel, dein Angebot und was deine Website leisten soll – du bekommst eine klare Einschätzung."
+    },
+    {
+      title: "2. Festpreisangebot",
+      description: "Du erhältst ein transparentes Angebot mit klarem Umfang – ohne versteckte Kosten oder offene Punkte."
+    },
+    {
+      title: "3. Inhalte & Umsetzung",
+      description: "Struktur, Design und Inhalte entwickle ich für dich und setze alles effizient um – abgestimmt auf dein Feedback und deine Anforderungen."
+    },
+    {
+      title: "4. Launch & Ergebnisse",
+      description: "Deine Website geht live und ist darauf ausgerichtet, Vertrauen aufzubauen und Anfragen zu generieren."
+    }
+  ]}
+  cols={2}
+  compact={true}
+  center={true}
+afterText={`Die Umsetzung dauert in der Regel 2–4 Wochen – da Struktur, Inhalte und Umsetzung aus einer Hand kommen, bleibt der Prozess schnell und effizient. Wenn du vorher eine schnelle Orientierung zu den Kosten willst, nutze den <a href="/preise" class="underline underline-offset-4">Preisrechner</a>.`}
+  ctaLabel="Projekt starten"
+  ctaHref="/kontakt"
+/>
 
-  <p class="text-xl md:text-2xl mt-8">
-      Ich verbinde <strong>Design, Strategie & Technik</strong>, damit deine Marke online überzeugt und <strong>mehr Anfragen</strong> generiert.
-  </p>
-
-
-  <p class="text-xl md:text-2xl mt-8">
-    Überzeuge dich selbst von meinem
-    <a
-      href="https://www.google.com/maps/place/maxWapp+%7C+Juri+Lorenz/@48.0961726,11.5084223,17z/data=!3m1!5s0x479dd9218f79d1d3:0x204263009f086393!4m8!3m7!1s0xf3b4b557fd55469:0x893accd647bdc468!8m2!3d48.0961726!4d11.5084223!9m1!1b1!16s%2Fg%2F11wr1981wf?entry=ttu&g_ep=EgoyMDI1MDUwMy4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="inline-flex items-center font-semibold text-orange-300 hover:text-orange-200 transition"
-    >
-      ★ ★ ★ ★ ★ Top-Rating auf Google
-    </a>
-  </p>
-
-        <!-- Buttons at the bottom-right -->
-        <div
-          class="flex flex-col md:flex-row gap-6 mt-8 md:mt-16 justify-center md:justify-start items-center md:items-start w-full md:w-auto"
-        >
-
-
-          <!-- Primary Button -->
-          <a
-             href="https://www.google.com/maps/place/maxWapp+%7C+Juri+Lorenz/@48.0961726,11.5084223,17z/data=!3m1!5s0x479dd9218f79d1d3:0x204263009f086393!4m8!3m7!1s0xf3b4b557fd55469:0x893accd647bdc468!8m2!3d48.0961726!4d11.5084223!9m1!1b1!16s%2Fg%2F11wr1981wf?entry=ttu&g_ep=EgoyMDI1MDUwMy4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
-      target="_blank"
-      rel="noopener noreferrer"
-            class="relative inline-block py-4 px-10 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-white text-[#090a1a] shadow-lg transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_rgba(147,112,219,0.8),_0_0_35px_rgba(3,169,244,0.6)] hover:border-[#6d87d1]"
-          >
-            Bewertungen ansehen
-          </a>
-        </div>
-      </div>
-         </div>
-                
 <FinalCTASection
-  title="Bereit für ein Webdesign, das Kunden gewinnt?"
+  title="Bereit für eine Website, die Anfragen bringt?"
   description={`
-    <p>Ob neue Website, Landingpage, Online-Shop oder Redesign – wir schauen uns gemeinsam an, was dein Business wirklich weiterbringt.</p>
+    <p class="mt-4">In einem kurzen Erstgespräch klären wir, was für dein Business sinnvoll ist – und wie du schnell zu einer Website kommst, die professionell wirkt, Vertrauen aufbaut und gezielt Anfragen bringt.</p>
   `}
   ctaLabel="Kostenloses Erstgespräch"
   ctaHref="/kontakt"
 />
 
-
-      <style>
-        .text-gradient {
-  background: linear-gradient(to right, #9c27b0, #03a9f4);
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.drop-shadow-lg {
-  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
-}
-
-.border-gradient-to-r {
-  border-image-slice: 1;
-  border-image-source: linear-gradient(to right, #9c27b0, #03a9f4);
-}
-
-.underline-animation {
-  display: inline-block;
-  background-image: linear-gradient(120deg, #03a9f4, #9c27b0);
-  background-repeat: no-repeat;
-  background-size: 100% 3px;
-  background-position: 0 88%;
-  transition: background-size 0.3s ease-in-out;
-}
-
-.underline-animation:hover {
-  background-size: 100% 100%;
-}
-      </style>
-
-
-    </div>
-  </div></MainLayout
+ </MainLayout
 >

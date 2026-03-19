@@ -38,7 +38,7 @@ const pad = compact ? "section-pad-compact" : "section-pad";
         </div>
 
         <div class="mt-10 flex justify-center">
-          <PrimaryButton href={ctaHref} label={ctaLabel} />
+          <PrimaryButton href={ctaHref} label={ctaLabel} variant="gradient" />
         </div>
 
         {note && (
@@ -55,13 +55,21 @@ const pad = compact ? "section-pad-compact" : "section-pad";
       position:relative;
       border-radius:26px;
       padding:32px 22px;
-      border:1px solid rgba(255,255,255,0.18);
-      background:rgba(10,12,24,0.52);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+      border:1px solid rgba(255,255,255,0.14);
+      background:
+        linear-gradient(
+          180deg,
+          rgba(12,14,28,0.78) 0%,
+          rgba(24,18,46,0.58) 38%,
+          rgba(34,22,58,0.38) 68%,
+          rgba(255,255,255,0.05) 100%
+        );
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
       box-shadow:
-        0 0 0 1px rgba(168,85,247,0.25),
-        0 18px 70px rgba(0,0,0,0.40);
+        0 0 0 1px rgba(168,85,247,0.16),
+        0 24px 80px rgba(0,0,0,0.42),
+        inset 0 1px 0 rgba(255,255,255,0.08);
       overflow:hidden;
     }
 
@@ -77,19 +85,22 @@ const pad = compact ? "section-pad-compact" : "section-pad";
       height:3px;
       border-radius:9999px;
       background: linear-gradient(90deg, rgba(168,85,247,0.75), rgba(99,102,241,0.75));
-      opacity:0.85;
-      filter: blur(0.1px);
+      opacity:0.9;
+      filter: blur(0.15px);
     }
 
     /* inner glow, very subtle (no hover, stays premium) */
     .mw-final-cta-card::after{
       content:"";
       position:absolute;
-      inset:-120px -120px auto -120px;
-      height:320px;
-      background: radial-gradient(circle at 50% 50%, rgba(168,85,247,0.22), transparent 62%);
+      inset:-140px -140px auto -140px;
+      height:360px;
+      background:
+        radial-gradient(circle at 22% 18%, rgba(196,181,253,0.16), transparent 34%),
+        radial-gradient(circle at 72% 28%, rgba(168,85,247,0.18), transparent 42%),
+        radial-gradient(circle at 50% 50%, rgba(99,102,241,0.12), transparent 60%);
       pointer-events:none;
-      opacity:0.9;
+      opacity:0.95;
     }
   </style>
 </section>

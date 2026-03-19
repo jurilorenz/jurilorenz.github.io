@@ -1,3 +1,11 @@
+export interface BlogSection {
+  title?: string;
+  intro?: string;
+  body: string;
+  image?: string;
+  imageAlt?: string;
+}
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -6,7 +14,12 @@ export interface BlogPost {
   seoTitle: string;
   seoDesc: string;
   image: string;
+  imageAlt?: string;
 
+  // Neue flexible Architektur
+  sections?: BlogSection[];
+
+  // Bestehende Felder bleiben vorerst erhalten (Legacy-Kompatibilität)
   body?: string;
   body2Title?: string;
   body2Intro?: string;
@@ -16,11 +29,63 @@ export interface BlogPost {
   quote?: string;
   ctaText?: string;
   ctaLink?: string;
-  imageAlt?: string;
 }
 
 export const blogPosts = [
 {
+  slug: "google-ai-overviews-deutschland-ctr",
+  title: "Google AI Overviews in Deutschland: Warum deine Klickrate sinken kann",
+  category: "SEO, Google, KI",
+  intro: "Neue Daten von SISTRIX zeigen, wie stark Google AI Overviews bereits in Deutschland auf die organische Suche wirken. Vor allem informative Inhalte verlieren Sichtbarkeit und Klicks – während lokale und transaktionale Seiten deutlich stabiler bleiben.",
+  seoTitle: "Google AI Overviews in Deutschland: CTR sinkt stark | maxWapp",
+  seoDesc: "AI Overviews drücken in Deutschland die organische Klickrate deutlich. Was das für SEO, Websites und lokale Unternehmen in München bedeutet.",
+  image: "/images/blog/google-ai-overviews-deutschland.webp",
+  imageAlt: "Google AI Overviews in Deutschland mit sinkender organischer Klickrate in dunklem Tech-Stil",
+  sections: [
+    {
+      title: "Was ist passiert?",
+      intro: "Google AI Overviews sind inzwischen auch im deutschen Suchmarkt deutlich sichtbar – und sie verändern das Klickverhalten spürbar.",
+      body: `Laut einer aktuellen Analyse von SISTRIX erscheinen AI Overviews inzwischen bei rund 20 % der Keywords in Deutschland. Sobald diese KI-Antworten eingeblendet werden, fällt die Klickrate der ersten organischen Position deutlich: von 27 % auf 11 %.
+
+Auch insgesamt verändert sich das Suchverhalten. Ohne AI Overview führt eine Suchanfrage deutlich häufiger zu einem organischen Klick als mit eingeblendeter KI-Zusammenfassung. Besonders relevant ist dabei die Platzierung: In den meisten Fällen erscheinen die AI Overviews noch vor den klassischen organischen Treffern und schieben diese weiter nach unten.
+
+Das bedeutet nicht, dass SEO plötzlich wertlos ist. Es bedeutet aber, dass informative Suchanfragen heute anders funktionieren als noch vor kurzer Zeit.`,
+      image: "/images/blog/google-ai-overviews-chart.webp",
+      imageAlt: "Diagramm zur sinkenden organischen Klickrate durch Google AI Overviews in Deutschland"
+    },
+    {
+      title: "Warum ist das wichtig für Deutschland?",
+      intro: "Für den deutschen Markt ist das nicht nur eine technische Änderung, sondern ein strategisches Signal für Content, SEO und Website-Struktur.",
+      body: `Die Daten zeigen vor allem eines: Informationsorientierte Inhalte stehen stärker unter Druck. Wer nur auf klassische Ratgeber-Artikel, kurze Erklärtexte oder generischen SEO-Content setzt, muss damit rechnen, dass ein Teil des Traffics direkt in der Google-Suche verloren geht.
+
+Gleichzeitig trifft das nicht alle Bereiche gleich stark. Besonders informative Verticals verlieren überdurchschnittlich viele Klicks, während transaktionale Suchanfragen und Seiten mit klarer Handlungsabsicht deutlich stabiler bleiben. Genau deshalb reicht es nicht mehr, Suchvolumen isoliert zu betrachten. Heute ist wichtiger, ob Google bei einem Keyword selbst die Antwort liefert oder nicht.
+
+Für Unternehmen in Deutschland heißt das: Content muss präziser geplant werden. Reine Reichweite wird schwerer. Relevanz, Suchintention, Vertrauen und Conversion werden wichtiger.`,
+    },
+    {
+      title: "Was bedeutet das für Unternehmen in München?",
+      intro: "Für lokale Anbieter ist das keine schlechte Nachricht – aber eine klare Aufforderung, die eigene SEO-Strategie sauber zu trennen.",
+      body: `Wenn du ein Unternehmen in München führst, betrifft dich diese Entwicklung vor allem dann, wenn du stark auf allgemeine Informationsinhalte setzt. Ein Blogbeitrag allein bringt künftig oft weniger Klicks, wenn Google die wichtigsten Punkte direkt in der Suche vorweg nimmt.
+
+Für lokale Dienstleistungen sieht die Lage jedoch anders aus. Wer nach Webdesign, Website-Optimierung, Relaunch oder lokaler Sichtbarkeit sucht, hat meist eine konkrete Absicht. Genau solche Suchanfragen sind weniger anfällig für AI Overviews als rein informative Fragen. Deshalb wird lokales SEO nicht schwächer, sondern in vielen Fällen sogar wichtiger.
+
+Die praktische Konsequenz: Informationscontent sollte nicht mehr isoliert betrachtet werden. Er muss als Brücke funktionieren – also als strategischer Einstieg, der Vertrauen aufbaut und anschließend auf starke Leistungsseiten, lokale Angebote und klare Conversion-Ziele führt. Gerade für lokale Unternehmen in München ist das die sinnvollere Richtung als bloß möglichst viele Blogartikel zu veröffentlichen.`,
+    },
+    {
+      title: "Was sollte man jetzt konkret tun?",
+      intro: "Wer seine Website weiter organisch sichtbar halten will, sollte die Struktur jetzt anpassen – nicht erst in ein paar Monaten.",
+      body: `- Analysiere, welche Inhalte rein informativ sind und welche echte Kauf- oder Kontaktabsicht bedienen  
+- Stütze wichtige Blogartikel mit starken Leistungsseiten und sauberer interner Verlinkung  
+- Setze bei lokalen Angeboten stärker auf München-bezogene Service Pages statt auf breite allgemeine Texte  
+- Plane Content nicht nur nach Suchvolumen, sondern auch danach, ob AI Overviews das Keyword dominieren  
+- Optimiere Seiten stärker auf Klarheit, Vertrauen und Conversion statt nur auf Rankings allein`
+    }
+  ],
+  quote: "„Nicht jeder Ranking-Verlust ist ein SEO-Problem – oft hat Google die Antwort einfach selbst nach oben gezogen.“",
+  ctaText: "Du willst wissen, wie stark deine Website von AI Overviews betroffen ist und welche Seiten in München wirklich Leads bringen? Ich analysiere Struktur, Sichtbarkeit und Optimierungspotenzial.",
+  ctaLink: "/website-optimieren-muenchen/"
+    },
+    {
   slug: "bing-video-sora-launch",
   title: "Bing Video Creator: KI-Videos kostenlos mit Sora erstellen",
   category: "KI, Tools, Video",
@@ -50,6 +115,53 @@ Die Renderzeit liegt aktuell noch bei mehreren Stunden, doch für einen kostenlo
   quote: "„Ein Text, ein Klick – und du hast dein eigenes KI-Video. Welcome to the future of content.“",
   ctaText: "Lust auf mehr KI-Power für dein Business? Lass uns gemeinsam neue Ideen entwickeln.",
   ctaLink: "/kontakt"
+  },
+  {
+  slug: "wordpress-plugin-checker-ai",
+  title: "WordPress Plugin Check: Mehr Sicherheit für AI-generierte Plugins",
+  category: "WordPress, KI, Entwicklung",
+  intro: "Wer WordPress-Plugins mit KI entwickelt, sollte nicht nur auf Tempo achten. Das offizielle Plugin-Check-Tool von WordPress hilft dabei, Code auf Standards, Sicherheit und Best Practices zu prüfen.",
+  seoTitle: "WordPress Plugin Check für AI-Plugins | maxWapp",
+  seoDesc: "Das offizielle WordPress Plugin Check Tool prüft AI-generierte Plugins auf Sicherheit, Standards und Best Practices. Was das für Entwickler bedeutet.",
+  image: "/images/blog/wordpress-plugin-check-ai.webp",
+  imageAlt: "WordPress Plugin Check für AI-generierte Plugins",
+  sections: [
+    {
+      title: "Was ist passiert?",
+      intro: "WordPress stellt Entwicklern mit dem offiziellen Plugin Check Plugin ein wichtiges Prüfwerkzeug zur Verfügung.",
+      body: `Das Tool wurde von WordPress.org entwickelt und hilft Plugin-Autoren dabei, ihre Erweiterungen automatisiert auf technische Standards, Sicherheit und bewährte Entwicklungspraktiken zu prüfen. Gerade im Zeitalter von AI-gestützter Entwicklung wird das relevant: Wer Plugins per Prompt oder mit Unterstützung von KI erstellt, produziert zwar schneller Code, aber nicht automatisch sauberen oder repository-tauglichen Code.
+
+Die aktuelle Version des Tools bringt zusätzliche Verbesserungen mit und unterstützt die neue WordPress-7.0-AI-Infrastruktur. Außerdem prüft das Plugin unter anderem Kompatibilität, problematische externe URLs in Admin-Menüs sowie typische Verstöße gegen Entwicklungsrichtlinien.`,
+      image: "/images/blog/wordpress-plugin-check-ai-dashboard.webp",
+      imageAlt: "WordPress Plugin Check Plugin im Einsatz"
+    },
+    {
+      title: "Warum ist das wichtig für Deutschland?",
+      intro: "Viele Unternehmen und Freelancer setzen auf WordPress, aber Qualität und Wartbarkeit werden oft unterschätzt.",
+      body: `Für den deutschen Markt ist das Thema besonders relevant, weil WordPress bei Websites für kleine und mittlere Unternehmen nach wie vor eine zentrale Rolle spielt. Gleichzeitig steigt die Versuchung, mit KI schnell eigene Plugins, Snippets oder individuelle Erweiterungen zu bauen. Genau dort entsteht aber ein Risiko: Funktioniert der Code technisch nicht sauber, kann das zu Sicherheitsproblemen, Update-Konflikten oder Performance-Schwächen führen.
+
+Das Plugin Check Tool ist deshalb kein reines Entwickler-Gadget, sondern ein Qualitätsfilter. Es hilft dabei, typische Fehler früh zu erkennen, bevor ein Plugin live geht oder später Probleme im Backend, bei der Wartung oder bei der Kompatibilität mit Themes und anderen Plugins verursacht.`
+    },
+    {
+      title: "Was bedeutet das für Unternehmen in München?",
+      intro: "Lokale Unternehmen profitieren nicht von mehr Plugins, sondern von stabilen und wartbaren WordPress-Lösungen.",
+      body: `Für Unternehmen in München oder andere lokale Anbieter ist das ein wichtiger Punkt: Wer eine WordPress-Website betreibt, sollte individuelle Funktionen nicht unkontrolliert per KI zusammenbauen lassen. Ein Plugin, das auf den ersten Blick praktisch wirkt, kann später Fehler verursachen, die Sichtbarkeit, Ladezeit oder Nutzererlebnis verschlechtern.
+
+Gerade bei Websites für Dienstleister, lokale Unternehmen oder kleinere Shops ist technische Stabilität oft wichtiger als eine schnelle Spielerei. Wenn individuelle WordPress-Funktionen benötigt werden, sollten sie sauber geprüft, dokumentiert und langfristig wartbar umgesetzt werden. Genau hier trennt sich solides Development von improvisiertem Vibe Coding.`
+    },
+    {
+      title: "Was sollte man jetzt konkret tun?",
+      intro: "Wer mit WordPress arbeitet oder individuelle Funktionen plant, sollte strukturiert vorgehen.",
+      body: `- Eigene Plugins oder AI-generierte Erweiterungen immer vor dem Livegang technisch prüfen  
+- Keine unsauberen Code-Snippets direkt in produktive Websites übernehmen  
+- Sicherheit, Performance und Update-Fähigkeit früh mitdenken  
+- Individuelle Funktionen nur dann entwickeln, wenn sie echten Mehrwert liefern  
+- Bei komplexeren WordPress-Anpassungen auf saubere Entwicklung und Wartbarkeit achten`
+    }
+  ],
+  quote: "„KI kann WordPress-Entwicklung beschleunigen – aber Qualität entsteht erst durch Prüfung.“",
+  ctaText: "Du planst individuelle WordPress-Funktionen oder willst deine Website technisch sauber weiterentwickeln? Ich unterstütze dich bei Umsetzung, Optimierung und WordPress-Entwicklung.",
+  ctaLink: "/wordpress-freelancer/"
   },
   {
     slug: "statische-astro-website",

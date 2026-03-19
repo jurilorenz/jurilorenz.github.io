@@ -1,0 +1,181 @@
+---
+import PrimaryButton from "./PrimaryButton.astro";
+
+const {
+  title = "",
+  lead = "",
+  action = "https://formspree.io/f/mldegkwj",
+  redirectTo = "https://maxwapp.de/thank-you",
+  showPhone = true,
+  submitLabel = "Unverbindliche Anfrage",
+  formId = "contact-form",
+  messageId = "contact-message",
+} = Astro.props;
+---
+
+<section class="section-container section-pad-compact pt-0 md:pt-0">
+  <div class="mw-glass-card relative rounded-[24px] p-6 md:p-10 overflow-hidden hover:!translate-y-0">
+    <div class="mw-topbar-gradient"></div>
+
+    <div class="max-w-4xl mx-auto">
+      {(title || lead) && (
+        <div class="text-center mb-8 md:mb-10">
+          {title && <h2 class="mw-card-section-title mb-4">{title}</h2>}
+          {lead && <p class="mw-lead max-w-3xl mx-auto">{lead}</p>}
+        </div>
+      )}
+
+      <form
+        id={formId}
+        action={action}
+        method="POST"
+        class="space-y-5 md:space-y-6"
+      >
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <label class="block">
+            <span class="sr-only">Vorname</span>
+            <input
+              type="text"
+              name="first_name"
+              placeholder="Vorname"
+              required
+              autocomplete="given-name"
+              class="mw-form-input"
+            />
+          </label>
+
+          <label class="block">
+            <span class="sr-only">Nachname</span>
+            <input
+              type="text"
+              name="last_name"
+              placeholder="Nachname"
+              required
+              autocomplete="family-name"
+              class="mw-form-input"
+            />
+          </label>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <label class="block">
+            <span class="sr-only">E-Mail</span>
+            <input
+              type="email"
+              name="email"
+              placeholder="E-Mail"
+              required
+              autocomplete="email"
+              class="mw-form-input"
+            />
+          </label>
+
+          {showPhone && (
+            <label class="block">
+              <span class="sr-only">Telefon</span>
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Telefon (optional)"
+                autocomplete="tel"
+                class="mw-form-input"
+              />
+            </label>
+          )}
+        </div>
+
+        <label class="block">
+          <span class="sr-only">Nachricht</span>
+          <textarea
+            id={messageId}
+            name="message"
+            placeholder="Nachricht"
+            required
+            class="mw-form-input min-h-[220px] resize-y"
+          ></textarea>
+        </label>
+
+        <div class="flex items-start gap-3">
+          <input
+            type="checkbox"
+            id={`${formId}-privacy-policy`}
+            required
+            class="mw-form-checkbox mt-1"
+          />
+          <label
+            for={`${formId}-privacy-policy`}
+            class="mw-muted text-sm md:text-base leading-relaxed text-left"
+          >
+            Ich akzeptiere die
+            <a
+              href="/datenschutz"
+              class="underline underline-offset-4 hover:text-white transition-colors"
+            >
+              Datenschutzerklärung
+            </a>
+          </label>
+        </div>
+
+        <input type="hidden" name="_next" value={redirectTo} />
+
+        <div class="pt-1 text-center">
+          <button
+            type="submit"
+            class="mw-primary-btn submit-button"
+          >
+            {submitLabel}
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script define:vars={{ formId }}>
+  const form = document.getElementById(formId);
+
+  if (form instanceof HTMLFormElement && !form.dataset.boundSubmit) {
+    form.dataset.boundSubmit = "true";
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+      const submitButton = form.querySelector('button[type="submit"]');
+      const originalButtonText = submitButton?.textContent;
+
+      if (submitButton instanceof HTMLButtonElement) {
+        submitButton.disabled = true;
+        submitButton.textContent = "Wird gesendet...";
+      }
+
+      try {
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: {
+            Accept: "application/json",
+          },
+        });
+
+        if (response.ok) {
+          const nextUrl =
+            form.querySelector('input[name="_next"]')?.getAttribute("value") ||
+            "/thank-you";
+          window.location.href = nextUrl;
+          return;
+        }
+
+        alert("Beim Senden ist ein Problem aufgetreten.");
+      } catch (error) {
+        console.error("Form submit error:", error);
+        alert("Beim Senden ist ein Fehler aufgetreten.");
+      } finally {
+        if (submitButton instanceof HTMLButtonElement) {
+          submitButton.disabled = false;
+          submitButton.textContent = originalButtonText || "Unverbindliche Anfrage";
+        }
+      }
+    });
+  }
+</script>

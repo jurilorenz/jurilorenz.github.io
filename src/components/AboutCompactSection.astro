@@ -1,0 +1,191 @@
+---
+import PrimaryButton from "./PrimaryButton.astro";
+---
+
+<section id="ueber-mich" class="mw-cover-section min-h-[620px] md:min-h-[680px] text-white">
+  <img
+    src="/images/webdesigner-arbeitsplatz-muenchen-maxwapp.webp"
+    alt="Juri Lorenz aus München"
+    class="mw-cover-image"
+    loading="lazy"
+  />
+
+  <div class="mw-cover-overlay" aria-hidden="true"></div>
+  <div class="mw-cover-noise mw-noise" aria-hidden="true"></div>
+
+  <div class="mw-cover-inner h-full flex items-center">
+    <div class="w-full max-w-6xl mx-auto px-6 md:px-0">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
+        <!-- Foto / Identity -->
+        <div class="md:col-span-4 flex justify-center md:justify-start">
+          <div class="about-identity-col text-center md:text-left">
+            <div class="mw-profile-ring mx-auto">
+              <div class="rounded-full bg-[#090a1a] p-0">
+                <img
+                  src="/images/juri-lorenz-foto.webp"
+                  alt="Juri Lorenz"
+                  class="rounded-full w-44 h-44 md:w-60 md:h-60 object-cover"
+                />
+              </div>
+            </div>
+
+            <div class="mt-6 about-identity-head">
+              <p class="text-2xl md:text-3xl font-bold text-gray-100">Juri Lorenz</p>
+              <p class="text-sm md:text-base text-gray-300/80">maxWapp</p>
+            </div>
+
+            <div class="about-identity-meta mt-6 mx-auto md:mx-0">
+              <div class="text-sm md:text-base text-gray-100 leading-relaxed space-y-1">
+                <p>• München</p>
+                <p>• Webdesign & Marketing</p>
+                <p>• Seit 2018</p>
+                <p>• Fokus: Anfragen & Sichtbarkeit</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="md:col-span-8">
+          <div class="about-banner-panel">
+            <p class="mw-eyebrow mb-4">Über mich</p>
+
+            <h2 class="mw-cover-h2 max-w-3xl">
+Strategie und Umsetzung, die Anfragen bringt      
+    </h2>
+
+            <div class="mt-6 space-y-5 max-w-3xl">
+              <p class="mw-body text-gray-200">
+Als Webdesigner und lokaler Marketing-Experte aus <a href="/webdesign-in-der-naehe-muenchen/" class="underline underline-offset-4 hover:no-underline">München</a> unterstütze ich Unternehmen und Selbstständige, die einen Auftritt brauchen, der professionell wirkt und Anfragen bringt.              </p>
+
+            </div>
+
+            <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-4xl">
+              <div class="about-banner-point">
+                <span class="bullet-dot mt-1"></span>
+                <p class="mw-muted text-base">Direkter Ansprechpartner vom Start bis zum Launch</p>
+              </div>
+
+              <div class="about-banner-point">
+                <span class="bullet-dot mt-1"></span>
+                <p class="mw-muted text-base">Weniger Abstimmung, mehr Tempo im Projekt</p>
+              </div>
+
+              <div class="about-banner-point">
+                <span class="bullet-dot mt-1"></span>
+                <p class="mw-muted text-base">Websites für lokale Unternehmen mit Fokus auf Anfragen</p>
+              </div>
+
+              <div class="about-banner-point">
+                <span class="bullet-dot mt-1"></span>
+                <p class="mw-muted text-base">Modernes Design, klare Struktur und saubere Umsetzung</p>
+              </div>
+            </div>
+
+            <div class="mt-8 flex flex-col sm:flex-row gap-4">
+              <PrimaryButton href="/kontakt" label="Projekt besprechen" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .about-banner-panel {
+      position: relative;
+      border-radius: 28px;
+      padding: 1.75rem;
+      background: rgba(12, 14, 30, 0.42);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.38);
+      overflow: hidden;
+    }
+
+    .about-identity-col {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .about-identity-head {
+      width: 100%;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .about-identity-col {
+        align-items: flex-start;
+      }
+
+      .about-identity-head {
+        text-align: center;
+      }
+    }
+
+    .about-identity-meta {
+      width: 100%;
+      max-width: 360px;
+      padding: 0.95rem 1.05rem;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+      text-align: left;
+    }
+
+    @media (min-width: 768px) {
+      .about-identity-meta {
+        text-align: left;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .about-banner-panel {
+        padding: 2.25rem 2.5rem;
+      }
+    }
+
+    .about-banner-panel::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(
+        to right,
+        rgb(var(--mw-grad-from)),
+        rgb(var(--mw-grad-to))
+      );
+      opacity: 0.9;
+    }
+
+    .about-banner-point {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      padding: 1rem 1.1rem;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .mw-cover-image {
+      filter: saturate(0.88) hue-rotate(18deg) brightness(0.66) contrast(1.04);
+    }
+
+    .mw-cover-overlay {
+      background:
+        radial-gradient(circle at 82% 24%, rgba(168, 85, 247, 0.28), transparent 50%),
+        radial-gradient(circle at 18% 68%, rgba(99, 102, 241, 0.18), transparent 58%),
+        linear-gradient(180deg, rgba(9, 10, 26, 0.76) 0%, rgba(41, 0, 101, 0.68) 55%, rgba(9, 10, 26, 0.88) 100%);
+    }
+  </style>
+</section>

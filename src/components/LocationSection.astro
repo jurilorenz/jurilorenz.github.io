@@ -1,0 +1,40 @@
+---
+import PrimaryButton from "./PrimaryButton.astro";
+
+const {
+  title = "Standort in München",
+  imageSrc = "/images/maxwapp-map-muenchen.webp",
+  imageAlt = "maxWapp Webdesign Standort in München Obersendling – Karte",
+  addressLine1 = "Constanze-Hallgarten-Str. 40",
+  addressLine2 = "81379 München",
+  mapsHref = "https://www.google.com/maps/place/maxWapp+%7C+Juri+Lorenz/@48.0961762,11.505842,17z/data=!3m1!4b1!4m6!3m5!1s0xf3b4b557fd55469:0x893accd647bdc468!8m2!3d48.0961726!4d11.5084223!16s%2Fg%2F11wr1981wf?entry=ttu&g_ep=EgoyMDI1MTAyNy4wIKXMDSoASAFQAw%3D%3D",
+} = Astro.props;
+---
+
+<section class="section-container section-pad-compact pt-0 md:pt-0">
+  <div class="text-center mb-8 md:mb-10">
+    <h2 class="mw-card-section-title mb-12">{title}</h2>
+  </div>
+
+  <div class="mw-split-grid md:gap-20 lg:gap-28 md:pl-6 lg:pl-20">
+    <div class="md:col-span-5 flex justify-center md:justify-center">
+      <img
+        src={imageSrc}
+        alt={imageAlt}
+        loading="lazy"
+        class="w-80 md:w-auto md:max-h-[60vh] object-contain rounded-lg shadow-purple-drop"
+      />
+    </div>
+
+    <div class="md:col-span-7 text-center md:text-left">
+      <p class="mw-lead mb-6 text-center md:text-left">
+        <strong>{addressLine1}</strong><br />
+        <strong>{addressLine2}</strong>
+      </p>
+
+      <div class="flex justify-center md:justify-start mt-8 md:mt-12">
+        <PrimaryButton href={mapsHref} label="Auf Google Maps öffnen" target="_blank" />
+      </div>
+    </div>
+  </div>
+</section>

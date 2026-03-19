@@ -8,42 +8,45 @@ die sich durch neue Kunden, bessere Sichtbarkeit und Vertrauen mehrfach auszahlt
 } = Astro.props;
 ---
 
-<!-- 🔥 ROI-Highlight-Block -->
-<div class="roi-highlight">
-  <div class="bg-[#1b1b33] p-6 md:p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)] inline-block text-center">
-    <p class="roi-text text-base md:text-lg mb-8 text-center" set:html={text}></p>
+<section class="section-container section-pad-compact pt-0 md:pt-0">
+  <div class="max-w-4xl mx-auto text-center">
+    <div class="mw-glass-card relative rounded-[24px] p-6 md:p-8 overflow-hidden">
+      <div class="mw-topbar-gradient"></div>
 
-    <a href={href} class="inline-block">
-      <div class="roi-pill">
-        <span class="roi-pill-small">{pillSmall}</span>
-        <span class="roi-pill-arrow">→</span>
-        <span class="roi-pill-big" set:html={pillBig}></span>
-      </div>
-    </a>
+      <p class="mw-body max-w-3xl mx-auto mb-8" set:html={text}></p>
+
+      <a href={href} class="inline-block">
+        <div class="roi-pill">
+          <span class="roi-pill-small">{pillSmall}</span>
+          <span class="roi-pill-arrow" aria-hidden="true">→</span>
+          <span class="roi-pill-big" set:html={pillBig}></span>
+        </div>
+      </a>
+    </div>
   </div>
-</div>
-<!-- 🔥 /ROI-Highlight-Block -->
+</section>
 
 <style>
-  /* ROI-Highlight: Investment -> Ergebnis */
-.roi-highlight {
-  margin: 2.5rem auto 2rem;
-  max-width: 48rem;
-  text-align: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
   .roi-pill {
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
     padding: 0.9rem 1.6rem;
     border-radius: 9999px;
-    background: linear-gradient(120deg, #9c27b0, #03a9f4, #9c27b0);
-    background-size: 200% 200%;
-    animation: roiGradient 6s ease infinite;
-    box-shadow: 0 0 18px rgba(147, 112, 219, 0.6);
+    background: linear-gradient(
+      to right,
+      rgb(var(--mw-grad-from)),
+      rgb(var(--mw-grad-to))
+    );
+    box-shadow: 0 0 14px rgba(147, 112, 219, 0.25);
+    transition:
+      filter 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+
+  .roi-pill:hover {
+    filter: brightness(1.08);
+    box-shadow: 0 0 22px rgba(147, 112, 219, 0.35);
   }
 
   .roi-pill-small {
@@ -60,34 +63,49 @@ die sich durch neue Kunden, bessere Sichtbarkeit und Vertrauen mehrfach auszahlt
   }
 
   .roi-pill-arrow {
-    font-size: 1.2rem;
-    color: #ffe082;
-    animation: roiArrow 1.8s ease-in-out infinite;
-  }
-
-  .roi-text {
-    margin-top: 0.75rem;
     font-size: 1.1rem;
-    color: #e5e5f5;
+    color: rgba(255, 255, 255, 0.95);
+    animation: roiArrow 1.8s ease-in-out infinite;
   }
 
   @media (min-width: 768px) {
     .roi-pill-big {
       font-size: 1.15rem;
     }
-    .roi-text {
-      font-size: 1.25rem;
-    }
-  }
-
-  @keyframes roiGradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
   }
 
   @keyframes roiArrow {
-    0%, 100% { transform: translateX(0); }
-    50% { transform: translateX(4px); }
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(4px);
+    }
+  }
+
+  .mw-glass-card {
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    border: 1px solid rgba(255,255,255,0.08);
+    transform: none;
+  }
+
+  .mw-glass-card:hover {
+    transform: none;
+    border-color: rgba(255,255,255,0.18);
+    box-shadow: 0 0 40px rgba(99,102,241,0.12);
+  }
+
+  /* Override global card hover for this component */
+  .mw-glass-card {
+    border-color: rgba(255,255,255,0.16);
+    box-shadow: 0 0 28px rgba(99,102,241,0.12);
+    transition: none;
+  }
+
+  .mw-glass-card:hover {
+    transform: none !important;
+    border-color: rgba(255,255,255,0.16) !important;
+    box-shadow: 0 0 28px rgba(99,102,241,0.12) !important;
   }
 </style>

@@ -26,7 +26,7 @@ const {
 const variantClasses =
   variant === "gradient"
     ? "bg-gradient-to-r from-[rgb(var(--mw-grad-from))] to-[rgb(var(--mw-grad-to))] text-white shadow-[0_10px_30px_rgba(99,102,241,0.25)] hover:brightness-110 hover:shadow-[0_15px_40px_rgba(99,102,241,0.35)]"
-    : "bg-white text-[#090a1a] shadow-lg hover:shadow-[0_0_20px_rgba(147,112,219,0.8),_0_0_35px_rgba(3,169,244,0.6)]"
+    : "border border-white/15 bg-white/5 text-gray-100 hover:border-[rgba(147,112,219,0.55)] hover:bg-white/8 hover:shadow-[0_0_40px_rgba(147,112,219,0.18)]"
 ---
 
 <a
@@ -35,7 +35,7 @@ const variantClasses =
   target={target}
   rel={rel}
   aria-label={ariaLabel ?? label}
-  class={`relative inline-block py-4 px-10 rounded-full font-bold text-center
+  class={`inline-flex items-center justify-center px-10 py-4 rounded-full font-bold text-lg text-center
   ${fullWidth ? "w-full max-w-xs" : "w-auto"}
   transition-all duration-300 ease-in-out
   ${variantClasses}

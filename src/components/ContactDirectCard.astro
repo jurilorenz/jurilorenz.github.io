@@ -1,0 +1,89 @@
+---
+import PrimaryButton from "./PrimaryButton.astro";
+
+const {
+  title = "Direkter Kontakt",
+  lead = "Telefon, WhatsApp oder E-Mail – wähle einfach den direkten Weg.",
+  phone = "+49 1 777 59 48 39",
+  phoneHref = "tel:+491777594839",
+  whatsappHref = "https://wa.me/491777594839",
+  email = "info@maxwapp.de",
+  emailHref = "mailto:info@maxwapp.de",
+  availability = "Mo – Fr von 8:00 bis 18:00 Uhr",
+  qrSrc = "/images/QR-code.webp",
+  qrAlt = "QR-Code für den WhatsApp-Chat mit maxWapp",
+  showQr = false,
+} = Astro.props;
+---
+
+<section class="section-container section-pad-compact pt-0 md:pt-0">
+  <div class="text-center mb-8 md:mb-10">
+    <h2 class="mw-card-section-title mb-3">{title}</h2>
+    <p class="mw-muted max-w-2xl mx-auto">{lead}</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+    <div class="mw-contact-card hover:!transform-none hover:!shadow-none">
+      <h3 class="mw-contact-card-title">WhatsApp</h3>
+
+      <div class="mw-contact-card-body">
+        <p class="mw-contact-meta mb-5 hidden md:block">
+          Direkt über WhatsApp schreiben
+        </p>
+
+        <div class="media-rounded hidden md:inline-block bg-white p-3 mb-4">
+          <img
+            src={qrSrc}
+            alt={qrAlt}
+            class="w-36 h-36 md:w-40 md:h-40 object-contain"
+          />
+        </div>
+
+        <p class="mw-contact-meta mb-5 hidden md:block">
+          Oder direkt hier
+        </p>
+
+        <div class="mw-contact-actions justify-center">
+          <PrimaryButton href={whatsappHref} label="WhatsApp öffnen" target="_blank" />
+        </div>
+      </div>
+    </div>
+
+    <div class="mw-contact-card hover:!transform-none hover:!shadow-none">
+
+      <div class="mw-contact-card-body">
+        <p class="mw-contact-card-title">
+          Telefon
+        </p>
+
+        <p class="mb-2">
+          <a href={phoneHref} class="mw-contact-link">
+            {phone}
+          </a>
+        </p>
+
+        <p class="mw-contact-meta mb-4">{availability}</p>
+
+        <div class="mw-contact-actions justify-center">
+          <PrimaryButton href={phoneHref} label="Anrufen" />
+        </div>
+
+        <p class="mw-contact-card-title mt-12">
+          E‑Mail
+        </p>
+
+        <p class="mb-4 break-words">
+          <a href={emailHref} class="mw-contact-link">
+            {email}
+          </a>
+        </p>
+
+        <div class="mw-contact-actions justify-center">
+          <PrimaryButton href={emailHref} label="E‑Mail schreiben" />
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

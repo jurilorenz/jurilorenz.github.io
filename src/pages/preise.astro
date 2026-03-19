@@ -1,555 +1,238 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro"
-import IpadComponent from "../components/IpadComponent.astro"
-import RoiHighlight from "../components/RoiHighlight.astro"
 import PriceCalculator from "../components/PriceCalculator.astro"
+import BulletSplitSection from "../components/BulletSplitSection.astro"
+import FeatureGridSection from "../components/FeatureGridSection.astro"
+import FinalCTASection from "../components/FinalCTASection.astro"
+import RoiHighlight from "../components/RoiHighlight.astro"
+import ImageBanner from "../components/ImageBanner.astro"
+import SolutionSection from "../components/SolutionSection.astro"
+import PrimaryHeroSection from "../components/PrimaryHeroSection.astro"
 
-const jsonLd = [
+const includedFeatures = [
   {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: "Starter",
-    image: "https://maxwapp.de/images/packages/starter-package-cover.webp",
-    description:
-      "Landingpage, mobilfreundlich, kostenloses Hosting & Domain, Datenschutz etc.",
-    brand: {
-      "@type": "Brand",
-      name: "maxWapp",
-    },
-    offers: {
-      "@type": "Offer",
-      priceCurrency: "EUR",
-      price: "900",
-      availability: "http://schema.org/InStock",
-      url: "https://maxwapp.de/preise",
-    },
+    title: "Konzept & Design",
+    description: "Struktur, Designrichtung und ein klarer Aufbau für dein Angebot – damit Besucher sofort verstehen, worum es geht.",
   },
   {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: "Basic",
-    image: "https://maxwapp.de/images/packages/basic-package-cover.webp",
-    description: "Startseite, bis 5 Menüpunkte, KI-Bilder, Logo, SEO & mehr.",
-    brand: {
-      "@type": "Brand",
-      name: "maxWapp",
-    },
-    offers: {
-      "@type": "Offer",
-      priceCurrency: "EUR",
-      price: "1900",
-      availability: "http://schema.org/InStock",
-      url: "https://maxwapp.de/preise",
-    },
+    title: "Technische Einrichtung",
+    description: "Sauberes Setup, Basis-Konfiguration und eine stabile technische Grundlage für deine Website.",
   },
   {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: "Business",
-    image: "https://maxwapp.de/images/packages/business-package-cover.webp",
-    description:
-      "Komplettes Branding, professionelle Foto- & Videoproduktion, SEO, Visitenkarten & mehr.",
-    brand: {
-      "@type": "Brand",
-      name: "maxWapp",
-    },
-    offers: {
-      "@type": "Offer",
-      priceCurrency: "EUR",
-      price: "3900",
-      availability: "http://schema.org/InStock",
-      url: "https://maxwapp.de/preise",
-    },
+    title: "Mobil optimiert",
+    description: "Deine Website funktioniert sauber auf Smartphone, Tablet und Desktop – ohne Frust für Besucher.",
+  },
+  {
+    title: "Kontaktformular & DSGVO-Basis",
+    description: "Kontaktmöglichkeit, Impressum und Datenschutz-Basis sind direkt sauber mitgedacht.",
   },
 ]
+
+const priceFactors = [
+  {
+    title: "Seitenanzahl & Umfang",
+    description: "Je mehr Unterseiten deine Website braucht, desto höher ist der Aufwand für Struktur, Inhalte und Gestaltung.",
+  },
+  {
+    title: "SEO & Google-Sichtbarkeit",
+    description: "SEO-optimierte Seiten, Keyword-Recherche und technische Vorbereitung für Google beeinflussen den Preis direkt.",
+  },
+  {
+    title: "Funktionen & Erweiterungen",
+    description: "Kalender, Mehrsprachigkeit, Shop oder ein Google Maps Profil erhöhen Umfang und Umsetzungszeit.",
+  },
+  {
+    title: "Shop & Produkte",
+    description: "Wenn ein Online-Shop integriert wird, spielen auch Produktanzahl und Zahlungsarten eine wichtige Rolle.",
+  },
+]
+
+const processSteps = [
+  {
+    title: "1. Konfiguration im Kalkulator",
+    description: "Du stellst dir eine erste Kombination aus Seiten, SEO und Funktionen zusammen und bekommst sofort einen Richtwert.",
+  },
+  {
+    title: "2. Kurze Anfrage",
+    description: "Danach besprechen wir dein Projekt, Ziele und Umfang – unverbindlich und ohne komplizierten Prozess.",
+  },
+  {
+    title: "3. Konkretes Angebot",
+    description: "Auf Basis deiner Anforderungen bekommst du ein klares Angebot statt einer unübersichtlichen Preisliste.",
+  },
+  {
+    title: "4. Umsetzung mit Plan",
+    description: "Nach Freigabe setze ich deine Website strukturiert um – mit Fokus auf Performance, Sichtbarkeit und Anfragen.",
+  },
+]
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Website erstellen lassen – Kosten & Preise",
+  "provider": { "@type": "Brand", "name": "maxWapp" },
+  "areaServed": "DE",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "EUR",
+    "price": "1500",
+    "availability": "https://schema.org/InStock",
+    "url": "https://maxwapp.de/preise"
+  }
+}
 ---
 
 <MainLayout
   title="Website erstellen lassen – Kosten & Preise | maxWapp"
-  seoTitle="Website erstellen lassen – Kosten & Preise | maxWapp"
-  seoDesc="Website erstellen lassen – Kosten & Preise im Überblick: Was kostet eine professionelle Website oder Homepage? Transparente Webdesign-Pakete ab 700€ aus München"
+  seoTitle="Website erstellen lassen Preise – Kosten & Preisrechner"
+  seoDesc="Website erstellen lassen Preise im Überblick. Was kostet eine professionelle Website? Klare Kosten, Beispiele und Preisrechner für dein Projekt."
 >
-  <p class="sr-only">
-    Website erstellen lassen – transparente Kosten & Preise im Überblick. Ob
-    einfache Landingpage oder professionelle Homepage: die Preise für die
-    Website-Erstellung variieren je nach Umfang, Design und Funktionen. Bei
-    maxWapp erhältst du klare Webdesign-Pakete aus München – vom Starter- bis
-    zum Business-Angebot, inklusive Impressum und Datenschutz. Erfahre jetzt,
-    was eine professionelle Website wirklich kostet.
-  </p>
+<p class="sr-only">
+Website erstellen lassen – Preise, Kosten und Orientierung mit Preisrechner für dein Projekt.
+</p>
 
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
-
-
-  <!-- Background with gradient -->
   <div
-    class="min-h-screen bg-gradient-to-b from-[#090a1a] to-[#290065] text-white text-center flex flex-col items-center justify-center"
+    class="min-h-screen bg-gradient-to-b from-[#090a1a] to-[#290065] text-white text-center flex flex-col items-center justify-center scroll-smooth"
   >
-    <!-- Title 
-    <h1
-      class="text-center text-4xl md:text-6xl font-bold text-gray-100 drop-shadow-lg mx-4 mt-12 md:mt-36 mb-12 md:mb-16 max-w-5xl"
-    >
-      Website erstellen lassen – Kosten & Preise
-    </h1>
--->
+
+<PrimaryHeroSection
+  title="Website erstellen lassen Preise"
+  lead="Was kostet eine professionelle Website? Hier bekommst du einen klaren Preisrahmen, direkte Orientierung und einen Website Preisrechner für dein Projekt."
+  leadMobile="Website Preise im Überblick – mit Preisrechner und klarer Orientierung."
+  desktopImgSrc="/images/website-erstellen-preise-illustration.webp"
+  mobileImgSrc="/images/website-erstellen-preise-illustration.webp"
+  imgAlt="Website erstellen lassen Preise – Webdesign und Kalkulation in München"
+  ctaLabel="Preise berechnen"
+  ctaHref="#preisrechner"
+/>
+
     <PriceCalculator />
 
-    <!-- Pricing Info Section 
-    <h2
-      class="text-center text-xl md:text-3xl font-bold text-gray-300 -mt-4 mb-12 max-w-5xl mx-auto"
-    >
-      Wieviel investierst du in deinen Online-Erfolg?
-    </h2>
+    <BulletSplitSection
+      title="Wie Website-Preise entstehen"
+      imgSrc="/images/projects/battle-calculator.webp"
+      imgAlt="Illustration zur Preisstruktur einer Website"
+      showHighlight={false}
+      imageFirstOnMobile={true}
+      items={[
+        "Seitenanzahl und Inhaltsumfang",
+        "SEO-optimierte Seiten und Google-Vorbereitung",
+        "Technischer Aufwand & Erweiterungen",
+      ]}
+extraText={`Der Kalkulator zeigt dir einen ersten Richtwert, wenn du eine <strong><a href="/landingpage-erstellen-lassen/" class="underline underline-offset-4">Landingpage</a></strong> oder eine <strong><a href="/wordpress-website-erstellen-lassen/" class="underline underline-offset-4">Website</a></strong> erstellen lassen möchtest. Die tatsächlichen <strong>Kosten</strong> hängen von Struktur, Funktionen und Zielen deines Projekts ab.`} extraTextPosition="after"
+    />
 
+    <FeatureGridSection
+      title="Was im Startpaket enthalten ist"
+      intro="Schon das Startpaket deckt die wichtigsten Bausteine ab, damit deine Website professionell wirkt und sauber aufgebaut ist."
+      features={includedFeatures}
+      cols={2}
+afterText={`Damit bekommst du nicht einfach nur eine schöne Oberfläche, sondern eine funktionierende Grundlage für Sichtbarkeit, Vertrauen und Anfragen. Gerade wenn du eine <strong><a href="/wordpress-website-erstellen-lassen/" class="underline underline-offset-4">Homepage erstellen lassen</a></strong> möchtest, entscheidet diese Basis über den späteren Erfolg. Wenn bereits eine Seite existiert, kann auch ein <strong><a href="/website-relaunch-redesign/" class="underline underline-offset-4">Website-Relaunch</a></strong> sinnvoller sein.`}      ctaLabel="Projekt anfragen"
+      ctaHref="/kontakt"
+    />
 
-    <div
-      class="grid grid-cols-1 md:grid-cols-3 gap-16 px-4 pb-24 md:px-4 max-w-7xl mx-auto"
-    >
-      <div
-        class="relative bg-[#1b1b33] p-6 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
-      >
-        <div
-          class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
-        >
-        </div>
-        <h4 class="text-6xl text-white my-4">
-          <span class="text-2xl font-bold">ab</span> 700 <span
-            class="text-2xl font-bold">€</span
-          >
-        </h4>
-        <h5
-          class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500"
-        >
-          Starter
-        </h5>
-        <ul class="text-lg text-gray-300 leading-relaxed space-y-2 mt-8 ml-8">
-          <li class="flex items-start">
-            <i class="fas fa-check text-white mt-1 mr-4"></i> Landingpage
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check text-white mt-1 mr-4"></i> Mobilfreundlich
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check text-white mt-1 mr-4"></i> Einfaches Verwaltung
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check text-white mt-1 mr-4"></i> Kostenlose Domain
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check text-white mt-1 mr-4"></i> Kostenloses Hosting
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check text-white mt-1 mr-4"></i> Impressum
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check text-white mt-1 mr-4"></i> Datenschutz
-          </li>
-        </ul>
-        <div class="my-16">
-          <a
-            href="/kontakt"
-            class="bg-[#1f1235] text-white font-bold py-4 px-24 text-center rounded-full border-2 border-[#6d87d1] shadow-lg w-full max-w-xs md:max-w-none md:w-auto hover:bg-blue-500 hover:shadow-[0_0_10px_rgba(147,112,219,0.5),_0_0_25px_rgba(3,169,244,0.4)] hover:text-white transition-all hover:shadow-glow"
-          >
-            Anfragen
-          </a>
-        </div>
-      </div>
+    <ImageBanner
+      imgSrc="/images/webdesigner-arbeitsplatz-muenchen-maxwapp.webp"
+      imgAlt="Arbeitsplatz mit zwei Monitoren – Symbol für klare Preisstruktur und effiziente Website-Umsetzung"
+      eyebrow="Preis & Value"
+      title="Klare Preise statt Agentur-Overhead"
+text={`
+  <p><strong>Du willst eine professionelle Website erstellen lassen</strong>, aber keine intransparenten Agenturpreise zahlen? Bei mir bekommst du eine direkte Zusammenarbeit, klare Kommunikation und eine Preisstruktur, die nachvollziehbar bleibt.</p>
+  <p>Als <strong>Einzelunternehmer</strong> arbeite ich ohne unnötige Zwischenebenen. Das bedeutet: weniger Overhead, direkter Austausch und mehr Leistung dort, wo sie zählt – in Struktur, Design, Sichtbarkeit und Conversion. Je nach Projekt reicht eine <a href="/landingpage-erstellen-lassen/" class="underline underline-offset-4">Landingpage</a>, eine <a href="/wordpress-website-erstellen-lassen/" class="underline underline-offset-4">WordPress Website</a> oder ein <a href="/online-shop-erstellen-lassen/" class="underline underline-offset-4">Online-Shop</a>.</p>
+`}
+      ctaLabel="Projekt anfragen"
+      ctaHref="/kontakt"
+    />
 
-      <div
-        class="relative bg-[#1b1b33] p-6 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
-      >
-        <div
-          class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
-        >
-        </div>
-        <h4 class="text-6xl text-white my-4">
-          <span class="text-2xl font-bold">ab</span> 1500 <span
-            class="text-2xl font-bold">€</span
-          >
-        </h4>
-        <h5
-          class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500"
-        >
-          Basic
-        </h5>
-        <ul class="text-lg text-gray-300 leading-relaxed space-y-2 mt-8 ml-8">
-          <li class="flex items-start">
-            <i class="fas fa-check text-white mt-1 mr-4"></i> Startseite
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check text-white mt-1 mr-4"></i> bis 5 Menüpunkte
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check text-white mt-1 mr-4"></i> Mobilfreundlich
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check text-white mt-1 mr-4"></i> Einfaches Verwaltung
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check text-white mt-1 mr-4"></i> KI-generierte Bilder
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check text-white mt-1 mr-4"></i> SEO-optimiert
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check text-white mt-1 mr-4"></i> Kontaktformular
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check text-white mt-1 mr-4"></i> Impressum
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check text-white mt-1 mr-4"></i> Datenschutz
-          </li>
-        </ul>
-        <div class="my-16">
-          <a
-            href="/kontakt"
-            class="bg-[#1f1235] text-white font-bold py-4 px-24 text-center rounded-full border-2 border-[#6d87d1] shadow-lg w-full max-w-xs md:max-w-none md:w-auto hover:bg-blue-500 hover:shadow-[0_0_10px_rgba(147,112,219,0.5),_0_0_25px_rgba(3,169,244,0.4)] hover:text-white transition-all hover:shadow-glow"
-          >
-            Anfragen
-          </a>
-        </div>
-      </div>
+    <BulletSplitSection
+      title="Preis ist nicht entscheidend"
+  imgSrc="/images/website-preis-investition-performance.webp"
+      imgAlt="Illustration einer Website mit steigender Performance und Euro-Symbol – steht für Investition in eine professionelle Website mit messbarem Geschäftserfolg"
+      showHighlight={false}
+      imageFirstOnMobile={true}
+      extraText={`Viele vergleichen zuerst Zahlen. Entscheidend ist aber, was eine Website
+      für dein Business leistet: ob sie Vertrauen aufbaut, Anfragen bringt und
+      dein Angebot klar verkauft.`}
+      extraTextPosition="after"
+    />
 
-      <div
-        class="relative bg-[#1b1b33] p-6 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
-      >
-        <div
-          class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
-        >
-        </div>
-        <h4 class="text-6xl text-white my-4">
-          <span class="text-2xl font-bold">ab</span> 2900 <span
-            class="text-2xl font-bold">€</span
-          >
-        </h4>
-        <h5
-          class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500"
-        >
-          Business
-        </h5>
-        <ul class="text-lg text-gray-300 leading-relaxed space-y-2 mt-8 ml-8">
-          <li class="flex items-start">
-            <i class="fas fa-check text-white mt-1 mr-4"></i> Startseite
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check text-white mt-1 mr-4"></i> Konzeptionierung
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check text-white mt-1 mr-4"></i> 6+ Menüpunkte
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check text-white mt-1 mr-4"></i> Corporate Design
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check text-white mt-1 mr-4"></i> Professionelle Fotos
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check text-white mt-1 mr-4"></i> Professionelle Videos
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check text-white mt-1 mr-4"></i> Postproduktion
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check text-white mt-1 mr-4"></i> Logo Erstellung
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check text-white mt-1 mr-4"></i> Visitenkarten Design
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check text-white mt-1 mr-4"></i> SEO-optimiert
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check text-white mt-1 mr-4"></i> Analytics
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check text-white mt-1 mr-4"></i> Google Business
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check text-white mt-1 mr-4"></i> Kontaktformular
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check text-white mt-1 mr-4"></i> Impressum
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check text-white mt-1 mr-4"></i> Datenschutz
-          </li>
-        </ul>
-        <div class="my-16">
-          <a
-            href="/kontakt"
-            class="bg-[#1f1235] text-white font-bold py-4 px-24 text-center rounded-full border-2 border-[#6d87d1] shadow-lg w-full max-w-xs md:max-w-none md:w-auto hover:bg-blue-500 hover:shadow-[0_0_10px_rgba(147,112,219,0.5),_0_0_25px_rgba(3,169,244,0.4)] hover:text-white transition-all hover:shadow-glow"
-          >
-            Anfragen
-          </a>
-        </div>
-      </div>
-    </div>
--->
-    <!-- Sektion: Was kostet eine Website wirklich? -->
-    <section
-      class="w-11/12 md:w-10/12 lg:w-8/12 mx-auto text-centr text-gray-200 mb-24"
-    >
-      <p class="text-lg md:text-2xl mb-24">
-        Auf Basis des kostenlosen Erstgesprächs erarbeite ich ein Konzept und je
-        nach Aufwand und Größe mache ich dir ein passendes Angebot.
-      </p>
+            <RoiHighlight
+      text={`Eine <strong>professionelle Website</strong> kostet Geld – aber eine unklare, langsame oder schwache Website kostet oft mehr. Mit einer sauberen Struktur investierst du nicht in Deko, sondern in Vertrauen, Sichtbarkeit und planbare Anfragen.`}
+      href="/kontakt"
+      pillSmall="Heute investieren"
+      pillBig="morgen mehr Anfragen &amp; Umsatz"
+    />
 
-      <h2 class="text-3xl md:text-4xl font-extrabold mb-12">
-        Was kostet es, eine Website erstellen zu lassen?
-      </h2>
+    <FeatureGridSection
+      title="Welche Faktoren den Preis deiner Website beeinflussen"
+      intro="Wenn du wissen willst, was die Erstellung einer Homepage kostet, sind diese vier Punkte entscheidend."
+      features={priceFactors}
+      cols={2}
+      afterText={`Die Frage <strong>„Was kostet eine professionelle Website?“</strong> lässt sich deshalb nie mit nur einer Zahl beantworten. Der Kalkulator hilft dir, typische Preisfaktoren sichtbar zu machen – statt mit unklaren Paketpreisen zu arbeiten.`}
+      ctaLabel="Projekt anfragen"
+      ctaHref="/kontakt"
+    />
 
-      <p class="text-lg md:text-2xl mb-6">
-        Die Frage <strong>„Was kostet eine Website?“</strong> kommt in fast jedem
-        Erstgespräch.
-      </p>
+<SolutionSection
+  title="Warum der Kalkulator mit Richtwerten arbeitet"
+  intro="Du bekommst zuerst eine klare Orientierung – danach ein konkretes Angebot für dein Projekt."
+  steps={[
+    {
+      num: "1",
+      title: "Klare Orientierung",
+      text: "Sofort verstehen, in welchem Rahmen sich dein Projekt bewegt.",
+    },
+    {
+      num: "2",
+      title: "Transparente Logik",
+      text: "Preis entsteht durch Seiten, Funktionen und Struktur.",
+    },
+    {
+      num: "3",
+      title: "Individuell",
+      text: "Kein Standard. Dein Angebot basiert auf deinem Projekt.",
+    },
+    {
+      num: "4",
+      title: "Direkt",
+      text: "Ohne Agentur-Overhead. Klare Kommunikation, schnelle Umsetzung.",
+    },
+  ]}
 
-      <p class="text-lg md:text-2xl mb-24">
-        Die ehrliche Antwort: Die <strong
-          >Kosten für die Erstellung einer Homepage</strong
-        > richten sich nach deinen Zielen, dem Umfang und den Funktionen.
-      </p>
+/>
 
-      <p class="text-lg md:text-2xl mb-12">
-        Die wichtigsten Faktoren für die <strong
-          >Website erstellen Kosten</strong
-        >:
-      </p>
+<FeatureGridSection
+  title="So wird aus dem Richtwert ein konkretes Angebot"
+  intro="Der Kalkulator ist der Einstieg. Danach wird dein Projekt sauber eingeordnet und konkret geplant."
+  features={processSteps}
+  cols={2}
+afterText={`Du bekommst also keine unklare Preisidee, sondern einen nachvollziehbaren Weg von der ersten Orientierung bis zur fertigen Website. Wenn du dir ein Bild machen willst, schau dir meine <a href="/projekte/" class="underline underline-offset-4">Projekte</a> an.`}  ctaLabel="Projekt anfragen"
+  ctaHref="/kontakt"
+/>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-        <!-- Karte 1 -->
-        <div
-          class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
-        >
-          <div
-            class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
-          >
-          </div>
-          <h3 class="text-2xl font-bold text-white mb-4">
-            1. Umfang & Inhalte
-          </h3>
-          <p class="text-lg text-gray-300 leading-relaxed">
-            Je mehr <strong>Seiten und Funktionen</strong> deine Website hat, desto
-            höher ist der Aufwand. Ein Onepager kostet weniger als eine komplette
-            Firmenwebsite mit mehreren Unterseiten, Blog oder Online-Shop.
-          </p>
-        </div>
+    <FinalCTASection
+      title="Du hast deine Website-Kosten kalkuliert?"
+      description={`
+        <p>Dann lass uns den nächsten Schritt gehen. Ich prüfe deine Anforderungen, gebe dir ehrliches Feedback und mache dir ein konkretes Angebot – transparent, direkt und ohne Agentur-Overhead.</p>
+      `}
+      ctaLabel="Projekt anfragen"
+      ctaHref="/kontakt"
+    />
+  </div>
 
-        <!-- Karte 2 -->
-        <div
-          class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
-        >
-          <div
-            class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
-          >
-          </div>
-          <h3 class="text-2xl font-bold text-white mb-4">
-            2. Design & Branding
-          </h3>
-          <p class="text-lg text-gray-300 leading-relaxed">
-            Ein <strong>individuelles Webdesign</strong>, das perfekt zu deiner
-            Marke passt, erfordert mehr Konzeptionszeit als eine Standardvorlage
-            – lohnt sich aber langfristig für deine Markenwirkung.
-          </p>
-        </div>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const trigger = document.querySelector('a[href="#preisrechner"]');
+    const target = document.getElementById("preisrechner");
 
-        <!-- Karte 3 -->
-        <div
-          class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
-        >
-          <div
-            class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
-          >
-          </div>
-          <h3 class="text-2xl font-bold text-white mb-4">
-            3. Inhalte: Texte & Bilder
-          </h3>
-          <p class="text-lg text-gray-300 leading-relaxed">
-            Wenn du <strong>professionelle Fotos oder neue Texte</strong> brauchst,
-            plane diese Kosten ein. Ich biete auf Wunsch <strong
-              >Texterstellung mit KI-Unterstützung</strong
-            > und individuelle Fotoshootings in München an.
-          </p>
-        </div>
+    if (!(trigger instanceof HTMLAnchorElement) || !(target instanceof HTMLElement)) return;
 
-        <!-- Karte 4 -->
-        <div
-          class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
-        >
-          <div
-            class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
-          >
-          </div>
-          <h3 class="text-2xl font-bold text-white mb-4">
-            4. Funktionen & SEO
-          </h3>
-          <p class="text-lg text-gray-300 leading-relaxed">
-            Zusätzliche Funktionen wie <strong
-              >Online-Shop, Buchungssystem oder Blog</strong
-            > erhöhen den Aufwand. Auch eine <strong>SEO-Optimierung</strong> für
-            Google oder schnelle Ladezeiten zählen zu den wichtigsten Preisfaktoren.
-          </p>
-        </div>
-      </div>
-
-      <p class="text-lg md:text-2xl mt-12 mb-6">
-        Sieh dir meine <strong
-          ><a
-            href="/projekte"
-            class="underline underline-offset-4 decoration-2 hover:text-purple-300 transition"
-            >aktuellen Projekte</a
-          ></strong
-        > an oder entdecke mehr über meine Leistungen – etwa in den Bereichen
-        <strong
-          ><a
-            href="/wordpress-website-erstellen-lassen"
-            class="underline underline-offset-4 decoration-2 hover:text-purple-300 transition"
-            >Website-Erstellung</a
-          ></strong
-        >
-        und <strong
-          ><a
-            href="/online-shop-erstellen-lassen"
-            class="underline underline-offset-4 decoration-2 hover:text-purple-300 transition"
-            >Online-Shop Entwicklung</a
-          ></strong
-        >.
-      </p>
-
-      <p class="text-lg md:text-2xl mb-6">
-        Wenn du dir noch unsicher bist, welches Paket oder welche Lösung am
-        besten zu dir passt: Lass uns das einfach in einem <strong
-          ><a
-            href="/kontakt"
-            class="underline underline-offset-4 decoration-2 hover:text-purple-300 transition"
-            >unverbindlichen Gespräch</a
-          ></strong
-        > klären.
-      </p>
-
-      <h2 class="text-3xl md:text-4xl font-extrabold mb-8 mt-24 text-center">
-        Warum du mehr brauchst als nur Social Media
-      </h2>
-
-      <p class="text-lg md:text-2xl mb-4 text-center max-w-4xl mx-auto">
-        Viele Firmen fragen: <strong
-          >„Warum brauche ich überhaupt eine Website?“</strong
-        ><br />
-      </p>
-      <p class="text-lg md:text-2xl mb-12 text-center max-w-4xl mx-auto">
-        Die Antwort ist einfach: Dein Instagram-Account oder dein Google-Profil
-        sind nur geliehene Plattformen –
-        <strong>deine Website gehört dir</strong> und ist das Zentrum deiner Online-Präsenz.
-      </p>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-        <!-- Karte 1 -->
-        <div
-          class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
-        >
-          <div
-            class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
-          >
-          </div>
-          <h3 class="text-2xl font-bold text-white mb-4">
-            1. Sichtbarkeit & Vertrauen
-          </h3>
-          <p class="text-lg text-gray-300 leading-relaxed">
-            Eine eigene Website zeigt Professionalität, schafft Vertrauen und
-            wird von Kunden häufiger gefunden als Social-Media-Profile –
-            besonders über <strong>Google-Suchen</strong>.
-          </p>
-        </div>
-
-        <!-- Karte 2 -->
-        <div
-          class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
-        >
-          <div
-            class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
-          >
-          </div>
-          <h3 class="text-2xl font-bold text-white mb-4">
-            2. Kontrolle & Unabhängigkeit
-          </h3>
-          <p class="text-lg text-gray-300 leading-relaxed">
-            Auf Instagram oder Google hast du <strong>keine Kontrolle</strong> über
-            Algorithmen oder Richtlinien. Deine Website ist dein Raum – du entscheidest
-            über Design, Struktur und Inhalte.
-          </p>
-        </div>
-
-        <!-- Karte 3 -->
-        <div
-          class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
-        >
-          <div
-            class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
-          >
-          </div>
-          <h3 class="text-2xl font-bold text-white mb-4">3. Google & SEO</h3>
-          <p class="text-lg text-gray-300 leading-relaxed">
-            Ohne eigene Website kannst du kaum bei <strong>Google ranken</strong
-            >. Eine optimierte Seite bringt dir Besucher, Anfragen und neue
-            Kunden – langfristig und messbar.
-          </p>
-        </div>
-
-        <!-- Karte 4 -->
-        <div
-          class="relative bg-[#1b1b33] p-8 rounded-xl border border-gray-700 shadow-[0px_0px_35px_rgba(147,112,219,0.6)]"
-        >
-          <div
-            class="absolute top-0 left-0 bg-gradient-to-r from-purple-400 to-blue-500 w-full h-2 rounded-t-xl"
-          >
-          </div>
-          <h3 class="text-2xl font-bold text-white mb-4">
-            4. Zentrale Plattform
-          </h3>
-          <p class="text-lg text-gray-300 leading-relaxed">
-            Social Media, Google Maps, Bewertungen – alles führt zurück auf
-            deine Website. Sie ist das <strong
-              >digitale Zuhause deiner Marke</strong
-            > und bündelt alle Kontaktpunkte an einem Ort.
-          </p>
-        </div>
-      </div>
-
-      <p class="text-lg md:text-2xl text-center mt-16 max-w-4xl mx-auto">
-        Eine professionelle Website stärkt dein Branding, präsentiert deine
-        Leistungen klar und macht dich unabhängig von einzelnen Plattformen wie
-        Instagram oder Google Maps.
-        <strong
-          >Sie ist die zentrale Anlaufstelle für alle, die dich online finden
-          wollen.</strong
-        >
-      </p>
-
-      <section
-        class="w-11/12 md:w-10/12 lg:w-8/12 mx-auto text-gray-200 mb-12 text-center"
-      >
-        <!-- iPad Component (zentriert) -->
-        <div class="flex justify-center w-full mt-4">
-          <IpadComponent
-            imgSrc="/images/website-erstellen-preise-illustration.webp"
-            imgAlt="Illustration einer professionellen Website mit wachsendem Umsatz – Symbol für Webdesign-Investition und steigende Online-Sichtbarkeit"
-          />
-        </div>
-      </section>
-
-      <p
-        class="text-lg md:text-2xl text-center my-12 md:my-24 max-w-4xl mx-auto"
-      >
-        Wenn du in eine <strong>professionelle Website</strong> investierst, zahlst
-        du nicht nur für Design, sondern für mehr Sichtbarkeit, Vertrauen und planbare
-        Anfragen.
-        <strong
-          >Deine Website arbeitet 24/7 für dich – auch wenn du offline bist.</strong
-        >
-      </p>
-
-      <RoiHighlight />
-    </section>
-  </div></MainLayout
->
+    trigger.addEventListener("click", (e) => {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+</script>
+</MainLayout>

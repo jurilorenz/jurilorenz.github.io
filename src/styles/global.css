@@ -18,7 +18,7 @@
 /* ================= HERO SYSTEM ================= */
 
 .mw-hero-grid {
-  @apply grid grid-cols-1 md:grid-cols-2 items-center md:mt-24 gap-24;
+  @apply grid grid-cols-1 md:grid-cols-2 items-center md:mt-12 gap-24;
 }
 
 .mw-hero-image-wrapper {
@@ -46,12 +46,13 @@
 }
 
 .mw-primary-btn:hover {
-  transform: translateY(-2px);
   box-shadow: 0 15px 40px rgba(99, 102, 241, 0.35);
+  background-position: 100% 0;
+  filter: brightness(1.1);
 }
 
 .mw-hero-title {
-  @apply text-5xl md:text-7xl font-extrabold leading-[1.15] md:leading-[1.1] tracking-tight text-gray-100;
+  @apply text-4xl md:text-7xl font-extrabold leading-[1.15] md:leading-[1.1] tracking-tight text-gray-100;
 }
 
 .mw-hero-subtitle {
@@ -108,10 +109,116 @@
     opacity: 0.9;
   }
 
+  .mw-card-section-title {
+  @apply text-2xl md:text-3xl font-extrabold text-gray-100;
+}
+
+.mw-muted {
+  @apply text-gray-300 leading-relaxed;
+}
+
   /* Bullet cards (used across sections) */
   .bullet-card {
     @apply mw-card-base mw-card-hoverable flex items-center gap-4 px-6 py-5;
   }
+
+  .mw-form-input {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  color: #f3f4f6;
+  padding: 0.95rem 1rem;
+  outline: none;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+  backdrop-filter: blur(8px);
+}
+
+.mw-form-input::placeholder {
+  color: rgba(203, 213, 225, 0.8);
+}
+
+.mw-form-input:focus {
+  border-color: var(--mw-border-strong);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.mw-form-checkbox {
+  width: 1.2rem;
+  height: 1.2rem;
+  flex-shrink: 0;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.04);
+  accent-color: rgb(var(--mw-grad-to));
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px rgba(27, 27, 51, 1) inset;
+  -webkit-text-fill-color: #ffffff;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+  .mw-contact-grid {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5;
+  }
+
+  .mw-contact-card {
+    @apply mw-glass-card rounded-[20px] p-5 md:p-6 h-full;
+  }
+
+  .mw-contact-card-title {
+    @apply text-lg md:text-xl font-extrabold text-gray-100 mb-3;
+  }
+
+  .mw-contact-card-body {
+    @apply text-base md:text-lg text-gray-300 leading-relaxed;
+  }
+
+  .mw-contact-link {
+    @apply inline-flex items-center text-gray-100 font-semibold transition-colors duration-300;
+  }
+
+  .mw-contact-link:hover {
+    color: white;
+  }
+
+  .mw-contact-meta {
+    @apply text-sm md:text-base text-gray-300/90 leading-relaxed;
+  }
+
+  .mw-contact-actions {
+    @apply flex flex-col sm:flex-row gap-3;
+  }
+
+  .mw-secondary-btn {
+    @apply inline-flex items-center justify-center px-8 py-3 rounded-full font-bold text-base border transition-all duration-300;
+    border-color: rgba(255, 255, 255, 0.16);
+    background: rgba(255, 255, 255, 0.04);
+    color: #f3f4f6;
+  }
+
+  .mw-secondary-btn:hover {
+    border-color: var(--mw-border-strong);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: var(--mw-card-glow);
+    transform: translateY(-1px);
+  }
+
+  .mw-profile-ring {
+  @apply rounded-full p-1 shadow-md;
+  background: linear-gradient(
+    to right,
+    rgb(var(--mw-grad-from)),
+    rgb(var(--mw-grad-to))
+  );
+  filter: drop-shadow(-35px 0px 35px rgba(75, 0, 130, 0.6));
+}
 
   /* gradient dot (purple → indigo) */
   .bullet-dot {
@@ -410,6 +517,110 @@
   .mw-cover-actions {
     @apply mt-10 flex flex-col sm:flex-row gap-4 justify-center md:justify-start;
   }
+
+  /* ---- Blog article closing elements ---- */
+  .mw-blog-quote {
+    @apply relative overflow-hidden rounded-[24px] p-6 md:p-8;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.045) 0%,
+      rgba(255, 255, 255, 0.025) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
+    backdrop-filter: blur(10px);
+  }
+
+  .mw-blog-quote::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(
+      circle at 12% 18%,
+      rgba(168, 85, 247, 0.12),
+      transparent 42%
+    );
+    opacity: 0.95;
+  }
+
+  .mw-blog-quote-text {
+    @apply relative text-xl md:text-2xl leading-relaxed text-gray-200 italic;
+  }
+
+  .mw-blog-cta {
+    @apply relative overflow-hidden rounded-[28px] p-7 md:p-9;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(255, 255, 255, 0.03) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 16px 44px rgba(0, 0, 0, 0.16);
+    backdrop-filter: blur(12px);
+    transition: border-color 220ms ease, box-shadow 220ms ease,
+      background 220ms ease;
+  }
+
+  .mw-blog-cta::before {
+    content: "";
+    @apply mw-topbar-gradient;
+    opacity: 0.88;
+  }
+
+  .mw-blog-cta::after {
+    content: "";
+    position: absolute;
+    right: -90px;
+    bottom: -110px;
+    width: 260px;
+    height: 260px;
+    border-radius: 9999px;
+    pointer-events: none;
+    background: radial-gradient(
+      circle,
+      rgba(99, 102, 241, 0.13) 0%,
+      rgba(168, 85, 247, 0.08) 38%,
+      transparent 72%
+    );
+  }
+
+  .mw-blog-cta:hover {
+    border-color: rgba(147, 112, 219, 0.32);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.06) 0%,
+      rgba(255, 255, 255, 0.035) 100%
+    );
+  }
+
+  .mw-blog-cta-copy {
+    @apply relative max-w-3xl text-xl md:text-2xl text-gray-100 leading-relaxed;
+  }
+
+  .mw-blog-cta-actions {
+    @apply relative mt-8 flex flex-wrap gap-3;
+  }
+
+  .mw-blog-link-btn {
+    @apply inline-flex items-center justify-center rounded-full px-7 py-3.5 font-bold text-base;
+    color: #f3f4f6;
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    transition: border-color 180ms ease, background 180ms ease,
+      box-shadow 180ms ease, color 180ms ease;
+  }
+
+  .mw-blog-link-btn:hover {
+    color: white;
+    border-color: rgba(147, 112, 219, 0.34);
+    background: rgba(255, 255, 255, 0.075);
+    box-shadow: 0 0 0 1px rgba(147, 112, 219, 0.08) inset;
+    transform: none;
+  }
+
 
   /* Optional: keep section looking premium on huge screens */
   @media (min-width: 1280px) {

@@ -1,4 +1,6 @@
 ---
+import PrimaryButton from "./PrimaryButton.astro"
+
 export interface ProjectCardItem {
   href: string
   district: string
@@ -78,10 +80,12 @@ const gridColsClass = cols === 3 ? "md:grid-cols-2 xl:grid-cols-3" : "md:grid-co
       )}
 
       {ctaLabel && ctaHref && (
-        <a href={ctaHref} class="mw-primary-btn">
-          {ctaLabel}
-        </a>
-      )}
+        <PrimaryButton
+          href={ctaHref}
+          label={ctaLabel}
+          variant="white"
+        />
+      )} 
 
     </div>
   )}

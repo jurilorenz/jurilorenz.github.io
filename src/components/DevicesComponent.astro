@@ -1,68 +1,80 @@
 ---
 // DevicesComponent.astro
+import PrimaryButton from "../components/PrimaryButton.astro";
 ---
 
-<h2
-class="text-center text-4xl md:text-6xl font-bold text-gray-100 drop-shadow-lg mt-12"
->
-Meine Projekte
-</h2>
-<p class="text-center text-2xl md:text-2xl font-medium text-gray-300 mt-8">
-  Entdecke <strong>professionelles Webdesign</strong>  
+<section class="section-pad text-white">
+  <div class="section-container text-center">
+    <h2 class="mw-h2 mt-0">
+      Meine Projekte
+    </h2>
+<p class="mw-lead mt-6 md:mt-8">
+  Websites für unterschiedliche Branchen – klar aufgebaut, modern gestaltet und auf Anfragen ausgerichtet.
 </p>
 
-<a href="/projekte">
-  <div class="relative w-full h-full flex items-center shadow-md drop-shadow-[-35px_0px_35px_rgba(75,0,130,0.6)] justify-center py-48 md:py-96 overflow-hidden">
-    <!-- Animated Phones -->
-    <img src="/images/projects/streetly.webp" alt="Mobile Navigationslösung Streetly – Website auf dem iPhone" class="phone phone-1 hover:scale-105 transition-transform duration-300 cursor-pointer" />
-    <img src="/images/projects/kleines-stadthaus.webp" alt="Shopify-Online-Shop für Kleines Stadthaus – Fashion-Webseite auf dem iPhone" class="phone phone-2 hover:scale-105 transition-transform duration-300 cursor-pointer" />
-    <img src="/images/projects/studio-d.webp" alt="Friseursalon Studio D – Premium Webdesign auf dem iPhone" class="phone phone-3 hover:scale-105 transition-transform duration-300 cursor-pointer" />
-    <img src="/images/projects/immobilien-muenchen.webp" alt="Immobilien-Website aus München – mobil optimiert auf dem iPhone" class="phone phone-4 hover:scale-105 transition-transform duration-300 cursor-pointer" />
-    <img src="/images/projects/akimova-art.webp" alt="Digitale Galerie für Margarita Akimova – Kunst-Website auf dem iPhone" class="phone phone-5 hover:scale-105 transition-transform duration-300 cursor-pointer" />
-    <img src="/images/projects/1-line-architecture.webp" alt="Mobile Ansicht der Portfolioseite von 1 Line Architecture" class="phone phone-6 hover:scale-105 transition-transform duration-300 cursor-pointer" />
-  </div>
-</a>
+    <a href="/projekte" class="block" aria-label="Projekte ansehen">
+      <div class="devices-stage shadow-purple-drop mt-10 md:mt-14">
+        <img src="/images/projects/wordpress-website-zaunbau-seattle.webp" alt="Mobile Navigationslösung Streetly – Website auf dem iPhone" class="phone phone-1 hover:scale-105 transition-transform duration-300 cursor-pointer" />
+        <img src="/images/projects/akimova-art.webp" alt="Shopify-Online-Shop für Kleines Stadthaus – Fashion-Webseite auf dem iPhone" class="phone phone-2 hover:scale-105 transition-transform duration-300 cursor-pointer" />
+        <img src="/images/projects/studio-d.webp" alt="Friseursalon Studio D – Premium Webdesign auf dem iPhone" class="phone phone-3 hover:scale-105 transition-transform duration-300 cursor-pointer" />
+        <img src="/images/projects/felix-rheindorf.webp" alt="Immobilien-Website aus München – mobil optimiert auf dem iPhone" class="phone phone-4 hover:scale-105 transition-transform duration-300 cursor-pointer" />
+        <img src="/images/projects/pflegedienst-muenchen-website.webp" alt="Digitale Galerie für Margarita Akimova – Kunst-Website auf dem iPhone" class="phone phone-5 hover:scale-105 transition-transform duration-300 cursor-pointer" />
+        <img src="/images/projects/immobilien-muenchen.webp" alt="Mobile Ansicht der Portfolioseite von 1 Line Architecture" class="phone phone-6 hover:scale-105 transition-transform duration-300 cursor-pointer" />
+      </div>
+    </a>
 
-<!-- Project Request Button -->
-<div class="mt-2 flex justify-center">
-  <a
-    href="/projekte"
-    class="relative inline-block py-4 px-10 rounded-full font-bold text-center w-full max-w-xs md:max-w-none md:w-auto bg-white text-[#090a1a] shadow-lg transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_rgba(147,112,219,0.8),_0_0_35px_rgba(3,169,244,0.6)] hover:border-[#6d87d1]"
-  >
-    Projekte erleben
-  </a>
-</div>
+<p class="mw-body text-gray-300 max-w-3xl mx-auto mt-8 mb-12">
+  Ob Immobilien, Gastronomie, Beauty oder Dienstleistung – jedes Projekt wird passend zur Branche, Zielgruppe und zum Angebot aufgebaut.
+</p>
+
+    <div class="mt-2 flex justify-center">
+      <PrimaryButton href="/projekte" label="Projekte erleben" />
+    </div>
+  </div>
+</section>
 
 <style>
-/* Parent Container */
-.relative {
-  position: relative;
-  max-height: 80vh;
-  overflow: hidden;
-}
+  .devices-stage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+    overflow: hidden;
+    max-height: 80vh;
+  }
 
-/* Phone Images */
-.phone {
-  position: absolute;
-  max-height: 80%;
-  width: auto;
-  object-fit: contain;
-  animation: flyInOut 8s ease-in-out infinite;
-  opacity: 0;
-}
+  @media (min-width: 768px) {
+    .devices-stage {
+      padding-top: 24rem;
+      padding-bottom: 24rem;
+    }
+  }
 
-.phone-1 { animation-delay: 0s; }
-.phone-2 { animation-delay: 1.6s; }
-.phone-3 { animation-delay: 3.2s; }
-.phone-4 { animation-delay: 4.8s; }
-.phone-5 { animation-delay: 6.4s; }
-.phone-6 { animation-delay: 8.0s; }
+  .phone {
+    position: absolute;
+    max-height: 80%;
+    width: auto;
+    object-fit: contain;
+    animation: flyInOut 8s ease-in-out infinite;
+    opacity: 0;
+  }
 
-@keyframes flyInOut {
-  0% { transform: translateX(100%) scale(0.8); opacity: 0; }
-  10% { transform: translateX(50%) scale(1); opacity: 1; }
-  50% { transform: translateX(0) scale(1); opacity: 1; }
-  90% { transform: translateX(-50%) scale(0.9); opacity: 0.5; }
-  100% { transform: translateX(-100%) scale(0.8); opacity: 0; }
-}
+  .phone-1 { animation-delay: 0s; }
+  .phone-2 { animation-delay: 1.6s; }
+  .phone-3 { animation-delay: 3.2s; }
+  .phone-4 { animation-delay: 4.8s; }
+  .phone-5 { animation-delay: 6.4s; }
+  .phone-6 { animation-delay: 8s; }
+
+  @keyframes flyInOut {
+    0% { transform: translateX(100%) scale(0.8); opacity: 0; }
+    10% { transform: translateX(50%) scale(1); opacity: 1; }
+    50% { transform: translateX(0) scale(1); opacity: 1; }
+    90% { transform: translateX(-50%) scale(0.9); opacity: 0.5; }
+    100% { transform: translateX(-100%) scale(0.8); opacity: 0; }
+  }
 </style>
