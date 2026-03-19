@@ -90,6 +90,18 @@ const hasCta =
             </article>
           ))}
         </div>
+
+        <div class="mt-10 text-center md:hidden">
+          <p class="text-lg text-gray-300 leading-relaxed">
+            {intro}
+          </p>
+
+          {hasCta && (
+            <div class="mt-8 flex flex-col gap-4 items-center">
+              <PrimaryButton href={ctaHref!} label={ctaLabel!} />
+            </div>
+          )}
+        </div>
       </div>
 
       <!-- RIGHT: Heading + Intro + CTA (1/3) -->
@@ -107,15 +119,17 @@ const hasCta =
           {title}
         </h2>
 
-        <p class="mt-6 text-lg md:text-2xl text-gray-300 leading-relaxed max-w-[46ch] md:max-w-none">
-          {intro}
-        </p>
+        <div class="hidden md:block">
+          <p class="mt-6 text-lg md:text-2xl text-gray-300 leading-relaxed max-w-[46ch] md:max-w-none">
+            {intro}
+          </p>
 
-        {hasCta && (
-          <div class="mt-10 flex flex-col gap-4 items-center md:items-start">
-            <PrimaryButton href={ctaHref!} label={ctaLabel!} />
-          </div>
-        )}
+          {hasCta && (
+            <div class="mt-10 flex flex-col gap-4 items-center md:items-start">
+              <PrimaryButton href={ctaHref!} label={ctaLabel!} />
+            </div>
+          )}
+        </div>
       </div>
     </div>
   </div>
