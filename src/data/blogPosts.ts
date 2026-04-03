@@ -4,6 +4,7 @@ export interface BlogSection {
   body: string;
   image?: string;
   imageAlt?: string;
+  imageCaption?: string;
 }
 
 export interface BlogPost {
@@ -33,6 +34,143 @@ export interface BlogPost {
 
 export const blogPosts = [
 {
+  slug: "google-business-profile-dynamisch-lokale-sichtbarkeit",
+  title: "Google Business Profile aktiv pflegen: Warum statische Profile lokal Sichtbarkeit verlieren",
+  category: "SEO, Google, Lokale Sichtbarkeit",
+  intro: "Ein Google Business Profile reicht heute nicht mehr als einmal sauber eingerichtet und dann vergessen. Neue Entwicklungen im Local SEO zeigen klar: Google bevorzugt Profile, die regelmäßig frische Signale senden – durch Bewertungen, Beiträge, Fotos, aktuelle Öffnungszeiten und echte Interaktionen.",
+  seoTitle: "Google Business Profile aktiv pflegen: mehr lokale Sichtbarkeit | maxWapp",
+  seoDesc: "Warum ein statisches Google Business Profile nicht mehr reicht und was Unternehmen in München jetzt konkret tun sollten, um lokal sichtbar zu bleiben.",
+  image: "/images/blog/google-business-profile-dynamisch.webp",
+  imageAlt: "Aktives Google Business Profile mit Bewertungen, Beiträgen und lokalen Interaktionen im dunklen Tech-Stil",
+  sections: [
+    {
+      title: "Was ist passiert?",
+      intro: "Google Business Profile funktionieren immer weniger wie ein reiner Brancheneintrag und immer stärker wie eine aktive lokale Präsenz innerhalb der Google-Suche.",
+      body: `Früher reichte es oft, Name, Adresse, Telefonnummer, Kategorie und Öffnungszeiten sauber einzutragen. Heute ist das nur noch die Basis. Wenn ein Profil monatelang unverändert bleibt, wirkt es aus Sicht von Google weniger relevant als ein Profil, das regelmäßig aktualisiert wird und echte Nutzerinteraktionen erzeugt.
+
+Im Fokus stehen dabei nicht mehr nur Stammdaten, sondern laufende Signale: neue Bewertungen, Antworten auf Rezensionen, aktuelle Fotos, Beiträge, Klicks, Anrufe, Wegbeschreibungen und vollständige Profilpflege. Auch Öffnungszeiten sind nicht mehr nur eine Service-Information, sondern offenbar ein echter Relevanzfaktor – vor allem dann, wenn Nutzer gerade aktiv nach einer Leistung suchen.
+
+Für lokale Unternehmen heißt das: Ein statisches Profil verliert mit der Zeit an Stärke. Ein aktives Profil baut Sichtbarkeit dagegen Schritt für Schritt weiter aus.`
+    },
+    {
+      title: "Warum ist das wichtig für Deutschland?",
+      intro: "Für den deutschen Markt ist das besonders relevant, weil lokale Suchen oft sehr transaktional sind und Nutzer schnell eine konkrete Entscheidung treffen wollen.",
+      body: `Wer in Deutschland nach einer Dienstleistung sucht, will meist keine lange Recherche, sondern einen passenden Anbieter mit klaren Informationen, Vertrauen und sofort erkennbarer Aktivität. Genau hier spielt das Google Business Profile eine deutlich größere Rolle als früher.
+
+Wenn mehrere Unternehmen ähnliche Leistungen anbieten, reichen saubere Basisdaten allein nicht mehr aus. Dann entscheiden oft frische Bewertungen, aktuelle Inhalte, vollständige Angaben und sichtbare Aktivität darüber, welcher Anbieter in der lokalen Suche stärker erscheint und häufiger angeklickt wird.
+
+Dazu kommt eine zweite Ebene: Diese Signale fließen nicht nur in klassische Local-Pack-Ergebnisse ein, sondern zunehmend auch in KI-gestützte Antworten. Das macht lokale Sichtbarkeit nicht einfacher, aber klarer: Wer Google kontinuierlich relevante Signale liefert, bleibt eher sichtbar. Wer das Profil nur verwaltet, statt es aktiv zu pflegen, verliert schrittweise an Präsenz.`,
+      image: "/images/blog/local-search-ranking-factors.webp",
+      imageAlt: "Lokale Ranking-Faktoren...",
+      imageCaption: "Datenquelle: Whitespark – Analyse der wichtigsten Ranking-Faktoren für Google Maps."
+    },
+    {
+      title: "Was bedeutet das für Unternehmen in München?",
+      intro: "Für lokale Anbieter in München ist das kein theoretisches SEO-Thema, sondern direkt mit Anfragen, Vertrauen und Wettbewerb verbunden.",
+      body: `In einer Stadt wie München konkurrieren viele Unternehmen um dieselben lokalen Suchanfragen. Gerade in Bereichen wie Webdesign, Pflege, Beauty, Handwerk, Gastro, Immobilien oder Coaching reicht ein gut klingender Firmeneintrag längst nicht mehr aus. Sichtbar bleiben meist die Anbieter, deren Profile aktuell, glaubwürdig und aktiv wirken.
+
+Das bedeutet konkret: Wer regelmäßig neue Bewertungen erhält, auf Feedback antwortet, reale Fotos hochlädt und sein Profil sauber pflegt, sendet stärkere Vertrauens- und Aktivitätssignale als Konkurrenten mit veralteten Einträgen. Das kann sich direkt auf Klicks, Anrufe und Kontaktanfragen auswirken.
+
+Für Unternehmen in München ist das besonders wichtig, weil lokale Entscheidungen oft schnell getroffen werden. Viele Nutzer vergleichen nicht zehn Websites im Detail. Sie sehen ein paar Profile, prüfen Bewertungen, Bilder, Aktualität und Verfügbarkeit – und klicken dann den Anbieter an, der am lebendigsten und vertrauenswürdigsten wirkt.`
+    },
+    {
+      title: "Was sollte man jetzt konkret tun?",
+      intro: "Wer lokal sichtbar bleiben will, sollte das Google Business Profile wie einen aktiven Kanal behandeln – nicht wie eine einmalige Pflichtaufgabe.",
+      body: `- Bitte aktiv und zeitnah um neue Bewertungen, idealerweise direkt nach einem abgeschlossenen Auftrag oder positiven Kundenerlebnis  
+
+- Antworte auf jede Bewertung möglichst schnell und individuell statt mit generischen Standardfloskeln  
+
+- Veröffentliche regelmäßig neue Beiträge, zum Beispiel zu Projekten, Aktionen, Updates oder relevanten Geschäftsthemen  
+
+- Lade fortlaufend echte aktuelle Fotos hoch, statt nur einmal im Jahr eine große Sammlung zu ergänzen  
+
+- Prüfe Öffnungszeiten, Leistungsbeschreibungen, Kategorien, Fragen und Kontaktmöglichkeiten regelmäßig auf Aktualität  
+
+- Beobachte nicht nur Rankings, sondern auch Interaktionen wie Anrufe, Webseitenklicks, Routenanfragen und Profilaufrufe`
+    }
+  ],
+  quote: "„Lokale Sichtbarkeit entsteht nicht mehr nur durch Existenz, sondern durch sichtbare Aktivität.“",
+  ctaText: "Du willst dein Google Business Profile nicht nur pflegen, sondern strategisch für mehr lokale Sichtbarkeit nutzen? Ich unterstütze dich bei Struktur, Optimierung und einem klaren Local-SEO-Setup.",
+  ctaLink: "/website-optimieren-muenchen/"
+    },
+    {
+  slug: "google-stitch-vibe-design",
+  title: "Google Stitch: Wie „Vibe Design“ Webdesign verändert",
+  category: "KI, Design, Tools",
+  intro: "Google bringt mit Stitch ein neues Konzept ins Webdesign: Statt Layouts zu bauen, beschreibst du einfach deine Idee – und bekommst fertige UI-Designs. Was dahinter steckt, wo die Stärken liegen und warum menschliche Designentscheidung trotzdem entscheidend bleibt.",
+  seoTitle: "Google Stitch & Vibe Design – Zukunft von Webdesign | maxWapp",
+  seoDesc: "Google Stitch ermöglicht UI-Design per Sprache. Was „Vibe Design“ für Webdesigner, WordPress und Unternehmen in München bedeutet.",
+  image: "/images/blog/google-stitch-ui-screenshot.webp",
+  imageAlt: "Screenshot des Google Stitch Start-Interfaces",
+  sections: [
+    {
+      title: "Was ist passiert?",
+      intro: "Google entwickelt mit Stitch ein neues Design-Tool, das stark auf KI und natürliche Sprache setzt.",
+      body: `Mit Stitch führt Google ein Konzept ein, das sie selbst „Vibe Design“ nennen. Statt klassisch mit Wireframes oder Layout-Tools zu arbeiten, beschreibst du einfach dein Ziel – etwa eine Website, eine App oder ein Interface – und die KI generiert daraus direkt fertige UI-Designs.
+
+Das Tool basiert auf einem sogenannten AI-native Canvas. Dort kannst du Ideen als Text, Bilder oder Code einbringen und direkt weiterentwickeln. Zusätzlich arbeitet ein Design-Agent im Hintergrund, der Vorschläge macht, Varianten erstellt und den gesamten Designprozess begleitet.
+
+Besonders interessant: Designs lassen sich sofort als interaktive Prototypen testen. Klickpfade, Screens und User-Flows entstehen automatisch.
+
+Im Screenshot (Quelle: Google Stitch / stitch.withgoogle.com) sieht man das Start-Interface von Stitch. Die zweite Grafik zeigt anschließend als freie Visualisierung, wie Farben und Typografie als Designsystem weitergedacht werden können.`,
+      image: "/images/blog/design-extraction.webp",
+      imageAlt: "Visualisierung einer Design-Extraktion mit Farben und Typografie"
+    },
+    {
+      title: "Warum ist das wichtig für Deutschland?",
+      intro: "Für den deutschen Markt betrifft das vor allem die Art, wie Websites geplant und umgesetzt werden.",
+      body: `Der klassische Ablauf – Konzept → Design → Entwicklung – wird zunehmend verkürzt. Tools wie Stitch verschieben einen Teil der Designarbeit direkt in die KI.
+
+Das hat zwei direkte Auswirkungen:  
+Erstens werden einfache Website-Layouts schneller und günstiger erzeugbar.  
+Zweitens verschiebt sich der Fokus weg vom reinen Design hin zu Struktur, Inhalt und Conversion.
+
+Gerade im deutschen Markt, wo viele Unternehmen noch auf Standard-Themes oder Baukastensysteme setzen, entsteht dadurch Druck. Ein generisches Design allein reicht künftig weniger aus, weil es technisch jederzeit reproduzierbar wird.
+
+Wichtiger wird: klare Positionierung, durchdachte Seitenstruktur und echte Nutzerführung.`
+    },
+    {
+      title: "Was bedeutet das für Unternehmen in München?",
+      intro: "Für lokale Unternehmen ist das weniger Bedrohung als Verschiebung der Prioritäten.",
+      body: `Wenn du in München Websites für dein Business nutzt, wird sich vor allem eines ändern: Der visuelle Unterschied zwischen Websites wird kleiner.
+
+Ein „schönes Design“ ist schneller verfügbar als je zuvor. Der eigentliche Unterschied entsteht dadurch, wie gut deine Website Besucher führt und in Anfragen umwandelt.
+
+Für lokale Dienstleistungen – etwa Webdesign, SEO oder Online-Shops – bleibt die Nachfrage bestehen. Aber die Erwartung steigt:  
+Websites müssen klar strukturiert sein, Vertrauen aufbauen und konkrete Ergebnisse liefern.
+
+Genau dort trennt sich künftig einfache KI-generierte Oberfläche von einer strategisch aufgebauten Website.`
+    },
+    {
+      title: "Mein Eindruck aus der Praxis",
+      intro: "Ich habe Stitch nicht nur theoretisch betrachtet, sondern direkt mit einem konkreten Münchner Anwendungsfall getestet.",
+      body: `Für einen aktuellen Case aus München habe ich einen recht detaillierten Prompt verwendet und geprüft, wie weit das Tool bei einer realen Website-Idee kommt. Das Ergebnis war auf den ersten Blick durchaus solide: stärker als viele schwache Standard-Websites und in Teilen sogar besser als ein Teil dessen, was man im unteren bis mittleren Marktsegment häufig sieht.
+
+Genau dort liegt aber auch der entscheidende Punkt. Auf den ersten Blick wirkt das Ergebnis modern, sauber und brauchbar. Sobald man als Designer oder Entwickler genauer hinschaut, werden typische Schwächen sichtbar: Blickführung, Hierarchie, Proportionen, inhaltliche Logik und visuelle Entscheidungen sind nicht immer wirklich durchdacht.
+
+Ein einfaches Beispiel aus meinem Test: Die Blickrichtung der Person im Hero-Bereich funktioniert nicht optimal. Statt den Nutzer oder den inhaltlich wichtigen Bereich zu führen, schaut die Person vom Text weg. Für viele wirkt das zunächst gut genug. Wer sich professionell mit Webdesign beschäftigt, erkennt aber sofort, dass genau solche Details Einfluss auf Wirkung, Orientierung und Conversion haben.
+
+Das erinnert stark an andere KI-generierte Inhalte wie Diagramme, Karten oder Grafiken mit Text. Zuerst wirkt vieles überzeugend. Beim genaueren Hinsehen tauchen dann typische Ungenauigkeiten, unlogische Entscheidungen oder gestalterische Schwächen auf.
+
+Mein Eindruck ist deshalb ziemlich klar: Solche Tools werden vor allem den unteren Qualitätsbereich verbessern. Schlechte Websites werden schneller etwas solider aussehen. Unter Druck geraten eher diejenigen, die sich gestalterisch kaum weiterentwickeln und nur Standardlösungen produzieren. Für starke Designer und Entwickler ist das dagegen vor allem ein zusätzliches Werkzeug – nicht als Ersatz, sondern als Experimentierfläche, Beschleuniger und kreativer Sparringspartner.`,
+      image: "/images/blog/google-stitch-munich-test.webp",
+      imageAlt: "AI-generierter Website-Entwurf für einen Münchner Beauty-Case mit typischen Designschwächen"
+    },
+    {
+      title: "Was sollte man jetzt konkret tun?",
+      intro: "Wer Websites erstellt oder nutzt, sollte seine Herangehensweise anpassen.",
+      body: `- Nutze KI-Tools wie Stitch für schnelle Ideen, Richtungen und Prototypen – aber nicht als ungeprüfte Endlösung  
+- Prüfe KI-Layouts immer auf Blickführung, Hierarchie, Proportionen und Conversion-Logik  
+- Fokussiere dich stärker auf Struktur, Inhalte und Nutzerführung statt nur auf die erste visuelle Wirkung  
+- Verbinde Design früh mit echten Business-Zielen wie Leads, Buchungen oder Verkäufen  
+- Sieh KI nicht als Ersatz für gutes Design, sondern als Werkzeug, das mit deinem Anspruch besser oder schlechter wird`
+    }
+  ],
+  quote: "„KI macht Gestaltung schneller. Ob daraus auch eine gute Website wird, entscheidet noch immer der Blick fürs Detail.“",
+  ctaText: "Du willst eine Website, die nicht nur gut aussieht, sondern auch Anfragen bringt? Ich unterstütze dich bei Struktur, Design und Umsetzung.",
+  ctaLink: "/wordpress-website-erstellen-lassen/"
+    },
+    {
   slug: "google-ai-overviews-deutschland-ctr",
   title: "Google AI Overviews in Deutschland: Warum deine Klickrate sinken kann",
   category: "SEO, Google, KI",

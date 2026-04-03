@@ -75,18 +75,26 @@ export async function getStaticPaths() {
             </p>
           )}
 
-          <div class="mw-body whitespace-pre-line">
+          <div class="mw-lead whitespace-pre-line">
             {section.body}
           </div>
 
-          {section.image && (
-            <img
-              src={section.image}
-              alt={section.imageAlt || section.title || post.title}
-              class="media-rounded shadow-purple-drop object-contain w-full h-auto max-h-[90vh] mt-6"
-              loading="lazy"
-            />
-          )}
+{section.image && (
+  <div class="mt-12">
+    <img
+      src={section.image}
+      alt={section.imageAlt || section.title || post.title}
+      class="media-rounded mt-12 shadow-purple-drop object-contain w-full h-auto max-h-[90vh]"
+      loading="lazy"
+    />
+
+    {section.imageCaption && (
+      <p class="mw-muted text-sm mt-3 text-center">
+        {section.imageCaption}
+      </p>
+    )}
+  </div>
+)}
         </section>
       ))
     ) : (
@@ -145,21 +153,19 @@ export async function getStaticPaths() {
 )}
 
     <p class="mw-eyebrow mt-12">Kategorie: {post.category}</p>
+  </article>
 
-  
+  <FinalCTASection
+    eyebrow="Kostenlose Analyse"
+    title="Lass uns deine Website strategisch anschauen"
+    description={`
+      <p>Ob neue Website, Relaunch oder Optimierung – oft liegt das Potenzial nicht im Design, sondern in Struktur, Klarheit und Conversion.</p>
+    `}
+    ctaLabel="Kostenlos beraten lassen"
+    ctaHref="/kontakt"
+  />
 </MainLayout>
 
-
-
-<FinalCTASection
-  eyebrow="Kostenlose Analyse"
-  title="Lass uns deine Website strategisch anschauen"
-  description={`
-    <p>Ob neue Website, Relaunch oder Optimierung – oft liegt das Potenzial nicht im Design, sondern in Struktur, Klarheit und Conversion.</p>
-  `}
-  ctaLabel="Kostenlos beraten lassen"
-  ctaHref="/kontakt"
-/>
 
 
 <style>
