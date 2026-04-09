@@ -1,0 +1,364 @@
+---
+import MainLayout from "../layouts/MainLayout.astro"
+import PrimaryHeroSection from "../components/PrimaryHeroSection.astro"
+import BulletSplitSection from "../components/BulletSplitSection.astro"
+import SolutionSection from "../components/SolutionSection.astro"
+import FeatureGridSection from "../components/FeatureGridSection.astro"
+import BarSection from "../components/BarSection.astro"
+import LongformSection from "../components/LongformSection.astro"
+import ImageBanner from "../components/ImageBanner.astro"
+import ComparisonSection from "../components/ComparisonSection.astro"
+import FinalCTASection from "../components/FinalCTASection.astro"
+import ProjectCardsGrid from "../components/ProjectCardsGrid.astro"
+
+const features = [
+  {
+    title: "Klare Botschaft",
+    description:
+      "Besucher verstehen sofort, was du anbietest, für wen der Funnel gedacht ist und warum sich eine Anfrage lohnt.",
+  },
+  {
+    title: "Sauberer Lead-Flow",
+    description:
+      "Der Aufbau führt Nutzer Schritt für Schritt vom ersten Interesse bis zur Anfrage, Buchung oder Kaufentscheidung.",
+  },
+  {
+    title: "Vertrauen",
+    description:
+      "Bewertungen, Referenzen und klare Beweise sorgen dafür, dass aus Klicks echte Gespräche und Kunden werden.",
+  },
+  {
+    title: "Technik & Conversion",
+    description:
+      "Schnelle Ladezeit, mobile Optimierung und klare CTAs sorgen dafür, dass Traffic nicht verloren geht.",
+  },
+]
+
+const landingpageProjects = [
+  {
+    href: "/projekte/beauty-funnel-muenchen",
+    district: "Terminbuchung",
+    title: "Beauty Funnel München",
+    description: "Conversion-optimierter Funnel für ein Beauty Studio in München mit Fokus auf Terminbuchungen.",
+  },
+  {
+    href: "/projekte/bauen-sanieren-website",
+    district: "Lead-Fokus",
+    title: "AGBASA",
+    description: "Klare Struktur für Vertrauen, Leistungskommunikation und Anfragen.",
+  },
+  {
+    href: "/projekte/akam-reinigung",
+    district: "Lokaler Service",
+    title: "Akam Reinigung",
+    description: "Service-Seite mit klarer Nutzerführung und Anfragefokus.",
+  },
+  {
+    href: "/projekte/bavarian-ice-roll",
+    district: "Kampagne",
+    title: "Bavarian Ice Roll",
+    description: "Fokussierte Seite für Events, Sichtbarkeit und konkrete Anfragen.",
+  },
+]
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Sales-Funnel erstellen lassen",
+  provider: { "@type": "Brand", name: "maxWapp" },
+  areaServed: "DE",
+  offers: {
+    "@type": "Offer",
+    priceCurrency: "EUR",
+    price: "900",
+    availability: "https://schema.org/InStock",
+    url: "https://maxwapp.de/preise",
+  },
+}
+---
+
+<MainLayout
+  title="Sales-Funnel erstellen lassen | Mehr Leads & Kunden | maxWapp"
+  seoTitle="Sales-Funnel erstellen lassen | Mehr Leads & Kunden | maxWapp"
+  seoDesc="Ich erstelle Sales-Funnels für lokale Unternehmen, damit aus Traffic planbare Anfragen und echte Kunden werden – klar aufgebaut und auf Conversion ausgerichtet."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <PrimaryHeroSection
+    title="Sales-Funnel erstellen lassen"
+lead="Ich erstelle Sales-Funnels für lokale Unternehmen, damit aus Traffic planbare Anfragen und echte Kunden werden – klar aufgebaut, verständlich und auf Conversion ausgerichtet."    leadMobile="Sales-Funnel für mehr Leads, Anfragen und Umsatz"
+    desktopImgSrc="/images/sales-funnel-hero-icon.webp"
+    mobileImgSrc="/images/sales-funnel-hero-icon.webp"
+  imgAlt="Sales-Funnel Icon für Leads, Conversion und Umsatz"
+    ctaLabel="Kostenlos beraten"
+    ctaHref="/kontakt"
+  />
+
+<BulletSplitSection
+  title="Warum viele Sales-Funnels nicht funktionieren"
+  showHighlight={false}
+  imageFirstOnMobile={true}
+  items={[
+    "Kein klarer Vertrauensaufbau",
+    "Zu viele Schritte ohne Logik",
+    "Unklare Botschaft im ersten Screen",
+    "Schwache CTAs",
+  ]}
+/>
+
+  <BulletSplitSection
+  title="Schlechter Funnel = verlorenes Budget"
+  imgSrc="/images/sales-funnel-chaos.webp"
+  imgAlt="Chaos im Sales-Funnel führt zu verlorenen Leads und Budget"
+  showHighlight={false}
+  imageFirstOnMobile={true}
+  items={[
+    "Besucher verstehen nicht sofort, worum es geht",
+    "Kein klarer nächster Schritt → keine Anfrage",
+    "Zu viel Reibung im Prozess → Nutzer springen ab",
+  ]}
+  extraText={`Das Problem ist selten der Traffic – sondern was danach passiert. Wenn der Funnel nicht klar aufgebaut ist, gehen Leads verloren.`}
+  extraTextPosition="after"
+/>
+
+
+  <SolutionSection
+    title="So baue ich Sales-Funnels, die Anfragen bringen"
+    intro="Ein guter Funnel ist kein Zufall. Er führt Besucher klar von Aufmerksamkeit zu Vertrauen und dann zur Handlung."
+    steps={[
+      {
+        num: "1",
+        title: "Ziel und Angebot schärfen",
+        text: "Zuerst wird klar definiert, was der Funnel erreichen soll: Anfrage, Termin, Lead oder Verkauf.",
+      },
+      {
+        num: "2",
+        title: "Struktur und Flow entwickeln",
+        text: "Der Aufbau folgt einer klaren Logik: Problem, Lösung, Vertrauen und nächster Schritt.",
+      },
+      {
+        num: "3",
+        title: "Vertrauen sichtbar machen",
+        text: "Bewertungen, Beispiele und klare Beweise zeigen, warum dein Angebot ernst genommen werden soll.",
+      },
+      {
+        num: "4",
+        title: "Conversion sauber umsetzen",
+        text: "CTAs, mobile Darstellung und technische Umsetzung werden so gebaut, dass aus Besuchern reale Anfragen werden.",
+      },
+    ]}
+    ctaLabel="Let's Talk"
+    ctaHref="/kontakt"
+  />
+
+  <BulletSplitSection
+    title="Der erste Eindruck entscheidet im Funnel"
+    imgSrc="/images/hero-section-struktur.webp"
+    imgAlt="Struktur einer strategisch aufgebauten Hero-Section – maxWapp"
+    showHighlight={false}
+    imageFirstOnMobile={false}
+    items={[]}
+    extraText={`<strong>Der erste Eindruck ist zu 94 % designbedingt.</strong> Gemeint ist nicht einfach „schön“, sondern visuell klar, sauber aufgebaut und mit einer guten Hierarchie. <br /> <br />
+
+Gerade im Sales-Funnel muss im ersten Bereich sofort verständlich sein, worum es geht, für wen das Angebot gedacht ist und was der nächste Schritt ist. <br /> <br />
+
+Ein klarer Aufbau mit guter Headline, sichtbarem CTA und sinnvoll platzierten Vertrauenselementen macht aus Aufmerksamkeit echte Handlung.`}
+    extraTextPosition="before"
+  />
+
+  <FeatureGridSection
+    title="Was einen starken Sales-Funnel wirklich ausmacht"
+    intro="4 Bausteine, die aus Besuchern <span class='underline-animation'>Anfragen</span> und Kunden machen – ohne unnötigen Overload."
+    features={features}
+    cols={2}
+    afterText={`<strong>Ein guter Sales-Funnel verkauft nicht mit Druck,</strong> sondern mit Klarheit, Vertrauen und einem sauberen nächsten Schritt. Ich übernehme Strategie, Design und Umsetzung so, dass dein Funnel auf Ergebnisse statt auf Ablenkung ausgerichtet ist.`}
+    ctaLabel="Sales-Funnel erstellen lassen"
+    ctaHref="/kontakt"
+  />
+
+  <BulletSplitSection
+    title="Ein Sales-Funnel ist ideal für dich, wenn…"
+    imgSrc="/images/website-fuer-wen-ideal.webp"
+    imgAlt="Für wen ist ein Sales-Funnel ideal? – maxWapp"
+    showHighlight={false}
+    imageFirstOnMobile={true}
+    items={[
+      "du aus Traffic mehr Anfragen machen willst",
+      "du Ads oder Kampagnen gezielter nutzen möchtest",
+      "du Leads strukturierter gewinnen willst",
+    ]}
+    extraText={`Ein professioneller Sales-Funnel ist besonders sinnvoll, wenn du nicht einfach nur Besucher möchtest, sondern einen klaren Prozess für Anfragen, Buchungen oder Verkäufe brauchst.
+`}
+    extraTextPosition="after"
+  />
+
+  <ComparisonSection
+    leftLabel="Sales-Funnel"
+    rightLabel="Klassische Website"
+    eyebrow="Vergleich"
+    title="Sales-Funnel vs. Website – was passt besser zu deinem Ziel?"
+    intro="Ein Sales-Funnel ist auf <strong>ein klares Ziel</strong> optimiert: Leads, Anfragen oder Verkäufe. Eine klassische Website deckt meist mehrere Themen gleichzeitig ab."
+    rows={[
+      {
+        label: "Fokus",
+        left: "1 klares Ziel",
+        right: "Mehrere Ziele parallel",
+      },
+      {
+        label: "Nutzerführung",
+        left: "Gezielt und ohne Umwege",
+        right: "Breiter und offener Aufbau",
+      },
+      {
+        label: "Conversion",
+        left: "Stärker auf Handlung ausgerichtet",
+        right: "Oft gemischt je nach Unterseite",
+      },
+      {
+        label: "Einsatz",
+        left: "Ads, Leads, Kampagnen, Angebote",
+        right: "Unternehmensdarstellung und Inhalte",
+      },
+    ]}
+    summary={`Die Frage ist nicht „Funnel oder Website?“, sondern welches Ziel du verfolgst. Wenn du Anfragen, Termine oder Verkäufe gezielt steigern willst, ist ein Sales-Funnel oft der sinnvollere nächste Schritt.`}
+    ctaLabel="Kostenlos beraten"
+    ctaHref="/kontakt"
+  />
+
+  <LongformSection
+    eyebrow="Content & Umsetzung"
+    title="Kein klarer Aufbau? Ich übernehme deinen Sales-Funnel komplett."
+    topText={`<p><strong>Du willst einen Sales-Funnel erstellen lassen</strong>, aber dir fehlt noch die klare Struktur? Genau hier setze ich an: Ich entwickle nicht nur das Layout, sondern auch die inhaltliche Reihenfolge, klare Texte und eine Führung, die auf Anfragen und Kunden ausgerichtet ist.</p>
+<p>Ein guter Funnel beginnt nicht beim Button, sondern bei der Botschaft. Besucher müssen sofort verstehen, worum es geht, welchen Nutzen dein Angebot hat und warum sie dir vertrauen können. Genau deshalb spielen Struktur, Headline, Social Proof und CTA eng zusammen.</p>
+<p>Ich achte dabei auch auf die Details, die den ersten Eindruck stark beeinflussen: <strong>ausreichend Weißraum</strong>, <strong>gut lesbare Schriftarten</strong>, <strong>konsistente Farben</strong> und <strong>relevante Bilder, die die Botschaft unterstützen</strong>. Das wirkt nicht nur sauberer, sondern macht Entscheidungen leichter.</p>`}
+    imgSrc="/images/projects/beauty-funnel-muenchen-desktop-final-cta.webp"
+    imgAlt="Beispiel für eine klar strukturierte Funnel-Seite mit starker Hero-Section – maxWapp"
+    caption="Referenzprojekt: Klare Struktur, visuelle Führung und überzeugender Einstieg für mehr Anfragen."
+    bottomText={`<p>Auch ohne fertige Inhalte bekommst du einen professionellen Funnel-Auftritt. Ich unterstütze bei Text, Struktur und visueller Auswahl, damit deine Seite schnell online gehen kann und von Anfang an klarer wirkt.</p>
+<p><strong>Fazit:</strong> Du bekommst keinen zusammengewürfelten Baukasten, sondern einen Sales-Funnel mit klarem Aufbau, Vertrauen im richtigen Moment und einem Ziel: mehr Leads, mehr Anfragen und mehr Umsatz.</p>`}
+    ctaLabel="Sales-Funnel anfragen"
+    ctaHref="/kontakt"
+  />
+
+  <ProjectCardsGrid
+  title="Beispiele für strukturierte Seiten mit Conversion-Fokus"
+  intro="Diese Projekte zeigen, wie klare Nutzerführung, starke Einstiege und saubere Angebotskommunikation in der Praxis aussehen können."
+  items={landingpageProjects}
+  cols={2}
+  afterText="Du möchtest mehr Beispiele sehen? In meinem Portfolio findest du weitere Projekte mit Fokus auf Struktur, Vertrauen und Anfragen."
+  ctaLabel="Alle Projekte ansehen"
+  ctaHref="/projekte"
+  className="pt-0"
+/>
+
+  <BarSection
+    eyebrow="Vertrauen"
+    title="Warum du mir den Funnel ruhig geben kannst"
+    intro="Ein paar Fakten, die man direkt prüfen kann."
+    badges={[
+      {
+        label: "70+ Bewertungen",
+        sublabel: "Google",
+        href: "https://maps.app.goo.gl/93PpiX2gyiVCfcGd7",
+      },
+      {
+        label: "5.0 Sterne",
+        sublabel: "Top Rating",
+        href: "https://maps.app.goo.gl/93PpiX2gyiVCfcGd7",
+      },
+      {
+        label: "Klar & Fair",
+        sublabel: "Transparente Preise",
+        href: "/preise",
+      },
+      {
+        label: "Direkt mit mir",
+        sublabel: "kein Agentur-Overhead",
+        href: "/kontakt",
+      },
+    ]}
+    note="Direkte Kommunikation, klare Verantwortung und ein Fokus auf Ergebnisse statt unnötige Schleifen."
+  />
+
+  <FeatureGridSection
+    title="Typische Fehler bei Sales-Funnels – und wie ich sie vermeide"
+    intro="Viele Unternehmen investieren in Traffic, aber der eigentliche Funnel ist nicht sauber aufgebaut. Genau dort gehen Leads verloren."
+    features={[
+      {
+        title: "1. Zu viel Design, zu wenig Klarheit",
+        description:
+          "Ein Funnel muss nicht laut sein, sondern klar. Wenn Besucher nicht sofort verstehen, worum es geht, hilft auch das beste Layout nicht.",
+      },
+      {
+        title: "2. Kein Vertrauen im richtigen Moment",
+        description:
+          "Bewertungen, Beispiele und Beweise müssen dort erscheinen, wo Nutzer noch unsicher sind. Genau dann entsteht aus Interesse echte Handlung.",
+      },
+      {
+        title: "3. Zu viele Schritte oder Ablenkungen",
+        description:
+          "Ein Sales-Funnel braucht Fokus. Zu viele Optionen, unnötige Menüs oder schwache Übergänge senken die Conversion.",
+      },
+      {
+        title: "4. Schwache mobile Umsetzung",
+        description:
+          "Wenn der Funnel mobil unklar oder zu langsam ist, gehen wertvolle Leads verloren. Deshalb wird jede Seite von Anfang an mobil und performance-orientiert aufgebaut.",
+      },
+    ]}
+    cols={2}
+    ctaLabel="Sales-Funnel erstellen lassen"
+    ctaHref="/kontakt"
+  />
+
+  <ImageBanner
+    imgSrc="/images/landingpage-performance-workspace.webp"
+    imgAlt="Workspace mit Neon-Rakete als Symbol für Performance und Funnel-Launch – maxWapp"
+    eyebrow="Preis & Value"
+    title="Mehr Wirkung fürs Budget – ohne Agentur-Overhead"
+    text={`
+    <p><strong>Du willst einen Sales-Funnel erstellen lassen</strong>, aber keine unnötigen Agenturwege bezahlen? Bei mir bekommst du Strategie, Text, Design und Umsetzung direkt aus einer Hand.</p>
+    <p>Das bedeutet: klarere Prozesse, schnellere Abstimmung und ein Funnel, der auf <strong>Leads, Anfragen und Umsatz</strong> ausgerichtet ist – nicht auf interne Schleifen.</p>
+  `}
+    ctaLabel="Zu den Preisen"
+    ctaHref="/preise"
+  />
+
+  <FeatureGridSection
+    title="Häufige Fragen zum Sales-Funnel"
+    intro="Die wichtigsten Antworten rund um Aufbau, Kosten, Strategie und Umsetzung – klar erklärt."
+    features={[
+      {
+        title: "Wie viel kostet ein Sales-Funnel?",
+        description:
+          "Das hängt vom Umfang ab. Ein einfacher Funnel für ein klares Angebot ist günstiger als ein komplexerer Funnel mit mehreren Schritten, Automatisierung oder zusätzlichem Content. Wichtig ist nicht die Größe, sondern dass der Funnel messbar Anfragen bringt.",
+      },
+      {
+        title: "Wie funktioniert der Aufbau eines Sales-Funnels?",
+        description:
+          "Ein Sales-Funnel führt Besucher Schritt für Schritt: Aufmerksamkeit, klares Angebot, Vertrauen und Handlung. Je nach Ziel kann das eine Anfrage, Terminbuchung oder Kaufentscheidung sein.",
+      },
+      {
+        title: "Was unterscheidet Sales-Funnel und Marketing-Funnel?",
+        description:
+          "Ein Marketing-Funnel beschreibt den Weg vom ersten Kontakt bis zum Interesse. Ein Sales-Funnel geht weiter und ist stärker darauf ausgerichtet, qualifizierte Leads in echte Kunden zu verwandeln.",
+      },
+      {
+        title: "Für wen lohnt sich ein Sales-Funnel?",
+        description:
+          "Vor allem für kleine Unternehmen, Dienstleister, lokale Anbieter, B2B-Unternehmen und Online-Shops, die aus ihrem Traffic mehr Anfragen oder Verkäufe machen wollen.",
+      },
+    ]}
+    cols={2}
+    ctaLabel="Sales-Funnel erstellen lassen"
+    ctaHref="/kontakt"
+  />
+
+  <FinalCTASection
+    title="Bereit für einen Sales-Funnel, der wirklich Anfragen bringt?"
+    description={`
+    <p>In einem kurzen Gespräch klären wir Ziel, Angebot und den passenden nächsten Schritt für deinen Funnel.</p>
+  `}
+    ctaLabel="Kostenloses Erstgespräch"
+    ctaHref="/kontakt"
+  />
+</MainLayout>

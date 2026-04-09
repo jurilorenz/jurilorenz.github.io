@@ -24,6 +24,7 @@ import AkamReinigung from "../../components/projects/AkamReinigung.astro";
 import Agbasa from "../../components/projects/Agbasa.astro";
 import BavarisPro from "../../components/projects/BavarisPro.astro";
 import Atelier from "../../components/projects/Atelier.astro";
+import BeautyFunnel from "../../components/projects/BeautyFunnel.astro";
 
 export async function getStaticPaths() {
   return [
@@ -56,7 +57,7 @@ introText: "Professionelles Webdesign für eine Künstlerin – inklusive Galeri
     { 
       params: { slug: "anna-menci" }, 
       props: {
-        name: "Online-Shop Design für Fashion-Label",
+        name: "Online-Shop für Fashion-Label",
 introText: "E-Commerce Website mit elegantem Design, perfekter Usability und mobile-optimierter Performance für mehr Verkäufe.",        seoTitle: "Anna Menci E-Commerce Website – Fashion-Shop | maxWapp",
         seoDesc: "Moderner Online-Shop mit intuitiver UX, mobile-optimiert und markenstarkes Design. Jetzt Projekt entdecken."
       },
@@ -207,6 +208,15 @@ seoDesc: "Online Shop mit WordPress & WooCommerce – modern, schnell und ohne m
 },
 },
 {
+  params: { slug: "beauty-funnel-muenchen" },
+  props: {
+    name: "Beauty Funnel München – Terminbuchung & Leads",
+    introText: "Conversion-optimierter Funnel für ein Beauty Studio in München: klare Struktur, mobile-first Design, Fokus auf Terminbuchungen, gezielter Einsatz von Social Proof und Angebotskommunikation zur Steigerung von Leads.",
+    seoTitle: "Beauty Funnel München – Mehr Termine durch klare Struktur",
+    seoDesc: "Funnel Case Study für ein Beauty Studio in München: optimierte Landingpage für mehr Terminbuchungen, bessere Conversion und klare Lead-Generierung."
+  },
+},
+{
   params: { slug: "pflegedienst-muenchen-website" },
   props: {
     name: "Pflegedienst Website München – BavarisPro",
@@ -302,6 +312,7 @@ const { name, introText, seoTitle, seoDesc } = Astro.props;
                           {slug === 'sweet-berry-box' && <SweetBerryBox />}
                                                     {slug === 'pizzeria-mixto-verde' && <PizzeriaMixtoVerde />}
                                                     {slug === 'akam-reinigung' && <AkamReinigung />}
+                                                    {slug === 'beauty-funnel-muenchen' && <BeautyFunnel />}
 
     </section>
   </div>
