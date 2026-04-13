@@ -1,0 +1,377 @@
+---
+import MainLayout from "../layouts/MainLayout.astro"
+import PrimaryHeroSection from "../components/PrimaryHeroSection.astro"
+import BulletSplitSection from "../components/BulletSplitSection.astro"
+import SolutionSection from "../components/SolutionSection.astro"
+import FeatureGridSection from "../components/FeatureGridSection.astro"
+import BarSection from "../components/BarSection.astro"
+import MotionSection from "../components/MotionSection.astro"
+import LongformSection from "../components/LongformSection.astro"
+import ImageBanner from "../components/ImageBanner.astro"
+import ComparisonSection from "../components/ComparisonSection.astro"
+import FinalCTASection from "../components/FinalCTASection.astro"
+
+const features = [
+  {
+    title: "Klarer Fokus",
+    description:
+      "Dein Angebot ist in Sekunden verständlich – ohne Ablenkung und ohne Scroll-Marathon.",
+  },
+  {
+    title: "Conversion-Flow",
+    description:
+      "Struktur, CTAs und Trust-Elemente sind so platziert, dass mehr Besucher zu Anfragen werden.",
+  },
+  {
+    title: "Performance & Technik",
+    description:
+      "Ich optimiere Ladezeit, Assets und Setup – damit dein Redesign schnell lädt und stabil läuft.",
+  },
+  {
+    title: "SEO-Setup",
+    description:
+      "Titel/Meta, saubere H-Struktur, interne Links & Snippets – damit Google deinen Relaunch richtig einordnet.",
+  },
+]
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": ["Service", "ProfessionalService"],
+  name: "Mitarbeitergewinnung Website",
+  serviceType: "Recruiting Website Erstellung",
+  description:
+    "Recruiting Website & Karriereseite für KMU und Handwerk – Fachkräfte direkt über Google gewinnen, ohne Jobportale.",
+  provider: {
+    "@type": ["LocalBusiness", "ProfessionalService"],
+    name: "maxWapp",
+    url: "https://maxwapp.de",
+  },
+  areaServed: "DE",
+  offers: {
+    "@type": "Offer",
+    priceCurrency: "EUR",
+    price: "900",
+    availability: "https://schema.org/InStock",
+    url: "https://maxwapp.de/preise",
+  },
+}
+---
+
+<MainLayout
+  title="Mitarbeitergewinnung Website erstellen lassen | maxWapp"
+  seoTitle="Mitarbeitergewinnung Website erstellen lassen | maxWapp"
+  seoDesc="Gewinne Fachkräfte direkt über deine Website – ohne Jobportale. Ich erstelle deine Karriereseite mit Bewerbungsformular & Google-Optimierung. Jetzt anfragen."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <PrimaryHeroSection
+    title="Mitarbeiter gewinnen über deine Website"
+    lead="Fachkräftemangel, teure Jobportale, kaum Bewerbungen? Mit einer eigenen Recruiting Website wirst du gefunden – direkt über Google, ohne monatliche Portalgebühren und ohne Abhängigkeit von Dritten."
+    leadMobile="Fachkräfte gewinnen ohne Jobportal – direkt über deine Website."
+    desktopImgSrc="/images/recruiting-website-handwerker-hero.webp"
+    mobileImgSrc="/images/recruiting-website-handwerker-hero.webp"
+    imgAlt="Junger Handwerker mit verschränkten Armen – Mitarbeiter gewinnen über eigene Recruiting Website"
+    ctaLabel="Karriereseite besprechen"
+    ctaHref="/kontakt"
+  />
+
+  <BulletSplitSection
+    title="der Jobsuchenden starten auf Google"
+    subtitle="Wer keine eigene Karriereseite hat, verliert Bewerber noch bevor sie das Angebot überhaupt gesehen haben – an Wettbewerber, die einfach besser auffindbar sind."
+    showHighlight={true}
+    highlightAboveTitle={true}
+    highlight="70 %"
+    imageFirstOnMobile={true}
+    extraText={`<strong>Typische Recruiting-Probleme ohne eigene Website:</strong>`}
+    extraTextPosition="before"
+    items={[
+      "Kein eigener Karrierebereich – nur ein generisches Kontaktformular",
+      "Offene Stellen tauchen in der Google-Suche gar nicht erst auf",
+      "Kein Bewerbungsformular – Interessenten springen ab",
+    ]}
+  />
+
+  <MotionSection
+    title="Deine Website entscheidet, ob jemand sich bewirbt"
+    intro="Noch bevor Bewerber deine Stellenanzeige lesen, entsteht ein Gefühl. Wirkt dein Auftritt unprofessionell oder veraltet, verlierst du sie – still und ohne Rückmeldung. Eine klare Recruiting Website schafft Vertrauen und macht dich als Arbeitgeber sichtbar."
+    points={[
+      "Design signalisiert, wie du als Arbeitgeber wahrgenommen wirst",
+      "Klare Struktur zeigt Bewerbern, was sie erwartet",
+      "70 % suchen auf dem Smartphone – wer dort schlecht wirkt, verliert",
+    ]}
+    imgSrc="/images/projects/pflege-recruiting-landingpage-bewerbungsformular-mobile.webp"
+    imgAlt="Mobile Karriereseite eines Pflegedienstes – Recruiting Website für Handwerk und KMU"
+    ctaLabel="Karriereseite besprechen"
+    ctaHref="/kontakt"
+    compact={true}
+  />
+
+  <BulletSplitSection
+    title="Karriereseite statt Stellenliste"
+    imgSrc="/images/projects/pflege-recruiting-landingpage-hero-mobile.webp"
+    imgAlt="Mobile Recruiting Landing Page Hero – Karriereseite für Pflegebetrieb"
+    showHighlight={false}
+    imageFirstOnMobile={false}
+    items={[]}
+    extraText={`Die meisten Unternehmen haben keine echte Karriereseite – nur eine Liste offener Stellen, irgendwo versteckt auf der Website.
+
+Das reicht nicht. Bewerber wollen wissen, warum sie ausgerechnet bei dir arbeiten sollen.  <br /> <br />
+
+Eine starke <strong>Karriereseite</strong> führt, überzeugt und konvertiert. Genau das baue ich mit der <strong>Recruiting Website</strong>: klare Arbeitgeber-Botschaft, logischer Aufbau und ein Bewerbungsformular, das wirklich genutzt wird. <br /> <br />
+
+Bei Bedarf erstelle ich zusätzlich eine separate <a href="/landingpage-erstellen-lassen" class="underline underline-offset-4">Landing Page</a> in einer anderen Sprache – für Betriebe, die gezielt Fachkräfte aus dem Ausland ansprechen wollen.`}
+    extraTextPosition="before"
+  />
+
+  <SolutionSection
+    title="Der strukturierte Weg zur eigenen Recruiting Website"
+    intro="Eine Mitarbeitergewinnung Website ist kein reines Design-Projekt. Es braucht Strategie, klare Struktur und eine saubere Google-Integration – damit Bewerber dich finden."
+    steps={[
+      {
+        num: "1",
+        title: "Analyse & Zieldefinition",
+        text: "Wir klären, welche Stellen du besetzen willst, welche Bewerber du ansprechen möchtest und womit du als Arbeitgeber punktest. Das ist die Basis für alles Weitere.",
+      },
+      {
+        num: "2",
+        title: "Karriereseite & Struktur",
+        text: "Klare Seitenlogik, Employer Branding und Argumente für Bewerber – damit deine Karriereseite nicht nur existiert, sondern überzeugt.",
+      },
+      {
+        num: "3",
+        title: "Umsetzung & Technik",
+        text: "Bewerbungsformular, Stellenanzeigen, Mobile-Optimierung und schnelle Ladezeiten – sauber umgesetzt, ohne unnötigen Overhead.",
+      },
+      {
+        num: "4",
+        title: "Sichtbarkeit bei Google",
+        text: "Ich setze strukturierte Daten, optimiere Titles und Meta – sodass deine Stellen in der Google-Suche auftauchen, ohne dass du dafür zahlst.",
+      },
+    ]}
+    ctaLabel="Karriereseite planen"
+    ctaHref="/kontakt"
+  />
+
+  <ComparisonSection
+    leftLabel="Eigene Website"
+    rightLabel="Jobportal"
+    title="Eigene Recruiting Website vs. Jobportal – was bringt wirklich mehr?"
+    intro="Jobportale sind teuer und gemiedet. Deine eigene Recruiting Website gehört dir – und arbeitet dauerhaft für dich, ohne monatliche Kosten."
+    rows={[
+      {
+        label: "Kosten",
+        left: "Einmalige Investition, keine Folgekosten",
+        right: "Monatliche oder pro-Anzeige-Gebühren",
+      },
+      {
+        label: "Abhängigkeit",
+        left: "Vollständig in deiner Hand",
+        right: "Abhängig von Portalbedingungen",
+      },
+      {
+        label: "Qualität der Bewerber",
+        left: "Gezielte Ansprache deiner Zielgruppe",
+        right: "Oft Masse statt Klasse",
+      },
+      {
+        label: "Arbeitgebermarke",
+        left: "Dein Auftritt, deine Botschaft",
+        right: "Einheitliches Portal-Layout",
+      },
+      {
+        label: "Langzeitwirkung",
+        left: "Dauerhaft sichtbar bei Google",
+        right: "Sichtbar nur solange du zahlst",
+      },
+      {
+        label: "Ergebnis",
+        left: "Passende Bewerber direkt zu dir",
+        right: "Viele Klicks, wenig Passung",
+      },
+    ]}
+    summary={`
+    Für die meisten KMU und Handwerksbetriebe ist eine <strong>eigene Recruiting Website</strong> der nachhaltigere Weg:
+    einmalige Investition, dauerhafte Sichtbarkeit – und Bewerber, die wirklich zu dir passen.
+  `}
+    ctaLabel="Website einschätzen lassen"
+    ctaHref="/kontakt"
+  />
+
+  <BulletSplitSection
+    title="Eine Recruiting Website ist ideal für dich, wenn…"
+    imgSrc="/images/website-fuer-wen-ideal.webp"
+    imgAlt="Professionelle Website für Unternehmen – Relaunch statt altem Baukasten"
+    showHighlight={false}
+    imageFirstOnMobile={true}
+    items={[
+      "du Geld für Jobportale ausgibst – aber kaum Bewerbungen bekommst",
+      "du den Bewerbungsprozess beschleunigen willst – strukturiert statt per E-Mail-Ping-Pong",
+      "du aufgehört hast zu suchen und willst, dass Bewerber dich finden",
+    ]}
+    extraText={`Die meisten Betriebe merken irgendwann: Jobportale bringen Klicks, aber keine passenden Leute.
+
+Eine eigene Recruiting Website ist einmalig – und gehört dir. Bei Google sichtbar, mit Bewerbungsformular, ohne Monatsgebühr.`}
+    extraTextPosition="after"
+  />
+
+  <FeatureGridSection
+    title="Woran du eine starke Recruiting Website erkennst"
+    intro="Eine Karriereseite ist mehr als eine Liste offener Stellen. Sie überzeugt, führt und bringt Bewerbungen."
+    features={[
+      {
+        title: "Klare Arbeitgeber-Botschaft",
+        description:
+          "Bewerber verstehen sofort, warum sie bei dir arbeiten sollten – nicht bei der Konkurrenz.",
+      },
+      {
+        title: "Integriertes Bewerbungsformular",
+        description:
+          "Kein Medienbruch, kein E-Mail-Chaos. Bewerbungen kommen direkt über die Website rein.",
+      },
+      {
+        title: "Sichtbarkeit bei Google",
+        description:
+          "Strukturierte Daten sorgen dafür, dass deine Stellen direkt in der Google-Suche erscheinen – kostenlos und dauerhaft.",
+      },
+      {
+        title: "Mobile & schnell",
+        description:
+          "Die meisten Bewerber suchen auf dem Smartphone. Deine Karriereseite lädt schnell und ist auf jedem Gerät klar lesbar.",
+      },
+    ]}
+    cols={2}
+    afterText={`Eine starke <strong>Mitarbeitergewinnung Website</strong> erkennt man daran, dass Bewerbungen nicht vom Zufall abhängen – sondern planbar und messbar über Google kommen.`}
+    ctaLabel="Karriereseite mit Substanz starten"
+    ctaHref="/kontakt"
+  />
+
+  <LongformSection
+    eyebrow="Umsetzung"
+    title="Du lieferst, was du hast – ich kümmere mich um den Rest"
+    topText={`<p>Keine fertigen Texte? Kein Problem. Kein Foto vom Team? Kein Problem. Viele Betriebe starten eine <strong>Karriereseite</strong> ohne einen einzigen fertigen Inhalt – und das ist völlig normal.</p>
+
+<p>Ich helfe dir, die richtigen Argumente für Bewerber herauszuarbeiten: Was macht dich als Arbeitgeber aus, warum sollte jemand bei dir anfangen, was unterscheidet dich von anderen Betrieben in der Region.</p>
+
+<p>Auf Wunsch kümmere ich mich auch um <strong>Texte, Fotos und Bildmaterial</strong> – damit deine Recruiting <a href="/wordpress-website-erstellen-lassen" class="underline underline-offset-4">Website</a> nicht nur technisch sauber ist, sondern wirklich überzeugt.</p>`}
+    imgSrc="/images/projects/mixto-verde-karriereseite-recruiting-website-beispiel.webp"
+    imgAlt="Karriereseite Beispiel – Recruiting Website für Restaurant Mixto Verde München"
+    bottomText={`<p>Du brauchst keinen fertigen Content-Ordner. Bring mit, was du hast – ein paar Stichpunkte, ein altes Foto, eine grobe Vorstellung. Den Rest baue ich auf.</p>
+
+<p><strong>Das Ergebnis:</strong> Eine <strong>Mitarbeitergewinnung Website</strong>, die bei Google gefunden wird, auf dem Smartphone gut wirkt – und Bewerber dazu bringt, den nächsten Schritt zu machen.</p>`}
+    ctaLabel="Projekt besprechen"
+    ctaHref="/kontakt"
+  />
+
+  <BarSection
+    eyebrow="Vertrauen"
+    title="Warum du deine Recruiting Website mit mir umsetzen kannst"
+    intro="Ich erstelle Karriereseiten und Recruiting Websites für KMU und Handwerksbetriebe im DACH-Raum – mit Fokus auf Klarheit und Bewerber-Conversion."
+    badges={[
+      {
+        label: "70+ Bewertungen",
+        sublabel: "Google",
+        href: "https://maps.app.goo.gl/93PpiX2gyiVCfcGd7",
+      },
+      {
+        label: "5.0 Sterne",
+        sublabel: "Top Rating",
+        href: "https://maps.app.goo.gl/93PpiX2gyiVCfcGd7",
+      },
+      {
+        label: "Klare Strategie",
+        sublabel: "Transparente Preise",
+        href: "/preise",
+      },
+      {
+        label: "Direkt mit mir",
+        sublabel: "kein Agentur-Overhead",
+        href: "/kontakt",
+      },
+    ]}
+    note="Einzelunternehmer = direkte Kommunikation, schnellere Umsetzung, klare Verantwortung."
+  />
+
+  <FeatureGridSection
+    title="Typische Fehler bei der Mitarbeitergewinnung über die Website"
+    intro="Die meisten Betriebe machen diese Fehler – und verlieren Bewerber, noch bevor die sich überhaupt beworben haben."
+    features={[
+      {
+        title: "1. Kein dedizierter Karrierebereich",
+        description:
+          "Ein generisches Kontaktformular reicht nicht. Bewerber wollen eine eigene Seite mit Stellenanzeigen, Arbeitgeber-Infos und direktem Bewerbungsweg.",
+      },
+      {
+        title: "2. Stellen in Google unsichtbar",
+        description:
+          "Ohne strukturierte Daten tauchen Stellen nicht in der Google-Suche auf. Das kostet täglich potenzielle Bewerber – ohne dass du es merkst.",
+      },
+      {
+        title: "3. Schlechte Mobile-Erfahrung",
+        description:
+          "Die meisten Jobsuchenden sind auf dem Smartphone unterwegs. Eine langsame oder unübersichtliche Seite beendet die Bewerbung, bevor sie beginnt.",
+      },
+      {
+        title: "4. Keine klare Arbeitgeber-Botschaft",
+        description:
+          "Wer nicht kommuniziert, warum man bei ihm arbeiten sollte, verliert gegen Wettbewerber, die es tun – auch wenn das Angebot objektiv besser ist.",
+      },
+    ]}
+    cols={2}
+    ctaLabel="Projekt starten"
+    ctaHref="/kontakt"
+  />
+
+  <ImageBanner
+    imgSrc="/images/website-redesign-umsetzung-handwerk.webp"
+    imgAlt="Arbeitsplatz mit zwei Monitoren – strukturierte Website Relaunch Umsetzung mit klarer Strategie – maxWapp"
+    eyebrow="Preis & Value"
+    title="Eigene Recruiting Website – ohne Jobportal-Abhängigkeit"
+    text={`
+    <p>Deine <strong>Recruiting Website</strong> gehört dir – dauerhaft. Keine monatlichen Gebühren, keine Abhängigkeit von Portalen, kein Preisanstieg bei Verlängerung.</p>
+
+    <p>Eine einmalige Investition, die sich mit jeder passenden Bewerbung rechnet – und die mit deinem Betrieb wächst, ohne dass du jeden Monat neu zahlst.</p>
+  `}
+    ctaLabel="Zu den Preisen"
+    ctaHref="/preise"
+  />
+
+  <FeatureGridSection
+    title="Häufige Fragen zur Mitarbeitergewinnung Website"
+    intro="Die wichtigsten Antworten zu Ablauf, Kosten und dem, was eine Recruiting Website wirklich braucht."
+    features={[
+      {
+        title: "Was kostet eine Recruiting Website?",
+        description:
+          "Das hängt vom Umfang ab: Anzahl der Stellen, Texte, Formulare und Google for Jobs Setup. Du bekommst vorab ein transparentes Angebot – ohne versteckte Kosten.",
+      },
+      {
+        title: "Wie lange dauert die Umsetzung?",
+        description:
+          "In der Regel ca. 1 Woche. Voraussetzung: du weißt, welche Stellen besetzt werden sollen und kannst Feedback zügig geben. Dann geht es schnell.",
+      },
+      {
+        title: "Kann ich Bewerbungen direkt über die Website erhalten?",
+        description:
+          "Ja. Ich integriere ein Bewerbungsformular, über das sich Interessenten direkt bewerben können – strukturiert, ohne E-Mail-Chaos und auf deine Stellen abgestimmt.",
+      },
+      {
+        title: "Kann ich Stellenanzeigen danach selbst verwalten?",
+        description:
+          "Ja – ohne technisches Wissen. Du bekommst eine kurze Anleitung und kannst Stellen danach selbst hinzufügen, ändern oder entfernen.",
+      },
+    ]}
+    cols={2}
+    ctaLabel="Karriereseite besprechen"
+    ctaHref="/kontakt"
+  />
+
+  <FinalCTASection
+    title="Bereit, Mitarbeiter über deine Website zu gewinnen?"
+    description={`
+    <p>In einem kurzen Gespräch schauen wir auf deine aktuelle Situation: Wie bewerben sich Kandidaten bei dir, was fehlt und wo verlierst du sie gerade?</p>
+    <p>Du bekommst eine klare Einschätzung, ob eine <strong>Recruiting Website</strong> der schnellste Weg zu mehr Bewerbungen ist.</p>
+  `}
+    ctaLabel="Kostenlose Einschätzung"
+    ctaHref="/kontakt"
+  />
+</MainLayout>

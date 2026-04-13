@@ -10,6 +10,7 @@ type BulletSplitSectionProps = {
   highlight?: string;
   subtitle?: string;
   showHighlight?: boolean;
+  highlightAboveTitle?: boolean;
   listLabel?: string;
 
   // Extra text block
@@ -43,6 +44,7 @@ const {
   highlight,
   subtitle = "",
   showHighlight = false,
+  highlightAboveTitle = false,
   listLabel = "",
 
   // Extra text block
@@ -122,11 +124,19 @@ const pad = compact ? "section-pad-compact" : "section-pad";
             </p>
           )}
 
+          {showHighlight && highlightAboveTitle && (
+            <div class="mb-6 text-center">
+              <span class="mw-highlight">
+                {highlight}
+              </span>
+            </div>
+          )}
+
           <h2 class="mw-h2 text-center">
             {title}
           </h2>
 
-          {showHighlight && (
+          {showHighlight && !highlightAboveTitle && (
             <div class="mt-8 space-y-6 text-center">
               <span class="mw-highlight">
                 {highlight}
@@ -135,6 +145,12 @@ const pad = compact ? "section-pad-compact" : "section-pad";
                 {subtitle}
               </p>
             </div>
+          )}
+
+          {showHighlight && highlightAboveTitle && subtitle && (
+            <p class="mw-body mt-6 text-center">
+              {subtitle}
+            </p>
           )}
 
           {!showHighlight && subtitle && (
