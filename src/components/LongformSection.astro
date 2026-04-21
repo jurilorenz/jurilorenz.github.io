@@ -68,7 +68,7 @@ const hasBottom = typeof bottomText === "string" && bottomText.trim().length > 0
 
         {caption && (
           <p class="mt-6 text-sm md:text-base text-gray-300/80">
-            {caption}
+            <Fragment set:html={caption} />
           </p>
         )}
       </div>

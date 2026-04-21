@@ -210,10 +210,10 @@ seoDesc: "Online Shop mit WordPress & WooCommerce – modern, schnell und ohne m
 {
   params: { slug: "beauty-funnel-muenchen" },
   props: {
-    name: "Beauty Funnel München – Terminbuchung & Leads",
-    introText: "Conversion-optimierter Funnel für ein Beauty Studio in München: klare Struktur, mobile-first Design, Fokus auf Terminbuchungen, gezielter Einsatz von Social Proof und Angebotskommunikation zur Steigerung von Leads.",
-    seoTitle: "Beauty Funnel München – Mehr Termine durch klare Struktur",
-    seoDesc: "Funnel Case Study für ein Beauty Studio in München: optimierte Landingpage für mehr Terminbuchungen, bessere Conversion und klare Lead-Generierung."
+    name: "Beauty & Ästhetik Funnels München – 8 Sales-Funnels, 2 Marken",
+    introText: "Acht Conversion-Funnels für zwei Marken eines Kunden aus München: vier im pink/orangen Beauty-Design, vier im grünen Ästhetik-Medizin-Look. Gemeinsame Conversion-Architektur mit individueller visueller Richtung – mobile-first, optimiert für Instagram und Meta Ads.",
+    seoTitle: "Beauty & Ästhetik Funnels München – 8 Landingpages, 2 Marken",
+    seoDesc: "Funnel Case Study aus München: 8 Sales-Funnels für zwei Marken – Beauty und Ästhetik-Medizin. Einheitliche Conversion-Architektur, zwei visuelle Richtungen, optimiert für Social Ads."
   },
 },
 {
@@ -270,21 +270,29 @@ const { name, introText, seoTitle, seoDesc } = Astro.props;
     }
   })} />
   <div class="min-h-screen text-white">
-    <h1 class="text-center text-4xl md:text-6xl font-bold drop-shadow-lg mt-12 md:mt-36 mb-8 mx-2">
-      {name}
-    </h1>
 
-    <p class="text-center text-lg px-4 md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
-      {introText}
-    </p>
+    <div class="max-w-7xl mx-auto px-6 md:px-12 mt-12 md:mt-28 mb-12">
+      <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
 
-    <section class="mx-auto w-11/12 md:w-8/12 lg:w-6/12 flex flex-col items-center">
-      <img 
-        src={`/images/projects/${slug}.webp`}  
-        class="rounded shadow-md drop-shadow-[0px_-35px_35px_rgba(75,0,130,0.6)] object-contain w-full h-auto max-h-[90vh]"
-        alt={`Project ${name}`}
-      />
-    </section>
+        <div class="order-2 md:order-1 flex justify-center">
+          <img
+            src={`/images/projects/${slug}.webp`}
+            class="rounded shadow-md drop-shadow-[0px_-35px_35px_rgba(75,0,130,0.6)] object-contain w-full h-auto max-h-[72vh]"
+            alt={`Project ${name}`}
+          />
+        </div>
+
+        <div class="order-1 md:order-2">
+          <h1 class="text-4xl md:text-6xl font-bold drop-shadow-lg mb-8">
+            {name}
+          </h1>
+          <p class="text-lg md:text-2xl text-gray-300">
+            {introText}
+          </p>
+        </div>
+
+      </div>
+    </div>
 
     <section class="my-12 w-10/12 md:w-8/12 lg:w-7/12 mx-auto">
       {slug === 'maa-art' && <MaaArt />}
