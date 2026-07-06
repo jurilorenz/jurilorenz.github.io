@@ -37,18 +37,28 @@ const features = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Website Relaunch & Redesign",
-  description:
-    "Strategischer Website Relaunch & Redesign mit klarer Struktur und moderner Technik – für mehr Anfragen.",
-  provider: { "@type": "Brand", name: "maxWapp" },
-  areaServed: "DE",
-  offers: {
-    "@type": "Offer",
-    priceCurrency: "EUR",
-    price: "900",
-    availability: "https://schema.org/InStock",
-    url: "https://maxwapp.de/preise",
+  "name": "Website Relaunch & Redesign",
+  "description": "Strategischer Website-Relaunch und Redesign mit klarer Struktur, moderner Technik und Conversion-Fokus. Für mehr Anfragen und bessere Google-Sichtbarkeit. Ab €1.525.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "maxWapp",
+    "url": "https://maxwapp.de",
+    "telephone": "+49 1777 59 48 39",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Constanze-Hallgarten Str. 40",
+      "addressLocality": "München",
+      "postalCode": "81379",
+      "addressCountry": "DE"
+    }
   },
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "EUR",
+    "price": "1525",
+    "availability": "http://schema.org/InStock",
+    "url": "https://maxwapp.de/preise"
+  }
 }
 ---
 
@@ -263,7 +273,7 @@ Neu aufgebaut, technisch sauber und strategisch ausgerichtet – damit deine Web
     intro="Ich begleite Website Redesigns und Relaunches für Unternehmen im deutschsprachigen Raum – mit Fokus auf Klarheit und Performance."
     badges={[
       {
-        label: "70+ Bewertungen",
+        label: "80+ Bewertungen",
         sublabel: "Google",
         href: "https://maps.app.goo.gl/93PpiX2gyiVCfcGd7",
       },

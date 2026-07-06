@@ -64,16 +64,28 @@ const landingpageProjects = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Sales-Funnel erstellen lassen",
-  provider: { "@type": "Brand", name: "maxWapp" },
-  areaServed: "DE",
-  offers: {
-    "@type": "Offer",
-    priceCurrency: "EUR",
-    price: "900",
-    availability: "https://schema.org/InStock",
-    url: "https://maxwapp.de/preise",
+  "name": "Sales-Funnel erstellen lassen",
+  "description": "Professionelle Sales-Funnels für mehr Leads & Kunden – klar strukturiert, conversion-optimiert und schnell umgesetzt. Transparente Preise ab €1.525.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "maxWapp",
+    "url": "https://maxwapp.de",
+    "telephone": "+49 1777 59 48 39",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Constanze-Hallgarten Str. 40",
+      "addressLocality": "München",
+      "postalCode": "81379",
+      "addressCountry": "DE"
+    }
   },
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "EUR",
+    "price": "1525",
+    "availability": "http://schema.org/InStock",
+    "url": "https://maxwapp.de/preise"
+  }
 }
 ---
 
@@ -257,7 +269,7 @@ Ein klarer Aufbau mit guter Headline, sichtbarem CTA und sinnvoll platzierten Ve
     intro="Ein paar Fakten, die man direkt prüfen kann."
     badges={[
       {
-        label: "70+ Bewertungen",
+        label: "80+ Bewertungen",
         sublabel: "Google",
         href: "https://maps.app.goo.gl/93PpiX2gyiVCfcGd7",
       },

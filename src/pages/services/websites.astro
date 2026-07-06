@@ -2,64 +2,32 @@
 import MainLayout from "../../layouts/MainLayout.astro"
 import IpadComponent from "../../components/IpadComponent.astro"
 
-const jsonLd = [
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: "Starter",
-    image: "https://maxwapp.de/images/packages/starter-package-cover.webp",
-    description:
-      "Landingpage, mobilfreundlich, kostenloses Hosting & Domain, Datenschutz etc.",
-    brand: {
-      "@type": "Brand",
-      name: "maxWapp",
-    },
-    offers: {
-      "@type": "Offer",
-      priceCurrency: "EUR",
-      price: "900",
-      availability: "http://schema.org/InStock",
-      url: "https://maxwapp.de/preise",
-    },
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Webentwicklung München – WordPress & Websites",
+  "description": "Professionelle WordPress-Websites und Landingpages aus München – modern, schnell und suchmaschinenoptimiert. Für Selbstständige und kleine Unternehmen. Ab €1.525.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "maxWapp",
+    "url": "https://maxwapp.de",
+    "telephone": "+49 1777 59 48 39",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Constanze-Hallgarten Str. 40",
+      "addressLocality": "München",
+      "postalCode": "81379",
+      "addressCountry": "DE"
+    }
   },
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: "Basic",
-    image: "https://maxwapp.de/images/packages/basic-package-cover.webp",
-    description: "Startseite, bis 5 Menüpunkte, KI-Bilder, Logo, SEO & mehr.",
-    brand: {
-      "@type": "Brand",
-      name: "maxWapp",
-    },
-    offers: {
-      "@type": "Offer",
-      priceCurrency: "EUR",
-      price: "1900",
-      availability: "http://schema.org/InStock",
-      url: "https://maxwapp.de/preise",
-    },
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: "Business",
-    image: "https://maxwapp.de/images/packages/business-package-cover.webp",
-    description:
-      "Komplettes Branding, professionelle Foto- & Videoproduktion, SEO, Visitenkarten & mehr.",
-    brand: {
-      "@type": "Brand",
-      name: "maxWapp",
-    },
-    offers: {
-      "@type": "Offer",
-      priceCurrency: "EUR",
-      price: "3900",
-      availability: "http://schema.org/InStock",
-      url: "https://maxwapp.de/preise",
-    },
-  },
-]
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "EUR",
+    "price": "1525",
+    "availability": "http://schema.org/InStock",
+    "url": "https://maxwapp.de/preise"
+  }
+}
 ---
 
 <MainLayout

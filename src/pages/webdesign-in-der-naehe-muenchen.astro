@@ -1,69 +1,10 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro"
 import IpadComponent from "../components/IpadComponent.astro"
-import HeroComponent from "../components/HeroComponent.astro"
+import PrimaryHeroSection from "../components/PrimaryHeroSection.astro"
 import FinalCTASection from "../components/FinalCTASection.astro"
-import ImageBanner from "../components/ImageBanner.astro";
-import ProjectCardsGrid from "../components/ProjectCardsGrid.astro";
-
-const jsonLd = [
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: "Starter",
-    image: "https://maxwapp.de/images/packages/starter-package-cover.webp",
-    description:
-      "Landingpage, mobilfreundlich, kostenloses Hosting & Domain, Datenschutz etc.",
-    brand: {
-      "@type": "Brand",
-      name: "maxWapp",
-    },
-    offers: {
-      "@type": "Offer",
-      priceCurrency: "EUR",
-      price: "900",
-      availability: "http://schema.org/InStock",
-      url: "https://maxwapp.de/preise",
-    },
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: "Basic",
-    image: "https://maxwapp.de/images/packages/basic-package-cover.webp",
-    description: "Startseite, bis 5 Menüpunkte, KI-Bilder, Logo, SEO & mehr.",
-    brand: {
-      "@type": "Brand",
-      name: "maxWapp",
-    },
-    offers: {
-      "@type": "Offer",
-      priceCurrency: "EUR",
-      price: "1900",
-      availability: "http://schema.org/InStock",
-      url: "https://maxwapp.de/preise",
-    },
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: "Business",
-    image: "https://maxwapp.de/images/packages/business-package-cover.webp",
-    description:
-      "Komplettes Branding, professionelle Foto- & Videoproduktion, SEO, Visitenkarten & mehr.",
-    brand: {
-      "@type": "Brand",
-      name: "maxWapp",
-    },
-    offers: {
-      "@type": "Offer",
-      priceCurrency: "EUR",
-      price: "3900",
-      availability: "http://schema.org/InStock",
-      url: "https://maxwapp.de/preise",
-    },
-  },
-]
+import ImageBanner from "../components/ImageBanner.astro"
+import ProjectCardsGrid from "../components/ProjectCardsGrid.astro"
 
 const munichProjects = [
   {
@@ -76,7 +17,8 @@ const munichProjects = [
     href: "/projekte/1-line-architecture",
     district: "Sendling",
     title: "1 Line Architecture",
-    description: "Architektur-Website mit klarer Struktur und starkem Auftritt.",
+    description:
+      "Architektur-Website mit klarer Struktur und starkem Auftritt.",
   },
   {
     href: "/projekte/pizzeria-mixto-verde",
@@ -103,13 +45,11 @@ const munichProjects = [
     description: "Website und Branding für einen Friseursalon in München.",
   },
 ]
-
 ---
 
 <MainLayout
-  title="Webdesign in der Nähe (München) – Moderne Websites & Landingpages | maxWapp"
-  seoTitle="Webdesign in der Nähe München – Website & Landingpage erstellen lassen"
-  seoDesc="Webdesign in der Nähe (München): Professionelle WordPress-Websites & Landingpages. Responsive Webdesign, schnelle Ladezeiten, SEO. Website erstellen lassen – lokal & zuverlässig."
+  seoTitle="Webdesign in der Nähe München – Websites, Online-Shops & SEO"
+  seoDesc="Professioneller Webdesigner aus München – persönlich, ohne Agentur-Overhead. WordPress & SEO-Optimierung. Über 80 Google-Bewertungen. Jetzt Erstgespräch buchen."
 >
   <link
     rel="canonical"
@@ -144,8 +84,16 @@ const munichProjects = [
     }
   </script>
 
-  <HeroComponent title="Webdesign in der Nähe - München" subtitle="" />
-
+  <PrimaryHeroSection
+    title="Webdesign in der Nähe München"
+    lead="Professionelle Websites, Landingpages & SEO. Persönlich umgesetzt, ohne Agentur-Overhead. Webdesign für lokale Unternehmen in München & Umgebung."
+    leadMobile="Professionelle Websites, Landingpages & SEO. Persönlich umgesetzt, ohne Agentur-Overhead. Webdesign für lokale Unternehmen in München."
+    desktopImgSrc="/images/home-page-juri-lorenz-desktop.webp"
+    mobileImgSrc="/images/home-page-juri-lorenz-mobile.webp"
+    imgAlt="Webdesigner in München – maxWapp"
+    ctaHref="/kontakt"
+    ctaLabel="Kostenloses Erstgespräch"
+  />
   <!-- Hintergrund mit Verlauf -->
   <div
     class="min-h-screen bg-gradient-to-b from-[#090a1a] to-[#290065] text-white text-center flex flex-col items-center justify-center"
@@ -252,8 +200,11 @@ const munichProjects = [
           </strong>
         </h3>
         <p class="text-lg text-gray-300 leading-relaxed">
-          Ich <strong>optimiere </strong> oder <a href="/website-relaunch-redesign" class="underline underline-offset-4">redesign</a> deine Website für <span
-            class="underline-animation">schnellere Ladezeiten</span
+          Ich <strong>optimiere </strong> oder <a
+            href="/website-relaunch-redesign"
+            class="underline underline-offset-4">redesign</a
+          > deine Website für <span class="underline-animation"
+            >schnellere Ladezeiten</span
           > und bessere Google-Sichtbarkeit. Das Ergebnis: mehr Reichweite, ein moderner
           Auftritt und deutlich <strong>mehr Anfragen über deine Website</strong
           >.
@@ -281,7 +232,7 @@ const munichProjects = [
         <p class="text-lg text-gray-300 leading-relaxed">
           Ich entwickle <strong>Online-Shops mit Shopify oder WordPress</strong>
           – individuell, benutzerfreundlich und suchmaschinenoptimiert. Das Ergebnis:
-          <span class="underline-animation">mehr Verkäufe</span> , mehr Reichweite
+          <span class="underline-animation">mehr Verkäufe</span>, mehr Reichweite
           und eine starke Online-Präsenz.
         </p>
       </div>
@@ -315,9 +266,10 @@ const munichProjects = [
 
         <p class="text-xl md:text-2xl mt-8">
           Du willst eine <strong>Landingpage</strong> oder eine
-          <a href="/wordpress-website-erstellen-lassen" class="underline underline-offset-4">Website erstellen lassen</a>? Als <strong
-            >Webdesigner & Webentwickler</strong
-          > liefere ich
+          <a
+            href="/wordpress-website-erstellen-lassen"
+            class="underline underline-offset-4">Website erstellen lassen</a
+          >? Als <strong>Webdesigner & Webentwickler</strong> liefere ich
           <strong>responsive Webdesign</strong> – präzise umgesetzt für Selbstständige
           und kleine Unternehmen in München & Umgebung.
         </p>
@@ -442,31 +394,32 @@ const munichProjects = [
       </div>
     </div>
 
-<ImageBanner
-  imgSrc="/images/muenchen-frauenkirche-altstadt.webp"
-  imgAlt="München Altstadt mit Frauenkirche – Blick über die Stadt"
-  eyebrow="Webdesign aus München"
-  title="Warum lokale Erfahrung beim Webdesign entscheidend ist"
-  text={`
+    <ImageBanner
+      imgSrc="/images/muenchen-frauenkirche-altstadt.webp"
+      imgAlt="München Altstadt mit Frauenkirche – Blick über die Stadt"
+      eyebrow="Webdesign aus München"
+      title="Warum lokale Erfahrung beim Webdesign entscheidend ist"
+      text={`
     <p>Eine Website für ein Unternehmen in München funktioniert nicht isoliert. Sie steht immer im Zusammenhang mit <strong>Google-Suche, Google Business Profil, <a href="/google-bewertungen-verbessern" class="underline underline-offset-4">Google Bewertungen</a> und lokaler Sichtbarkeit</strong>.</p>
 
     <p>Wer hier erfolgreich sein möchte, muss verstehen, wie Menschen in München nach Dienstleistungen suchen, wie Google Maps funktioniert und welche lokalen Plattformen oder Branchenportale die Sichtbarkeit zusätzlich stärken.</p>
 
     <p>Als <strong>Webdesigner aus München</strong> entwickle ich Websites deshalb immer im Zusammenspiel mit lokaler SEO, Struktur und Nutzerführung. Website, Google Präsenz und Auffindbarkeit gehören zusammen.</p>
   `}
-  ctaLabel="Projekt besprechen"
-  ctaHref="/kontakt"
-/>
+      ctaLabel="Projekt besprechen"
+      ctaHref="/kontakt"
+    />
 
-<ProjectCardsGrid
-  title="Webdesign-Projekte aus München"
-  intro="Echte Referenzen aus München zeigen, wie modernes Webdesign, klare Struktur und lokale Ausrichtung zusammenwirken."
-  items={munichProjects}
-  cols={3}
-  afterText="Du möchtest mehr Beispiele aus München? Dann wirf einen Blick in mein Portfolio mit Referenzen aus München und darüber hinaus."  ctaLabel="Alle Projekte ansehen"
-  ctaHref="/projekte"
-  className="pt-0"
-/>
+    <ProjectCardsGrid
+      title="Webdesign-Projekte aus München"
+      intro="Echte Referenzen aus München zeigen, wie modernes Webdesign, klare Struktur und lokale Ausrichtung zusammenwirken."
+      items={munichProjects}
+      cols={3}
+      afterText="Du möchtest mehr Beispiele aus München? Dann wirf einen Blick in mein Portfolio mit Referenzen aus München und darüber hinaus."
+      ctaLabel="Alle Projekte ansehen"
+      ctaHref="/projekte"
+      className="pt-0"
+    />
 
     <h2
       class="text-center text-3xl md:text-4xl font-extrabold mt-2 mb-2 mx-2"
@@ -572,7 +525,7 @@ const munichProjects = [
       <!-- Textabschnitt für Desktop rechts -->
       <div class="w-full md:w-5/12 text-center md:text-left">
         <p class="text-xl md:text-2xl mt-8">
-          <strong>Mein Fokus:</strong>. <span class="underline-animation"
+          <strong>Mein Fokus:</strong> <span class="underline-animation"
             >Conversion</span
           >, SEO und Performance, damit du in München sichtbar wirst und <strong
             >mehr Kunden gewinnst</strong
@@ -868,10 +821,10 @@ const munichProjects = [
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const phoneImage = document.querySelector(".phone-container")
+      const phoneImage = document.querySelector<HTMLElement>(".phone-container")
+      if (!phoneImage) return
 
-      // Detect if the element is in view for mobile
-      function isInViewPort(element) {
+      function isInViewPort(element: HTMLElement) {
         const rect = element.getBoundingClientRect()
         return (
           rect.top <=
@@ -880,10 +833,8 @@ const munichProjects = [
         )
       }
 
-      // Add event listener for scroll to trigger the animation
       window.addEventListener("scroll", function () {
         if (window.innerWidth < 768) {
-          // Only apply for mobile view
           if (isInViewPort(phoneImage)) {
             phoneImage.classList.add("fly-in")
           }
@@ -892,11 +843,10 @@ const munichProjects = [
     })
 
     document.addEventListener("DOMContentLoaded", function () {
-      const secondPhoneImage = document.querySelector(".phone-container-second")
-      const lastPhoneImage = document.querySelector(".last-image")
+      const secondPhoneImage = document.querySelector<HTMLElement>(".phone-container-second")
+      const lastPhoneImage = document.querySelector<HTMLElement>(".last-image")
 
-      // Function to check if the element is in the viewport
-      function isInViewPort(element) {
+      function isInViewPort(element: HTMLElement) {
         const rect = element.getBoundingClientRect()
         return (
           rect.top <=
@@ -905,20 +855,16 @@ const munichProjects = [
         )
       }
 
-      // Function to add the fly-in class when in view
       function handleScroll() {
-        if (isInViewPort(secondPhoneImage)) {
+        if (secondPhoneImage && isInViewPort(secondPhoneImage)) {
           secondPhoneImage.classList.add("fly-in-second")
         }
-        if (isInViewPort(lastPhoneImage)) {
+        if (lastPhoneImage && isInViewPort(lastPhoneImage)) {
           lastPhoneImage.classList.add("fly-in-second")
         }
       }
 
-      // Add scroll event listener
       window.addEventListener("scroll", handleScroll)
-
-      // Run on page load in case the element is already in view
       handleScroll()
     })
   </script>

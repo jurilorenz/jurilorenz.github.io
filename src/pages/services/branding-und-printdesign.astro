@@ -5,25 +5,28 @@ import IpadComponent from "../../components/IpadComponent.astro"
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Printdesign & Branding aus München",
-  description:
-    "Flyer erstellen & drucken, Visitenkarten Design (QR-Code), Corporate Design & Logo-Erstellung – alles aus einer Hand.",
-  provider: {
-    "@type": "Organization",
-    name: "maxWapp",
-    url: "https://maxwapp.de",
+  "name": "Printdesign & Branding aus München",
+  "description": "Flyer, Visitenkarten, Corporate Design & Logo – alles aus einer Hand. Professionelles Branding für lokale Unternehmen in München. Transparente Preise ab €1.525.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "maxWapp",
+    "url": "https://maxwapp.de",
+    "telephone": "+49 1777 59 48 39",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Constanze-Hallgarten Str. 40",
+      "addressLocality": "München",
+      "postalCode": "81379",
+      "addressCountry": "DE"
+    }
   },
-  areaServed: {
-    "@type": "City",
-    name: "München",
-  },
-  offers: {
+  "offers": {
     "@type": "Offer",
-    priceCurrency: "EUR",
-    price: "900",
-    availability: "https://schema.org/InStock",
-    url: "https://maxwapp.de/printdesign-muenchen/",
-  },
+    "priceCurrency": "EUR",
+    "price": "1525",
+    "availability": "http://schema.org/InStock",
+    "url": "https://maxwapp.de/printdesign-muenchen/"
+  }
 }
 ---
 

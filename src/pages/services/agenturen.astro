@@ -4,25 +4,28 @@ import MainLayout from "../../layouts/MainLayout.astro"
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Freelance Webentwicklung für Agenturen",
-  description:
-    "Ich unterstütze Agenturen flexibel bei Webprojekten – mit Expertise in WordPress, Astro, Frontend, Schnittstellen und Mobile Development.",
-  provider: {
-    "@type": "Organization",
-    name: "maxWapp",
-    url: "https://maxwapp.de",
+  "name": "Freelance Webentwicklung für Agenturen",
+  "description": "Flexible Webentwicklung für Agenturen – WordPress, Astro, Frontend und Schnittstellen. Schnelle Umsetzung, sauberes Development ohne Overhead. Ab €1.525.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "maxWapp",
+    "url": "https://maxwapp.de",
+    "telephone": "+49 1777 59 48 39",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Constanze-Hallgarten Str. 40",
+      "addressLocality": "München",
+      "postalCode": "81379",
+      "addressCountry": "DE"
+    }
   },
-  areaServed: {
-    "@type": "Place",
-    name: "Deutschland, Österreich, Schweiz",
-  },
-  offers: {
+  "offers": {
     "@type": "Offer",
-    priceCurrency: "EUR",
-    price: "900",
-    availability: "https://schema.org/InStock",
-    url: "https://maxwapp.de/wordpress-freelancer/",
-  },
+    "priceCurrency": "EUR",
+    "price": "1525",
+    "availability": "http://schema.org/InStock",
+    "url": "https://maxwapp.de/wordpress-freelancer/"
+  }
 }
 ---
  
@@ -359,10 +362,10 @@ const jsonLd = {
 
       <script>
         document.addEventListener("DOMContentLoaded", function () {
-          const phoneImage = document.querySelector(".phone-container")
+          const phoneImage = document.querySelector<HTMLElement>(".phone-container")
+          if (!phoneImage) return
 
-          // Detect if the element is in view for mobile
-          function isInViewPort(element) {
+          function isInViewPort(element: HTMLElement) {
             const rect = element.getBoundingClientRect()
             return (
               rect.top <=
@@ -371,10 +374,8 @@ const jsonLd = {
             )
           }
 
-          // Add event listener for scroll to trigger the animation
           window.addEventListener("scroll", function () {
             if (window.innerWidth < 768) {
-              // Only apply for mobile view
               if (isInViewPort(phoneImage)) {
                 phoneImage.classList.add("fly-in")
               }
@@ -383,12 +384,10 @@ const jsonLd = {
         })
 
         document.addEventListener("DOMContentLoaded", function () {
-          const secondPhoneImage = document.querySelector(
-            ".phone-container-second",
-          )
+          const secondPhoneImage = document.querySelector<HTMLElement>(".phone-container-second")
+          if (!secondPhoneImage) return
 
-          // Function to check if the element is in the viewport
-          function isInViewPort(element) {
+          function isInViewPort(element: HTMLElement) {
             const rect = element.getBoundingClientRect()
             return (
               rect.top <=
@@ -397,17 +396,13 @@ const jsonLd = {
             )
           }
 
-          // Function to add the fly-in class when in view
           function handleScroll() {
-            if (isInViewPort(secondPhoneImage)) {
-              secondPhoneImage.classList.add("fly-in-second")
+            if (isInViewPort(secondPhoneImage!)) {
+              secondPhoneImage!.classList.add("fly-in-second")
             }
           }
 
-          // Add scroll event listener
           window.addEventListener("scroll", handleScroll)
-
-          // Run on page load in case the element is already in view
           handleScroll()
         })
       </script>

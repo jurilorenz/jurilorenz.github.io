@@ -36,31 +36,35 @@ const features = [
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": ["Service", "ProfessionalService"],
-  name: "Mitarbeitergewinnung Website",
-  serviceType: "Recruiting Website Erstellung",
-  description:
-    "Recruiting Website & Karriereseite für KMU und Handwerk – Fachkräfte direkt über Google gewinnen, ohne Jobportale.",
-  provider: {
-    "@type": ["LocalBusiness", "ProfessionalService"],
-    name: "maxWapp",
-    url: "https://maxwapp.de",
+  "@type": "Service",
+  "name": "Mitarbeitergewinnung Website erstellen lassen",
+  "description": "Recruiting-Website & Karriereseite für KMU und Handwerk – Fachkräfte direkt über Google gewinnen, ohne Jobportale. Transparente Preise ab €1.525.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "maxWapp",
+    "url": "https://maxwapp.de",
+    "telephone": "+49 1777 59 48 39",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Constanze-Hallgarten Str. 40",
+      "addressLocality": "München",
+      "postalCode": "81379",
+      "addressCountry": "DE"
+    }
   },
-  areaServed: "DE",
-  offers: {
+  "offers": {
     "@type": "Offer",
-    priceCurrency: "EUR",
-    price: "900",
-    availability: "https://schema.org/InStock",
-    url: "https://maxwapp.de/preise",
-  },
+    "priceCurrency": "EUR",
+    "price": "1525",
+    "availability": "http://schema.org/InStock",
+    "url": "https://maxwapp.de/preise"
+  }
 }
 ---
 
 <MainLayout
-  title="Mitarbeitergewinnung Website erstellen lassen | maxWapp"
-  seoTitle="Mitarbeitergewinnung Website erstellen lassen | maxWapp"
-  seoDesc="Gewinne Fachkräfte direkt über deine Website – ohne Jobportale. Ich erstelle deine Karriereseite mit Bewerbungsformular & Google-Optimierung. Jetzt anfragen."
+  seoTitle="Karriereseite erstellen lassen – Mitarbeiter über Google gewinnen"
+  seoDesc="Recruiting Website für KMU & Handwerk – Fachkräfte direkt über Google gewinnen, ohne Jobportale. Mit Bewerbungsformular & Google for Jobs Integration. Jetzt anfragen."
 >
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
@@ -229,14 +233,14 @@ Eine eigene Recruiting Website ist einmalig – und gehört dir. Bei Google sich
           "Kein Medienbruch, kein E-Mail-Chaos. Bewerbungen kommen direkt über die Website rein.",
       },
       {
-        title: "Sichtbarkeit bei Google",
-        description:
-          "Strukturierte Daten sorgen dafür, dass deine Stellen direkt in der Google-Suche erscheinen – kostenlos und dauerhaft.",
-      },
-      {
         title: "Mobile & schnell",
         description:
           "Die meisten Bewerber suchen auf dem Smartphone. Deine Karriereseite lädt schnell und ist auf jedem Gerät klar lesbar.",
+      },
+      {
+        title: "Google for Jobs Integration",
+        description:
+          "Strukturierte Stellenanzeigen sorgen dafür, dass deine offenen Stellen direkt in der Google-Suche erscheinen – kostenlos, dauerhaft und ohne Monatsgebühr.",
       },
     ]}
     cols={2}
@@ -257,7 +261,7 @@ Eine eigene Recruiting Website ist einmalig – und gehört dir. Bei Google sich
     imgAlt="Karriereseite Beispiel – Recruiting Website für Restaurant Mixto Verde München"
     bottomText={`<p>Du brauchst keinen fertigen Content-Ordner. Bring mit, was du hast – ein paar Stichpunkte, ein altes Foto, eine grobe Vorstellung. Den Rest baue ich auf.</p>
 
-<p><strong>Das Ergebnis:</strong> Eine <strong>Mitarbeitergewinnung Website</strong>, die bei Google gefunden wird, auf dem Smartphone gut wirkt – und Bewerber dazu bringt, den nächsten Schritt zu machen.</p>`}
+<p><strong>Das Ergebnis:</strong> Eine <strong>Mitarbeitergewinnung Website</strong>, die bei Google gefunden wird, auf dem Smartphone gut wirkt – und Bewerber dazu bringt, den nächsten Schritt zu machen.</p><p>Auf Wunsch integriere ich außerdem <strong>strukturierte Stellenanzeigen (Google for Jobs)</strong> – damit deine offenen Stellen direkt in der Google-Suche erscheinen, kostenlos und dauerhaft sichtbar, ohne Indeed oder StepStone.</p>`}
     ctaLabel="Projekt besprechen"
     ctaHref="/kontakt"
   />
@@ -268,7 +272,7 @@ Eine eigene Recruiting Website ist einmalig – und gehört dir. Bei Google sich
     intro="Ich erstelle Karriereseiten und Recruiting Websites für KMU und Handwerksbetriebe im DACH-Raum – mit Fokus auf Klarheit und Bewerber-Conversion."
     badges={[
       {
-        label: "70+ Bewertungen",
+        label: "80+ Bewertungen",
         sublabel: "Google",
         href: "https://maps.app.goo.gl/93PpiX2gyiVCfcGd7",
       },

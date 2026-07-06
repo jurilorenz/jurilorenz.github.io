@@ -63,13 +63,25 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "WordPress Website erstellen lassen",
-  "provider": { "@type": "Brand", "name": "maxWapp" },
-  "areaServed": "DE",
+  "description": "Professionelle WordPress-Websites – modern, schnell und suchmaschinenoptimiert. Für Selbstständige und kleine Unternehmen in München. Transparente Preise ab €1.525.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "maxWapp",
+    "url": "https://maxwapp.de",
+    "telephone": "+49 1777 59 48 39",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Constanze-Hallgarten Str. 40",
+      "addressLocality": "München",
+      "postalCode": "81379",
+      "addressCountry": "DE"
+    }
+  },
   "offers": {
     "@type": "Offer",
     "priceCurrency": "EUR",
-    "price": "900",
-    "availability": "https://schema.org/InStock",
+    "price": "1525",
+    "availability": "http://schema.org/InStock",
     "url": "https://maxwapp.de/preise"
   }
 };
@@ -278,7 +290,7 @@ afterText="Du möchtest mehr Beispiele sehen? In meinem Portfolio findest du wei
   title="Warum du mir deine WordPress Website anvertrauen kannst"
   intro="Als spezialisierter WordPress Freelancer entwickle ich seit Jahren Websites für Dienstleister und Unternehmen im deutschsprachigen Raum."
   badges={[
-    { label: "70+ Bewertungen", sublabel: "Google", href: "https://maps.app.goo.gl/93PpiX2gyiVCfcGd7" },
+    { label: "80+ Bewertungen", sublabel: "Google", href: "https://maps.app.goo.gl/93PpiX2gyiVCfcGd7" },
     { label: "5.0 Sterne", sublabel: "Top Rating", href: "https://maps.app.goo.gl/93PpiX2gyiVCfcGd7" },
     { label: "Klar & Fair", sublabel: "Transparente Preise", href: "/preise" },
     { label: "Direkt mit mir", sublabel: "kein Agentur-Overhead", href: "/kontakt" },

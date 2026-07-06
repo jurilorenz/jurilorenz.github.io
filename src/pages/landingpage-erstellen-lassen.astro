@@ -65,16 +65,28 @@ const landingpageProjects = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Landingpage erstellen lassen",
-  provider: { "@type": "Brand", name: "maxWapp" },
-  areaServed: "DE",
-  offers: {
-    "@type": "Offer",
-    priceCurrency: "EUR",
-    price: "900",
-    availability: "https://schema.org/InStock",
-    url: "https://maxwapp.de/preise",
+  "name": "Landingpage erstellen lassen",
+  "description": "Professionelle Landingpages mit Conversion-Fokus – klar, schnell und auf Anfragen ausgelegt. Für Kampagnen, Ads und schnelle Leads. Transparente Preise ab €1.525.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "maxWapp",
+    "url": "https://maxwapp.de",
+    "telephone": "+49 1777 59 48 39",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Constanze-Hallgarten Str. 40",
+      "addressLocality": "München",
+      "postalCode": "81379",
+      "addressCountry": "DE"
+    }
   },
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "EUR",
+    "price": "1525",
+    "availability": "http://schema.org/InStock",
+    "url": "https://maxwapp.de/preise"
+  }
 }
 ---
 
@@ -275,7 +287,7 @@ kann gezielt Fachkräfte anziehen und zu Bewerbungen führen.
     intro="Ein paar Fakten, die man direkt prüfen kann."
     badges={[
       {
-        label: "70+ Bewertungen",
+        label: "80+ Bewertungen",
         sublabel: "Google",
         href: "https://maps.app.goo.gl/93PpiX2gyiVCfcGd7",
       },

@@ -16,22 +16,28 @@ const features = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "KI & Tools Integration",
-  image:
-    "https://maxwapp.de/images/projects/immobilien-muenchen-referenzobjekte.webp",
-  description:
-    "Ich integriere Tools, APIs und KI-Lösungen wie OnOffice, Planity & OpenAI direkt in deine Website – automatisiert und zukunftssicher.",
-  brand: {
-    "@type": "Brand",
-    name: "maxWapp",
+  "name": "KI & Tools Integration",
+  "description": "Integration von KI-Tools, APIs und Automatisierungen in deine Website – Planity, OnOffice, Calendly & mehr. Zukunftssicher und persönlich umgesetzt. Ab €1.525.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "maxWapp",
+    "url": "https://maxwapp.de",
+    "telephone": "+49 1777 59 48 39",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Constanze-Hallgarten Str. 40",
+      "addressLocality": "München",
+      "postalCode": "81379",
+      "addressCountry": "DE"
+    }
   },
-  offers: {
+  "offers": {
     "@type": "Offer",
-    priceCurrency: "EUR",
-    price: "900",
-    availability: "https://schema.org/InStock",
-    url: "https://maxwapp.de/preise",
-  },
+    "priceCurrency": "EUR",
+    "price": "1525",
+    "availability": "http://schema.org/InStock",
+    "url": "https://maxwapp.de/preise"
+  }
 }
 ---
 

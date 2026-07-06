@@ -33,6 +33,59 @@ export interface BlogPost {
 }
 
 export const blogPosts = [
+  {
+    slug: "widerrufsbutton-pflicht-online-shop-muenchen",
+    title: "Widerrufsbutton Pflicht seit Juni 2026: Was Onlineshops und Dienstleister nachrüsten müssen",
+    category: "Recht, E-Commerce, Website-Pflege",
+    intro: "Seit dem 19. Juni 2026 muss jeder Onlineshop in der EU einen ständig sichtbaren Widerrufsbutton anbieten – auch für Kunden ohne Login. Was viele nicht wissen: Die Pflicht betrifft längst nicht nur Shopify-Shops, sondern auch Branchen wie Immobilien mit eigenen CRM-Systemen.",
+    seoTitle: "Widerrufsbutton Pflicht 2026: Umsetzung für Shop & CRM | maxWapp",
+    seoDesc: "Der EU-Widerrufsbutton ist seit Juni 2026 Pflicht (§356a BGB). So setzt du ihn in deinem Onlineshop oder CRM-System korrekt um – auch außerhalb von Shopify.",
+    image: "/images/blog/widerrufsbutton-pflicht.webp",
+    imageAlt: "Widerrufsbutton Pflicht seit Juni 2026 in dunklem Tech-Stil mit Rückgabe-Symbol",
+    sections: [
+      {
+        title: "Was ist passiert?",
+        intro: "Seit dem 19. Juni 2026 gilt in der EU eine neue Pflicht für Onlineshops und Vertragsabschlüsse im Fernabsatz.",
+        body: `Mit der EU-Richtlinie 2023/2673 und ihrer Umsetzung in § 356a BGB müssen Onlineshops und vergleichbare digitale Vertragsabschlüsse ab sofort einen ständig sichtbaren Widerrufsbutton bereitstellen. Kunden können darüber ihren Widerruf direkt einreichen – ganz ohne Kundenkonto, auch als Gast.
+
+Das Formular muss dabei mindestens drei Angaben abfragen: Name, E-Mail-Adresse und Bestellnummer. Nach dem Absenden ist der Anbieter verpflichtet, automatisch eine Eingangsbestätigung per E-Mail zu versenden. Wer das nicht umsetzt, riskiert eine Abmahnung – unabhängig davon, ob der Shop über Shopify, WooCommerce oder ein eigenes System läuft.
+
+Für Shopify-Shops gibt es dafür bereits fertige Apps mit kostenlosem Einstiegsplan, die den Button per Theme-Block ohne Code einbauen. Die Einrichtung ist in der Regel in wenigen Minuten erledigt.`,
+        image: "/images/blog/widerrufsantrag_form_maxwapp.webp",
+        imageAlt: "Beispiel eines Widerrufsantrag-Formulars mit Pflichtfeldern Name, E-Mail und Bestellnummer",
+      },
+      {
+        title: "Warum ist das wichtig für Deutschland?",
+        intro: "Die neue Pflicht betrifft weit mehr Branchen, als auf den ersten Blick sichtbar ist.",
+        body: `Auf den ersten Blick klingt das Thema nach einer reinen Shopify- oder E-Commerce-Frage. In der Praxis zeigt sich aber: Die Pflicht greift überall dort, wo Verbraucher im Fernabsatz einen Vertrag abschließen – das betrifft auch Branchen, die klassisch nicht als "Onlineshop" gelten.
+
+Ein Beispiel ist die Immobilienbranche. CRM-Systeme wie onOffice bieten mittlerweile eigene Widerrufserklärungs-Formulare an, die genau dieselben Pflichtfelder abfragen: Kundennummer, Anrede, Vorname, Nachname und E-Mail-Adresse. Wer als Immobilienmakler oder Dienstleister Verträge digital abschließt, sollte also genauso prüfen, ob der Widerrufsprozess korrekt eingebunden ist.
+
+Für Deutschland bedeutet das: Es reicht nicht, das Thema nur an einer Stelle zu klären. Jede Branche mit digitalem Vertragsabschluss muss selbst prüfen, ob und wie der Button in die eigene Systemlandschaft passt.`,
+      },
+      {
+        title: "Was bedeutet das für Unternehmen in München?",
+        intro: "Für lokale Unternehmen ist das Thema kein einmaliger Umsetzungspunkt, sondern eine laufende Aufgabe der Website-Pflege.",
+        body: `Viele Unternehmen in München haben den Stichtag 19. Juni 2026 gar nicht mitbekommen oder erst später gemerkt, dass ihr Shop noch nicht angepasst ist – das ist kein Einzelfall, sondern eher die Regel. Genau deshalb lohnt es sich jetzt, kurz zu prüfen, ob der Widerrufsbutton bereits sichtbar im Footer oder auf einer eigenen Seite eingebunden ist.
+
+Betroffen sind dabei nicht nur klassische Onlineshops. Auch lokale Dienstleister, die über ihre Website Buchungen, Abos oder Verträge abschließen, sollten das Thema mitdenken – etwa Beauty-Studios mit Terminbuchung, Handwerksbetriebe mit Angebotsbestätigung oder eben Immobilienmakler mit CRM-Anbindung.
+
+Wer selbst nicht genau weiß, ob die eigene Lösung rechtssicher eingebunden ist, sollte das lieber einmal kurz prüfen lassen, statt es auf eine Abmahnung ankommen zu lassen.`,
+      },
+      {
+        title: "Was sollte man jetzt konkret tun?",
+        intro: "Die Umsetzung ist in den meisten Fällen unkompliziert – wichtig ist nur, sie nicht zu vergessen.",
+        body: `- Prüfe, ob dein Shop oder deine Website bereits einen ständig sichtbaren Widerrufsbutton hat
+- Bei Shopify: eine passende App mit kostenlosem Plan installieren und per Theme-Block einbinden
+- Bei individuellen Systemen oder CRM-Lösungen: klären, ob eine passende Widerrufsfunktion bereits vorhanden oder nachrüstbar ist
+- Testen, ob nach dem Absenden wirklich automatisch eine Bestätigungs-E-Mail verschickt wird
+- Auftragsverarbeitungsvertrag (AVV) mit dem App-Anbieter prüfen, falls Kundendaten über eine Drittanwendung laufen`,
+      },
+    ],
+    quote: '„Der Widerrufsbutton betrifft nicht nur Onlineshops – jede Branche mit digitalem Vertragsabschluss sollte einmal genau hinschauen."',
+    ctaText: "Du bist dir nicht sicher, ob dein Shop oder deine Website den Widerrufsbutton rechtssicher eingebunden hat? Ich prüfe deine Seite und setze die Lösung passend zu deinem System um.",
+    ctaLink: "/kontakt/",
+  },
 {
   slug: "google-business-profile-dynamisch-lokale-sichtbarkeit",
   title: "Google Business Profile aktiv pflegen: Warum statische Profile lokal Sichtbarkeit verlieren",
@@ -655,8 +708,7 @@ Beim Redesign von Kleines Stadthaus haben wir UX, Speed und Branding aufs nächs
   extraImageAlt: "Unilink Dresden – Business-Consulting Partner",
   seoTitle: "Unilink Dresden – Business-Consulting & Low-Code Partner | maxWapp",
   seoDesc: "Unilink Dresden: Consulting, Low-Code & Power Platform. Partner für Innovation und Effizienz."
+  },
 
-  }
-    
   // weitere Einträge...
 ];

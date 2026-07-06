@@ -2,27 +2,32 @@
 import MainLayout from "../../layouts/MainLayout.astro"
 import IpadComponent from "../../components/IpadComponent.astro"
 
-const jsonLd = [
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: "Website-Optimierung",
-    image: "https://maxwapp.de/images/maxwapp-website-optimierung.webp",
-    description:
-      "Optimierung bestehender Websites mit Fokus auf SEO, Geschwindigkeit, Conversion und Technik.",
-    brand: {
-      "@type": "Brand",
-      name: "maxWapp",
-    },
-    offers: {
-      "@type": "Offer",
-      priceCurrency: "EUR",
-      price: "900",
-      availability: "http://schema.org/InStock",
-      url: "https://maxwapp.de/website-optimieren-muenchen/",
-    },
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Website-Optimierung München",
+  "description": "Website optimieren lassen: bessere Google-Sichtbarkeit, schnellere Ladezeit und mehr Anfragen. Strukturiertes Audit, klarer Maßnahmenplan. Ab €1.525.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "maxWapp",
+    "url": "https://maxwapp.de",
+    "telephone": "+49 1777 59 48 39",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Constanze-Hallgarten Str. 40",
+      "addressLocality": "München",
+      "postalCode": "81379",
+      "addressCountry": "DE"
+    }
   },
-]
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "EUR",
+    "price": "1525",
+    "availability": "http://schema.org/InStock",
+    "url": "https://maxwapp.de/website-optimieren-muenchen/"
+  }
+}
 ---
 
 <MainLayout

@@ -38,16 +38,28 @@ const features = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "WordPress Freelancer & Webentwicklung",
-  provider: { "@type": "Brand", name: "maxWapp" },
-  areaServed: "DE",
-  offers: {
-    "@type": "Offer",
-    priceCurrency: "EUR",
-    price: "900",
-    availability: "https://schema.org/InStock",
-    url: "https://maxwapp.de/kontakt",
+  "name": "WordPress Freelancer & Webentwicklung",
+  "description": "WordPress Freelancer aus München – schnelle Umsetzung, sauberes Development und persönliche Betreuung. Für Selbstständige, Unternehmen und Agenturen. Ab €1.525.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "maxWapp",
+    "url": "https://maxwapp.de",
+    "telephone": "+49 1777 59 48 39",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Constanze-Hallgarten Str. 40",
+      "addressLocality": "München",
+      "postalCode": "81379",
+      "addressCountry": "DE"
+    }
   },
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "EUR",
+    "price": "1525",
+    "availability": "http://schema.org/InStock",
+    "url": "https://maxwapp.de/preise"
+  }
 };
 ---
 
@@ -250,7 +262,7 @@ Du bekommst eine <strong>klar strukturierte, performante Website</strong> – um
     title="Warum du mit mir als Freelancer gut arbeitest"
     intro="Als WordPress Freelancer und Webentwickler unterstütze ich Unternehmen im deutschsprachigen Raum – schnell, direkt und zuverlässig."
     badges={[
-      { label: "70+ Bewertungen", sublabel: "Google", href: "https://maps.app.goo.gl/93PpiX2gyiVCfcGd7" },
+      { label: "80+ Bewertungen", sublabel: "Google", href: "https://maps.app.goo.gl/93PpiX2gyiVCfcGd7" },
       { label: "5.0 Sterne", sublabel: "Top Rating", href: "https://maps.app.goo.gl/93PpiX2gyiVCfcGd7" },
       { label: "Klar & Fair", sublabel: "Transparente Preise", href: "/preise" },
       { label: "Direkt mit mir", sublabel: "kein Overhead", href: "/kontakt" },
