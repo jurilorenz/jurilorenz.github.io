@@ -34,7 +34,7 @@ export interface BlogPost {
 
 export const blogPosts = [
   {
-    slug: "widerrufsbutton-pflicht-online-shop-muenchen",
+    slug: "widerrufsbutton-pflicht",
     title: "Widerrufsbutton Pflicht seit Juni 2026: Was Onlineshops und Dienstleister nachrüsten müssen",
     category: "Recht, E-Commerce, Website-Pflege",
     intro: "Seit dem 19. Juni 2026 muss jeder Onlineshop in der EU einen ständig sichtbaren Widerrufsbutton anbieten – auch für Kunden ohne Login. Was viele nicht wissen: Die Pflicht betrifft längst nicht nur Shopify-Shops, sondern auch Branchen wie Immobilien mit eigenen CRM-Systemen.",
