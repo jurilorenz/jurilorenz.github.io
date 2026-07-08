@@ -54,11 +54,11 @@ import { Icon } from "astro-icon/components"
         <a href="https://www.instagram.com/maxwapp.de" aria-label="Instagram Profil von maxWapp" class="text-white hover:text-[#6d87d1] transition">
           <Icon name="fa:instagram" class="w-6 h-6" />
         </a>
-        <a href="https://www.linkedin.com/in/juri-lorenz" class="text-white hover:text-[#6d87d1] transition">
-          <Icon name="fa:linkedin" class="w-6 h-6" />
+        <a href="https://www.linkedin.com/in/juri-lorenz" aria-label="LinkedIn-Profil von Juri Lorenz" class="text-white hover:text-[#6d87d1] transition" target="_blank" rel="noopener noreferrer">
+          <Icon name="fa:linkedin" class="w-6 h-6" aria-hidden="true" />
         </a>
-        <a href="https://github.com/jurilorenz" class="text-white hover:text-[#6d87d1] transition">
-          <Icon name="fa:github" class="w-6 h-6" />
+        <a href="https://github.com/jurilorenz" aria-label="GitHub-Profil von Juri Lorenz" class="text-white hover:text-[#6d87d1] transition" target="_blank" rel="noopener noreferrer">
+          <Icon name="fa:github" class="w-6 h-6" aria-hidden="true" />
         </a>
       </div>
     </div>
@@ -77,5 +77,6 @@ import { Icon } from "astro-icon/components"
 </footer>
 
 <script>
-  document.querySelector("#copyright").textContent = new Date().getFullYear().toString()
+  const copyright = document.querySelector("#copyright")
+  if (copyright) copyright.textContent = new Date().getFullYear().toString()
 </script>
