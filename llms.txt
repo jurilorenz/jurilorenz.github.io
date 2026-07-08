@@ -1,0 +1,33 @@
+# maxWapp
+
+> maxWapp ist das Webdesign-Studio von Juri Lorenz in München. Wir entwickeln professionelle, klar strukturierte Websites, Landingpages und Onlineshops für Unternehmen – mit Fokus auf SEO, PageSpeed und Anfragen-Generierung.
+
+Leistungsschwerpunkte: WordPress-Websites, Landingpages, Online-Shops (Shopify/WooCommerce), Website-Relaunch & Redesign, Website-Optimierung (SEO/PageSpeed/Conversion) und Printdesign & CI. Projekte laufen in der Regel 2–4 Wochen, mit festen Preisen und einem direkten Ansprechpartner vom Start bis zum Launch.
+
+## Leistungen
+
+- [WordPress Website erstellen lassen](https://maxwapp.de/wordpress-website-erstellen-lassen): Professionelle Website auf WordPress – klar strukturiert, schnell und auf Anfragen optimiert.
+- [Landingpage erstellen lassen](https://maxwapp.de/landingpage-erstellen-lassen): Landingpage mit klarer Botschaft, starken CTAs und Flow, der Besucher zu Leads macht.
+- [Online-Shop erstellen lassen](https://maxwapp.de/online-shop-erstellen-lassen): Shopify oder WooCommerce – sauber aufgebaut, schnell und verkaufsorientiert.
+- [Website-Relaunch & Redesign](https://maxwapp.de/website-relaunch-redesign): Neue Struktur, besserer Look und saubere SEO-Übergabe für bestehende Websites.
+- [Website optimieren (München)](https://maxwapp.de/website-optimieren-muenchen): SEO, PageSpeed und Conversion verbessern.
+- [Printdesign & CI (München)](https://maxwapp.de/printdesign-muenchen): Visitenkarten, Flyer, Logo & Co., konsistent zur Marke.
+- [WordPress Freelancer](https://maxwapp.de/wordpress-freelancer): Unterstützung für Teams in Frontend-Entwicklung, Marketing und SEO.
+
+## Unternehmen
+
+- [Projekte](https://maxwapp.de/projekte): Referenzen aus Immobilien, Gastronomie, Beauty und weiteren Branchen.
+- [Preise](https://maxwapp.de/preise): Preisrechner und Kostenorientierung.
+- [Über mich](https://maxwapp.de/#ueber-mich): Juri Lorenz, Webdesigner & lokaler Marketing-Experte aus München, seit 2018.
+- [Kontakt](https://maxwapp.de/kontakt): Kostenloses Erstgespräch anfragen.
+- [Webdesign in München](https://maxwapp.de/webdesign-in-der-naehe-muenchen/): Lokale Leistungsseite für München und Umgebung.
+
+## Ressourcen
+
+- [Blog](https://maxwapp.de/webdesign-blog): Artikel rund um Webdesign, SEO und Marketing.
+- [FAQ](https://maxwapp.de/faq): Häufig gestellte Fragen.
+
+## Optional
+
+- [Impressum](https://maxwapp.de/impressum)
+- [Datenschutz](https://maxwapp.de/datenschutz)

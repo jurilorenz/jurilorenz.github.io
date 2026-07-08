@@ -34,6 +34,61 @@ export interface BlogPost {
 
 export const blogPosts = [
   {
+    slug: "agentic-browsing-website-fuer-ki-agenten",
+    title: "Agentic Browsing: Ist deine Website bereit für KI-Agenten?",
+    category: "SEO, Google, KI",
+    intro: "Google hat PageSpeed Insights um eine neue Kategorie erweitert: Agentic Browsing. Sie misst, wie gut eine Website von KI-Agenten wie Claude oder ChatGPT verstanden und bedient werden kann – unabhängig vom klassischen Ranking. Was das für dein Unternehmen in München konkret bedeutet.",
+    seoTitle: "Agentic Browsing: Website für KI-Agenten optimieren | maxWapp",
+    seoDesc: "Agentic Browsing: Google prüft, ob deine Website für KI-Agenten lesbar ist. Was das für Unternehmen in München jetzt bedeutet – und was zu tun ist.",
+    image: "/images/blog/agentic-browsing-pagespeed.webp",
+    imageAlt: "Agentic Browsing Cover: dunkles UI-Dashboard mit PageSpeed-Insights-Bewertungen und KI-Symbol in violettem Gradient",
+    sections: [
+      {
+        title: "Was ist passiert?",
+        intro: "Seit Mai 2026 gehört Agentic Browsing fest zu jedem PageSpeed-Insights-Bericht – direkt neben Performance, Accessibility, Best Practices und SEO.",
+        body: `Mit Lighthouse 13.3 hat Google die Kategorie „Agentic Browsing" aus dem experimentellen Status in die Standardauswertung von PageSpeed Insights übernommen. Seitdem taucht sie bei jedem Report auf – dargestellt nicht als Punktzahl von 0 bis 100, sondern als Verhältnis wie „3/3" oder „0/2", je nachdem wie viele Prüfpunkte auf die jeweilige Seite überhaupt zutreffen.
+
+Geprüft wird, wie gut eine Website von KI-Agenten gelesen und bedient werden kann. Diese Agenten – etwa in Claude, ChatGPT oder direkt im Chrome-Browser integriert – klicken, füllen Formulare aus und navigieren selbstständig im Auftrag eines Nutzers. Dafür verlassen sie sich meist nicht auf den vollständigen HTML-Code, sondern auf den sogenannten Accessibility Tree: eine vereinfachte, maschinenlesbare Struktur der Seite, die eigentlich für Screenreader gedacht ist.
+
+Vier Punkte werden konkret geprüft: ob Links und Buttons einen eindeutigen, programmatisch lesbaren Namen haben, ob die Seite beim Laden stabil bleibt (Cumulative Layout Shift), ob eine llms.txt-Datei mit einer Übersicht über die Website existiert, und ob das noch experimentelle WebMCP-Protokoll für maschinenlesbare Formular- und Aktionsbeschreibungen unterstützt wird.
+
+Google selbst stuft die Kategorie ausdrücklich als „still under development and subject to change" ein.`,
+      },
+      {
+        title: "Warum ist das wichtig für Deutschland?",
+        intro: "Auch im deutschen Markt suchen immer mehr Nutzer nicht mehr selbst, sondern lassen einen KI-Agenten für sich suchen und handeln.",
+        body: `Für SEO in Deutschland ist vor allem eine Klarstellung von Google relevant: Am 15. Juni 2026 hat Google in seinem AI-Optimierungsleitfaden explizit bestätigt, dass eine llms.txt-Datei keinerlei Einfluss auf das Google-Ranking oder auf AI Overviews hat – weder positiv noch negativ. Die Google-Suche nutzt die Datei schlicht nicht. Agentic Browsing ist also aktuell kein Rankingfaktor, sondern eine eigenständige, zukunftsgerichtete Kennzahl.
+
+Trotzdem lohnt sich der Blick darauf, denn ein Teil der geprüften Punkte deckt sich mit Dingen, die ohnehin zählen. Cumulative Layout Shift zum Beispiel ist einer der drei Core Web Vitals und wirkt sich direkt auf die Performance-Bewertung und indirekt auf das Ranking aus. Eindeutige Linktexte und eine saubere Seitenstruktur verbessern gleichzeitig die klassische Barrierefreiheit für Menschen, die Screenreader nutzen.
+
+Für den deutschen Markt heißt das: Wer seine Website technisch sauber hält, bereitet sich nebenbei auf beide Entwicklungen vor – bessere Zugänglichkeit für Menschen und bessere Lesbarkeit für Maschinen.`,
+      },
+      {
+        title: "Was bedeutet das für Unternehmen in München?",
+        intro: "Für die meisten lokalen Anbieter ist Agentic Browsing kein Hebel, an dem man zuerst drehen sollte – aber ein guter Anlass für einen technischen Check.",
+        body: `Für ein lokales Unternehmen in München bleiben die eigentlichen Prioritäten unverändert: schnelle Ladezeiten, stabile Core Web Vitals, eine gute mobile Darstellung und eine Website, die bei Google auffindbar ist. Agentic Browsing ersetzt das nicht.
+
+Was sich lohnt, ist der Blick auf die konkreten Prüfpunkte, weil die Korrekturen meist klein und risikofrei sind. Wir haben das an unserer eigenen Website getestet: maxwapp.de stand zunächst bei 0 von 2 Punkten auf Mobilgeräten, unter anderem weil ein Icon-Link im Footer keinen für Maschinen lesbaren Namen hatte und der Layout-Shift-Wert leicht über dem Zielwert lag. Nach dem Ergänzen von aria-Labels, der Behebung des Layout Shifts und dem Anlegen einer llms.txt-Datei stand der Wert bei 3 von 3 Punkten – bei unveränderter Optik und ohne Eingriff in Design oder Bilder.
+
+Für lokale Dienstleister, die auf Anfragen über die Website angewiesen sind, ist das ein guter Nebeneffekt: Wer ohnehin die Website technisch pflegt, sichert sich gleichzeitig gegen künftige Entwicklungen ab, ohne zusätzlichen Aufwand zu betreiben.`,
+        image: "/images/blog/agentic-browsing-report-screenshot.webp",
+        imageAlt: "Screenshot des PageSpeed-Insights-Reports von maxwapp.de mit 100 Punkten und 3/3 bei Agentic Browsing",
+      },
+      {
+        title: "Was sollte man jetzt konkret tun?",
+        intro: "Ein PageSpeed-Insights-Check dauert wenige Minuten und zeigt schnell, wo eine Website steht.",
+        body: `- Website unter pagespeed.web.dev testen und den Abschnitt Agentic Browsing prüfen
+- Icon-Links und Buttons ohne sichtbaren Text (z. B. Social-Media-Icons) mit einem aria-label versehen
+- Cumulative Layout Shift auf Mobilgeräten prüfen und Layoutverschiebungen beim Laden beheben
+- Eine einfache llms.txt-Datei mit einer kurzen Übersicht über die eigenen Leistungen und Seiten anlegen
+- Den Check regelmäßig wiederholen, da sich die Prüfkriterien laut Google noch weiterentwickeln`,
+      },
+    ],
+    quote: '„Agentic Browsing verändert dein Ranking heute nicht – aber es zeigt, ob deine Website bereit ist, wenn KI-Agenten zur normalen Art werden, wie Kunden das Web nutzen."',
+    ctaText: "Du willst wissen, wie deine Website bei Performance, Core Web Vitals und Agentic Browsing abschneidet? Ich prüfe deinen PageSpeed-Insights-Report und setze die nötigen Korrekturen technisch sauber um.",
+    ctaLink: "/website-optimieren-muenchen/",
+  },
+  {
     slug: "widerrufsbutton-pflicht",
     title: "Widerrufsbutton Pflicht seit Juni 2026: Was Onlineshops und Dienstleister nachrüsten müssen",
     category: "Recht, E-Commerce, Website-Pflege",
