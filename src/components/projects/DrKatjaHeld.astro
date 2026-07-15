@@ -1,0 +1,134 @@
+---
+import ContentSection from "../ContentSection.astro"
+import FeatureCard from "../FeatureCard.astro"
+import IpadComponent from "../IpadComponent.astro"
+import SectionTitle from "../SectionTitle.astro"
+import GradientDivider from "../GradientDivider.astro"
+import TextSection from "../TextSection.astro"
+import InfoBanner from "../InfoBanner.astro"
+import FinalSection from "../FinalSection.astro"
+import ProjectCardsGrid from "../ProjectCardsGrid.astro"
+---
+
+<div class="project-component">
+  <p class="sr-only">
+    Praxis-Website gesucht, die aus der Masse heraussticht? Diese Referenz zeigt eine barrierefreie WordPress Website mit mutiger Magenta-Gold-Farbwelt, klarer Struktur und starker mobiler Performance – für Ärzte und Therapeuten in München.
+  </p>
+
+  <TextSection
+    title="Website für Psychotherapeutin München"
+    introText="Ziel war eine Website, die fachliche Kompetenz und persönliche Präsenz gleichermaßen ausstrahlt und den bestehenden Style-Guide konsequent ins Web übersetzt."
+  />
+
+  <SectionTitle title="Klare Struktur, starke Farbwelt" />
+
+  <IpadComponent
+    imgSrc="/images/projects/psychotherapeutin-praxis-desktop-home.webp"
+    imgAlt="Website Desktop Startseite"
+  />
+
+  <TextSection
+    introText="Die Startseite kommuniziert sofort Kompetenz und Haltung – mit klarem Call-to-Action zu den Leistungen."
+    secondText="Magenta und Gold als Leitfarben setzen bewusst einen Kontrast zum üblichen zurückhaltenden Praxis-Webdesign und tragen die bestehende Markenidentität konsequent weiter."
+  />
+
+  <TextSection
+    title="Barrierefreiheit"
+    introText="Die Website wurde unter Berücksichtigung von Barrierefreiheitsstandards umgesetzt – inklusive Fokus-Styles, Alt-Texten und einem Accessibility-Widget für Kontrast- und Schriftanpassungen."
+    secondText="Für eine Praxis, die Menschen in sensiblen Lebenssituationen erreicht, war das ein zentrales Kriterium."
+  />
+
+  <ContentSection
+    imgSrc="/images/projects/psychotherapeutin-praxis-mobile-ueber-mich.webp"
+    imgAlt="Über mich Seite mobile Ansicht"
+    title="Über mich & Positionierung"
+    introText="Auf der Über-mich-Seite treten fachliche Qualifikationen wie Psychiaterin und Coach bewusst in den Hintergrund. Im Vordergrund steht ein persönliches, warmes Portrait, das sofort Nahbarkeit vermittelt."
+    secondText="Genau dieses Zusammenspiel aus fachlicher Tiefe und menschlicher Präsenz macht die Seite aus: Wer sie besucht, bekommt nicht nur eine Liste von Qualifikationen, sondern ein echtes Gefühl dafür, wer hinter der Praxis steht."
+  />
+
+  <SectionTitle title="Typografie als Gestaltungsmittel" />
+
+  <IpadComponent
+    imgSrc="/images/projects/psychotherapeutin-praxis-desktop-lebensfragen.webp"
+    imgAlt="Lebensfragen Content Desktop Ansicht"
+  />
+
+  <TextSection
+    introText="Diese Unterseite zeigt, wie konsequent das Design im Detail durchgearbeitet wurde: Jede Frage ist einzeln typografisch inszeniert, mit wechselnden Schriftgrößen und Farbakzenten, die dem Text einen fast poetischen Rhythmus geben."
+    secondText="Statt eines Standard-Templates wurde hier bewusst ein individuelles Layout entwickelt – abgestimmt auf Ton und Haltung der Praxis, damit auch inhaltlich anspruchsvolle Seiten wie diese visuell überzeugen."
+  />
+
+  <SectionTitle title="Vertrauen durch Kundenstimmen" />
+
+  <IpadComponent
+    imgSrc="/images/projects/psychotherapeutin-praxis-desktop-stimmen.webp"
+    imgAlt="Kundenstimmen Testimonials Desktop Ansicht"
+  />
+
+  <TextSection
+    introText="Statt ein Google-Widget einzubinden, das fremde Farben und Schriften mitbringt, wurde jede Stimme manuell in den bestehenden Design-Code übersetzt – konsequent in Typografie, Farbwelt und Ton."
+    secondText="Die großzügige, ruhige Typografie mit goldenen Anführungszeichen lässt jede Stimme wie ein persönliches Statement wirken statt wie ein austauschbares Widget. So entsteht Vertrauen, bevor der erste Kontakt überhaupt stattfindet."
+  />
+
+  <ContentSection
+    imgSrc="/images/projects/psychotherapeutin-praxis-mobile-spiritualitaet.webp"
+    imgAlt="Spiritualität Unterseite mobile Ansicht"
+    title="Mobile-first bis ins Detail"
+    introText="Diese Unterseite zeigt, wie präzise Layouts auf das mobile Format übertragen wurden – Bildgröße, Zeilenumbruch und Farbflächen sind eigens für den kleinen Screen abgestimmt, nicht einfach herunterskaliert."
+    secondText="Das Ergebnis: Auch komplexe, textlastige Themen wie Spiritualität und Lebensfragen wirken auf dem Smartphone genauso stimmig wie auf dem Desktop – klar strukturiert, ruhig im Ton, ohne Kompromisse bei der Lesbarkeit."
+  />
+
+  <SectionTitle title="Features der Website" />
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12 mb-32">
+    <FeatureCard
+      title="Barrierefreiheit für alle Besucher"
+      description="Ob Sehschwäche oder motorische Einschränkung – jeder Besucher kann die Website problemlos nutzen. Das schafft Vertrauen und erreicht mehr Menschen."
+    />
+    <FeatureCard
+      title="Bestehende Markenidentität bewahrt"
+      description="Die neue Website führt die vorhandene Farbwelt und den Wiedererkennungswert konsequent fort – kein Bruch, sondern ein stimmiger nächster Schritt."
+    />
+    <FeatureCard
+      title="Direkter Draht zu Interessenten"
+      description="Wer sich für die Praxis interessiert, kann sich mit einem Klick eintragen – und wird sofort informiert, sobald es Neuigkeiten gibt."
+    />
+    <FeatureCard
+      title="Schnell auf jedem Gerät"
+      description="Die Website lädt in Sekundenbruchteilen – gerade unterwegs vom Smartphone aus entscheidet das oft, ob ein Interessent bleibt oder abspringt."
+    />
+  </div>
+
+  <InfoBanner>
+    Dieses Projekt zeigt, wie eine <strong>Website für Ärzte und Therapeuten in München</strong> Vertrauen, Persönlichkeit und Barrierefreiheit vereint.
+    Mehr dazu auf der Seite
+    <a href="/webdesign-in-der-naehe-muenchen/" class="underline underline-offset-4 decoration-2 hover:text-white transition">
+      Webdesign in München
+    </a>.
+  </InfoBanner>
+
+  <ProjectCardsGrid
+    title="Ähnliche Projekte"
+    items={[
+      { href: "/projekte/pflegedienst-muenchen-website", district: "Gesundheit", title: "BavarisPro Pflegedienst", description: "Website für ambulanten Pflegedienst mit Recruiting-Funktion." },
+      { href: "/projekte/immobilien-muenchen", district: "München", title: "Immobilien München", description: "Professionelle Makler-Website mit OnOffice-Integration." },
+      { href: "/projekte/atelier-yu-le-ksa-muenchen-website", district: "Lifestyle", title: "Atelier YU-LE-KSA", description: "Premium-Website für Schneideratelier." }
+    ]}
+    cols={3}
+    ctaLabel="Alle Projekte ansehen"
+    ctaHref="/projekte"
+    className="pt-0"
+  />
+
+  <GradientDivider />
+
+  <FinalSection
+    imgSrc="/images/projects/psychotherapeutin-praxis-mobile-stimmen.webp"
+    imgAlt="Mobile Ansicht der Website"
+    title="Bereit für eine Website, die wirkt?"
+    introText="Fachliche Kompetenz allein reicht oft nicht – erst eine durchdachte, konsequent umgesetzte Website macht sie sichtbar und schafft Vertrauen, bevor der erste Kontakt überhaupt stattfindet."
+    secondText="Lass uns besprechen, wie deine Praxis oder dein Unternehmen online genauso überzeugend auftritt."
+    secondaryButtonLabel="Erstgespräch anfragen"
+    secondaryButtonLink="/kontakt"
+  />
+</div>

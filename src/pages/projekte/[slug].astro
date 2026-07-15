@@ -25,6 +25,7 @@ import Agbasa from "../../components/projects/Agbasa.astro";
 import BavarisPro from "../../components/projects/BavarisPro.astro";
 import Atelier from "../../components/projects/Atelier.astro";
 import BeautyFunnel from "../../components/projects/BeautyFunnel.astro";
+import DrKatjaHeld from "../../components/projects/DrKatjaHeld.astro";
 
 export async function getStaticPaths() {
   return [
@@ -234,8 +235,18 @@ seoDesc: "Online Shop mit WordPress & WooCommerce – modern, schnell und ohne m
 seoDesc: "Premium Website für ein Schneideratelier in München: Webdesign, Galerie für Maßanfertigungen, Branding und responsives Design für das Atelier YU-LE-KSA."  
 },
 },
-    { 
-      params: { slug: "kleines-stadthaus" }, 
+    {
+      params: { slug: "psychotherapeutin-praxis-website" },
+      props: {
+        name: "Eine Praxis-Website, die aus der Masse heraussticht",
+        introText: "Barrierefreie WordPress Website mit einer mutigen Magenta-Gold-Farbwelt und klarer Struktur – entwickelt für eine Praxis, die auffällt statt sich anzupassen.",
+        seoTitle: "Praxis-Website München – Referenzprojekt | maxWapp",
+        seoDesc: "Barrierefreie WordPress Website mit mutiger Magenta-Gold-Farbwelt für eine Praxis in München. Klare Struktur, starke mobile Performance. Von maxWapp.",
+        image: "/images/projects/psychotherapeutin-praxis-mobile-home.webp",
+      },
+    },
+    {
+      params: { slug: "kleines-stadthaus" },
       props: {
         name: "Shopify-Redesign für Fashion-Boutique",
         introText: "Shopify Online-Shop neu gestaltet: mobile-first UX, Conversion-Optimierung, schnellere Ladezeiten & Instagram-Integration – für klaren Markenauftritt und mehr Verkäufe.",
@@ -247,7 +258,8 @@ seoDesc: "Premium Website für ein Schneideratelier in München: Webdesign, Gale
 }
 
 const { slug } = Astro.params;
-const { name, introText, seoTitle, seoDesc } = Astro.props;
+const { name, introText, seoTitle, seoDesc, image } = Astro.props;
+const heroImage = image ?? `/images/projects/${slug}.webp`;
 
 ---
 
@@ -276,7 +288,7 @@ const { name, introText, seoTitle, seoDesc } = Astro.props;
 
         <div class="order-2 md:order-1 flex justify-center">
           <img
-            src={`/images/projects/${slug}.webp`}
+            src={heroImage}
             class="rounded shadow-md drop-shadow-[0px_-35px_35px_rgba(75,0,130,0.6)] object-contain w-full h-auto max-h-[72vh]"
             alt={`Project ${name}`}
           />
@@ -321,6 +333,7 @@ const { name, introText, seoTitle, seoDesc } = Astro.props;
                                                     {slug === 'pizzeria-mixto-verde' && <PizzeriaMixtoVerde />}
                                                     {slug === 'akam-reinigung' && <AkamReinigung />}
                                                     {slug === 'beauty-funnel-muenchen' && <BeautyFunnel />}
+                                                    {slug === 'psychotherapeutin-praxis-website' && <DrKatjaHeld />}
 
     </section>
   </div>
